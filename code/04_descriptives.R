@@ -52,7 +52,7 @@ nal |>
   scale_x_continuous(breaks = seq(1985, 2020, 5)) +
   labs(title = "Violent deaths (homicide, undetermined intent, legal intervention)", y = "deaths", x = NULL) +
   theme_bw()
-ggsave("figures/homicide_counts.png", w = 6, h = 3)
+ggsave("figures/01_descriptives/homicide_counts.png", w = 6, h = 3)
 
 nal |>
   ggplot() +
@@ -60,7 +60,7 @@ nal |>
   scale_x_continuous(breaks = seq(1985, 2020, 5)) +
   labs(title = "Crude violent-death rate", y = "per 100,000", x = NULL) +
   theme_bw()
-ggsave("figures/homicide_cdr.png", w = 6, h = 3)
+ggsave("figures/01_descriptives/homicide_cdr.png", w = 6, h = 3)
 
 nal_sexr |>
   ggplot() +
@@ -68,7 +68,7 @@ nal_sexr |>
   scale_x_continuous(breaks = seq(1985, 2020, 5)) +
   labs(title = "Sex ratio of all-cause mortality (male CDR / female CDR)", y = NULL, x = NULL) +
   theme_bw()
-ggsave("figures/sex_ratios_all_cause_cdr.png", w = 6, h = 3)
+ggsave("figures/01_descriptives/sex_ratios_all_cause_cdr.png", w = 6, h = 3)
 
 # both series min-max standardised and overlaid
 nal_std <-
@@ -92,7 +92,7 @@ nal_std |>
   labs(title = "Sex ratio of all-cause mortality and homicide CDR, Colombia", x = NULL, y = NULL, col = NULL) +
   theme_bw() +
   theme(legend.position = "bottom")
-ggsave("figures/sex_ratios_and_cdr_homics_plus.png", w = 6, h = 4)
+ggsave("figures/01_descriptives/sex_ratios_and_cdr_homics_plus.png", w = 6, h = 4)
 
 # a first linear test at national level
 m_nal <- lm(cdr_h_std ~ sex_r_std, data = nal_std)
@@ -141,7 +141,7 @@ dep_sexr |>
   scale_x_continuous(breaks = seq(1985, 2020, 5)) +
   labs(title = "Sex ratio of all-cause mortality, Antioquia", x = NULL, y = NULL) +
   theme_bw()
-ggsave("figures/sex_ratio_all_cause_antioquia.png", w = 6, h = 3)
+ggsave("figures/01_descriptives/sex_ratio_all_cause_antioquia.png", w = 6, h = 3)
 
 plot_dep_overlay <- function(d, file, w, h, nrow = 3) {
   p <-
@@ -167,10 +167,10 @@ dptos_lrg <-
   filter(pop > 5e5) |>
   pull(cod_dpto)
 
-plot_dep_overlay(dep_std |> filter(cod_dpto %in% dptos_lrg), "figures/sex_ratios_and_cdr_dptos_large.png", w = 12, h = 7)
-plot_dep_overlay(dep_std, "figures/sex_ratios_and_cdr_dptos.png", w = 12, h = 7)
+plot_dep_overlay(dep_std |> filter(cod_dpto %in% dptos_lrg), "figures/01_descriptives/sex_ratios_and_cdr_dptos_large.png", w = 12, h = 7)
+plot_dep_overlay(dep_std, "figures/01_descriptives/sex_ratios_and_cdr_dptos.png", w = 12, h = 7)
 # Antioquia, Valle del Cauca, Bogota, Caqueta
-plot_dep_overlay(dep_std |> filter(cod_dpto %in% c("05", "76", "11", "18")), "figures/sex_ratios_and_cdr_dptos_sel.png", w = 8, h = 5, nrow = 2)
+plot_dep_overlay(dep_std |> filter(cod_dpto %in% c("05", "76", "11", "18")), "figures/01_descriptives/sex_ratios_and_cdr_dptos_sel.png", w = 8, h = 5, nrow = 2)
 
 # gap between the two standardised series: positive = the sex ratio runs above
 # what homicides would suggest. the Caribbean departments open a gap before
@@ -184,7 +184,7 @@ dep_std |>
   facet_wrap(~dpto) +
   labs(title = "Standardised sex ratio minus standardised homicide CDR", x = NULL, y = NULL) +
   theme_bw()
-ggsave("figures/sex_ratio_minus_homicide_std.png", w = 9, h = 6)
+ggsave("figures/01_descriptives/sex_ratio_minus_homicide_std.png", w = 9, h = 6)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # municipalities: age-standardised rates and sex ratios ====
@@ -302,7 +302,7 @@ munic_rates |>
   labs(x = NULL, y = "crude homicide rate", col = NULL) +
   theme_bw() +
   theme(legend.position = "bottom", legend.text = element_text(size = 6))
-ggsave("figures/cdr_all_munics.png", w = 10, h = 7)
+ggsave("figures/01_descriptives/cdr_all_munics.png", w = 10, h = 7)
 
 # Medellin, Bogota, Curillo (Caqueta), Mapiripan (Meta)
 munic_rates |>
@@ -313,7 +313,7 @@ munic_rates |>
   labs(x = NULL, y = "crude homicide rate per 100,000", col = NULL) +
   theme_bw() +
   theme(legend.position = "bottom")
-ggsave("figures/cdr_few_munics.png", w = 10, h = 7)
+ggsave("figures/01_descriptives/cdr_few_munics.png", w = 10, h = 7)
 
 # scatter of sex ratio vs homicide rate (log-log) with linear fit and r
 plot_cloud <- function(d, x, y, xlab, ylab, file) {
@@ -333,6 +333,6 @@ plot_cloud <- function(d, x, y, xlab, ylab, file) {
   ggsave(file, p, w = 7, h = 5)
 }
 
-plot_cloud(munic_rates, rt_cdr, cdr_homic, "Sex ratio of all-cause CDR", "Crude homicide rate", "figures/cdr_sex_r_cloud_reg.png")
-plot_cloud(munic_rates |> filter(pop >= 1e5), rt_cdr, cdr_homic, "Sex ratio of all-cause CDR", "Crude homicide rate", "figures/cdr_sex_r_cloud_reg_100Kplus.png")
-plot_cloud(munic_rates |> filter(pop >= 1e5), rt_asdr, cdr_homic, "Sex ratio of all-cause ASDR", "Crude homicide rate", "figures/sex_ratios_vs_homicide_asdr_100Kplus.png")
+plot_cloud(munic_rates, rt_cdr, cdr_homic, "Sex ratio of all-cause CDR", "Crude homicide rate", "figures/01_descriptives/cdr_sex_r_cloud_reg.png")
+plot_cloud(munic_rates |> filter(pop >= 1e5), rt_cdr, cdr_homic, "Sex ratio of all-cause CDR", "Crude homicide rate", "figures/01_descriptives/cdr_sex_r_cloud_reg_100Kplus.png")
+plot_cloud(munic_rates |> filter(pop >= 1e5), rt_asdr, cdr_homic, "Sex ratio of all-cause ASDR", "Crude homicide rate", "figures/01_descriptives/sex_ratios_vs_homicide_asdr_100Kplus.png")

@@ -205,7 +205,7 @@ cmp |>
   ) +
   theme_bw() +
   theme(legend.position = "bottom")
-ggsave("figures/completeness_dane_vs_ggb.png", w = 10, h = 7)
+ggsave("figures/04_completeness/completeness_dane_vs_ggb.png", w = 10, h = 7)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # the decisive comparison: registered vs DANE-expected sex ratio ====
@@ -271,4 +271,4 @@ sr |>
     y = "violent-death rate, residual from expected sex ratio"
   ) +
   theme_bw()
-ggsave("figures/sex_ratio_obs_vs_dane_expected.png", w = 9, h = 6)
+ggsave("figures/05_underregistration_tests/sex_ratio_obs_vs_dane_expected.png", w = 9, h = 6)

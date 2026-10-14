@@ -113,7 +113,7 @@ tst2 %>%
   ) +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 
-ggsave("figures/predict_spatial.pdf", w = 20, h = 120, limitsize = FALSE)
+ggsave("figures/experimental/predict_spatial.pdf", w = 20, h = 120, limitsize = FALSE)
 
 
 dt_1m <- read_rds("data_inter/homicide_estimates_1985-2017_excs.rds")
@@ -172,4 +172,4 @@ tst3 %>%
   scale_color_manual(values = c("black", "firebrick", "grey")) +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 
-ggsave("figures/predict_spatial_cmp.pdf", w = 20, h = 120, limitsize = FALSE)
+ggsave("figures/experimental/predict_spatial_cmp.pdf", w = 20, h = 120, limitsize = FALSE)

@@ -35,7 +35,7 @@ rt_av |>
   geom_line(aes(year, sex_rt)) +
   labs(title = "All-cause sex ratio in municipality-years with ~no violent deaths", x = NULL, y = NULL) +
   theme_bw()
-ggsave("figures/sex_ratio_low_violence_munics.png", w = 6, h = 3)
+ggsave("figures/01_descriptives/sex_ratio_low_violence_munics.png", w = 6, h = 3)
 
 sex_rt_av <- mean(rt_av$sex_rt, na.rm = TRUE)
 

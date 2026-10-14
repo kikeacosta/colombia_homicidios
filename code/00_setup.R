@@ -55,6 +55,12 @@ age_open <- 85
 # La Guajira, Magdalena, Sucre
 cod_caribe <- c("08", "13", "20", "23", "44", "47", "70")
 
+# figure folders, one per analysis (created if missing so ggsave never fails)
+for (d in c("01_descriptives", "02_model", "03_cause_decomposition", "04_completeness",
+            "05_underregistration_tests", "historical", "experimental")) {
+  dir.create(file.path("figures", d), showWarnings = FALSE, recursive = TRUE)
+}
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # small helpers ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

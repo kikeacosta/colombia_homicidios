@@ -7,6 +7,7 @@
 #
 # 01 needs the 45 DANE microdata files in data_input/micro/ and several GB of
 # RAM; 03 needs the three DANE projection workbooks in data_input/DANEpop/.
+# 13 (extract_dane_lifetables) needs the PDF text, see its header, and is not run here
 # the historical module (code/historical/) is not part of this run.
 
 scripts <- c(
@@ -20,7 +21,15 @@ scripts <- c(
   "08_model_validation.R",
   "09_sex_ratio_by_cause.R",
   "10_registration_completeness.R",
-  "11_shared_dataset.R"
+  "11_shared_dataset.R",
+  "11b_shared_dataset_age.R",
+  "12_underregistration_test.R",
+  "14_completeness_dane.R",
+  "15_model_completeness.R",
+  "16_age_placebo.R",
+  "17_residence.R",
+  "18_ddm_completeness.R",
+  "19_completeness_vs_correlation.R"
 )
 
 t0 <- Sys.time()

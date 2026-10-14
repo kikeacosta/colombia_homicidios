@@ -260,7 +260,7 @@ diag_pts |>
   theme_bw() +
   theme(legend.position = "bottom")
 
-ggsave("figures/completeness_ggb_diagnostic.png", w = 14, h = 11)
+ggsave("figures/04_completeness/completeness_ggb_diagnostic.png", w = 14, h = 11)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 2. annual coverage index, anchored to the GGB levels ====
@@ -420,7 +420,7 @@ sanity |>
   theme_bw() +
   theme(legend.position = "bottom")
 
-ggsave("figures/completeness_national_cdr.png", w = 7, h = 4)
+ggsave("figures/04_completeness/completeness_national_cdr.png", w = 7, h = 4)
 
 # ~~~~~~~~~~~~~~~~~~~~
 # result plots ====
@@ -446,7 +446,7 @@ comp_annual |>
   theme_bw() +
   theme(legend.position = "bottom")
 
-ggsave("figures/completeness_deptos.png", w = 14, h = 10)
+ggsave("figures/04_completeness/completeness_deptos.png", w = 14, h = 10)
 
 # the sex-differential, which is what distorts the all-cause sex ratio
 comp_annual |>
@@ -469,7 +469,7 @@ comp_annual |>
   theme_bw() +
   theme(legend.position = "bottom")
 
-ggsave("figures/completeness_sex_ratio.png", w = 8, h = 5)
+ggsave("figures/04_completeness/completeness_sex_ratio.png", w = 8, h = 5)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # sensitivity of GGB to the fitting age range ====

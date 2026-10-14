@@ -138,4 +138,4 @@ cmp |>
   labs(title = "Adult death registration completeness: DDM hybrid vs the hand-rolled GGB",
        x = "GGB (10)", y = "GGB-SEG hybrid (DDM)", col = NULL) +
   theme_bw() + theme(legend.position = "bottom")
-ggsave("figures/completeness_ddm_vs_ggb.png", w = 9, h = 6)
+ggsave("figures/04_completeness/completeness_ddm_vs_ggb.png", w = 9, h = 6)

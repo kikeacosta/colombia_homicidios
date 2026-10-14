@@ -54,6 +54,13 @@ Run from the project root with `Rscript run_all.R` (`Rscript` must be on the PAT
 | `09_sex_ratio_by_cause.R` | cause-specific decomposition of the sex ratio |
 | `10_registration_completeness.R` | GGB completeness by department, sex, period |
 | `11_shared_dataset.R` | municipal file of deaths by cause group and population, 1985-2023, for sharing |
+| `11b_shared_dataset_age.R` | the same by 5-year age group (parquet) |
+| `12_underregistration_test.R` | department-level test: correlation vs completeness |
+| `13_extract_dane_lifetables.R`, `14_completeness_dane.R` | DANE conciliated life tables: implied completeness and expected sex ratio |
+| `15_model_completeness.R` | municipal model with completeness |
+| `16_age_placebo.R` | sex ratio at ages 50-79 (placebo) and 15-44 |
+| `17_residence.R` | residence vs occurrence tabulation |
+| `18_ddm_completeness.R`, `19_completeness_vs_correlation.R` | DDM completeness (GGB, SEG, hybrid) and its relation to the correlation |
 | `experimental/model_spatial.R` | spatial random-effect variant (not used for results) |
 | `historical/` | 1923-1984 series, WHO and UCDP comparisons; see its README |
 

@@ -75,11 +75,11 @@ mnc <- c("25513", "05001", "11001", "13001", "17001", "76001")
 
 plot_bsn(bsn |> filter(cod_munic %in% mnc)) +
   facet_wrap(~munic, scales = "free_y")
-ggsave("figures/excess_deaths_munic_sample.png", width = 10, height = 6)
+ggsave("figures/02_model/excess_deaths_munic_sample.png", width = 10, height = 6)
 
 plot_bsn(bsn |> mutate(munic2 = paste0(str_sub(cod_munic, 1, 2), "-", munic))) +
   facet_wrap(~munic2, ncol = 15, scales = "free_y")
-ggsave("figures/excess_deaths_munic.pdf", width = 20, height = 100, limitsize = FALSE)
+ggsave("figures/02_model/excess_deaths_munic.pdf", width = 20, height = 100, limitsize = FALSE)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # excess ====

@@ -176,6 +176,6 @@ tst2 %>%
   ) +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 
-ggsave("figures/predict_excs.pdf", w = 20, h = 120, limitsize = FALSE)
+ggsave("figures/02_model/predict_excs.pdf", w = 20, h = 120, limitsize = FALSE)
 
 write_rds(tst2, "data_inter/homicide_estimates_1985-2017_excs.rds")

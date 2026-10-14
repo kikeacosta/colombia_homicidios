@@ -131,7 +131,7 @@ r_dept |>
   ) +
   theme_bw() +
   theme(legend.position = "bottom")
-ggsave("figures/underreg_corr_vs_completeness.png", w = 9, h = 4.5)
+ggsave("figures/05_underregistration_tests/underreg_corr_vs_completeness.png", w = 9, h = 4.5)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # (c) within-department, across years: pooled regression ====
@@ -172,7 +172,7 @@ dep |>
     x = "completeness (mean of m and f)", y = "log observed - log predicted"
   ) +
   theme_bw()
-ggsave("figures/underreg_residual_by_completeness.png", w = 6, h = 4.5)
+ggsave("figures/05_underregistration_tests/underreg_residual_by_completeness.png", w = 6, h = 4.5)
 
 cat("\nmedian pre-1998 residual by completeness bin:\n")
 print(

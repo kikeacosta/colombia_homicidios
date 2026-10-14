@@ -105,4 +105,4 @@ hms |>
   geom_line(aes(year, hms, col = source)) +
   scale_color_manual(values = c("black", "red")) +
   theme_bw()
-ggsave("figures/homicides_ucdp_vs_who.png", w = 10, h = 6)
+ggsave("figures/historical/homicides_ucdp_vs_who.png", w = 10, h = 6)

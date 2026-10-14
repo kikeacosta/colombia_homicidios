@@ -66,7 +66,7 @@ sr |>
   labs(title = "Sex ratio of all-cause mortality by age band",
        subtitle = "median and interquartile range across departments", x = NULL, y = "male / female") +
   theme_bw() + theme(legend.position = "bottom")
-ggsave("figures/age_placebo_sex_ratio.png", w = 9, h = 4.5)
+ggsave("figures/05_underregistration_tests/age_placebo_sex_ratio.png", w = 9, h = 4.5)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 2. registered vs DANE-expected ratio at 50-79 ====

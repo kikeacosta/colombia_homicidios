@@ -89,7 +89,7 @@ tst %>%
     axis.text = element_text(size = 7)
   )
 
-ggsave("figures/predict_munic_viols_exc.png", w = 7, h = 4, limitsize = FALSE)
+ggsave("figures/02_model/predict_munic_viols_exc.png", w = 7, h = 4, limitsize = FALSE)
 
 
 mapa_col <- municipios
@@ -137,7 +137,7 @@ plot_map <- function(yr = 2000) {
       caption = "Fuente: Estimaciones propias con glmmTMB"
     ) +
     theme_void() # Quita coordenadas y fon
-  ggsave(paste0("figures/mapa_comp_", yr, "_exc.png"), dpi = 300, w = 8, h = 4)
+  ggsave(paste0("figures/02_model/mapa_comp_", yr, "_exc.png"), dpi = 300, w = 8, h = 4)
 }
 for (yr in seq(1985, 2015, 5)) {
   plot_map(yr)
@@ -183,7 +183,7 @@ ggplot(mapa_final) +
   theme_void() +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 
-ggsave(paste0("figures/mapa_comp_yrs_exc.pdf"), w = 8, h = 20)
+ggsave(paste0("figures/02_model/mapa_comp_yrs_exc.pdf"), w = 8, h = 20)
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -314,7 +314,7 @@ yrs |>
   geom_point(aes(year, per2), col = "red") +
   theme_bw()
 
-ggsave("figures/pred_years_exc.png", w = 5, h = 2)
+ggsave("figures/02_model/pred_years_exc.png", w = 5, h = 2)
 
 dpts <-
   tst3 |>
@@ -332,7 +332,7 @@ dpts |>
   geom_point(aes(per2, dpto), col = "red") +
   theme_bw()
 
-ggsave("figures/pred_dptos_exc.png")
+ggsave("figures/02_model/pred_dptos_exc.png")
 
 tst3 |>
   summarise(
@@ -361,7 +361,7 @@ tst3 |>
     title = "Validation of CDR Estimates"
   ) +
   theme_bw()
-ggsave("figures/cdr_homicides_observed_vs_estimated_exc.png")
+ggsave("figures/02_model/cdr_homicides_observed_vs_estimated_exc.png")
 
 tst |>
   summarise(
@@ -412,7 +412,7 @@ yrs |>
   theme_bw()
 
 ggsave(
-  "figures/cdr_homicides_observed_vs_estimated_years_exc.png",
+  "figures/02_model/cdr_homicides_observed_vs_estimated_years_exc.png",
   w = 5,
   h = 2
 )
@@ -468,7 +468,7 @@ plot_discret <- function(yr = 2000) {
     theme_void() +
     theme(legend.position = "bottom", legend.direction = "horizontal")
 
-  ggsave(paste0("figures/mapa_comp_disc_", yr, "_exc.png"), w = 8, h = 4)
+  ggsave(paste0("figures/02_model/mapa_comp_disc_", yr, "_exc.png"), w = 8, h = 4)
 }
 
 for (yr in seq(1985, 2015, 5)) {
@@ -515,7 +515,7 @@ ggplot(mapa_final) +
   theme_void() +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 
-ggsave(paste0("figures/mapa_comp_yrs_disc_exc.pdf"), w = 8, h = 20)
+ggsave(paste0("figures/02_model/mapa_comp_yrs_disc_exc.pdf"), w = 8, h = 20)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # mapa de municipios con el mismo grado de violencia ====
@@ -561,7 +561,7 @@ ggplot(mapa_final) +
 
 # ggsave("figures/mapa_comp_2005_match.png", w = 8, h = 4)
 
-ggsave("figures/mapa_comp_yrs_match_exc.pdf", w = 8, h = 20)
+ggsave("figures/02_model/mapa_comp_yrs_match_exc.pdf", w = 8, h = 20)
 
 
 tst_all <-
@@ -596,7 +596,7 @@ tst_all |>
     axis.title.y = element_blank()
   )
 
-ggsave("figures/munics_yrs_match_exc.pdf", w = 5, h = 40)
+ggsave("figures/02_model/munics_yrs_match_exc.pdf", w = 5, h = 40)
 
 tst_all |>
   filter(type == "Con incertidumbre") |>
@@ -616,7 +616,7 @@ tst_all |>
     axis.title.y = element_blank()
   )
 
-ggsave("figures/munics_yrs_match_few_exc.png", w = 7, h = 5)
+ggsave("figures/02_model/munics_yrs_match_few_exc.png", w = 7, h = 5)
 
 
 munic_per <-
@@ -638,7 +638,7 @@ ggplot(mapa_final) +
     title = "Porcentaje de años con predicción correcta"
   ) +
   theme_void() # Quita coordenadas y fon
-# ggsave(paste0("figures/mapa_comp_", yr, ".png"), dpi = 300, w = 8, h = 4)
+# ggsave(paste0("figures/02_model/mapa_comp_", yr, ".png"), dpi = 300, w = 8, h = 4)
 
 # diferencias de total de homicidios en todo el tiempo
 munic_sum <-
@@ -707,7 +707,7 @@ ggplot(mapa_munic_sum) +
   ) +
   theme_void() # Quita coordenadas y fon
 
-ggsave("figures/map_perc_precisssion_exc.png")
+ggsave("figures/02_model/map_perc_precisssion_exc.png")
 
 ggplot(mapa_munic_sum) +
   geom_sf(aes(fill = within), color = NA) +
@@ -716,4 +716,4 @@ ggplot(mapa_munic_sum) +
     title = "Suma total de homicidios 1985-2017 dentro y fuera de las estimaciones"
   ) +
   theme_void() # Quita coordenadas y fon
-ggsave("figures/map_years_within_pred_exc.png")
+ggsave("figures/02_model/map_years_within_pred_exc.png")

@@ -115,7 +115,7 @@ contrib |>
   coord_cartesian(ylim = c(-1, 1)) +
   labs(title = "Cause contributions to the all-cause sex ratio (share of ratio - 1)", x = NULL, y = NULL) +
   theme_minimal()
-ggsave("figures/contrib_ratio_all_causes.png", width = 10, height = 6)
+ggsave("figures/03_cause_decomposition/contrib_ratio_all_causes.png", width = 10, height = 6)
 
 contrib |>
   filter(cod_dpto %in% carib5, cause %in% c("mal_definidas", "otras")) |>
@@ -125,7 +125,7 @@ contrib |>
   facet_wrap(~dpto) +
   labs(title = "Contribution of ill-defined and residual causes", x = NULL, y = NULL) +
   theme_minimal()
-ggsave("figures/contrib_ratio_mal_definidas.png", width = 10, height = 6)
+ggsave("figures/03_cause_decomposition/contrib_ratio_mal_definidas.png", width = 10, height = 6)
 
 contrib |>
   filter(cod_dpto %in% c(carib5, "20")) |>
@@ -137,7 +137,7 @@ contrib |>
   labs(x = NULL, y = NULL, fill = "share") +
   theme_bw() +
   theme(axis.text.x = element_text(size = 6))
-ggsave("figures/contrib_ratio_tiles_caribe.png", width = 14, height = 5)
+ggsave("figures/03_cause_decomposition/contrib_ratio_tiles_caribe.png", width = 14, height = 5)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # plots: standardised ratio vs alternative violence series ====
@@ -180,7 +180,7 @@ ratio_homs |>
   facet_wrap(~dpto) +
   labs(x = NULL, y = "min-max standardised", color = NULL, linewidth = NULL) +
   theme_minimal()
-ggsave("figures/ratio_homs_ext.png", width = 12, height = 8)
+ggsave("figures/03_cause_decomposition/ratio_homs_ext.png", width = 12, height = 8)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # smoothed positive contributions ====
@@ -221,7 +221,7 @@ contrib_sm |>
   facet_wrap(~dpto, scales = "free_y") +
   labs(title = "Smoothed share of positive contributions to the sex ratio", x = NULL, y = NULL) +
   theme_bw()
-ggsave("figures/contrib_ratio_smoothed.png", width = 12, height = 8)
+ggsave("figures/03_cause_decomposition/contrib_ratio_smoothed.png", width = 12, height = 8)
 
 contrib_sm |>
   filter(cod_dpto %in% c("47", "70", "08", "20")) |>
@@ -232,6 +232,6 @@ contrib_sm |>
   labs(x = NULL, y = NULL, fill = "year-on-year\nchange") +
   theme_bw() +
   theme(axis.text.x = element_text(size = 6))
-ggsave("figures/contrib_ratio_change_tiles.png", width = 12, height = 5)
+ggsave("figures/03_cause_decomposition/contrib_ratio_change_tiles.png", width = 12, height = 5)
 
 write_rds(contrib, "data_inter/sex_ratio_contrib_by_cause.rds")
