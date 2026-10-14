@@ -53,3 +53,31 @@ series as used in the model is `dx_homicide + dx_undetermined + dx_legal`.
 6. **Municipality 27493** (Nuevo Belén de Bajirá) exists from 2018; its rows
    before 2018 have `pop = NA` and zero deaths.
 7. Population by 5-year age group is not in this file.
+
+---
+
+# deaths_pop_munic_age_1985_2023.parquet
+
+Same data with age detail: one row per year x municipality x sex x age group
+(1,751,880 rows, 5.3 MB, zstd-compressed parquet). Built by
+`code/11b_shared_dataset_age.R`. Read with `arrow::read_parquet()` (R),
+`pandas.read_parquet()` (Python) or DuckDB.
+
+Same columns as the file above, plus:
+
+| column | description |
+|---|---|
+| age | lower bound of the age group (0, 1, 5, 10, ..., 85); missing for unknown age |
+| age_group | `0`, `1-4`, `5-9`, ..., `80-84`, `85+`, or `unknown` |
+
+- Population by age is available for every year 1985-2023: 1985-2017 from
+  DANE's retroprojections, 2018-2023 from single ages 0-100+ of the PPED
+  workbook, grouped here.
+- `unknown` rows carry deaths whose age was not recorded (about 1 percent of
+  deaths, mostly before 1998) and no population (`pop` missing).
+- The 85+ group joins ages 85-100+, because the older microdata stop at 85+.
+- Totals by year and sex of deaths and population equal the municipal file
+  exactly (checked when the file is built).
+- Age-group boundaries are the DANE age groups of the microdata; the 0 and
+  1-4 groups are kept apart because infant deaths are the main
+  under-registration signal.
