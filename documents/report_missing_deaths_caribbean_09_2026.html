@@ -1,0 +1,815 @@
+<title>Missing Deaths in the Caribbean</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#f7f8f7; --panel:#ffffff; --panel-2:#eef1f0;
+  --ink:#15191c; --ink-2:#4e5761; --ink-3:#7b858b;
+  --rule:#dfe4e3; --rule-2:#eceff0;
+  --accent:#0f4c5c; --accent-soft:#e2eef1;
+  --critical:#a4243b; --critical-soft:#f7e6e9;
+  --caution:#a75d16; --caution-soft:#f9ecdd;
+  --resolved:#1c6b48; --resolved-soft:#e2f0e9;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100;
+  --grid:#e6eae9; --annot:#cfd6d5;
+  --shadow:0 1px 2px rgba(21,25,28,.05), 0 8px 24px -12px rgba(21,25,28,.12);
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#191c1b; --panel:#212524; --panel-2:#2a2f2e;
+    --ink:#eef1f0; --ink-2:#a9b2b0; --ink-3:#7e8785;
+    --rule:#333937; --rule-2:#2a2f2e;
+    --accent:#6fb9c9; --accent-soft:#1d3238;
+    --critical:#e58b99; --critical-soft:#3a2229;
+    --caution:#d9a066; --caution-soft:#38291a;
+    --resolved:#6cc39b; --resolved-soft:#1b3129;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+    --grid:#2e3433; --annot:#3d4442;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#191c1b; --panel:#212524; --panel-2:#2a2f2e;
+  --ink:#eef1f0; --ink-2:#a9b2b0; --ink-3:#7e8785;
+  --rule:#333937; --rule-2:#2a2f2e;
+  --accent:#6fb9c9; --accent-soft:#1d3238;
+  --critical:#e58b99; --critical-soft:#3a2229;
+  --caution:#d9a066; --caution-soft:#38291a;
+  --resolved:#6cc39b; --resolved-soft:#1b3129;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+  --grid:#2e3433; --annot:#3d4442;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+body{
+  background:var(--ground); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:980px; margin:0 auto; padding-inline:20px; padding-block:0}
+.col{max-width:68ch}
+
+/* ---- top bar ---- */
+.bar{
+  position:sticky; top:env(safe-area-inset-top,0px); z-index:50;
+  background:color-mix(in srgb, var(--ground) 92%, transparent);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--rule);
+}
+.bar-in{max-width:980px;margin:0 auto;padding:10px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.bar-title{font-family:var(--serif);font-weight:600;font-size:15px;letter-spacing:.01em;white-space:nowrap}
+.bar nav{display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}
+.bar nav a{
+  font-size:12.5px;color:var(--ink-2);text-decoration:none;
+  font-variant-numeric:tabular-nums;padding:2px 0;border-bottom:1.5px solid transparent;
+}
+.bar nav a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.bar nav a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* ---- hero ---- */
+header.hero{padding-block:56px 40px;border-bottom:1px solid var(--rule)}
+.eyebrow{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 18px
+}
+h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(32px,6vw,52px);
+  line-height:1.08;letter-spacing:-.015em;margin:0 0 20px;text-wrap:balance;max-width:20ch;
+}
+.standfirst{font-family:var(--serif);font-size:clamp(17px,2.4vw,21px);line-height:1.5;color:var(--ink-2);margin:0;max-width:56ch}
+.meta{
+  margin-top:28px;display:flex;gap:10px 28px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px;color:var(--ink-3)
+}
+.meta b{color:var(--ink-2);font-weight:500}
+
+/* ---- sections ---- */
+section{padding-block:52px;border-bottom:1px solid var(--rule)}
+section:last-of-type{border-bottom:0}
+.sec-head{display:flex;gap:14px;align-items:baseline;margin-bottom:8px}
+.sec-num{font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:500;padding-top:2px}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(24px,4vw,32px);line-height:1.15;letter-spacing:-.01em;margin:0;text-wrap:balance}
+h3{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.25;margin:38px 0 10px;text-wrap:balance}
+h4{font-family:var(--sans);font-weight:600;font-size:14.5px;margin:26px 0 8px;letter-spacing:.005em}
+p{margin:0 0 15px}
+.lede{font-size:17.5px;color:var(--ink-2);margin-bottom:26px;max-width:62ch}
+a{color:var(--accent)}
+code{font-family:var(--mono);font-size:.875em;background:var(--panel-2);padding:.12em .36em;border-radius:3px;overflow-wrap:break-word}
+strong{font-weight:600}
+ul,ol{margin:0 0 15px;padding-left:22px}
+li{margin-bottom:7px}
+li::marker{color:var(--ink-3)}
+
+/* ---- stat row ---- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin:30px 0 8px}
+.stat{background:var(--panel);padding:20px 18px}
+.stat-n{font-family:var(--serif);font-size:34px;font-weight:700;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;display:block}
+.stat-n.bad{color:var(--critical)}
+.stat-l{font-size:12.5px;color:var(--ink-2);margin-top:9px;line-height:1.4;display:block}
+.stat-s{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:5px;display:block}
+
+/* ---- figures ---- */
+figure{margin:32px 0;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:20px 18px 14px;box-shadow:var(--shadow)}
+figcaption{font-size:13px;color:var(--ink-2);line-height:1.5;margin-top:12px;padding-top:12px;border-top:1px solid var(--rule-2)}
+figcaption b{font-family:var(--sans);font-weight:600;color:var(--ink);display:block;margin-bottom:3px;font-size:13.5px}
+.fig-h{font-family:var(--sans);font-weight:600;font-size:14.5px;margin:0 0 2px}
+.fig-sub{font-size:12.5px;color:var(--ink-3);margin:0 0 14px}
+.chart-box{position:relative;width:100%}
+.chart-box svg{display:block;width:100%;height:auto;overflow:visible}
+.legend{display:flex;gap:6px 16px;flex-wrap:wrap;margin-bottom:12px}
+.lg{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2)}
+.lg i{width:14px;height:2.5px;border-radius:2px;display:block;flex:none}
+.tip{
+  position:absolute;pointer-events:none;opacity:0;transition:opacity .1s;
+  background:var(--panel);border:1px solid var(--rule);border-radius:6px;
+  padding:8px 10px;font-size:12px;box-shadow:var(--shadow);z-index:10;min-width:130px;
+}
+.tip-h{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-bottom:5px}
+.tip-r{display:flex;align-items:center;gap:7px;justify-content:space-between;line-height:1.5}
+.tip-r span{display:inline-flex;align-items:center;gap:6px;color:var(--ink-2)}
+.tip-r i{width:9px;height:9px;border-radius:2px;display:block;flex:none}
+.tip-r b{font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums;color:var(--ink)}
+
+/* ---- tables ---- */
+.tbl-wrap{overflow-x:auto;margin:26px 0;border:1px solid var(--rule);border-radius:8px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:520px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule-2)}
+thead th{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:500;border-bottom:1px solid var(--rule);white-space:nowrap;
+  background:var(--panel-2);
+}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+td.nm{font-weight:500;white-space:nowrap}
+tr.hl td{background:var(--accent-soft)}
+caption{caption-side:bottom;text-align:left;font-size:12.5px;color:var(--ink-3);padding:10px 14px;line-height:1.5}
+
+/* ---- findings ---- */
+.find{border-left:3px solid var(--rule);padding:2px 0 2px 18px;margin:0 0 24px}
+.find.crit{border-left-color:var(--critical)}
+.find.warn{border-left-color:var(--caution)}
+.find-h{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:5px}
+.find-t{font-family:var(--sans);font-weight:600;font-size:15.5px;margin:0}
+.chip{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+  padding:2.5px 7px;border-radius:3px;white-space:nowrap;font-weight:500;
+}
+.chip.crit{background:var(--critical-soft);color:var(--critical)}
+.chip.warn{background:var(--caution-soft);color:var(--caution)}
+.chip.done{background:var(--resolved-soft);color:var(--resolved)}
+.chip.info{background:var(--accent-soft);color:var(--accent)}
+.find p{font-size:14.5px;margin-bottom:9px;color:var(--ink-2)}
+.find p:last-child{margin-bottom:0}
+.find p strong{color:var(--ink)}
+
+/* ---- code ---- */
+pre{
+  font-family:var(--mono);font-size:12.5px;line-height:1.65;background:var(--panel);
+  border:1px solid var(--rule);border-radius:7px;padding:14px 16px;overflow-x:auto;margin:16px 0;
+}
+pre code{background:none;padding:0;font-size:inherit}
+.del{color:var(--critical)}
+.add{color:var(--resolved)}
+.cmt{color:var(--ink-3)}
+
+/* ---- change cards ---- */
+.chg{border:1px solid var(--rule);border-radius:8px;background:var(--panel);padding:18px 20px;margin-bottom:16px}
+.chg-h{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.chg-f{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--ink)}
+.chg p{font-size:14.5px;color:var(--ink-2);margin-bottom:10px}
+.chg p:last-child{margin-bottom:0}
+.chg ul{font-size:14.5px;color:var(--ink-2)}
+
+/* ---- next steps ---- */
+.step{display:grid;grid-template-columns:auto 1fr;gap:0 18px;padding:20px 0;border-bottom:1px solid var(--rule-2)}
+.step:last-child{border-bottom:0}
+.step-n{
+  font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:500;
+  width:26px;padding-top:3px
+}
+.step-t{font-family:var(--sans);font-weight:600;font-size:16px;margin:0 0 3px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.step-why{font-size:14.5px;color:var(--ink-2);margin:0 0 8px}
+.step-how{font-size:13.5px;color:var(--ink-3);margin:0}
+.step-how b{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+
+footer{padding-block:38px 56px;font-size:13px;color:var(--ink-3)}
+footer p{margin-bottom:8px}
+
+@media (max-width:640px){
+  header.hero{padding-block:36px 30px}
+  section{padding-block:38px}
+  .bar nav{gap:12px;margin-left:0;width:100%}
+  .bar-in{padding:8px 20px}
+  .stat-n{font-size:28px}
+  figure{padding:16px 12px 12px;margin-inline:-4px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-title">Missing Deaths in the Caribbean</span>
+    <nav>
+      <a href="#summary">Summary</a>
+      <a href="#diagnosis">Diagnosis</a>
+      <a href="#changes">Changes</a>
+      <a href="#next">Next steps</a>
+      <a href="#limits">Limits</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+<header class="hero">
+  <p class="eyebrow">Data-quality audit &middot; colombia_mortalidad</p>
+  <h1>Missing deaths in the Caribbean</h1>
+  <p class="standfirst">The pre-2000 anomaly in the sex&nbsp;ratio&ndash;homicide relationship is not a cause-coding problem. In six of the seven Caribbean departments, between half and four in five adult deaths went unregistered in 1985&ndash;95. The gap starts to close in 1998.</p>
+  <div class="meta">
+    <span><b>Scope</b> 17 R scripts, 1985&ndash;2017 vital statistics</span>
+    <span><b>Files changed</b> 3</span>
+    <span><b>Date</b> 16 September 2026</span>
+  </div>
+</header>
+
+<section id="summary">
+  <div class="sec-head"><span class="sec-num">01</span><h2>What this found</h2></div>
+  <div class="col">
+    <p class="lede">You asked whether homicides were being hidden in other cause categories before 2000, and why the effect concentrated in the Caribbean coast. The answer is that the deaths are not miscoded &mdash; they are absent.</p>
+    <p>In 1985, registered crude death rates in La&nbsp;Guajira, C&oacute;rdoba and Sucre were 1.7&ndash;2.2 per 1,000, against 6.0&ndash;6.3 in Antioquia, Bogot&aacute; and Santander. Colombia&rsquo;s age structure cannot produce rates that low. A generalized growth balance estimate &mdash; which uses no cause-of-death information at all &mdash; puts adult registration completeness at 0.20&ndash;0.51 in six Caribbean departments for 1985&ndash;95, and 0.33&ndash;0.96 by 2005&ndash;15 &mdash; with La&nbsp;Guajira still below one half.</p>
+    <p>The all-cause sex ratio you are using as a homicide signal is therefore a ratio of two differently incomplete counts, and the completeness differential between men and women swings between 0.5 and 1.45 across departments and years &mdash; the same order of magnitude as the signal itself. The step change lands in <strong>1998</strong>, with DANE's new death certificate, not in 2000.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-n bad">1.7</span>
+      <span class="stat-l">Registered deaths per 1,000, La Guajira 1985</span>
+      <span class="stat-s">vs 6.3 in Antioquia</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n bad">0.20</span>
+      <span class="stat-l">GGB completeness, La Guajira women, 1985&ndash;95</span>
+      <span class="stat-s">1.01 in Bogot&aacute;</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">1998</span>
+      <span class="stat-l">Year coverage jumps, not 2000</span>
+      <span class="stat-s">new DANE certificate</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">6.9&rarr;6.0</span>
+      <span class="stat-l">National CDR per 1,000 once corrected, 1985&rarr;2017</span>
+      <span class="stat-s">registered series says 5.1&rarr;4.8</span>
+    </div>
+  </div>
+</section>
+
+<section id="diagnosis">
+  <div class="sec-head"><span class="sec-num">02</span><h2>Diagnosis</h2></div>
+  <div class="col">
+    <p class="lede">Four tests, run against your own data. The first rules out your working hypothesis; the rest identify what is actually happening.</p>
+  </div>
+
+  <h3>The hidden-homicide hypothesis does not survive</h3>
+  <div class="col">
+    <p>The timing looked right. Ill-defined causes (list&nbsp;105 code&nbsp;89) collapse from 21.5% of Caribbean deaths in 1985 to 2.1% in 1998 &mdash; exactly at the ICD-10 switch. If homicides had been hiding in that bucket, it would explain the break.</p>
+  </div>
+
+  <figure>
+    <p class="fig-h">Ill-defined causes as a share of registered deaths</p>
+    <p class="fig-sub">List 105 code 89 &middot; the collapse at 1998 is real, but it is not homicides</p>
+    <div class="legend" id="lg-ill"></div>
+    <div class="chart-box" id="c-ill"></div>
+    <figcaption><b>The bucket empties at the ICD-10 transition.</b> Caribbean departments carried 1.5 to 2 times the rest of the country&rsquo;s ill-defined share through the ICD-9 era &mdash; Cesar and C&oacute;rdoba peaked above 30%.</figcaption>
+  </figure>
+
+  <div class="col">
+    <p>But the sex ratio <em>of the ill-defined deaths themselves</em> settles the question. Homicides run at 11 to 13 male deaths per female death. Ill-defined deaths run at 1.08&ndash;1.33 &mdash; close to natural causes (1.05&ndash;1.08), and nowhere near homicide.</p>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <caption>Sex ratio (male deaths &divide; female deaths) by cause group, 1985&ndash;2017. If ill-defined deaths were concealed homicides they would sit near 13, not near 1.1. Treating the bucket as a mixture implies only about 2% of it behaves like homicide.</caption>
+      <thead><tr>
+        <th>Region</th><th>Era</th>
+        <th class="num">Natural</th><th class="num">Ill-defined</th><th class="num">Undetermined intent</th><th class="num">Homicide</th>
+      </tr></thead>
+      <tbody id="t-srcause"></tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>Redistributing ill-defined deaths pro rata across known causes makes the sex&nbsp;ratio&ndash;homicide correlations no better, and slightly worse. Adding the ill-defined share to a fixed-effects model moves R&sup2; from 0.773 to 0.783, and its coefficient is <em>negative</em> &mdash; more ill-defined coding goes with a <em>lower</em> sex ratio.</p>
+  </div>
+
+  <h3>The registered death rates are implausibly low</h3>
+  <div class="col">
+    <p>This is the test that settles it, and it needs no cause coding, no model and no assumptions beyond arithmetic. A crude death rate is bounded below by the population&rsquo;s age structure. The only populations that register rates this low are made up largely of young migrant workers, such as the Gulf states; Colombia&rsquo;s own best-registered departments sit at 5&ndash;6.</p>
+  </div>
+
+  <figure>
+    <p class="fig-h">Registered crude death rate by department, 1985&ndash;2017</p>
+    <p class="fig-sub">Deaths per 1,000 population &middot; all causes, both sexes</p>
+    <div class="legend" id="lg-cdr"></div>
+    <div class="chart-box" id="c-cdr"></div>
+    <figcaption><b>Nothing in the shaded band is plausible for Colombia.</b> Five of the seven Caribbean departments spend the entire ICD-9 era below 3 per 1,000. The reference departments sit where a real population sits. The Caribbean series climb after 1998 &mdash; that is registration improving, not mortality worsening.</figcaption>
+  </figure>
+
+  <h3>Completeness, estimated independently</h3>
+  <div class="col">
+    <p>Generalized growth balance (Hill 1987) recovers registration completeness from the balance between entries into an age group, the group's growth rate, and deaths out of it. It uses population and deaths by age only &mdash; no causes, so it cannot be contaminated by the coding question above.</p>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <caption>GGB completeness of adult death registration, ages 15&ndash;64, fitted on 10-year windows. Values below 1 mean under-registration. The six low-coverage Caribbean departments move by 0.06 or less across three alternative fitting age ranges; Tolima and Cundinamarca move by up to 0.21, so read those with more caution (<code>data_inter/q_test/completeness_ggb_sensitivity.csv</code>).</caption>
+      <thead><tr>
+        <th>Department</th>
+        <th class="num">1985&ndash;95 M</th><th class="num">1985&ndash;95 F</th>
+        <th class="num">2005&ndash;15 M</th><th class="num">2005&ndash;15 F</th>
+      </tr></thead>
+      <tbody id="t-ggb"></tbody>
+    </table>
+  </div>
+
+  <figure>
+    <p class="fig-h">Estimated registration completeness over time</p>
+    <p class="fig-sub">Annual coverage index anchored to the GGB levels &middot; both sexes combined</p>
+    <div class="chart-box" id="c-comp"></div>
+    <figcaption><b>The step is at 1998, and La Guajira never gets one.</b> C&oacute;rdoba, Cesar and Magdalena jump 17&ndash;29 points in a single year and keep climbing into the 2000s. La Guajira sits near 0.3 for the whole period, which means its homicide series is missing roughly two deaths in three throughout.</figcaption>
+  </figure>
+
+  <h3>Does the correction hold up?</h3>
+  <div class="col">
+    <p>The check that matters is external. Colombia's registered national crude death rate is flat at 4.4&ndash;5.1 per 1,000 across the whole period &mdash; too low for the country's age structure, and implausibly trendless. Dividing through by the estimated completeness should land it in a demographically sensible range without being told to.</p>
+  </div>
+
+  <figure>
+    <p class="fig-h">National crude death rate, registered versus corrected</p>
+    <p class="fig-sub">Deaths per 1,000 &middot; reliable departments only</p>
+    <div class="legend" id="lg-nat"></div>
+    <div class="chart-box" id="c-nat"></div>
+    <figcaption><b>The corrected series behaves like a real country.</b> 6.9 per 1,000 in 1985, falling to about 5.5 by 2011 and rising to 6.0 by 2017 as the population ages &mdash; a level and a shape consistent with Colombia&rsquo;s age structure. Nothing in the construction targeted this.</figcaption>
+  </figure>
+
+  <h3>What this does to your correlation</h3>
+  <div class="col">
+    <p>Once the measurement story is clear, the correlation between the log sex ratio and the log homicide rate is best read as a data-quality gradient rather than a Caribbean phenomenon. The relationship strengthens after 1998 almost everywhere.</p>
+  </div>
+
+  <figure>
+    <p class="fig-h">Correlation of log sex ratio with log homicide rate, by department</p>
+    <p class="fig-sub">Pearson r on age-standardised series &middot; before and after 1998</p>
+    <div class="legend" id="lg-corr"></div>
+    <div class="chart-box" id="c-corr"></div>
+    <figcaption><b>The Caribbean is not uniquely broken.</b> Mean r rises from 0.63 to 0.86 in the Caribbean and from 0.53 to 0.80 elsewhere. Cauca, Guaviare and Meta have weaker pre-1998 correlations than every Caribbean department, and Boyac&aacute; is weaker than six of the seven.</figcaption>
+  </figure>
+
+  <div class="col">
+    <p>Two further results worth carrying forward. A breakpoint scan over 1988&ndash;2010 peaks at <strong>1995</strong> with R&sup2; spanning only 0.773&ndash;0.788 across the whole range &mdash; there is no sharp structural break, just a gradual improvement in data quality. And in <strong>first differences</strong> &mdash; does a department's year-to-year change in sex ratio track its change in homicide rate? &mdash; the pre-1998 correlation is 0.11 outside the Caribbean and 0.25 inside it, against 0.43 and 0.58 after. Almost all of the apparent predictive power is cross-sectional and trend-driven, not annual.</p>
+  </div>
+</section>
+
+<section id="changes">
+  <div class="sec-head"><span class="sec-num">03</span><h2>Changes made</h2></div>
+  <div class="col">
+    <p class="lede">Three files. Everything runs clean; the new script exits 0 and writes four figures, two <code>.rds</code> files and one sensitivity CSV.</p>
+  </div>
+
+  <div class="chg">
+    <div class="chg-h"><span class="chg-f">code/00_setup.R</span><span class="chip done">new function</span></div>
+    <p>Added <code>recode_age_group(gr_edad, year)</code> under the previously empty &ldquo;functions for processing data&rdquo; header, so the age coding has one definition instead of three inline copies. The comment block documents all three DANE codings and cites the dictionary they come from.</p>
+  </div>
+
+  <div class="chg">
+    <div class="chg-h"><span class="chg-f">code/01_loading_microdata.R</span><span class="chip crit">bug fix</span></div>
+    <p><strong>Age groups were shifted by one five-year band for 1979&ndash;1997.</strong> The recode read:</p>
+    <pre><code><span class="del">gr_edad %in% 8:24 ~ (gr_edad - 8) * 5</span>
+<span class="add">gr_edad %in% 8:24 ~ (gr_edad - 7) * 5</span></code></pre>
+    <p>The DANE dictionary in <code>documents/metadata/1979-1991.pdf</code> defines <code>GRU_ED1</code> as <span style="font-family:var(--mono);font-size:.9em">08 = de 5 a 9 a&ntilde;os, 09 = de 10 a 14, 10 = de 15 a 19 &hellip; 24 = de 85 y m&aacute;s</span>. So group 8 &mdash; true ages 5&ndash;9 &mdash; was being assigned age 0, and everything from 10&ndash;14 upward was aged down five years. The 1998&ndash;2007 block was already correct, which means the two eras disagreed with each other across exactly the period under investigation. The age-0 share of deaths in 1985 drops from 13.3% to 11.8% once corrected.</p>
+    <p>Also fixed the file glob: <code>"\\.txt$||\\.csv$"</code> contains an empty alternative and matches every file in the directory. Harmless with today's 45 files, a trap later.</p>
+  </div>
+
+  <div class="chg">
+    <div class="chg-h"><span class="chg-f">code/12_registration_completeness.R</span><span class="chip done">new, 506 lines</span></div>
+    <p>Estimates completeness two ways and reconciles them.</p>
+    <ul>
+      <li><strong>GGB by department, sex and 10-year window</strong>, with the fitted intercept and R&sup2; retained as diagnostics.</li>
+      <li><strong>An annual coverage index</strong> &mdash; the department's age-standardised natural-cause rate relative to the national one &mdash; rescaled so its mean over each GGB window reproduces the GGB level, giving a usable annual covariate.</li>
+      <li><strong>A balance diagnostic plot</strong> of the GGB fits themselves, because curvature invalidates the estimate and you should look before trusting a number.</li>
+      <li><strong>A sensitivity table</strong> over three fitting age ranges.</li>
+      <li><strong>The national CDR sanity check</strong> shown above.</li>
+    </ul>
+    <p>It recomputes <code>edad</code> from <code>gr_edad</code> itself, so it runs correctly against the existing <code>micro_1979_2023.rds</code> without waiting on a re-run of <code>01</code>.</p>
+    <h4>Judgement calls worth knowing about</h4>
+    <ul>
+      <li>Completeness is <strong>capped at 1</strong>. The cap binds for Bogot&aacute;, Caldas, Quind&iacute;o, Risaralda and Tolima, which show as flat lines at 1.0.</li>
+      <li>The six micro-departments &mdash; Guain&iacute;a, Vaup&eacute;s, Vichada, Amazonas, Guaviare, San Andr&eacute;s &mdash; have single-digit annual natural-cause death counts, so GGB is meaningless there. They get <code>reliable = FALSE</code> and <code>completeness = NA</code> rather than a fabricated number.</li>
+      <li>The annual index assumes differences in <em>natural-cause</em> mortality between departments are small relative to differences in coverage. That is the weak link and it is flagged in the script header.</li>
+    </ul>
+  </div>
+
+  <h3>Outputs</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Path</th><th>Contents</th></tr></thead>
+      <tbody>
+        <tr><td class="nm"><code>data_inter/completeness_ggb.rds</code></td><td>GGB completeness by department &times; sex &times; window, with intercept and fit R&sup2;</td></tr>
+        <tr><td class="nm"><code>data_inter/completeness_deptos.rds</code></td><td>Annual completeness, department &times; year &times; sex, with <code>anchored</code> / <code>capped</code> / <code>reliable</code> flags</td></tr>
+        <tr><td class="nm"><code>data_inter/q_test/completeness_ggb_sensitivity.csv</code></td><td>Same estimates under three fitting age ranges</td></tr>
+        <tr><td class="nm"><code>figures/completeness_*.png</code></td><td>GGB balance diagnostic, completeness by department, sex differential, national CDR</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>One correction to my own work</h3>
+  <div class="col">
+    <p>The first version of the sanity check put <code>dx_implied = sum(dx_reg / completeness)</code> after <code>dx_reg = sum(dx_reg)</code> in the same <code>summarise()</code>. dplyr evaluates those in sequence, so it divided the already-aggregated national total by each department's completeness in turn and reported a national CDR of 654 per 1,000. Fixed by computing the row-wise quantity in a <code>mutate()</code> first, with a comment at the call site.</p>
+  </div>
+</section>
+
+<section id="next">
+  <div class="sec-head"><span class="sec-num">04</span><h2>Next steps</h2></div>
+  <div class="col">
+    <p class="lede">In priority order. The first three are blocking &mdash; the pipeline does not currently run end to end without them.</p>
+  </div>
+
+  <div class="step">
+    <span class="step-n">01</span>
+    <div>
+      <p class="step-t">Re-run <code>01_loading_microdata.R</code> <span class="chip crit">blocking</span></p>
+      <p class="step-why">The corrected ages are not yet in <code>micro_1979_2023.rds</code>. Everything that reads <code>edad</code> is still working from the shifted mapping &mdash; <code>11_sex_ratio_decomp_by_cause.R</code> in particular.</p>
+      <p class="step-how"><b>Cost</b> one pass over 45 files, 8.5M rows.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">02</span>
+    <div>
+      <p class="step-t">Repair the broken scripts <span class="chip crit">blocking</span></p>
+      <p class="step-why"><code>04_rates.R</code> errors at <code>drop_na(age)</code> because <code>02</code> stopped emitting <code>age</code> and <code>dx</code> &mdash; which means nothing in the project is currently age-standardised. Then <code>08:212</code> calls <code>predict(mod, …)</code> where <code>mod</code> was never defined, <code>08:193</code> uses <code>cdr_h_dpto_lag</code> whose construction is commented out, <code>05:294</code> joins an undefined <code>dptos</code>, <code>11:48</code> drops on a column that does not exist, and <code>10:75</code> uses variables commented out at <code>10:58</code>.</p>
+      <p class="step-how"><b>Also</b> unify the cause crosswalk &mdash; <code>02</code> and <code>11</code> disagree about where code 103 belongs &mdash; and put it in <code>00_setup.R</code> beside the age helper.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">03</span>
+    <div>
+      <p class="step-t">Put completeness into the model <span class="chip warn">high value</span></p>
+      <p class="step-why">The model currently assumes completeness is 1 everywhere, which is wrong by a factor of three to five in La Guajira. Either inflate observed deaths before computing rates, or carry completeness as a covariate and an offset adjustment in <code>08_model_glmmTMB.R</code>. <code>completeness_deptos.rds</code> is keyed to join directly.</p>
+      <p class="step-how"><b>Watch</b> municipal completeness almost certainly varies within departments; the department-level figure is a floor on the correction, not the whole of it.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">04</span>
+    <div>
+      <p class="step-t">Remove the two predictors that cannot exist historically <span class="chip warn">high value</span></p>
+      <p class="step-why"><code>cdr_std</code> is min&ndash;max scaled within municipality across the full 1985&ndash;2017 window, so it uses the future to define each year's value and cannot be computed for 1930. <code>exc_mx_log</code> is worse: excess deaths are derived from <code>dx_tot</code>, which contains the homicides being predicted. The tiny AIC gain is consistent with it adding little beyond that circularity.</p>
+      <p class="step-how"><b>Note</b> the AIC ladders in the comments of <code>08</code> and <code>08_exc</code> compare models fitted to different row counts and are not comparable.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">05</span>
+    <div>
+      <p class="step-t">Validate the way the model will actually be used <span class="chip warn">high value</span></p>
+      <p class="step-why">Predictions are raked to observed departmental totals at <code>08:106</code> and then scored against the same observed data in <code>09</code>. The department total is guaranteed to match, so only the within-department allocation is being tested. Two cheap tests fix this: a <em>temporal backcast</em> fitting on 2000&ndash;2017 and predicting 1985&ndash;1999, which mimics the real use; and <em>leave-department-out</em>, raking to a held-out total and scoring the municipal shares.</p>
+      <p class="step-how"><b>Also</b> <code>pred ± 1.96·se.fit</code> is an interval for the conditional mean, ignoring negative-binomial dispersion and the zero-inflation component. Use <code>simulate()</code> on the fitted object instead.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">06</span>
+    <div>
+      <p class="step-t">Replace the sex ratio with a targeted signal <span class="chip info">method</span></p>
+      <p class="step-why">Homicide is overwhelmingly young and male, so the male&ndash;female difference in age-specific rates at ages 15&ndash;44 carries the signal while ages 60+ add noise and reflect coverage differences rather than violence. That difference is an absolute excess-male-mortality rate: on the same scale as a homicide rate, stable when denominators are small, and needing no standardisation. It also removes the need for the <code>(dx_tot + 5)</code> hack at <code>06:98</code>, which inflates a 10-death municipality by 50%.</p>
+      <p class="step-how"><b>And</b> drop min&ndash;max standardisation everywhere &mdash; it is not scale-free, not comparable across departments, and undefined out of sample.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">07</span>
+    <div>
+      <p class="step-t">Decompose the change, not the level <span class="chip info">method</span></p>
+      <p class="step-why">The algebra in <code>11</code> is a valid exact decomposition of R&nbsp;&minus;&nbsp;1, but it decomposes each year separately and leaves you eyeballing 33 time series. Your question is about a change, so decompose the difference between two periods directly &mdash; Kitagawa or Das Gupta, or Horiuchi&ndash;Wilmoth&ndash;Pletcher if you want age and cause simultaneously. That gives one number per cause for &ldquo;how much of the 1995&rarr;2005 change does this account for&rdquo;.</p>
+      <p class="step-how"><b>Fix alongside</b> <code>cont_per</code> explodes when the ratio approaches 1, which is why the plot needs clamping; <code>cont_pos_per</code> discards negative contributions and no longer sums to the decomposed quantity; and <code>smooth_conts()</code> fits a proportion in [0,1] with <code>family = "quasipoisson"</code>. Report <code>cont</code> in absolute units, and add missing deaths as an explicit component &mdash; before 1998 in the Caribbean it will dominate every cause in the table.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">08</span>
+    <div>
+      <p class="step-t">Reconcile the historical series with the completeness model <span class="chip info">method</span></p>
+      <p class="step-why">This is the one that decides whether the 1920s&ndash;1979 estimates mean anything. You are calibrating on 1985&ndash;2017, where Caribbean completeness starts at 20&ndash;50%, and extrapolating to 1930, where it was certainly worse and varied in ways you cannot observe. The relationship you estimate is conditional on a registration regime that did not exist historically. <code>20_historic_data_coverage.R</code> already documents the annuary coverage gaps; fuse that with the completeness estimates into one explicit measurement-error model rather than treating the historical counts as directly comparable.</p>
+      <p class="step-how"><b>Reproducibility gap</b> nothing in <code>code/</code> generates <code>who_homicide_colombia.rds</code> or <code>who_all_cause_colombia.rds</code>, which <code>20</code> and <code>22</code> both depend on.</p>
+    </div>
+  </div>
+</section>
+
+<section id="limits">
+  <div class="sec-head"><span class="sec-num">05</span><h2>What this does not establish</h2></div>
+  <div class="col">
+    <p class="lede">Three things I could not settle, stated plainly so they do not get quoted as findings.</p>
+  </div>
+
+  <div class="find warn">
+    <div class="find-h"><p class="find-t">GGB assumes no net migration</p><span class="chip warn">caveat</span></div>
+    <p>In departments with heavy displacement or male out-migration, emigrants look like missing deaths and male completeness is biased downwards. Antioquia 1985&ndash;95 is the clear case: male completeness 0.73 against female 1.10, in the epicentre of the violence. The Caribbean estimates are less exposed to this, but not immune.</p>
+    <p>This cuts both ways for the project. If DANE's projections overstate the male 15&ndash;64 population in violent municipalities because displacement is under-captured, <strong>the denominator of your homicide rate is too large</strong> there &mdash; a second measurement problem pushing in the same direction as the first.</p>
+  </div>
+
+  <div class="find warn">
+    <div class="find-h"><p class="find-t">The annual index is the weak link</p><span class="chip warn">caveat</span></div>
+    <p>Genuine excess natural mortality is read as better coverage. The GGB levels are defensible on their own; the annual interpolation between them rests on an assumption that is convenient rather than demonstrated. The cap at 1 binds for five departments, which is where you would see this if it were biting hard.</p>
+  </div>
+
+  <div class="find">
+    <div class="find-h"><p class="find-t">Completeness is estimated relative to DANE's projections</p><span class="chip info">scope</span></div>
+    <p>The denominators here are projected populations, not census counts, so what is measured is completeness relative to DANE's own population series. That is the right quantity for this project &mdash; the same denominators build the rates &mdash; but it is not the same as completeness against truth, and it should not be quoted as such.</p>
+  </div>
+
+  <div class="col">
+    <p>For a fuller treatment &mdash; SEG, the GGB-SEG hybrid, and proper age-trimming diagnostics &mdash; the <code>DDM</code> package implements all three and would be a sensible upgrade path from the single-estimator version in <code>12</code>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="col">
+    <p>Diagnostics run against <code>data_inter/</code> as of 16 September 2026. Every figure on this page is drawn from the project's own data; the underlying series are in <code>completeness_deptos.rds</code> and <code>completeness_ggb.rds</code>.</p>
+    <p>Age-group coding verified against <code>documents/metadata/1979-1991.pdf</code>.</p>
+  </div>
+</footer>
+
+</div>
+
+<script type="application/json" id="data">{"cdr":[{"cod":"05","dpto":"Antioquia","year":1985,"cdr":6.25,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1986,"cdr":6.66,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1987,"cdr":6.2,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1988,"cdr":6.37,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1989,"cdr":6.7,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1990,"cdr":6.97,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1991,"cdr":7.33,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1992,"cdr":7.18,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1993,"cdr":6.76,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1994,"cdr":6.54,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1995,"cdr":6.53,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1996,"cdr":6.57,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1997,"cdr":6.21,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1998,"cdr":5.84,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":1999,"cdr":6.04,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2000,"cdr":6.05,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2001,"cdr":6.17,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2002,"cdr":5.91,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2003,"cdr":5.53,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2004,"cdr":5.26,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2005,"cdr":5.05,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2006,"cdr":5.14,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2007,"cdr":5.04,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2008,"cdr":5.2,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2009,"cdr":5.27,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2010,"cdr":5.3,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2011,"cdr":4.95,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2012,"cdr":4.87,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2013,"cdr":4.74,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2014,"cdr":4.78,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2015,"cdr":4.93,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2016,"cdr":5.13,"grp":"ref"},{"cod":"05","dpto":"Antioquia","year":2017,"cdr":5.25,"grp":"ref"},{"cod":"08","dpto":"Atlántico","year":1985,"cdr":4.17,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1986,"cdr":3.69,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1987,"cdr":4.15,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1988,"cdr":4.4,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1989,"cdr":3.91,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1990,"cdr":3.85,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1991,"cdr":4.03,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1992,"cdr":3.95,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1993,"cdr":3.85,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1994,"cdr":4.03,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1995,"cdr":3.98,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1996,"cdr":4.39,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1997,"cdr":4.07,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1998,"cdr":3.93,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":1999,"cdr":4.02,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2000,"cdr":4.17,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2001,"cdr":4.33,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2002,"cdr":4.32,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2003,"cdr":4.61,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2004,"cdr":4.51,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2005,"cdr":4.48,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2006,"cdr":4.64,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2007,"cdr":4.36,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2008,"cdr":4.31,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2009,"cdr":4.31,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2010,"cdr":3.97,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2011,"cdr":3.61,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2012,"cdr":4.3,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2013,"cdr":4.77,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2014,"cdr":5.07,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2015,"cdr":5.35,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2016,"cdr":5.27,"grp":"carib"},{"cod":"08","dpto":"Atlántico","year":2017,"cdr":5.44,"grp":"carib"},{"cod":"11","dpto":"Bogotá, D.C.","year":1985,"cdr":6.02,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1986,"cdr":4.98,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1987,"cdr":4.95,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1988,"cdr":4.61,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1989,"cdr":5.13,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1990,"cdr":5.03,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1991,"cdr":5.15,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1992,"cdr":5.28,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1993,"cdr":5.49,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1994,"cdr":5.31,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1995,"cdr":5.21,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1996,"cdr":5.2,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1997,"cdr":4.9,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1998,"cdr":4.47,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":1999,"cdr":4.7,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2000,"cdr":4.59,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2001,"cdr":4.58,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2002,"cdr":4.54,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2003,"cdr":4.57,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2004,"cdr":4.55,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2005,"cdr":4.51,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2006,"cdr":4.45,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2007,"cdr":4.47,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2008,"cdr":4.58,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2009,"cdr":4.38,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2010,"cdr":4.63,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2011,"cdr":4.63,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2012,"cdr":4.62,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2013,"cdr":4.58,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2014,"cdr":4.78,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2015,"cdr":4.9,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2016,"cdr":5.04,"grp":"ref"},{"cod":"11","dpto":"Bogotá, D.C.","year":2017,"cdr":5.02,"grp":"ref"},{"cod":"13","dpto":"Bolívar","year":1985,"cdr":2.64,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1986,"cdr":2.22,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1987,"cdr":3.09,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1988,"cdr":3.11,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1989,"cdr":2.91,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1990,"cdr":2.81,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1991,"cdr":2.82,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1992,"cdr":2.89,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1993,"cdr":2.64,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1994,"cdr":2.82,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1995,"cdr":2.73,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1996,"cdr":2.76,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1997,"cdr":2.88,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1998,"cdr":2.91,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":1999,"cdr":3.44,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2000,"cdr":3.51,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2001,"cdr":3.28,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2002,"cdr":3.28,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2003,"cdr":3.32,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2004,"cdr":3.1,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2005,"cdr":3.22,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2006,"cdr":3.17,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2007,"cdr":2.76,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2008,"cdr":3.16,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2009,"cdr":3.26,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2010,"cdr":3.12,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2011,"cdr":2.98,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2012,"cdr":3.24,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2013,"cdr":3.27,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2014,"cdr":3.6,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2015,"cdr":3.86,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2016,"cdr":3.61,"grp":"carib"},{"cod":"13","dpto":"Bolívar","year":2017,"cdr":3.94,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1985,"cdr":2.84,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1986,"cdr":2.67,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1987,"cdr":2.58,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1988,"cdr":2.73,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1989,"cdr":2.41,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1990,"cdr":2.53,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1991,"cdr":2.39,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1992,"cdr":2.48,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1993,"cdr":2.35,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1994,"cdr":2.63,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1995,"cdr":2.13,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1996,"cdr":1.97,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1997,"cdr":1.49,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1998,"cdr":2.22,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":1999,"cdr":2.68,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2000,"cdr":3.28,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2001,"cdr":3.51,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2002,"cdr":3.69,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2003,"cdr":3.73,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2004,"cdr":3.43,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2005,"cdr":3.34,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2006,"cdr":3.16,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2007,"cdr":3.42,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2008,"cdr":3.58,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2009,"cdr":3.48,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2010,"cdr":3.4,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2011,"cdr":3.22,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2012,"cdr":3.04,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2013,"cdr":3.29,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2014,"cdr":3.52,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2015,"cdr":3.8,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2016,"cdr":3.77,"grp":"carib"},{"cod":"20","dpto":"Cesar","year":2017,"cdr":3.69,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1985,"cdr":1.85,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1986,"cdr":2.04,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1987,"cdr":1.84,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1988,"cdr":1.86,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1989,"cdr":1.81,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1990,"cdr":2.05,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1991,"cdr":1.94,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1992,"cdr":1.94,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1993,"cdr":1.69,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1994,"cdr":1.62,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1995,"cdr":1.6,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1996,"cdr":1.7,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1997,"cdr":1.77,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1998,"cdr":2.52,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":1999,"cdr":2.66,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2000,"cdr":2.87,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2001,"cdr":2.83,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2002,"cdr":2.78,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2003,"cdr":2.75,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2004,"cdr":2.97,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2005,"cdr":2.91,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2006,"cdr":2.86,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2007,"cdr":3.12,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2008,"cdr":3.07,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2009,"cdr":3.46,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2010,"cdr":3.26,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2011,"cdr":3.53,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2012,"cdr":3.54,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2013,"cdr":3.65,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2014,"cdr":3.94,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2015,"cdr":3.96,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2016,"cdr":3.77,"grp":"carib"},{"cod":"23","dpto":"Córdoba","year":2017,"cdr":3.89,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1985,"cdr":1.69,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1986,"cdr":1.39,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1987,"cdr":1.48,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1988,"cdr":1.35,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1989,"cdr":1.54,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1990,"cdr":1.6,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1991,"cdr":1.85,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1992,"cdr":1.75,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1993,"cdr":1.55,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1994,"cdr":1.85,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1995,"cdr":1.82,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1996,"cdr":1.7,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1997,"cdr":1.51,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1998,"cdr":1.76,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":1999,"cdr":2,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2000,"cdr":2.11,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2001,"cdr":2.15,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2002,"cdr":2.14,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2003,"cdr":1.77,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2004,"cdr":2.16,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2005,"cdr":2.28,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2006,"cdr":2.06,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2007,"cdr":1.93,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2008,"cdr":1.95,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2009,"cdr":2,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2010,"cdr":2.07,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2011,"cdr":2.1,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2012,"cdr":1.94,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2013,"cdr":1.95,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2014,"cdr":2.11,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2015,"cdr":2.14,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2016,"cdr":2.26,"grp":"carib"},{"cod":"44","dpto":"La Guajira","year":2017,"cdr":2.29,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1985,"cdr":2.42,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1986,"cdr":2.39,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1987,"cdr":2.62,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1988,"cdr":2.59,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1989,"cdr":2.19,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1990,"cdr":2.19,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1991,"cdr":2.02,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1992,"cdr":1.94,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1993,"cdr":1.93,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1994,"cdr":1.99,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1995,"cdr":2.01,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1996,"cdr":2.11,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1997,"cdr":2.09,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1998,"cdr":3.04,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":1999,"cdr":3.27,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2000,"cdr":3.45,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2001,"cdr":3.67,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2002,"cdr":3.73,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2003,"cdr":3.79,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2004,"cdr":3.57,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2005,"cdr":3.41,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2006,"cdr":3.48,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2007,"cdr":3.84,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2008,"cdr":3.73,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2009,"cdr":3.86,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2010,"cdr":3.56,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2011,"cdr":3.55,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2012,"cdr":3.73,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2013,"cdr":3.68,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2014,"cdr":3.76,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2015,"cdr":3.67,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2016,"cdr":3.63,"grp":"carib"},{"cod":"47","dpto":"Magdalena","year":2017,"cdr":3.59,"grp":"carib"},{"cod":"68","dpto":"Santander","year":1985,"cdr":6,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1986,"cdr":6.07,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1987,"cdr":5.39,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1988,"cdr":5.82,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1989,"cdr":5.39,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1990,"cdr":5.37,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1991,"cdr":5.51,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1992,"cdr":5.55,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1993,"cdr":5.37,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1994,"cdr":5.24,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1995,"cdr":5.24,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1996,"cdr":5.21,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1997,"cdr":5.23,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1998,"cdr":5.07,"grp":"ref"},{"cod":"68","dpto":"Santander","year":1999,"cdr":5.33,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2000,"cdr":5.37,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2001,"cdr":5.41,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2002,"cdr":5.25,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2003,"cdr":5.23,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2004,"cdr":5.08,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2005,"cdr":5.04,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2006,"cdr":5.06,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2007,"cdr":5.04,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2008,"cdr":5.06,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2009,"cdr":4.86,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2010,"cdr":5.02,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2011,"cdr":4.54,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2012,"cdr":4.64,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2013,"cdr":5.03,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2014,"cdr":5.12,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2015,"cdr":5.17,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2016,"cdr":5.1,"grp":"ref"},{"cod":"68","dpto":"Santander","year":2017,"cdr":5.13,"grp":"ref"},{"cod":"70","dpto":"Sucre","year":1985,"cdr":2.17,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1986,"cdr":2.09,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1987,"cdr":2.3,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1988,"cdr":2.26,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1989,"cdr":2.22,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1990,"cdr":2.23,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1991,"cdr":2.2,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1992,"cdr":2.2,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1993,"cdr":2.12,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1994,"cdr":2.25,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1995,"cdr":2.35,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1996,"cdr":2.47,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1997,"cdr":2.16,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1998,"cdr":2.28,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":1999,"cdr":2.87,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2000,"cdr":3.44,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2001,"cdr":3.15,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2002,"cdr":2.97,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2003,"cdr":2.74,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2004,"cdr":3.08,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2005,"cdr":3,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2006,"cdr":3.17,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2007,"cdr":3.44,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2008,"cdr":3.13,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2009,"cdr":3.47,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2010,"cdr":3.29,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2011,"cdr":2.92,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2012,"cdr":3.25,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2013,"cdr":3.45,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2014,"cdr":3.6,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2015,"cdr":3.98,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2016,"cdr":3.95,"grp":"carib"},{"cod":"70","dpto":"Sucre","year":2017,"cdr":4.21,"grp":"carib"},{"cod":"76","dpto":"Valle del Cauca","year":1985,"cdr":5.26,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1986,"cdr":5.04,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1987,"cdr":5.7,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1988,"cdr":5.35,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1989,"cdr":5.2,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1990,"cdr":4.74,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1991,"cdr":5.54,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1992,"cdr":5.66,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1993,"cdr":5.7,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1994,"cdr":5.72,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1995,"cdr":5.69,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1996,"cdr":5.8,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1997,"cdr":5.37,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1998,"cdr":5.24,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":1999,"cdr":5.79,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2000,"cdr":5.73,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2001,"cdr":5.99,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2002,"cdr":5.84,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2003,"cdr":5.68,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2004,"cdr":5.8,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2005,"cdr":5.83,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2006,"cdr":5.79,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2007,"cdr":5.71,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2008,"cdr":5.58,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2009,"cdr":5.68,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2010,"cdr":5.66,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2011,"cdr":5.62,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2012,"cdr":5.66,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2013,"cdr":5.82,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2014,"cdr":5.77,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2015,"cdr":6.17,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2016,"cdr":5.98,"grp":"ref"},{"cod":"76","dpto":"Valle del Cauca","year":2017,"cdr":6.1,"grp":"ref"}],"comp":[{"cod":"05","dpto":"Antioquia","year":1985,"v":0.921},{"cod":"05","dpto":"Antioquia","year":1986,"v":0.981},{"cod":"05","dpto":"Antioquia","year":1987,"v":0.916},{"cod":"05","dpto":"Antioquia","year":1988,"v":0.912},{"cod":"05","dpto":"Antioquia","year":1989,"v":0.932},{"cod":"05","dpto":"Antioquia","year":1990,"v":0.94},{"cod":"05","dpto":"Antioquia","year":1991,"v":0.929},{"cod":"05","dpto":"Antioquia","year":1992,"v":0.928},{"cod":"05","dpto":"Antioquia","year":1993,"v":0.919},{"cod":"05","dpto":"Antioquia","year":1994,"v":0.927},{"cod":"05","dpto":"Antioquia","year":1995,"v":0.931},{"cod":"05","dpto":"Antioquia","year":1996,"v":0.93},{"cod":"05","dpto":"Antioquia","year":1997,"v":0.921},{"cod":"05","dpto":"Antioquia","year":1998,"v":0.907},{"cod":"05","dpto":"Antioquia","year":1999,"v":0.901},{"cod":"05","dpto":"Antioquia","year":2000,"v":0.875},{"cod":"05","dpto":"Antioquia","year":2001,"v":0.873},{"cod":"05","dpto":"Antioquia","year":2002,"v":0.864},{"cod":"05","dpto":"Antioquia","year":2003,"v":0.873},{"cod":"05","dpto":"Antioquia","year":2004,"v":0.882},{"cod":"05","dpto":"Antioquia","year":2005,"v":0.862},{"cod":"05","dpto":"Antioquia","year":2006,"v":0.865},{"cod":"05","dpto":"Antioquia","year":2007,"v":0.855},{"cod":"05","dpto":"Antioquia","year":2008,"v":0.861},{"cod":"05","dpto":"Antioquia","year":2009,"v":0.841},{"cod":"05","dpto":"Antioquia","year":2010,"v":0.843},{"cod":"05","dpto":"Antioquia","year":2011,"v":0.827},{"cod":"05","dpto":"Antioquia","year":2012,"v":0.816},{"cod":"05","dpto":"Antioquia","year":2013,"v":0.798},{"cod":"05","dpto":"Antioquia","year":2014,"v":0.791},{"cod":"05","dpto":"Antioquia","year":2015,"v":0.782},{"cod":"05","dpto":"Antioquia","year":2016,"v":0.813},{"cod":"05","dpto":"Antioquia","year":2017,"v":0.824},{"cod":"20","dpto":"Cesar","year":1985,"v":0.439},{"cod":"20","dpto":"Cesar","year":1986,"v":0.462},{"cod":"20","dpto":"Cesar","year":1987,"v":0.406},{"cod":"20","dpto":"Cesar","year":1988,"v":0.485},{"cod":"20","dpto":"Cesar","year":1989,"v":0.387},{"cod":"20","dpto":"Cesar","year":1990,"v":0.398},{"cod":"20","dpto":"Cesar","year":1991,"v":0.344},{"cod":"20","dpto":"Cesar","year":1992,"v":0.362},{"cod":"20","dpto":"Cesar","year":1993,"v":0.401},{"cod":"20","dpto":"Cesar","year":1994,"v":0.499},{"cod":"20","dpto":"Cesar","year":1995,"v":0.395},{"cod":"20","dpto":"Cesar","year":1996,"v":0.313},{"cod":"20","dpto":"Cesar","year":1997,"v":0.253},{"cod":"20","dpto":"Cesar","year":1998,"v":0.542},{"cod":"20","dpto":"Cesar","year":1999,"v":0.594},{"cod":"20","dpto":"Cesar","year":2000,"v":0.718},{"cod":"20","dpto":"Cesar","year":2001,"v":0.785},{"cod":"20","dpto":"Cesar","year":2002,"v":0.787},{"cod":"20","dpto":"Cesar","year":2003,"v":0.812},{"cod":"20","dpto":"Cesar","year":2004,"v":0.814},{"cod":"20","dpto":"Cesar","year":2005,"v":0.792},{"cod":"20","dpto":"Cesar","year":2006,"v":0.826},{"cod":"20","dpto":"Cesar","year":2007,"v":0.85},{"cod":"20","dpto":"Cesar","year":2008,"v":0.876},{"cod":"20","dpto":"Cesar","year":2009,"v":0.863},{"cod":"20","dpto":"Cesar","year":2010,"v":0.842},{"cod":"20","dpto":"Cesar","year":2011,"v":0.831},{"cod":"20","dpto":"Cesar","year":2012,"v":0.767},{"cod":"20","dpto":"Cesar","year":2013,"v":0.835},{"cod":"20","dpto":"Cesar","year":2014,"v":0.875},{"cod":"20","dpto":"Cesar","year":2015,"v":0.892},{"cod":"20","dpto":"Cesar","year":2016,"v":0.881},{"cod":"20","dpto":"Cesar","year":2017,"v":0.865},{"cod":"23","dpto":"Córdoba","year":1985,"v":0.282},{"cod":"23","dpto":"Córdoba","year":1986,"v":0.314},{"cod":"23","dpto":"Córdoba","year":1987,"v":0.287},{"cod":"23","dpto":"Córdoba","year":1988,"v":0.294},{"cod":"23","dpto":"Córdoba","year":1989,"v":0.313},{"cod":"23","dpto":"Córdoba","year":1990,"v":0.347},{"cod":"23","dpto":"Córdoba","year":1991,"v":0.322},{"cod":"23","dpto":"Córdoba","year":1992,"v":0.32},{"cod":"23","dpto":"Córdoba","year":1993,"v":0.296},{"cod":"23","dpto":"Córdoba","year":1994,"v":0.306},{"cod":"23","dpto":"Córdoba","year":1995,"v":0.279},{"cod":"23","dpto":"Córdoba","year":1996,"v":0.303},{"cod":"23","dpto":"Córdoba","year":1997,"v":0.395},{"cod":"23","dpto":"Córdoba","year":1998,"v":0.568},{"cod":"23","dpto":"Córdoba","year":1999,"v":0.573},{"cod":"23","dpto":"Córdoba","year":2000,"v":0.61},{"cod":"23","dpto":"Córdoba","year":2001,"v":0.611},{"cod":"23","dpto":"Córdoba","year":2002,"v":0.613},{"cod":"23","dpto":"Córdoba","year":2003,"v":0.607},{"cod":"23","dpto":"Córdoba","year":2004,"v":0.662},{"cod":"23","dpto":"Córdoba","year":2005,"v":0.635},{"cod":"23","dpto":"Córdoba","year":2006,"v":0.615},{"cod":"23","dpto":"Córdoba","year":2007,"v":0.653},{"cod":"23","dpto":"Córdoba","year":2008,"v":0.602},{"cod":"23","dpto":"Córdoba","year":2009,"v":0.69},{"cod":"23","dpto":"Córdoba","year":2010,"v":0.644},{"cod":"23","dpto":"Córdoba","year":2011,"v":0.74},{"cod":"23","dpto":"Córdoba","year":2012,"v":0.765},{"cod":"23","dpto":"Córdoba","year":2013,"v":0.773},{"cod":"23","dpto":"Córdoba","year":2014,"v":0.825},{"cod":"23","dpto":"Córdoba","year":2015,"v":0.82},{"cod":"23","dpto":"Córdoba","year":2016,"v":0.753},{"cod":"23","dpto":"Córdoba","year":2017,"v":0.752},{"cod":"44","dpto":"La Guajira","year":1985,"v":0.217},{"cod":"44","dpto":"La Guajira","year":1986,"v":0.198},{"cod":"44","dpto":"La Guajira","year":1987,"v":0.215},{"cod":"44","dpto":"La Guajira","year":1988,"v":0.242},{"cod":"44","dpto":"La Guajira","year":1989,"v":0.249},{"cod":"44","dpto":"La Guajira","year":1990,"v":0.253},{"cod":"44","dpto":"La Guajira","year":1991,"v":0.289},{"cod":"44","dpto":"La Guajira","year":1992,"v":0.274},{"cod":"44","dpto":"La Guajira","year":1993,"v":0.239},{"cod":"44","dpto":"La Guajira","year":1994,"v":0.308},{"cod":"44","dpto":"La Guajira","year":1995,"v":0.29},{"cod":"44","dpto":"La Guajira","year":1996,"v":0.293},{"cod":"44","dpto":"La Guajira","year":1997,"v":0.257},{"cod":"44","dpto":"La Guajira","year":1998,"v":0.303},{"cod":"44","dpto":"La Guajira","year":1999,"v":0.306},{"cod":"44","dpto":"La Guajira","year":2000,"v":0.315},{"cod":"44","dpto":"La Guajira","year":2001,"v":0.312},{"cod":"44","dpto":"La Guajira","year":2002,"v":0.291},{"cod":"44","dpto":"La Guajira","year":2003,"v":0.232},{"cod":"44","dpto":"La Guajira","year":2004,"v":0.283},{"cod":"44","dpto":"La Guajira","year":2005,"v":0.342},{"cod":"44","dpto":"La Guajira","year":2006,"v":0.312},{"cod":"44","dpto":"La Guajira","year":2007,"v":0.32},{"cod":"44","dpto":"La Guajira","year":2008,"v":0.314},{"cod":"44","dpto":"La Guajira","year":2009,"v":0.322},{"cod":"44","dpto":"La Guajira","year":2010,"v":0.3},{"cod":"44","dpto":"La Guajira","year":2011,"v":0.331},{"cod":"44","dpto":"La Guajira","year":2012,"v":0.3},{"cod":"44","dpto":"La Guajira","year":2013,"v":0.296},{"cod":"44","dpto":"La Guajira","year":2014,"v":0.322},{"cod":"44","dpto":"La Guajira","year":2015,"v":0.318},{"cod":"44","dpto":"La Guajira","year":2016,"v":0.337},{"cod":"44","dpto":"La Guajira","year":2017,"v":0.33},{"cod":"47","dpto":"Magdalena","year":1985,"v":0.448},{"cod":"47","dpto":"Magdalena","year":1986,"v":0.481},{"cod":"47","dpto":"Magdalena","year":1987,"v":0.519},{"cod":"47","dpto":"Magdalena","year":1988,"v":0.545},{"cod":"47","dpto":"Magdalena","year":1989,"v":0.462},{"cod":"47","dpto":"Magdalena","year":1990,"v":0.479},{"cod":"47","dpto":"Magdalena","year":1991,"v":0.42},{"cod":"47","dpto":"Magdalena","year":1992,"v":0.357},{"cod":"47","dpto":"Magdalena","year":1993,"v":0.362},{"cod":"47","dpto":"Magdalena","year":1994,"v":0.4},{"cod":"47","dpto":"Magdalena","year":1995,"v":0.369},{"cod":"47","dpto":"Magdalena","year":1996,"v":0.359},{"cod":"47","dpto":"Magdalena","year":1997,"v":0.363},{"cod":"47","dpto":"Magdalena","year":1998,"v":0.602},{"cod":"47","dpto":"Magdalena","year":1999,"v":0.623},{"cod":"47","dpto":"Magdalena","year":2000,"v":0.639},{"cod":"47","dpto":"Magdalena","year":2001,"v":0.675},{"cod":"47","dpto":"Magdalena","year":2002,"v":0.707},{"cod":"47","dpto":"Magdalena","year":2003,"v":0.718},{"cod":"47","dpto":"Magdalena","year":2004,"v":0.717},{"cod":"47","dpto":"Magdalena","year":2005,"v":0.713},{"cod":"47","dpto":"Magdalena","year":2006,"v":0.7},{"cod":"47","dpto":"Magdalena","year":2007,"v":0.786},{"cod":"47","dpto":"Magdalena","year":2008,"v":0.776},{"cod":"47","dpto":"Magdalena","year":2009,"v":0.814},{"cod":"47","dpto":"Magdalena","year":2010,"v":0.733},{"cod":"47","dpto":"Magdalena","year":2011,"v":0.744},{"cod":"47","dpto":"Magdalena","year":2012,"v":0.775},{"cod":"47","dpto":"Magdalena","year":2013,"v":0.769},{"cod":"47","dpto":"Magdalena","year":2014,"v":0.777},{"cod":"47","dpto":"Magdalena","year":2015,"v":0.727},{"cod":"47","dpto":"Magdalena","year":2016,"v":0.709},{"cod":"47","dpto":"Magdalena","year":2017,"v":0.685}],"natcdr":[{"year":1985,"registered":5.07,"corrected":6.87},{"year":1986,"registered":4.73,"corrected":6.34},{"year":1987,"registered":4.83,"corrected":6.44},{"year":1988,"registered":4.78,"corrected":6.28},{"year":1989,"registered":4.74,"corrected":6.29},{"year":1990,"registered":4.67,"corrected":6.18},{"year":1991,"registered":4.86,"corrected":6.39},{"year":1992,"registered":4.89,"corrected":6.39},{"year":1993,"registered":4.83,"corrected":6.29},{"year":1994,"registered":4.75,"corrected":6.11},{"year":1995,"registered":4.71,"corrected":6.08},{"year":1996,"registered":4.73,"corrected":6.15},{"year":1997,"registered":4.58,"corrected":5.88},{"year":1998,"registered":4.62,"corrected":5.75},{"year":1999,"registered":4.77,"corrected":5.9},{"year":2000,"registered":4.8,"corrected":5.92},{"year":2001,"registered":4.84,"corrected":5.98},{"year":2002,"registered":4.8,"corrected":5.94},{"year":2003,"registered":4.74,"corrected":5.86},{"year":2004,"registered":4.6,"corrected":5.66},{"year":2005,"registered":4.55,"corrected":5.59},{"year":2006,"registered":4.59,"corrected":5.62},{"year":2007,"registered":4.56,"corrected":5.61},{"year":2008,"registered":4.58,"corrected":5.63},{"year":2009,"registered":4.53,"corrected":5.55},{"year":2010,"registered":4.56,"corrected":5.62},{"year":2011,"registered":4.41,"corrected":5.45},{"year":2012,"registered":4.45,"corrected":5.52},{"year":2013,"registered":4.48,"corrected":5.54},{"year":2014,"registered":4.6,"corrected":5.65},{"year":2015,"registered":4.75,"corrected":5.85},{"year":2016,"registered":4.78,"corrected":5.89},{"year":2017,"registered":4.82,"corrected":5.96}],"corr":[{"dpto":"Vichada","pre":-0.914,"post":0.381,"carib":false},{"dpto":"Cauca","pre":-0.361,"post":0.507,"carib":false},{"dpto":"Guaviare","pre":-0.058,"post":0.436,"carib":false},{"dpto":"Meta","pre":0.086,"post":0.955,"carib":false},{"dpto":"Cesar","pre":0.105,"post":0.943,"carib":true},{"dpto":"Boyacá","pre":0.199,"post":0.94,"carib":false},{"dpto":"La Guajira","pre":0.317,"post":0.886,"carib":true},{"dpto":"Putumayo","pre":0.416,"post":0.719,"carib":false},{"dpto":"Arauca","pre":0.418,"post":0.844,"carib":false},{"dpto":"Archipiélago de San Andrés","pre":0.44,"post":0.453,"carib":false},{"dpto":"Casanare","pre":0.54,"post":0.853,"carib":false},{"dpto":"Chocó","pre":0.582,"post":0.523,"carib":false},{"dpto":"Nariño","pre":0.629,"post":0.728,"carib":false},{"dpto":"Bolívar","pre":0.634,"post":0.861,"carib":true},{"dpto":"Huila","pre":0.672,"post":0.951,"carib":false},{"dpto":"Caquetá","pre":0.69,"post":0.911,"carib":false},{"dpto":"Córdoba","pre":0.779,"post":0.644,"carib":true},{"dpto":"Sucre","pre":0.786,"post":0.927,"carib":true},{"dpto":"Bogotá, D.C.","pre":0.799,"post":0.966,"carib":false},{"dpto":"Cundinamarca","pre":0.824,"post":0.952,"carib":false},{"dpto":"Quindio","pre":0.824,"post":0.858,"carib":false},{"dpto":"Risaralda","pre":0.841,"post":0.962,"carib":false},{"dpto":"Santander","pre":0.844,"post":0.972,"carib":false},{"dpto":"Tolima","pre":0.846,"post":0.829,"carib":false},{"dpto":"Magdalena","pre":0.856,"post":0.919,"carib":true},{"dpto":"Caldas","pre":0.871,"post":0.955,"carib":false},{"dpto":"Atlántico","pre":0.951,"post":0.843,"carib":true},{"dpto":"Norte de Santander","pre":0.961,"post":0.983,"carib":false},{"dpto":"Valle del Cauca","pre":0.967,"post":0.968,"carib":false},{"dpto":"Antioquia","pre":0.983,"post":0.988,"carib":false}],"ggb":[{"dpto":"La Guajira","carib":true,"e85m":0.24,"e85f":0.2,"e05m":0.43,"e05f":0.33},{"dpto":"Córdoba","carib":true,"e85m":0.33,"e85f":0.37,"e05m":0.57,"e05f":0.75},{"dpto":"Sucre","carib":true,"e85m":0.39,"e85f":0.43,"e05m":0.73,"e05f":0.78},{"dpto":"Magdalena","carib":true,"e85m":0.42,"e85f":0.46,"e05m":0.73,"e05f":0.88},{"dpto":"Bolívar","carib":true,"e85m":0.5,"e85f":0.51,"e05m":0.71,"e05f":0.72},{"dpto":"Cesar","carib":true,"e85m":0.38,"e85f":0.51,"e05m":0.7,"e05f":0.96},{"dpto":"Atlántico","carib":true,"e85m":0.8,"e85f":0.69,"e05m":0.98,"e05f":1.01},{"dpto":"Santander","carib":false,"e85m":0.77,"e85f":0.83,"e05m":0.89,"e05f":0.95},{"dpto":"Valle del Cauca","carib":false,"e85m":0.79,"e85f":0.84,"e05m":1.13,"e05f":1.19},{"dpto":"Tolima","carib":false,"e85m":0.87,"e85f":0.9,"e05m":1.14,"e05f":1.19},{"dpto":"Bogotá, D.C.","carib":false,"e85m":1.17,"e85f":1.01,"e05m":1.19,"e05f":1.18},{"dpto":"Antioquia","carib":false,"e85m":0.73,"e85f":1.1,"e05m":0.8,"e05f":0.91}],"srcause":[{"reg":"Rest","era":"ICD-10 (1998-2017)","natural":1.05,"illdefined":1.33,"homicide":11.09,"undetermined":3.59},{"reg":"Caribbean","era":"ICD-10 (1998-2017)","natural":1.08,"illdefined":1.08,"homicide":13.04,"undetermined":3.01},{"reg":"Rest","era":"ICD-9 (1985-97)","natural":1.06,"illdefined":1.08,"homicide":12.75,"undetermined":6.8},{"reg":"Caribbean","era":"ICD-9 (1985-97)","natural":1.08,"illdefined":1.11,"homicide":13.34,"undetermined":3.86}],"illdef":[{"year":1985,"rest":13.86,"carib":21.47},{"year":1986,"rest":12.86,"carib":22.84},{"year":1987,"rest":11.96,"carib":20.74},{"year":1988,"rest":10.91,"carib":18.03},{"year":1989,"rest":9.63,"carib":15.45},{"year":1990,"rest":8.93,"carib":16.31},{"year":1991,"rest":8.59,"carib":18.04},{"year":1992,"rest":6.97,"carib":15.28},{"year":1993,"rest":7.09,"carib":11.74},{"year":1994,"rest":6.48,"carib":9.95},{"year":1995,"rest":5.76,"carib":9.95},{"year":1996,"rest":5.12,"carib":9.81},{"year":1997,"rest":4.21,"carib":5.37},{"year":1998,"rest":2.29,"carib":2.08},{"year":1999,"rest":1.81,"carib":1.94},{"year":2000,"rest":1.72,"carib":1.61},{"year":2001,"rest":1.82,"carib":1.24},{"year":2002,"rest":1.71,"carib":1.26},{"year":2003,"rest":1.78,"carib":1.35},{"year":2004,"rest":1.76,"carib":1.36},{"year":2005,"rest":1.68,"carib":1.56},{"year":2006,"rest":1.8,"carib":1.49},{"year":2007,"rest":1.77,"carib":1.36},{"year":2008,"rest":1.89,"carib":1.81},{"year":2009,"rest":2.13,"carib":2.31},{"year":2010,"rest":1.98,"carib":2.42},{"year":2011,"rest":2.6,"carib":3.97},{"year":2012,"rest":1.74,"carib":2.91},{"year":2013,"rest":1.78,"carib":2.32},{"year":2014,"rest":1.71,"carib":2.62},{"year":2015,"rest":1.75,"carib":1.82},{"year":2016,"rest":1.57,"carib":2.33},{"year":2017,"rest":1.48,"carib":2.02}]}</script>
+<script>
+(function(){
+"use strict";
+var D = JSON.parse(document.getElementById('data').textContent);
+var SV = "http://www.w3.org/2000/svg";
+function el(n,a){var e=document.createElementNS(SV,n);for(var k in a)e.setAttribute(k,a[k]);return e;}
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
+
+/* ---------- generic line chart ---------- */
+function lineChart(opts){
+  var host=document.getElementById(opts.host); if(!host) return;
+  host.textContent='';
+  var W=opts.w||760, H=opts.h||330,
+      M=opts.m||{t:14,r:opts.padR||78,b:32,l:46};
+  var svg=el('svg',{viewBox:'0 0 '+W+' '+H,role:'img','aria-label':opts.aria||''});
+  var iw=W-M.l-M.r, ih=H-M.t-M.b;
+  var xs=opts.xd, ys=opts.yd;
+  var X=function(v){return M.l+(v-xs[0])/(xs[1]-xs[0])*iw;};
+  var Y=function(v){return M.t+ih-(v-ys[0])/(ys[1]-ys[0])*ih;};
+
+  // band annotation
+  if(opts.band){
+    svg.appendChild(el('rect',{x:M.l,y:Y(opts.band[1]),width:iw,height:Y(opts.band[0])-Y(opts.band[1]),
+      fill:css('--critical'),opacity:.07}));
+    var bt=el('text',{x:M.l+8,y:Y(opts.band[1])+15,fill:css('--critical'),'font-size':11,
+      'font-family':css('--sans'),'font-weight':600,opacity:.85});
+    bt.textContent=opts.bandLabel||''; svg.appendChild(bt);
+  }
+  // y grid + labels
+  opts.yticks.forEach(function(t){
+    svg.appendChild(el('line',{x1:M.l,x2:M.l+iw,y1:Y(t),y2:Y(t),stroke:css('--grid'),'stroke-width':1}));
+    var tx=el('text',{x:M.l-9,y:Y(t)+4,fill:css('--ink-3'),'font-size':11,'text-anchor':'end',
+      'font-family':css('--mono')}); tx.textContent=opts.yfmt?opts.yfmt(t):t; svg.appendChild(tx);
+  });
+  // x labels
+  opts.xticks.forEach(function(t){
+    var tx=el('text',{x:X(t),y:H-10,fill:css('--ink-3'),'font-size':11,'text-anchor':'middle',
+      'font-family':css('--mono')}); tx.textContent=t; svg.appendChild(tx);
+  });
+  // rule marker
+  if(opts.vline){
+    svg.appendChild(el('line',{x1:X(opts.vline),x2:X(opts.vline),y1:M.t,y2:M.t+ih,
+      stroke:css('--annot'),'stroke-width':1.5,'stroke-dasharray':'4 4'}));
+    var vt=el('text',{x:X(opts.vline)+6,y:M.t+12,fill:css('--ink-3'),'font-size':10.5,
+      'font-family':css('--mono')}); vt.textContent=opts.vlabel||opts.vline; svg.appendChild(vt);
+  }
+  // series
+  opts.series.forEach(function(s){
+    var d=s.pts.map(function(p,i){return (i?'L':'M')+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1);}).join(' ');
+    svg.appendChild(el('path',{d:d,fill:'none',stroke:s.color,'stroke-width':s.w||2,
+      'stroke-linecap':'round','stroke-linejoin':'round',opacity:s.op==null?1:s.op}));
+    if(s.label){
+      var last=s.pts[s.pts.length-1];
+      var lt=el('text',{x:X(last[0])+7,y:Y(last[1])+4,fill:s.labelColor||s.color,'font-size':11.5,
+        'font-family':css('--sans'),'font-weight':600});
+      lt.textContent=s.label; svg.appendChild(lt);
+    }
+  });
+  host.appendChild(svg);
+
+  // hover layer
+  if(opts.hover!==false){
+    var tip=document.createElement('div'); tip.className='tip'; host.appendChild(tip);
+    var cross=el('line',{x1:0,x2:0,y1:M.t,y2:M.t+ih,stroke:css('--ink-3'),'stroke-width':1,opacity:0});
+    svg.appendChild(cross);
+    var dots=opts.series.map(function(s){
+      var c=el('circle',{r:4.5,fill:s.color,stroke:css('--panel'),'stroke-width':2,opacity:0});
+      svg.appendChild(c); return c;
+    });
+    svg.addEventListener('pointermove',function(ev){
+      var r=svg.getBoundingClientRect(), px=(ev.clientX-r.left)/r.width*W;
+      if(px<M.l-4||px>M.l+iw+4){hide();return;}
+      var xv=Math.round(xs[0]+(px-M.l)/iw*(xs[1]-xs[0]));
+      xv=Math.max(xs[0],Math.min(xs[1],xv));
+      cross.setAttribute('x1',X(xv)); cross.setAttribute('x2',X(xv)); cross.setAttribute('opacity',.35);
+      var rows='', n=0;
+      opts.series.forEach(function(s,i){
+        var p=null; for(var k=0;k<s.pts.length;k++) if(s.pts[k][0]===xv){p=s.pts[k];break;}
+        if(!p){dots[i].setAttribute('opacity',0);return;}
+        dots[i].setAttribute('cx',X(p[0])); dots[i].setAttribute('cy',Y(p[1]));
+        dots[i].setAttribute('opacity',1); n++;
+        rows+='<div class="tip-r"><span><i style="background:'+s.color+'"></i>'+
+              (s.name||s.label||'')+'</span><b>'+(opts.tfmt?opts.tfmt(p[1]):p[1])+'</b></div>';
+      });
+      if(!n){hide();return;}
+      tip.innerHTML='<div class="tip-h">'+xv+'</div>'+rows;
+      tip.style.opacity=1;
+      var hb=host.getBoundingClientRect(), tw=tip.offsetWidth;
+      var lx=(X(xv)/W)*hb.width+14; if(lx+tw>hb.width) lx=(X(xv)/W)*hb.width-tw-14;
+      tip.style.left=Math.max(0,lx)+'px'; tip.style.top='10px';
+    });
+    svg.addEventListener('pointerleave',hide);
+    function hide(){tip.style.opacity=0;cross.setAttribute('opacity',0);
+      dots.forEach(function(d){d.setAttribute('opacity',0);});}
+  }
+}
+function legend(id,items){
+  var h=document.getElementById(id); if(!h) return; h.textContent='';
+  items.forEach(function(it){
+    var s=document.createElement('span'); s.className='lg';
+    s.innerHTML='<i style="background:'+it.c+'"></i>'+it.t; h.appendChild(s);
+  });
+}
+function groupBy(rows,key){
+  var m={}; rows.forEach(function(r){(m[r[key]]=m[r[key]]||[]).push(r);}); return m;
+}
+
+/* ---------- Fig 1: ill-defined share ---------- */
+function figIll(){
+  var r=D.illdef;
+  lineChart({host:'c-ill',h:250,padR:92,
+    xd:[1985,2017],yd:[0,24],
+    xticks:[1985,1990,1995,2000,2005,2010,2017],
+    yticks:[0,6,12,18,24],yfmt:function(t){return t+'%';},
+    tfmt:function(v){return v.toFixed(1)+'%';},
+    vline:1998,vlabel:'1998',
+    aria:'Ill-defined cause share falls from 21 percent to 2 percent at 1998',
+    series:[
+      {name:'Caribbean',label:'Caribbean',color:css('--s2'),pts:r.map(function(d){return [d.year,d.carib];})},
+      {name:'Rest of country',label:'Rest',color:css('--s1'),pts:r.map(function(d){return [d.year,d.rest];})}
+    ]});
+  legend('lg-ill',[{c:css('--s2'),t:'Caribbean departments'},{c:css('--s1'),t:'Rest of country'}]);
+}
+
+/* ---------- Fig 2: CDR by department ---------- */
+function figCdr(){
+  var g=groupBy(D.cdr,'dpto'), series=[];
+  var showLabel={'La Guajira':1,'Córdoba':1,'Antioquia':1,'Bogotá, D.C.':1};
+  Object.keys(g).forEach(function(k){
+    var rows=g[k].slice().sort(function(a,b){return a.year-b.year;});
+    var carib=rows[0].grp==='carib';
+    series.push({name:k,color:carib?css('--s2'):css('--s1'),
+      op:carib?.9:.55,w:carib?2:1.6,
+      label:showLabel[k]?k:null,
+      labelColor:carib?css('--s2'):css('--s1'),
+      pts:rows.map(function(d){return [d.year,d.cdr];})});
+  });
+  lineChart({host:'c-cdr',h:360,padR:94,
+    xd:[1985,2017],yd:[0,7.5],
+    xticks:[1985,1990,1995,2000,2005,2010,2017],
+    yticks:[0,1.5,3,4.5,6,7.5],
+    band:[0,3],bandLabel:'implausible for Colombia’s age structure',
+    tfmt:function(v){return v.toFixed(2);},
+    vline:1998,vlabel:'1998',
+    aria:'Caribbean crude death rates sit below three per thousand before 1998',
+    series:series});
+  legend('lg-cdr',[{c:css('--s2'),t:'Caribbean (7 departments)'},
+                   {c:css('--s1'),t:'Antioquia, Bogotá, Santander, Valle'}]);
+}
+
+/* ---------- Fig 3: completeness ---------- */
+function figComp(){
+  var g=groupBy(D.comp,'dpto'), order=['Córdoba','Cesar','Magdalena','La Guajira','Antioquia'];
+  var cols={'Córdoba':css('--s1'),'Cesar':css('--s2'),'Magdalena':css('--s3'),
+            'La Guajira':css('--s4'),'Antioquia':css('--ink-3')};
+  var series=order.filter(function(k){return g[k];}).map(function(k){
+    var rows=g[k].slice().sort(function(a,b){return a.year-b.year;});
+    return {name:k,label:k,color:cols[k],w:k==='Antioquia'?1.6:2,op:k==='Antioquia'?.7:1,
+      pts:rows.map(function(d){return [d.year,d.v];})};
+  });
+  lineChart({host:'c-comp',h:330,padR:96,
+    xd:[1985,2017],yd:[0,1.05],
+    xticks:[1985,1990,1995,2000,2005,2010,2017],
+    yticks:[0,.25,.5,.75,1],yfmt:function(t){return (t*100)+'%';},
+    tfmt:function(v){return (v*100).toFixed(0)+'%';},
+    vline:1998,vlabel:'1998 certificate',
+    aria:'Registration completeness steps up sharply in 1998 for three Caribbean departments',
+    series:series});
+}
+
+/* ---------- Fig 4: national CDR ---------- */
+function figNat(){
+  var r=D.natcdr;
+  lineChart({host:'c-nat',h:260,padR:96,
+    xd:[1985,2017],yd:[0,7.5],
+    xticks:[1985,1990,1995,2000,2005,2010,2017],
+    yticks:[0,1.5,3,4.5,6,7.5],
+    tfmt:function(v){return v.toFixed(2);},
+    vline:1998,vlabel:'1998',
+    aria:'Corrected national crude death rate falls from 6.9 to 5.9 per thousand',
+    series:[
+      {name:'Corrected',label:'Corrected',color:css('--s2'),pts:r.map(function(d){return [d.year,d.corrected];})},
+      {name:'Registered',label:'Registered',color:css('--s1'),pts:r.map(function(d){return [d.year,d.registered];})}
+    ]});
+  legend('lg-nat',[{c:css('--s2'),t:'Corrected for completeness'},{c:css('--s1'),t:'As registered'}]);
+}
+
+/* ---------- Fig 5: correlation dumbbell ---------- */
+function figCorr(){
+  var host=document.getElementById('c-corr'); if(!host) return; host.textContent='';
+  var rows=D.corr.slice().sort(function(a,b){return a.pre-b.pre;});
+  var rowH=19, M={t:26,r:16,b:30,l:152}, W=760, H=M.t+rows.length*rowH+M.b;
+  var iw=W-M.l-M.r;
+  var X=function(v){return M.l+(v+1)/2*iw;};
+  var svg=el('svg',{viewBox:'0 0 '+W+' '+H,role:'img',
+    'aria-label':'Correlation before and after 1998 for 30 departments'});
+  [-1,-0.5,0,0.5,1].forEach(function(t){
+    svg.appendChild(el('line',{x1:X(t),x2:X(t),y1:M.t-8,y2:M.t+rows.length*rowH-4,
+      stroke:t===0?css('--annot'):css('--grid'),'stroke-width':1}));
+    var tx=el('text',{x:X(t),y:H-12,fill:css('--ink-3'),'font-size':11,'text-anchor':'middle',
+      'font-family':css('--mono')}); tx.textContent=t; svg.appendChild(tx);
+  });
+  var hd=el('text',{x:M.l,y:M.t-14,fill:css('--ink-3'),'font-size':10.5,'font-family':css('--mono'),
+    'letter-spacing':'.06em'}); hd.textContent='PEARSON r'; svg.appendChild(hd);
+  rows.forEach(function(d,i){
+    var y=M.t+i*rowH+rowH/2;
+    var nm=el('text',{x:M.l-14,y:y+4,fill:d.carib?css('--ink'):css('--ink-2'),'font-size':11.5,
+      'text-anchor':'end','font-family':css('--sans'),'font-weight':d.carib?600:400});
+    nm.textContent=d.dpto; svg.appendChild(nm);
+    svg.appendChild(el('line',{x1:X(d.pre),x2:X(d.post),y1:y,y2:y,
+      stroke:d.carib?css('--s2'):css('--ink-3'),'stroke-width':d.carib?2.5:1.5,
+      opacity:d.carib?.5:.3,'stroke-linecap':'round'}));
+    var g=el('g',{});
+    var c1=el('circle',{cx:X(d.pre),cy:y,r:4.5,fill:css('--s1'),stroke:css('--panel'),'stroke-width':1.5});
+    var c2=el('circle',{cx:X(d.post),cy:y,r:4.5,fill:css('--s2'),stroke:css('--panel'),'stroke-width':1.5});
+    g.appendChild(c1); g.appendChild(c2);
+    var t=el('title',{}); t.textContent=d.dpto+' — before 1998: r = '+d.pre.toFixed(2)+
+      ' · after: r = '+d.post.toFixed(2); g.appendChild(t);
+    svg.appendChild(g);
+  });
+  host.appendChild(svg);
+  legend('lg-corr',[{c:css('--s1'),t:'Before 1998'},{c:css('--s2'),t:'1998 onward'},
+    {c:css('--ink'),t:'Caribbean departments in bold'}]);
+}
+
+/* ---------- tables ---------- */
+function tables(){
+  var tb=document.getElementById('t-srcause');
+  if(tb){
+    var order=[['Caribbean','ICD-9 (1985-97)'],['Caribbean','ICD-10 (1998-2017)'],
+               ['Rest','ICD-9 (1985-97)'],['Rest','ICD-10 (1998-2017)']];
+    order.forEach(function(o){
+      var d=D.srcause.filter(function(r){return r.reg===o[0]&&r.era===o[1];})[0]; if(!d) return;
+      var tr=document.createElement('tr');
+      if(o[0]==='Caribbean') tr.className='hl';
+      tr.innerHTML='<td class="nm">'+d.reg+'</td><td>'+d.era+'</td>'+
+        '<td class="num">'+d.natural.toFixed(2)+'</td>'+
+        '<td class="num">'+d.illdefined.toFixed(2)+'</td>'+
+        '<td class="num">'+d.undetermined.toFixed(2)+'</td>'+
+        '<td class="num">'+d.homicide.toFixed(2)+'</td>';
+      tb.appendChild(tr);
+    });
+  }
+  var tg=document.getElementById('t-ggb');
+  if(tg){
+    D.ggb.forEach(function(d){
+      var tr=document.createElement('tr'); if(d.carib) tr.className='hl';
+      function f(v){return v==null?'&mdash;':v.toFixed(2);}
+      tr.innerHTML='<td class="nm">'+d.dpto+'</td>'+
+        '<td class="num">'+f(d.e85m)+'</td><td class="num">'+f(d.e85f)+'</td>'+
+        '<td class="num">'+f(d.e05m)+'</td><td class="num">'+f(d.e05f)+'</td>';
+      tg.appendChild(tr);
+    });
+  }
+}
+
+function draw(){ figIll(); figCdr(); figComp(); figNat(); figCorr(); }
+tables(); draw();
+if(window.matchMedia){
+  var mq=window.matchMedia('(prefers-color-scheme: dark)');
+  if(mq.addEventListener) mq.addEventListener('change',draw);
+}
+new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+})();
+</script>

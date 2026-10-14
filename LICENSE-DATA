@@ -1,0 +1,12 @@
+The derived tables (output/, data_inter/completeness_*.csv), the figures in
+figures/ and the hand-transcribed historical series in data_input/historical/
+are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0),
+https://creativecommons.org/licenses/by/4.0/
+
+They are derived from:
+- DANE, Estadísticas Vitales (EEVV), defunciones no fetales, microdata 1979-2023
+- DANE, proyecciones de población municipal por área, sexo y edad 1985-2017
+- DANE, Lista de causas 105 para Colombia (CIE-9 / CIE-10)
+- UCDP Georeferenced Event Dataset (GED) Global version 25.1
+- WHO Mortality Database
+- DANE, Anuarios Estadísticos (1923-1984), transcribed by the project

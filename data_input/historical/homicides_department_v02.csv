@@ -1,0 +1,572 @@
+country_id,department,department_raw,year,homicide_total,homicide_male,homicide_female,source_column,concept_flag
+COL,antioquia,ANTIOQUIA,1923,3,3,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,antioquia,ANTIOQUIA,1924,52,52,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,antioquia,ANTIOQUIA,1927,117,108,9,sum(homicidio_fuego+punzante+otros),NA
+COL,antioquia,ANTIOQUIA,1928,100,90,10,sum(homicidio_fuego+punzante+otros),NA
+COL,antioquia,ANTIOQUIA,1929,120,78,42,sum(homicidio_fuego+punzante+otros),NA
+COL,antioquia,ANTIOQUIA,1930,68,47,21,sum(homicidio_fuego+punzante+otros),NA
+COL,antioquia,ANTIOQUIA,1931,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,antioquia,ANTIOQUIA,1936,96,NA,NA,homicidios,NA
+COL,antioquia,ANTIOQUIA,1938,179,165,14,homicidios,NA
+COL,antioquia,ANTIOQUIA,1939,154,NA,NA,homicidios,NA
+COL,antioquia,ANTIOQUIA,1940,144,132,12,homicidios,NA
+COL,antioquia,ANTIOQUIA,1943,612,467,145,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,antioquia,ANTIOQUIA,1944,656,499,157,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,antioquia,ANTIOQUIA,1945,669,489,180,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,antioquia,ANTIOQUIA,1946,120,113,7,homicidios,NA
+COL,antioquia,ANTIOQUIA,1947,87,74,13,homicidios,NA
+COL,antioquia,ANTIOQUIA,1948,126,112,14,homicidios,NA
+COL,antioquia,ANTIOQUIA,1949,212,195,17,homicidios,NA
+COL,antioquia,ANTIOQUIA,1951,397,362,35,homicidios,NA
+COL,antioquia,ANTIOQUIA,1952,705,661,44,homicidios,NA
+COL,antioquia,ANTIOQUIA,1953,557,516,41,hom_trauma_intencional,NA
+COL,antioquia,ANTIOQUIA,1954,357,327,30,hom_trauma_intencional,NA
+COL,antioquia,ANTIOQUIA,1955,403,356,47,hom_trauma_intencional,NA
+COL,antioquia,ANTIOQUIA,1956,514,487,27,hom_trauma_intencional,NA
+COL,antioquia,ANTIOQUIA,1957,431,397,34,hom_trauma_intencional,NA
+COL,antioquia,ANTIOQUIA,1958,698,639,59,hom_trauma_intencional,NA
+COL,antioquia,ANTIOQUIA,1959,709,665,44,hom_trauma_intencional,NA
+COL,antioquia,ANTIOQUIA,1960,788,720,68,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,antioquia,ANTIOQUIA,1961,707,656,51,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,antioquia,ANTIOQUIA,1962,628,565,63,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,antioquia,ANTIOQUIA,1963,571,510,61,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,antioquia,ANTIOQUIA,1964,538,489,49,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,antioquia,ANTIOQUIA,1965,609,548,61,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,arauca,ARAUCA,1929,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,arauca,ARAUCA,1930,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,arauca,ARAUCA,1931,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,atlantico,ATLANTICO,1923,15,14,1,sum(homicidio_fuego+punzante+otros),NA
+COL,atlantico,ATLANTICO,1924,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,atlantico,ATLANTICO,1927,13,13,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,atlantico,ATLANTICO,1928,21,19,2,sum(homicidio_fuego+punzante+otros),NA
+COL,atlantico,ATLANTICO,1929,7,7,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,atlantico,ATLANTICO,1930,1,NA,1,sum(homicidio_fuego+punzante+otros),NA
+COL,atlantico,ATLANTICO,1931,5,NA,NA,homicidios,NA
+COL,atlantico,ATLANTICO,1936,6,NA,NA,homicidios,NA
+COL,atlantico,ATLANTICO,1938,12,10,2,homicidios,NA
+COL,atlantico,ATLANTICO,1939,21,NA,NA,homicidios,NA
+COL,atlantico,ATLANTICO,1940,15,13,2,homicidios,NA
+COL,atlantico,ATLANTICO,1943,91,76,15,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,atlantico,ATLANTICO,1944,82,65,17,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,atlantico,ATLANTICO,1945,121,97,24,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,atlantico,ATLANTICO,1946,11,8,3,homicidios,NA
+COL,atlantico,ATLANTICO,1947,11,8,3,homicidios,NA
+COL,atlantico,ATLANTICO,1948,35,34,1,homicidios,NA
+COL,atlantico,ATLANTICO,1949,36,34,2,homicidios,NA
+COL,atlantico,ATLANTICO,1951,41,37,4,homicidios,NA
+COL,atlantico,ATLANTICO,1952,27,24,3,homicidios,NA
+COL,atlantico,ATLANTICO,1953,35,33,2,hom_trauma_intencional,NA
+COL,atlantico,ATLANTICO,1954,38,35,3,hom_trauma_intencional,NA
+COL,atlantico,ATLANTICO,1955,33,27,6,hom_trauma_intencional,NA
+COL,atlantico,ATLANTICO,1956,38,36,2,hom_trauma_intencional,NA
+COL,atlantico,ATLANTICO,1957,25,22,3,hom_trauma_intencional,NA
+COL,atlantico,ATLANTICO,1958,33,30,3,hom_trauma_intencional,NA
+COL,atlantico,ATLANTICO,1959,38,34,4,hom_trauma_intencional,NA
+COL,atlantico,ATLANTICO,1960,37,32,5,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,atlantico,ATLANTICO,1961,46,43,3,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,atlantico,ATLANTICO,1962,36,32,4,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,atlantico,ATLANTICO,1963,52,50,2,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,atlantico,ATLANTICO,1964,43,37,6,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,atlantico,ATLANTICO,1965,49,43,6,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,bogota,BOGOTA,1936,53,NA,NA,homicidios,NA
+COL,bogota,BOGOTA,1938,54,47,7,homicidios,NA
+COL,bogota,BOGOTA,1939,59,NA,NA,homicidios,NA
+COL,bogota,BOGOTA,1962,191,160,31,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,bogota,BOGOTA,1963,247,214,33,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,bogota,BOGOTA,1964,238,198,40,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,bogota,BOGOTA,1965,334,282,52,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,bolivar,BOLIVAR,1923,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,bolivar,BOLIVAR,1924,6,6,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,bolivar,BOLIVAR,1927,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,bolivar,BOLIVAR,1928,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,bolivar,BOLIVAR,1929,5,4,1,sum(homicidio_fuego+punzante+otros),NA
+COL,bolivar,BOLIVAR,1930,5,4,1,sum(homicidio_fuego+punzante+otros),NA
+COL,bolivar,BOLIVAR,1931,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,bolivar,BOLIVAR,1936,27,NA,NA,homicidios,NA
+COL,bolivar,BOLIVAR,1938,27,22,5,homicidios,NA
+COL,bolivar,BOLIVAR,1939,29,NA,NA,homicidios,NA
+COL,bolivar,BOLIVAR,1940,36,35,1,homicidios,NA
+COL,bolivar,BOLIVAR,1943,184,146,38,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,bolivar,BOLIVAR,1944,210,165,45,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,bolivar,BOLIVAR,1945,213,164,49,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,bolivar,BOLIVAR,1946,28,26,2,homicidios,NA
+COL,bolivar,BOLIVAR,1947,15,14,1,homicidios,NA
+COL,bolivar,BOLIVAR,1948,24,22,2,homicidios,NA
+COL,bolivar,BOLIVAR,1949,53,48,5,homicidios,NA
+COL,bolivar,BOLIVAR,1951,64,57,7,homicidios,NA
+COL,bolivar,BOLIVAR,1952,41,40,1,homicidios,NA
+COL,bolivar,BOLIVAR,1953,45,43,2,hom_trauma_intencional,NA
+COL,bolivar,BOLIVAR,1954,43,38,5,hom_trauma_intencional,NA
+COL,bolivar,BOLIVAR,1955,44,40,4,hom_trauma_intencional,NA
+COL,bolivar,BOLIVAR,1956,34,33,1,hom_trauma_intencional,NA
+COL,bolivar,BOLIVAR,1957,57,51,6,hom_trauma_intencional,NA
+COL,bolivar,BOLIVAR,1958,40,36,4,hom_trauma_intencional,NA
+COL,bolivar,BOLIVAR,1959,39,32,7,hom_trauma_intencional,NA
+COL,bolivar,BOLIVAR,1960,94,69,25,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,bolivar,BOLIVAR,1961,30,27,3,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,bolivar,BOLIVAR,1962,53,47,6,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,bolivar,BOLIVAR,1963,56,51,5,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,bolivar,BOLIVAR,1964,75,70,5,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,bolivar,BOLIVAR,1965,46,39,7,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,boyaca,BOYACA,1923,5,5,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,boyaca,BOYACA,1924,1,1,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,boyaca,BOYACA,1927,7,7,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,boyaca,BOYACA,1928,5,5,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,boyaca,BOYACA,1929,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,boyaca,BOYACA,1930,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,boyaca,BOYACA,1931,19,NA,NA,homicidios,NA
+COL,boyaca,BOYACA,1936,85,NA,NA,homicidios,NA
+COL,boyaca,BOYACA,1938,125,109,16,homicidios,NA
+COL,boyaca,BOYACA,1939,101,NA,NA,homicidios,NA
+COL,boyaca,BOYACA,1940,100,93,7,homicidios,NA
+COL,boyaca,BOYACA,1943,487,353,134,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,boyaca,BOYACA,1944,451,324,127,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,boyaca,BOYACA,1945,427,313,114,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,boyaca,BOYACA,1946,99,89,10,homicidios,NA
+COL,boyaca,BOYACA,1947,138,119,19,homicidios,NA
+COL,boyaca,BOYACA,1948,251,236,15,homicidios,NA
+COL,boyaca,BOYACA,1949,398,366,32,homicidios,NA
+COL,boyaca,BOYACA,1951,277,231,46,homicidios,NA
+COL,boyaca,BOYACA,1952,296,253,43,homicidios,NA
+COL,boyaca,BOYACA,1953,205,185,20,hom_trauma_intencional,NA
+COL,boyaca,BOYACA,1954,164,155,9,hom_trauma_intencional,NA
+COL,boyaca,BOYACA,1955,140,123,17,hom_trauma_intencional,NA
+COL,boyaca,BOYACA,1956,158,147,11,hom_trauma_intencional,NA
+COL,boyaca,BOYACA,1957,163,145,18,hom_trauma_intencional,NA
+COL,boyaca,BOYACA,1958,220,202,18,hom_trauma_intencional,NA
+COL,boyaca,BOYACA,1959,187,168,19,hom_trauma_intencional,NA
+COL,boyaca,BOYACA,1960,235,206,29,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,boyaca,BOYACA,1961,260,227,33,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,boyaca,BOYACA,1962,277,234,43,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,boyaca,BOYACA,1963,252,227,25,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,boyaca,BOYACA,1964,297,270,27,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,boyaca,BOYACA,1965,276,253,23,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,caldas,CALDAS,1923,5,4,1,sum(homicidio_fuego+punzante+otros),NA
+COL,caldas,CALDAS,1924,9,9,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,caldas,CALDAS,1927,32,25,7,sum(homicidio_fuego+punzante+otros),NA
+COL,caldas,CALDAS,1928,32,28,4,sum(homicidio_fuego+punzante+otros),NA
+COL,caldas,CALDAS,1929,44,43,1,sum(homicidio_fuego+punzante+otros),NA
+COL,caldas,CALDAS,1930,29,29,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,caldas,CALDAS,1931,47,NA,NA,homicidios,NA
+COL,caldas,CALDAS,1936,86,NA,NA,homicidios,NA
+COL,caldas,CALDAS,1938,145,128,17,homicidios,NA
+COL,caldas,CALDAS,1939,104,NA,NA,homicidios,NA
+COL,caldas,CALDAS,1940,98,85,13,homicidios,NA
+COL,caldas,CALDAS,1943,314,242,72,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,caldas,CALDAS,1944,1305,815,490,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,caldas,CALDAS,1945,365,290,75,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,caldas,CALDAS,1946,64,59,5,homicidios,NA
+COL,caldas,CALDAS,1947,80,72,8,homicidios,NA
+COL,caldas,CALDAS,1948,146,136,10,homicidios,NA
+COL,caldas,CALDAS,1949,310,286,24,homicidios,NA
+COL,caldas,CALDAS,1951,394,374,20,homicidios,NA
+COL,caldas,CALDAS,1952,432,400,32,homicidios,NA
+COL,caldas,CALDAS,1953,471,438,33,hom_trauma_intencional,NA
+COL,caldas,CALDAS,1954,487,453,34,hom_trauma_intencional,NA
+COL,caldas,CALDAS,1955,613,579,34,hom_trauma_intencional,NA
+COL,caldas,CALDAS,1956,843,788,55,hom_trauma_intencional,NA
+COL,caldas,CALDAS,1957,1131,1079,52,hom_trauma_intencional,NA
+COL,caldas,CALDAS,1958,1487,1385,102,hom_trauma_intencional,NA
+COL,caldas,CALDAS,1959,1054,994,60,hom_trauma_intencional,NA
+COL,caldas,CALDAS,1960,580,523,57,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,caldas,CALDAS,1961,819,747,72,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,caldas,CALDAS,1962,740,656,84,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,caldas,CALDAS,1963,709,650,59,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,caldas,CALDAS,1964,615,556,59,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,caldas,CALDAS,1965,532,487,45,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,caqueta,CAQUETA,1923,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,caqueta,CAQUETA,1924,1,NA,1,sum(homicidio_fuego+punzante+otros),NA
+COL,caqueta,CAQUETA,1927,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,caqueta,CAQUETA,1928,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,caqueta,CAQUETA,1929,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,caqueta,CAQUETA,1930,2,2,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,caqueta,CAQUETA,1931,5,NA,NA,homicidios,NA
+COL,cauca,CAUCA,1923,6,4,2,sum(homicidio_fuego+punzante+otros),NA
+COL,cauca,CAUCA,1924,12,10,2,sum(homicidio_fuego+punzante+otros),NA
+COL,cauca,CAUCA,1927,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,cauca,CAUCA,1928,14,12,2,sum(homicidio_fuego+punzante+otros),NA
+COL,cauca,CAUCA,1929,5,4,1,sum(homicidio_fuego+punzante+otros),NA
+COL,cauca,CAUCA,1930,14,12,2,sum(homicidio_fuego+punzante+otros),NA
+COL,cauca,CAUCA,1931,22,NA,NA,homicidios,NA
+COL,cauca,CAUCA,1936,20,NA,NA,homicidios,NA
+COL,cauca,CAUCA,1938,54,51,3,homicidios,NA
+COL,cauca,CAUCA,1939,54,NA,NA,homicidios,NA
+COL,cauca,CAUCA,1940,42,37,5,homicidios,NA
+COL,cauca,CAUCA,1943,173,118,55,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,cauca,CAUCA,1944,188,126,62,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,cauca,CAUCA,1945,213,157,56,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,cauca,CAUCA,1946,39,33,6,homicidios,NA
+COL,cauca,CAUCA,1947,30,24,6,homicidios,NA
+COL,cauca,CAUCA,1948,52,44,8,homicidios,NA
+COL,cauca,CAUCA,1949,56,50,6,homicidios,NA
+COL,cauca,CAUCA,1951,72,69,3,homicidios,NA
+COL,cauca,CAUCA,1952,70,61,9,homicidios,NA
+COL,cauca,CAUCA,1953,73,68,5,hom_trauma_intencional,NA
+COL,cauca,CAUCA,1954,93,88,5,hom_trauma_intencional,NA
+COL,cauca,CAUCA,1955,124,112,12,hom_trauma_intencional,NA
+COL,cauca,CAUCA,1956,133,117,16,hom_trauma_intencional,NA
+COL,cauca,CAUCA,1957,157,138,19,hom_trauma_intencional,NA
+COL,cauca,CAUCA,1958,223,211,12,hom_trauma_intencional,NA
+COL,cauca,CAUCA,1959,186,172,14,hom_trauma_intencional,NA
+COL,cauca,CAUCA,1960,133,119,14,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cauca,CAUCA,1961,152,127,25,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cauca,CAUCA,1962,172,147,25,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cauca,CAUCA,1963,153,132,21,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cauca,CAUCA,1964,136,121,15,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cauca,CAUCA,1965,146,126,20,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,choco,CHOCO,1923,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,choco,CHOCO,1924,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,choco,CHOCO,1927,1,1,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,choco,CHOCO,1928,1,1,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,choco,CHOCO,1929,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,choco,CHOCO,1930,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,choco,CHOCO,1931,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,choco,CHOCO,1948,2,2,NA,homicidios,NA
+COL,choco,CHOCO,1949,4,3,1,homicidios,NA
+COL,choco,CHOCO,1951,15,15,NA,homicidios,NA
+COL,choco,CHOCO,1952,21,19,2,homicidios,NA
+COL,choco,CHOCO,1953,8,8,NA,hom_trauma_intencional,NA
+COL,choco,CHOCO,1954,11,9,2,hom_trauma_intencional,NA
+COL,choco,CHOCO,1955,5,3,2,hom_trauma_intencional,NA
+COL,choco,CHOCO,1956,20,18,2,hom_trauma_intencional,NA
+COL,choco,CHOCO,1957,17,15,2,hom_trauma_intencional,NA
+COL,choco,CHOCO,1958,21,19,2,hom_trauma_intencional,NA
+COL,choco,CHOCO,1959,15,13,2,hom_trauma_intencional,NA
+COL,choco,CHOCO,1960,16,15,1,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,choco,CHOCO,1961,20,15,5,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,choco,CHOCO,1962,25,22,3,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,choco,CHOCO,1963,28,26,2,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,choco,CHOCO,1964,25,14,11,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,choco,CHOCO,1965,26,24,2,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,comisarias,COMISARIAS,1938,NA,NA,NA,NA,NA
+COL,comisarias,COMISARIAS,1939,5,NA,NA,homicidios,NA
+COL,cordoba,CORDOBA,1952,5,5,NA,homicidios,NA
+COL,cordoba,CORDOBA,1953,10,7,3,hom_trauma_intencional,NA
+COL,cordoba,CORDOBA,1954,32,27,5,hom_trauma_intencional,NA
+COL,cordoba,CORDOBA,1955,18,14,4,hom_trauma_intencional,NA
+COL,cordoba,CORDOBA,1956,34,32,2,hom_trauma_intencional,NA
+COL,cordoba,CORDOBA,1957,31,29,2,hom_trauma_intencional,NA
+COL,cordoba,CORDOBA,1958,29,26,3,hom_trauma_intencional,NA
+COL,cordoba,CORDOBA,1959,24,21,3,hom_trauma_intencional,NA
+COL,cordoba,CORDOBA,1960,18,16,2,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cordoba,CORDOBA,1961,17,15,2,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cordoba,CORDOBA,1962,26,21,5,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cordoba,CORDOBA,1963,23,22,1,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cordoba,CORDOBA,1964,27,25,2,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cordoba,CORDOBA,1965,41,34,7,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cundinamarca,CUNDINAMARCA,1923,42,38,4,sum(homicidio_fuego+punzante+otros),NA
+COL,cundinamarca,CUNDINAMARCA,1924,52,45,7,sum(homicidio_fuego+punzante+otros),NA
+COL,cundinamarca,CUNDINAMARCA,1927,28,21,7,sum(homicidio_fuego+punzante+otros),NA
+COL,cundinamarca,CUNDINAMARCA,1928,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,cundinamarca,CUNDINAMARCA,1929,9,8,1,sum(homicidio_fuego+punzante+otros),NA
+COL,cundinamarca,CUNDINAMARCA,1930,49,46,3,sum(homicidio_fuego+punzante+otros),NA
+COL,cundinamarca,CUNDINAMARCA,1931,52,NA,NA,homicidios,NA
+COL,cundinamarca,CUNDINAMARCA,1940,185,156,29,homicidios,NA
+COL,cundinamarca,CUNDINAMARCA,1943,828,616,212,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,cundinamarca,CUNDINAMARCA,1944,461,344,117,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,cundinamarca,CUNDINAMARCA,1945,942,688,254,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,cundinamarca,CUNDINAMARCA,1946,163,131,32,homicidios,NA
+COL,cundinamarca,CUNDINAMARCA,1947,129,106,23,homicidios,NA
+COL,cundinamarca,CUNDINAMARCA,1948,163,141,22,homicidios,NA
+COL,cundinamarca,CUNDINAMARCA,1949,254,219,35,homicidios,NA
+COL,cundinamarca,CUNDINAMARCA,1951,468,393,75,homicidios,NA
+COL,cundinamarca,CUNDINAMARCA,1952,535,446,89,homicidios,NA
+COL,cundinamarca,CUNDINAMARCA,1953,384,330,54,hom_trauma_intencional,NA
+COL,cundinamarca,CUNDINAMARCA,1954,307,266,41,hom_trauma_intencional,NA
+COL,cundinamarca,CUNDINAMARCA,1955,401,352,49,hom_trauma_intencional,NA
+COL,cundinamarca,CUNDINAMARCA,1956,332,312,20,hom_trauma_intencional,NA
+COL,cundinamarca,CUNDINAMARCA,1957,388,348,40,hom_trauma_intencional,NA
+COL,cundinamarca,CUNDINAMARCA,1958,466,406,60,hom_trauma_intencional,NA
+COL,cundinamarca,CUNDINAMARCA,1959,440,397,43,hom_trauma_intencional,NA
+COL,cundinamarca,CUNDINAMARCA,1960,480,425,55,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cundinamarca,CUNDINAMARCA,1961,489,430,59,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cundinamarca_sin_bogota,CUNDINAMARCA SIN BOGOTA,1936,60,NA,NA,homicidios,NA
+COL,cundinamarca_sin_bogota,CUNDINAMARCA SIN BOGOTA,1938,87,73,14,homicidios,NA
+COL,cundinamarca_sin_bogota,CUNDINAMARCA SIN BOGOTA,1939,78,NA,NA,homicidios,NA
+COL,cundinamarca_sin_bogota,CUNDINAMARCA SIN BOGOTA,1962,310,276,34,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cundinamarca_sin_bogota,CUNDINAMARCA SIN BOGOTA,1963,305,265,40,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cundinamarca_sin_bogota,CUNDINAMARCA SIN BOGOTA,1964,313,272,41,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,cundinamarca_sin_bogota,CUNDINAMARCA SIN BOGOTA,1965,264,237,27,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,huila,HUILA,1923,1,1,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,huila,HUILA,1924,5,4,1,sum(homicidio_fuego+punzante+otros),NA
+COL,huila,HUILA,1927,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,huila,HUILA,1928,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,huila,HUILA,1929,3,3,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,huila,HUILA,1930,3,2,1,sum(homicidio_fuego+punzante+otros),NA
+COL,huila,HUILA,1931,4,NA,NA,homicidios,NA
+COL,huila,HUILA,1936,11,NA,NA,homicidios,NA
+COL,huila,HUILA,1938,11,8,3,homicidios,NA
+COL,huila,HUILA,1939,9,NA,NA,homicidios,NA
+COL,huila,HUILA,1940,11,8,3,homicidios,NA
+COL,huila,HUILA,1943,79,56,23,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,huila,HUILA,1944,337,200,137,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,huila,HUILA,1945,124,82,42,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,huila,HUILA,1946,14,13,1,homicidios,NA
+COL,huila,HUILA,1947,9,9,NA,homicidios,NA
+COL,huila,HUILA,1948,20,17,3,homicidios,NA
+COL,huila,HUILA,1949,29,28,1,homicidios,NA
+COL,huila,HUILA,1951,56,53,3,homicidios,NA
+COL,huila,HUILA,1952,45,39,6,homicidios,NA
+COL,huila,HUILA,1953,182,155,27,hom_trauma_intencional,NA
+COL,huila,HUILA,1954,161,134,27,hom_trauma_intencional,NA
+COL,huila,HUILA,1955,154,124,30,hom_trauma_intencional,NA
+COL,huila,HUILA,1956,330,257,73,hom_trauma_intencional,NA
+COL,huila,HUILA,1957,160,125,35,hom_trauma_intencional,NA
+COL,huila,HUILA,1958,230,184,46,hom_trauma_intencional,NA
+COL,huila,HUILA,1959,77,67,10,hom_trauma_intencional,NA
+COL,huila,HUILA,1960,115,105,10,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,huila,HUILA,1961,92,72,20,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,huila,HUILA,1962,158,134,24,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,huila,HUILA,1963,125,110,15,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,huila,HUILA,1964,107,102,5,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,huila,HUILA,1965,176,160,16,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,intendencias,INTENDENCIAS,1938,10,8,2,homicidios,NA
+COL,intendencias,INTENDENCIAS,1939,16,NA,NA,homicidios,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1940,36,31,5,homicidios,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1943,119,82,37,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1944,203,153,50,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1945,182,152,30,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1946,43,35,8,homicidios,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1947,17,14,3,homicidios,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1948,28,25,3,homicidios,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1949,50,41,9,homicidios,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1951,96,84,12,homicidios,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1952,128,111,17,homicidios,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1953,98,93,5,hom_trauma_intencional,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1954,47,45,2,hom_trauma_intencional,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1955,72,60,12,hom_trauma_intencional,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1956,64,52,12,hom_trauma_intencional,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1957,89,78,11,hom_trauma_intencional,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1958,87,81,6,hom_trauma_intencional,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1959,95,89,6,hom_trauma_intencional,NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1960,41,38,3,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1961,37,35,2,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1962,70,58,12,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1963,60,52,8,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1964,45,40,5,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,intendencias_y_comisarias,INTENDENCIAS Y COMISARIAS,1965,69,55,14,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,la_guajira,LA GUAJIRA,1964,21,19,2,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,la_guajira,LA GUAJIRA,1965,21,20,1,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,magdalena,MAGDALENA,1923,10,9,1,sum(homicidio_fuego+punzante+otros),NA
+COL,magdalena,MAGDALENA,1924,5,5,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,magdalena,MAGDALENA,1927,35,28,7,sum(homicidio_fuego+punzante+otros),NA
+COL,magdalena,MAGDALENA,1928,1,1,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,magdalena,MAGDALENA,1929,2,2,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,magdalena,MAGDALENA,1930,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,magdalena,MAGDALENA,1931,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,magdalena,MAGDALENA,1936,31,NA,NA,homicidios,NA
+COL,magdalena,MAGDALENA,1938,31,29,2,homicidios,NA
+COL,magdalena,MAGDALENA,1939,27,NA,NA,homicidios,NA
+COL,magdalena,MAGDALENA,1940,28,27,1,homicidios,NA
+COL,magdalena,MAGDALENA,1943,136,113,23,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,magdalena,MAGDALENA,1944,116,91,25,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,magdalena,MAGDALENA,1945,175,150,25,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,magdalena,MAGDALENA,1946,22,17,5,homicidios,NA
+COL,magdalena,MAGDALENA,1947,27,25,2,homicidios,NA
+COL,magdalena,MAGDALENA,1948,53,49,4,homicidios,NA
+COL,magdalena,MAGDALENA,1949,80,73,7,homicidios,NA
+COL,magdalena,MAGDALENA,1951,70,61,9,homicidios,NA
+COL,magdalena,MAGDALENA,1952,46,39,7,homicidios,NA
+COL,magdalena,MAGDALENA,1953,86,83,3,hom_trauma_intencional,NA
+COL,magdalena,MAGDALENA,1954,74,67,7,hom_trauma_intencional,NA
+COL,magdalena,MAGDALENA,1955,54,48,6,hom_trauma_intencional,NA
+COL,magdalena,MAGDALENA,1956,52,42,10,hom_trauma_intencional,NA
+COL,magdalena,MAGDALENA,1957,65,60,5,hom_trauma_intencional,NA
+COL,magdalena,MAGDALENA,1958,67,63,4,hom_trauma_intencional,NA
+COL,magdalena,MAGDALENA,1959,59,56,3,hom_trauma_intencional,NA
+COL,magdalena,MAGDALENA,1960,58,57,1,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,magdalena,MAGDALENA,1961,76,71,5,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,magdalena,MAGDALENA,1962,87,81,6,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,magdalena,MAGDALENA,1963,120,108,12,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,magdalena,MAGDALENA,1964,98,92,6,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,magdalena,MAGDALENA,1965,150,143,7,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,meta,META,1923,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,meta,META,1924,1,1,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,meta,META,1927,3,1,2,sum(homicidio_fuego+punzante+otros),NA
+COL,meta,META,1928,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,meta,META,1929,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,meta,META,1930,7,6,1,sum(homicidio_fuego+punzante+otros),NA
+COL,meta,META,1931,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,meta,META,1960,52,50,2,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,meta,META,1961,76,64,12,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,meta,META,1962,82,76,6,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,meta,META,1963,70,65,5,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,meta,META,1964,84,75,9,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,meta,META,1965,88,81,7,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,narino,NARINO,1923,7,5,2,sum(homicidio_fuego+punzante+otros),NA
+COL,narino,NARINO,1924,2,2,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,narino,NARINO,1927,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,narino,NARINO,1928,4,3,1,sum(homicidio_fuego+punzante+otros),NA
+COL,narino,NARINO,1929,10,10,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,narino,NARINO,1930,26,25,1,sum(homicidio_fuego+punzante+otros),NA
+COL,narino,NARINO,1931,22,NA,NA,homicidios,NA
+COL,narino,NARINO,1936,21,NA,NA,homicidios,NA
+COL,narino,NARINO,1938,38,35,3,homicidios,NA
+COL,narino,NARINO,1939,50,NA,NA,homicidios,NA
+COL,narino,NARINO,1940,41,36,5,homicidios,NA
+COL,narino,NARINO,1943,196,148,48,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,narino,NARINO,1944,679,422,257,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,narino,NARINO,1945,149,101,48,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,narino,NARINO,1946,51,47,4,homicidios,NA
+COL,narino,NARINO,1947,61,50,11,homicidios,NA
+COL,narino,NARINO,1948,47,43,4,homicidios,NA
+COL,narino,NARINO,1949,51,46,5,homicidios,NA
+COL,narino,NARINO,1951,51,46,5,homicidios,NA
+COL,narino,NARINO,1952,40,34,6,homicidios,NA
+COL,narino,NARINO,1953,36,30,6,hom_trauma_intencional,NA
+COL,narino,NARINO,1954,54,45,9,hom_trauma_intencional,NA
+COL,narino,NARINO,1955,66,55,11,hom_trauma_intencional,NA
+COL,narino,NARINO,1956,34,33,1,hom_trauma_intencional,NA
+COL,narino,NARINO,1957,52,45,7,hom_trauma_intencional,NA
+COL,narino,NARINO,1958,55,47,8,hom_trauma_intencional,NA
+COL,narino,NARINO,1959,64,54,10,hom_trauma_intencional,NA
+COL,narino,NARINO,1960,51,44,7,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,narino,NARINO,1961,47,35,12,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,narino,NARINO,1962,62,55,7,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,narino,NARINO,1963,54,46,8,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,narino,NARINO,1964,77,61,16,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,narino,NARINO,1965,64,54,10,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1923,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1924,10,10,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1927,43,37,6,sum(homicidio_fuego+punzante+otros),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1928,12,10,2,sum(homicidio_fuego+punzante+otros),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1929,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1930,33,30,3,sum(homicidio_fuego+punzante+otros),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1931,19,NA,NA,homicidios,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1936,107,NA,NA,homicidios,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1938,135,123,12,homicidios,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1939,205,NA,NA,homicidios,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1940,156,150,6,homicidios,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1943,327,281,46,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,norte_de_santander,NORTE DE SANTANDER,1944,557,395,162,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,norte_de_santander,NORTE DE SANTANDER,1945,537,399,138,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,norte_de_santander,NORTE DE SANTANDER,1946,193,182,11,homicidios,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1947,316,181,135,homicidios,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1948,192,181,11,homicidios,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1949,338,312,26,homicidios,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1951,192,177,15,homicidios,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1952,234,220,14,homicidios,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1953,201,183,18,hom_trauma_intencional,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1954,184,175,9,hom_trauma_intencional,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1955,191,178,13,hom_trauma_intencional,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1956,208,194,14,hom_trauma_intencional,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1957,202,183,19,hom_trauma_intencional,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1958,257,241,16,hom_trauma_intencional,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1959,273,260,13,hom_trauma_intencional,NA
+COL,norte_de_santander,NORTE DE SANTANDER,1960,236,218,18,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1961,259,240,19,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1962,217,207,10,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1963,231,216,15,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1964,259,246,13,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,norte_de_santander,NORTE DE SANTANDER,1965,279,265,14,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,putumayo,PUTUMAYO,1923,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,putumayo,PUTUMAYO,1924,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,putumayo,PUTUMAYO,1927,2,1,1,sum(homicidio_fuego+punzante+otros),NA
+COL,putumayo,PUTUMAYO,1928,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,putumayo,PUTUMAYO,1929,1,1,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,putumayo,PUTUMAYO,1930,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,putumayo,PUTUMAYO,1931,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,san_andres_y_providencia,SAN ANDRES Y PROVIDENCIA,1927,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,san_andres_y_providencia,SAN ANDRES Y PROVIDENCIA,1928,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,san_andres_y_providencia,SAN ANDRES Y PROVIDENCIA,1929,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,san_andres_y_providencia,SAN ANDRES Y PROVIDENCIA,1930,1,1,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,san_andres_y_providencia,SAN ANDRES Y PROVIDENCIA,1931,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,santander,SANTANDER,1923,24,23,1,sum(homicidio_fuego+punzante+otros),NA
+COL,santander,SANTANDER,1924,48,44,4,sum(homicidio_fuego+punzante+otros),NA
+COL,santander,SANTANDER,1927,128,109,19,sum(homicidio_fuego+punzante+otros),NA
+COL,santander,SANTANDER,1928,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,santander,SANTANDER,1929,74,67,7,sum(homicidio_fuego+punzante+otros),NA
+COL,santander,SANTANDER,1930,37,33,4,sum(homicidio_fuego+punzante+otros),NA
+COL,santander,SANTANDER,1931,32,NA,NA,homicidios,NA
+COL,santander,SANTANDER,1936,95,NA,NA,homicidios,NA
+COL,santander,SANTANDER,1938,131,118,13,homicidios,NA
+COL,santander,SANTANDER,1939,132,NA,NA,homicidios,NA
+COL,santander,SANTANDER,1940,187,169,18,homicidios,NA
+COL,santander,SANTANDER,1943,460,350,110,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,santander,SANTANDER,1944,802,559,243,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,santander,SANTANDER,1945,312,261,51,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,santander,SANTANDER,1946,114,107,7,homicidios,NA
+COL,santander,SANTANDER,1947,215,198,17,homicidios,NA
+COL,santander,SANTANDER,1948,295,283,12,homicidios,NA
+COL,santander,SANTANDER,1949,643,598,45,homicidios,NA
+COL,santander,SANTANDER,1951,335,313,22,homicidios,NA
+COL,santander,SANTANDER,1952,446,401,45,homicidios,NA
+COL,santander,SANTANDER,1953,362,336,26,hom_trauma_intencional,NA
+COL,santander,SANTANDER,1954,283,257,26,hom_trauma_intencional,NA
+COL,santander,SANTANDER,1955,319,276,43,hom_trauma_intencional,NA
+COL,santander,SANTANDER,1956,337,299,38,hom_trauma_intencional,NA
+COL,santander,SANTANDER,1957,295,267,28,hom_trauma_intencional,NA
+COL,santander,SANTANDER,1958,487,437,50,hom_trauma_intencional,NA
+COL,santander,SANTANDER,1959,423,382,41,hom_trauma_intencional,NA
+COL,santander,SANTANDER,1960,476,425,51,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,santander,SANTANDER,1961,498,441,57,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,santander,SANTANDER,1962,403,349,54,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,santander,SANTANDER,1963,429,383,46,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,santander,SANTANDER,1964,427,375,52,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,santander,SANTANDER,1965,508,456,52,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,tolima,TOLIMA,1923,61,59,2,sum(homicidio_fuego+punzante+otros),NA
+COL,tolima,TOLIMA,1924,54,50,4,sum(homicidio_fuego+punzante+otros),NA
+COL,tolima,TOLIMA,1927,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,tolima,TOLIMA,1928,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,tolima,TOLIMA,1929,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,tolima,TOLIMA,1930,11,11,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,tolima,TOLIMA,1931,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,tolima,TOLIMA,1936,32,NA,NA,homicidios,NA
+COL,tolima,TOLIMA,1938,58,54,4,homicidios,NA
+COL,tolima,TOLIMA,1939,73,NA,NA,homicidios,NA
+COL,tolima,TOLIMA,1940,68,62,6,homicidios,NA
+COL,tolima,TOLIMA,1943,208,158,50,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,tolima,TOLIMA,1944,545,353,192,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,tolima,TOLIMA,1945,234,167,67,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,tolima,TOLIMA,1946,57,53,4,homicidios,NA
+COL,tolima,TOLIMA,1947,50,48,2,homicidios,NA
+COL,tolima,TOLIMA,1948,81,73,8,homicidios,NA
+COL,tolima,TOLIMA,1949,101,90,11,homicidios,NA
+COL,tolima,TOLIMA,1951,365,343,22,homicidios,NA
+COL,tolima,TOLIMA,1952,682,608,74,homicidios,NA
+COL,tolima,TOLIMA,1953,471,433,38,hom_trauma_intencional,NA
+COL,tolima,TOLIMA,1954,363,323,40,hom_trauma_intencional,NA
+COL,tolima,TOLIMA,1955,758,682,76,hom_trauma_intencional,NA
+COL,tolima,TOLIMA,1956,1293,1116,177,hom_trauma_intencional,NA
+COL,tolima,TOLIMA,1957,929,820,109,hom_trauma_intencional,NA
+COL,tolima,TOLIMA,1958,1087,951,136,hom_trauma_intencional,NA
+COL,tolima,TOLIMA,1959,835,725,110,hom_trauma_intencional,NA
+COL,tolima,TOLIMA,1960,534,477,57,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,tolima,TOLIMA,1961,NA,NA,NA,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,tolima,TOLIMA,1962,572,504,68,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,tolima,TOLIMA,1963,674,583,91,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,tolima,TOLIMA,1964,382,353,29,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,tolima,TOLIMA,1965,336,312,24,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1923,NA,NA,NA,sum(homicidio_fuego+punzante+otros),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1924,21,20,1,sum(homicidio_fuego+punzante+otros),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1927,53,48,5,sum(homicidio_fuego+punzante+otros),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1928,56,54,2,sum(homicidio_fuego+punzante+otros),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1929,71,65,6,sum(homicidio_fuego+punzante+otros),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1930,85,75,10,sum(homicidio_fuego+punzante+otros),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1931,89,NA,NA,homicidios,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1936,95,NA,NA,homicidios,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1938,167,156,11,homicidios,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1939,160,NA,NA,homicidios,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1940,130,112,18,homicidios,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1943,363,295,68,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,valle_del_cauca,VALLE DEL CAUCA,1944,886,615,271,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,valle_del_cauca,VALLE DEL CAUCA,1945,551,432,119,muerte_viol_accidental,NOT_pure_homicide: muerte_viol_accidental includes accidents
+COL,valle_del_cauca,VALLE DEL CAUCA,1946,166,147,19,homicidios,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1947,149,131,18,homicidios,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1948,200,176,24,homicidios,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1949,670,632,38,homicidios,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1951,715,664,51,homicidios,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1952,917,865,52,homicidios,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1953,548,502,46,hom_trauma_intencional,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1954,423,380,43,hom_trauma_intencional,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1955,761,703,58,hom_trauma_intencional,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1956,763,719,44,hom_trauma_intencional,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1957,1279,1193,86,hom_trauma_intencional,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1958,1479,1369,110,hom_trauma_intencional,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1959,52,37,15,hom_trauma_intencional,NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1960,855,783,72,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1961,1216,1109,107,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1962,1283,1141,142,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1963,892,818,74,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1964,652,600,52,sum(hom_trauma_intencional_certif+nocertif),NA
+COL,valle_del_cauca,VALLE DEL CAUCA,1965,575,521,54,sum(hom_trauma_intencional_certif+nocertif),NA

@@ -1,0 +1,13 @@
+Package: colombia.mortalidad
+Type: Project
+Title: Predicting homicides from the sex ratio of all-cause mortality, Colombia 1985-2017
+Version: 0.1.0
+Authors@R: person("Enrique", "Acosta", email = "eacosta@ced.uab.es", role = c("aut", "cre"))
+Description: Municipal zero-inflated negative binomial model of violent deaths
+    on the all-cause mortality sex ratio, with a cause-of-death decomposition
+    and a death-registration completeness analysis for Colombia 1985-2017.
+License: MIT + file LICENSE
+Depends: R (>= 4.2)
+Imports: data.table, tidyverse, readxl, mgcv, glmmTMB, sf, colmaps, ggpubr
+Remotes: nebulae-co/colmaps
+Encoding: UTF-8

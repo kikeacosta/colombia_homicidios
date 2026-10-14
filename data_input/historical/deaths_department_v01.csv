@@ -1,0 +1,2109 @@
+country_id,department,year,deaths_total,deaths_male,deaths_female,source
+COL,AMAZONAS,1923,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1924,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1925,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1926,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1927,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1928,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1929,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1930,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1931,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1932,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1933,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1934,6,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1935,25,16,9,dane_anuarios_estadisticos
+COL,AMAZONAS,1936,25,20,5,dane_anuarios_estadisticos
+COL,AMAZONAS,1937,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1938,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1939,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1940,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1941,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1942,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1943,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1944,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1945,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1946,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1947,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1948,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1949,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1950,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1951,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1952,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1953,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1954,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1955,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1956,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1957,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1958,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1959,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1960,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1961,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1962,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1963,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1964,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1965,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1966,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1967,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1968,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1969,101,63,38,dane_anuarios_estadisticos
+COL,AMAZONAS,1970,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1971,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1972,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1973,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1974,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1975,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1976,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1977,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1978,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1979,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1980,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1981,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1982,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1983,,,,dane_anuarios_estadisticos
+COL,AMAZONAS,1984,,,,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1923,14117,7347,6770,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1924,14696,7704,6992,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1925,15232,7958,7274,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1926,17737,9174,8563,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1927,17761,9273,8488,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1928,17003,8841,8162,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1929,17207,8817,8390,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1930,16216,8231,7985,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1931,16701,8455,8246,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1932,16285,8370,7915,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1933,20044,10191,9853,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1934,12829,,,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1935,19658,9921,9737,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1936,19678,10020,9658,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1937,19664,10053,9611,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1938,23047,11684,11363,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1939,22573,,,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1940,19229,9831,9398,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1941,20566,10385,10181,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1942,22046,11194,10852,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1943,24196,,,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1944,23413,,,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1945,24374,12577,11797,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1946,24545,12574,11971,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1947,22521,11551,10970,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1948,22210,11449,10761,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1949,23725,12284,11441,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1950,24103,,,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1951,25125,13346,11779,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1952,24332,11728,12604,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1953,24238,12592,11646,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1954,21391,11099,10292,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1955,23132,11862,11270,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1956,25499,13220,12279,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1957,24605,12833,11772,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1958,25297,13216,12081,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1959,26112,13618,12494,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1960,28521,14701,13820,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1961,26877,14084,12793,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1962,26075,13740,2568,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1963,27256,14034,13222,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1964,26820,13799,13021,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1965,27646,14449,13197,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1966,26257,13696,12561,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1967,28096,14611,13485,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1968,26067,13537,12530,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1969,21742,11311,10431,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1970,25601,13359,12242,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1971,15394,8090,7304,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1972,26331,13960,12371,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1973,24489,12902,11587,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1974,24472,13087,11385,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1975,24282,12918,11364,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1976,23960,12949,11011,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1977,19980,10764,9216,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1978,9148,4905,4243,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1979,21489,11890,9599,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1980,21813,12240,9573,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1981,22781,12798,9983,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1982,22375,12635,9740,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1983,21449,12055,9394,dane_anuarios_estadisticos
+COL,ANTIOQUIA,1984,23227,13566,9661,dane_anuarios_estadisticos
+COL,ARAUCA,1923,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1924,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1925,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1926,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1927,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1928,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1929,41,25,16,dane_anuarios_estadisticos
+COL,ARAUCA,1930,93,52,41,dane_anuarios_estadisticos
+COL,ARAUCA,1931,93,52,41,dane_anuarios_estadisticos
+COL,ARAUCA,1932,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1933,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1934,4,,,dane_anuarios_estadisticos
+COL,ARAUCA,1935,109,61,48,dane_anuarios_estadisticos
+COL,ARAUCA,1936,109,62,47,dane_anuarios_estadisticos
+COL,ARAUCA,1937,104,60,44,dane_anuarios_estadisticos
+COL,ARAUCA,1938,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1939,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1940,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1941,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1942,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1943,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1944,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1945,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1946,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1947,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1948,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1949,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1950,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1951,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1952,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1953,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1954,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1955,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1956,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1957,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1958,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1959,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1960,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1961,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1962,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1963,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1964,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1965,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1966,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1967,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1968,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1969,224,131,93,dane_anuarios_estadisticos
+COL,ARAUCA,1970,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1971,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1972,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1973,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1974,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1975,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1976,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1977,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1978,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1979,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1980,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1981,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1982,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1983,,,,dane_anuarios_estadisticos
+COL,ARAUCA,1984,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1923,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1924,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1925,44,20,24,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1926,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1927,39,18,21,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1928,42,23,19,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1929,37,15,22,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1930,41,20,21,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1931,62,37,25,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1932,77,39,38,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1933,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1934,49,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1935,59,29,30,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1936,58,26,32,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1937,78,41,37,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1938,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1939,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1940,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1941,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1942,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1943,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1944,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1945,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1946,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1947,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1948,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1949,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1950,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1951,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1952,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1953,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1954,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1955,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1956,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1957,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1958,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1959,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1960,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1961,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1962,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1963,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1964,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1965,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1966,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1967,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1968,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1969,111,62,49,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1970,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1971,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1972,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1973,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1974,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1975,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1976,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1977,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1978,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1979,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1980,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1981,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1982,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1983,,,,dane_anuarios_estadisticos
+COL,SAN ANDRÉS Y PROVIDENCIA,1984,,,,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1923,2308,1204,1104,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1924,3187,1604,1583,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1925,2876,1487,1389,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1926,3249,1656,1593,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1927,2937,1484,1453,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1928,2511,1256,1255,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1929,2719,1368,1351,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1930,2721,1418,1303,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1931,3810,1923,1887,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1932,3516,1754,1762,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1933,3592,1804,1788,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1934,954,,,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1935,3576,1831,1745,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1936,3415,1669,1745,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1937,3559,1778,1781,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1938,3878,1958,1920,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1939,4772,,,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1940,4442,2198,2244,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1941,3851,1957,1894,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1942,4290,2171,2119,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1943,5335,,,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1944,4621,,,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1945,4334,2191,2143,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1946,4318,2202,2116,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1947,4553,2328,2225,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1948,4947,2461,2486,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1949,4597,2381,2216,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1950,4578,,,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1951,4998,2736,2262,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1952,4493,2354,2139,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1953,4397,2207,2190,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1954,4623,2408,2215,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1955,4581,2341,2240,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1956,4714,2444,2270,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1957,5599,2860,2739,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1958,5633,2898,2735,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1959,5280,2683,2597,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1960,4941,2534,2407,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1961,5052,2592,2460,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1962,4975,2568,2407,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1963,4988,2536,2452,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1964,5263,2691,2572,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1965,5349,2799,2550,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1966,5148,2696,2454,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1967,5145,2629,2516,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1968,5558,2897,2661,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1969,4978,2551,2427,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1970,5212,2755,2457,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1971,5117,2711,2406,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1972,5278,2749,2529,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1973,8117,4328,3789,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1974,5970,3178,2792,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1975,5913,3102,2811,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1976,5836,3135,2701,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1977,6249,3366,2883,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1978,6171,3386,2785,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1979,5802,3191,2611,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1980,5719,3155,2564,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1981,5828,3402,2426,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1982,5408,3042,2366,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1983,8092,4522,3570,dane_anuarios_estadisticos
+COL,ATLÁNTICO,1984,5388,2989,2399,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1923,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1924,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1925,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1926,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1927,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1928,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1929,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1930,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1931,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1932,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1933,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1934,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1935,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1936,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1937,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1938,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1939,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1940,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1941,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1942,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1943,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1944,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1945,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1946,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1947,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1948,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1949,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1950,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1951,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1952,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1953,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1954,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1955,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1956,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1957,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1958,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1959,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1960,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1961,,,,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1962,13494,6710,6784,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1963,13798,6766,7032,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1964,14047,7034,7013,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1965,14496,7369,7127,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1966,14243,7138,7105,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1967,14208,7202,7006,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1968,14215,7177,7038,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1969,14582,7363,7219,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1970,15895,7926,7969,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1971,14430,7346,7084,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1972,15131,7798,7333,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1973,16457,8564,7893,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1974,17218,9116,8102,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1975,16642,8733,7909,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1976,17224,9069,8155,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1977,17388,9184,8204,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1978,16546,8693,7853,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1979,17737,9619,8118,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1980,17439,9366,8073,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1981,18931,10279,8652,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1982,16764,8978,7786,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1983,16882,9011,7871,dane_anuarios_estadisticos
+COL,BOGOTÁ D.C.,1984,18399,9892,8507,dane_anuarios_estadisticos
+COL,BOLÍVAR,1923,4654,2183,2471,dane_anuarios_estadisticos
+COL,BOLÍVAR,1924,4979,2529,2450,dane_anuarios_estadisticos
+COL,BOLÍVAR,1925,4039,2004,2035,dane_anuarios_estadisticos
+COL,BOLÍVAR,1926,,,,dane_anuarios_estadisticos
+COL,BOLÍVAR,1927,4397,2180,2217,dane_anuarios_estadisticos
+COL,BOLÍVAR,1928,4972,2570,2402,dane_anuarios_estadisticos
+COL,BOLÍVAR,1929,4229,2179,2050,dane_anuarios_estadisticos
+COL,BOLÍVAR,1930,3545,1823,1722,dane_anuarios_estadisticos
+COL,BOLÍVAR,1931,,,,dane_anuarios_estadisticos
+COL,BOLÍVAR,1932,,,,dane_anuarios_estadisticos
+COL,BOLÍVAR,1933,5383,2948,2435,dane_anuarios_estadisticos
+COL,BOLÍVAR,1934,2292,,,dane_anuarios_estadisticos
+COL,BOLÍVAR,1935,5716,2928,2788,dane_anuarios_estadisticos
+COL,BOLÍVAR,1936,6551,3321,3230,dane_anuarios_estadisticos
+COL,BOLÍVAR,1937,6132,3125,3007,dane_anuarios_estadisticos
+COL,BOLÍVAR,1938,7213,3607,3606,dane_anuarios_estadisticos
+COL,BOLÍVAR,1939,8940,,,dane_anuarios_estadisticos
+COL,BOLÍVAR,1940,7005,3557,3448,dane_anuarios_estadisticos
+COL,BOLÍVAR,1941,6457,3322,3135,dane_anuarios_estadisticos
+COL,BOLÍVAR,1942,6444,3315,3129,dane_anuarios_estadisticos
+COL,BOLÍVAR,1943,8374,,,dane_anuarios_estadisticos
+COL,BOLÍVAR,1944,8671,,,dane_anuarios_estadisticos
+COL,BOLÍVAR,1945,7048,3612,3436,dane_anuarios_estadisticos
+COL,BOLÍVAR,1946,6464,3410,3048,dane_anuarios_estadisticos
+COL,BOLÍVAR,1947,4414,2354,2060,dane_anuarios_estadisticos
+COL,BOLÍVAR,1948,5916,3019,2897,dane_anuarios_estadisticos
+COL,BOLÍVAR,1949,5138,2667,2471,dane_anuarios_estadisticos
+COL,BOLÍVAR,1950,5071,,,dane_anuarios_estadisticos
+COL,BOLÍVAR,1951,5456,2785,2671,dane_anuarios_estadisticos
+COL,BOLÍVAR,1952,5122,2352,2130,dane_anuarios_estadisticos
+COL,BOLÍVAR,1953,5173,2769,2404,dane_anuarios_estadisticos
+COL,BOLÍVAR,1954,6030,3068,2962,dane_anuarios_estadisticos
+COL,BOLÍVAR,1955,5343,2740,2603,dane_anuarios_estadisticos
+COL,BOLÍVAR,1956,5223,2634,2589,dane_anuarios_estadisticos
+COL,BOLÍVAR,1957,5871,3053,2818,dane_anuarios_estadisticos
+COL,BOLÍVAR,1958,5174,2658,2516,dane_anuarios_estadisticos
+COL,BOLÍVAR,1959,5255,2686,2569,dane_anuarios_estadisticos
+COL,BOLÍVAR,1960,5189,2633,2556,dane_anuarios_estadisticos
+COL,BOLÍVAR,1961,5100,2603,2497,dane_anuarios_estadisticos
+COL,BOLÍVAR,1962,5115,2635,2480,dane_anuarios_estadisticos
+COL,BOLÍVAR,1963,5471,2854,2617,dane_anuarios_estadisticos
+COL,BOLÍVAR,1964,5524,2932,2592,dane_anuarios_estadisticos
+COL,BOLÍVAR,1965,5632,2862,2770,dane_anuarios_estadisticos
+COL,BOLÍVAR,1966,5780,2947,2833,dane_anuarios_estadisticos
+COL,BOLÍVAR,1967,4412,2364,2048,dane_anuarios_estadisticos
+COL,BOLÍVAR,1968,4130,2197,1933,dane_anuarios_estadisticos
+COL,BOLÍVAR,1969,3269,1702,1567,dane_anuarios_estadisticos
+COL,BOLÍVAR,1970,3369,1852,1517,dane_anuarios_estadisticos
+COL,BOLÍVAR,1971,3037,1602,1435,dane_anuarios_estadisticos
+COL,BOLÍVAR,1972,3926,2039,1887,dane_anuarios_estadisticos
+COL,BOLÍVAR,1973,5307,2844,2463,dane_anuarios_estadisticos
+COL,BOLÍVAR,1974,3808,2070,1738,dane_anuarios_estadisticos
+COL,BOLÍVAR,1975,4048,2242,1806,dane_anuarios_estadisticos
+COL,BOLÍVAR,1976,4022,2221,1801,dane_anuarios_estadisticos
+COL,BOLÍVAR,1977,4139,2231,1908,dane_anuarios_estadisticos
+COL,BOLÍVAR,1978,3763,2047,1716,dane_anuarios_estadisticos
+COL,BOLÍVAR,1979,3732,2065,1667,dane_anuarios_estadisticos
+COL,BOLÍVAR,1980,3592,1940,1652,dane_anuarios_estadisticos
+COL,BOLÍVAR,1981,3960,2183,1777,dane_anuarios_estadisticos
+COL,BOLÍVAR,1982,3640,2010,1630,dane_anuarios_estadisticos
+COL,BOLÍVAR,1983,5327,2862,2465,dane_anuarios_estadisticos
+COL,BOLÍVAR,1984,3451,1820,1631,dane_anuarios_estadisticos
+COL,BOYACÁ,1923,10169,5075,5094,dane_anuarios_estadisticos
+COL,BOYACÁ,1924,5439,2806,2633,dane_anuarios_estadisticos
+COL,BOYACÁ,1925,8148,4135,4013,dane_anuarios_estadisticos
+COL,BOYACÁ,1926,11626,5855,5771,dane_anuarios_estadisticos
+COL,BOYACÁ,1927,11994,6124,5870,dane_anuarios_estadisticos
+COL,BOYACÁ,1928,10346,5188,5158,dane_anuarios_estadisticos
+COL,BOYACÁ,1929,8921,4344,4577,dane_anuarios_estadisticos
+COL,BOYACÁ,1930,8226,4193,4033,dane_anuarios_estadisticos
+COL,BOYACÁ,1931,9877,4883,4994,dane_anuarios_estadisticos
+COL,BOYACÁ,1932,,,,dane_anuarios_estadisticos
+COL,BOYACÁ,1933,11860,6028,5832,dane_anuarios_estadisticos
+COL,BOYACÁ,1934,7311,,,dane_anuarios_estadisticos
+COL,BOYACÁ,1935,11219,5641,5578,dane_anuarios_estadisticos
+COL,BOYACÁ,1936,11931,5982,5949,dane_anuarios_estadisticos
+COL,BOYACÁ,1937,11404,5731,5673,dane_anuarios_estadisticos
+COL,BOYACÁ,1938,14370,7221,7149,dane_anuarios_estadisticos
+COL,BOYACÁ,1939,12993,,,dane_anuarios_estadisticos
+COL,BOYACÁ,1940,10626,5335,5291,dane_anuarios_estadisticos
+COL,BOYACÁ,1941,12521,6191,6330,dane_anuarios_estadisticos
+COL,BOYACÁ,1942,12436,6279,6157,dane_anuarios_estadisticos
+COL,BOYACÁ,1943,14016,,,dane_anuarios_estadisticos
+COL,BOYACÁ,1944,13571,,,dane_anuarios_estadisticos
+COL,BOYACÁ,1945,12764,6335,6429,dane_anuarios_estadisticos
+COL,BOYACÁ,1946,11131,5562,5569,dane_anuarios_estadisticos
+COL,BOYACÁ,1947,12353,6232,6121,dane_anuarios_estadisticos
+COL,BOYACÁ,1948,13068,6620,6448,dane_anuarios_estadisticos
+COL,BOYACÁ,1949,10618,5448,5170,dane_anuarios_estadisticos
+COL,BOYACÁ,1950,9912,,,dane_anuarios_estadisticos
+COL,BOYACÁ,1951,10780,5534,5246,dane_anuarios_estadisticos
+COL,BOYACÁ,1952,10269,5177,5092,dane_anuarios_estadisticos
+COL,BOYACÁ,1953,11394,5606,5788,dane_anuarios_estadisticos
+COL,BOYACÁ,1954,10748,5372,5376,dane_anuarios_estadisticos
+COL,BOYACÁ,1955,10284,5061,5223,dane_anuarios_estadisticos
+COL,BOYACÁ,1956,10900,5355,5545,dane_anuarios_estadisticos
+COL,BOYACÁ,1957,11053,5394,5659,dane_anuarios_estadisticos
+COL,BOYACÁ,1958,10224,5220,5004,dane_anuarios_estadisticos
+COL,BOYACÁ,1959,11461,5681,5780,dane_anuarios_estadisticos
+COL,BOYACÁ,1960,11938,5807,6131,dane_anuarios_estadisticos
+COL,BOYACÁ,1961,10906,5526,5380,dane_anuarios_estadisticos
+COL,BOYACÁ,1962,11248,5681,5567,dane_anuarios_estadisticos
+COL,BOYACÁ,1963,11158,5640,5518,dane_anuarios_estadisticos
+COL,BOYACÁ,1964,11392,5760,5632,dane_anuarios_estadisticos
+COL,BOYACÁ,1965,11097,5661,5436,dane_anuarios_estadisticos
+COL,BOYACÁ,1966,10838,5484,5354,dane_anuarios_estadisticos
+COL,BOYACÁ,1967,11186,5727,5459,dane_anuarios_estadisticos
+COL,BOYACÁ,1968,10043,5133,4910,dane_anuarios_estadisticos
+COL,BOYACÁ,1969,8979,4650,4329,dane_anuarios_estadisticos
+COL,BOYACÁ,1970,9300,4843,4457,dane_anuarios_estadisticos
+COL,BOYACÁ,1971,9431,4931,4500,dane_anuarios_estadisticos
+COL,BOYACÁ,1972,8369,4486,3883,dane_anuarios_estadisticos
+COL,BOYACÁ,1973,9183,4909,4274,dane_anuarios_estadisticos
+COL,BOYACÁ,1974,9364,4919,4445,dane_anuarios_estadisticos
+COL,BOYACÁ,1975,8089,4316,3773,dane_anuarios_estadisticos
+COL,BOYACÁ,1976,7897,4176,3721,dane_anuarios_estadisticos
+COL,BOYACÁ,1977,7764,4098,3666,dane_anuarios_estadisticos
+COL,BOYACÁ,1978,6926,3647,3279,dane_anuarios_estadisticos
+COL,BOYACÁ,1979,6932,3726,3206,dane_anuarios_estadisticos
+COL,BOYACÁ,1980,7004,3849,3155,dane_anuarios_estadisticos
+COL,BOYACÁ,1981,6888,3714,3174,dane_anuarios_estadisticos
+COL,BOYACÁ,1982,6706,3589,3117,dane_anuarios_estadisticos
+COL,BOYACÁ,1983,6379,3536,2843,dane_anuarios_estadisticos
+COL,BOYACÁ,1984,6468,3616,2852,dane_anuarios_estadisticos
+COL,CALDAS,1923,8427,4351,4076,dane_anuarios_estadisticos
+COL,CALDAS,1924,8636,4536,4100,dane_anuarios_estadisticos
+COL,CALDAS,1925,8284,4372,3912,dane_anuarios_estadisticos
+COL,CALDAS,1926,10111,5330,4781,dane_anuarios_estadisticos
+COL,CALDAS,1927,10597,5576,5021,dane_anuarios_estadisticos
+COL,CALDAS,1928,10082,5369,4713,dane_anuarios_estadisticos
+COL,CALDAS,1929,10405,5499,4906,dane_anuarios_estadisticos
+COL,CALDAS,1930,10497,5455,5042,dane_anuarios_estadisticos
+COL,CALDAS,1931,11020,5716,5304,dane_anuarios_estadisticos
+COL,CALDAS,1932,11005,5724,5281,dane_anuarios_estadisticos
+COL,CALDAS,1933,13481,6879,6464,dane_anuarios_estadisticos
+COL,CALDAS,1934,9804,,,dane_anuarios_estadisticos
+COL,CALDAS,1935,12708,6706,6002,dane_anuarios_estadisticos
+COL,CALDAS,1936,13694,7240,6454,dane_anuarios_estadisticos
+COL,CALDAS,1937,14585,7682,6903,dane_anuarios_estadisticos
+COL,CALDAS,1938,14888,7716,7172,dane_anuarios_estadisticos
+COL,CALDAS,1939,15366,,,dane_anuarios_estadisticos
+COL,CALDAS,1940,13909,7350,6559,dane_anuarios_estadisticos
+COL,CALDAS,1941,15561,8072,7489,dane_anuarios_estadisticos
+COL,CALDAS,1942,16641,8634,8007,dane_anuarios_estadisticos
+COL,CALDAS,1943,17341,,,dane_anuarios_estadisticos
+COL,CALDAS,1944,16293,,,dane_anuarios_estadisticos
+COL,CALDAS,1945,16213,8623,7590,dane_anuarios_estadisticos
+COL,CALDAS,1946,17299,8984,8315,dane_anuarios_estadisticos
+COL,CALDAS,1947,15636,8294,7342,dane_anuarios_estadisticos
+COL,CALDAS,1948,16185,8662,7523,dane_anuarios_estadisticos
+COL,CALDAS,1949,16562,8965,7597,dane_anuarios_estadisticos
+COL,CALDAS,1950,19175,,,dane_anuarios_estadisticos
+COL,CALDAS,1951,19306,10019,9377,dane_anuarios_estadisticos
+COL,CALDAS,1952,17396,9232,8164,dane_anuarios_estadisticos
+COL,CALDAS,1953,17797,9491,8306,dane_anuarios_estadisticos
+COL,CALDAS,1954,17229,9228,8001,dane_anuarios_estadisticos
+COL,CALDAS,1955,18863,10116,8747,dane_anuarios_estadisticos
+COL,CALDAS,1956,19775,10673,9082,dane_anuarios_estadisticos
+COL,CALDAS,1957,19310,10491,8819,dane_anuarios_estadisticos
+COL,CALDAS,1958,21283,11745,9538,dane_anuarios_estadisticos
+COL,CALDAS,1959,21078,11515,9563,dane_anuarios_estadisticos
+COL,CALDAS,1960,21470,11477,9993,dane_anuarios_estadisticos
+COL,CALDAS,1961,19331,10446,8885,dane_anuarios_estadisticos
+COL,CALDAS,1962,18793,10069,8724,dane_anuarios_estadisticos
+COL,CALDAS,1963,18373,9893,8480,dane_anuarios_estadisticos
+COL,CALDAS,1964,18129,9729,8400,dane_anuarios_estadisticos
+COL,CALDAS,1965,18635,9959,8676,dane_anuarios_estadisticos
+COL,CALDAS,1966,16976,9185,7791,dane_anuarios_estadisticos
+COL,CALDAS,1967,8960,4673,4287,dane_anuarios_estadisticos
+COL,CALDAS,1968,8011,4366,3645,dane_anuarios_estadisticos
+COL,CALDAS,1969,7687,4080,3607,dane_anuarios_estadisticos
+COL,CALDAS,1970,7296,3860,3436,dane_anuarios_estadisticos
+COL,CALDAS,1971,7793,4207,3586,dane_anuarios_estadisticos
+COL,CALDAS,1972,7249,3827,3422,dane_anuarios_estadisticos
+COL,CALDAS,1973,7524,4038,3486,dane_anuarios_estadisticos
+COL,CALDAS,1974,6900,3733,3167,dane_anuarios_estadisticos
+COL,CALDAS,1975,6499,3475,3024,dane_anuarios_estadisticos
+COL,CALDAS,1976,6167,3297,2870,dane_anuarios_estadisticos
+COL,CALDAS,1977,5715,3088,2627,dane_anuarios_estadisticos
+COL,CALDAS,1978,5571,3092,2479,dane_anuarios_estadisticos
+COL,CALDAS,1979,5393,3001,2392,dane_anuarios_estadisticos
+COL,CALDAS,1980,2741,1564,1177,dane_anuarios_estadisticos
+COL,CALDAS,1981,5698,3254,2444,dane_anuarios_estadisticos
+COL,CALDAS,1982,5599,3276,2323,dane_anuarios_estadisticos
+COL,CALDAS,1983,5311,3006,2305,dane_anuarios_estadisticos
+COL,CALDAS,1984,5428,3118,2310,dane_anuarios_estadisticos
+COL,CAQUETÁ,1923,18,13,5,dane_anuarios_estadisticos
+COL,CAQUETÁ,1924,170,101,69,dane_anuarios_estadisticos
+COL,CAQUETÁ,1925,184,105,79,dane_anuarios_estadisticos
+COL,CAQUETÁ,1926,141,74,67,dane_anuarios_estadisticos
+COL,CAQUETÁ,1927,198,115,83,dane_anuarios_estadisticos
+COL,CAQUETÁ,1928,326,179,147,dane_anuarios_estadisticos
+COL,CAQUETÁ,1929,104,68,36,dane_anuarios_estadisticos
+COL,CAQUETÁ,1930,78,38,40,dane_anuarios_estadisticos
+COL,CAQUETÁ,1931,91,51,40,dane_anuarios_estadisticos
+COL,CAQUETÁ,1932,96,51,45,dane_anuarios_estadisticos
+COL,CAQUETÁ,1933,169,101,68,dane_anuarios_estadisticos
+COL,CAQUETÁ,1934,117,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1935,242,131,111,dane_anuarios_estadisticos
+COL,CAQUETÁ,1936,275,150,125,dane_anuarios_estadisticos
+COL,CAQUETÁ,1937,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1938,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1939,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1940,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1941,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1942,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1943,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1944,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1945,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1946,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1947,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1948,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1949,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1950,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1951,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1952,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1953,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1954,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1955,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1956,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1957,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1958,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1959,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1960,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1961,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1962,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1963,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1964,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1965,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1966,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1967,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1968,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1969,1763,963,800,dane_anuarios_estadisticos
+COL,CAQUETÁ,1970,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1971,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1972,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1973,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1974,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1975,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1976,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1977,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1978,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1979,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1980,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1981,,,,dane_anuarios_estadisticos
+COL,CAQUETÁ,1982,1500,836,664,dane_anuarios_estadisticos
+COL,CAQUETÁ,1983,1490,878,612,dane_anuarios_estadisticos
+COL,CAQUETÁ,1984,1241,775,466,dane_anuarios_estadisticos
+COL,CASANARE,1923,,,,dane_anuarios_estadisticos
+COL,CASANARE,1924,,,,dane_anuarios_estadisticos
+COL,CASANARE,1925,,,,dane_anuarios_estadisticos
+COL,CASANARE,1926,,,,dane_anuarios_estadisticos
+COL,CASANARE,1927,,,,dane_anuarios_estadisticos
+COL,CASANARE,1928,,,,dane_anuarios_estadisticos
+COL,CASANARE,1929,,,,dane_anuarios_estadisticos
+COL,CASANARE,1930,,,,dane_anuarios_estadisticos
+COL,CASANARE,1931,,,,dane_anuarios_estadisticos
+COL,CASANARE,1932,,,,dane_anuarios_estadisticos
+COL,CASANARE,1933,,,,dane_anuarios_estadisticos
+COL,CASANARE,1934,,,,dane_anuarios_estadisticos
+COL,CASANARE,1935,,,,dane_anuarios_estadisticos
+COL,CASANARE,1936,,,,dane_anuarios_estadisticos
+COL,CASANARE,1937,,,,dane_anuarios_estadisticos
+COL,CASANARE,1938,,,,dane_anuarios_estadisticos
+COL,CASANARE,1939,,,,dane_anuarios_estadisticos
+COL,CASANARE,1940,,,,dane_anuarios_estadisticos
+COL,CASANARE,1941,,,,dane_anuarios_estadisticos
+COL,CASANARE,1942,,,,dane_anuarios_estadisticos
+COL,CASANARE,1943,,,,dane_anuarios_estadisticos
+COL,CASANARE,1944,,,,dane_anuarios_estadisticos
+COL,CASANARE,1945,,,,dane_anuarios_estadisticos
+COL,CASANARE,1946,,,,dane_anuarios_estadisticos
+COL,CASANARE,1947,,,,dane_anuarios_estadisticos
+COL,CASANARE,1948,,,,dane_anuarios_estadisticos
+COL,CASANARE,1949,,,,dane_anuarios_estadisticos
+COL,CASANARE,1950,,,,dane_anuarios_estadisticos
+COL,CASANARE,1951,,,,dane_anuarios_estadisticos
+COL,CASANARE,1952,,,,dane_anuarios_estadisticos
+COL,CASANARE,1953,,,,dane_anuarios_estadisticos
+COL,CASANARE,1954,,,,dane_anuarios_estadisticos
+COL,CASANARE,1955,,,,dane_anuarios_estadisticos
+COL,CASANARE,1956,,,,dane_anuarios_estadisticos
+COL,CASANARE,1957,,,,dane_anuarios_estadisticos
+COL,CASANARE,1958,,,,dane_anuarios_estadisticos
+COL,CASANARE,1959,,,,dane_anuarios_estadisticos
+COL,CASANARE,1960,,,,dane_anuarios_estadisticos
+COL,CASANARE,1961,,,,dane_anuarios_estadisticos
+COL,CASANARE,1962,,,,dane_anuarios_estadisticos
+COL,CASANARE,1963,,,,dane_anuarios_estadisticos
+COL,CASANARE,1964,,,,dane_anuarios_estadisticos
+COL,CASANARE,1965,,,,dane_anuarios_estadisticos
+COL,CASANARE,1966,,,,dane_anuarios_estadisticos
+COL,CASANARE,1967,,,,dane_anuarios_estadisticos
+COL,CASANARE,1968,,,,dane_anuarios_estadisticos
+COL,CASANARE,1969,,,,dane_anuarios_estadisticos
+COL,CASANARE,1970,,,,dane_anuarios_estadisticos
+COL,CASANARE,1971,,,,dane_anuarios_estadisticos
+COL,CASANARE,1972,,,,dane_anuarios_estadisticos
+COL,CASANARE,1973,,,,dane_anuarios_estadisticos
+COL,CASANARE,1974,,,,dane_anuarios_estadisticos
+COL,CASANARE,1975,,,,dane_anuarios_estadisticos
+COL,CASANARE,1976,,,,dane_anuarios_estadisticos
+COL,CASANARE,1977,,,,dane_anuarios_estadisticos
+COL,CASANARE,1978,,,,dane_anuarios_estadisticos
+COL,CASANARE,1979,,,,dane_anuarios_estadisticos
+COL,CASANARE,1980,,,,dane_anuarios_estadisticos
+COL,CASANARE,1981,,,,dane_anuarios_estadisticos
+COL,CASANARE,1982,,,,dane_anuarios_estadisticos
+COL,CASANARE,1983,,,,dane_anuarios_estadisticos
+COL,CASANARE,1984,,,,dane_anuarios_estadisticos
+COL,CAUCA,1923,3777,1905,1872,dane_anuarios_estadisticos
+COL,CAUCA,1924,3144,1601,1543,dane_anuarios_estadisticos
+COL,CAUCA,1925,3113,1604,1509,dane_anuarios_estadisticos
+COL,CAUCA,1926,3381,1666,1715,dane_anuarios_estadisticos
+COL,CAUCA,1927,3535,1790,1745,dane_anuarios_estadisticos
+COL,CAUCA,1928,3686,1874,1812,dane_anuarios_estadisticos
+COL,CAUCA,1929,3448,1754,1694,dane_anuarios_estadisticos
+COL,CAUCA,1930,3116,1592,1524,dane_anuarios_estadisticos
+COL,CAUCA,1931,2852,1420,1432,dane_anuarios_estadisticos
+COL,CAUCA,1932,3264,1631,1633,dane_anuarios_estadisticos
+COL,CAUCA,1933,3438,1753,1685,dane_anuarios_estadisticos
+COL,CAUCA,1934,1683,,,dane_anuarios_estadisticos
+COL,CAUCA,1935,4961,2591,2370,dane_anuarios_estadisticos
+COL,CAUCA,1936,4167,2146,2021,dane_anuarios_estadisticos
+COL,CAUCA,1937,4655,2385,2270,dane_anuarios_estadisticos
+COL,CAUCA,1938,5673,2893,2780,dane_anuarios_estadisticos
+COL,CAUCA,1939,5998,,,dane_anuarios_estadisticos
+COL,CAUCA,1940,6120,3066,3054,dane_anuarios_estadisticos
+COL,CAUCA,1941,6300,3192,3108,dane_anuarios_estadisticos
+COL,CAUCA,1942,7173,3724,3449,dane_anuarios_estadisticos
+COL,CAUCA,1943,7360,,,dane_anuarios_estadisticos
+COL,CAUCA,1944,7042,,,dane_anuarios_estadisticos
+COL,CAUCA,1945,7631,4017,3614,dane_anuarios_estadisticos
+COL,CAUCA,1946,7636,3950,3686,dane_anuarios_estadisticos
+COL,CAUCA,1947,7447,3778,3669,dane_anuarios_estadisticos
+COL,CAUCA,1948,6833,3532,3301,dane_anuarios_estadisticos
+COL,CAUCA,1949,6922,3624,3298,dane_anuarios_estadisticos
+COL,CAUCA,1950,6892,,,dane_anuarios_estadisticos
+COL,CAUCA,1951,6505,3455,3050,dane_anuarios_estadisticos
+COL,CAUCA,1952,6393,3346,3047,dane_anuarios_estadisticos
+COL,CAUCA,1953,7237,3703,3534,dane_anuarios_estadisticos
+COL,CAUCA,1954,5972,3054,2918,dane_anuarios_estadisticos
+COL,CAUCA,1955,7332,3735,3597,dane_anuarios_estadisticos
+COL,CAUCA,1956,7694,4025,3669,dane_anuarios_estadisticos
+COL,CAUCA,1957,7989,4039,3950,dane_anuarios_estadisticos
+COL,CAUCA,1958,7958,4061,3897,dane_anuarios_estadisticos
+COL,CAUCA,1959,7905,4038,3867,dane_anuarios_estadisticos
+COL,CAUCA,1960,8704,4387,4317,dane_anuarios_estadisticos
+COL,CAUCA,1961,8426,4393,4033,dane_anuarios_estadisticos
+COL,CAUCA,1962,8404,4230,4174,dane_anuarios_estadisticos
+COL,CAUCA,1963,8969,4665,4304,dane_anuarios_estadisticos
+COL,CAUCA,1964,8403,4228,4175,dane_anuarios_estadisticos
+COL,CAUCA,1965,8268,4254,4014,dane_anuarios_estadisticos
+COL,CAUCA,1966,8485,4329,4156,dane_anuarios_estadisticos
+COL,CAUCA,1967,8864,4559,4305,dane_anuarios_estadisticos
+COL,CAUCA,1968,8515,4335,4180,dane_anuarios_estadisticos
+COL,CAUCA,1969,7999,4168,3831,dane_anuarios_estadisticos
+COL,CAUCA,1970,452,246,206,dane_anuarios_estadisticos
+COL,CAUCA,1971,7947,4130,3817,dane_anuarios_estadisticos
+COL,CAUCA,1972,8298,4263,4035,dane_anuarios_estadisticos
+COL,CAUCA,1973,6977,3723,3254,dane_anuarios_estadisticos
+COL,CAUCA,1974,9519,5094,4425,dane_anuarios_estadisticos
+COL,CAUCA,1975,6926,3709,3217,dane_anuarios_estadisticos
+COL,CAUCA,1976,7032,3676,3356,dane_anuarios_estadisticos
+COL,CAUCA,1977,6389,3387,3002,dane_anuarios_estadisticos
+COL,CAUCA,1978,6444,3514,2930,dane_anuarios_estadisticos
+COL,CAUCA,1979,5187,2846,2341,dane_anuarios_estadisticos
+COL,CAUCA,1980,4521,2497,2024,dane_anuarios_estadisticos
+COL,CAUCA,1981,5315,2919,2396,dane_anuarios_estadisticos
+COL,CAUCA,1982,5511,3071,2440,dane_anuarios_estadisticos
+COL,CAUCA,1983,5520,3107,2413,dane_anuarios_estadisticos
+COL,CAUCA,1984,5713,3276,2437,dane_anuarios_estadisticos
+COL,CESAR,1923,,,,dane_anuarios_estadisticos
+COL,CESAR,1924,,,,dane_anuarios_estadisticos
+COL,CESAR,1925,,,,dane_anuarios_estadisticos
+COL,CESAR,1926,,,,dane_anuarios_estadisticos
+COL,CESAR,1927,,,,dane_anuarios_estadisticos
+COL,CESAR,1928,,,,dane_anuarios_estadisticos
+COL,CESAR,1929,,,,dane_anuarios_estadisticos
+COL,CESAR,1930,,,,dane_anuarios_estadisticos
+COL,CESAR,1931,,,,dane_anuarios_estadisticos
+COL,CESAR,1932,,,,dane_anuarios_estadisticos
+COL,CESAR,1933,,,,dane_anuarios_estadisticos
+COL,CESAR,1934,,,,dane_anuarios_estadisticos
+COL,CESAR,1935,,,,dane_anuarios_estadisticos
+COL,CESAR,1936,,,,dane_anuarios_estadisticos
+COL,CESAR,1937,,,,dane_anuarios_estadisticos
+COL,CESAR,1938,,,,dane_anuarios_estadisticos
+COL,CESAR,1939,,,,dane_anuarios_estadisticos
+COL,CESAR,1940,,,,dane_anuarios_estadisticos
+COL,CESAR,1941,,,,dane_anuarios_estadisticos
+COL,CESAR,1942,,,,dane_anuarios_estadisticos
+COL,CESAR,1943,,,,dane_anuarios_estadisticos
+COL,CESAR,1944,,,,dane_anuarios_estadisticos
+COL,CESAR,1945,,,,dane_anuarios_estadisticos
+COL,CESAR,1946,,,,dane_anuarios_estadisticos
+COL,CESAR,1947,,,,dane_anuarios_estadisticos
+COL,CESAR,1948,,,,dane_anuarios_estadisticos
+COL,CESAR,1949,,,,dane_anuarios_estadisticos
+COL,CESAR,1950,,,,dane_anuarios_estadisticos
+COL,CESAR,1951,,,,dane_anuarios_estadisticos
+COL,CESAR,1952,,,,dane_anuarios_estadisticos
+COL,CESAR,1953,,,,dane_anuarios_estadisticos
+COL,CESAR,1954,,,,dane_anuarios_estadisticos
+COL,CESAR,1955,,,,dane_anuarios_estadisticos
+COL,CESAR,1956,,,,dane_anuarios_estadisticos
+COL,CESAR,1957,,,,dane_anuarios_estadisticos
+COL,CESAR,1958,,,,dane_anuarios_estadisticos
+COL,CESAR,1959,,,,dane_anuarios_estadisticos
+COL,CESAR,1960,,,,dane_anuarios_estadisticos
+COL,CESAR,1961,,,,dane_anuarios_estadisticos
+COL,CESAR,1962,,,,dane_anuarios_estadisticos
+COL,CESAR,1963,,,,dane_anuarios_estadisticos
+COL,CESAR,1964,,,,dane_anuarios_estadisticos
+COL,CESAR,1965,,,,dane_anuarios_estadisticos
+COL,CESAR,1966,,,,dane_anuarios_estadisticos
+COL,CESAR,1967,,,,dane_anuarios_estadisticos
+COL,CESAR,1968,2445,1379,1066,dane_anuarios_estadisticos
+COL,CESAR,1969,1723,959,764,dane_anuarios_estadisticos
+COL,CESAR,1970,1976,1083,893,dane_anuarios_estadisticos
+COL,CESAR,1971,1727,962,765,dane_anuarios_estadisticos
+COL,CESAR,1972,1947,1096,851,dane_anuarios_estadisticos
+COL,CESAR,1973,2584,1386,1198,dane_anuarios_estadisticos
+COL,CESAR,1974,1866,1061,805,dane_anuarios_estadisticos
+COL,CESAR,1975,1687,951,736,dane_anuarios_estadisticos
+COL,CESAR,1976,1859,1065,794,dane_anuarios_estadisticos
+COL,CESAR,1977,1840,1030,810,dane_anuarios_estadisticos
+COL,CESAR,1978,1525,883,642,dane_anuarios_estadisticos
+COL,CESAR,1979,1586,957,629,dane_anuarios_estadisticos
+COL,CESAR,1980,1520,926,594,dane_anuarios_estadisticos
+COL,CESAR,1981,1605,1006,599,dane_anuarios_estadisticos
+COL,CESAR,1982,1567,988,579,dane_anuarios_estadisticos
+COL,CESAR,1983,2131,1373,758,dane_anuarios_estadisticos
+COL,CESAR,1984,1550,965,585,dane_anuarios_estadisticos
+COL,CHOCÓ,1923,702,398,304,dane_anuarios_estadisticos
+COL,CHOCÓ,1924,605,329,276,dane_anuarios_estadisticos
+COL,CHOCÓ,1925,1017,519,498,dane_anuarios_estadisticos
+COL,CHOCÓ,1926,728,353,375,dane_anuarios_estadisticos
+COL,CHOCÓ,1927,557,276,281,dane_anuarios_estadisticos
+COL,CHOCÓ,1928,555,268,287,dane_anuarios_estadisticos
+COL,CHOCÓ,1929,541,277,264,dane_anuarios_estadisticos
+COL,CHOCÓ,1930,624,323,301,dane_anuarios_estadisticos
+COL,CHOCÓ,1931,697,373,324,dane_anuarios_estadisticos
+COL,CHOCÓ,1932,706,356,350,dane_anuarios_estadisticos
+COL,CHOCÓ,1933,861,444,417,dane_anuarios_estadisticos
+COL,CHOCÓ,1934,579,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1935,1100,618,482,dane_anuarios_estadisticos
+COL,CHOCÓ,1936,1098,588,510,dane_anuarios_estadisticos
+COL,CHOCÓ,1937,968,492,476,dane_anuarios_estadisticos
+COL,CHOCÓ,1938,,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1939,,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1940,,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1941,,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1942,,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1943,,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1944,,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1945,,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1946,,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1947,,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1948,932,492,440,dane_anuarios_estadisticos
+COL,CHOCÓ,1949,1265,672,593,dane_anuarios_estadisticos
+COL,CHOCÓ,1950,982,,,dane_anuarios_estadisticos
+COL,CHOCÓ,1951,1155,646,509,dane_anuarios_estadisticos
+COL,CHOCÓ,1952,996,536,460,dane_anuarios_estadisticos
+COL,CHOCÓ,1953,1173,555,618,dane_anuarios_estadisticos
+COL,CHOCÓ,1954,1270,649,621,dane_anuarios_estadisticos
+COL,CHOCÓ,1955,1458,711,147,dane_anuarios_estadisticos
+COL,CHOCÓ,1956,1377,702,675,dane_anuarios_estadisticos
+COL,CHOCÓ,1957,1462,773,689,dane_anuarios_estadisticos
+COL,CHOCÓ,1958,1327,678,649,dane_anuarios_estadisticos
+COL,CHOCÓ,1959,1189,633,556,dane_anuarios_estadisticos
+COL,CHOCÓ,1960,1380,756,624,dane_anuarios_estadisticos
+COL,CHOCÓ,1961,1341,680,661,dane_anuarios_estadisticos
+COL,CHOCÓ,1962,1466,800,666,dane_anuarios_estadisticos
+COL,CHOCÓ,1963,1721,906,815,dane_anuarios_estadisticos
+COL,CHOCÓ,1964,1460,805,655,dane_anuarios_estadisticos
+COL,CHOCÓ,1965,1675,861,814,dane_anuarios_estadisticos
+COL,CHOCÓ,1966,1645,826,819,dane_anuarios_estadisticos
+COL,CHOCÓ,1967,1825,992,833,dane_anuarios_estadisticos
+COL,CHOCÓ,1968,1688,870,818,dane_anuarios_estadisticos
+COL,CHOCÓ,1969,1612,865,747,dane_anuarios_estadisticos
+COL,CHOCÓ,1970,1667,851,816,dane_anuarios_estadisticos
+COL,CHOCÓ,1971,1237,661,576,dane_anuarios_estadisticos
+COL,CHOCÓ,1972,2046,1075,971,dane_anuarios_estadisticos
+COL,CHOCÓ,1973,1938,995,943,dane_anuarios_estadisticos
+COL,CHOCÓ,1974,1918,1024,894,dane_anuarios_estadisticos
+COL,CHOCÓ,1975,1785,953,832,dane_anuarios_estadisticos
+COL,CHOCÓ,1976,1617,862,755,dane_anuarios_estadisticos
+COL,CHOCÓ,1977,1249,660,589,dane_anuarios_estadisticos
+COL,CHOCÓ,1978,609,340,269,dane_anuarios_estadisticos
+COL,CHOCÓ,1979,1515,822,693,dane_anuarios_estadisticos
+COL,CHOCÓ,1980,1256,680,576,dane_anuarios_estadisticos
+COL,CHOCÓ,1981,1364,719,645,dane_anuarios_estadisticos
+COL,CHOCÓ,1982,1296,676,620,dane_anuarios_estadisticos
+COL,CHOCÓ,1983,1387,692,695,dane_anuarios_estadisticos
+COL,CHOCÓ,1984,1299,720,579,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1923,14906,7480,7426,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1924,14409,7053,7356,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1925,13973,6983,6990,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1926,17113,8360,8753,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1927,16589,8390,8199,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1928,16514,8341,8173,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1929,16346,8083,8263,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1930,15165,7630,7535,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1931,17034,8596,8438,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1932,16202,8131,8071,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1933,20254,10323,9931,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1934,15478,,,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1935,18962,9639,9323,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1936,20079,10168,9911,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1937,19971,10016,9955,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1938,22077,11134,10943,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1939,21922,,,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1940,19380,9715,9665,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1941,20676,10370,10306,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1942,21351,10693,10658,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1943,22671,,,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1944,23051,,,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1945,23220,11720,11500,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1946,23071,11564,11507,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1947,22544,11280,11264,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1948,20984,10878,10106,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1949,22075,11297,10778,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1950,22490,,,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1951,23440,12457,10983,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1952,21065,10822,10243,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1953,23573,12002,11571,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1954,21242,10771,10471,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1955,23234,11824,11410,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1956,24009,12444,11565,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1957,24380,12595,11785,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1958,24382,12540,11842,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1959,24992,12755,12237,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1960,26495,13527,12968,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1961,25716,13128,12588,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1962,13691,7311,6380,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1963,13127,6994,6133,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1964,12865,6863,5912,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1965,12351,6613,5738,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1966,12247,6541,5706,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1967,12088,6471,5617,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1968,11303,6181,5122,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1969,11358,6171,5187,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1970,12834,7051,5783,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1971,10016,5460,4556,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1972,9922,5443,4479,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1973,10408,5760,4648,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1974,10817,6042,4775,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1975,9662,5371,4291,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1976,9733,5497,4236,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1977,9323,5209,4114,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1978,8058,4550,3508,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1979,8591,4800,3791,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1980,7887,4490,3397,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1981,8331,4789,3542,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1982,8133,4630,3503,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1983,7874,4537,3337,dane_anuarios_estadisticos
+COL,CUNDINAMARCA,1984,7788,4558,3230,dane_anuarios_estadisticos
+COL,CÓRDOBA,1923,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1924,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1925,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1926,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1927,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1928,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1929,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1930,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1931,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1932,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1933,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1934,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1935,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1936,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1937,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1938,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1939,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1940,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1941,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1942,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1943,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1944,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1945,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1946,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1947,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1948,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1949,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1950,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1951,,,,dane_anuarios_estadisticos
+COL,CÓRDOBA,1952,640,338,302,dane_anuarios_estadisticos
+COL,CÓRDOBA,1953,1360,704,656,dane_anuarios_estadisticos
+COL,CÓRDOBA,1954,1579,800,779,dane_anuarios_estadisticos
+COL,CÓRDOBA,1955,1711,836,875,dane_anuarios_estadisticos
+COL,CÓRDOBA,1956,2082,1113,969,dane_anuarios_estadisticos
+COL,CÓRDOBA,1957,2101,1103,998,dane_anuarios_estadisticos
+COL,CÓRDOBA,1958,1699,885,814,dane_anuarios_estadisticos
+COL,CÓRDOBA,1959,2120,1034,1086,dane_anuarios_estadisticos
+COL,CÓRDOBA,1960,2122,1101,1021,dane_anuarios_estadisticos
+COL,CÓRDOBA,1961,2373,1226,1147,dane_anuarios_estadisticos
+COL,CÓRDOBA,1962,2047,1069,978,dane_anuarios_estadisticos
+COL,CÓRDOBA,1963,2262,1151,1111,dane_anuarios_estadisticos
+COL,CÓRDOBA,1964,2287,1147,1140,dane_anuarios_estadisticos
+COL,CÓRDOBA,1965,2282,1187,1095,dane_anuarios_estadisticos
+COL,CÓRDOBA,1966,2593,1349,1244,dane_anuarios_estadisticos
+COL,CÓRDOBA,1967,2810,1435,1375,dane_anuarios_estadisticos
+COL,CÓRDOBA,1968,2542,1297,1245,dane_anuarios_estadisticos
+COL,CÓRDOBA,1969,1586,807,779,dane_anuarios_estadisticos
+COL,CÓRDOBA,1970,2343,1200,1143,dane_anuarios_estadisticos
+COL,CÓRDOBA,1971,1029,542,487,dane_anuarios_estadisticos
+COL,CÓRDOBA,1972,1635,845,790,dane_anuarios_estadisticos
+COL,CÓRDOBA,1973,1569,822,747,dane_anuarios_estadisticos
+COL,CÓRDOBA,1974,1379,758,621,dane_anuarios_estadisticos
+COL,CÓRDOBA,1975,1790,920,870,dane_anuarios_estadisticos
+COL,CÓRDOBA,1976,1823,975,848,dane_anuarios_estadisticos
+COL,CÓRDOBA,1977,1527,856,671,dane_anuarios_estadisticos
+COL,CÓRDOBA,1978,791,447,344,dane_anuarios_estadisticos
+COL,CÓRDOBA,1979,1603,869,734,dane_anuarios_estadisticos
+COL,CÓRDOBA,1980,1552,869,683,dane_anuarios_estadisticos
+COL,CÓRDOBA,1981,1636,957,679,dane_anuarios_estadisticos
+COL,CÓRDOBA,1982,1760,991,769,dane_anuarios_estadisticos
+COL,CÓRDOBA,1983,1876,1065,811,dane_anuarios_estadisticos
+COL,CÓRDOBA,1984,1776,1004,772,dane_anuarios_estadisticos
+COL,GUAINÍA,1923,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1924,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1925,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1926,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1927,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1928,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1929,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1930,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1931,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1932,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1933,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1934,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1935,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1936,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1937,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1938,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1939,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1940,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1941,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1942,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1943,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1944,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1945,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1946,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1947,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1948,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1949,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1950,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1951,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1952,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1953,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1954,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1955,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1956,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1957,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1958,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1959,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1960,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1961,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1962,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1963,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1964,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1965,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1966,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1967,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1968,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1969,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1970,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1971,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1972,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1973,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1974,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1975,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1976,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1977,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1978,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1979,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1980,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1981,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1982,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1983,,,,dane_anuarios_estadisticos
+COL,GUAINÍA,1984,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1923,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1924,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1925,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1926,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1927,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1928,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1929,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1930,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1931,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1932,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1933,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1934,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1935,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1936,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1937,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1938,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1939,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1940,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1941,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1942,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1943,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1944,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1945,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1946,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1947,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1948,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1949,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1950,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1951,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1952,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1953,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1954,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1955,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1956,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1957,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1958,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1959,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1960,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1961,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1962,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1963,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1964,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1965,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1966,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1967,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1968,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1969,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1970,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1971,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1972,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1973,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1974,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1975,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1976,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1977,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1978,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1979,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1980,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1981,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1982,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1983,,,,dane_anuarios_estadisticos
+COL,GUAVIARE,1984,,,,dane_anuarios_estadisticos
+COL,HUILA,1923,3576,1788,1788,dane_anuarios_estadisticos
+COL,HUILA,1924,2543,1268,1275,dane_anuarios_estadisticos
+COL,HUILA,1925,2395,1168,1227,dane_anuarios_estadisticos
+COL,HUILA,1926,2479,1234,1245,dane_anuarios_estadisticos
+COL,HUILA,1927,2325,1160,1165,dane_anuarios_estadisticos
+COL,HUILA,1928,3335,1657,1678,dane_anuarios_estadisticos
+COL,HUILA,1929,2563,1182,1381,dane_anuarios_estadisticos
+COL,HUILA,1930,2174,1033,1141,dane_anuarios_estadisticos
+COL,HUILA,1931,2551,1246,1305,dane_anuarios_estadisticos
+COL,HUILA,1932,2636,1325,1311,dane_anuarios_estadisticos
+COL,HUILA,1933,3892,1857,1833,dane_anuarios_estadisticos
+COL,HUILA,1934,1680,,,dane_anuarios_estadisticos
+COL,HUILA,1935,3545,1787,1758,dane_anuarios_estadisticos
+COL,HUILA,1936,3380,1689,1691,dane_anuarios_estadisticos
+COL,HUILA,1937,3236,1606,1630,dane_anuarios_estadisticos
+COL,HUILA,1938,4132,1998,2134,dane_anuarios_estadisticos
+COL,HUILA,1939,4248,,,dane_anuarios_estadisticos
+COL,HUILA,1940,3489,1780,1709,dane_anuarios_estadisticos
+COL,HUILA,1941,3623,1761,1862,dane_anuarios_estadisticos
+COL,HUILA,1942,3568,1765,1803,dane_anuarios_estadisticos
+COL,HUILA,1943,4148,,,dane_anuarios_estadisticos
+COL,HUILA,1944,3931,,,dane_anuarios_estadisticos
+COL,HUILA,1945,3796,1892,1904,dane_anuarios_estadisticos
+COL,HUILA,1946,3990,2006,1984,dane_anuarios_estadisticos
+COL,HUILA,1947,4223,2100,2123,dane_anuarios_estadisticos
+COL,HUILA,1948,4378,2199,2179,dane_anuarios_estadisticos
+COL,HUILA,1949,4472,2315,2157,dane_anuarios_estadisticos
+COL,HUILA,1950,4660,,,dane_anuarios_estadisticos
+COL,HUILA,1951,5211,2726,2485,dane_anuarios_estadisticos
+COL,HUILA,1952,4892,2542,2350,dane_anuarios_estadisticos
+COL,HUILA,1953,5408,2825,2583,dane_anuarios_estadisticos
+COL,HUILA,1954,4588,2411,2177,dane_anuarios_estadisticos
+COL,HUILA,1955,4674,2414,2260,dane_anuarios_estadisticos
+COL,HUILA,1956,5327,2799,2528,dane_anuarios_estadisticos
+COL,HUILA,1957,4774,2442,2332,dane_anuarios_estadisticos
+COL,HUILA,1958,4798,2543,2255,dane_anuarios_estadisticos
+COL,HUILA,1959,4517,2359,2158,dane_anuarios_estadisticos
+COL,HUILA,1960,4725,2526,2199,dane_anuarios_estadisticos
+COL,HUILA,1961,5133,2690,2443,dane_anuarios_estadisticos
+COL,HUILA,1962,5245,2800,2445,dane_anuarios_estadisticos
+COL,HUILA,1963,4871,2594,2277,dane_anuarios_estadisticos
+COL,HUILA,1964,4919,2590,2329,dane_anuarios_estadisticos
+COL,HUILA,1965,4955,2721,2234,dane_anuarios_estadisticos
+COL,HUILA,1966,5003,2748,2255,dane_anuarios_estadisticos
+COL,HUILA,1967,4896,2590,2306,dane_anuarios_estadisticos
+COL,HUILA,1968,4653,2435,2218,dane_anuarios_estadisticos
+COL,HUILA,1969,4617,2428,2189,dane_anuarios_estadisticos
+COL,HUILA,1970,5069,2690,2379,dane_anuarios_estadisticos
+COL,HUILA,1971,4159,2192,1967,dane_anuarios_estadisticos
+COL,HUILA,1972,4221,2247,1974,dane_anuarios_estadisticos
+COL,HUILA,1973,4129,2149,1980,dane_anuarios_estadisticos
+COL,HUILA,1974,4253,2287,1966,dane_anuarios_estadisticos
+COL,HUILA,1975,3945,2152,1793,dane_anuarios_estadisticos
+COL,HUILA,1976,4218,2207,2011,dane_anuarios_estadisticos
+COL,HUILA,1977,4052,2203,1849,dane_anuarios_estadisticos
+COL,HUILA,1978,3460,1901,1559,dane_anuarios_estadisticos
+COL,HUILA,1979,3642,2010,1632,dane_anuarios_estadisticos
+COL,HUILA,1980,3779,2106,1673,dane_anuarios_estadisticos
+COL,HUILA,1981,3946,2198,1748,dane_anuarios_estadisticos
+COL,HUILA,1982,3766,2099,1667,dane_anuarios_estadisticos
+COL,HUILA,1983,3678,2075,1603,dane_anuarios_estadisticos
+COL,HUILA,1984,3773,2151,1662,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1923,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1924,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1925,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1926,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1927,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1928,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1929,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1930,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1931,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1932,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1933,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1934,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1935,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1936,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1937,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1938,2026,1102,924,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1939,2443,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1940,1964,1038,926,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1941,3046,1665,1381,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1942,3273,1746,1527,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1943,3283,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1944,3573,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1945,3109,1680,1429,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1946,3219,1728,1401,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1947,3489,1798,1691,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1948,2272,1246,1026,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1949,2350,1229,1121,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1950,2519,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1951,2463,1339,1124,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1952,2340,1331,1009,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1953,2217,1196,1021,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1954,1895,1036,859,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1955,2096,1202,894,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1956,2129,1179,950,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1957,2830,1530,1300,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1958,3229,1779,1450,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1959,3181,1705,1476,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1960,1912,1034,878,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1961,2201,1212,989,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1962,2566,1353,1213,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1963,2453,1306,1147,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1964,2350,1254,1096,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1965,2422,1276,1146,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1966,2676,1455,1221,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1967,2894,1601,1293,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1968,2843,1504,1339,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1969,,,,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1970,2657,1419,1238,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1971,2740,1505,1235,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1972,2996,1605,1391,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1973,3360,1846,1514,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1974,2700,1537,1163,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1975,3676,2088,1588,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1976,3659,2066,1593,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1977,3865,2225,1640,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1978,3013,1783,1230,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1979,3150,1824,1326,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1980,2897,1756,1141,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1981,3063,1902,1161,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1982,1664,1037,627,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1983,1749,1113,636,dane_anuarios_estadisticos
+COL,INTENDENCIAS Y COMISARÍAS,1984,1831,1182,649,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1923,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1924,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1925,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1926,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1927,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1928,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1929,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1930,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1931,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1932,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1933,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1934,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1935,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1936,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1937,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1938,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1939,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1940,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1941,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1942,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1943,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1944,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1945,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1946,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1947,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1948,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1949,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1950,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1951,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1952,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1953,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1954,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1955,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1956,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1957,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1958,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1959,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1960,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1961,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1962,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1963,,,,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1964,314,185,129,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1965,292,165,127,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1966,358,186,172,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1967,433,244,189,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1968,362,197,165,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1969,354,188,166,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1970,408,231,177,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1971,323,201,122,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1972,358,195,163,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1973,498,285,213,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1974,409,216,193,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1975,441,267,174,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1976,543,335,188,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1977,603,413,190,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1978,579,391,188,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1979,609,447,162,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1980,677,481,196,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1981,633,440,193,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1982,612,421,191,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1983,740,510,230,dane_anuarios_estadisticos
+COL,LA GUAJIRA,1984,615,400,215,dane_anuarios_estadisticos
+COL,MAGDALENA,1923,2549,1362,1187,dane_anuarios_estadisticos
+COL,MAGDALENA,1924,3406,1843,1563,dane_anuarios_estadisticos
+COL,MAGDALENA,1925,3416,1895,1521,dane_anuarios_estadisticos
+COL,MAGDALENA,1926,2432,1376,1056,dane_anuarios_estadisticos
+COL,MAGDALENA,1927,3058,1646,1412,dane_anuarios_estadisticos
+COL,MAGDALENA,1928,2519,1332,1187,dane_anuarios_estadisticos
+COL,MAGDALENA,1929,2254,1193,1061,dane_anuarios_estadisticos
+COL,MAGDALENA,1930,1174,650,524,dane_anuarios_estadisticos
+COL,MAGDALENA,1931,2230,1197,1033,dane_anuarios_estadisticos
+COL,MAGDALENA,1932,,,,dane_anuarios_estadisticos
+COL,MAGDALENA,1933,3067,1642,1425,dane_anuarios_estadisticos
+COL,MAGDALENA,1934,2348,,,dane_anuarios_estadisticos
+COL,MAGDALENA,1935,3247,1703,1544,dane_anuarios_estadisticos
+COL,MAGDALENA,1936,3546,1814,1732,dane_anuarios_estadisticos
+COL,MAGDALENA,1937,3619,1891,1728,dane_anuarios_estadisticos
+COL,MAGDALENA,1938,4364,2259,2105,dane_anuarios_estadisticos
+COL,MAGDALENA,1939,4937,,,dane_anuarios_estadisticos
+COL,MAGDALENA,1940,4312,2229,2083,dane_anuarios_estadisticos
+COL,MAGDALENA,1941,4124,2168,1956,dane_anuarios_estadisticos
+COL,MAGDALENA,1942,4570,2362,2208,dane_anuarios_estadisticos
+COL,MAGDALENA,1943,5753,,,dane_anuarios_estadisticos
+COL,MAGDALENA,1944,5046,,,dane_anuarios_estadisticos
+COL,MAGDALENA,1945,4738,2560,2178,dane_anuarios_estadisticos
+COL,MAGDALENA,1946,4394,2368,2026,dane_anuarios_estadisticos
+COL,MAGDALENA,1947,4347,2344,2003,dane_anuarios_estadisticos
+COL,MAGDALENA,1948,4221,2290,1931,dane_anuarios_estadisticos
+COL,MAGDALENA,1949,3472,1824,1648,dane_anuarios_estadisticos
+COL,MAGDALENA,1950,3386,,,dane_anuarios_estadisticos
+COL,MAGDALENA,1951,3905,2207,1698,dane_anuarios_estadisticos
+COL,MAGDALENA,1952,3385,1801,1584,dane_anuarios_estadisticos
+COL,MAGDALENA,1953,3521,1894,1627,dane_anuarios_estadisticos
+COL,MAGDALENA,1954,3231,1789,1442,dane_anuarios_estadisticos
+COL,MAGDALENA,1955,3324,1795,1529,dane_anuarios_estadisticos
+COL,MAGDALENA,1956,3446,1872,1574,dane_anuarios_estadisticos
+COL,MAGDALENA,1957,4296,2276,2020,dane_anuarios_estadisticos
+COL,MAGDALENA,1958,4250,2252,1998,dane_anuarios_estadisticos
+COL,MAGDALENA,1959,3951,2077,1874,dane_anuarios_estadisticos
+COL,MAGDALENA,1960,3570,1866,1704,dane_anuarios_estadisticos
+COL,MAGDALENA,1961,4016,2223,1793,dane_anuarios_estadisticos
+COL,MAGDALENA,1962,4452,2386,2066,dane_anuarios_estadisticos
+COL,MAGDALENA,1963,4758,2552,2206,dane_anuarios_estadisticos
+COL,MAGDALENA,1964,4862,2596,2266,dane_anuarios_estadisticos
+COL,MAGDALENA,1965,4994,2712,2282,dane_anuarios_estadisticos
+COL,MAGDALENA,1966,4970,2692,2278,dane_anuarios_estadisticos
+COL,MAGDALENA,1967,4940,2688,2252,dane_anuarios_estadisticos
+COL,MAGDALENA,1968,2558,1380,1178,dane_anuarios_estadisticos
+COL,MAGDALENA,1969,2178,1190,988,dane_anuarios_estadisticos
+COL,MAGDALENA,1970,2317,1267,1050,dane_anuarios_estadisticos
+COL,MAGDALENA,1971,2056,1115,941,dane_anuarios_estadisticos
+COL,MAGDALENA,1972,2036,1095,941,dane_anuarios_estadisticos
+COL,MAGDALENA,1973,2879,1629,1250,dane_anuarios_estadisticos
+COL,MAGDALENA,1974,2066,1160,906,dane_anuarios_estadisticos
+COL,MAGDALENA,1975,2142,1186,956,dane_anuarios_estadisticos
+COL,MAGDALENA,1976,2226,1268,958,dane_anuarios_estadisticos
+COL,MAGDALENA,1977,2192,1248,944,dane_anuarios_estadisticos
+COL,MAGDALENA,1978,1997,1138,859,dane_anuarios_estadisticos
+COL,MAGDALENA,1979,2122,1289,833,dane_anuarios_estadisticos
+COL,MAGDALENA,1980,2127,1270,857,dane_anuarios_estadisticos
+COL,MAGDALENA,1981,2148,1299,849,dane_anuarios_estadisticos
+COL,MAGDALENA,1982,2074,1265,809,dane_anuarios_estadisticos
+COL,MAGDALENA,1983,2526,1446,1080,dane_anuarios_estadisticos
+COL,MAGDALENA,1984,1922,1119,803,dane_anuarios_estadisticos
+COL,META,1923,486,285,201,dane_anuarios_estadisticos
+COL,META,1924,355,223,132,dane_anuarios_estadisticos
+COL,META,1925,360,219,141,dane_anuarios_estadisticos
+COL,META,1926,565,304,261,dane_anuarios_estadisticos
+COL,META,1927,471,288,183,dane_anuarios_estadisticos
+COL,META,1928,420,227,193,dane_anuarios_estadisticos
+COL,META,1929,309,182,127,dane_anuarios_estadisticos
+COL,META,1930,382,220,162,dane_anuarios_estadisticos
+COL,META,1931,439,231,208,dane_anuarios_estadisticos
+COL,META,1932,406,239,167,dane_anuarios_estadisticos
+COL,META,1933,533,277,256,dane_anuarios_estadisticos
+COL,META,1934,326,,,dane_anuarios_estadisticos
+COL,META,1935,437,277,160,dane_anuarios_estadisticos
+COL,META,1936,694,389,305,dane_anuarios_estadisticos
+COL,META,1937,550,321,229,dane_anuarios_estadisticos
+COL,META,1938,,,,dane_anuarios_estadisticos
+COL,META,1939,,,,dane_anuarios_estadisticos
+COL,META,1940,,,,dane_anuarios_estadisticos
+COL,META,1941,,,,dane_anuarios_estadisticos
+COL,META,1942,,,,dane_anuarios_estadisticos
+COL,META,1943,,,,dane_anuarios_estadisticos
+COL,META,1944,,,,dane_anuarios_estadisticos
+COL,META,1945,,,,dane_anuarios_estadisticos
+COL,META,1946,,,,dane_anuarios_estadisticos
+COL,META,1947,,,,dane_anuarios_estadisticos
+COL,META,1948,,,,dane_anuarios_estadisticos
+COL,META,1949,,,,dane_anuarios_estadisticos
+COL,META,1950,,,,dane_anuarios_estadisticos
+COL,META,1951,,,,dane_anuarios_estadisticos
+COL,META,1952,,,,dane_anuarios_estadisticos
+COL,META,1953,,,,dane_anuarios_estadisticos
+COL,META,1954,,,,dane_anuarios_estadisticos
+COL,META,1955,,,,dane_anuarios_estadisticos
+COL,META,1956,,,,dane_anuarios_estadisticos
+COL,META,1957,,,,dane_anuarios_estadisticos
+COL,META,1958,,,,dane_anuarios_estadisticos
+COL,META,1959,,,,dane_anuarios_estadisticos
+COL,META,1960,1243,672,571,dane_anuarios_estadisticos
+COL,META,1961,1648,880,768,dane_anuarios_estadisticos
+COL,META,1962,1751,960,791,dane_anuarios_estadisticos
+COL,META,1963,1763,929,834,dane_anuarios_estadisticos
+COL,META,1964,2070,1146,924,dane_anuarios_estadisticos
+COL,META,1965,2252,1231,1021,dane_anuarios_estadisticos
+COL,META,1966,2495,1396,1099,dane_anuarios_estadisticos
+COL,META,1967,2431,1367,1064,dane_anuarios_estadisticos
+COL,META,1968,2204,1222,982,dane_anuarios_estadisticos
+COL,META,1969,1931,1044,887,dane_anuarios_estadisticos
+COL,META,1970,2506,1375,1131,dane_anuarios_estadisticos
+COL,META,1971,1945,1086,859,dane_anuarios_estadisticos
+COL,META,1972,2224,1226,998,dane_anuarios_estadisticos
+COL,META,1973,2746,1539,1207,dane_anuarios_estadisticos
+COL,META,1974,2239,1283,956,dane_anuarios_estadisticos
+COL,META,1975,2354,1293,1061,dane_anuarios_estadisticos
+COL,META,1976,2354,1310,1044,dane_anuarios_estadisticos
+COL,META,1977,2395,1310,1085,dane_anuarios_estadisticos
+COL,META,1978,1930,1116,814,dane_anuarios_estadisticos
+COL,META,1979,2255,1295,960,dane_anuarios_estadisticos
+COL,META,1980,1942,1114,828,dane_anuarios_estadisticos
+COL,META,1981,1984,1157,827,dane_anuarios_estadisticos
+COL,META,1982,2195,1336,859,dane_anuarios_estadisticos
+COL,META,1983,2078,1305,773,dane_anuarios_estadisticos
+COL,META,1984,1907,1205,702,dane_anuarios_estadisticos
+COL,NARIÑO,1923,5216,2562,2654,dane_anuarios_estadisticos
+COL,NARIÑO,1924,5594,2795,2799,dane_anuarios_estadisticos
+COL,NARIÑO,1925,5566,2772,2794,dane_anuarios_estadisticos
+COL,NARIÑO,1926,5099,2653,2446,dane_anuarios_estadisticos
+COL,NARIÑO,1927,5480,2773,2707,dane_anuarios_estadisticos
+COL,NARIÑO,1928,7177,3513,3654,dane_anuarios_estadisticos
+COL,NARIÑO,1929,7312,3541,3771,dane_anuarios_estadisticos
+COL,NARIÑO,1930,5539,2811,2728,dane_anuarios_estadisticos
+COL,NARIÑO,1931,6097,3052,3045,dane_anuarios_estadisticos
+COL,NARIÑO,1932,5989,3051,2938,dane_anuarios_estadisticos
+COL,NARIÑO,1933,6290,3134,3156,dane_anuarios_estadisticos
+COL,NARIÑO,1934,4426,,,dane_anuarios_estadisticos
+COL,NARIÑO,1935,7322,3713,3609,dane_anuarios_estadisticos
+COL,NARIÑO,1936,6949,3607,3342,dane_anuarios_estadisticos
+COL,NARIÑO,1937,8072,4193,3879,dane_anuarios_estadisticos
+COL,NARIÑO,1938,10022,5322,4700,dane_anuarios_estadisticos
+COL,NARIÑO,1939,10092,,,dane_anuarios_estadisticos
+COL,NARIÑO,1940,8616,4433,4183,dane_anuarios_estadisticos
+COL,NARIÑO,1941,9036,4670,4366,dane_anuarios_estadisticos
+COL,NARIÑO,1942,9000,4643,4357,dane_anuarios_estadisticos
+COL,NARIÑO,1943,8475,,,dane_anuarios_estadisticos
+COL,NARIÑO,1944,7655,,,dane_anuarios_estadisticos
+COL,NARIÑO,1945,6731,3491,3240,dane_anuarios_estadisticos
+COL,NARIÑO,1946,8220,4223,3997,dane_anuarios_estadisticos
+COL,NARIÑO,1947,8512,4418,4594,dane_anuarios_estadisticos
+COL,NARIÑO,1948,7794,4086,3708,dane_anuarios_estadisticos
+COL,NARIÑO,1949,7107,3725,3382,dane_anuarios_estadisticos
+COL,NARIÑO,1950,8679,,,dane_anuarios_estadisticos
+COL,NARIÑO,1951,9194,4791,4403,dane_anuarios_estadisticos
+COL,NARIÑO,1952,8555,4364,4191,dane_anuarios_estadisticos
+COL,NARIÑO,1953,9933,5042,4891,dane_anuarios_estadisticos
+COL,NARIÑO,1954,8486,4423,4063,dane_anuarios_estadisticos
+COL,NARIÑO,1955,9499,4968,4531,dane_anuarios_estadisticos
+COL,NARIÑO,1956,9685,4925,4760,dane_anuarios_estadisticos
+COL,NARIÑO,1957,9990,5154,4836,dane_anuarios_estadisticos
+COL,NARIÑO,1958,9349,4817,4532,dane_anuarios_estadisticos
+COL,NARIÑO,1959,9107,4573,4534,dane_anuarios_estadisticos
+COL,NARIÑO,1960,10032,5119,4913,dane_anuarios_estadisticos
+COL,NARIÑO,1961,9238,4740,4498,dane_anuarios_estadisticos
+COL,NARIÑO,1962,9405,4826,4579,dane_anuarios_estadisticos
+COL,NARIÑO,1963,9589,4920,4669,dane_anuarios_estadisticos
+COL,NARIÑO,1964,9259,4868,4391,dane_anuarios_estadisticos
+COL,NARIÑO,1965,9811,5017,4794,dane_anuarios_estadisticos
+COL,NARIÑO,1966,9804,4968,4836,dane_anuarios_estadisticos
+COL,NARIÑO,1967,8875,4626,4249,dane_anuarios_estadisticos
+COL,NARIÑO,1968,8705,4532,4173,dane_anuarios_estadisticos
+COL,NARIÑO,1969,6965,3693,3272,dane_anuarios_estadisticos
+COL,NARIÑO,1970,46,25,21,dane_anuarios_estadisticos
+COL,NARIÑO,1971,6657,3500,3157,dane_anuarios_estadisticos
+COL,NARIÑO,1972,7146,3674,3472,dane_anuarios_estadisticos
+COL,NARIÑO,1973,6669,3494,3175,dane_anuarios_estadisticos
+COL,NARIÑO,1974,7831,4038,3793,dane_anuarios_estadisticos
+COL,NARIÑO,1975,6767,3610,3157,dane_anuarios_estadisticos
+COL,NARIÑO,1976,6393,3312,3081,dane_anuarios_estadisticos
+COL,NARIÑO,1977,5765,3055,2710,dane_anuarios_estadisticos
+COL,NARIÑO,1978,5913,3117,2796,dane_anuarios_estadisticos
+COL,NARIÑO,1979,5386,2818,2568,dane_anuarios_estadisticos
+COL,NARIÑO,1980,4047,2172,1875,dane_anuarios_estadisticos
+COL,NARIÑO,1981,4773,2466,2307,dane_anuarios_estadisticos
+COL,NARIÑO,1982,4801,2515,2286,dane_anuarios_estadisticos
+COL,NARIÑO,1983,4726,2547,2179,dane_anuarios_estadisticos
+COL,NARIÑO,1984,4704,2543,2161,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1923,4390,2259,2131,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1924,4416,2369,2047,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1925,4467,2347,2120,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1926,4524,2189,2335,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1927,5271,2659,2612,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1928,4601,2437,2164,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1929,4501,2295,2206,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1930,4535,2269,2266,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1931,4686,2453,2233,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1932,5400,2820,2580,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1933,5523,2971,2552,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1934,5153,,,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1935,6032,3185,2847,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1936,5768,2986,2782,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1937,5953,3136,2817,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1938,7303,3809,3494,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1939,8046,,,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1940,6396,3343,3053,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1941,6034,3172,2862,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1942,6418,3395,3023,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1943,7012,,,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1944,7635,,,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1945,12300,6358,5942,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1946,6740,3489,3251,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1947,6285,3326,2959,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1948,6792,3606,3186,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1949,7381,3861,3520,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1950,6986,,,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1951,6674,3452,3222,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1952,5917,3158,2759,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1953,6173,3251,2922,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1954,5793,3022,2771,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1955,6175,3266,2909,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1956,6724,3510,3214,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1957,7192,3766,3426,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1958,6763,3535,3228,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1959,7151,3791,3360,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1960,6456,3421,3035,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1961,6216,3302,2914,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1962,6351,3297,3054,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1963,5991,3231,2760,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1964,5938,3177,2761,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1965,6253,3333,2920,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1966,6333,3393,2940,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1967,6533,3502,3031,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1968,6531,3568,2963,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1969,5825,3074,2751,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1970,6001,3240,2761,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1971,6222,3366,2856,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1972,6038,3325,2713,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1973,6056,3313,2743,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1974,5672,3126,2546,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1975,5273,2871,2402,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1976,5572,3012,2560,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1977,5101,2801,2300,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1978,4524,2550,1974,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1979,4372,2437,1935,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1980,4389,2490,1899,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1981,4187,2345,1842,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1982,4514,2562,1952,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1983,4235,2384,1851,dane_anuarios_estadisticos
+COL,NORTE DE SANTANDER,1984,4107,2372,1735,dane_anuarios_estadisticos
+COL,PUTUMAYO,1923,216,118,98,dane_anuarios_estadisticos
+COL,PUTUMAYO,1924,207,116,91,dane_anuarios_estadisticos
+COL,PUTUMAYO,1925,100,56,44,dane_anuarios_estadisticos
+COL,PUTUMAYO,1926,88,50,38,dane_anuarios_estadisticos
+COL,PUTUMAYO,1927,173,88,85,dane_anuarios_estadisticos
+COL,PUTUMAYO,1928,340,167,173,dane_anuarios_estadisticos
+COL,PUTUMAYO,1929,261,139,122,dane_anuarios_estadisticos
+COL,PUTUMAYO,1930,208,114,94,dane_anuarios_estadisticos
+COL,PUTUMAYO,1931,189,90,99,dane_anuarios_estadisticos
+COL,PUTUMAYO,1932,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1933,227,130,97,dane_anuarios_estadisticos
+COL,PUTUMAYO,1934,132,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1935,274,147,127,dane_anuarios_estadisticos
+COL,PUTUMAYO,1936,160,87,73,dane_anuarios_estadisticos
+COL,PUTUMAYO,1937,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1938,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1939,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1940,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1941,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1942,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1943,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1944,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1945,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1946,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1947,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1948,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1949,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1950,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1951,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1952,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1953,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1954,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1955,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1956,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1957,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1958,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1959,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1960,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1961,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1962,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1963,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1964,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1965,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1966,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1967,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1968,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1969,937,508,429,dane_anuarios_estadisticos
+COL,PUTUMAYO,1970,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1971,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1972,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1973,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1974,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1975,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1976,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1977,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1978,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1979,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1980,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1981,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1982,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1983,,,,dane_anuarios_estadisticos
+COL,PUTUMAYO,1984,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1923,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1924,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1925,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1926,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1927,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1928,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1929,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1930,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1931,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1932,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1933,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1934,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1935,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1936,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1937,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1938,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1939,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1940,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1941,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1942,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1943,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1944,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1945,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1946,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1947,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1948,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1949,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1950,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1951,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1952,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1953,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1954,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1955,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1956,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1957,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1958,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1959,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1960,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1961,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1962,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1963,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1964,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1965,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1966,,,,dane_anuarios_estadisticos
+COL,QUINDÍO,1967,3594,1928,1666,dane_anuarios_estadisticos
+COL,QUINDÍO,1968,3551,1905,1646,dane_anuarios_estadisticos
+COL,QUINDÍO,1969,3174,1730,1444,dane_anuarios_estadisticos
+COL,QUINDÍO,1970,3086,1678,1408,dane_anuarios_estadisticos
+COL,QUINDÍO,1971,3101,1717,1384,dane_anuarios_estadisticos
+COL,QUINDÍO,1972,2902,1556,1346,dane_anuarios_estadisticos
+COL,QUINDÍO,1973,2929,1578,1351,dane_anuarios_estadisticos
+COL,QUINDÍO,1974,2829,1567,1262,dane_anuarios_estadisticos
+COL,QUINDÍO,1975,2590,1446,1144,dane_anuarios_estadisticos
+COL,QUINDÍO,1976,2552,1422,1130,dane_anuarios_estadisticos
+COL,QUINDÍO,1977,2636,1437,1199,dane_anuarios_estadisticos
+COL,QUINDÍO,1978,2639,1494,1145,dane_anuarios_estadisticos
+COL,QUINDÍO,1979,2275,1277,998,dane_anuarios_estadisticos
+COL,QUINDÍO,1980,1239,691,548,dane_anuarios_estadisticos
+COL,QUINDÍO,1981,2288,1311,977,dane_anuarios_estadisticos
+COL,QUINDÍO,1982,2393,1357,1036,dane_anuarios_estadisticos
+COL,QUINDÍO,1983,2168,1245,923,dane_anuarios_estadisticos
+COL,QUINDÍO,1984,2218,1288,930,dane_anuarios_estadisticos
+COL,RISARALDA,1923,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1924,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1925,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1926,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1927,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1928,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1929,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1930,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1931,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1932,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1933,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1934,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1935,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1936,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1937,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1938,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1939,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1940,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1941,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1942,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1943,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1944,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1945,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1946,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1947,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1948,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1949,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1950,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1951,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1952,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1953,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1954,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1955,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1956,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1957,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1958,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1959,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1960,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1961,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1962,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1963,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1964,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1965,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1966,,,,dane_anuarios_estadisticos
+COL,RISARALDA,1967,5672,3047,2625,dane_anuarios_estadisticos
+COL,RISARALDA,1968,4729,2543,2186,dane_anuarios_estadisticos
+COL,RISARALDA,1969,4435,3252,2083,dane_anuarios_estadisticos
+COL,RISARALDA,1970,4334,2409,1925,dane_anuarios_estadisticos
+COL,RISARALDA,1971,4494,2436,2058,dane_anuarios_estadisticos
+COL,RISARALDA,1972,4275,2247,2028,dane_anuarios_estadisticos
+COL,RISARALDA,1973,4183,2265,1918,dane_anuarios_estadisticos
+COL,RISARALDA,1974,4009,2220,1789,dane_anuarios_estadisticos
+COL,RISARALDA,1975,4036,2224,1812,dane_anuarios_estadisticos
+COL,RISARALDA,1976,4070,2193,1877,dane_anuarios_estadisticos
+COL,RISARALDA,1977,3882,2145,1737,dane_anuarios_estadisticos
+COL,RISARALDA,1978,3614,2032,1582,dane_anuarios_estadisticos
+COL,RISARALDA,1979,2032,1154,878,dane_anuarios_estadisticos
+COL,RISARALDA,1980,2080,1200,880,dane_anuarios_estadisticos
+COL,RISARALDA,1981,3801,2270,1531,dane_anuarios_estadisticos
+COL,RISARALDA,1982,3870,2214,1656,dane_anuarios_estadisticos
+COL,RISARALDA,1983,3646,2077,1569,dane_anuarios_estadisticos
+COL,RISARALDA,1984,3820,2270,1550,dane_anuarios_estadisticos
+COL,SANTANDER,1923,4921,2425,2496,dane_anuarios_estadisticos
+COL,SANTANDER,1924,5648,2958,2690,dane_anuarios_estadisticos
+COL,SANTANDER,1925,6950,3581,3369,dane_anuarios_estadisticos
+COL,SANTANDER,1926,8080,4237,3843,dane_anuarios_estadisticos
+COL,SANTANDER,1927,9395,4902,4493,dane_anuarios_estadisticos
+COL,SANTANDER,1928,10424,5575,4849,dane_anuarios_estadisticos
+COL,SANTANDER,1929,9013,4411,4602,dane_anuarios_estadisticos
+COL,SANTANDER,1930,7591,4058,3533,dane_anuarios_estadisticos
+COL,SANTANDER,1931,9142,4774,4368,dane_anuarios_estadisticos
+COL,SANTANDER,1932,8422,4456,3966,dane_anuarios_estadisticos
+COL,SANTANDER,1933,9053,4754,4299,dane_anuarios_estadisticos
+COL,SANTANDER,1934,8677,,,dane_anuarios_estadisticos
+COL,SANTANDER,1935,9567,4796,4771,dane_anuarios_estadisticos
+COL,SANTANDER,1936,11089,5736,5353,dane_anuarios_estadisticos
+COL,SANTANDER,1937,10498,5367,5131,dane_anuarios_estadisticos
+COL,SANTANDER,1938,11799,6014,5785,dane_anuarios_estadisticos
+COL,SANTANDER,1939,12831,,,dane_anuarios_estadisticos
+COL,SANTANDER,1940,10695,5453,5242,dane_anuarios_estadisticos
+COL,SANTANDER,1941,10477,5401,5076,dane_anuarios_estadisticos
+COL,SANTANDER,1942,12051,6306,5745,dane_anuarios_estadisticos
+COL,SANTANDER,1943,12606,,,dane_anuarios_estadisticos
+COL,SANTANDER,1944,12794,,,dane_anuarios_estadisticos
+COL,SANTANDER,1945,7799,4011,3788,dane_anuarios_estadisticos
+COL,SANTANDER,1946,12022,6209,5813,dane_anuarios_estadisticos
+COL,SANTANDER,1947,6091,5408,11499,dane_anuarios_estadisticos
+COL,SANTANDER,1948,12444,6625,5819,dane_anuarios_estadisticos
+COL,SANTANDER,1949,12376,6594,5782,dane_anuarios_estadisticos
+COL,SANTANDER,1950,12426,,,dane_anuarios_estadisticos
+COL,SANTANDER,1951,12250,6408,5842,dane_anuarios_estadisticos
+COL,SANTANDER,1952,10696,5737,4959,dane_anuarios_estadisticos
+COL,SANTANDER,1953,11382,5989,5393,dane_anuarios_estadisticos
+COL,SANTANDER,1954,11322,5959,5363,dane_anuarios_estadisticos
+COL,SANTANDER,1955,11147,5814,5333,dane_anuarios_estadisticos
+COL,SANTANDER,1956,12783,6627,6156,dane_anuarios_estadisticos
+COL,SANTANDER,1957,12189,6359,5830,dane_anuarios_estadisticos
+COL,SANTANDER,1958,11333,6009,5324,dane_anuarios_estadisticos
+COL,SANTANDER,1959,12801,6668,6133,dane_anuarios_estadisticos
+COL,SANTANDER,1960,12533,6506,6026,dane_anuarios_estadisticos
+COL,SANTANDER,1961,12080,6434,5646,dane_anuarios_estadisticos
+COL,SANTANDER,1962,12066,6320,5746,dane_anuarios_estadisticos
+COL,SANTANDER,1963,11617,6062,5555,dane_anuarios_estadisticos
+COL,SANTANDER,1964,11978,6254,5724,dane_anuarios_estadisticos
+COL,SANTANDER,1965,11412,6087,5325,dane_anuarios_estadisticos
+COL,SANTANDER,1966,11597,6158,5439,dane_anuarios_estadisticos
+COL,SANTANDER,1967,11752,6378,5374,dane_anuarios_estadisticos
+COL,SANTANDER,1968,10826,5797,5029,dane_anuarios_estadisticos
+COL,SANTANDER,1969,10660,5620,5040,dane_anuarios_estadisticos
+COL,SANTANDER,1970,10328,5550,4778,dane_anuarios_estadisticos
+COL,SANTANDER,1971,11158,5982,5176,dane_anuarios_estadisticos
+COL,SANTANDER,1972,11025,5941,5084,dane_anuarios_estadisticos
+COL,SANTANDER,1973,10297,5506,4791,dane_anuarios_estadisticos
+COL,SANTANDER,1974,9843,5324,4519,dane_anuarios_estadisticos
+COL,SANTANDER,1975,9427,5226,4201,dane_anuarios_estadisticos
+COL,SANTANDER,1976,9087,4941,4146,dane_anuarios_estadisticos
+COL,SANTANDER,1977,8979,4906,4073,dane_anuarios_estadisticos
+COL,SANTANDER,1978,8765,4744,4021,dane_anuarios_estadisticos
+COL,SANTANDER,1979,8515,4706,3809,dane_anuarios_estadisticos
+COL,SANTANDER,1980,8191,4531,3660,dane_anuarios_estadisticos
+COL,SANTANDER,1981,7941,4454,3487,dane_anuarios_estadisticos
+COL,SANTANDER,1982,8360,4660,3700,dane_anuarios_estadisticos
+COL,SANTANDER,1983,8072,4583,3489,dane_anuarios_estadisticos
+COL,SANTANDER,1984,7979,4526,3453,dane_anuarios_estadisticos
+COL,SUCRE,1923,,,,dane_anuarios_estadisticos
+COL,SUCRE,1924,,,,dane_anuarios_estadisticos
+COL,SUCRE,1925,,,,dane_anuarios_estadisticos
+COL,SUCRE,1926,,,,dane_anuarios_estadisticos
+COL,SUCRE,1927,,,,dane_anuarios_estadisticos
+COL,SUCRE,1928,,,,dane_anuarios_estadisticos
+COL,SUCRE,1929,,,,dane_anuarios_estadisticos
+COL,SUCRE,1930,,,,dane_anuarios_estadisticos
+COL,SUCRE,1931,,,,dane_anuarios_estadisticos
+COL,SUCRE,1932,,,,dane_anuarios_estadisticos
+COL,SUCRE,1933,,,,dane_anuarios_estadisticos
+COL,SUCRE,1934,,,,dane_anuarios_estadisticos
+COL,SUCRE,1935,,,,dane_anuarios_estadisticos
+COL,SUCRE,1936,,,,dane_anuarios_estadisticos
+COL,SUCRE,1937,,,,dane_anuarios_estadisticos
+COL,SUCRE,1938,,,,dane_anuarios_estadisticos
+COL,SUCRE,1939,,,,dane_anuarios_estadisticos
+COL,SUCRE,1940,,,,dane_anuarios_estadisticos
+COL,SUCRE,1941,,,,dane_anuarios_estadisticos
+COL,SUCRE,1942,,,,dane_anuarios_estadisticos
+COL,SUCRE,1943,,,,dane_anuarios_estadisticos
+COL,SUCRE,1944,,,,dane_anuarios_estadisticos
+COL,SUCRE,1945,,,,dane_anuarios_estadisticos
+COL,SUCRE,1946,,,,dane_anuarios_estadisticos
+COL,SUCRE,1947,,,,dane_anuarios_estadisticos
+COL,SUCRE,1948,,,,dane_anuarios_estadisticos
+COL,SUCRE,1949,,,,dane_anuarios_estadisticos
+COL,SUCRE,1950,,,,dane_anuarios_estadisticos
+COL,SUCRE,1951,,,,dane_anuarios_estadisticos
+COL,SUCRE,1952,,,,dane_anuarios_estadisticos
+COL,SUCRE,1953,,,,dane_anuarios_estadisticos
+COL,SUCRE,1954,,,,dane_anuarios_estadisticos
+COL,SUCRE,1955,,,,dane_anuarios_estadisticos
+COL,SUCRE,1956,,,,dane_anuarios_estadisticos
+COL,SUCRE,1957,,,,dane_anuarios_estadisticos
+COL,SUCRE,1958,,,,dane_anuarios_estadisticos
+COL,SUCRE,1959,,,,dane_anuarios_estadisticos
+COL,SUCRE,1960,,,,dane_anuarios_estadisticos
+COL,SUCRE,1961,,,,dane_anuarios_estadisticos
+COL,SUCRE,1962,,,,dane_anuarios_estadisticos
+COL,SUCRE,1963,,,,dane_anuarios_estadisticos
+COL,SUCRE,1964,,,,dane_anuarios_estadisticos
+COL,SUCRE,1965,,,,dane_anuarios_estadisticos
+COL,SUCRE,1966,,,,dane_anuarios_estadisticos
+COL,SUCRE,1967,1232,654,578,dane_anuarios_estadisticos
+COL,SUCRE,1968,1384,695,689,dane_anuarios_estadisticos
+COL,SUCRE,1969,955,474,481,dane_anuarios_estadisticos
+COL,SUCRE,1970,1285,684,601,dane_anuarios_estadisticos
+COL,SUCRE,1971,903,453,450,dane_anuarios_estadisticos
+COL,SUCRE,1972,1238,605,633,dane_anuarios_estadisticos
+COL,SUCRE,1973,1499,739,760,dane_anuarios_estadisticos
+COL,SUCRE,1974,1147,854,563,dane_anuarios_estadisticos
+COL,SUCRE,1975,1316,693,623,dane_anuarios_estadisticos
+COL,SUCRE,1976,1218,633,585,dane_anuarios_estadisticos
+COL,SUCRE,1977,1231,652,579,dane_anuarios_estadisticos
+COL,SUCRE,1978,1018,565,453,dane_anuarios_estadisticos
+COL,SUCRE,1979,1189,646,543,dane_anuarios_estadisticos
+COL,SUCRE,1980,1259,680,579,dane_anuarios_estadisticos
+COL,SUCRE,1981,1199,633,566,dane_anuarios_estadisticos
+COL,SUCRE,1982,1190,634,556,dane_anuarios_estadisticos
+COL,SUCRE,1983,1605,880,725,dane_anuarios_estadisticos
+COL,SUCRE,1984,1180,636,544,dane_anuarios_estadisticos
+COL,TOLIMA,1923,4726,2436,2290,dane_anuarios_estadisticos
+COL,TOLIMA,1924,4998,2553,2445,dane_anuarios_estadisticos
+COL,TOLIMA,1925,4731,2415,2316,dane_anuarios_estadisticos
+COL,TOLIMA,1926,,,,dane_anuarios_estadisticos
+COL,TOLIMA,1927,4731,2415,2316,dane_anuarios_estadisticos
+COL,TOLIMA,1928,5776,2922,2854,dane_anuarios_estadisticos
+COL,TOLIMA,1929,5474,2819,2655,dane_anuarios_estadisticos
+COL,TOLIMA,1930,5629,2877,2752,dane_anuarios_estadisticos
+COL,TOLIMA,1931,5331,2702,2629,dane_anuarios_estadisticos
+COL,TOLIMA,1932,5627,2853,2774,dane_anuarios_estadisticos
+COL,TOLIMA,1933,6202,3207,2995,dane_anuarios_estadisticos
+COL,TOLIMA,1934,5647,,,dane_anuarios_estadisticos
+COL,TOLIMA,1935,7207,3692,3515,dane_anuarios_estadisticos
+COL,TOLIMA,1936,7734,4048,3686,dane_anuarios_estadisticos
+COL,TOLIMA,1937,7960,4017,3943,dane_anuarios_estadisticos
+COL,TOLIMA,1938,9070,4678,4392,dane_anuarios_estadisticos
+COL,TOLIMA,1939,8982,,,dane_anuarios_estadisticos
+COL,TOLIMA,1940,8548,4418,4130,dane_anuarios_estadisticos
+COL,TOLIMA,1941,9213,4790,4423,dane_anuarios_estadisticos
+COL,TOLIMA,1942,9378,4772,4606,dane_anuarios_estadisticos
+COL,TOLIMA,1943,10565,,,dane_anuarios_estadisticos
+COL,TOLIMA,1944,10545,,,dane_anuarios_estadisticos
+COL,TOLIMA,1945,10079,5187,4892,dane_anuarios_estadisticos
+COL,TOLIMA,1946,11231,5749,5482,dane_anuarios_estadisticos
+COL,TOLIMA,1947,10369,5350,5019,dane_anuarios_estadisticos
+COL,TOLIMA,1948,10247,5213,5034,dane_anuarios_estadisticos
+COL,TOLIMA,1949,10271,5308,4963,dane_anuarios_estadisticos
+COL,TOLIMA,1950,11096,,,dane_anuarios_estadisticos
+COL,TOLIMA,1951,11259,5953,5306,dane_anuarios_estadisticos
+COL,TOLIMA,1952,12046,6416,5630,dane_anuarios_estadisticos
+COL,TOLIMA,1953,12710,6786,5924,dane_anuarios_estadisticos
+COL,TOLIMA,1954,10446,5554,4892,dane_anuarios_estadisticos
+COL,TOLIMA,1955,11830,6486,5344,dane_anuarios_estadisticos
+COL,TOLIMA,1956,12614,6903,5711,dane_anuarios_estadisticos
+COL,TOLIMA,1957,11504,6278,5226,dane_anuarios_estadisticos
+COL,TOLIMA,1958,11655,6387,5268,dane_anuarios_estadisticos
+COL,TOLIMA,1959,11586,6180,5406,dane_anuarios_estadisticos
+COL,TOLIMA,1960,11363,6021,5342,dane_anuarios_estadisticos
+COL,TOLIMA,1961,10261,5515,4746,dane_anuarios_estadisticos
+COL,TOLIMA,1962,10162,5453,4709,dane_anuarios_estadisticos
+COL,TOLIMA,1963,9966,5283,4683,dane_anuarios_estadisticos
+COL,TOLIMA,1964,9231,5011,4220,dane_anuarios_estadisticos
+COL,TOLIMA,1965,9499,5150,4349,dane_anuarios_estadisticos
+COL,TOLIMA,1966,9198,4960,4238,dane_anuarios_estadisticos
+COL,TOLIMA,1967,9244,4850,4394,dane_anuarios_estadisticos
+COL,TOLIMA,1968,8585,4460,4125,dane_anuarios_estadisticos
+COL,TOLIMA,1969,8122,4343,3779,dane_anuarios_estadisticos
+COL,TOLIMA,1970,10013,5427,4586,dane_anuarios_estadisticos
+COL,TOLIMA,1971,7585,4042,3543,dane_anuarios_estadisticos
+COL,TOLIMA,1972,8231,4405,3826,dane_anuarios_estadisticos
+COL,TOLIMA,1973,8144,4402,3742,dane_anuarios_estadisticos
+COL,TOLIMA,1974,8206,4472,3734,dane_anuarios_estadisticos
+COL,TOLIMA,1975,7418,3991,3427,dane_anuarios_estadisticos
+COL,TOLIMA,1976,7693,4205,3488,dane_anuarios_estadisticos
+COL,TOLIMA,1977,6768,3700,3068,dane_anuarios_estadisticos
+COL,TOLIMA,1978,5730,3132,2598,dane_anuarios_estadisticos
+COL,TOLIMA,1979,5993,3338,2655,dane_anuarios_estadisticos
+COL,TOLIMA,1980,5170,2877,2293,dane_anuarios_estadisticos
+COL,TOLIMA,1981,5747,3197,2550,dane_anuarios_estadisticos
+COL,TOLIMA,1982,5956,3327,2629,dane_anuarios_estadisticos
+COL,TOLIMA,1983,5681,3241,2440,dane_anuarios_estadisticos
+COL,TOLIMA,1984,5591,3150,2441,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1923,5026,2563,2463,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1924,4807,2528,2279,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1925,5500,2934,2566,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1926,6673,3464,3209,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1927,6531,3456,3075,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1928,6945,3594,3351,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1929,7244,3747,3497,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1930,6571,3453,3118,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1931,6917,3596,3321,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1932,6729,3525,3204,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1933,8531,4421,4110,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1934,6138,,,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1935,9133,4758,4375,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1936,9570,5037,4533,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1937,10204,5405,4799,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1938,10808,5555,5253,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1939,12166,,,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1940,11722,6195,5527,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1941,12610,6620,5990,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1942,13170,6779,6391,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1943,14614,,,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1944,14482,,,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1945,15023,7987,7036,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1946,16270,8695,7575,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1947,14219,7546,6673,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1948,15169,8114,7055,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1949,16331,8999,7332,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1950,17423,,,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1951,17358,9399,7959,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1952,15841,8825,7016,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1953,15967,8600,7367,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1954,15008,7963,7045,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1955,17180,9330,7850,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1956,18023,9771,8252,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1957,18728,10285,8443,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1958,19327,10697,8630,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1959,19148,10464,8684,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1960,20508,11126,9382,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1961,19697,10898,8799,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1962,19902,10841,9061,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1963,18767,10241,8526,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1964,18238,9968,8270,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1965,19051,10295,8756,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1966,18066,9683,8383,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1967,19586,10344,9242,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1968,17559,9493,8066,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1969,15992,8431,7561,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1970,900,502,398,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1971,16289,8628,7661,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1972,17620,9399,8221,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1973,15621,8501,7120,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1974,18661,10294,8367,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1975,16530,9046,7484,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1976,17211,9429,7782,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1977,16394,8980,7414,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1978,15879,8856,7023,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1979,4818,8315,6503,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1980,12732,7116,5616,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1981,15478,8919,6559,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1982,16024,9141,6883,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1983,15670,8987,6683,dane_anuarios_estadisticos
+COL,VALLE DEL CAUCA,1984,15814,9039,6775,dane_anuarios_estadisticos
+COL,VAUPÉS,1923,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1924,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1925,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1926,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1927,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1928,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1929,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1930,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1931,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1932,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1933,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1934,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1935,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1936,1,,1,dane_anuarios_estadisticos
+COL,VAUPÉS,1937,14,7,7,dane_anuarios_estadisticos
+COL,VAUPÉS,1938,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1939,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1940,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1941,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1942,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1943,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1944,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1945,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1946,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1947,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1948,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1949,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1950,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1951,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1952,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1953,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1954,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1955,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1956,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1957,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1958,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1959,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1960,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1961,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1962,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1963,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1964,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1965,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1966,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1967,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1968,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1969,8,5,3,dane_anuarios_estadisticos
+COL,VAUPÉS,1970,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1971,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1972,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1973,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1974,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1975,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1976,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1977,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1978,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1979,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1980,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1981,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1982,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1983,,,,dane_anuarios_estadisticos
+COL,VAUPÉS,1984,,,,dane_anuarios_estadisticos
+COL,VICHADA,1923,,,,dane_anuarios_estadisticos
+COL,VICHADA,1924,,,,dane_anuarios_estadisticos
+COL,VICHADA,1925,,,,dane_anuarios_estadisticos
+COL,VICHADA,1926,,,,dane_anuarios_estadisticos
+COL,VICHADA,1927,,,,dane_anuarios_estadisticos
+COL,VICHADA,1928,,,,dane_anuarios_estadisticos
+COL,VICHADA,1929,,,,dane_anuarios_estadisticos
+COL,VICHADA,1930,,,,dane_anuarios_estadisticos
+COL,VICHADA,1931,,,,dane_anuarios_estadisticos
+COL,VICHADA,1932,,,,dane_anuarios_estadisticos
+COL,VICHADA,1933,,,,dane_anuarios_estadisticos
+COL,VICHADA,1934,5,,,dane_anuarios_estadisticos
+COL,VICHADA,1935,,,,dane_anuarios_estadisticos
+COL,VICHADA,1936,5,4,1,dane_anuarios_estadisticos
+COL,VICHADA,1937,15,11,4,dane_anuarios_estadisticos
+COL,VICHADA,1938,,,,dane_anuarios_estadisticos
+COL,VICHADA,1939,,,,dane_anuarios_estadisticos
+COL,VICHADA,1940,,,,dane_anuarios_estadisticos
+COL,VICHADA,1941,,,,dane_anuarios_estadisticos
+COL,VICHADA,1942,,,,dane_anuarios_estadisticos
+COL,VICHADA,1943,,,,dane_anuarios_estadisticos
+COL,VICHADA,1944,,,,dane_anuarios_estadisticos
+COL,VICHADA,1945,,,,dane_anuarios_estadisticos
+COL,VICHADA,1946,,,,dane_anuarios_estadisticos
+COL,VICHADA,1947,,,,dane_anuarios_estadisticos
+COL,VICHADA,1948,,,,dane_anuarios_estadisticos
+COL,VICHADA,1949,,,,dane_anuarios_estadisticos
+COL,VICHADA,1950,,,,dane_anuarios_estadisticos
+COL,VICHADA,1951,,,,dane_anuarios_estadisticos
+COL,VICHADA,1952,,,,dane_anuarios_estadisticos
+COL,VICHADA,1953,,,,dane_anuarios_estadisticos
+COL,VICHADA,1954,,,,dane_anuarios_estadisticos
+COL,VICHADA,1955,,,,dane_anuarios_estadisticos
+COL,VICHADA,1956,,,,dane_anuarios_estadisticos
+COL,VICHADA,1957,,,,dane_anuarios_estadisticos
+COL,VICHADA,1958,,,,dane_anuarios_estadisticos
+COL,VICHADA,1959,,,,dane_anuarios_estadisticos
+COL,VICHADA,1960,,,,dane_anuarios_estadisticos
+COL,VICHADA,1961,,,,dane_anuarios_estadisticos
+COL,VICHADA,1962,,,,dane_anuarios_estadisticos
+COL,VICHADA,1963,,,,dane_anuarios_estadisticos
+COL,VICHADA,1964,,,,dane_anuarios_estadisticos
+COL,VICHADA,1965,,,,dane_anuarios_estadisticos
+COL,VICHADA,1966,,,,dane_anuarios_estadisticos
+COL,VICHADA,1967,,,,dane_anuarios_estadisticos
+COL,VICHADA,1968,,,,dane_anuarios_estadisticos
+COL,VICHADA,1969,15,7,8,dane_anuarios_estadisticos
+COL,VICHADA,1970,,,,dane_anuarios_estadisticos
+COL,VICHADA,1971,,,,dane_anuarios_estadisticos
+COL,VICHADA,1972,,,,dane_anuarios_estadisticos
+COL,VICHADA,1973,,,,dane_anuarios_estadisticos
+COL,VICHADA,1974,,,,dane_anuarios_estadisticos
+COL,VICHADA,1975,,,,dane_anuarios_estadisticos
+COL,VICHADA,1976,,,,dane_anuarios_estadisticos
+COL,VICHADA,1977,,,,dane_anuarios_estadisticos
+COL,VICHADA,1978,,,,dane_anuarios_estadisticos
+COL,VICHADA,1979,,,,dane_anuarios_estadisticos
+COL,VICHADA,1980,,,,dane_anuarios_estadisticos
+COL,VICHADA,1981,,,,dane_anuarios_estadisticos
+COL,VICHADA,1982,,,,dane_anuarios_estadisticos
+COL,VICHADA,1983,,,,dane_anuarios_estadisticos
+COL,VICHADA,1984,,,,dane_anuarios_estadisticos
