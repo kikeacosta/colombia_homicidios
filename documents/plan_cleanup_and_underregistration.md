@@ -332,3 +332,51 @@ That rerun is Plan A step A4. Do A4 before B2.
 - Composition of violence: pre-1998 homicides were more rural and conflict-related; a different age/sex profile of victims would change the ratio's sensitivity without any registration story.
 - Code 102 (undetermined intent) practice changed with the 1998 certificate.
 - Projection error: DANE's municipal projections 1985-2004 are themselves back-casts; completeness "relative to the projection" absorbs projection error.
+
+---
+
+## Status log
+
+**2026-10-13, Plan A complete (A1 to A4, A2b).** Pipeline 01 to 11 ran end to end
+with R 4.5.2, in the Drive copy; clean copy staged (not committed) at
+`C:\Users\kikep\gits\colombia_mortalidad`, 109 files, 39 MB.
+
+- Fixes needed at run time: `09` identity check restricted to department-years
+  with a defined ratio, spline smoother wrapped in `tryCatch`; `11` reads the
+  municipal sheet of the 2018-2042 workbook by name. Everything else ran as written.
+- National violent-death rate (codes 101-103): 47.7 per 100,000 in 1985, peak
+  89.0 in 1991, 85.3 in 2002, 29.7 in 2017.
+- Model (07): predicted violent deaths sum to the observed 763,102 for
+  1985-2017; 82 percent of municipalities within 10 percent of observed
+  cumulative deaths (02/08 printouts).
+- Shared dataset: 87,594 rows, 1,123 municipalities, 1985-2023, 1.2 MB; six
+  cause columns sum to all-cause in every row; 1,502 deaths dropped (unknown
+  sex or unmatched municipality).
+- Population continuity 2017/2018 verified (47.42 to 48.26 million, sex ratio
+  0.958 in both).
+- Open: Plan B has not started; `datos_mortalidad_colombia_03_2026.xlsx` vs
+  `_ka` not reconciled (the non-`_ka` copy was shipped).
+
+**2026-10-14, Plan B first pass (scripts 12 to 17).**
+- 12, 14: pre-1998 sex ratio / homicide correlation rises with estimated
+  completeness across departments; DANE-expected sex ratio beats the registered
+  one in 1990-2000 (R2 0.58 vs 0.34 in 1990-95) and equals it after 2005. DANE
+  tables 1985-2005 are built from the same registry, so not fully independent.
+- 16 (age placebo): at ages 50-79 the registered sex ratio matches DANE's
+  expected one within +-5 percent on average, including the Caribbean before
+  1998; first-difference correlation with homicide is ~0 (clean placebo). At
+  ages 15-44 the Caribbean's first-difference correlation goes from 0.19 (1985-97)
+  to 0.58 (1998-2017); elsewhere it does not improve (0.46 to 0.38). So the
+  post-1998 gain is specific to young adults in the Caribbean, not a general
+  sex-differential registration effect.
+- 17 (residence): tabulating by residence changes little (15-44 correlations
+  0.50 vs 0.57 pre, 0.85 vs 0.83 post in the Caribbean). 4.9 percent of deaths
+  occur outside the department of residence.
+- 15 (model + completeness): the sex-ratio coefficient is 0.87 (1985-97) vs
+  0.89 (1998-2017); fit by period similar. The model includes the department
+  violent-death rate and rescales to department totals, so it does not isolate
+  the sex ratio; the interaction model did not converge to a positive-definite
+  Hessian and is not interpreted.
+- Not testable with the project's data: completeness of violent-death
+  registration (needs Policia Nacional / Medicina Legal), census 1993 and 2005
+  age-sex tables for the denominators.
