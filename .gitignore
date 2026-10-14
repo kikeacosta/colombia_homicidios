@@ -26,3 +26,9 @@ renv/local/
 Thumbs.db
 .DS_Store
 desktop.ini
+
+# plans and reports: kept local until decided whether to share
+documents/plan_*.md
+documents/HANDOFF_*.md
+documents/report_*.html
+documents/executive_report_*.html
