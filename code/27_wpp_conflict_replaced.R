@@ -10,10 +10,13 @@
 # 1985-2018 against 618,000 conflict homicides and 127,000 enforced
 # disappearances in the JEP-CEV-HRDAG multiple-systems estimates (21).
 #
-# Here the WPP conflict component is removed and the MSE-based correction of
-# 23 is added instead:
+# In the years covered by the MSE (1985-2018) the WPP conflict component is
+# removed and the MSE-based correction of 23 is added instead:
 #   expected = (mx_WPP - mx_conflict_WPP) x pop_WPP
 #              + max(MSE homicides - EEVV violent deaths, 0) + disappearances
+# Outside those years WPP is kept as published, conflict component included
+# (La Violencia in 1950-1956, battle deaths before 1985 and after 2018):
+# without an alternative estimate there is nothing to replace it with.
 # The WPP baseline is itself an estimate of complete mortality (it already
 # assumes incomplete registration), and the registered conflict homicides
 # are inside it through the registry; only the conflict deaths the registry
@@ -81,7 +84,8 @@ exp <-
   left_join(deaths, by = c("year", "sex", "age")) |>
   left_join(added, by = c("year", "sex", "age")) |>
   replace_na(list(mse_hom = 0, hom_excess = 0, dsp = 0, mse_added = 0)) |>
-  mutate(expected = wpp_total - wpp_conflict + mse_added,
+  mutate(mse_years = year %in% unique(added$year),
+         expected = if_else(mse_years, wpp_total - wpp_conflict + mse_added, wpp_total),
          completeness = registered / expected,
          completeness_wpp = registered / wpp_total) |>
   arrange(year, sex, age)
