@@ -14,10 +14,10 @@
 # groups 40-49, ..., 70+ before 1947 are split with the age pattern of the
 # nearest year that has 5-year groups). 1978 takes the log-linearly
 # interpolated age pattern of the neighbouring years, scaled to the national
-# total of the DANE anuarios (data_input/historical); 1979 microdata are
-# short (110,400 against 125,925 in the anuario) and are scaled up the same
-# way. WHO and LAMBdA match the anuarios year by year, including the
-# 1969-1971 dip. Average annual deaths per window are weighted by the share
+# total of the DANE anuarios (col_gap_analysis national file in
+# data_input/historical); 1979 microdata are short (110,400 against 135,925
+# in the anuario) and are scaled up the same way. WHO and LAMBdA match the
+# anuarios year by year, including the 1969-1971 dip. Average annual deaths per window are weighted by the share
 # of each calendar year that falls between the two census dates.
 #
 # migration: two population variants.
@@ -79,11 +79,12 @@ micro <-
   mutate(dx = dx * (1 + unk / tot), src = "DANE") |>
   select(year, sex, age, dx, src)
 
-# national totals from the anuarios, by sex where every department reports it
+# national totals from the anuarios (col_gap_analysis transcription, sum of
+# the departments with data), by sex where it is available (not in 1950)
 anuario <-
-  read_csv("data_input/historical/deaths_department_v01.csv", show_col_types = FALSE) |>
-  summarise(tot = sum(deaths_total, na.rm = TRUE), m = sum(deaths_male), f = sum(deaths_female), .by = year) |>
-  mutate(across(c(m, f), ~ if_else(.x > 0, .x, NA)))
+  read_csv2("data_input/historical/col_gap_analysis_1920_1985_national_deaths_clean_v03.csv", show_col_types = FALSE) |>
+  filter(!is.na(total)) |>
+  select(year, tot = total, m = male, f = female)
 
 # LAMBdA years not covered by WHO or DANE. Groups wider than 5 years (40-49,
 # ..., 70+ in 1938-1946; 50-59, 60-69, 70-79 in 1947-1951) are split with

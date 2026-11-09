@@ -32,3 +32,9 @@ documents/plan_*.md
 documents/HANDOFF_*.md
 documents/report_*.html
 documents/executive_report_*.html
+
+# census summary PDFs (DANE, 29 MB): kept locally, tables extracted to historical/census_tables/
+data_input/historical/*.pdf
+
+# papers (copyrighted PDFs): kept locally
+literature/

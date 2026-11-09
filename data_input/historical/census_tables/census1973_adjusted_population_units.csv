@@ -1,0 +1,94 @@
+census_year,unit,unit_type,zone,total,private_households,collective_households,indigenous_areas
+1973,Antioquia,departamento,total,3176695,3127530,48756,409
+1973,Antioquia,departamento,cabecera,1971469,1925607,45862,0
+1973,Antioquia,departamento,resto,1205226,1201923,2894,409
+1973,Atlántico,departamento,total,1028934,1018276,10658,0
+1973,Atlántico,departamento,cabecera,954945,944448,10497,0
+1973,Atlántico,departamento,resto,73989,73828,161,0
+1973,Bogotá D.E.,distrito especial,total,2861913,2820832,41081,0
+1973,Bogotá D.E.,distrito especial,cabecera,2845361,2804280,41081,0
+1973,Bogotá D.E.,distrito especial,resto,16552,16552,0,0
+1973,Bolívar,departamento,total,980606,972552,8054,0
+1973,Bolívar,departamento,cabecera,557036,549496,7540,0
+1973,Bolívar,departamento,resto,423570,423056,514,0
+1973,Boyacá,departamento,total,1129008,1108142,19369,1497
+1973,Boyacá,departamento,cabecera,340803,327789,13014,0
+1973,Boyacá,departamento,resto,788205,780353,6355,1497
+1973,Caldas,departamento,total,744221,698458,29025,16738
+1973,Caldas,departamento,cabecera,409642,397207,12435,0
+1973,Caldas,departamento,resto,334579,301251,16590,16738
+1973,Cauca,departamento,total,716855,580996,8570,127289
+1973,Cauca,departamento,cabecera,194857,188049,6808,0
+1973,Cauca,departamento,resto,521998,392947,1762,127289
+1973,Cesar,departamento,total,470055,445321,6227,18507
+1973,Cesar,departamento,cabecera,206451,201508,4943,0
+1973,Cesar,departamento,resto,263604,243813,1284,18507
+1973,Córdoba,departamento,total,744424,741065,3359,0
+1973,Córdoba,departamento,cabecera,269688,266633,3055,0
+1973,Córdoba,departamento,resto,474736,474432,304,0
+1973,Cundinamarca,departamento,total,1176003,1147585,28418,0
+1973,Cundinamarca,departamento,cabecera,425357,401836,23521,0
+1973,Cundinamarca,departamento,resto,750646,745749,4897,0
+1973,Chocó,departamento,total,251223,230179,2403,18641
+1973,Chocó,departamento,cabecera,64583,62378,2205,0
+1973,Chocó,departamento,resto,186640,167801,198,18641
+1973,Huila,departamento,total,486853,477934,8919,0
+1973,Huila,departamento,cabecera,241403,233669,7734,0
+1973,Huila,departamento,resto,245450,244265,1185,0
+1973,La Guajira,departamento,total,249637,165206,2911,81520
+1973,La Guajira,departamento,cabecera,87602,85296,2306,0
+1973,La Guajira,departamento,resto,162035,79910,605,81520
+1973,Magdalena,departamento,total,720902,687090,7579,26233
+1973,Magdalena,departamento,cabecera,287992,282833,5159,0
+1973,Magdalena,departamento,resto,432910,404257,2420,26233
+1973,Meta,departamento,total,261863,251913,7579,2371
+1973,Meta,departamento,cabecera,148562,143372,5190,0
+1973,Meta,departamento,resto,113301,108541,2389,2371
+1973,Nariño,departamento,total,882389,812636,11397,58356
+1973,Nariño,departamento,cabecera,321866,313269,8597,0
+1973,Nariño,departamento,resto,560523,499367,2800,58356
+1973,Norte de Santander,departamento,total,757529,738652,15151,3726
+1973,Norte de Santander,departamento,cabecera,383671,370983,12688,0
+1973,Norte de Santander,departamento,resto,373858,367669,2463,3726
+1973,Quindío,departamento,total,353868,328752,25116,0
+1973,Quindío,departamento,cabecera,248864,243804,5060,0
+1973,Quindío,departamento,resto,105004,84948,20056,0
+1973,Risaralda,departamento,total,498609,479861,14050,4698
+1973,Risaralda,departamento,cabecera,321302,314633,6669,0
+1973,Risaralda,departamento,resto,177307,165228,7381,4698
+1973,Santander,departamento,total,1233576,1211560,22016,0
+1973,Santander,departamento,cabecera,651091,630140,20951,0
+1973,Santander,departamento,resto,582485,581420,1065,0
+1973,Sucre,departamento,total,412047,408763,3284,0
+1973,Sucre,departamento,cabecera,191781,189251,2530,0
+1973,Sucre,departamento,resto,220266,219512,754,0
+1973,Tolima,departamento,total,957193,939350,14395,3448
+1973,Tolima,departamento,cabecera,491651,479599,12052,0
+1973,Tolima,departamento,resto,465542,459751,2343,3448
+1973,Valle,departamento,total,2392715,2346775,45940,0
+1973,Valle,departamento,cabecera,1813566,1788891,24675,0
+1973,Valle,departamento,resto,579149,557884,21265,0
+1973,Arauca,intendencia,total,46605,26774,29,19802
+1973,Arauca,intendencia,cabecera,18887,18858,29,0
+1973,Arauca,intendencia,resto,27718,7916,0,19802
+1973,Caquetá,intendencia,total,180297,163447,0,16850
+1973,Caquetá,intendencia,cabecera,50677,50677,0,0
+1973,Caquetá,intendencia,resto,129620,112770,0,16850
+1973,Putumayo,intendencia,total,67336,58338,537,8461
+1973,Putumayo,intendencia,cabecera,24703,24166,537,0
+1973,Putumayo,intendencia,resto,42633,34172,0,8461
+1973,San Andrés y Providencia,intendencia,total,22983,21147,1836,0
+1973,San Andrés y Providencia,intendencia,cabecera,14731,12908,1823,0
+1973,San Andrés y Providencia,intendencia,resto,8252,8239,13,0
+1973,Amazonas,comisaría,total,15677,5565,284,9828
+1973,Amazonas,comisaría,cabecera,5849,5565,284,0
+1973,Amazonas,comisaría,resto,9828,0,0,9828
+1973,Guainía,comisaría,total,6637,1153,340,5144
+1973,Guainía,comisaría,cabecera,1493,1153,340,0
+1973,Guainía,comisaría,resto,5144,0,0,5144
+1973,Vaupés,comisaría,total,23250,4615,1422,17213
+1973,Vaupés,comisaría,cabecera,2080,1272,808,0
+1973,Vaupés,comisaría,resto,21170,3343,614,17213
+1973,Vichada,comisaría,total,12215,90,210,11915
+1973,Vichada,comisaría,cabecera,220,90,130,0
+1973,Vichada,comisaría,resto,11995,0,80,11915

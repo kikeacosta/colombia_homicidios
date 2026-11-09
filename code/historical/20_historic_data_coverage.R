@@ -4,15 +4,37 @@ rm(list = ls())
 gc()
 source("code/00_setup.R")
 
-# loading data from historical series
-hms_dto <- read_csv("data_input/historical/homicides_department_v02.csv")
-hms_nal <- read_csv("data_input/historical/homicides_national_v02.csv")
+# loading data from historical series (col_gap_analysis transcriptions of the
+# DANE anuarios; the v01/v02 files they replace are in
+# data_input/historical/archive_v01_v02/). Columns are renamed to the names
+# of the old files so the rest of the script is unchanged. Departmental
+# deaths use the territories_aggregated variant (25 units, intendencias and
+# comisarias summed into their department of origin). Its yearly totals match
+# the national file except in 1926, 1931, 1932 and 1934 (national total
+# lower than the departmental sum) and 1956-1961 (Bogota appears as its own
+# row while still included in Cundinamarca, so the sum double counts it).
+hist_dir <- "data_input/historical/"
+read_hist <- function(file, prefix, delim = ",") {
+  read_delim(paste0(hist_dir, "col_gap_analysis_1920_1985_", file), delim = delim,
+             show_col_types = FALSE, guess_max = 1e5) |>
+    mutate(department = str_to_upper(department)) |>
+    rename_with(~ paste0(prefix, "_", .x), any_of(c("total", "male", "female")))
+}
 
-dts_mun <- read_csv("data_input/historical/deaths_municipal_v01.csv")
-dts_dto <- read_csv("data_input/historical/deaths_department_v01.csv")
+hms_dto <- read_hist("department_homicides_clean_v02.csv", "homicide")
+hms_nal <-
+  hms_dto |>
+  summarise(across(c(homicide_total, homicide_male, homicide_female), ~ sum(.x, na.rm = TRUE)),
+            n_dept_with_data = sum(!is.na(homicide_total)), .by = year) |>
+  mutate(across(c(homicide_total, homicide_male, homicide_female), ~ if_else(n_dept_with_data > 0, .x, NA))) |>
+  filter(n_dept_with_data > 0) |>
+  arrange(year)
 
-pop_mun <- read_csv("data_input/historical/population_municipal_v01.csv")
-pop_dto <- read_csv("data_input/historical/population_department_v01.csv")
+dts_mun <- read_hist("municipal_deaths_clean_v03.csv", "deaths")
+dts_dto <- read_hist("department_deaths_clean_v06_territories_aggregated.csv", "deaths", delim = ";")
+
+pop_mun <- read_hist("municipal_population_clean_v03.csv", "pop")
+pop_dto <- read_hist("department_population_clean_v03.csv", "pop", delim = ";")
 
 # loading WHO data for Colombia
 hms_who <- read_csv("data_input/reference/who/who_homicide_colombia.csv")

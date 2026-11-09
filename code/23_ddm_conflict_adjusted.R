@@ -14,9 +14,13 @@
 # 2. enforced disappearances (MSE), counted in the year of disappearance and
 #    multiplied by the fraction presumed dead (1 in the central scenario).
 #
-# The MSE spread victims of unknown age uniformly over the 20 age groups,
-# which leaves implausible counts at 0-4 and 85+; those two groups are
-# treated as unknown age and redistributed over 5-84 by year and sex.
+# The MSE age groups run 0-4, ..., 95+. Victims of unknown age were not
+# removed in the source pipeline: they sit in 0-4 and in one of the top
+# groups (85-89 up to 1988, 90-94 in 1989-1993, 95+ in 1994-2000, spread
+# over 85-95+ afterwards), with counts far above any plausible number of
+# conflict victims at those ages (men, 1995: 1,947 homicides at 95+ against
+# 17 at 80-84). The groups 0-4, 85-89, 90-94 and 95+ are therefore treated
+# as unknown age and redistributed over 5-84 by year and sex.
 # Scenarios: "conflict" = mean excess + all disappearances; "conflict (low)"
 # = 2.5% quantile of the MSE minus dx_v, half of the disappearances.
 #
@@ -54,7 +58,7 @@ mse <- read_rds("data_inter/conflict_mse_age5_1985-2018.rds")
 # folded into 80+
 mse <-
   mse |>
-  mutate(known = !age %in% c(0, 85)) |>
+  mutate(known = !age %in% c(0, 85, 90, 95)) |>
   mutate(across(c(mean, q025, q975), \(v) if_else(known, v * sum(v) / sum(v[known]), 0)), .by = c(violation, year, sex)) |>
   filter(known) |>
   mutate(age = pmin(age, age_top)) |>

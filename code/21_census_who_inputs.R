@@ -237,6 +237,50 @@ cat("\nWHO deaths by year (both sexes):\n")
 print(who_deaths_age |> summarise(dx = round(sum(dx)), .by = year) |> as.data.frame())
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# WHO violent deaths by age, 1953-1977 ====
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# same files, abbreviated lists: ICD-7 A149 "homicide and operations of war"
+# (E964, E980-E985, i.e. homicide plus injuries of undetermined intent, the
+# counterpart of this project's dx_v); ICD-8 A148 homicide (E960-E969) and
+# A149 undetermined intent (E980-E989). The totals by sex of A149/A148 match
+# data_input/reference/who/who_homicide_colombia.csv (3,772 in 1953).
+# Colombia reported no causes for 1970, 1971 and 1973 under ICD-8.
+f_whov <- "data_input/reference/who_violent_age_colombia_1953-1977.csv"
+if (!file.exists(f_whov)) {
+  read_who_causes <- function(zipf, member, causes) {
+    x <- fread(text = readLines(unz(zipf, member)), colClasses = list(character = c("Admin1", "SubDiv", "List", "Cause", "Frmat", "IM_Frmat")))
+    x[Country == 2130 & Cause %in% causes]
+  }
+  bind_rows(
+    read_who_causes("data_input/who_mdb/morticd07.zip", "MortIcd7", "A149") |> mutate(group = "violent"),
+    read_who_causes("data_input/who_mdb/morticd08.zip", "Morticd8", c("A148", "A149")) |>
+      mutate(group = if_else(Cause == "A148", "homicide", "undetermined"))
+  ) |>
+    as_tibble() |>
+    write_csv(f_whov)
+}
+who_violent_age <-
+  read_csv(f_whov, show_col_types = FALSE) |>
+  filter(Sex %in% 1:2) |>
+  select(year = Year, Sex, group, num_range("Deaths", 1:26)) |>
+  pivot_longer(starts_with("Deaths"), names_to = "col", values_to = "dx", names_prefix = "Deaths",
+               names_transform = as.integer) |>
+  mutate(sex = if_else(Sex == 1, "m", "f"), age = as.numeric(names(who_cols)[match(col, who_cols)])) |>
+  filter(col %in% who_cols) |>
+  replace_na(list(dx = 0)) |>
+  summarise(dx = sum(dx), .by = c(year, sex, group, age)) |>
+  mutate(unk = sum(dx[is.na(age)]), tot = sum(dx[!is.na(age)]), .by = c(year, sex, group)) |>
+  filter(!is.na(age)) |>
+  mutate(dx = if_else(tot > 0, dx * (1 + unk / tot), dx)) |>
+  select(year, sex, group, age, dx) |>
+  arrange(year, sex, group, age)
+write_rds(who_violent_age, "data_inter/who_violent_age_1953-1977.rds")
+
+cat("\nWHO violent deaths by year and group (both sexes):\n")
+print(who_violent_age |> summarise(dx = round(sum(dx)), .by = c(year, group)) |>
+        pivot_wider(names_from = group, values_from = dx) |> as.data.frame())
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Colombian emigrant stock by sex and age, 1990-2024 ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 f_od <- "data_input/migration/undesa_pd_2024_ims_stock_by_sex_destination_and_origin.xlsx"
@@ -327,10 +371,11 @@ write_rds(lambda_deaths_age, "data_inter/lambda_deaths_age_1926-2015.rds")
 # quantiles over the 10,000 draws); the summary is cached in
 # data_input/conflict/. Disappearances are only estimated up to 2016.
 #
-# victims without a recorded age were spread uniformly over the 20 age groups
-# in the source pipeline, which leaves implausible counts at 0-4 and 85+
-# (30,000 male homicides at 0-4, 40,000 at 85+ over 1985-2018); 23 treats
-# those groups as unknown age and redistributes them over 5-84.
+# victims without a recorded age were not removed in the source pipeline:
+# they sit in 0-4 and in one of the top groups (85-89, 90-94 or 95+,
+# depending on the year), about 30,000 male homicides at 0-4 and 40,000 at
+# 85+ over 1985-2018; 23 and 27 treat those groups as unknown age and
+# redistribute them over 5-84.
 f_mse <- "data_input/conflict/mse_national_age5_1985-2018.rds"
 if (!file.exists(f_mse)) {
   library(arrow)

@@ -72,5 +72,28 @@ January-December 2025 monthly release).
 
 ## reference/ and historical/ (versioned)
 
-`reference/`: DIVIPOLA municipality codes (DANE, March 2026).
-`historical/`: series transcribed from DANE anuarios estadísticos, 1923-1984.
+`reference/`: DIVIPOLA municipality codes (DANE, March 2026); UNdata census
+tables; the WPP 2024 Colombia extracts written by `code/31_wpp_lifetables_inputs.R`
+from the full WPP downloads kept outside the repository
+(`wpp2024_colombia_lt_complete_1950-2100.csv`, complete life tables by sex,
+estimates and medium-variant projections; `wpp2024_colombia_pop_single_age_1950-2023.csv`;
+`wpp2024_colombia_fertility_age1.csv`, age-specific fertility 1950-2100) and the
+crisis-mortality extracts of `code/26_wpp_crises_inputs.R`.
+`historical/census_tables/`: population tables extracted from the 1938, 1951
+and 1973 census summary PDFs by `code/historical/23_census_tables_ocr.R`
+(national single ages by sex 1938 and 1973; 5-year ages by sex and department
+for 1938 and 1951; coverage-adjusted population by department and zone 1973),
+with the OCR grids, corrections and transcriptions in `ocr_support/`; see its
+`README.md`. The PDFs themselves (`LD_771_*.pdf`, `LB_*.pdf`, 29 MB) are kept
+in `historical/` but not versioned.
+`historical/`: series transcribed from DANE anuarios estadísticos and boletines
+(`col_gap_analysis_1920_1985_*.csv`): deaths by department 1915-1984 (three
+territorial variants), by municipality 1924-1960 and national 1923-1984;
+homicides by department 1923-1965; census population by department
+(1905-1973), municipality (1938-1964) and national (1905-1985). The files
+whose name ends in `department_deaths_*`, `department_population_*`,
+`national_deaths_*` and `national_population_*` are `;`-separated, the others
+`,`-separated. `archive_v01_v02/` holds the previous transcription, read by no
+script. Also LAMBdA extracts for Colombia (`lambda_Col_*.txt`) and the
+Policía Nacional homicide series 1962-2002 (xlsx). See
+`code/historical/README.md`.

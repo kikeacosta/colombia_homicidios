@@ -1,0 +1,197 @@
+section,age,col,value
+Atlántico,1-4,t1951,52420
+Atlántico,55-59,t1938,5039
+Atlántico,55-59,t1951,8821
+Atlántico,55-59,h1938,2381
+Atlántico,55-59,h1951,4214
+Atlántico,55-59,f1938,2658
+Atlántico,55-59,f1951,4607
+Atlántico,60-64,t1938,4670
+Atlántico,60-64,t1951,6712
+Atlántico,60-64,h1938,2072
+Atlántico,60-64,h1951,3181
+Atlántico,60-64,f1938,2598
+Atlántico,60-64,f1951,3531
+Atlántico,65-69,t1938,3163
+Atlántico,65-69,t1951,5181
+Atlántico,65-69,h1938,1395
+Atlántico,65-69,h1951,2249
+Atlántico,65-69,f1938,1768
+Atlántico,65-69,f1951,2932
+Atlántico,70-74,t1938,2403
+Atlántico,70-74,t1951,3354
+Atlántico,70-74,h1938,1030
+Atlántico,70-74,h1951,1336
+Atlántico,70-74,f1938,1373
+Atlántico,70-74,f1951,2018
+Atlántico,75-79,t1938,1348
+Atlántico,75-79,t1951,2355
+Atlántico,75-79,h1938,589
+Atlántico,75-79,h1951,972
+Atlántico,75-79,f1938,759
+Atlántico,75-79,f1951,1383
+Atlántico,80-84,t1938,816
+Atlántico,80-84,t1951,1358
+Atlántico,80-84,h1938,295
+Atlántico,80-84,h1951,554
+Atlántico,80-84,f1938,521
+Atlántico,80-84,f1951,804
+Atlántico,85-89,t1938,513
+Atlántico,85-89,t1951,822
+Atlántico,85-89,h1938,201
+Atlántico,85-89,h1951,312
+Atlántico,85-89,f1938,312
+Atlántico,85-89,f1951,510
+Atlántico,90-94,t1938,175
+Atlántico,90-94,t1951,284
+Atlántico,90-94,h1938,59
+Atlántico,90-94,h1951,111
+Atlántico,90-94,f1938,116
+Atlántico,90-94,f1951,173
+Boyacá,<1,f1951,13180
+Boyacá,50-54,h1938,12511
+Boyacá,55-59,t1951,17330
+Boyacá,60-64,t1938,18949
+Boyacá,60-64,f1938,10180
+Boyacá,75-79,f1938,1240
+Boyacá,75-79,f1951,1902
+Boyacá,80-84,f1951,1910
+Boyacá,85-89,t1951,921
+Total intendencias,total,t1951,117217
+Total intendencias,50-54,t1938,2099
+Total intendencias,50-54,t1951,3016
+Total intendencias,50-54,h1938,1188
+Total intendencias,50-54,h1951,1770
+Total intendencias,50-54,f1938,911
+Total intendencias,50-54,f1951,1246
+Total intendencias,55-59,t1938,1122
+Total intendencias,55-59,t1951,1755
+Total intendencias,55-59,h1938,637
+Total intendencias,55-59,h1951,1000
+Total intendencias,55-59,f1938,485
+Total intendencias,55-59,f1951,755
+Total intendencias,60-64,t1938,1198
+Total intendencias,60-64,t1951,1853
+Total intendencias,60-64,h1938,660
+Total intendencias,60-64,h1951,987
+Total intendencias,60-64,f1938,538
+Total intendencias,60-64,f1951,866
+Total intendencias,65-69,t1938,479
+Total intendencias,65-69,t1951,867
+Total intendencias,65-69,h1938,283
+Total intendencias,65-69,h1951,509
+Total intendencias,65-69,f1938,196
+Total intendencias,65-69,f1951,358
+Total intendencias,70-74,t1938,409
+Total intendencias,70-74,t1951,707
+Total intendencias,70-74,h1938,218
+Total intendencias,70-74,h1951,366
+Total intendencias,70-74,f1938,191
+Total intendencias,70-74,f1951,341
+Total intendencias,75-79,t1938,155
+Total intendencias,75-79,t1951,310
+Total intendencias,75-79,h1938,92
+Total intendencias,75-79,h1951,167
+Total intendencias,75-79,f1938,63
+Total intendencias,75-79,f1951,143
+Total intendencias,80-84,t1938,141
+Total intendencias,80-84,t1951,234
+Total intendencias,80-84,h1938,62
+Total intendencias,80-84,h1951,97
+Total intendencias,80-84,f1938,79
+Total intendencias,80-84,f1951,137
+Total intendencias,85-89,t1938,56
+Total intendencias,85-89,t1951,122
+Total intendencias,85-89,h1938,23
+Total intendencias,85-89,h1951,73
+Total intendencias,85-89,f1938,33
+Total intendencias,85-89,f1951,49
+Total intendencias,90-94,t1938,33
+Total intendencias,90-94,t1951,60
+Total intendencias,90-94,h1938,13
+Total intendencias,90-94,h1951,28
+Total intendencias,90-94,f1938,20
+Total intendencias,90-94,f1951,32
+Total intendencias,95+,t1938,34
+Total intendencias,95+,t1951,55
+Total intendencias,95+,h1938,10
+Total intendencias,95+,h1951,20
+Total intendencias,95+,f1938,24
+Total intendencias,95+,f1951,35
+Caldas,total,t1938,769968
+Valle del Cauca,total,h1951,571795
+Bolívar,10-14,f1951,57246
+Bolívar,95+,f1951,391
+Caldas,85-89,f1951,651
+Cauca,30-34,t1951,22461
+Cauca,35-39,h1938,10115
+Cundinamarca,40-44,f1938,31019
+Cundinamarca,1-4,t1951,198121
+Cundinamarca,15-19,t1938,119703
+Cundinamarca,65-69,t1938,10456
+Cundinamarca,65-69,t1951,18658
+Cundinamarca,65-69,h1938,4879
+Cundinamarca,65-69,h1951,8640
+Cundinamarca,65-69,f1938,5577
+Cundinamarca,65-69,f1951,10018
+Magdalena,80-84,t1938,1084
+Magdalena,80-84,t1951,1405
+Magdalena,80-84,h1938,452
+Magdalena,80-84,h1951,576
+Magdalena,80-84,f1938,632
+Magdalena,80-84,f1951,829
+Norte de Santander,45-49,t1938,11092
+Norte de Santander,45-49,h1938,5770
+Norte de Santander,50-54,t1938,11044
+Norte de Santander,50-54,h1938,5435
+Norte de Santander,80-84,t1951,1421
+Total nacional,30-34,f1938,266016
+Total comisarías,95+,h1938,77
+Antioquia,5-9,h1951,108700
+Meta,95+,h1951,7
+Meta,95+,f1951,11
+Caquetá,30-34,h1951,1657
+Caquetá,30-34,f1951,1181
+Caquetá,40-44,h1951,1052
+Caquetá,50-54,f1938,211
+Caquetá,70-74,h1938,71
+San Andrés y Providencia,25-29,t1938,435
+San Andrés y Providencia,25-29,h1938,191
+San Andrés y Providencia,25-29,f1938,244
+Amazonas,5-9,h1951,171
+Amazonas,60-64,t1938,74
+Amazonas,75-79,f1951,0
+Amazonas,80-84,t1951,0
+Amazonas,80-84,h1951,0
+Amazonas,80-84,f1951,0
+Amazonas,85-89,f1938,0
+Amazonas,85-89,f1951,0
+Amazonas,90-94,t1951,1
+Amazonas,90-94,h1951,1
+Amazonas,90-94,f1938,0
+Amazonas,90-94,f1951,0
+Arauca,35-39,h1951,411
+Arauca,55-59,h1938,91
+Arauca,85-89,t1938,11
+Casanare,35-39,f1951,502
+Guajira,90-94,t1951,0
+Guajira,90-94,h1951,0
+Guajira,90-94,f1951,0
+Guajira,95+,h1951,1
+Guajira,95+,f1951,0
+Putumayo,5-9,h1938,1052
+Vaupés,75-79,h1951,0
+Vaupés,75-79,f1951,1
+Vaupés,80-84,h1938,11
+Vaupés,80-84,h1951,1
+Vaupés,80-84,f1951,0
+Vaupés,85-89,t1951,0
+Vaupés,85-89,h1951,0
+Vaupés,85-89,f1951,0
+Vaupés,90-94,t1951,0
+Vaupés,90-94,h1951,0
+Vaupés,90-94,f1951,0
+Vaupés,95+,f1938,0
+Vaupés,95+,t1951,0
+Vaupés,95+,h1951,0
+Vaupés,95+,f1951,0

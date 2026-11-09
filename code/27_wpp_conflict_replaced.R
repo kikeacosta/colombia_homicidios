@@ -65,7 +65,7 @@ wpp5 <-
 deaths <- read_rds("data_inter/deaths_age_annual_1938-2023.rds") |> select(year, sex, age, registered = dx)
 
 mse <- read_rds("data_inter/conflict_mse_age5_1985-2018.rds") |>
-  mutate(known = !age %in% c(0, 85)) |>
+  mutate(known = !age %in% c(0, 85, 90, 95)) |>   # unknown-age artefacts, see 23
   mutate(across(c(mean, q025, q975), \(v) if_else(known, v * sum(v) / sum(v[known]), 0)), .by = c(violation, year, sex)) |>
   filter(known) |> mutate(age = pmin(age, age_top)) |>
   summarise(across(c(mean, q025, q975), sum), .by = c(violation, year, sex, age))

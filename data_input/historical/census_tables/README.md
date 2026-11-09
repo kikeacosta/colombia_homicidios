@@ -1,0 +1,39 @@
+# Census summary tables 1938, 1951 and 1973 (DANE PDFs)
+
+Tables extracted from the three census summary volumes kept in
+`data_input/historical/` (PDFs not versioned, 29 MB) by
+`code/historical/23_census_tables_ocr.R`, which also re-checks every
+accounting identity listed below and stops if one fails. All counts are
+persons as printed by DANE; nothing is smoothed or adjusted here.
+
+| File | Content | Rows |
+|---|---|---|
+| `census1938_single_age_sex.csv` | National population by single age (0-98, `99+`) and sex, plus the `indígena` row (population not classified by age); columns `census_year, age, age_start, male, female, total` | 101 |
+| `census1951_dept_age5_sex_1938_1951.csv` | Population by 5-year age group (`<1`, `1-4`, `5-9` … `90-94`, `95+`, plus the printed `total`) and sex for the censuses of **1938 and 1951**, for 15 departamentos, 3 intendencias, 7 comisarías and the four printed totals (`unit_type` = total / departamento / intendencia / comisaría); columns `census_year, unit, unit_type, age, age_start, male, female, total` | 1,276 |
+| `census1973_single_age_sex.csv` | National **censused** (unadjusted) population by single age (0-98, `99+`) and sex | 100 |
+| `census1973_adjusted_population_units.csv` | **Coverage-adjusted** population of the 1973 census for 23 departamentos, Bogotá D.E., 4 intendencias and 4 comisarías, by zone (`total`, `cabecera`, `resto`) and component (`total = private_households + collective_households + indigenous_areas`) | 93 |
+
+## Sources (pdf page numbers of the files in `data_input/historical/`)
+
+- **1938**: `LD_771_1938_V_1.pdf`, *Censo general de población, 5 de julio de 1938, resumen general del país*, Cuadro 28 "Población clasificada por edades, sexo y estado civil", pp. 105-107. Only the "totales" block is used (the solteros / casados / viudos blocks were not validated). Grand totals 4,312,763 men, 4,389,053 women, 8,701,816.
+- **1951**: `LD_771_1951.pdf`, *Censo de población de 1951, resumen*, Cuadro 10 "Población por grupos de edad y sexo, 1938 y 1951, por departamentos, intendencias y comisarías", pp. 22-32. Enumerated population 11,228,509 in 1951 (DANE's later adjusted figure, 11,548,172, is not in this table) and 8,697,041 in 1938. The 1938 column excludes the 4,775 `indígena` persons of Cuadro 28 (2,606 men, 2,169 women), which is exactly the difference with the 1938 grand total. Vichada has no 1951 data (dashes) and is left empty.
+- **1973**: `LB_771_1973.pdf`, *XIV Censo nacional de población y III de vivienda, octubre 24 de 1973, resumen nacional*. Cuadro 2 "Población censada por grupos de edad y sexo, total, cabecera y resto", pp. 316-317 (only the national columns are transcribed; censused total 20,666,920). Chapter VIII "Ajuste por cobertura de la población", pp. 115-197 (TOTAL / CABECERA / RESTO rows of each sección; the municipal rows are not transcribed) and Cuadro VIII.20, p. 94 (national summary: adjusted population 22,915,229 = 22,487,118 in departamentos and D.E. + 375,000 in intendencias and comisarías + 53,111 fuerzas armadas; the implied omission is 9.8 %).
+
+## Method
+
+- **1951** (OCR): each page rendered at 500 dpi (grey, thresholded) and at 300 dpi; tesseract 5 (page mode 6) word boxes clustered into rows and into the six rightmost numeric columns; tokens split at a thousands separator merged; low-confidence or malformed cells re-read one by one (page mode 7, digit whitelist). The two passes are reconciled with the identities total = men + women (every row), 21 age rows = section header, and departamentos + intendencias + comisarías = nación. 190 cells that no identity could settle were read visually from page crops and are listed in `ocr_support/corrections_1951.csv`. The grid output of both passes is in `ocr_support/ocr_grid_1951_*.csv`, so the table is rebuilt without the PDF; `run_ocr <- TRUE` in the script repeats the OCR.
+- **1938 and 1973** (visual transcription): tesseract could not read the 12-column typeset table of 1938 reliably, nor the chain-printer scan of 1973 in any preprocessing variant (6/E, 0/C, 9/S confusions). Both were transcribed by eye from 500 dpi crops (`ocr_support/transcription_*.csv`) and corrected until every identity held.
+
+## Validation (all asserted by the script)
+
+- 1938: total = men + women in each of the 101 rows; column sums equal the printed grand totals.
+- 1951: total = men + women in each of the 29 × 21 × 2 rows; the 21 ages add to every section header in all six columns; departments, intendencias and comisarías add to their group totals and to the national total in all six columns.
+- 1973 Cuadro 2: total = men + women in each row; the single ages add to each of the 20 printed 5-year rows and to the printed grand total.
+- 1973 chapter VIII: total = particulares + colectivos + indígenas and total = cabecera + resto in every unit; the 24 departamentos + D.E. and the 8 intendencias + comisarías add to Cuadro VIII.20 in all four columns.
+
+## Not extracted
+
+- 1973 Cuadro 2 by zone (cabecera / resto columns) and the single ages of each department (the volume has them in later cuadros).
+- 1973 chapter VIII at the municipal level (about 1,000 rows; OCR unusable).
+- 1938 Cuadro 28 marital-status blocks and Cuadro 29 (departments by broad age groups), for which only unvalidated OCR drafts were produced.
+- The 1964 census has no population summary volume in the repository (only the housing census).

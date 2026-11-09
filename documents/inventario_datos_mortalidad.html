@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Inventario de datos de mortalidad</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+    <style type="text/css">body{max-width:1100px;margin:2em auto;padding:0 1em;font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.45;color:#222}
+  h1{font-size:1.7em;border-bottom:2px solid #444;padding-bottom:.2em}h2{font-size:1.3em;margin-top:1.8em;border-bottom:1px solid #bbb}h3{font-size:1.1em}
+  table{border-collapse:collapse;width:100%;margin:1em 0;font-size:12.5px}th,td{border:1px solid #ccc;padding:4px 6px;vertical-align:top;text-align:left}th{background:#eee}tr:nth-child(even) td{background:#f7f7f7}
+  code{background:#f1f1f1;padding:1px 3px;font-size:12px;word-break:break-all}strong{color:#8a1c1c}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Inventario de datos de mortalidad</h1>
+</header>
+<h1
+id="inventario-de-datos-de-mortalidad-colombia-niveles-nacional-departamental-y-municipal">Inventario
+de datos de mortalidad: Colombia, niveles nacional, departamental y
+municipal</h1>
+<p>Estado al 2026-11-09. Rutas relativas a la raíz del proyecto
+(<code>C:\Users\kikep\gits\colombia_homicidios</code>).
+<code>data_input/</code> contiene insumos originales o transcritos;
+<code>data_inter/</code> productos intermedios de los scripts;
+<code>output/tables/</code> las series finales.</p>
+<h2
+id="0-vista-rápida-disponibilidad-por-año-nivel-geográfico-y-desagregación">0.
+Vista rápida: disponibilidad por año, nivel geográfico y
+desagregación</h2>
+<p><img src="../figures/inventory/data_availability.png"
+alt="Disponibilidad de datos por año, nivel geográfico y desagregación" /></p>
+<p>Una fila por fuente, agrupadas por nivel geográfico (nacional,
+departamental, municipal) y por dominio (población, defunciones,
+homicidios y violencia, tablas de vida). El color marca el mayor detalle
+disponible ese año: solo total, por sexo, edad y sexo, o edad, sexo y
+causa. Los tonos claros son años de cobertura parcial: menos del 80 % de
+las unidades reportan (los homicidios departamentales de los anuarios
+nunca pasan de 20 de 27 departamentos), año corto (EEVV 1979) o concepto
+distinto (1943-1945, "muertes violentas accidentales"). WPP 2024 y las
+proyecciones DANE se recortan en 2023 aunque lleguen a 2100 y 2042. Las
+filas marcadas "OCR" son los cuadros de los censos 1938, 1951 y 1973
+extraídos de los PDF (edad simple nacional 1938 y 1973; edad quinquenal
+por departamento 1938 y 1951; población ajustada por cobertura 1973 por
+departamento), en incorporación a
+<code>data_input/historical/census_tables/</code>.</p>
+<p>La figura la produce <code>code/32_data_availability.R</code>; la
+tabla subyacente, con una fila por serie y año, el detalle, la bandera
+de parcialidad, la proporción de unidades con dato y el archivo de
+origen, es <code>output/tables/data_availability.csv</code>. Para las
+series transcritas (anuarios) los años y la cobertura se calculan de los
+csv; las demás se declaran con su rango conocido.</p>
+<p>Lo que la figura muestra de un vistazo:</p>
+<ul>
+<li><strong>Edad por debajo del nivel nacional solo existe desde
+1979</strong> (EEVV) y, para población, en los censos 1938 y 1951 recién
+extraídos y en las proyecciones DANE desde 1985.</li>
+<li><strong>Causa de muerte</strong> empieza en 1953 (OMS, LAMBdA 19
+causas) y es continua desde 1979; a nivel departamental y municipal solo
+con EEVV.</li>
+<li><strong>Homicidios departamentales 1966-1978</strong> dependen de
+una sola fuente, la Policía Nacional, que es solo total.</li>
+<li><strong>Municipal antes de 1979</strong>: 14 años de defunciones
+(1924-1960) y tres censos (1938, 1951, 1964), todo sin edad.</li>
+<li><strong>Antes de 1923</strong> solo hay población: censos 1905-1918,
+totales anuales de los anuarios y las tablas pivotales de LAMBdA.</li>
+</ul>
+<h2 id="1-resumen-qué-hay-por-nivel-y-tipo">1. Resumen: qué hay, por
+nivel y tipo</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Nivel</th>
+<th>Defunciones todas las causas</th>
+<th>Homicidios / muertes violentas</th>
+<th>Población</th>
+<th>Tablas de vida</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Nacional</strong></td>
+<td>Totales por sexo 1923-1984 (anuarios DANE); por edad y sexo
+1926-2015 (LAMBdA), 1953-1977 con causa (OMS), 1979-2023 (EEVV
+microdatos); WPP 2024 1950-2100 por edad simple, con componente de
+crisis separado</td>
+<td>1923-1965 (anuarios); 1953-1977 por edad (OMS A148/A149); 1962-2002
+(Policía, suma de deptos); 1979-2023 por edad (EEVV); MSE JEP-CEV-HRDAG
+1985-2018 por edad quinquenal; UCDP GED 1989-2024</td>
+<td>Censos 1905-2018; edad simple × sexo en los censos 1938 y 1973
+(<code>census_tables</code>); anuarios 1905-1985; WPP 1950-2100
+(población y fecundidad por edad simple); DANE 1985-2042</td>
+<td>LAMBdA 1x1 1950-2015 y abreviadas pivotales 1905-2008 (en Drive);
+WPP 2024 completas 1950-2100; DANE 1985-2020</td>
+</tr>
+<tr class="even">
+<td><strong>Departamental</strong></td>
+<td>Totales (y sexo cuando existe) 1915-1984 en tres particiones
+territoriales (v06); versión previa v01 1923-1984; 1979-2023 agregables
+desde EEVV municipal</td>
+<td>1923-1965 (anuarios, v02, 27 deptos); 1962-2002 Policía Nacional (40
+jurisdicciones); 1979-2023 EEVV</td>
+<td>Censos 1905, 1912, 1918, 1928, 1938, 1951, 1964, 1973 (v03); edad
+quinquenal × sexo en 1938 y 1951 y población ajustada por cobertura 1973
+(<code>census_tables</code>); DANE 1985-2042</td>
+<td>DANE abreviadas departamentales 1985-2020</td>
+</tr>
+<tr class="odd">
+<td><strong>Municipal</strong></td>
+<td>Totales por sexo en 14 años: 1924-1932, 1935-1936, 1958-1960 (v03,
+850 municipios); versión previa v01 1925-1960 (13 años); 1979-2023 por
+edad, sexo y causa (EEVV)</td>
+<td>1979-2023 EEVV (dx_v); estimaciones ajustadas 1985-2017
+(<code>data_inter</code>)</td>
+<td>Censos 1938, 1951, 1964 (v03, 881 municipios); DANE 1985-2042 por
+sexo y edad</td>
+<td>ninguna (tasas por municipio 1985-2017 en
+<code>data_inter</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Huecos principales:</p>
+<ul>
+<li><strong>Municipal 1961-1978</strong>: no hay defunciones
+municipales. Antes de 1979 nunca hay detalle por edad ni causa a nivel
+municipal.</li>
+<li><strong>Departamental por edad antes de 1979</strong>: en
+defunciones la edad solo llega con EEVV; las series 1915-1984 son
+totales, con sexo parcial. En población, los censos 1938 y 1951 tienen
+edad quinquenal por departamento (<code>census_tables</code>); 1964 y
+1973 no.</li>
+<li><strong>Homicidios departamentales 1966-1978</strong>: solo la
+fuente policial (1962-2002) cubre ese tramo; los anuarios paran en 1965
+y EEVV empieza en 1979.</li>
+<li><strong>Nacional sin causa en 1970, 1971, 1973 y 1978</strong>: OMS
+no tiene causas esos años y EEVV no tiene 1978. Interpolados en el
+script 30.</li>
+<li><strong>Censos 1985-2018 sin ajuste de omisión por edad</strong>:
+las conciliaciones DANE dan omisión total (1985 ~11 %, 1993 ~11,7 %,
+2005 ~3,7 %, 2018 ~8,5 %) pero no se ha incorporado el perfil por edad y
+sexo.</li>
+</ul>
+<h2 id="2-nivel-nacional">2. Nivel nacional</h2>
+<h3 id="21-defunciones-todas-las-causas">2.1 Defunciones, todas las
+causas</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Archivo</th>
+<th>Años</th>
+<th>Detalle</th>
+<th>Fuente</th>
+<th>Notas</th>
+<th>Scripts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data_input/historical/col_gap_analysis_1920_1985_national_deaths_clean_v03.csv</code></td>
+<td>1923-1984 (62 años con dato, 59 con sexo)</td>
+<td>total, hombres, mujeres</td>
+<td>Anuarios estadísticos DANE, suma de departamentos</td>
+<td>Separador <code>;</code>. 1950 sin sexo. La caída de 1965 (178.372)
+a 1970 (134.895) es subregistro y cobertura, no mortalidad</td>
+<td>hist/21; 22 (total del anuario)</td>
+</tr>
+<tr class="even">
+<td><code>data_input/historical/lambda_Col_Deathsm.txt</code>,
+<code>lambda_Col_Deathsf.txt</code></td>
+<td>1926-2015, 76 años (saltos antes de 1936, 1973 y 1982)</td>
+<td>grupos de edad LAMBdA × sexo</td>
+<td>LAMBdA (Palloni et al.), defunciones registradas</td>
+<td>Coinciden con los anuarios año a año. Usadas para 1938-1952, 1971 y
+1973</td>
+<td>21, 22, 23, 25, 28</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/historical/lambda_Col_Cause19_Deathsm.txt</code>,
+<code>…Deathsf.txt</code></td>
+<td>1953-2009 (50 años)</td>
+<td>19 grupos de causa × edad × sexo, CIE-7 a CIE-10</td>
+<td>LAMBdA</td>
+<td>Incluye causas externas; no explotado todavía</td>
+<td>ninguno</td>
+</tr>
+<tr class="even">
+<td><code>data_input/who_mdb/morticd07.zip</code>,
+<code>morticd08.zip</code> (+ <code>mort_pop.zip</code>,
+<code>mort_availability.zip</code>,
+<code>mort_documentation.zip</code>)</td>
+<td>Colombia 1953-1977</td>
+<td>lista A (CIE-7/8) × edad × sexo</td>
+<td>WHO Mortality Database</td>
+<td>Sin causas en 1970, 1971, 1973. Extractos en
+<code>data_input/reference/who_deaths_age_colombia_1953-1977.csv</code>
+y <code>data_inter/who_deaths_age_1953-1977.rds</code></td>
+<td>21</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/micro/Defun1979.txt</code> …
+<code>Defun2023.txt</code> (45 archivos)</td>
+<td>1979-2023</td>
+<td>microdatos: municipio, sexo, edad, causa</td>
+<td>DANE EEVV</td>
+<td>1978 no existe; 1979 corto (110.400 vs 125.925 del anuario).
+Diccionarios en <code>documents/metadata/</code></td>
+<td>01, 02 → <code>data_inter/micro_1979_2023.rds</code>,
+<code>deaths_munic_1979-2023.rds</code>,
+<code>deaths_munic_age_1979-2023.rds</code></td>
+</tr>
+<tr class="even">
+<td><code>data_input/reference/wpp2024_colombia_mx_pop_single_age_1950_2100.rds</code></td>
+<td>1950-2100</td>
+<td>mx y población, edad simple × sexo</td>
+<td>UN WPP 2024</td>
+<td>Referencia de nivel adoptada (script 27)</td>
+<td>22-30</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/251208_MortalityCrises.zip</code> (803 MB, no
+público) →
+<code>data_input/reference/wpp2024_crises_colombia_{mx1_conflicts, mx1_crises, mx1_disasters, mx1_famine, mx1_covid, lt1_crises_free, events, country, cdr}.csv</code></td>
+<td>1950-2023</td>
+<td>mx por edad simple y sexo, por tipo de crisis</td>
+<td>UN Population Division, insumos de WPP 2024</td>
+<td>mx_total = mx_crises_free + mx_crises. Conflicto en Colombia ~53 k
+muertes 1985-2018 (UCDP/PRIO/PITF) y La Violencia 12 k/año 1950-56
+(Valentino 2004)</td>
+<td>26 (extrae), 27</td>
+</tr>
+<tr class="even">
+<td><code>data_inter/deaths_age_annual_1938-2023.rds</code></td>
+<td>1938-2023</td>
+<td>edad quinquenal × sexo</td>
+<td>Ensamble LAMBdA (1938-52, 1971, 1973) + OMS + EEVV</td>
+<td>Serie registrada de insumo al DDM y a la completitud</td>
+<td>22 → 23, 25, 27, 28</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-homicidios-y-muertes-violentas">2.2 Homicidios y muertes
+violentas</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Archivo</th>
+<th>Años</th>
+<th>Detalle</th>
+<th>Fuente</th>
+<th>Notas</th>
+<th>Scripts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data_input/historical/archive_v01_v02/homicides_national_v02.csv</code></td>
+<td>1923-1965</td>
+<td>total, hombres, mujeres, nº de deptos con dato</td>
+<td>Anuarios DANE (suma departamental)</td>
+<td>1943-1945 usan el concepto "muertes violentas accidentales", no
+homicidio puro</td>
+<td>ninguno (archivado; sustituido por col_gap_analysis)</td>
+</tr>
+<tr class="even">
+<td><code>data_input/reference/who_violent_age_colombia_1953-1977.csv</code>,
+<code>data_inter/who_violent_age_1953-1977.rds</code></td>
+<td>1953-1977 (sin 1970, 1971, 1973)</td>
+<td>homicidio e intención no determinada × edad × sexo</td>
+<td>WHO MDB (A149 en CIE-7; A148 + A149 en CIE-8)</td>
+<td>Edad desconocida redistribuida</td>
+<td>21 → 30</td>
+</tr>
+<tr class="odd">
+<td><code>data_inter/who_homicide_colombia.rds</code>,
+<code>who_all_cause_colombia.rds</code></td>
+<td>1953-2023 (65 años con dato)</td>
+<td>totales anuales</td>
+<td>WHO MDB, extracto sin script productor</td>
+<td>Convertir a csv bajo <code>data_input/reference/who/</code> antes de
+publicar</td>
+<td>hist/20, hist/22</td>
+</tr>
+<tr class="even">
+<td><code>data_input/conflict/mse_national_age5_1985-2018.rds</code>,
+<code>data_inter/conflict_mse_age5_1985-2018.rds</code></td>
+<td>1985-2018 (desapariciones hasta 2016)</td>
+<td>homicidios y desapariciones del conflicto, edad quinquenal 0-4 …
+95+, sexo</td>
+<td>JEP-CEV-HRDAG, estimación por sistemas múltiples</td>
+<td>617 k homicidios, 127 k desapariciones. La edad desconocida está
+volcada en 0-4 y en 85-89 (hasta 1988), 90-94 (1989-93) y 95+
+(1994-2000); se trata como desconocida y se redistribuye en 5-84</td>
+<td>21, 23, 27</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/ucdp/GEDEvent_v25_1.csv</code>,
+<code>GEDEvent_v25_01_25_12.csv</code> (270 MB, no versionado)</td>
+<td>1989-2024</td>
+<td>eventos georreferenciados con muertes estimadas</td>
+<td>UCDP GED v25.1</td>
+<td>Solo comparación</td>
+<td>hist/22</td>
+</tr>
+<tr class="even">
+<td><code>data_input/historical/Homicidio 1962-2002 por depto de Policía_v1.xlsx</code>
+(hoja <code>Tabla_ancha</code>)</td>
+<td>1962-2002</td>
+<td>40 jurisdicciones policiales × año</td>
+<td>Policía Nacional</td>
+<td>Suma nacional derivable; concepto policial distinto del
+médico-legal</td>
+<td>ninguno aún</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-población">2.3 Población</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Archivo</th>
+<th>Años</th>
+<th>Detalle</th>
+<th>Fuente</th>
+<th>Scripts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data_input/historical/col_gap_analysis_1920_1985_national_population_clean_v02.csv</code></td>
+<td>1905-1985 (34 años con dato)</td>
+<td>total</td>
+<td>Anuarios DANE y censos</td>
+<td>hist/21</td>
+</tr>
+<tr class="even">
+<td><code>data_input/historical/lambda_Col_Popm.txt</code>,
+<code>lambda_Col_Popf.txt</code></td>
+<td>censos 1912, 1918, 1928, 1938, 1951, 1964, 1973, 1985, 1993,
+2005</td>
+<td>edad × sexo</td>
+<td>LAMBdA</td>
+<td>21, 22</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/census_raw/undata_t22</code>,
+<code>undata_t44</code>;
+<code>data_input/reference/undata_census_colombia.csv</code>,
+<code>undata_foreign_born_colombia.csv</code></td>
+<td>censos 1951-2018</td>
+<td>edad × sexo, población enumerada</td>
+<td>UNdata (Demographic Yearbook)</td>
+<td>21 → <code>data_inter/census_pop_age.rds</code> → 22-24</td>
+</tr>
+<tr class="even">
+<td><code>data_input/reference/wpp2024_colombia_mx_pop_single_age_1950_2100.rds</code></td>
+<td>1950-2100</td>
+<td>edad simple × sexo</td>
+<td>WPP 2024</td>
+<td>22-30</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/reference/wpp2024_colombia_pop_single_age_1950-2023.csv</code>,
+<code>wpp2024_colombia_fertility_age1.csv</code>,
+<code>wpp2024_colombia_lt_complete_1950-2100.csv</code></td>
+<td>1950-2023 (población), 1950-2100 (fecundidad, tablas de vida)</td>
+<td>edad simple × sexo; ASFR por edad simple; tablas de vida
+completas</td>
+<td>WPP 2024 (csv completos en Drive)</td>
+<td>31 (produce); sin uso aún</td>
+</tr>
+<tr class="even">
+<td><code>data_input/historical/census_tables/census1938_single_age_sex.csv</code>,
+<code>census1973_single_age_sex.csv</code></td>
+<td>censos 1938 y 1973</td>
+<td>edad simple (0-98, 99+) × sexo; 1938 con fila indígena; 1973
+población censada sin ajuste</td>
+<td>DANE, resúmenes censales (OCR / transcripción validada,
+hist/23)</td>
+<td>hist/23 (produce); sin uso aún</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/migration/undesa_pd_2020_ims_stock_by_age_sex_and_destination.xlsx</code>,
+<code>undesa_pd_2024_ims_stock_by_sex_destination_and_origin.xlsx</code></td>
+<td>1990-2024</td>
+<td>stock de emigrantes colombianos por edad y sexo</td>
+<td>UN DESA</td>
+<td>21 → <code>data_inter/emigrant_stock_age_1990-2024.rds</code> → 22,
+23</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-tablas-de-vida-y-tasas-de-referencia">2.4 Tablas de vida y
+tasas de referencia</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Archivo</th>
+<th>Años</th>
+<th>Detalle</th>
+<th>Fuente</th>
+<th>Scripts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data_input/historical/lambda_Col_mltper_1x1.txt</code>,
+<code>lambda_Col_fltper_1x1.txt</code></td>
+<td>1950-2015</td>
+<td>1x1: mx, qx, lx, Lx, Tx, ex</td>
+<td>LAMBdA</td>
+<td>25, 28</td>
+</tr>
+<tr class="even">
+<td><code>I:/My Drive/gits_drive/colombia_bereavement_pdr/data_input/life_tables_lambda.csv</code>
+(fuera del repo)</td>
+<td>pivotales 1905, 1912, 1918, 1928, 1938, 1944, 1957 … 2008</td>
+<td>abreviadas × sexo</td>
+<td>LAMBdA</td>
+<td>29</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/lifetables/tablas_utf8.txt</code>,
+<code>data_input/reference/dane_lifetables_nmx_1985_2020.csv</code></td>
+<td>1985-2020</td>
+<td>nmx abreviadas, nacional y departamental</td>
+<td>DANE, proyecciones 2005-2020</td>
+<td>24, 25, 28</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-nivel-departamental">3. Nivel departamental</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Archivo</th>
+<th>Años</th>
+<th>Unidades</th>
+<th>Detalle</th>
+<th>Fuente y notas</th>
+<th>Scripts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data_input/historical/col_gap_analysis_1920_1985_department_deaths_clean_v06.csv</code></td>
+<td>1915-1984</td>
+<td>34 deptos (15-32 con dato por año)</td>
+<td>total, hombres, mujeres; banderas <code>data_flag_dane</code> (111
+celdas) y <code>data_flag_collaborator</code> (222) con nota y página;
+<code>source_new</code> (anuarios y boletines BOL_xxx); intendencias y
+comisarías existentes por año</td>
+<td>Separador <code>;</code>. Anuarios y boletines DANE; desde 1960 en
+parte sumado del municipal v03. Nota típica: "Existe subregistro por
+problemas de cobertura"</td>
+<td>ninguno (20 y 21 usan la variante aggregated)</td>
+</tr>
+<tr class="even">
+<td><code>…_v06_territories_aggregated.csv</code></td>
+<td>1915-1984</td>
+<td>25 unidades (intendencias y comisarías sumadas al depto de
+origen)</td>
+<td>ídem</td>
+<td>Partición estable en el tiempo; su suma coincide con
+<code>national_deaths_v03</code> salvo en 1926, 1931, 1932, 1934
+(nacional menor) y 1956-1961 (Bogotá en fila propia y dentro de
+Cundinamarca)</td>
+<td>hist/20, hist/21</td>
+</tr>
+<tr class="odd">
+<td><code>…_v06_territories_split.csv</code></td>
+<td>1915-1984</td>
+<td>33 unidades (territorios nacionales separados)</td>
+<td>ídem</td>
+<td>Mismo contenido con otra partición; totales algo menores por
+territorios sin dato</td>
+<td>ninguno</td>
+</tr>
+<tr class="even">
+<td><code>data_input/historical/archive_v01_v02/deaths_department_v01.csv</code></td>
+<td>1923-1984</td>
+<td>34 deptos</td>
+<td>total, hombres, mujeres</td>
+<td>Versión anterior (2026-10-13) de la misma transcripción; sustituida
+por v06</td>
+<td>ninguno (archivado; sustituido por col_gap_analysis)</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/historical/col_gap_analysis_1920_1985_department_homicides_clean_v02.csv</code></td>
+<td>1923-1924, 1927-1931, 1936, 1938-1940, 1943-1949, 1951-1965 (33
+años)</td>
+<td>27 deptos (10-20 con dato)</td>
+<td>total, hombres, mujeres, <code>known_data_problem</code></td>
+<td>Anuarios DANE. 1943-45 "muertes violentas accidentales" (4-7 veces
+más altas); "Department did not send data" frecuente</td>
+<td>hist/20, hist/21</td>
+</tr>
+<tr class="even">
+<td><code>data_input/historical/archive_v01_v02/homicides_department_v02.csv</code></td>
+<td>1923-1965</td>
+<td>27 deptos</td>
+<td>total, hombres, mujeres, <code>source_column</code>,
+<code>concept_flag</code></td>
+<td>Versión anterior de la misma serie</td>
+<td>ninguno (archivado; sustituido por col_gap_analysis)</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/historical/Homicidio 1962-2002 por depto de Policía_v1.xlsx</code></td>
+<td>1962-2002</td>
+<td>40 jurisdicciones (deptos y metropolitanas)</td>
+<td>total anual, formato ancho</td>
+<td>Policía Nacional</td>
+<td>ninguno aún</td>
+</tr>
+<tr class="even">
+<td><code>data_input/historical/col_gap_analysis_1920_1985_department_population_clean_v03.csv</code></td>
+<td>censos 1905, 1912, 1918, 1928, 1938, 1951, 1964, 1973</td>
+<td>20-31 deptos según censo</td>
+<td>total, hombres, mujeres (sexo desde BOL_194)</td>
+<td>Separador <code>;</code>. Anuarios DANE</td>
+<td>hist/20, hist/21</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/historical/archive_v01_v02/population_department_v01.csv</code></td>
+<td>censos 1938, 1951, 1964</td>
+<td>34 deptos</td>
+<td>total, sexo, nº de municipios</td>
+<td>Versión anterior</td>
+<td>ninguno (archivado; sustituido por col_gap_analysis)</td>
+</tr>
+<tr class="even">
+<td><code>data_input/historical/census_tables/census1951_dept_age5_sex_1938_1951.csv</code></td>
+<td>censos 1938 y 1951</td>
+<td>15 deptos, 3 intendencias, 7 comisarías (Vichada sin 1951)</td>
+<td>edad quinquenal (&lt;1, 1-4, …, 95+) × sexo</td>
+<td>Cuadro 10 del resumen censal de 1951 (OCR tesseract reconciliado por
+identidades, hist/23)</td>
+<td>hist/23 (produce); ninguno aún</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/historical/census_tables/census1973_adjusted_population_units.csv</code></td>
+<td>censo 1973</td>
+<td>23 deptos, Bogotá D.E., 4 intendencias, 4 comisarías</td>
+<td>población ajustada por cobertura por zona (total, cabecera, resto) y
+componente (hogares particulares, colectivos, áreas indígenas)</td>
+<td>Capítulo VIII del resumen censal de 1973 (transcripción validada
+contra el Cuadro VIII.20, hist/23); omisión nacional 9,8 %</td>
+<td>hist/23 (produce); ninguno aún</td>
+</tr>
+<tr class="even">
+<td><code>data_input/micro/Defun*.txt</code> →
+<code>data_inter/deaths_munic_1979-2023.rds</code></td>
+<td>1979-2023</td>
+<td>33 deptos (sumando municipios con DIVIPOLA)</td>
+<td>sexo, edad, causa violenta / no violenta</td>
+<td>DANE EEVV</td>
+<td>02 → 03-19</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/DANEpop/*.xlsx</code></td>
+<td>1985-2042</td>
+<td>33 deptos (suma municipal)</td>
+<td>área, sexo, edad simple</td>
+<td>DANE: retroproyecciones 1985-2017 y proyecciones 2018-2042</td>
+<td>01 → <code>data_inter/pop_munic_1985-2017.rds</code></td>
+</tr>
+<tr class="even">
+<td><code>data_input/lifetables/tablas_utf8.txt</code></td>
+<td>1985-2020 por quinquenios</td>
+<td>33 deptos</td>
+<td>tablas abreviadas por sexo</td>
+<td>DANE</td>
+<td>24, 25</td>
+</tr>
+<tr class="odd">
+<td><code>data_inter/completeness_deptos.rds</code>,
+<code>completeness_ggb.rds</code></td>
+<td>1985-2017</td>
+<td>deptos</td>
+<td>completitud estimada (GGB)</td>
+<td>productos propios</td>
+<td>05-12</td>
+</tr>
+<tr class="even">
+<td><code>output/tables/completeness_empirical_dept_1985-2023.csv</code></td>
+<td>1985-2023</td>
+<td>33 deptos y grupo amazónico</td>
+<td>completitud empírica (Adair y Lopez 2018) por sexo, año, modelo,
+variante y fuente de 5q0</td>
+<td>producto propio; no requiere población cerrada, pero depende del 5q0
+departamental (DANE 2007 duplica o triplica el nivel de la ENDS en
+Chocó, Cauca, Nariño y la Amazonía)</td>
+<td>33</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/historical/LB_800_1938.pdf</code>,
+<code>LB_811_1951_V_1.pdf</code> (12 MB, no versionados)</td>
+<td>censos 1938 y 1951</td>
+<td>deptos</td>
+<td>publicaciones censales originales</td>
+<td>DANE; no explotadas</td>
+<td>ninguno</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-nivel-municipal">4. Nivel municipal</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Archivo</th>
+<th>Años</th>
+<th>Unidades</th>
+<th>Detalle</th>
+<th>Fuente y notas</th>
+<th>Scripts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data_input/historical/col_gap_analysis_1920_1985_municipal_deaths_clean_v03.csv</code></td>
+<td>1924-1932, 1935-1936, 1958-1960 (14 años)</td>
+<td>850 municipios en 31 deptos (552-799 con dato por año)</td>
+<td>total, hombres, mujeres, <code>dane_code</code> (4,5 % sin código),
+<code>known_data_problem</code></td>
+<td>Estadística vital y anuarios DANE. Cobertura parcial del año
+frecuente ("only 4 of 12 months reported")</td>
+<td>hist/20, hist/21</td>
+</tr>
+<tr class="even">
+<td><code>data_input/historical/archive_v01_v02/deaths_municipal_v01.csv</code></td>
+<td>1925-1960 (13 años)</td>
+<td>1.148 municipios</td>
+<td>total, hombres, mujeres, dane_code, año de creación</td>
+<td>Versión anterior; problemas de codificación en los nombres</td>
+<td>ninguno (archivado; sustituido por col_gap_analysis)</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/historical/col_gap_analysis_1920_1985_municipal_population_clean_v03.csv</code></td>
+<td>censos 1938, 1951, 1964</td>
+<td>881 municipios (766-847 con dato)</td>
+<td>total, hombres, mujeres, dane_code (5,6 % sin código)</td>
+<td>Censos DANE</td>
+<td>hist/20, hist/21</td>
+</tr>
+<tr class="even">
+<td><code>data_input/historical/archive_v01_v02/population_municipal_v01.csv</code></td>
+<td>censos 1938, 1951, 1964</td>
+<td>904 municipios</td>
+<td>total, sexo</td>
+<td>Versión anterior</td>
+<td>ninguno (archivado; sustituido por col_gap_analysis)</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/micro/Defun*.txt</code> →
+<code>data_inter/deaths_munic_1979-2023.rds</code>,
+<code>deaths_munic_age_1979-2023.rds</code></td>
+<td>1979-2023</td>
+<td>~1.120 municipios (DIVIPOLA 2026)</td>
+<td>sexo, edad quinquenal, dx total y dx_v (violenta)</td>
+<td>DANE EEVV; códigos en
+<code>data_input/reference/DIVIPOLA-_Códigos_municipios_20260307.csv</code></td>
+<td>02 → 03-19, 30</td>
+</tr>
+<tr class="even">
+<td><code>data_input/DANEpop/DCD-…-Mun-1985-1994.xlsx</code>,
+<code>…1995-2004.xlsx</code>, <code>…2005-2017_VP.xlsx</code>,
+<code>PPED-AreaSexoEdadMun-2018-2042_VP.xlsx</code></td>
+<td>1985-2042</td>
+<td>todos los municipios</td>
+<td>área, sexo, edad simple</td>
+<td>DANE</td>
+<td>01 → <code>data_inter/pop_munic_1985-2017.rds</code></td>
+</tr>
+<tr class="odd">
+<td><code>data_inter/asdr_munic_1985-2017.rds</code>,
+<code>homicide_cdr_munic_1985-2017.rds</code>,
+<code>homicide_estimates_1985-2017_excs.rds</code>,
+<code>excess_deaths_munic.rds</code>,
+<code>sex_ratios_munic_1985-2017.rds</code></td>
+<td>1985-2017</td>
+<td>municipios</td>
+<td>tasas, homicidios ajustados, excesos, razones de sexo</td>
+<td>productos propios del módulo municipal</td>
+<td>03-19</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-series-finales-producidas-nacional">5. Series finales
+producidas (nacional)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Archivo</th>
+<th>Años</th>
+<th>Contenido</th>
+<th>Script</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>output/tables/completeness_ddm_conflict.csv</code>,
+<code>completeness_ddm_conflict_annual.csv</code></td>
+<td>ventanas intercensales 1938-2018</td>
+<td>completitud GGB-SEG con migración y corrección por conflicto, por
+sexo</td>
+<td>23</td>
+</tr>
+<tr class="even">
+<td><code>output/tables/deaths_expected_wpp_mse_1950-2023.csv</code></td>
+<td>1950-2023</td>
+<td>defunciones esperadas: WPP 2024 con su conflicto sustituido por el
+ajuste MSE en 1985-2018; registradas; completitud; por sexo y edad
+quinquenal</td>
+<td>27</td>
+</tr>
+<tr class="odd">
+<td><code>output/tables/lifetables_compared.csv</code>,
+<code>lifetables_compared_summary.csv</code></td>
+<td>8 periodos entre 1950 y 2019</td>
+<td>tablas abreviadas: registradas, WPP, WPP sin conflicto + MSE,
+LAMBdA, DANE</td>
+<td>28</td>
+</tr>
+<tr class="even">
+<td><code>output/tables/mx_extended_1905-2023.csv</code>,
+<code>lifetables_extended_summary.csv</code></td>
+<td>1905-2023</td>
+<td>mx abreviadas por sexo: LAMBdA reescalado y suavizado 1905-1949,
+serie propia 1950-2023</td>
+<td>29</td>
+</tr>
+<tr class="odd">
+<td><code>output/tables/deaths_by_cause_sex_age_1953-2023.csv</code></td>
+<td>1953-2023</td>
+<td>defunciones violentas (registradas y ajustadas) y no violentas,
+tasas, bandera de calidad (MSE / escalado / interpolado)</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td><code>output/tables/completeness_empirical_national_1979-2023.csv</code></td>
+<td>1979-2023</td>
+<td>completitud empírica de Adair y Lopez (2018), anual, por sexo y
+ambos sexos; modelos 1 (con completitud de menores de 5) y 2; con todas
+las defunciones y sin violentas; defunciones esperadas</td>
+<td>33</td>
+</tr>
+<tr class="odd">
+<td><code>output/tables/completeness_empirical_dept_1985-2023.csv</code>,
+<code>completeness_empirical_validation_2014.csv</code></td>
+<td>1985-2023</td>
+<td>lo mismo por departamento (33 más el grupo amazónico), con dos
+fuentes de 5q0 departamental (DANE escalada a WPP; DANE anclada en 2014
+a la ENDS 2015); comparación con la tabla 6 del artículo</td>
+<td>33</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-observaciones-para-usar-los-archivos-nuevos">6. Observaciones
+para usar los archivos nuevos</h2>
+<ul>
+<li>Los csv <code>col_gap_analysis_*</code> mezclan separadores:
+<code>department_deaths_v06</code> (tres variantes),
+<code>department_population_v03</code>, <code>national_deaths_v03</code>
+y <code>national_population_v02</code> usan <code>;</code> (leer con
+<code>read_csv2</code> o <code>delim = ";"</code>); los demás usan
+<code>,</code>.</li>
+<li>Hay dos generaciones de la misma transcripción: v01/v02 (2026-10-13)
+y <code>col_gap_analysis_*</code> (2026-11-09). Las nuevas añaden
+1915-1922 en deptos, sexo para 1923-1949 a nivel nacional, fuente y
+banderas de calidad por celda con página de origen, y tres particiones
+territoriales; corrigen además errores de transcripción (Valle del Cauca
+1979: 4.818 → 14.818; Santander 1947: 6.091 → 11.499), por lo que el
+total nacional de 1979 pasa de 125.925 a 135.925. Los scripts
+<code>code/historical/20-21</code> y el bloque de anuario de
+<code>code/22</code> ya leen las nuevas; las v01/v02 están en
+<code>data_input/historical/archive_v01_v02/</code> y no las lee ningún
+script.</li>
+<li>La serie departamental 1915-1984 tiene entre 15 y 32 departamentos
+con dato por año; el total nacional de <code>national_deaths_v03</code>
+depende de qué departamentos reportan, así que los cambios de nivel (por
+ejemplo 1965 a 1970) son en parte cambios de cobertura.</li>
+<li>Ninguna fuente de defunciones anterior a 1979 tiene edad por debajo
+del nivel nacional. Toda estimación subnacional por edad antes de 1979
+tendría que apoyarse en patrones nacionales (LAMBdA, OMS) aplicados a
+totales departamentales o municipales; como denominadores por edad
+existen los censos 1938 y 1951 por departamento
+(<code>census_tables</code>).</li>
+<li>La fuente policial (1962-2002) es la única con homicidios
+departamentales entre 1966 y 1978. Se solapa con los anuarios (1962-65)
+y con EEVV (1979-2002), lo que permite calibrar la diferencia de
+concepto.</li>
+<li>La completitud empírica (33) es la tercera estimación nacional junto
+al DDM (23) y a WPP sin conflicto + MSE (27). Reproduce el 87 % de Adair
+y Lopez para 2014 (modelo 2, ambos sexos) y da 79-81 % en 1979, 86-88 %
+en 1985-1995 y 87-91 % desde 2000; sin las defunciones violentas baja
+3-5 puntos en 1985-2000, porque el modelo lee la tasa bruta registrada
+como señal de registro y los homicidios la inflan. El pico de 2021 (96
+%) es el exceso de mortalidad por covid leído de la misma manera. A
+nivel departamental la comparación con la tabla 6 del artículo da una
+desviación cuadrática media de 6 puntos (modelo 2) con el 5q0 anclado a
+la ENDS y de 23 con el 5q0 DANE sin anclar; Bogotá sale más alto por
+ocurrencia frente a residencia. Figuras en
+<code>figures/04_completeness/completeness_empirical_*.png</code>.</li>
+<li>El inventario anterior de variables y lagunas, de marzo de 2026,
+está en <code>documents/datos_mortalidad_colombia_03_2026.xlsx</code>;
+este documento lo actualiza con los archivos incorporados desde
+entonces.</li>
+</ul>
+<h2
+id="7-información-adicional-que-podría-complementar-lo-disponible">7.
+Información adicional que podría complementar lo disponible</h2>
+<p>Ordenada por el vacío que cierra (sección 0 y "Huecos principales").
+"Esfuerzo" se refiere a incorporarla al proyecto; "por verificar" marca
+lo que conviene confirmar en la fuente antes de contar con ello.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Vacío</th>
+<th>Fuente candidata</th>
+<th>Qué aportaría</th>
+<th>Nivel</th>
+<th>Esfuerzo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nacimientos anuales antes de 1950, necesarios para cualquier
+reconstrucción poblacional 1900-1950 (proyección inversa) y para la
+fecundidad histórica</td>
+<td>Anuarios estadísticos DANE (nacimientos registrados por
+departamento, desde ~1915) y publicaciones de Estadísticas Vitales;
+microdatos EEVV de nacimientos 1979-2023 (DANE); WPP 2024 ya aporta
+nacimientos y tasas por edad desde 1950 (script 31)</td>
+<td>serie anual de nacimientos 1915-2023; corrige el hueco de insumos
+para el modelo de reconstrucción</td>
+<td>nacional y departamental</td>
+<td>medio: transcripción de los mismos anuarios ya consultados para las
+defunciones</td>
+</tr>
+<tr class="even">
+<td>Censo de 1964 sin resumen de población (solo está el de
+vivienda)</td>
+<td>DANE, <em>XIII Censo Nacional de Población, Resumen General</em>
+(biblioteca digital DANE); UNdata ya da la edad quinquenal nacional</td>
+<td>población por edad y sexo por departamento en 1964, cerrando la
+serie censal departamental 1938-1951-1964-1973</td>
+<td>departamental</td>
+<td>bajo si el PDF es tipografiado (OCR como el de 1951)</td>
+</tr>
+<tr class="odd">
+<td>Población por departamento y edad en 1964, 1973, 1985, 1993 y
+2005</td>
+<td>IPUMS International, muestras censales de Colombia 1964, 1973, 1985,
+1993, 2005 (10 %, con departamento y municipios grandes)</td>
+<td>pirámides departamentales en todos los censos, estimaciones de
+mortalidad adulta por orfandad y de fecundidad por hijos propios;
+alternativa a los cuadros impresos de 1973</td>
+<td>departamental (municipal parcial)</td>
+<td>bajo: registro gratuito y extracto</td>
+</tr>
+<tr class="even">
+<td>Omisión censal por edad y sexo 1985-2018</td>
+<td>DANE, <em>Conciliación censal 1985-2005</em> y conciliación del CNPV
+2018 (tablas de omisión por edad y sexo); informes de evaluación de
+cobertura</td>
+<td>perfil de omisión por edad para corregir las pirámides censales que
+alimentan el DDM</td>
+<td>nacional y departamental</td>
+<td>bajo: lectura de tablas publicadas</td>
+</tr>
+<tr class="odd">
+<td>Defunciones por edad a nivel departamental antes de 1979</td>
+<td>Anuarios Generales de Estadística 1950-1975 (cuadros de defunciones
+por grupos de edad y departamento, por verificar en los PDF ya
+usados)</td>
+<td>completitud departamental por edad antes de EEVV</td>
+<td>departamental</td>
+<td>medio-alto: transcripción</td>
+</tr>
+<tr class="even">
+<td>Defunciones municipales 1961-1978</td>
+<td>DANE, publicaciones anuales de <em>Estadísticas Vitales</em> de los
+años 60 y 70 (defunciones por municipio, por verificar)</td>
+<td>cierra el único tramo sin dato municipal</td>
+<td>municipal</td>
+<td>alto: transcripción</td>
+</tr>
+<tr class="odd">
+<td>Homicidios con concepto médico-legal y policial después de 2002</td>
+<td>Instituto Nacional de Medicina Legal, <em>Forensis</em> y datos
+abiertos (homicidios por municipio, 2000-2023); Policía Nacional, SIEDCO
+datos abiertos (homicidios por municipio, ~2003-2024)</td>
+<td>tres mediciones independientes del homicidio (EEVV, Medicina Legal,
+Policía) por municipio y año; calibración del concepto policial de la
+serie 1962-2002</td>
+<td>municipal</td>
+<td>bajo: descargas públicas</td>
+</tr>
+<tr class="even">
+<td>Víctimas del conflicto por debajo del nivel nacional</td>
+<td>CNMH, Observatorio de Memoria y Conflicto (casos por municipio
+1958-2018); Registro Único de Víctimas (homicidio y desaparición por
+municipio y año, 1985-2024); estimaciones MSE JEP-CEV-HRDAG publicadas
+por departamento y periodo</td>
+<td>corrección por conflicto departamental y municipal en la completitud
+1985-2018, hoy solo nacional</td>
+<td>departamental y municipal</td>
+<td>bajo-medio: descargas públicas; el MSE departamental hay que
+extraerlo de los anexos</td>
+</tr>
+<tr class="odd">
+<td>Mortalidad por causa en 1978 y contraste 1953-2009</td>
+<td>LAMBdA, 19 grupos de causa (ya en el repositorio, sin usar)</td>
+<td>causa × edad × sexo para 1978 y cotejo de la serie violenta de OMS y
+EEVV</td>
+<td>nacional</td>
+<td>bajo</td>
+</tr>
+<tr class="even">
+<td>Tabulaciones por causa independientes de los microdatos
+1979-2023</td>
+<td>WHO Mortality Database, CIE-9 y CIE-10 (<code>morticd09</code>,
+<code>morticd10</code>); UN Demographic Yearbook (defunciones por edad y
+sexo, desde los años 50)</td>
+<td>cotejo externo de EEVV y de la edad en 1950-1952</td>
+<td>nacional</td>
+<td>bajo</td>
+</tr>
+<tr class="odd">
+<td>Denominadores departamentales 2015-2023 con la inmigración
+venezolana</td>
+<td>Migración Colombia (stock por departamento), CNPV 2018 (nacidos en
+el extranjero por departamento), DANE GEIH</td>
+<td>población departamental corregida por inmigración reciente; la
+emigración ya está (UN DESA)</td>
+<td>departamental</td>
+<td>bajo-medio</td>
+</tr>
+<tr class="even">
+<td>Estructura por edad departamental antes de 1938</td>
+<td>Publicaciones de los censos de 1918 y 1928 (grupos de edad amplios
+por departamento, por verificar)</td>
+<td>pirámides departamentales tempranas para las proyecciones hacia
+atrás</td>
+<td>departamental</td>
+<td>medio: OCR de PDF antiguos</td>
+</tr>
+</tbody>
+</table>
+<p>Lo que ninguna de estas fuentes cierra: edad a nivel municipal antes
+de 1979 y causa de muerte antes de 1953 (salvo la distinción homicidio /
+otras de los anuarios).</p>
+</body>
+</html>
