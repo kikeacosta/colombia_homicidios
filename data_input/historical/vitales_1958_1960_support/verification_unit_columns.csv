@@ -1,0 +1,701 @@
+year,unit,col,total,sum,n_na,n_nodata,n_mun,state,resid
+1958,Amazonas,1,6,6,0,0,1,verified,0
+1958,Amazonas,2,106,106,0,0,1,verified,0
+1958,Amazonas,3,106,106,0,0,1,verified,0
+1958,Amazonas,4,212,212,0,0,1,verified,0
+1958,Amazonas,5,2,2,0,0,1,verified,0
+1958,Amazonas,6,3,3,0,0,1,verified,0
+1958,Amazonas,7,5,5,0,0,1,verified,0
+1958,Amazonas,8,6,6,0,0,1,verified,0
+1958,Amazonas,9,11,11,0,0,1,verified,0
+1958,Amazonas,10,17,17,0,0,1,verified,0
+1958,Antioquia,1,12332,12302,0,0,100,does not add up,30
+1958,Antioquia,2,46095,46095,0,0,100,verified,0
+1958,Antioquia,3,44759,44759,0,0,100,verified,0
+1958,Antioquia,4,90854,90854,0,0,100,verified,0
+1958,Antioquia,5,5186,5186,0,0,100,verified,0
+1958,Antioquia,6,4196,4198,0,0,100,does not add up,-2
+1958,Antioquia,7,9382,9382,0,0,100,verified,0
+1958,Antioquia,8,13216,13216,0,0,100,verified,0
+1958,Antioquia,9,12081,12081,0,0,100,verified,0
+1958,Antioquia,10,25297,25297,0,0,100,verified,0
+1958,Arauca,1,55,55,0,0,1,verified,0
+1958,Arauca,2,226,226,0,0,1,verified,0
+1958,Arauca,3,206,206,0,0,1,verified,0
+1958,Arauca,4,432,432,0,0,1,verified,0
+1958,Arauca,5,13,13,0,0,1,verified,0
+1958,Arauca,6,6,6,0,0,1,verified,0
+1958,Arauca,7,19,19,0,0,1,verified,0
+1958,Arauca,8,42,42,0,0,1,verified,0
+1958,Arauca,9,28,28,0,0,1,verified,0
+1958,Arauca,10,70,70,0,0,1,verified,0
+1958,Atlántico,1,2834,2834,0,0,21,verified,0
+1958,Atlántico,2,15040,15040,0,0,21,verified,0
+1958,Atlántico,3,14336,14336,0,0,21,verified,0
+1958,Atlántico,4,29376,29376,0,0,21,verified,0
+1958,Atlántico,5,911,911,0,0,21,verified,0
+1958,Atlántico,6,739,739,0,0,21,verified,0
+1958,Atlántico,7,1650,1650,0,0,21,verified,0
+1958,Atlántico,8,2898,2898,0,0,21,verified,0
+1958,Atlántico,9,2735,2735,0,0,21,verified,0
+1958,Atlántico,10,5633,5633,0,0,21,verified,0
+1958,Bolívar,1,3547,3547,0,0,43,verified,0
+1958,Bolívar,2,13059,13059,0,0,43,verified,0
+1958,Bolívar,3,12844,12844,0,0,43,verified,0
+1958,Bolívar,4,25903,25903,0,0,43,verified,0
+1958,Bolívar,5,750,750,0,0,43,verified,0
+1958,Bolívar,6,574,574,0,0,43,verified,0
+1958,Bolívar,7,1324,1324,0,0,43,verified,0
+1958,Bolívar,8,2658,2658,0,0,43,verified,0
+1958,Bolívar,9,2516,2516,0,0,43,verified,0
+1958,Bolívar,10,5174,5174,0,0,43,verified,0
+1958,Boyacá,1,5210,5210,0,0,118,verified,0
+1958,Boyacá,2,17450,17450,0,7,118,verified (cells printed as no data excluded),0
+1958,Boyacá,3,16805,16805,0,7,118,verified (cells printed as no data excluded),0
+1958,Boyacá,4,34255,34255,0,7,118,verified (cells printed as no data excluded),0
+1958,Boyacá,5,1673,1673,0,5,118,verified (cells printed as no data excluded),0
+1958,Boyacá,6,1319,1319,0,5,118,verified (cells printed as no data excluded),0
+1958,Boyacá,7,2992,2992,0,5,118,verified (cells printed as no data excluded),0
+1958,Boyacá,8,5220,5220,0,5,118,verified (cells printed as no data excluded),0
+1958,Boyacá,9,5004,5004,0,5,118,verified (cells printed as no data excluded),0
+1958,Boyacá,10,10224,10224,0,5,118,verified (cells printed as no data excluded),0
+1958,Caldas,1,8080,8080,0,0,45,verified,0
+1958,Caldas,2,30277,30277,0,0,45,verified,0
+1958,Caldas,3,29070,29070,0,0,45,verified,0
+1958,Caldas,4,59347,59347,0,0,45,verified,0
+1958,Caldas,5,4462,4462,0,0,45,verified,0
+1958,Caldas,6,3839,3839,0,0,45,verified,0
+1958,Caldas,7,8301,8301,0,0,45,verified,0
+1958,Caldas,8,11745,11745,0,0,45,verified,0
+1958,Caldas,9,9538,9538,0,0,45,verified,0
+1958,Caldas,10,21283,21283,0,0,45,verified,0
+1958,Caquetá,1,154,154,0,0,4,verified,0
+1958,Caquetá,2,800,800,0,0,4,verified,0
+1958,Caquetá,3,762,762,0,0,4,verified,0
+1958,Caquetá,4,1562,1562,0,0,4,verified,0
+1958,Caquetá,5,170,170,0,0,4,verified,0
+1958,Caquetá,6,116,116,0,0,4,verified,0
+1958,Caquetá,7,286,286,0,0,4,verified,0
+1958,Caquetá,8,483,483,0,0,4,verified,0
+1958,Caquetá,9,347,347,0,0,4,verified,0
+1958,Caquetá,10,830,830,0,0,4,verified,0
+1958,Cauca,1,2734,2734,0,0,33,verified,0
+1958,Cauca,2,9895,9895,0,0,33,verified,0
+1958,Cauca,3,9444,9444,0,0,33,verified,0
+1958,Cauca,4,19339,19339,0,0,33,verified,0
+1958,Cauca,5,1362,1362,0,0,33,verified,0
+1958,Cauca,6,1175,1175,0,0,33,verified,0
+1958,Cauca,7,2537,2537,0,0,33,verified,0
+1958,Cauca,8,4061,4061,0,0,33,verified,0
+1958,Cauca,9,3897,3897,0,0,33,verified,0
+1958,Cauca,10,7958,7958,0,0,33,verified,0
+1958,Chocó,1,397,397,0,0,13,verified,0
+1958,Chocó,2,1720,1720,0,0,13,verified,0
+1958,Chocó,3,1651,1651,0,0,13,verified,0
+1958,Chocó,4,3371,3371,0,0,13,verified,0
+1958,Chocó,5,186,186,0,0,13,verified,0
+1958,Chocó,6,160,160,0,0,13,verified,0
+1958,Chocó,7,346,346,0,0,13,verified,0
+1958,Chocó,8,678,678,0,0,13,verified,0
+1958,Chocó,9,649,649,0,0,13,verified,0
+1958,Chocó,10,1327,1327,0,0,13,verified,0
+1958,Cundinamarca,1,13617,13617,0,0,108,verified,0
+1958,Cundinamarca,2,46206,46206,0,0,108,verified,0
+1958,Cundinamarca,3,45651,45651,0,0,108,verified,0
+1958,Cundinamarca,4,91857,91857,0,0,108,verified,0
+1958,Cundinamarca,5,4225,4225,0,0,108,verified,0
+1958,Cundinamarca,6,3611,3611,0,0,108,verified,0
+1958,Cundinamarca,7,7836,7836,0,0,108,verified,0
+1958,Cundinamarca,8,12540,12540,0,0,108,verified,0
+1958,Cundinamarca,9,11842,11842,0,0,108,verified,0
+1958,Cundinamarca,10,24382,24382,0,0,108,verified,0
+1958,Córdoba,1,2247,2247,0,0,19,verified,0
+1958,Córdoba,2,9357,9357,0,0,19,verified,0
+1958,Córdoba,3,8972,8972,0,0,19,verified,0
+1958,Córdoba,4,18329,18329,0,0,19,verified,0
+1958,Córdoba,5,224,224,0,0,19,verified,0
+1958,Córdoba,6,191,191,0,0,19,verified,0
+1958,Córdoba,7,415,415,0,0,19,verified,0
+1958,Córdoba,8,885,885,0,0,19,verified,0
+1958,Córdoba,9,814,814,0,0,19,verified,0
+1958,Córdoba,10,1699,1699,0,0,19,verified,0
+1958,Huila,1,1910,1910,0,0,31,verified,0
+1958,Huila,2,8168,8168,0,0,31,verified,0
+1958,Huila,3,7830,7830,0,0,31,verified,0
+1958,Huila,4,15998,15998,0,0,31,verified,0
+1958,Huila,5,915,915,0,0,31,verified,0
+1958,Huila,6,748,748,0,0,31,verified,0
+1958,Huila,7,1663,1663,0,0,31,verified,0
+1958,Huila,8,2543,2543,0,0,31,verified,0
+1958,Huila,9,2255,2255,0,0,31,verified,0
+1958,Huila,10,4798,4798,0,0,31,verified,0
+1958,La Guajira,1,264,264,0,0,7,verified,0
+1958,La Guajira,2,1644,1644,0,0,7,verified,0
+1958,La Guajira,3,1683,1683,0,0,7,verified,0
+1958,La Guajira,4,3327,3327,0,0,7,verified,0
+1958,La Guajira,5,66,66,0,0,7,verified,0
+1958,La Guajira,6,67,67,0,0,7,verified,0
+1958,La Guajira,7,133,133,0,0,7,verified,0
+1958,La Guajira,8,192,192,0,0,7,verified,0
+1958,La Guajira,9,196,196,0,0,7,verified,0
+1958,La Guajira,10,388,388,0,0,7,verified,0
+1958,Magdalena,1,2125,2125,0,0,28,verified,0
+1958,Magdalena,2,8160,8160,0,0,28,verified,0
+1958,Magdalena,3,7789,7789,0,0,28,verified,0
+1958,Magdalena,4,15949,15949,0,0,28,verified,0
+1958,Magdalena,5,708,708,0,0,28,verified,0
+1958,Magdalena,6,565,565,0,0,28,verified,0
+1958,Magdalena,7,1273,1273,0,0,28,verified,0
+1958,Magdalena,8,2252,2252,0,0,28,verified,0
+1958,Magdalena,9,1998,1998,0,0,28,verified,0
+1958,Magdalena,10,4250,4250,0,0,28,verified,0
+1958,Meta,1,540,540,0,0,7,verified,0
+1958,Meta,2,2108,2108,0,1,7,verified (cells printed as no data excluded),0
+1958,Meta,3,2289,2289,0,1,7,verified (cells printed as no data excluded),0
+1958,Meta,4,4397,4397,0,1,7,verified (cells printed as no data excluded),0
+1958,Meta,5,235,235,0,1,7,verified (cells printed as no data excluded),0
+1958,Meta,6,210,210,0,1,7,verified (cells printed as no data excluded),0
+1958,Meta,7,445,445,0,1,7,verified (cells printed as no data excluded),0
+1958,Meta,8,714,714,0,1,7,verified (cells printed as no data excluded),0
+1958,Meta,9,608,608,0,1,7,verified (cells printed as no data excluded),0
+1958,Meta,10,1322,1322,0,1,7,verified (cells printed as no data excluded),0
+1958,Nariño,1,2752,2752,0,0,49,verified,0
+1958,Nariño,2,13052,13052,0,0,49,verified,0
+1958,Nariño,3,12960,12960,0,0,49,verified,0
+1958,Nariño,4,26012,26012,0,0,49,verified,0
+1958,Nariño,5,1642,1642,0,0,49,verified,0
+1958,Nariño,6,1299,1299,0,0,49,verified,0
+1958,Nariño,7,2941,2941,0,0,49,verified,0
+1958,Nariño,8,4817,4817,0,0,49,verified,0
+1958,Nariño,9,4532,4532,0,0,49,verified,0
+1958,Nariño,10,9349,9349,0,0,49,verified,0
+1958,Norte de Santander,1,2637,2637,0,0,34,verified,0
+1958,Norte de Santander,2,11412,11412,0,0,34,verified,0
+1958,Norte de Santander,3,11171,11171,0,0,34,verified,0
+1958,Norte de Santander,4,22583,22583,0,0,34,verified,0
+1958,Norte de Santander,5,1241,1241,0,0,34,verified,0
+1958,Norte de Santander,6,1156,1156,0,0,34,verified,0
+1958,Norte de Santander,7,2397,2397,0,0,34,verified,0
+1958,Norte de Santander,8,3535,3535,0,0,34,verified,0
+1958,Norte de Santander,9,3228,3228,0,0,34,verified,0
+1958,Norte de Santander,10,6763,6763,0,0,34,verified,0
+1958,Putumayo,1,258,258,0,0,3,verified,0
+1958,Putumayo,2,643,643,0,0,3,verified,0
+1958,Putumayo,3,630,630,0,0,3,verified,0
+1958,Putumayo,4,1273,1273,0,0,3,verified,0
+1958,Putumayo,5,93,93,0,0,3,verified,0
+1958,Putumayo,6,51,51,0,0,3,verified,0
+1958,Putumayo,7,144,144,0,0,3,verified,0
+1958,Putumayo,8,300,300,0,0,3,verified,0
+1958,Putumayo,9,225,225,0,0,3,verified,0
+1958,Putumayo,10,525,525,0,0,3,verified,0
+1958,San Andrés y Providencia,1,41,41,0,0,2,verified,0
+1958,San Andrés y Providencia,2,214,214,0,0,2,verified,0
+1958,San Andrés y Providencia,3,124,124,0,0,2,verified,0
+1958,San Andrés y Providencia,4,338,338,0,0,2,verified,0
+1958,San Andrés y Providencia,5,8,8,0,0,2,verified,0
+1958,San Andrés y Providencia,6,7,7,0,0,2,verified,0
+1958,San Andrés y Providencia,7,15,15,0,0,2,verified,0
+1958,San Andrés y Providencia,8,35,35,0,0,2,verified,0
+1958,San Andrés y Providencia,9,32,32,0,0,2,verified,0
+1958,San Andrés y Providencia,10,67,67,0,0,2,verified,0
+1958,Santander,1,4982,4982,0,0,74,verified,0
+1958,Santander,2,18668,18668,0,0,74,verified,0
+1958,Santander,3,18189,18189,0,0,74,verified,0
+1958,Santander,4,36857,36857,0,0,74,verified,0
+1958,Santander,5,1833,1833,0,0,74,verified,0
+1958,Santander,6,1577,1577,0,0,74,verified,0
+1958,Santander,7,3410,3410,0,0,74,verified,0
+1958,Santander,8,6009,6009,0,0,74,verified,0
+1958,Santander,9,5324,5324,0,0,74,verified,0
+1958,Santander,10,11333,11333,0,0,74,verified,0
+1958,Tolima,1,4005,4002,0,0,43,does not add up,3
+1958,Tolima,2,15164,15164,0,0,43,verified,0
+1958,Tolima,3,14340,14340,0,0,43,verified,0
+1958,Tolima,4,29504,29504,0,0,43,verified,0
+1958,Tolima,5,2025,2025,0,1,43,verified (cells printed as no data excluded),0
+1958,Tolima,6,1732,1732,0,1,43,verified (cells printed as no data excluded),0
+1958,Tolima,7,3757,3757,0,1,43,verified (cells printed as no data excluded),0
+1958,Tolima,8,6387,6387,0,1,43,verified (cells printed as no data excluded),0
+1958,Tolima,9,5268,5268,0,1,43,verified (cells printed as no data excluded),0
+1958,Tolima,10,11655,11655,0,1,43,verified (cells printed as no data excluded),0
+1958,Valle del Cauca,1,7772,7772,0,0,42,verified,0
+1958,Valle del Cauca,2,27730,27730,0,0,42,verified,0
+1958,Valle del Cauca,3,26453,26453,0,0,42,verified,0
+1958,Valle del Cauca,4,54183,54183,0,0,42,verified,0
+1958,Valle del Cauca,5,3976,3976,0,0,42,verified,0
+1958,Valle del Cauca,6,3304,3304,0,0,42,verified,0
+1958,Valle del Cauca,7,7280,7280,0,0,42,verified,0
+1958,Valle del Cauca,8,10697,10697,0,0,42,verified,0
+1958,Valle del Cauca,9,8630,8630,0,0,42,verified,0
+1958,Valle del Cauca,10,19327,19327,0,0,42,verified,0
+1958,Vaupés,1,13,13,0,0,1,verified,0
+1958,Vaupés,2,188,188,0,0,1,verified,0
+1958,Vaupés,3,68,68,0,0,1,verified,0
+1958,Vaupés,4,256,256,0,0,1,verified,0
+1958,Vaupés,5,1,1,0,0,1,verified,0
+1958,Vaupés,6,1,1,0,0,1,verified,0
+1958,Vaupés,7,2,2,0,0,1,verified,0
+1958,Vaupés,8,7,7,0,0,1,verified,0
+1958,Vaupés,9,3,3,0,0,1,verified,0
+1958,Vaupés,10,10,10,0,0,1,verified,0
+1958,Vichada,1,4,4,0,0,1,verified,0
+1958,Vichada,2,27,27,0,0,1,verified,0
+1958,Vichada,3,20,20,0,0,1,verified,0
+1958,Vichada,4,47,47,0,0,1,verified,0
+1958,Vichada,5,NA,0,0,1,1,total unknown,NA
+1958,Vichada,6,NA,0,0,1,1,total unknown,NA
+1958,Vichada,7,NA,0,0,1,1,total unknown,NA
+1958,Vichada,8,NA,0,0,1,1,total unknown,NA
+1958,Vichada,9,NA,0,0,1,1,total unknown,NA
+1958,Vichada,10,NA,0,0,1,1,total unknown,NA
+1959,Antioquia,1,13158,13158,0,1,101,verified (cells printed as no data excluded),0
+1959,Antioquia,2,47930,47930,0,1,101,verified (cells printed as no data excluded),0
+1959,Antioquia,3,46744,46744,0,1,101,verified (cells printed as no data excluded),0
+1959,Antioquia,4,94674,94674,0,1,101,verified (cells printed as no data excluded),0
+1959,Antioquia,5,5096,5096,0,0,101,verified,0
+1959,Antioquia,6,4194,4194,0,0,101,verified,0
+1959,Antioquia,7,9290,9290,0,0,101,verified,0
+1959,Antioquia,8,13618,13618,0,0,101,verified,0
+1959,Antioquia,9,12494,12494,0,0,101,verified,0
+1959,Antioquia,10,26112,26112,0,0,101,verified,0
+1959,Arauca,1,42,42,0,1,5,verified (cells printed as no data excluded),0
+1959,Arauca,2,265,265,0,1,5,verified (cells printed as no data excluded),0
+1959,Arauca,3,248,248,0,1,5,verified (cells printed as no data excluded),0
+1959,Arauca,4,513,513,0,1,5,verified (cells printed as no data excluded),0
+1959,Arauca,5,6,6,0,2,5,verified (cells printed as no data excluded),0
+1959,Arauca,6,7,7,0,2,5,verified (cells printed as no data excluded),0
+1959,Arauca,7,13,13,0,2,5,verified (cells printed as no data excluded),0
+1959,Arauca,8,41,41,0,2,5,verified (cells printed as no data excluded),0
+1959,Arauca,9,37,37,0,2,5,verified (cells printed as no data excluded),0
+1959,Arauca,10,78,78,0,2,5,verified (cells printed as no data excluded),0
+1959,Atlántico,1,2882,2882,0,0,21,verified,0
+1959,Atlántico,2,15062,15062,0,0,21,verified,0
+1959,Atlántico,3,14664,14664,0,0,21,verified,0
+1959,Atlántico,4,29726,29726,0,0,21,verified,0
+1959,Atlántico,5,834,834,0,0,21,verified,0
+1959,Atlántico,6,648,648,0,0,21,verified,0
+1959,Atlántico,7,1482,1482,0,0,21,verified,0
+1959,Atlántico,8,2683,2683,0,0,21,verified,0
+1959,Atlántico,9,2597,2597,0,0,21,verified,0
+1959,Atlántico,10,5280,5280,0,0,21,verified,0
+1959,Bolívar,1,3543,3543,0,0,43,verified,0
+1959,Bolívar,2,13957,13957,0,0,43,verified,0
+1959,Bolívar,3,13054,13054,0,0,43,verified,0
+1959,Bolívar,4,27011,27011,0,0,43,verified,0
+1959,Bolívar,5,776,776,0,0,43,verified,0
+1959,Bolívar,6,596,596,0,0,43,verified,0
+1959,Bolívar,7,1372,1372,0,0,43,verified,0
+1959,Bolívar,8,2686,2686,0,0,43,verified,0
+1959,Bolívar,9,2569,2569,0,0,43,verified,0
+1959,Bolívar,10,5255,5255,0,0,43,verified,0
+1959,Boyacá,1,5488,5420,0,2,116,no data in source for some cells,68
+1959,Boyacá,2,18361,18361,0,4,116,verified (cells printed as no data excluded),0
+1959,Boyacá,3,17375,17375,0,4,116,verified (cells printed as no data excluded),0
+1959,Boyacá,4,35736,35208,0,4,116,no data in source for some cells,528
+1959,Boyacá,5,1822,1822,0,6,116,verified (cells printed as no data excluded),0
+1959,Boyacá,6,1558,1558,0,6,116,verified (cells printed as no data excluded),0
+1959,Boyacá,7,3380,3380,0,6,116,verified (cells printed as no data excluded),0
+1959,Boyacá,8,5681,5681,0,6,116,verified (cells printed as no data excluded),0
+1959,Boyacá,9,5780,5780,0,6,116,verified (cells printed as no data excluded),0
+1959,Boyacá,10,11461,11461,0,6,116,verified (cells printed as no data excluded),0
+1959,Caldas,1,7879,7879,0,0,45,verified,0
+1959,Caldas,2,31185,31185,0,0,45,verified,0
+1959,Caldas,3,29688,29688,0,0,45,verified,0
+1959,Caldas,4,60873,60873,0,0,45,verified,0
+1959,Caldas,5,4581,4581,0,0,45,verified,0
+1959,Caldas,6,3826,3826,0,0,45,verified,0
+1959,Caldas,7,8407,8407,0,0,45,verified,0
+1959,Caldas,8,11515,11515,0,0,45,verified,0
+1959,Caldas,9,9563,9563,0,0,45,verified,0
+1959,Caldas,10,21078,21078,0,0,45,verified,0
+1959,Caquetá,1,162,162,0,0,4,verified,0
+1959,Caquetá,2,824,824,0,0,4,verified,0
+1959,Caquetá,3,709,709,0,0,4,verified,0
+1959,Caquetá,4,1533,1533,0,0,4,verified,0
+1959,Caquetá,5,94,94,0,0,4,verified,0
+1959,Caquetá,6,86,86,0,0,4,verified,0
+1959,Caquetá,7,180,180,0,0,4,verified,0
+1959,Caquetá,8,340,340,0,0,4,verified,0
+1959,Caquetá,9,266,266,0,0,4,verified,0
+1959,Caquetá,10,606,606,0,0,4,verified,0
+1959,Cauca,1,2717,2719,0,1,33,no data in source for some cells,-2
+1959,Cauca,2,10060,10060,0,0,33,verified,0
+1959,Cauca,3,10255,10255,0,0,33,verified,0
+1959,Cauca,4,20315,20315,0,0,33,verified,0
+1959,Cauca,5,1310,1310,0,0,33,verified,0
+1959,Cauca,6,1082,1082,0,0,33,verified,0
+1959,Cauca,7,2392,2392,0,0,33,verified,0
+1959,Cauca,8,4038,4038,0,0,33,verified,0
+1959,Cauca,9,3867,3867,0,0,33,verified,0
+1959,Cauca,10,7905,7905,0,0,33,verified,0
+1959,Chocó,1,415,415,0,2,15,verified (cells printed as no data excluded),0
+1959,Chocó,2,1859,1834,0,2,15,no data in source for some cells,25
+1959,Chocó,3,1810,1829,0,2,15,no data in source for some cells,-19
+1959,Chocó,4,3669,3663,0,2,15,no data in source for some cells,6
+1959,Chocó,5,210,210,0,2,15,verified (cells printed as no data excluded),0
+1959,Chocó,6,165,165,0,2,15,verified (cells printed as no data excluded),0
+1959,Chocó,7,375,375,0,2,15,verified (cells printed as no data excluded),0
+1959,Chocó,8,633,633,0,2,15,verified (cells printed as no data excluded),0
+1959,Chocó,9,556,556,0,2,15,verified (cells printed as no data excluded),0
+1959,Chocó,10,1189,1189,0,2,15,verified (cells printed as no data excluded),0
+1959,Cundinamarca,1,14387,14387,0,0,108,verified,0
+1959,Cundinamarca,2,47756,46956,0,0,108,does not add up,800
+1959,Cundinamarca,3,46579,46579,0,0,108,verified,0
+1959,Cundinamarca,4,94335,93535,0,0,108,does not add up,800
+1959,Cundinamarca,5,4326,4326,0,0,108,verified,0
+1959,Cundinamarca,6,3513,3513,0,0,108,verified,0
+1959,Cundinamarca,7,7839,7839,0,0,108,verified,0
+1959,Cundinamarca,8,12755,12755,0,0,108,verified,0
+1959,Cundinamarca,9,12237,12237,0,0,108,verified,0
+1959,Cundinamarca,10,24992,24992,0,0,108,verified,0
+1959,Córdoba,1,1887,1887,0,0,20,verified,0
+1959,Córdoba,2,10078,10078,0,0,20,verified,0
+1959,Córdoba,3,9756,9756,0,0,20,verified,0
+1959,Córdoba,4,19834,19834,0,0,20,verified,0
+1959,Córdoba,5,269,269,0,0,20,verified,0
+1959,Córdoba,6,257,257,0,0,20,verified,0
+1959,Córdoba,7,526,526,0,0,20,verified,0
+1959,Córdoba,8,1034,1034,0,0,20,verified,0
+1959,Córdoba,9,1086,1086,0,0,20,verified,0
+1959,Córdoba,10,2120,2120,0,0,20,verified,0
+1959,Huila,1,2244,2244,0,0,32,verified,0
+1959,Huila,2,8550,8530,0,0,32,does not add up,20
+1959,Huila,3,7934,7949,0,0,32,does not add up,-15
+1959,Huila,4,16484,16484,0,0,32,verified,0
+1959,Huila,5,854,854,0,0,32,verified,0
+1959,Huila,6,726,726,0,0,32,verified,0
+1959,Huila,7,1580,1580,0,0,32,verified,0
+1959,Huila,8,2359,2359,0,0,32,verified,0
+1959,Huila,9,2158,2158,0,0,32,verified,0
+1959,Huila,10,4517,4517,0,0,32,verified,0
+1959,La Guajira,1,210,210,0,0,7,verified,0
+1959,La Guajira,2,1842,1842,0,0,7,verified,0
+1959,La Guajira,3,1932,1932,0,0,7,verified,0
+1959,La Guajira,4,3774,3774,0,0,7,verified,0
+1959,La Guajira,5,79,79,0,0,7,verified,0
+1959,La Guajira,6,79,79,0,0,7,verified,0
+1959,La Guajira,7,158,158,0,0,7,verified,0
+1959,La Guajira,8,247,247,0,0,7,verified,0
+1959,La Guajira,9,279,279,0,0,7,verified,0
+1959,La Guajira,10,526,526,0,0,7,verified,0
+1959,Magdalena,1,2092,2092,0,0,30,verified,0
+1959,Magdalena,2,8731,8731,0,0,30,verified,0
+1959,Magdalena,3,8600,8600,0,0,30,verified,0
+1959,Magdalena,4,17331,17331,0,0,30,verified,0
+1959,Magdalena,5,643,643,0,0,30,verified,0
+1959,Magdalena,6,531,531,0,0,30,verified,0
+1959,Magdalena,7,1174,1174,0,0,30,verified,0
+1959,Magdalena,8,2077,2077,0,0,30,verified,0
+1959,Magdalena,9,1874,1874,0,0,30,verified,0
+1959,Magdalena,10,3951,3951,0,0,30,verified,0
+1959,Meta,1,715,715,0,0,9,verified,0
+1959,Meta,2,2341,2341,0,3,9,verified (cells printed as no data excluded),0
+1959,Meta,3,2311,2311,0,3,9,verified (cells printed as no data excluded),0
+1959,Meta,4,4652,4652,0,3,9,verified (cells printed as no data excluded),0
+1959,Meta,5,216,216,0,0,9,verified,0
+1959,Meta,6,207,207,0,0,9,verified,0
+1959,Meta,7,423,423,0,0,9,verified,0
+1959,Meta,8,693,693,0,0,9,verified,0
+1959,Meta,9,565,565,0,0,9,verified,0
+1959,Meta,10,1258,1258,0,0,9,verified,0
+1959,Nariño,1,3213,3213,0,0,49,verified,0
+1959,Nariño,2,13379,13379,0,0,49,verified,0
+1959,Nariño,3,13444,13444,0,0,49,verified,0
+1959,Nariño,4,26823,26823,0,0,49,verified,0
+1959,Nariño,5,1701,1701,0,0,49,verified,0
+1959,Nariño,6,1392,1392,0,0,49,verified,0
+1959,Nariño,7,3093,3093,0,0,49,verified,0
+1959,Nariño,8,4573,4573,0,0,49,verified,0
+1959,Nariño,9,4534,4534,0,0,49,verified,0
+1959,Nariño,10,9107,9107,0,0,49,verified,0
+1959,Norte de Santander,1,3283,3283,0,0,34,verified,0
+1959,Norte de Santander,2,11564,11564,0,0,34,verified,0
+1959,Norte de Santander,3,11128,11128,0,0,34,verified,0
+1959,Norte de Santander,4,22692,22692,0,0,34,verified,0
+1959,Norte de Santander,5,1279,1279,0,0,34,verified,0
+1959,Norte de Santander,6,1079,1079,0,0,34,verified,0
+1959,Norte de Santander,7,2358,2358,0,0,34,verified,0
+1959,Norte de Santander,8,3791,3791,0,0,34,verified,0
+1959,Norte de Santander,9,3360,3360,0,0,34,verified,0
+1959,Norte de Santander,10,7151,7151,0,0,34,verified,0
+1959,San Andrés y Providencia,1,43,43,0,0,2,verified,0
+1959,San Andrés y Providencia,2,157,157,0,0,2,verified,0
+1959,San Andrés y Providencia,3,134,134,0,0,2,verified,0
+1959,San Andrés y Providencia,4,291,291,0,0,2,verified,0
+1959,San Andrés y Providencia,5,7,7,0,0,2,verified,0
+1959,San Andrés y Providencia,6,3,3,0,0,2,verified,0
+1959,San Andrés y Providencia,7,10,10,0,0,2,verified,0
+1959,San Andrés y Providencia,8,35,35,0,0,2,verified,0
+1959,San Andrés y Providencia,9,29,29,0,0,2,verified,0
+1959,San Andrés y Providencia,10,64,64,0,0,2,verified,0
+1959,Santander,1,5158,5158,0,0,75,verified,0
+1959,Santander,2,19117,19117,0,0,75,verified,0
+1959,Santander,3,18448,18448,0,0,75,verified,0
+1959,Santander,4,37565,37565,0,0,75,verified,0
+1959,Santander,5,1955,1955,0,0,75,verified,0
+1959,Santander,6,1687,1687,0,0,75,verified,0
+1959,Santander,7,3642,3642,0,0,75,verified,0
+1959,Santander,8,6668,6668,0,0,75,verified,0
+1959,Santander,9,6133,6133,0,0,75,verified,0
+1959,Santander,10,12801,12801,0,0,75,verified,0
+1959,Tolima,1,4302,4302,0,1,43,verified (cells printed as no data excluded),0
+1959,Tolima,2,15615,15615,0,1,43,verified (cells printed as no data excluded),0
+1959,Tolima,3,15311,15311,0,1,43,verified (cells printed as no data excluded),0
+1959,Tolima,4,30926,30926,0,1,43,verified (cells printed as no data excluded),0
+1959,Tolima,5,2006,2006,0,1,43,verified (cells printed as no data excluded),0
+1959,Tolima,6,1673,1673,0,1,43,verified (cells printed as no data excluded),0
+1959,Tolima,7,3679,3679,0,1,43,verified (cells printed as no data excluded),0
+1959,Tolima,8,6180,6180,0,1,43,verified (cells printed as no data excluded),0
+1959,Tolima,9,5406,5406,0,1,43,verified (cells printed as no data excluded),0
+1959,Tolima,10,11586,11586,0,1,43,verified (cells printed as no data excluded),0
+1959,Valle del Cauca,1,7633,7633,0,0,42,verified,0
+1959,Valle del Cauca,2,29653,29653,0,0,42,verified,0
+1959,Valle del Cauca,3,28322,28322,0,0,42,verified,0
+1959,Valle del Cauca,4,57975,57975,0,0,42,verified,0
+1959,Valle del Cauca,5,4101,4101,0,0,42,verified,0
+1959,Valle del Cauca,6,3292,3292,0,0,42,verified,0
+1959,Valle del Cauca,7,7393,7393,0,0,42,verified,0
+1959,Valle del Cauca,8,10464,10464,0,0,42,verified,0
+1959,Valle del Cauca,9,8684,8684,0,0,42,verified,0
+1959,Valle del Cauca,10,19148,19148,0,0,42,verified,0
+1960,Amazonas,1,42,42,0,3,8,verified (cells printed as no data excluded),0
+1960,Amazonas,2,79,79,0,4,8,verified (cells printed as no data excluded),0
+1960,Amazonas,3,82,82,0,4,8,verified (cells printed as no data excluded),0
+1960,Amazonas,4,161,161,0,4,8,verified (cells printed as no data excluded),0
+1960,Amazonas,5,3,3,0,2,8,verified (cells printed as no data excluded),0
+1960,Amazonas,6,3,3,0,2,8,verified (cells printed as no data excluded),0
+1960,Amazonas,7,6,6,0,3,8,verified (cells printed as no data excluded),0
+1960,Amazonas,8,9,9,0,2,8,verified (cells printed as no data excluded),0
+1960,Amazonas,9,12,12,0,2,8,verified (cells printed as no data excluded),0
+1960,Amazonas,10,21,21,0,2,8,verified (cells printed as no data excluded),0
+1960,Antioquia,1,12897,12882,0,1,102,no data in source for some cells,15
+1960,Antioquia,2,49496,49496,0,1,102,verified (cells printed as no data excluded),0
+1960,Antioquia,3,47586,47586,0,1,102,verified (cells printed as no data excluded),0
+1960,Antioquia,4,97082,97082,0,1,102,verified (cells printed as no data excluded),0
+1960,Antioquia,5,5431,5431,0,0,102,verified,0
+1960,Antioquia,6,4494,4494,0,0,102,verified,0
+1960,Antioquia,7,9925,9925,0,0,102,verified,0
+1960,Antioquia,8,14701,14701,0,0,102,verified,0
+1960,Antioquia,9,13820,13820,0,0,102,verified,0
+1960,Antioquia,10,28521,28521,0,0,102,verified,0
+1960,Arauca,1,61,61,0,1,5,verified (cells printed as no data excluded),0
+1960,Arauca,2,316,316,0,1,5,verified (cells printed as no data excluded),0
+1960,Arauca,3,280,280,0,1,5,verified (cells printed as no data excluded),0
+1960,Arauca,4,596,596,0,1,5,verified (cells printed as no data excluded),0
+1960,Arauca,5,11,11,0,1,5,verified (cells printed as no data excluded),0
+1960,Arauca,6,22,22,0,1,5,verified (cells printed as no data excluded),0
+1960,Arauca,7,33,33,0,1,5,verified (cells printed as no data excluded),0
+1960,Arauca,8,50,50,0,1,5,verified (cells printed as no data excluded),0
+1960,Arauca,9,50,50,0,1,5,verified (cells printed as no data excluded),0
+1960,Arauca,10,100,100,0,1,5,verified (cells printed as no data excluded),0
+1960,Atlántico,1,2984,2984,0,0,21,verified,0
+1960,Atlántico,2,11583,11583,0,0,21,verified,0
+1960,Atlántico,3,11496,11496,0,0,21,verified,0
+1960,Atlántico,4,23079,23079,0,0,21,verified,0
+1960,Atlántico,5,787,787,0,0,21,verified,0
+1960,Atlántico,6,636,636,0,0,21,verified,0
+1960,Atlántico,7,1423,1423,0,0,21,verified,0
+1960,Atlántico,8,2534,2534,0,0,21,verified,0
+1960,Atlántico,9,2407,2407,0,0,21,verified,0
+1960,Atlántico,10,4941,4941,0,0,21,verified,0
+1960,Bolívar,1,3653,3653,0,0,43,verified,0
+1960,Bolívar,2,13096,13096,0,0,43,verified,0
+1960,Bolívar,3,12286,12286,0,0,43,verified,0
+1960,Bolívar,4,25382,25382,0,0,43,verified,0
+1960,Bolívar,5,722,722,0,0,43,verified,0
+1960,Bolívar,6,568,568,0,0,43,verified,0
+1960,Bolívar,7,1290,1290,0,0,43,verified,0
+1960,Bolívar,8,2633,2633,0,0,43,verified,0
+1960,Bolívar,9,2556,2556,0,0,43,verified,0
+1960,Bolívar,10,5189,5189,0,0,43,verified,0
+1960,Boyacá,1,5176,5176,0,7,121,verified (cells printed as no data excluded),0
+1960,Boyacá,2,18369,18369,0,6,121,verified (cells printed as no data excluded),0
+1960,Boyacá,3,17849,17849,0,6,121,verified (cells printed as no data excluded),0
+1960,Boyacá,4,36218,36218,0,6,121,verified (cells printed as no data excluded),0
+1960,Boyacá,5,1808,1808,0,6,121,verified (cells printed as no data excluded),0
+1960,Boyacá,6,1505,1505,0,6,121,verified (cells printed as no data excluded),0
+1960,Boyacá,7,3313,3313,0,6,121,verified (cells printed as no data excluded),0
+1960,Boyacá,8,5807,5807,0,6,121,verified (cells printed as no data excluded),0
+1960,Boyacá,9,6131,6131,0,6,121,verified (cells printed as no data excluded),0
+1960,Boyacá,10,11938,11938,0,6,121,verified (cells printed as no data excluded),0
+1960,Caldas,1,6906,6906,0,0,47,verified,0
+1960,Caldas,2,30021,30021,0,0,47,verified,0
+1960,Caldas,3,28739,28739,0,0,47,verified,0
+1960,Caldas,4,58760,58760,0,0,47,verified,0
+1960,Caldas,5,4450,4450,0,0,47,verified,0
+1960,Caldas,6,4026,4026,0,0,47,verified,0
+1960,Caldas,7,8476,8476,0,0,47,verified,0
+1960,Caldas,8,11477,11477,0,0,47,verified,0
+1960,Caldas,9,9993,9993,0,0,47,verified,0
+1960,Caldas,10,21470,21470,0,0,47,verified,0
+1960,Caquetá,1,179,179,0,2,7,verified (cells printed as no data excluded),0
+1960,Caquetá,2,584,584,0,3,7,verified (cells printed as no data excluded),0
+1960,Caquetá,3,517,517,0,3,7,verified (cells printed as no data excluded),0
+1960,Caquetá,4,1101,1101,0,3,7,verified (cells printed as no data excluded),0
+1960,Caquetá,5,107,107,0,2,7,verified (cells printed as no data excluded),0
+1960,Caquetá,6,102,102,0,2,7,verified (cells printed as no data excluded),0
+1960,Caquetá,7,209,209,0,2,7,verified (cells printed as no data excluded),0
+1960,Caquetá,8,396,396,0,2,7,verified (cells printed as no data excluded),0
+1960,Caquetá,9,300,300,0,2,7,verified (cells printed as no data excluded),0
+1960,Caquetá,10,696,696,0,2,7,verified (cells printed as no data excluded),0
+1960,Cauca,1,2641,2641,0,0,33,verified,0
+1960,Cauca,2,10566,10566,0,0,33,verified,0
+1960,Cauca,3,10577,10577,0,0,33,verified,0
+1960,Cauca,4,21143,21143,0,0,33,verified,0
+1960,Cauca,5,1405,1405,0,0,33,verified,0
+1960,Cauca,6,1163,1163,0,0,33,verified,0
+1960,Cauca,7,2568,2568,0,0,33,verified,0
+1960,Cauca,8,4387,4387,0,0,33,verified,0
+1960,Cauca,9,4317,4317,0,0,33,verified,0
+1960,Cauca,10,8704,8704,0,0,33,verified,0
+1960,Chocó,1,532,532,0,0,16,verified,0
+1960,Chocó,2,1820,1820,0,1,16,verified (cells printed as no data excluded),0
+1960,Chocó,3,1805,1805,0,1,16,verified (cells printed as no data excluded),0
+1960,Chocó,4,3625,3625,0,1,16,verified (cells printed as no data excluded),0
+1960,Chocó,5,218,218,0,0,16,verified,0
+1960,Chocó,6,172,172,0,0,16,verified,0
+1960,Chocó,7,390,390,0,0,16,verified,0
+1960,Chocó,8,756,756,0,0,16,verified,0
+1960,Chocó,9,624,624,0,0,16,verified,0
+1960,Chocó,10,1380,1380,0,0,16,verified,0
+1960,Cundinamarca,1,14519,14519,0,0,114,verified,0
+1960,Cundinamarca,2,48532,49226,0,0,114,does not add up,-694
+1960,Cundinamarca,3,47699,47633,0,0,114,does not add up,66
+1960,Cundinamarca,4,96231,96859,0,0,114,does not add up,-628
+1960,Cundinamarca,5,4417,4417,0,0,114,verified,0
+1960,Cundinamarca,6,3626,3626,0,0,114,verified,0
+1960,Cundinamarca,7,8043,8043,0,0,114,verified,0
+1960,Cundinamarca,8,13527,13499,0,0,114,does not add up,28
+1960,Cundinamarca,9,12968,12958,0,0,114,does not add up,10
+1960,Cundinamarca,10,26495,26457,0,0,114,does not add up,38
+1960,Córdoba,1,2056,2056,0,0,21,verified,0
+1960,Córdoba,2,10162,10162,0,0,21,verified,0
+1960,Córdoba,3,9620,9620,0,0,21,verified,0
+1960,Córdoba,4,19782,19782,0,0,21,verified,0
+1960,Córdoba,5,260,260,0,0,21,verified,0
+1960,Córdoba,6,219,219,0,0,21,verified,0
+1960,Córdoba,7,479,479,0,0,21,verified,0
+1960,Córdoba,8,1101,1101,0,0,21,verified,0
+1960,Córdoba,9,1021,1021,0,0,21,verified,0
+1960,Córdoba,10,2122,2122,0,0,21,verified,0
+1960,Huila,1,2025,2025,0,0,33,verified,0
+1960,Huila,2,7608,7608,0,0,33,verified,0
+1960,Huila,3,7419,7419,0,0,33,verified,0
+1960,Huila,4,15027,15027,0,0,33,verified,0
+1960,Huila,5,866,866,0,0,33,verified,0
+1960,Huila,6,705,705,0,0,33,verified,0
+1960,Huila,7,1571,1571,0,0,33,verified,0
+1960,Huila,8,2526,2526,0,0,33,verified,0
+1960,Huila,9,2199,2199,0,0,33,verified,0
+1960,Huila,10,4725,4725,0,0,33,verified,0
+1960,La Guajira,1,252,252,0,0,7,verified,0
+1960,La Guajira,2,1925,1925,0,0,7,verified,0
+1960,La Guajira,3,1856,1856,0,0,7,verified,0
+1960,La Guajira,4,3781,3781,0,0,7,verified,0
+1960,La Guajira,5,53,53,0,0,7,verified,0
+1960,La Guajira,6,38,38,0,0,7,verified,0
+1960,La Guajira,7,91,91,0,0,7,verified,0
+1960,La Guajira,8,183,183,0,0,7,verified,0
+1960,La Guajira,9,183,183,0,0,7,verified,0
+1960,La Guajira,10,366,366,0,0,7,verified,0
+1960,Magdalena,1,1862,1862,0,0,30,verified,0
+1960,Magdalena,2,8967,8967,0,0,30,verified,0
+1960,Magdalena,3,8664,8664,0,0,30,verified,0
+1960,Magdalena,4,17631,17631,0,0,30,verified,0
+1960,Magdalena,5,562,562,0,0,30,verified,0
+1960,Magdalena,6,478,478,0,0,30,verified,0
+1960,Magdalena,7,1040,1040,0,0,30,verified,0
+1960,Magdalena,8,1866,1866,0,0,30,verified,0
+1960,Magdalena,9,1704,1704,0,0,30,verified,0
+1960,Magdalena,10,3570,3570,0,0,30,verified,0
+1960,Meta,1,764,764,0,2,9,verified (cells printed as no data excluded),0
+1960,Meta,2,2531,2531,0,2,9,verified (cells printed as no data excluded),0
+1960,Meta,3,2458,2458,0,2,9,verified (cells printed as no data excluded),0
+1960,Meta,4,4989,4989,0,2,9,verified (cells printed as no data excluded),0
+1960,Meta,5,231,231,0,2,9,verified (cells printed as no data excluded),0
+1960,Meta,6,178,178,0,2,9,verified (cells printed as no data excluded),0
+1960,Meta,7,409,409,0,2,9,verified (cells printed as no data excluded),0
+1960,Meta,8,672,672,0,2,9,verified (cells printed as no data excluded),0
+1960,Meta,9,571,571,0,2,9,verified (cells printed as no data excluded),0
+1960,Meta,10,1243,1243,0,2,9,verified (cells printed as no data excluded),0
+1960,Nariño,1,3507,3507,0,0,49,verified,0
+1960,Nariño,2,12261,12261,0,0,49,verified,0
+1960,Nariño,3,12166,12166,0,0,49,verified,0
+1960,Nariño,4,24427,24427,0,0,49,verified,0
+1960,Nariño,5,1856,1856,0,0,49,verified,0
+1960,Nariño,6,1507,1507,0,0,49,verified,0
+1960,Nariño,7,3363,3363,0,0,49,verified,0
+1960,Nariño,8,5119,5119,0,0,49,verified,0
+1960,Nariño,9,4913,4913,0,0,49,verified,0
+1960,Nariño,10,10032,10032,0,0,49,verified,0
+1960,Norte de Santander,1,2883,2883,0,0,35,verified,0
+1960,Norte de Santander,2,11046,11046,0,0,35,verified,0
+1960,Norte de Santander,3,10434,10434,0,0,35,verified,0
+1960,Norte de Santander,4,21480,21480,0,0,35,verified,0
+1960,Norte de Santander,5,1121,1121,0,0,35,verified,0
+1960,Norte de Santander,6,909,909,0,0,35,verified,0
+1960,Norte de Santander,7,2030,2030,0,0,35,verified,0
+1960,Norte de Santander,8,3421,3421,0,0,35,verified,0
+1960,Norte de Santander,9,3035,3035,0,0,35,verified,0
+1960,Norte de Santander,10,6456,6456,0,0,35,verified,0
+1960,San Andrés y Providencia,1,46,46,0,0,2,verified,0
+1960,San Andrés y Providencia,2,272,272,0,0,2,verified,0
+1960,San Andrés y Providencia,3,225,225,0,0,2,verified,0
+1960,San Andrés y Providencia,4,497,497,0,0,2,verified,0
+1960,San Andrés y Providencia,5,4,4,0,0,2,verified,0
+1960,San Andrés y Providencia,6,5,5,0,0,2,verified,0
+1960,San Andrés y Providencia,7,9,9,0,0,2,verified,0
+1960,San Andrés y Providencia,8,51,51,0,0,2,verified,0
+1960,San Andrés y Providencia,9,29,29,0,0,2,verified,0
+1960,San Andrés y Providencia,10,80,80,0,0,2,verified,0
+1960,Santander,1,5258,5258,0,0,75,verified,0
+1960,Santander,2,19348,19348,0,0,75,verified,0
+1960,Santander,3,18633,18633,0,0,75,verified,0
+1960,Santander,4,37981,37981,0,0,75,verified,0
+1960,Santander,5,1962,1962,0,0,75,verified,0
+1960,Santander,6,1644,1644,0,0,75,verified,0
+1960,Santander,7,3606,3606,0,0,75,verified,0
+1960,Santander,8,6506,6506,0,0,75,verified,0
+1960,Santander,9,6027,6027,0,0,75,verified,0
+1960,Santander,10,12533,12533,0,0,75,verified,0
+1960,Tolima,1,6568,6568,0,0,43,verified,0
+1960,Tolima,2,14667,14667,0,0,43,verified,0
+1960,Tolima,3,14124,14124,0,0,43,verified,0
+1960,Tolima,4,28791,28791,0,0,43,verified,0
+1960,Tolima,5,2005,2005,0,0,43,verified,0
+1960,Tolima,6,1670,1670,0,0,43,verified,0
+1960,Tolima,7,3675,3675,0,0,43,verified,0
+1960,Tolima,8,6021,6021,0,0,43,verified,0
+1960,Tolima,9,5342,5342,0,0,43,verified,0
+1960,Tolima,10,11363,11363,0,0,43,verified,0
+1960,Valle del Cauca,1,9565,9565,0,1,42,verified (cells printed as no data excluded),0
+1960,Valle del Cauca,2,29998,29998,0,1,42,verified (cells printed as no data excluded),0
+1960,Valle del Cauca,3,28651,28651,0,1,42,verified (cells printed as no data excluded),0
+1960,Valle del Cauca,4,58649,58649,0,1,42,verified (cells printed as no data excluded),0
+1960,Valle del Cauca,5,4191,4191,0,1,42,verified (cells printed as no data excluded),0
+1960,Valle del Cauca,6,3375,3375,0,1,42,verified (cells printed as no data excluded),0
+1960,Valle del Cauca,7,7566,7566,0,1,42,verified (cells printed as no data excluded),0
+1960,Valle del Cauca,8,11126,11126,0,1,42,verified (cells printed as no data excluded),0
+1960,Valle del Cauca,9,9382,9382,0,1,42,verified (cells printed as no data excluded),0
+1960,Valle del Cauca,10,20508,20508,0,1,42,verified (cells printed as no data excluded),0
+1960,Vaupés,1,6,6,0,7,8,verified (cells printed as no data excluded),0
+1960,Vaupés,2,101,101,0,7,8,verified (cells printed as no data excluded),0
+1960,Vaupés,3,78,78,0,7,8,verified (cells printed as no data excluded),0
+1960,Vaupés,4,179,179,0,7,8,verified (cells printed as no data excluded),0
+1960,Vaupés,5,1,1,0,7,8,verified (cells printed as no data excluded),0
+1960,Vaupés,6,0,0,0,7,8,verified (cells printed as no data excluded),0
+1960,Vaupés,7,1,1,0,7,8,verified (cells printed as no data excluded),0
+1960,Vaupés,8,4,4,0,7,8,verified (cells printed as no data excluded),0
+1960,Vaupés,9,1,1,0,7,8,verified (cells printed as no data excluded),0
+1960,Vaupés,10,5,5,0,7,8,verified (cells printed as no data excluded),0
+1960,Vichada,1,12,12,0,0,1,verified,0
+1960,Vichada,2,42,42,0,0,1,verified,0
+1960,Vichada,3,43,43,0,0,1,verified,0
+1960,Vichada,4,85,85,0,0,1,verified,0
+1960,Vichada,5,1,1,0,0,1,verified,0
+1960,Vichada,6,2,2,0,0,1,verified,0
+1960,Vichada,7,3,3,0,0,1,verified,0
+1960,Vichada,8,5,5,0,0,1,verified,0
+1960,Vichada,9,4,4,0,0,1,verified,0
+1960,Vichada,10,9,9,0,0,1,verified,0

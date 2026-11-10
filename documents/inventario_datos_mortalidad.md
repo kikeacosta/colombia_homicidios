@@ -1,6 +1,6 @@
 # Inventario de datos de mortalidad: Colombia, niveles nacional, departamental y municipal
 
-Estado al 2026-11-09. Rutas relativas a la raíz del proyecto (`C:\Users\kikep\gits\colombia_homicidios`).
+Estado al 2026-11-10. Rutas relativas a la raíz del proyecto (`C:\Users\kikep\gits\colombia_homicidios`).
 `data_input/` contiene insumos originales o transcritos; `data_inter/` productos intermedios de los scripts;
 `output/tables/` las series finales.
 
@@ -33,7 +33,9 @@ Lo que la figura muestra de un vistazo:
 - **Homicidios departamentales 1966-1978** dependen de una sola fuente, la Policía Nacional, que
   es solo total.
 - **Municipal antes de 1979**: 14 años de defunciones (1924-1960) y tres censos (1938, 1951,
-  1964), todo sin edad.
+  1964), todo sin edad. Para 1958-1960 la fila "DANE Estadística vital (OCR)" es la lectura
+  verificada de la publicación original (defunciones totales y de menores de un año por sexo,
+  bautizos, matrimonios), que sustituye a la transcripción para esos tres años.
 - **Antes de 1923** solo hay población: censos 1905-1918, totales anuales de los anuarios y las
   tablas pivotales de LAMBdA.
 
@@ -43,7 +45,7 @@ Lo que la figura muestra de un vistazo:
 |---|---|---|---|---|
 | **Nacional** | Totales por sexo 1923-1984 (anuarios DANE); por edad y sexo 1926-2015 (LAMBdA), 1953-1977 con causa (OMS), 1979-2023 (EEVV microdatos); WPP 2024 1950-2100 por edad simple, con componente de crisis separado | 1923-1965 (anuarios); 1953-1977 por edad (OMS A148/A149); 1962-2002 (Policía, suma de deptos); 1979-2023 por edad (EEVV); MSE JEP-CEV-HRDAG 1985-2018 por edad quinquenal; UCDP GED 1989-2024 | Censos 1905-2018; edad simple × sexo en los censos 1938 y 1973 (`census_tables`); anuarios 1905-1985; WPP 1950-2100 (población y fecundidad por edad simple); DANE 1985-2042 | LAMBdA 1x1 1950-2015 y abreviadas pivotales 1905-2008 (en Drive); WPP 2024 completas 1950-2100; DANE 1985-2020 |
 | **Departamental** | Totales (y sexo cuando existe) 1915-1984 en tres particiones territoriales (v06); versión previa v01 1923-1984; 1979-2023 agregables desde EEVV municipal | 1923-1965 (anuarios, v02, 27 deptos); 1962-2002 Policía Nacional (40 jurisdicciones); 1979-2023 EEVV | Censos 1905, 1912, 1918, 1928, 1938, 1951, 1964, 1973 (v03); edad quinquenal × sexo en 1938 y 1951 y población ajustada por cobertura 1973 (`census_tables`); DANE 1985-2042 | DANE abreviadas departamentales 1985-2020 |
-| **Municipal** | Totales por sexo en 14 años: 1924-1932, 1935-1936, 1958-1960 (v03, 850 municipios); versión previa v01 1925-1960 (13 años); 1979-2023 por edad, sexo y causa (EEVV) | 1979-2023 EEVV (dx_v); estimaciones ajustadas 1985-2017 (`data_inter`) | Censos 1938, 1951, 1964 (v03, 881 municipios); DANE 1985-2042 por sexo y edad | ninguna (tasas por municipio 1985-2017 en `data_inter`) |
+| **Municipal** | Totales por sexo en 14 años: 1924-1932, 1935-1936, 1958-1960 (v03, 850 municipios); 1958-1960 verificados contra los totales departamentales, con bautizos y defunciones de menores de un año por sexo (`dane_vitales_1958_1960`, 828-872 unidades); versión previa v01 1925-1960 (13 años); 1979-2023 por edad, sexo y causa (EEVV) | 1979-2023 EEVV (dx_v); estimaciones ajustadas 1985-2017 (`data_inter`) | Censos 1938, 1951, 1964 (v03, 881 municipios); DANE 1985-2042 por sexo y edad | ninguna (tasas por municipio 1985-2017 en `data_inter`) |
 
 Huecos principales:
 
@@ -104,6 +106,7 @@ Huecos principales:
 | Archivo | Años | Unidades | Detalle | Fuente y notas | Scripts |
 |---|---|---|---|---|---|
 | `data_input/historical/col_gap_analysis_1920_1985_department_deaths_clean_v06.csv` | 1915-1984 | 34 deptos (15-32 con dato por año) | total, hombres, mujeres; banderas `data_flag_dane` (111 celdas) y `data_flag_collaborator` (222) con nota y página; `source_new` (anuarios y boletines BOL_xxx); intendencias y comisarías existentes por año | Separador `;`. Anuarios y boletines DANE; desde 1960 en parte sumado del municipal v03. Nota típica: "Existe subregistro por problemas de cobertura" | ninguno (20 y 21 usan la variante aggregated) |
+| `data_input/historical/dane_vitales_1958_1960_departamental.csv` (+ suma por departamento de `…_municipal.csv`) | 1958-1960 | 16 deptos (Meta desde 1960) + intendencias y comisarías agrupadas; sumando el municipal, también cada intendencia y comisaría publicada | población a mitad de año, matrimonios, bautizos, defunciones y defunciones de menores de un año (cuadro departamental, solo totales); por sexo sumando el archivo municipal, que cuadra con el cuadro en todos los deptos salvo Cundinamarca 1960 (38 defunciones) | DANE, "Estadística vital 1958 a 1960"; transcrito del PDF y verificado (cada columna suma el total publicado) | hist/24; 32 |
 | `…_v06_territories_aggregated.csv` | 1915-1984 | 25 unidades (intendencias y comisarías sumadas al depto de origen) | ídem | Partición estable en el tiempo; su suma coincide con `national_deaths_v03` salvo en 1926, 1931, 1932, 1934 (nacional menor) y 1956-1961 (Bogotá en fila propia y dentro de Cundinamarca) | hist/20, hist/21 |
 | `…_v06_territories_split.csv` | 1915-1984 | 33 unidades (territorios nacionales separados) | ídem | Mismo contenido con otra partición; totales algo menores por territorios sin dato | ninguno |
 | `data_input/historical/archive_v01_v02/deaths_department_v01.csv` | 1923-1984 | 34 deptos | total, hombres, mujeres | Versión anterior (2026-10-13) de la misma transcripción; sustituida por v06 | ninguno (archivado; sustituido por col_gap_analysis) |
@@ -125,7 +128,8 @@ Huecos principales:
 
 | Archivo | Años | Unidades | Detalle | Fuente y notas | Scripts |
 |---|---|---|---|---|---|
-| `data_input/historical/col_gap_analysis_1920_1985_municipal_deaths_clean_v03.csv` | 1924-1932, 1935-1936, 1958-1960 (14 años) | 850 municipios en 31 deptos (552-799 con dato por año) | total, hombres, mujeres, `dane_code` (4,5 % sin código), `known_data_problem` | Estadística vital y anuarios DANE. Cobertura parcial del año frecuente ("only 4 of 12 months reported") | hist/20, hist/21 |
+| `data_input/historical/dane_vitales_1958_1960_municipal.csv` | 1958-1960 | 828-872 municipios, intendencias y comisarías por año (2.534 filas; 2.518 con código DIVIPOLA); 1959 sin comisarías y 1960 sin Putumayo, como en la fuente | matrimonios; bautizos, defunciones de menores de un año y defunciones totales, cada una hombres/mujeres/total; `nodata_in_source` (celdas "..." de la fuente), `flag` (unidades cuyas columnas no cuadran) | DANE, "Estadística vital 1958 a 1960" (1962), leída del PDF `LD_558_1958_1960_EJ_2.pdf` (texto + dos pasadas OCR + transcripción previa, celda a celda; H + M = T y suma = TOTAL de la unidad = cuadro departamental). 674 de 700 columnas-unidad verificadas; las 26 restantes son inconsistencias del impreso o columnas con celdas "...". Corrige cinco municipio-años de la transcripción previa (Risaralda 1958, San Sebastián de Buenavista e Istmina 1959, Pinchote 1959, La Vega 1960). Soporte en `vitales_1958_1960_support/` | hist/24; 32 |
+| `data_input/historical/col_gap_analysis_1920_1985_municipal_deaths_clean_v03.csv` | 1924-1932, 1935-1936, 1958-1960 (14 años) | 850 municipios en 31 deptos (552-799 con dato por año) | total, hombres, mujeres, `dane_code` (4,5 % sin código), `known_data_problem` | Estadística vital y anuarios DANE. Cobertura parcial del año frecuente ("only 4 of 12 months reported"). Para 1958-1960 preferir `dane_vitales_1958_1960_municipal.csv` (misma fuente, verificada) | hist/20, hist/21 |
 | `data_input/historical/archive_v01_v02/deaths_municipal_v01.csv` | 1925-1960 (13 años) | 1.148 municipios | total, hombres, mujeres, dane_code, año de creación | Versión anterior; problemas de codificación en los nombres | ninguno (archivado; sustituido por col_gap_analysis) |
 | `data_input/historical/col_gap_analysis_1920_1985_municipal_population_clean_v03.csv` | censos 1938, 1951, 1964 | 881 municipios (766-847 con dato) | total, hombres, mujeres, dane_code (5,6 % sin código) | Censos DANE | hist/20, hist/21 |
 | `data_input/historical/archive_v01_v02/population_municipal_v01.csv` | censos 1938, 1951, 1964 | 904 municipios | total, sexo | Versión anterior | ninguno (archivado; sustituido por col_gap_analysis) |

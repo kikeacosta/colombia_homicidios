@@ -1080,6 +1080,9 @@ Departamental,Defunciones,"Anuarios y boletines DANE, total y sexo",1981,Por sex
 Departamental,Defunciones,"Anuarios y boletines DANE, total y sexo",1982,Por sexo,FALSE,1,data_input/historical/col_gap_analysis_1920_1985_department_deaths_clean_v06_territories_aggregated.csv
 Departamental,Defunciones,"Anuarios y boletines DANE, total y sexo",1983,Por sexo,FALSE,1,data_input/historical/col_gap_analysis_1920_1985_department_deaths_clean_v06_territories_aggregated.csv
 Departamental,Defunciones,"Anuarios y boletines DANE, total y sexo",1984,Por sexo,FALSE,1,data_input/historical/col_gap_analysis_1920_1985_department_deaths_clean_v06_territories_aggregated.csv
+Departamental,Defunciones,"DANE Estadística vital 1958-1960 (OCR), total y sexo",1958,Por sexo,FALSE,0.9903381642512077,data_input/historical/dane_vitales_1958_1960_municipal.csv (suma por departamento); dane_vitales_1958_1960_departamental.csv
+Departamental,Defunciones,"DANE Estadística vital 1958-1960 (OCR), total y sexo",1959,Por sexo,FALSE,0.986810551558753,data_input/historical/dane_vitales_1958_1960_municipal.csv (suma por departamento); dane_vitales_1958_1960_departamental.csv
+Departamental,Defunciones,"DANE Estadística vital 1958-1960 (OCR), total y sexo",1960,Por sexo,FALSE,0.9759174311926605,data_input/historical/dane_vitales_1958_1960_municipal.csv (suma por departamento); dane_vitales_1958_1960_departamental.csv
 Departamental,Defunciones,EEVV (suma municipal),1979,"Edad, sexo y causa",TRUE,NA,data_inter/deaths_munic_age_1979-2023.rds
 Departamental,Defunciones,EEVV (suma municipal),1980,"Edad, sexo y causa",FALSE,NA,data_inter/deaths_munic_age_1979-2023.rds
 Departamental,Defunciones,EEVV (suma municipal),1981,"Edad, sexo y causa",FALSE,NA,data_inter/deaths_munic_age_1979-2023.rds
@@ -1322,6 +1325,9 @@ Municipal,Población,DANE proyecciones (hasta 2023; a 2042),2020,Edad y sexo,FAL
 Municipal,Población,DANE proyecciones (hasta 2023; a 2042),2021,Edad y sexo,FALSE,NA,DANEpop/*.xlsx
 Municipal,Población,DANE proyecciones (hasta 2023; a 2042),2022,Edad y sexo,FALSE,NA,DANEpop/*.xlsx
 Municipal,Población,DANE proyecciones (hasta 2023; a 2042),2023,Edad y sexo,FALSE,NA,DANEpop/*.xlsx
+Municipal,Defunciones,"DANE Estadística vital 1958-1960 (OCR), total y sexo",1958,Por sexo,FALSE,0.9903381642512077,data_input/historical/dane_vitales_1958_1960_municipal.csv
+Municipal,Defunciones,"DANE Estadística vital 1958-1960 (OCR), total y sexo",1959,Por sexo,FALSE,0.986810551558753,data_input/historical/dane_vitales_1958_1960_municipal.csv
+Municipal,Defunciones,"DANE Estadística vital 1958-1960 (OCR), total y sexo",1960,Por sexo,FALSE,0.9759174311926605,data_input/historical/dane_vitales_1958_1960_municipal.csv
 Municipal,Defunciones,EEVV microdatos DANE,1979,"Edad, sexo y causa",TRUE,NA,"micro/Defun*.txt, nofetal*.csv"
 Municipal,Defunciones,EEVV microdatos DANE,1980,"Edad, sexo y causa",FALSE,NA,"micro/Defun*.txt, nofetal*.csv"
 Municipal,Defunciones,EEVV microdatos DANE,1981,"Edad, sexo y causa",FALSE,NA,"micro/Defun*.txt, nofetal*.csv"

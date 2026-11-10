@@ -54,6 +54,19 @@ serie_csv <- function(nivel, dominio, serie, file, delim = ",", unit = "departme
          parcial = s$parcial, archivo = gap(file), share = s$share)
 }
 
+# DANE "Estadística vital 1958-1960" (OCR of the municipal tables, script
+# historical/24): deaths by sex and municipality, verified against the
+# departmental totals; the departmental series is the same file summed by
+# department (16 departments plus the intendencias and comisarías)
+serie_vitales <- function(nivel) {
+  d <- read_csv(paste0(hist, "dane_vitales_1958_1960_municipal.csv"), show_col_types = FALSE)
+  s <- d |> summarise(share = mean(!is.na(deaths_t)), .by = year)
+  archivo <- paste0(hist, "dane_vitales_1958_1960_municipal.csv",
+                    if (nivel == "Departamental") " (suma por departamento); dane_vitales_1958_1960_departamental.csv" else "")
+  tibble(nivel = nivel, dominio = "Defunciones", serie = "DANE Estadística vital 1958-1960 (OCR), total y sexo",
+         year = s$year, detalle = "Por sexo", parcial = s$share < 0.8, archivo = archivo, share = s$share)
+}
+
 # years in the LAMBdA text extracts
 lambda_years <- \(f) unique(read_table(paste0(hist, f), show_col_types = FALSE)[[grep("year", names(read_table(paste0(hist, f), show_col_types = FALSE, n_max = 1)), ignore.case = TRUE)[1]]])
 
@@ -133,6 +146,7 @@ dep <- bind_rows(
         "Solo total", "historical/census_tables/ (en incorporación)"),
   serie("Departamental", "Población", "DANE proyecciones (hasta 2023; a 2042)", 1985:2023, "Edad y sexo",
         "DANEpop/*.xlsx"),
+  serie_vitales("Departamental"),
   serie_csv("Departamental", "Defunciones", "Anuarios y boletines DANE, total y sexo",
             "department_deaths_clean_v06_territories_aggregated.csv", delim = ";"),
   serie("Departamental", "Defunciones", "EEVV (suma municipal)", 1979:2023, "Edad, sexo y causa",
@@ -157,6 +171,7 @@ mun <- bind_rows(
         "DANEpop/*.xlsx"),
   serie_csv("Municipal", "Defunciones", "Estadística vital y anuarios DANE, total y sexo",
             "municipal_deaths_clean_v03.csv", unit = "municipality"),
+  serie_vitales("Municipal"),
   serie("Municipal", "Defunciones", "EEVV microdatos DANE", 1979:2023, "Edad, sexo y causa",
         "micro/Defun*.txt, nofetal*.csv", parcial = 1979),
   serie("Municipal", "Homicidios y violencia", "EEVV, muertes violentas", 1979:2023, "Edad y sexo",

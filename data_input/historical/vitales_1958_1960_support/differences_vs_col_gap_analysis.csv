@@ -1,0 +1,6 @@
+year,unit,cod_munic,municipio,deaths_t,ex_t,deaths_m,ex_m,deaths_f,ex_f,manual
+1958,Caldas,17616,RISARALDA,290,390,157,157,133,133,c9;c10
+1959,Chocó,27361,ISTMINA,126,56,72,22,54,34,
+1959,Magdalena,47692,SAN SEBASTIÁN DE BUENAVISTA,7,169,5,86,2,83,
+1959,Santander,68549,PINCHOTE,59,50,29,29,30,30,c8;c10
+1960,Cauca,19397,LA VEGA,332,331,152,152,180,180,c9=residual;c10=residual

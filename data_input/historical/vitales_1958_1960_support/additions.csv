@@ -1,0 +1,15 @@
+page,y,year,unit,name,is_total,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,note
+89,206,1960,San Andrés y Providencia,SAN ANDRES,FALSE,36,226,186,412,2,4,6,45,24,69,text layer merged the digits of the row ("36226186412"); values read on the page render and equal to TOTAL minus Providencia in every column
+20,442,1958,Chocó,TOTAL,TRUE,397,1720,1651,3371,186,160,346,678,649,1327,TOTAL row of Chocó 1958 missing from the text layer; read on the page render; deaths equal the departmental table
+39,226,1959,Boyacá,Aguazul,FALSE,2,0,0,0,.,.,.,.,.,.,row missing from the text layer (page 39 is a poor scan); read on the page render
+39,497,1959,Boyacá,Cómbita,FALSE,29,149,117,266,7,8,15,40,31,71,row missing from the text layer (page 39 is a poor scan); read on the page render
+39,516,1959,Boyacá,Coper,FALSE,20,98,113,211,8,4,12,25,16,41,row missing from the text layer (page 39 is a poor scan); read on the page render
+39,536,1959,Boyacá,Corrales,FALSE,24,87,95,182,3,13,16,23,31,54,row missing from the text layer (page 39 is a poor scan); read on the page render
+12,477,1958,Boyacá,Moreno,FALSE,0,.,.,.,.,.,.,.,.,.,row printed with a dash (marriages) and dots (no data) only; absent from the text layer
+12,561,1958,Boyacá,Orocué,FALSE,0,.,.,.,.,.,.,.,.,.,row printed with a dash and dots only; absent from the text layer
+13,609,1958,Boyacá,Ten,FALSE,0,.,.,.,.,.,.,.,.,.,row printed with a dash and dots only; absent from the text layer
+13,766,1958,Boyacá,Trinidad,FALSE,0,.,.,.,.,.,.,.,.,.,row printed with a dash and dots only; absent from the text layer
+14,251,1958,Boyacá,Zapatosa (Agua Azul),FALSE,0,.,.,.,.,.,.,.,.,.,row printed with a dash and dots only; absent from the text layer
+30,466,1958,Meta,Cumaral,FALSE,0,.,.,.,.,.,.,.,.,.,row printed with a dash and dots only; absent from the text layer
+49,430,1959,Chocó,Sipí,FALSE,.,.,.,.,.,.,.,.,.,.,row printed with dots only (no data); absent from the text layer
+87,770,1960,Valle del Cauca,El Dovio,FALSE,.,.,.,.,.,.,.,.,.,.,row printed with dots only (no data); absent from the text layer

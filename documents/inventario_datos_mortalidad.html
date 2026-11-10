@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
@@ -167,11 +167,11 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-    <style type="text/css">body{max-width:1100px;margin:2em auto;padding:0 1em;font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.45;color:#222}
-  h1{font-size:1.7em;border-bottom:2px solid #444;padding-bottom:.2em}h2{font-size:1.3em;margin-top:1.8em;border-bottom:1px solid #bbb}h3{font-size:1.1em}
-  table{border-collapse:collapse;width:100%;margin:1em 0;font-size:12.5px}th,td{border:1px solid #ccc;padding:4px 6px;vertical-align:top;text-align:left}th{background:#eee}tr:nth-child(even) td{background:#f7f7f7}
-  code{background:#f1f1f1;padding:1px 3px;font-size:12px;word-break:break-all}strong{color:#8a1c1c}
-  </style>
+      <style type="text/css">body{max-width:1100px;margin:2em auto;padding:0 1em;font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.45;color:#222}
+    h1{font-size:1.7em;border-bottom:2px solid #444;padding-bottom:.2em}h2{font-size:1.3em;margin-top:1.8em;border-bottom:1px solid #bbb}h3{font-size:1.1em}
+    table{border-collapse:collapse;width:100%;margin:1em 0;font-size:12.5px}th,td{border:1px solid #ccc;padding:4px 6px;vertical-align:top;text-align:left}th{background:#eee}tr:nth-child(even) td{background:#f7f7f7}
+    code{background:#f1f1f1;padding:1px 3px;font-size:12px;word-break:break-all}strong{color:#8a1c1c}
+    </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -184,7 +184,7 @@
 id="inventario-de-datos-de-mortalidad-colombia-niveles-nacional-departamental-y-municipal">Inventario
 de datos de mortalidad: Colombia, niveles nacional, departamental y
 municipal</h1>
-<p>Estado al 2026-11-09. Rutas relativas a la raíz del proyecto
+<p>Estado al 2026-11-10. Rutas relativas a la raíz del proyecto
 (<code>C:\Users\kikep\gits\colombia_homicidios</code>).
 <code>data_input/</code> contiene insumos originales o transcritos;
 <code>data_inter/</code> productos intermedios de los scripts;
@@ -226,7 +226,11 @@ con EEVV.</li>
 <li><strong>Homicidios departamentales 1966-1978</strong> dependen de
 una sola fuente, la Policía Nacional, que es solo total.</li>
 <li><strong>Municipal antes de 1979</strong>: 14 años de defunciones
-(1924-1960) y tres censos (1938, 1951, 1964), todo sin edad.</li>
+(1924-1960) y tres censos (1938, 1951, 1964), todo sin edad. Para
+1958-1960 la fila "DANE Estadística vital (OCR)" es la lectura
+verificada de la publicación original (defunciones totales y de menores
+de un año por sexo, bautizos, matrimonios), que sustituye a la
+transcripción para esos tres años.</li>
 <li><strong>Antes de 1923</strong> solo hay población: censos 1905-1918,
 totales anuales de los anuarios y las tablas pivotales de LAMBdA.</li>
 </ul>
@@ -273,8 +277,11 @@ quinquenal × sexo en 1938 y 1951 y población ajustada por cobertura 1973
 <tr class="odd">
 <td><strong>Municipal</strong></td>
 <td>Totales por sexo en 14 años: 1924-1932, 1935-1936, 1958-1960 (v03,
-850 municipios); versión previa v01 1925-1960 (13 años); 1979-2023 por
-edad, sexo y causa (EEVV)</td>
+850 municipios); 1958-1960 verificados contra los totales
+departamentales, con bautizos y defunciones de menores de un año por
+sexo (<code>dane_vitales_1958_1960</code>, 828-872 unidades); versión
+previa v01 1925-1960 (13 años); 1979-2023 por edad, sexo y causa
+(EEVV)</td>
 <td>1979-2023 EEVV (dx_v); estimaciones ajustadas 1985-2017
 (<code>data_inter</code>)</td>
 <td>Censos 1938, 1951, 1964 (v03, 881 municipios); DANE 1985-2042 por
@@ -620,6 +627,21 @@ problemas de cobertura"</td>
 <td>ninguno (20 y 21 usan la variante aggregated)</td>
 </tr>
 <tr class="even">
+<td><code>data_input/historical/dane_vitales_1958_1960_departamental.csv</code>
+(+ suma por departamento de <code>…_municipal.csv</code>)</td>
+<td>1958-1960</td>
+<td>16 deptos (Meta desde 1960) + intendencias y comisarías agrupadas;
+sumando el municipal, también cada intendencia y comisaría
+publicada</td>
+<td>población a mitad de año, matrimonios, bautizos, defunciones y
+defunciones de menores de un año (cuadro departamental, solo totales);
+por sexo sumando el archivo municipal, que cuadra con el cuadro en todos
+los deptos salvo Cundinamarca 1960 (38 defunciones)</td>
+<td>DANE, "Estadística vital 1958 a 1960"; transcrito del PDF y
+verificado (cada columna suma el total publicado)</td>
+<td>hist/24; 32</td>
+</tr>
+<tr class="odd">
 <td><code>…_v06_territories_aggregated.csv</code></td>
 <td>1915-1984</td>
 <td>25 unidades (intendencias y comisarías sumadas al depto de
@@ -631,7 +653,7 @@ origen)</td>
 Cundinamarca)</td>
 <td>hist/20, hist/21</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>…_v06_territories_split.csv</code></td>
 <td>1915-1984</td>
 <td>33 unidades (territorios nacionales separados)</td>
@@ -640,7 +662,7 @@ Cundinamarca)</td>
 territorios sin dato</td>
 <td>ninguno</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>data_input/historical/archive_v01_v02/deaths_department_v01.csv</code></td>
 <td>1923-1984</td>
 <td>34 deptos</td>
@@ -649,7 +671,7 @@ territorios sin dato</td>
 por v06</td>
 <td>ninguno (archivado; sustituido por col_gap_analysis)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_input/historical/col_gap_analysis_1920_1985_department_homicides_clean_v02.csv</code></td>
 <td>1923-1924, 1927-1931, 1936, 1938-1940, 1943-1949, 1951-1965 (33
 años)</td>
@@ -659,7 +681,7 @@ años)</td>
 más altas); "Department did not send data" frecuente</td>
 <td>hist/20, hist/21</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>data_input/historical/archive_v01_v02/homicides_department_v02.csv</code></td>
 <td>1923-1965</td>
 <td>27 deptos</td>
@@ -668,7 +690,7 @@ más altas); "Department did not send data" frecuente</td>
 <td>Versión anterior de la misma serie</td>
 <td>ninguno (archivado; sustituido por col_gap_analysis)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_input/historical/Homicidio 1962-2002 por depto de Policía_v1.xlsx</code></td>
 <td>1962-2002</td>
 <td>40 jurisdicciones (deptos y metropolitanas)</td>
@@ -676,7 +698,7 @@ más altas); "Department did not send data" frecuente</td>
 <td>Policía Nacional</td>
 <td>ninguno aún</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>data_input/historical/col_gap_analysis_1920_1985_department_population_clean_v03.csv</code></td>
 <td>censos 1905, 1912, 1918, 1928, 1938, 1951, 1964, 1973</td>
 <td>20-31 deptos según censo</td>
@@ -684,7 +706,7 @@ más altas); "Department did not send data" frecuente</td>
 <td>Separador <code>;</code>. Anuarios DANE</td>
 <td>hist/20, hist/21</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_input/historical/archive_v01_v02/population_department_v01.csv</code></td>
 <td>censos 1938, 1951, 1964</td>
 <td>34 deptos</td>
@@ -692,7 +714,7 @@ más altas); "Department did not send data" frecuente</td>
 <td>Versión anterior</td>
 <td>ninguno (archivado; sustituido por col_gap_analysis)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>data_input/historical/census_tables/census1951_dept_age5_sex_1938_1951.csv</code></td>
 <td>censos 1938 y 1951</td>
 <td>15 deptos, 3 intendencias, 7 comisarías (Vichada sin 1951)</td>
@@ -701,7 +723,7 @@ más altas); "Department did not send data" frecuente</td>
 identidades, hist/23)</td>
 <td>hist/23 (produce); ninguno aún</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_input/historical/census_tables/census1973_adjusted_population_units.csv</code></td>
 <td>censo 1973</td>
 <td>23 deptos, Bogotá D.E., 4 intendencias, 4 comisarías</td>
@@ -711,7 +733,7 @@ componente (hogares particulares, colectivos, áreas indígenas)</td>
 contra el Cuadro VIII.20, hist/23); omisión nacional 9,8 %</td>
 <td>hist/23 (produce); ninguno aún</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>data_input/micro/Defun*.txt</code> →
 <code>data_inter/deaths_munic_1979-2023.rds</code></td>
 <td>1979-2023</td>
@@ -720,7 +742,7 @@ contra el Cuadro VIII.20, hist/23); omisión nacional 9,8 %</td>
 <td>DANE EEVV</td>
 <td>02 → 03-19</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_input/DANEpop/*.xlsx</code></td>
 <td>1985-2042</td>
 <td>33 deptos (suma municipal)</td>
@@ -728,7 +750,7 @@ contra el Cuadro VIII.20, hist/23); omisión nacional 9,8 %</td>
 <td>DANE: retroproyecciones 1985-2017 y proyecciones 2018-2042</td>
 <td>01 → <code>data_inter/pop_munic_1985-2017.rds</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>data_input/lifetables/tablas_utf8.txt</code></td>
 <td>1985-2020 por quinquenios</td>
 <td>33 deptos</td>
@@ -736,7 +758,7 @@ contra el Cuadro VIII.20, hist/23); omisión nacional 9,8 %</td>
 <td>DANE</td>
 <td>24, 25</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_inter/completeness_deptos.rds</code>,
 <code>completeness_ggb.rds</code></td>
 <td>1985-2017</td>
@@ -745,7 +767,7 @@ contra el Cuadro VIII.20, hist/23); omisión nacional 9,8 %</td>
 <td>productos propios</td>
 <td>05-12</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>output/tables/completeness_empirical_dept_1985-2023.csv</code></td>
 <td>1985-2023</td>
 <td>33 deptos y grupo amazónico</td>
@@ -756,7 +778,7 @@ departamental (DANE 2007 duplica o triplica el nivel de la ENDS en
 Chocó, Cauca, Nariño y la Amazonía)</td>
 <td>33</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_input/historical/LB_800_1938.pdf</code>,
 <code>LB_811_1951_V_1.pdf</code> (12 MB, no versionados)</td>
 <td>censos 1938 y 1951</td>
@@ -781,16 +803,39 @@ Chocó, Cauca, Nariño y la Amazonía)</td>
 </thead>
 <tbody>
 <tr class="odd">
+<td><code>data_input/historical/dane_vitales_1958_1960_municipal.csv</code></td>
+<td>1958-1960</td>
+<td>828-872 municipios, intendencias y comisarías por año (2.534 filas;
+2.518 con código DIVIPOLA); 1959 sin comisarías y 1960 sin Putumayo,
+como en la fuente</td>
+<td>matrimonios; bautizos, defunciones de menores de un año y
+defunciones totales, cada una hombres/mujeres/total;
+<code>nodata_in_source</code> (celdas "..." de la fuente),
+<code>flag</code> (unidades cuyas columnas no cuadran)</td>
+<td>DANE, "Estadística vital 1958 a 1960" (1962), leída del PDF
+<code>LD_558_1958_1960_EJ_2.pdf</code> (texto + dos pasadas OCR +
+transcripción previa, celda a celda; H + M = T y suma = TOTAL de la
+unidad = cuadro departamental). 674 de 700 columnas-unidad verificadas;
+las 26 restantes son inconsistencias del impreso o columnas con celdas
+"...". Corrige cinco municipio-años de la transcripción previa
+(Risaralda 1958, San Sebastián de Buenavista e Istmina 1959, Pinchote
+1959, La Vega 1960). Soporte en
+<code>vitales_1958_1960_support/</code></td>
+<td>hist/24; 32</td>
+</tr>
+<tr class="even">
 <td><code>data_input/historical/col_gap_analysis_1920_1985_municipal_deaths_clean_v03.csv</code></td>
 <td>1924-1932, 1935-1936, 1958-1960 (14 años)</td>
 <td>850 municipios en 31 deptos (552-799 con dato por año)</td>
 <td>total, hombres, mujeres, <code>dane_code</code> (4,5 % sin código),
 <code>known_data_problem</code></td>
 <td>Estadística vital y anuarios DANE. Cobertura parcial del año
-frecuente ("only 4 of 12 months reported")</td>
+frecuente ("only 4 of 12 months reported"). Para 1958-1960 preferir
+<code>dane_vitales_1958_1960_municipal.csv</code> (misma fuente,
+verificada)</td>
 <td>hist/20, hist/21</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>data_input/historical/archive_v01_v02/deaths_municipal_v01.csv</code></td>
 <td>1925-1960 (13 años)</td>
 <td>1.148 municipios</td>
@@ -798,7 +843,7 @@ frecuente ("only 4 of 12 months reported")</td>
 <td>Versión anterior; problemas de codificación en los nombres</td>
 <td>ninguno (archivado; sustituido por col_gap_analysis)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_input/historical/col_gap_analysis_1920_1985_municipal_population_clean_v03.csv</code></td>
 <td>censos 1938, 1951, 1964</td>
 <td>881 municipios (766-847 con dato)</td>
@@ -806,7 +851,7 @@ frecuente ("only 4 of 12 months reported")</td>
 <td>Censos DANE</td>
 <td>hist/20, hist/21</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>data_input/historical/archive_v01_v02/population_municipal_v01.csv</code></td>
 <td>censos 1938, 1951, 1964</td>
 <td>904 municipios</td>
@@ -814,7 +859,7 @@ frecuente ("only 4 of 12 months reported")</td>
 <td>Versión anterior</td>
 <td>ninguno (archivado; sustituido por col_gap_analysis)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_input/micro/Defun*.txt</code> →
 <code>data_inter/deaths_munic_1979-2023.rds</code>,
 <code>deaths_munic_age_1979-2023.rds</code></td>
@@ -825,7 +870,7 @@ frecuente ("only 4 of 12 months reported")</td>
 <code>data_input/reference/DIVIPOLA-_Códigos_municipios_20260307.csv</code></td>
 <td>02 → 03-19, 30</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>data_input/DANEpop/DCD-…-Mun-1985-1994.xlsx</code>,
 <code>…1995-2004.xlsx</code>, <code>…2005-2017_VP.xlsx</code>,
 <code>PPED-AreaSexoEdadMun-2018-2042_VP.xlsx</code></td>
@@ -835,7 +880,7 @@ frecuente ("only 4 of 12 months reported")</td>
 <td>DANE</td>
 <td>01 → <code>data_inter/pop_munic_1985-2017.rds</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_inter/asdr_munic_1985-2017.rds</code>,
 <code>homicide_cdr_munic_1985-2017.rds</code>,
 <code>homicide_estimates_1985-2017_excs.rds</code>,

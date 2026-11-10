@@ -1,11 +1,11 @@
 ---
 title: "Inventario general del proyecto colombia_homicidios"
 subtitle: "Insumos, intermedios, salidas, scripts y documentos, con el estado de uso de cada dato"
-date: 2026-11-09
+date: 2026-11-10
 lang: es
 ---
 
-Estado al 2026-11-09. Rutas relativas a la raíz `C:\Users\kikep\gits\colombia_homicidios`.
+Estado al 2026-11-10. Rutas relativas a la raíz `C:\Users\kikep\gits\colombia_homicidios`.
 El inventario detallado de las fuentes de mortalidad por nivel geográfico está en
 `documents/inventario_datos_mortalidad.md`; este documento cubre todo el proyecto y señala
 qué datos no se están usando todavía (sección 7).
@@ -30,7 +30,7 @@ script experimental (`code/experimental/model_spatial.R`).
 
 | Carpeta | Contenido | Versionada en git |
 |---|---|---|
-| `code/` | 35 scripts R numerados, `historical/` (4), `experimental/` (1) | sí |
+| `code/` | 35 scripts R numerados, `historical/` (5), `experimental/` (1) | sí |
 | `data_input/` | insumos originales (2,9 GB) | solo `README.md` y los csv pequeños de `historical/` y `reference/` |
 | `data_inter/` | productos intermedios `.rds` (130 MB) y pruebas (`q_test/`, `model_variants/`) | no |
 | `output/` | tablas finales (`tables/`, 32 csv) y datos compartidos (csv.gz, parquet, diccionario) | sí |
@@ -54,6 +54,10 @@ Columna "Scripts": número del script que lo lee. "hist/" = `code/historical/`. 
 | `historical/col_gap_analysis_1920_1985_national_deaths_clean_v03.csv` | totales nacionales por sexo (anuarios DANE) | 1923-1984 | 3 KB | 22 |
 | `historical/col_gap_analysis_1920_1985_department_deaths_clean_v06.csv` (+ `_territories_aggregated`, `_territories_split`) | defunciones por departamento y sexo, con banderas de calidad y fuente por celda | 1915-1984 | 390 KB | hist/20, hist/21 (variante aggregated) |
 | `historical/col_gap_analysis_1920_1985_municipal_deaths_clean_v03.csv` | defunciones por municipio y sexo, 850 municipios | 14 años entre 1924 y 1960 | 3 MB | hist/20, hist/21 |
+| `historical/dane_vitales_1958_1960_municipal.csv` | DANE "Estadística vital 1958 a 1960": matrimonios, bautizos (H/M/T), defunciones de menores de un año (H/M/T) y defunciones totales (H/M/T) por municipio, 2.534 municipio-años (2.518 con código DIVIPOLA); 674 de 700 columnas-unidad verificadas contra las filas TOTAL y la tabla departamental | 1958-1960 | 320 KB | hist/24 (produce), 32; **sin uso** analítico aún |
+| `historical/dane_vitales_1958_1960_departamental.csv` | ídem por sección del país (16 departamentos e intendencias y comisarías agrupadas), con población a mitad de año y tasas publicadas | 1958-1960 | 6 KB | hist/24 (produce), 32 |
+| `historical/vitales_1958_1960_support/` (8 csv) | correcciones, adiciones y códigos de la lectura anterior; informes de verificación por columna-unidad, filas TOTAL vs tabla departamental y diferencias con `col_gap_analysis_…_municipal_deaths_v03` (5 municipio-años) | | 60 KB | hist/24 |
+| `historical/LD_558_1958_1960_EJ_2.pdf` | la publicación DANE escaneada (90 pp.), fuente de lo anterior | 1958-1960 | no versionado | hist/24 |
 | `historical/archive_v01_v02/*.csv` (6 archivos) | versión anterior de las transcripciones (2026-10-13) | 1923-1984 | 1,2 MB | archivados, **sin uso** |
 | `conflict/mse_national_age5_1985-2018.rds` | JEP-CEV-HRDAG, homicidios y desapariciones del conflicto, edad quinquenal × sexo | 1985-2018 | 208 KB | 21 → 23, 27 |
 | `ucdp/GEDEvent_v25_1.csv`, `GEDEvent_v25_01_25_12.csv` | UCDP GED, eventos georreferenciados, todos los países | 1989-2025 | 259 MB | hist/22 |
@@ -195,6 +199,7 @@ Columna "Scripts": número del script que lo lee. "hist/" = `code/historical/`. 
 | `33_completeness_empirical.R` | completitud empírica del registro de defunciones (Adair y Lopez 2018, PLoS ONE): nacional 1979-2023 y departamental 1985-2023, modelos 1 y 2, con todas las defunciones y sin violentas; validación 2014 → `completeness_empirical_*` en `output/tables/` y `figures/04_completeness/` | no |
 | `historical/20`, `21`, `22` | cobertura y calidad de las transcripciones; UCDP vs OMS | no |
 | `historical/23_census_tables_ocr.R` | tablas censales 1938, 1951 y 1973 desde los PDF (OCR tesseract + transcripción, validadas por identidades) → `historical/census_tables/` | no |
+| `historical/24_dane_vitales_1958_1960.R` | estadística vital DANE 1958-1960 por municipio y departamento desde el PDF (capa de texto + dos pasadas de tesseract + transcripción previa, celda a celda, validadas por H + M = T y filas TOTAL) → `historical/dane_vitales_1958_1960_*.csv`; primera corrida ~40 min | no |
 | `experimental/model_spatial.R` | modelo espacial (exploratorio) | no |
 
 ## 6. Documentos (`documents/`)
@@ -205,8 +210,8 @@ Columna "Scripts": número del script que lo lee. "hist/" = `code/historical/`. 
 | `executive_report_underregistration_10_2026.html` | 2026-10 | informe ejecutivo de subregistro |
 | `plan_cleanup_and_underregistration.md`, `HANDOFF_plan_A_execution.md` | 2026-10-13 | evaluación del repositorio, plan de limpieza (Plan A) y de subregistro (Plan B) |
 | `datos_mortalidad_colombia_03_2026.xlsx` | 2026-03 | inventario anterior de variables y lagunas |
-| `inventario_datos_mortalidad.md` (+ `.html`) | 2026-11-09 | fuentes de mortalidad por nivel geográfico |
-| `inventario_general_proyecto.md` (+ `.html`) | 2026-11-09 | este documento |
+| `inventario_datos_mortalidad.md` (+ `.html`) | 2026-11-10 | fuentes de mortalidad por nivel geográfico, con el tile de disponibilidad y la lista de información complementaria |
+| `inventario_general_proyecto.md` (+ `.html`) | 2026-11-10 | este documento |
 | `Lista_105_Colombia_CIE9-y-CIE10.xls` | | lista DANE de causas |
 | `metadata/` | | diccionarios EEVV 1979-2016, variables de microdatos, manual de certificación, glosario |
 
@@ -221,6 +226,7 @@ Ordenados por lo que aportarían.
 | **Tablas WPP 2024 nuevas (31)**: tablas de vida completas, población y fecundidad por edad simple | insumos para una reconstrucción poblacional 1938-2023 (cohorte-componente bayesiano) y para comparar la mortalidad propia con la tabla completa de WPP | bajo |
 | **LAMBdA, 19 grupos de causa 1953-2009** | mortalidad por causa con edad y sexo para 1978 (año sin EEVV) y cotejo independiente de la serie violenta de OMS y EEVV 1953-2009 | bajo: lectura directa |
 | **Homicidios Policía Nacional 1962-2002 por departamento** | única fuente departamental de homicidios 1966-1978; calibración del concepto policial frente a anuarios (1962-65) y EEVV (1979-2002) | bajo |
+| **Estadística vital DANE 1958-1960 por municipio (hist/24)** | defunciones municipales por sexo verificadas para tres años, mortalidad infantil municipal (única antes de 1979) y bautizos como aproximación a los nacimientos; corrige cinco municipio-años de la transcripción anterior | bajo: lectura directa |
 | **Transcripciones nuevas sin explotar analíticamente**: defunciones departamentales 1915-1984, municipales 1924-1960, homicidios departamentales 1923-1965 | solo se usan para figuras de cobertura y pruebas de calidad (hist/20-21) y para el total nacional de 22; permitirían completitud departamental antes de 1979 (con los censos 1938-1973) y tasas municipales de los años 20-50 | medio: requiere población interpolada y armonización territorial |
 | **Población nacional anuarios 1905-1985** | contraste con WPP y censos para 1905-1950 | bajo |
 | **Componentes de crisis WPP distintos del conflicto** (desastres, hambruna, COVID, TBM) | ya extraídos; la COVID importa para 2020-2023 si se quiere separar exceso pandémico de la serie no violenta | bajo |

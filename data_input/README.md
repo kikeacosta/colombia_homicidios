@@ -86,6 +86,18 @@ for 1938 and 1951; coverage-adjusted population by department and zone 1973),
 with the OCR grids, corrections and transcriptions in `ocr_support/`; see its
 `README.md`. The PDFs themselves (`LD_771_*.pdf`, `LB_*.pdf`, 29 MB) are kept
 in `historical/` but not versioned.
+`historical/dane_vitales_1958_1960_*.csv`: DANE "Estadística vital 1958 a
+1960" (1962) read from the library scan `LD_558_1958_1960_EJ_2.pdf` (not
+versioned) by `code/historical/24_dane_vitales_1958_1960.R`: the departmental
+table (population, marriages, baptisms, deaths, infant deaths, 16 departments
+by year) and the municipal tables (marriages; baptisms, infant deaths and
+deaths by sex; 828-872 municipalities, intendencias and comisarías per year,
+with DIVIPOLA codes). Every municipal column was checked against its unit
+TOTAL and the departmental table; `vitales_1958_1960_support/` holds the
+manual corrections, the rows read by eye and the verification reports
+(`verification_unit_columns.csv`, `differences_vs_col_gap_analysis.csv`). The
+column `flag` marks the few units whose printed figures do not add up and
+`nodata_in_source` the cells printed as "..." (no information).
 `historical/`: series transcribed from DANE anuarios estadísticos and boletines
 (`col_gap_analysis_1920_1985_*.csv`): deaths by department 1915-1984 (three
 territorial variants), by municipality 1924-1960 and national 1923-1984;
