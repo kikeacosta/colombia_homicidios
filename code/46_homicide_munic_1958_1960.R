@@ -1,9 +1,9 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# 41. Municipal allocation of homicides in 1958-1960 from the sex ratio of
+# 46. Municipal allocation of homicides in 1958-1960 from the sex ratio of
 #     deaths: prototype
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # PROTOTYPE. There are no municipal homicide counts before 1979. This script
-# splits the homicides of each unit of 40 among its municipalities in
+# splits the homicides of each unit of 45 among its municipalities in
 # 1958-1960 (three years pooled) using deaths by sex, and measures on EEVV
 # how much the sex ratio improves on a plain split.
 #
@@ -55,19 +55,19 @@
 # inputs   data_input/historical/dane_vitales_1958_1960_municipal.csv
 #          data_input/historical/col_gap_analysis_1920_1985_municipal_*_v03.csv
 #          output/deaths_pop_munic_1985_2023.csv.gz
-#          output/tables/homicide_backcast_dept_1915-2019.csv   (40)
+#          output/tables/homicide_backcast_dept_1915-2019.csv   (45)
 # outputs  output/tables/homicide_munic_validation.csv
 #          output/tables/homicide_munic_validation_cv_grid.csv
 #          output/tables/homicide_munic_1958-1960.csv
 #          output/tables/homicide_munic_1958-1960_parameters.csv
-#          figures/06_backcast/munic_validation.png
-#          figures/06_backcast/munic_1958_1960_map.png
+#          figures/07_backcast/munic_validation.png
+#          figures/07_backcast/munic_1958_1960_map.png
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm(list = ls())
 gc()
 source("code/00_setup.R")
 
-dir.create("figures/06_backcast", showWarnings = FALSE, recursive = TRUE)
+dir.create("figures/07_backcast", showWarnings = FALSE, recursive = TRUE)
 say <- function(...) cat(format(Sys.time(), "%H:%M:%S"), ..., "\n")
 h_dir <- "data_input/historical/"
 pi_m <- 0.90
@@ -78,7 +78,7 @@ cod_unit <- c(
   "15" = "boyaca", "17" = "caldas", "63" = "caldas", "66" = "caldas", "19" = "cauca",
   "11" = "cundinamarca", "25" = "cundinamarca", "41" = "huila", "47" = "magdalena", "20" = "magdalena",
   "52" = "narino", "54" = "norte_de_santander", "68" = "santander", "73" = "tolima", "76" = "valle_del_cauca"
-) # every other code is "territorios" (same units as 40)
+) # every other code is "territorios" (same units as 45)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 1. estimator ====
@@ -264,7 +264,7 @@ early <- read_csv(paste0(h_dir, "col_gap_analysis_1920_1985_municipal_deaths_cle
   transmute(cod_munic = sprintf("%05d", as.integer(dane_code)), male, female) |>
   summarise(bm = sum(male), bf = sum(female), .by = cod_munic)
 
-# unit totals: anuario homicides 1958-60 (all units report) and model 40
+# unit totals: anuario homicides 1958-60 (all units report) and model 45
 tot <- read_csv("output/tables/homicide_backcast_dept_1915-2019.csv", show_col_types = FALSE) |>
   filter(year %in% 1958:1960) |>
   summarise(H_anuario = sum(hom_anuario), H_model = sum(hom_est), deaths_unit = sum(deaths_reg), .by = unit)
@@ -442,7 +442,7 @@ fig1 <- ggplot(gfig, aes(cv, misallocated, colour = nivel, shape = nivel)) +
        x = "cv: variación supuesta de la proporción de homicidios entre municipios de un departamento", y = NULL,
        colour = "Muertes violentas como % de las defunciones", shape = "Muertes violentas como % de las defunciones") +
   base
-ggsave("figures/06_backcast/munic_validation.png", fig1, w = 11, h = 5.5, bg = "white", dpi = 160)
+ggsave("figures/07_backcast/munic_validation.png", fig1, w = 11, h = 5.5, bg = "white", dpi = 160)
 
 # map of the rates, on today's municipal boundaries (municipalities created
 # after 1960 have no data of their own and stay blank)
@@ -459,6 +459,6 @@ fig2 <- ggplot(mapa) +
   theme_void(base_size = 10) +
   theme(legend.position = "right", legend.title = element_blank(), plot.title = element_text(face = "bold"),
         plot.caption = element_text(colour = "grey40", hjust = 0), plot.margin = margin(8, 8, 8, 8))
-ggsave("figures/06_backcast/munic_1958_1960_map.png", fig2, w = 8, h = 9.5, bg = "white", dpi = 170)
+ggsave("figures/07_backcast/munic_1958_1960_map.png", fig2, w = 8, h = 9.5, bg = "white", dpi = 170)
 
 say("done")

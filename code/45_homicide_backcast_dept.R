@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# 40. Departmental homicides from the sex ratio of all-cause deaths,
+# 45. Departmental homicides from the sex ratio of all-cause deaths,
 #     1915-2019: prototype state-space model
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # PROTOTYPE. Question: how much can the sex ratio of registered deaths say
@@ -71,13 +71,13 @@
 #          output/tables/homicide_backcast_police_bias.csv
 #          output/tables/homicide_backcast_gap_information.csv
 #          output/tables/homicide_backcast_national.csv
-#          figures/06_backcast/*.png
+#          figures/07_backcast/*.png
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm(list = ls())
 gc()
 source("code/00_setup.R")
 
-dir.create("figures/06_backcast", showWarnings = FALSE, recursive = TRUE)
+dir.create("figures/07_backcast", showWarnings = FALSE, recursive = TRUE)
 say <- function(...) cat(format(Sys.time(), "%H:%M:%S"), ..., "\n")
 
 h_dir <- "data_input/historical/"
@@ -579,7 +579,7 @@ fig1 <- est |>
        x = NULL, y = NULL,
        caption = "Homicidios entre las defunciones registradas. 1979-2019: homicidio + intención no determinada + intervención legal. Población: censos interpolados.") +
   base
-ggsave("figures/06_backcast/backcast_rate_by_unit.png", fig1, w = 11, h = 12.5, bg = "white", dpi = 160)
+ggsave("figures/07_backcast/backcast_rate_by_unit.png", fig1, w = 11, h = 12.5, bg = "white", dpi = 160)
 
 # 6.2 validation: observed against predicted share
 vfig <- val |>
@@ -598,7 +598,7 @@ fig2 <- ggplot(vfig, aes(100 * exp(truth), 100 * exp(eta))) +
        subtitle = "Cada punto es una unidad-año; barras: intervalo de 90 %. Homicidios como % de las defunciones registradas, escala logarítmica.",
        x = "Observado (anuarios hasta 1965, EEVV desde 1979)", y = "Predicho") +
   base
-ggsave("figures/06_backcast/backcast_validation.png", fig2, w = 10, h = 8, bg = "white", dpi = 160)
+ggsave("figures/07_backcast/backcast_validation.png", fig2, w = 10, h = 8, bg = "white", dpi = 160)
 
 # 6.3 national sum against the national sources
 nat_est <- est |> summarise(hom_est = sum(hom_est), pop = sum(pop), .by = year) |>
@@ -624,7 +624,7 @@ fig3 <- ggplot(nat_est |> filter(year >= 1923), aes(year)) +
 La OMS entra al modelo solo en 1966-1977; EEVV 1979 es un año incompleto.",
        x = NULL, y = NULL) +
   base
-ggsave("figures/06_backcast/backcast_national.png", fig3, w = 9, h = 5, bg = "white", dpi = 160)
+ggsave("figures/07_backcast/backcast_national.png", fig3, w = 9, h = 5, bg = "white", dpi = 160)
 
 # 6.4 information in the real gap
 gfig <- gap_info |>
@@ -641,6 +641,6 @@ fig4 <- ggplot(gfig, aes(sd_log_share, unit, colour = inputs, shape = inputs)) +
        subtitle = "Desviación estándar del logaritmo de la proporción de homicidios (0,1 ≈ ±10 %).\nUnidades ordenadas por nivel de homicidio estimado.",
        x = NULL, y = NULL) +
   base
-ggsave("figures/06_backcast/backcast_gap_information.png", fig4, w = 8.5, h = 5.5, bg = "white", dpi = 160)
+ggsave("figures/07_backcast/backcast_gap_information.png", fig4, w = 8.5, h = 5.5, bg = "white", dpi = 160)
 
 say("done")
