@@ -77,6 +77,8 @@ tables; the WPP 2024 Colombia extracts written by `code/31_wpp_lifetables_inputs
 from the full WPP downloads kept outside the repository
 (`wpp2024_colombia_lt_complete_1950-2100.csv`, complete life tables by sex,
 estimates and medium-variant projections; `wpp2024_colombia_pop_single_age_1950-2023.csv`;
+`wpp2024_colombia_pop_1jan_single_age_1950-2024.csv`, population at 1 January by
+single age and sex extracted by `code/37_reconstruction_ccmpp.R`;
 `wpp2024_colombia_fertility_age1.csv`, age-specific fertility 1950-2100) and the
 crisis-mortality extracts of `code/26_wpp_crises_inputs.R`.
 `historical/census_tables/`: population tables extracted from the 1938, 1951
