@@ -27,9 +27,16 @@
 #            log(H_anuario / D) = eta + e
 #            log(H_eevv / D)    = eta + e                 (1979-2019, near exact)
 #            log(H_policia / D) = eta + beta + e          (1962-1997)
+#          plus one national observation that links the units:
+#            log(V_who / D_nat) = log(sum_d w_d exp(eta_d)) + e   (1966-1977)
+#          the WHO series is the national vital statistics by cause. in
+#          1953-65 it is the sum of the anuario counts already in the model,
+#          so it is used only in 1966-1977 (nine years with cause detail),
+#          where the Policia is the only departmental source and has a break
+#          in 1969 that the WHO series does not show.
 #          rho_t is the national non-violent log sex ratio, computed from the
 #          panel and the national share of violent deaths (anuarios, WHO
-#          1953-77, EEVV). Extended Kalman filter and RTS smoother, written
+#          1953-77, EEVV). Joint extended Kalman filter and RTS smoother, written
 #          here in base R; seven standard deviations by maximum likelihood (the
 #          innovation sd of eta differs before and from 1979).
 #
@@ -63,6 +70,7 @@
 #          output/tables/homicide_backcast_validation.csv
 #          output/tables/homicide_backcast_police_bias.csv
 #          output/tables/homicide_backcast_gap_information.csv
+#          output/tables/homicide_backcast_national.csv
 #          figures/06_backcast/*.png
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm(list = ls())
@@ -77,6 +85,8 @@ yrs <- 1915:2019
 pi_m <- 0.90 # male share of homicides (0.87-0.92 in anuarios and EEVV)
 s_e <- 0.03 # sd of the EEVV observation of eta (near exact by construction)
 pol_years <- 1962:1997 # the Policia series is used up to the 1998 certificate
+who_years <- 1966:1977 # WHO national violent deaths as a constraint (see header)
+s_w <- 0.05 # sd of the WHO national observation (log share), fixed
 eta_break <- 1979 # first year of the modern innovation sd of eta (EEVV microdata)
 z90 <- qnorm(0.95)
 
@@ -284,9 +294,15 @@ md <- pan |>
     q_e = 1 / h_eevv,
     y_p = ifelse(year %in% pol_years & !is.na(h_pol) & h_pol > 0, log(h_pol / d_adj), NA),
     q_p = 1 / h_pol
-  )
+  ) |>
+  # national WHO observation (the same value in every row of the year) and
+  # the weight of each unit in the national deaths
+  left_join(nat |> transmute(year, y_w = ifelse(year %in% who_years & !is.na(v_who), log(v_who / d_adj), NA)), by = "year") |>
+  mutate(w = d_adj / sum(d_adj), .by = year) |>
+  arrange(unit, year)
+stopifnot(nrow(md) == length(yrs) * n_distinct(md$unit), all(md$year == rep(yrs, n_distinct(md$unit))))
 say("unit-years with: sex ratio", sum(!is.na(md$y_sr)), "| anuario homicides", sum(!is.na(md$y_a)),
-    "| Policia", sum(!is.na(md$y_p)), "| EEVV", sum(!is.na(md$y_e)))
+    "| Policia", sum(!is.na(md$y_p)), "| EEVV", sum(!is.na(md$y_e)), "| years with WHO:", n_distinct(md$year[!is.na(md$y_w)]))
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3. model ====
@@ -300,70 +316,97 @@ g_sr <- function(delta, eta) {
 }
 
 x0 <- c(log(0.01), 0, 0)
-P0 <- diag(c(2, 0.3, 0.5)^2)
-H_lin <- rbind(c(1, 0, 0), c(1, 0, 0), c(1, 0, 1)) # anuario, EEVV, Policia
+P0 <- c(2, 0.3, 0.5)^2 # prior variances of eta, u, beta in the first year
 
-# extended Kalman filter for one unit. Y, V: n x 4 (anuario, EEVV, Policia,
-# sex ratio), NA = missing. returns the log-likelihood and, if asked, the
-# smoothed states. s_eta is a vector (one innovation sd per year).
-kf_unit <- function(Y, V, rho, s_eta, s_u, s_b, smooth = FALSE) {
-  n <- nrow(Y)
-  x <- x0
-  P <- P0
+# model data as year x unit matrices (dat is sorted by unit, then year)
+prep <- function(dat) {
+  n <- length(yrs)
+  mat <- function(v) matrix(v, nrow = n)
+  list(n = n, K = n_distinct(dat$unit), year = yrs, rho = dat$rho[seq_len(n)], y_w = dat$y_w[seq_len(n)],
+       W = mat(dat$w), y_a = mat(dat$y_a), q_a = mat(dat$q_a), y_e = mat(dat$y_e), q_e = mat(dat$q_e),
+       y_p = mat(dat$y_p), q_p = mat(dat$q_p), y_sr = mat(dat$y_sr), q_sr = mat(dat$q_sr))
+}
+
+# extended Kalman filter for all units jointly (state: eta, u, beta of each
+# unit). observations are processed one at a time; the units are linked only
+# by the national WHO observation. returns the log-likelihood and, if asked,
+# the smoothed states. par = c(s_eta_hist, s_eta_mod, s_u, s_0, s_a, s_p,
+# s_b); the innovation sd of eta differs before and from `eta_break`.
+kf_joint <- function(m, par, smooth = FALSE) {
+  n <- m$n
+  K <- m$K
+  ns <- 3 * K
+  ie <- seq(1, ns, 3)
+  iu <- ie + 1
+  ib <- ie + 2
+  x <- rep(x0, K)
+  P <- diag(rep(P0, K))
+  s_eta2 <- ifelse(m$year < eta_break, par[1], par[2])^2
+  y_a <- m$y_a; y_e <- m$y_e; y_p <- m$y_p; y_sr <- m$y_sr; y_w <- m$y_w; W <- m$W; rho <- m$rho
+  V_a <- par[5]^2 + m$q_a
+  V_e <- s_e^2 + m$q_e
+  V_p <- par[6]^2 + m$q_p
+  V_s <- par[4]^2 + m$q_sr
   ll <- 0
+  e <- 1e-4
+  upd <- function(idx, Hs, v, R) {
+    PH <- if (length(idx) == 1) P[, idx] * Hs else drop(P[, idx, drop = FALSE] %*% Hs)
+    S <- sum(Hs * PH[idx]) + R
+    x <<- x + PH * (v / S)
+    P <<- P - tcrossprod(PH) / S
+    ll <<- ll - 0.5 * (log(2 * pi * S) + v^2 / S)
+  }
   if (smooth) {
-    xp <- xf <- matrix(NA_real_, n, 3)
-    Pp <- Pf <- array(NA_real_, c(3, 3, n))
+    xp <- xf <- matrix(NA_real_, n, ns)
+    Pp <- Pf <- array(NA_real_, c(ns, ns, n))
   }
   for (t in seq_len(n)) {
-    if (t > 1) { P[1, 1] <- P[1, 1] + s_eta[t]^2; P[2, 2] <- P[2, 2] + s_u^2; P[3, 3] <- P[3, 3] + s_b^2 }
-    if (smooth) { xp[t, ] <- x; Pp[, , t] <- P }
-    for (j in 1:4) {
-      if (is.na(Y[t, j])) next
-      if (j < 4) {
-        Hr <- H_lin[j, ]
-        pred <- sum(Hr * x)
-      } else {
-        e <- 1e-4
-        dl <- rho[t] + x[2]
-        pred <- g_sr(dl, x[1])
-        Hr <- c((g_sr(dl, x[1] + e) - g_sr(dl, x[1] - e)) / (2 * e),
-                (g_sr(dl + e, x[1]) - g_sr(dl - e, x[1])) / (2 * e), 0)
-      }
-      PH <- drop(P %*% Hr)
-      S <- sum(Hr * PH) + V[t, j]
-      v <- Y[t, j] - pred
-      x <- x + PH * v / S
-      P <- P - tcrossprod(PH) / S
-      ll <- ll - 0.5 * (log(2 * pi * S) + v^2 / S)
+    if (t > 1) {
+      d <- diag(P)
+      d[ie] <- d[ie] + s_eta2[t]
+      d[iu] <- d[iu] + par[3]^2
+      d[ib] <- d[ib] + par[7]^2
+      diag(P) <- d
     }
-    P <- (P + t(P)) / 2
+    if (smooth) { xp[t, ] <- x; Pp[, , t] <- P }
+    for (k in seq_len(K)) {
+      i <- ie[k]
+      if (!is.na(y_a[t, k])) upd(i, 1, y_a[t, k] - x[i], V_a[t, k])
+      if (!is.na(y_e[t, k])) upd(i, 1, y_e[t, k] - x[i], V_e[t, k])
+      if (!is.na(y_p[t, k])) upd(c(i, i + 2L), c(1, 1), y_p[t, k] - x[i] - x[i + 2L], V_p[t, k])
+      if (!is.na(y_sr[t, k])) {
+        dl <- rho[t] + x[i + 1L]
+        Hs <- c((g_sr(dl, x[i] + e) - g_sr(dl, x[i] - e)) / (2 * e),
+                (g_sr(dl + e, x[i]) - g_sr(dl - e, x[i])) / (2 * e))
+        upd(c(i, i + 1L), Hs, y_sr[t, k] - g_sr(dl, x[i]), V_s[t, k])
+      }
+    }
+    if (!is.na(y_w[t])) {
+      # national share of violent deaths = sum of unit shares weighted by deaths
+      hw <- W[t, ] * pmin(exp(x[ie]), 0.9)
+      upd(ie, hw / sum(hw), y_w[t] - log(sum(hw)), s_w^2)
+    }
     if (smooth) { xf[t, ] <- x; Pf[, , t] <- P }
   }
   if (!smooth) return(ll)
   xs <- xf
   Ps <- Pf
   for (t in (n - 1):1) {
-    C <- Pf[, , t] %*% solve(Pp[, , t + 1] + diag(1e-12, 3))
+    C <- Pf[, , t] %*% solve(Pp[, , t + 1] + diag(1e-12, ns))
     xs[t, ] <- xf[t, ] + drop(C %*% (xs[t + 1, ] - xp[t + 1, ]))
     Ps[, , t] <- Pf[, , t] + C %*% (Ps[, , t + 1] - Pp[, , t + 1]) %*% t(C)
   }
-  list(ll = ll, eta = xs[, 1], u = xs[, 2], beta = xs[, 3],
-       sd_eta = sqrt(pmax(Ps[1, 1, ], 0)), sd_u = sqrt(pmax(Ps[2, 2, ], 0)), sd_beta = sqrt(pmax(Ps[3, 3, ], 0)))
+  sds <- sqrt(pmax(apply(Ps, 3, diag), 0)) # ns x n
+  list(ll = ll, eta = xs[, ie], u = xs[, iu], beta = xs[, ib],
+       sd_eta = t(sds[ie, ]), sd_u = t(sds[iu, ]), sd_beta = t(sds[ib, ]))
 }
 
-# run all units. par = c(s_eta_hist, s_eta_mod, s_u, s_0, s_a, s_p, s_b); the
-# innovation sd of eta differs before and after `eta_break` (no EEVV before)
+# run the model on a long table (sorted by unit, then year)
 run_model <- function(dat, par, smooth = FALSE) {
-  res <- lapply(split(dat, dat$unit), function(z) {
-    Y <- cbind(z$y_a, z$y_e, z$y_p, z$y_sr)
-    V <- cbind(par[5]^2 + z$q_a, s_e^2 + z$q_e, par[6]^2 + z$q_p, par[4]^2 + z$q_sr)
-    o <- kf_unit(Y, V, z$rho, ifelse(z$year < eta_break, par[1], par[2]), par[3], par[7], smooth = smooth)
-    if (!smooth) return(o)
-    tibble(unit = z$unit, year = z$year, eta = o$eta, sd_eta = o$sd_eta, u = o$u, sd_u = o$sd_u,
-           beta = o$beta, sd_beta = o$sd_beta)
-  })
-  if (smooth) bind_rows(res) else sum(unlist(res))
+  o <- kf_joint(prep(dat), par, smooth = smooth)
+  if (!smooth) return(o)
+  tibble(unit = dat$unit, year = dat$year, eta = c(o$eta), sd_eta = c(o$sd_eta), u = c(o$u), sd_u = c(o$sd_u),
+         beta = c(o$beta), sd_beta = c(o$sd_beta))
 }
 
 fit_par <- function(dat, start = c(0.25, 0.15, 0.015, 0.03, 0.3, 0.12, 0.03)) {
@@ -486,15 +529,17 @@ print(as.data.frame(bias |> mutate(across(where(is.numeric), ~ round(.x, 2)))), 
 
 # what each source contributes in the real gap, 1966-1978: sd of log share
 gap <- md$year %in% 1966:1978
-gap_run <- function(label, sr, pl) {
+gap_run <- function(label, sr, pl, who) {
   dat <- md
   if (!sr) dat$y_sr[gap] <- NA
   if (!pl) dat$y_p[gap] <- NA
+  if (!who) dat$y_w <- NA
   run_model(dat, fit1$par, smooth = TRUE) |> filter(year %in% 1966:1978) |>
     summarise(sd_log_share = mean(sd_eta), share = exp(mean(eta)), .by = unit) |> mutate(inputs = label)
 }
-gap_info <- bind_rows(gap_run("nothing", FALSE, FALSE), gap_run("sex ratio", TRUE, FALSE),
-                      gap_run("Policia", FALSE, TRUE), gap_run("sex ratio + Policia", TRUE, TRUE))
+gap_info <- bind_rows(gap_run("nothing", FALSE, FALSE, FALSE), gap_run("sex ratio", TRUE, FALSE, FALSE),
+                      gap_run("Policia", FALSE, TRUE, FALSE), gap_run("sex ratio + Policia", TRUE, TRUE, FALSE),
+                      gap_run("WHO", FALSE, FALSE, TRUE), gap_run("sex ratio + Policia + WHO", TRUE, TRUE, TRUE))
 write_csv(gap_info, "output/tables/homicide_backcast_gap_information.csv")
 cat("\n== 1966-1978: mean sd of log share by inputs used in the gap ==\n")
 print(as.data.frame(gap_info |> select(-share) |> mutate(sd_log_share = round(sd_log_share, 2)) |>
@@ -558,6 +603,10 @@ ggsave("figures/06_backcast/backcast_validation.png", fig2, w = 10, h = 8, bg = 
 # 6.3 national sum against the national sources
 nat_est <- est |> summarise(hom_est = sum(hom_est), pop = sum(pop), .by = year) |>
   left_join(nat |> select(year, v_who, h_pol, h_eevv, h_anu, n_anu), by = "year")
+nat_est |>
+  transmute(year, pop, hom_est, hom_who = v_who, hom_policia = h_pol, hom_eevv = ifelse(h_eevv > 0, h_eevv, NA),
+            hom_anuario = ifelse(n_anu > 0, h_anu, NA), units_anuario = n_anu) |>
+  write_csv("output/tables/homicide_backcast_national.csv")
 nat_obs <- nat_est |>
   transmute(year, pop, Anuarios = ifelse(n_anu == 15, h_anu, NA), `Policía` = h_pol, EEVV = ifelse(h_eevv > 0, h_eevv, NA),
             `OMS (nacional)` = v_who) |>
@@ -571,20 +620,22 @@ fig3 <- ggplot(nat_est |> filter(year >= 1923), aes(year)) +
   scale_shape_manual(values = shp_src) +
   scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
   labs(title = "Suma de las 15 unidades frente a las fuentes nacionales",
-       subtitle = "Homicidios registrados por 100.000 habitantes. Línea: suma de las estimaciones departamentales. La serie de la OMS no entra al modelo.",
+       subtitle = "Homicidios registrados por 100.000 habitantes. Línea: suma de las estimaciones departamentales.
+La OMS entra al modelo solo en 1966-1977; EEVV 1979 es un año incompleto.",
        x = NULL, y = NULL) +
   base
 ggsave("figures/06_backcast/backcast_national.png", fig3, w = 9, h = 5, bg = "white", dpi = 160)
 
 # 6.4 information in the real gap
 gfig <- gap_info |>
-  mutate(inputs = factor(inputs, c("nothing", "sex ratio", "Policia", "sex ratio + Policia"),
-                         c("Nada", "Razón de sexos", "Policía", "Razón de sexos + Policía")),
+  filter(inputs != "WHO") |>
+  mutate(inputs = factor(inputs, c("nothing", "sex ratio", "Policia", "sex ratio + Policia", "sex ratio + Policia + WHO"),
+                         c("Nada", "Razón de sexos", "Policía", "Razón de sexos + Policía", "Las tres (con OMS nacional)")),
          unit = fct_reorder(unit_lab[unit], share))
 fig4 <- ggplot(gfig, aes(sd_log_share, unit, colour = inputs, shape = inputs)) +
   geom_point(size = 2.2) +
-  scale_colour_manual(values = c("Nada" = "grey55", "Razón de sexos" = "#2a78d6", "Policía" = "#eb6834", "Razón de sexos + Policía" = ink)) +
-  scale_shape_manual(values = c("Nada" = 4, "Razón de sexos" = 16, "Policía" = 17, "Razón de sexos + Policía" = 15)) +
+  scale_colour_manual(values = c("Nada" = "grey55", "Razón de sexos" = "#2a78d6", "Policía" = "#eb6834", "Razón de sexos + Policía" = "#1baf7a", "Las tres (con OMS nacional)" = ink)) +
+  scale_shape_manual(values = c("Nada" = 4, "Razón de sexos" = 16, "Policía" = 17, "Razón de sexos + Policía" = 18, "Las tres (con OMS nacional)" = 15)) +
   scale_x_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
   labs(title = "Incertidumbre en 1966-1978 según el insumo usado en esos años",
        subtitle = "Desviación estándar del logaritmo de la proporción de homicidios (0,1 ≈ ±10 %).\nUnidades ordenadas por nivel de homicidio estimado.",
