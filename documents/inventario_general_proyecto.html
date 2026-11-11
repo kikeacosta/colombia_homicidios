@@ -475,17 +475,30 @@ intendencia y comisaría, zona (total, cabecera, resto) y componente
 <td>hist/23 (produce); <strong>sin uso</strong> aún</td>
 </tr>
 <tr class="even">
+<td><code>historical/census_tables/census1973_children_ever_born_age.csv</code>,
+<code>census1973_children_ever_born_units.csv</code></td>
+<td>mujeres de 15 años y más por hijos nacidos vivos y sobrevivientes
+(Cuadros 21 y 21A de 1973): por grupo quinquenal de edad y zona a nivel
+nacional, y por departamento y zona sin edad; incluye las que no
+informan y las sin hijos</td>
+<td>censo 1973</td>
+<td>8 KB</td>
+<td>hist/23 (produce); <strong>sin uso</strong> aún</td>
+</tr>
+<tr class="odd">
 <td><code>historical/LD_771_1938_V_1.pdf</code>,
 <code>LD_771_1951.pdf</code>, <code>LB_771_1973.pdf</code></td>
 <td>resúmenes generales de los censos 1938, 1951 y 1973; fuente de
 <code>census_tables/</code> (OCR + transcripción validada por sumas,
-hist/23). Sin extraer: cabecera/resto de 1973 por edad y el ajuste de
-cobertura 1973 a nivel municipal</td>
+hist/23). Sin extraer: cabecera/resto de 1973 por edad, el ajuste de
+cobertura 1973 a nivel municipal, la población municipal por sexo de
+1973 (Cuadro 1A), las matrices de lugar de nacimiento de 1951 y 1973 y
+la edad por zona y departamento de 1951 (Cuadro 11)</td>
 <td></td>
 <td>29 MB (no versionados)</td>
 <td>hist/23 (solo si <code>run_ocr</code>)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>historical/LB_771_1951_V_2.pdf</code>,
 <code>LB_771_1964_V_2.pdf</code></td>
 <td>censos de edificios y viviendas 1951 y 1964 (no población)</td>
@@ -493,7 +506,7 @@ cobertura 1973 a nivel municipal</td>
 <td>11 MB</td>
 <td><strong>sin uso</strong></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>historical/LB_800_1938.pdf</code> (Norte de Santander),
 <code>LB_811_1951_V_1.pdf</code> (Huila)</td>
 <td>tomos departamentales</td>
@@ -501,7 +514,7 @@ cobertura 1973 a nivel municipal</td>
 <td>12 MB</td>
 <td><strong>sin uso</strong></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>historical/LAMBdA_documentation.pdf</code></td>
 <td>documentación LAMBdA</td>
 <td></td>
@@ -1174,12 +1187,28 @@ por territorio)</td>
 <td>bajo: lectura directa</td>
 </tr>
 <tr class="even">
-<td><strong>Resúmenes censales 1973: lo que falta</strong></td>
-<td>cabecera/resto por edad simple (Cuadro 2) y ajuste de cobertura por
-municipio (capítulo VIII, ~1.000 filas)</td>
-<td>alto: el escaneo no admite OCR; transcripción manual</td>
+<td><strong>Hijos nacidos vivos y sobrevivientes, censo 1973
+(<code>census_tables</code>, hist/23)</strong></td>
+<td>ya extraídos y validados, sin explotar: mortalidad en la niñez por
+método de Brass hacia 1960-1972 a nivel nacional y por zona (fuente
+censal independiente de 5q0 para el script 33); proporción de hijos
+fallecidos por departamento como índice de nivel, que en la costa Caribe
+sale inverosímilmente baja y apunta a omisión de hijos fallecidos.
+Requiere corregir el 18,5 % de mujeres que no informan (El-Badry)</td>
+<td>medio</td>
 </tr>
 <tr class="odd">
+<td><strong>Resúmenes censales 1951 y 1973: lo que falta</strong></td>
+<td>1973: cabecera/resto por edad simple (Cuadro 2), ajuste de cobertura
+por municipio (capítulo VIII, ~1.000 filas), población por sexo y
+municipio (Cuadro 1A), lugar de nacimiento por lugar de empadronamiento
+(Cuadro 4A). 1951: lugar de nacimiento por departamento (Cuadro 15),
+edad quinquenal por zona y departamento (Cuadro 11), menores de un año
+por meses de edad (Cuadro 12)</td>
+<td>1973 alto: el escaneo no admite OCR, transcripción manual; 1951
+medio: el OCR del Cuadro 10 ya funciona en ese formato</td>
+</tr>
+<tr class="even">
 <td><strong>Tablas WPP 2024 nuevas (31)</strong>: tablas de vida
 completas, población y fecundidad por edad simple</td>
 <td>insumos para una reconstrucción poblacional 1938-2023
@@ -1187,20 +1216,20 @@ completas, población y fecundidad por edad simple</td>
 la tabla completa de WPP</td>
 <td>bajo</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>LAMBdA, 19 grupos de causa 1953-2009</strong></td>
 <td>mortalidad por causa con edad y sexo para 1978 (año sin EEVV) y
 cotejo independiente de la serie violenta de OMS y EEVV 1953-2009</td>
 <td>bajo: lectura directa</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Homicidios Policía Nacional 1962-2002 por
 departamento</strong></td>
 <td>única fuente departamental de homicidios 1966-1978; calibración del
 concepto policial frente a anuarios (1962-65) y EEVV (1979-2002)</td>
 <td>bajo</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Estadística vital DANE 1958-1960 por municipio
 (hist/24)</strong></td>
 <td>defunciones municipales por sexo verificadas para tres años,
@@ -1209,7 +1238,7 @@ aproximación a los nacimientos; corrige cinco municipio-años de la
 transcripción anterior</td>
 <td>bajo: lectura directa</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Transcripciones nuevas sin explotar analíticamente</strong>:
 defunciones departamentales 1915-1984, municipales 1924-1960, homicidios
 departamentales 1923-1965</td>
@@ -1220,43 +1249,43 @@ municipales de los años 20-50</td>
 <td>medio: requiere población interpolada y armonización
 territorial</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Población nacional anuarios 1905-1985</strong></td>
 <td>contraste con WPP y censos para 1905-1950</td>
 <td>bajo</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Componentes de crisis WPP distintos del conflicto</strong>
 (desastres, hambruna, COVID, TBM)</td>
 <td>ya extraídos; la COVID importa para 2020-2023 si se quiere separar
 exceso pandémico de la serie no violenta</td>
 <td>bajo</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>UCDP GED</strong></td>
 <td>solo comparado con OMS a nivel nacional; tiene geolocalización por
 evento (municipio) 1989-2024 que no se ha cruzado con el panel
 municipal</td>
 <td>medio</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Proyecciones DANE 2024-2042</strong></td>
 <td>fuera del alcance actual</td>
 <td>ninguno</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Población OMS (<code>mort_pop.zip</code>)</strong></td>
 <td>redundante con WPP</td>
 <td>ninguno</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Tomos departamentales 1938 (Norte de Santander) y 1951
 (Huila)</strong></td>
 <td>edad por municipio en dos departamentos; sin interés salvo como
 prueba de método</td>
 <td>bajo</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Censos de vivienda 1951 y 1964</strong></td>
 <td>no contienen población por edad</td>
 <td>ninguno</td>

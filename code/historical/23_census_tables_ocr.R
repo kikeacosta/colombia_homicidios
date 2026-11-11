@@ -17,7 +17,9 @@
 #                        resto; capítulo VIII (pdf pp. 115-197): población
 #                        ajustada por cobertura por sección territorial y
 #                        municipio; Cuadro VIII.20 (pdf p. 94): national
-#                        summary of the adjustment.
+#                        summary of the adjustment; Cuadros 21 and 21A (pdf
+#                        pp. 381-384): women aged 15+ by children ever born
+#                        and surviving, by age group and by sección.
 #
 # Method
 #   1951  Each page is rendered at 500 dpi (grey, thresholded to b/w) and at
@@ -40,7 +42,9 @@
 #         confusions in every preprocessing variant). Cuadro 2 (national
 #         columns) and the TOTAL / CABECERA / RESTO rows of each sección in
 #         chapter VIII were transcribed visually and validated against the
-#         printed 5-year rows, the grand total and Cuadro VIII.20.
+#         printed 5-year rows, the grand total and Cuadro VIII.20. Cuadros 21
+#         and 21A likewise: every row, every zone split and the sum of the 31
+#         secciones against the national rows hold exactly.
 #
 # Stage A (run_ocr <- TRUE) repeats the 1951 OCR from the PDF and rewrites
 #   ocr_support/ocr_grid_1951_500dpi_bw.csv and ocr_grid_1951_300dpi.csv
@@ -53,6 +57,9 @@
 #   census1951_dept_age5_sex_1938_1951.csv   1938 and 1951, 29 territorial rows
 #   census1973_single_age_sex.csv            national censused population
 #   census1973_adjusted_population_units.csv coverage-adjusted, 31 units x 3 zones
+#   census1973_children_ever_born_age.csv    women 15+, children ever born and
+#                                            surviving, 8 age groups x 3 zones
+#   census1973_children_ever_born_units.csv  same, 31 units x 3 zones (no age)
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 suppressMessages(library(tidyverse))
 options(width = 160)
@@ -341,4 +348,31 @@ nat <- units73 |> filter(zone == "total") |> mutate(g = if_else(unit_type %in% c
 chk(unlist(nat[nat$g == "dep", -1]) == c(22487118, 21739428, 384257, 363433), "1973 departamentos + D.E. = Cuadro VIII.20 (22,487,118)")
 chk(unlist(nat[nat$g == "ic", -1]) == c(375000, 281129, 4658, 89213), "1973 intendencias + comisarías = Cuadro VIII.20 (375,000)")
 write_csv(units73 |> mutate(census_year = 1973, .before = 1), paste0(out_dir, "census1973_adjusted_population_units.csv"))
+# ---- 1973, Cuadros 21 and 21A: children ever born and surviving --------------
+# Women aged 15+ in private and collective households (indigenous areas are
+# not in this tabulation, hence the very small comisarías), censused counts.
+cat("1973 Cuadros 21 y 21A\n")
+ceb_cols <- c("women", "not_stated", "childless", "mothers", "children_ever_born", "children_surviving")
+ceb_age <- read_csv(paste0(sup_dir, "transcription_1973_cuadro21.csv"), show_col_types = FALSE, col_types = "ccdddddd")
+ceb_unit <- read_csv(paste0(sup_dir, "transcription_1973_cuadro21A.csv"), show_col_types = FALSE, col_types = "ccdddddd")
+chk(ceb_age$women == ceb_age$not_stated + ceb_age$childless + ceb_age$mothers, "1973 C21 women = no informan + sin hijos + con hijos")
+nat21 <- ceb_age |> filter(age == "total") |> arrange(zone)
+age21 <- ceb_age |> filter(age != "total") |> group_by(zone) |> summarise(across(all_of(ceb_cols), sum)) |> arrange(zone)
+chk(as.matrix(age21[, ceb_cols]) == as.matrix(nat21[, ceb_cols]), "1973 C21 the eight age groups add to the TOTAL row in every zone")
+zone_gap <- function(d, by) d |> group_by(.data[[by]]) |>
+  summarise(across(all_of(ceb_cols), \(v) v[zone == "total"] - v[zone == "cabecera"] - v[zone == "resto"]))
+chk(as.matrix(zone_gap(ceb_age, "age")[, ceb_cols]) == 0, "1973 C21 total = cabecera + resto in every age group")
+chk(ceb_unit$women == ceb_unit$not_stated + ceb_unit$childless + ceb_unit$mothers, "1973 C21A women = no informan + sin hijos + con hijos")
+chk(as.matrix(zone_gap(ceb_unit, "unit")[, ceb_cols]) == 0, "1973 C21A total = cabecera + resto in every unit")
+unit21 <- ceb_unit |> group_by(zone) |> summarise(across(all_of(ceb_cols), sum)) |> arrange(zone)
+chk(as.matrix(unit21[, ceb_cols]) == as.matrix(nat21[, ceb_cols]), "1973 C21A the 31 units add to the national rows of Cuadro 21 in every zone")
+write_csv(ceb_age |> mutate(census_year = 1973, .before = 1) |>
+            mutate(age_start = if_else(age == "total", NA_integer_, as.integer(str_extract(age, "^[0-9]+"))), .after = age),
+          paste0(out_dir, "census1973_children_ever_born_age.csv"), na = "")
+write_csv(ceb_unit |> mutate(census_year = 1973, .before = 1) |>
+            mutate(unit_type = case_when(unit == "Bogotá D.E." ~ "distrito especial",
+                                         unit %in% c("Arauca", "Caquetá", "Putumayo", "San Andrés y Providencia") ~ "intendencia",
+                                         unit %in% c("Amazonas", "Guainía", "Vaupés", "Vichada") ~ "comisaría",
+                                         TRUE ~ "departamento"), .after = unit),
+          paste0(out_dir, "census1973_children_ever_born_units.csv"))
 cat("done:", out_dir, "\n")

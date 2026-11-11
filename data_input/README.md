@@ -84,8 +84,9 @@ crisis-mortality extracts of `code/26_wpp_crises_inputs.R`.
 `historical/census_tables/`: population tables extracted from the 1938, 1951
 and 1973 census summary PDFs by `code/historical/23_census_tables_ocr.R`
 (national single ages by sex 1938 and 1973; 5-year ages by sex and department
-for 1938 and 1951; coverage-adjusted population by department and zone 1973),
-with the OCR grids, corrections and transcriptions in `ocr_support/`; see its
+for 1938 and 1951; coverage-adjusted population by department and zone 1973;
+women aged 15+ by children ever born and surviving in 1973, by age group and
+by department), with the OCR grids, corrections and transcriptions in `ocr_support/`; see its
 `README.md`. The PDFs themselves (`LD_771_*.pdf`, `LB_*.pdf`, 29 MB) are kept
 in `historical/` but not versioned.
 `historical/dane_vitales_1958_1960_*.csv`: DANE "Estadística vital 1958 a
