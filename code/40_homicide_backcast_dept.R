@@ -18,29 +18,31 @@
 #            u     log non-violent sex ratio of deaths, as a deviation from
 #                  the national one (random walk, slow)
 #            beta  log bias of the Policia count against the vital-statistics
-#                  concept (constant)
+#                  concept (slow random walk: the bias against EEVV differs
+#                  by department between 1979-84 and 1985-97)
 #          and four observations, any of which can be missing:
 #            log(Dm / Df)       = g(rho_t + u, eta) + e   accounting identity:
 #                                 non-violent deaths with sex ratio
 #                                 exp(rho_t + u) plus homicides, 90 % male
 #            log(H_anuario / D) = eta + e
-#            log(H_eevv / D)    = eta + e                 (near exact)
+#            log(H_eevv / D)    = eta + e                 (1979-2019, near exact)
 #            log(H_policia / D) = eta + beta + e          (1962-1997)
 #          rho_t is the national non-violent log sex ratio, computed from the
 #          panel and the national share of violent deaths (anuarios, WHO
 #          1953-77, EEVV). Extended Kalman filter and RTS smoother, written
-#          here in base R; six standard deviations by maximum likelihood.
+#          here in base R; seven standard deviations by maximum likelihood (the
+#          innovation sd of eta differs before and from 1979).
 #
 # validation  blocks of years in which the homicide counts are hidden and
 #          predicted back: 1946-65 whole, 1946-53 and 1954-65 (anuarios as
-#          truth), 1985-97
+#          truth), 1979-84, 1985-97
 #          and 1998-2010 (EEVV as truth). Inside the block the model gets
 #          nothing (N), the sex ratio (S), the Policia (P) or both (SP).
 #          Parameters are the full-data estimates (not re-estimated per block).
 #
 # caveats  - the target is homicides among REGISTERED deaths; deaths that
 #            were never registered are outside the model
-#          - 1985-2019 "homicide" is dx_v (homicide + undetermined intent +
+#          - 1979-2019 "homicide" is dx_v (homicide + undetermined intent +
 #            legal intervention), the convention of the municipal model
 #          - population is the enumerated census interpolated log-linearly
 #            (1928 dropped) up to the DANE projection of 1985, so rates carry
@@ -48,13 +50,14 @@
 #          - the EKF linearises the sex-ratio equation on the log scale;
 #            where homicides are below ~2 % of deaths the sex ratio only
 #            gives an upper bound and the interval is approximate
-#          - EEVV 1979-1984 by department is not used (not in the versioned
-#            files); it would add six years of overlap with the Policia
+#          - EEVV 1979-1984 by department comes from data_inter (02); the
+#            versioned shared file starts in 1985. 1979 is a short year
 #
 # inputs   data_input/historical/col_gap_analysis_*  (deaths, homicides, pop)
 #          data_input/historical/Homicidio 1962-2002 por depto de Policia_v1.xlsx
 #          data_input/reference/who_violent_age_colombia_1953-1977.csv
 #          output/deaths_pop_munic_1985_2023.csv.gz
+#          data_inter/deaths_munic_1979-2023.rds  (1979-1984; optional)
 # outputs  output/tables/homicide_backcast_dept_1915-2019.csv
 #          output/tables/homicide_backcast_parameters.csv
 #          output/tables/homicide_backcast_validation.csv
@@ -74,7 +77,7 @@ yrs <- 1915:2019
 pi_m <- 0.90 # male share of homicides (0.87-0.92 in anuarios and EEVV)
 s_e <- 0.03 # sd of the EEVV observation of eta (near exact by construction)
 pol_years <- 1962:1997 # the Policia series is used up to the 1998 certificate
-eta_break <- 1985 # first year of the modern innovation sd of eta
+eta_break <- 1979 # first year of the modern innovation sd of eta (EEVV microdata)
 z90 <- qnorm(0.95)
 
 norm_name <- function(x) {
@@ -163,6 +166,41 @@ eevv <- sh |>
             h_eevv = sum(dx_v), pop = sum(pop, na.rm = TRUE), .by = c(unit, year)) |>
   mutate(src_d = "EEVV")
 
+# EEVV 1979-1984 from the municipal file of 02 (data_inter, not versioned):
+# deaths by sex and violent deaths replace the anuario rows of those years.
+# without the file, 1979-84 stay on the anuario deaths and have no EEVV
+# homicides (the Policia is then the only homicide source for those years).
+f_7984 <- "data_inter/deaths_munic_1979-2023.rds"
+has_7984 <- file.exists(f_7984)
+if (has_7984) {
+  e79 <- read_rds(f_7984) |>
+    filter(year %in% 1979:1984) |>
+    mutate(cod_dpto = sprintf("%02d", as.integer(cod_dpto)))
+  # code 83 is Caqueta as an intendencia (1979-81); like every code outside
+  # cod_unit it goes to "territorios"
+  say("EEVV 1979-84, codes outside the 33 departments:",
+      paste(sort(unique(e79$cod_dpto[!e79$cod_dpto %in% unique(sh$cod_dpto)])), collapse = ", "))
+  e79 <- e79 |>
+    mutate(unit = coalesce(unname(cod_unit[cod_dpto]), "territorios")) |>
+    summarise(d = sum(dx_tot), dm = sum(dx_tot[sex %in% "m"]), df = sum(dx_tot[sex %in% "f"]),
+              h_eevv = sum(dx_v), .by = c(unit, year)) |>
+    mutate(src_d = "EEVV")
+  # the 1979 microdata lack whole departments (Caldas 1 death, Santander 3):
+  # where EEVV has less than half the deaths of the anuario, the anuario row
+  # is kept and the year has no EEVV homicides
+  short <- e79 |>
+    inner_join(anu |> select(unit, year, d_anu = d), by = c("unit", "year")) |>
+    filter(d < 0.5 * d_anu)
+  say("EEVV 1979-84 unit-years replaced by the anuario:",
+      paste(with(short, paste0(unit, " ", year, " (", d, " vs ", d_anu, ")")), collapse = "; "))
+  e79 <- e79 |> anti_join(short, by = c("unit", "year"))
+  anu <- anu |> filter(year < 1979 | paste(unit, year) %in% paste(short$unit, short$year))
+  eevv_d <- bind_rows(e79, eevv |> select(-pop))
+} else {
+  say("data_inter/deaths_munic_1979-2023.rds not found: 1979-84 without EEVV (run 01-02 first)")
+  eevv_d <- eevv |> select(-pop)
+}
+
 # Policia 1962-2002
 pol <- read_excel(paste0(h_dir, "Homicidio 1962-2002 por depto de Policía_v1.xlsx"), sheet = "Tabla_ancha") |>
   pivot_longer(-Jurisdiccion, names_to = "year", values_to = "n") |>
@@ -188,7 +226,7 @@ pop_u <- bind_rows(pop_c, eevv |> transmute(unit, year, p = pop)) |>
 
 # panel
 pan <- expand_grid(unit = names(unit_lab), year = yrs) |>
-  left_join(bind_rows(anu, eevv |> select(-pop)), by = c("unit", "year")) |>
+  left_join(bind_rows(anu, eevv_d), by = c("unit", "year")) |>
   left_join(pol, by = c("unit", "year")) |>
   left_join(pop_u, by = c("unit", "year")) |>
   arrange(unit, year)
@@ -223,7 +261,7 @@ nat <- pan |>
   left_join(who_v, by = "year") |>
   left_join(pol_nat, by = "year") |>
   mutate(
-    v_share = case_when(year >= 1985 ~ h_eevv / d,
+    v_share = case_when(h_eevv > 0 ~ h_eevv / d,
                         !is.na(v_who) ~ v_who / d,
                         n_anu >= 8 ~ h_anu / d_anu_cov,
                         TRUE ~ NA_real_),
@@ -268,7 +306,7 @@ H_lin <- rbind(c(1, 0, 0), c(1, 0, 0), c(1, 0, 1)) # anuario, EEVV, Policia
 # extended Kalman filter for one unit. Y, V: n x 4 (anuario, EEVV, Policia,
 # sex ratio), NA = missing. returns the log-likelihood and, if asked, the
 # smoothed states. s_eta is a vector (one innovation sd per year).
-kf_unit <- function(Y, V, rho, s_eta, s_u, smooth = FALSE) {
+kf_unit <- function(Y, V, rho, s_eta, s_u, s_b, smooth = FALSE) {
   n <- nrow(Y)
   x <- x0
   P <- P0
@@ -278,7 +316,7 @@ kf_unit <- function(Y, V, rho, s_eta, s_u, smooth = FALSE) {
     Pp <- Pf <- array(NA_real_, c(3, 3, n))
   }
   for (t in seq_len(n)) {
-    if (t > 1) { P[1, 1] <- P[1, 1] + s_eta[t]^2; P[2, 2] <- P[2, 2] + s_u^2 }
+    if (t > 1) { P[1, 1] <- P[1, 1] + s_eta[t]^2; P[2, 2] <- P[2, 2] + s_u^2; P[3, 3] <- P[3, 3] + s_b^2 }
     if (smooth) { xp[t, ] <- x; Pp[, , t] <- P }
     for (j in 1:4) {
       if (is.na(Y[t, j])) next
@@ -314,13 +352,13 @@ kf_unit <- function(Y, V, rho, s_eta, s_u, smooth = FALSE) {
        sd_eta = sqrt(pmax(Ps[1, 1, ], 0)), sd_u = sqrt(pmax(Ps[2, 2, ], 0)), sd_beta = sqrt(pmax(Ps[3, 3, ], 0)))
 }
 
-# run all units. par = c(s_eta_hist, s_eta_mod, s_u, s_0, s_a, s_p); the
+# run all units. par = c(s_eta_hist, s_eta_mod, s_u, s_0, s_a, s_p, s_b); the
 # innovation sd of eta differs before and after `eta_break` (no EEVV before)
 run_model <- function(dat, par, smooth = FALSE) {
   res <- lapply(split(dat, dat$unit), function(z) {
     Y <- cbind(z$y_a, z$y_e, z$y_p, z$y_sr)
     V <- cbind(par[5]^2 + z$q_a, s_e^2 + z$q_e, par[6]^2 + z$q_p, par[4]^2 + z$q_sr)
-    o <- kf_unit(Y, V, z$rho, ifelse(z$year < eta_break, par[1], par[2]), par[3], smooth = smooth)
+    o <- kf_unit(Y, V, z$rho, ifelse(z$year < eta_break, par[1], par[2]), par[3], par[7], smooth = smooth)
     if (!smooth) return(o)
     tibble(unit = z$unit, year = z$year, eta = o$eta, sd_eta = o$sd_eta, u = o$u, sd_u = o$sd_u,
            beta = o$beta, sd_beta = o$sd_beta)
@@ -328,10 +366,10 @@ run_model <- function(dat, par, smooth = FALSE) {
   if (smooth) bind_rows(res) else sum(unlist(res))
 }
 
-fit_par <- function(dat, start = c(0.25, 0.15, 0.015, 0.03, 0.3, 0.15)) {
+fit_par <- function(dat, start = c(0.25, 0.15, 0.015, 0.03, 0.3, 0.12, 0.03)) {
   o <- optim(log(start), function(lp) -run_model(dat, exp(lp)), method = "BFGS",
              control = list(maxit = 200, reltol = 1e-7))
-  list(par = setNames(exp(o$par), c("s_eta_hist", "s_eta_mod", "s_u", "s_0", "s_a", "s_p")), ll = -o$value, conv = o$convergence)
+  list(par = setNames(exp(o$par), c("s_eta_hist", "s_eta_mod", "s_u", "s_0", "s_a", "s_p", "s_b")), ll = -o$value, conv = o$convergence)
 }
 
 say("estimating the standard deviations (with national offset)...")
@@ -351,7 +389,7 @@ write_csv(pars, "output/tables/homicide_backcast_parameters.csv")
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 4. validation: hidden blocks ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-blocks <- list("1946-1965" = 1946:1965, "1946-1953" = 1946:1953, "1954-1965" = 1954:1965, "1985-1997" = 1985:1997, "1998-2010" = 1998:2010)
+blocks <- list("1946-1965" = 1946:1965, "1946-1953" = 1946:1953, "1954-1965" = 1954:1965, "1979-1984" = 1979:1984, "1985-1997" = 1985:1997, "1998-2010" = 1998:2010)
 variants <- tribble(
   ~variant, ~use_sr, ~use_pol, ~offset,
   "N: nothing in the block", FALSE, FALSE, TRUE,
@@ -436,8 +474,10 @@ est |>
 
 # Policia bias: model estimate and the raw overlaps it comes from
 bias <- est |>
-  summarise(beta = last(beta), sd_beta = last(sd_beta),
+  summarise(beta_1964 = beta[year == 1964], beta_1972 = beta[year == 1972], sd_beta_1972 = sd_beta[year == 1972],
+            beta_1982 = beta[year == 1982], beta_1992 = beta[year == 1992],
             log_ratio_anuario_1962_65 = mean(log(h_pol / h_anu)[year %in% 1962:1965], na.rm = TRUE),
+            log_ratio_eevv_1979_84 = mean(log(h_pol / h_eevv)[year %in% 1979:1984 & h_eevv > 0], na.rm = TRUE),
             log_ratio_eevv_1985_97 = mean(log(h_pol / h_eevv)[year %in% 1985:1997], na.rm = TRUE),
             log_ratio_eevv_1998_02 = mean(log(h_pol / h_eevv)[year %in% 1998:2002], na.rm = TRUE), .by = unit)
 write_csv(bias, "output/tables/homicide_backcast_police_bias.csv")
@@ -492,7 +532,7 @@ fig1 <- est |>
   labs(title = "Homicidios por 100.000 habitantes, estimación del modelo e insumos, 1923-2019",
        subtitle = "Línea: estimación; banda: intervalo de 90 %; entre las líneas punteadas, 1966-1978, solo hay Policía. Escala logarítmica.",
        x = NULL, y = NULL,
-       caption = "Homicidios entre las defunciones registradas. 1985-2019: homicidio + intención no determinada + intervención legal. Población: censos interpolados.") +
+       caption = "Homicidios entre las defunciones registradas. 1979-2019: homicidio + intención no determinada + intervención legal. Población: censos interpolados.") +
   base
 ggsave("figures/06_backcast/backcast_rate_by_unit.png", fig1, w = 11, h = 12.5, bg = "white", dpi = 160)
 
@@ -511,7 +551,7 @@ fig2 <- ggplot(vfig, aes(100 * exp(truth), 100 * exp(eta))) +
   facet_grid(variant ~ block, labeller = label_wrap_gen(18)) +
   labs(title = "Validación: homicidios ocultados por bloques de años y predichos por el modelo",
        subtitle = "Cada punto es una unidad-año; barras: intervalo de 90 %. Homicidios como % de las defunciones registradas, escala logarítmica.",
-       x = "Observado (anuarios hasta 1965, EEVV desde 1985)", y = "Predicho") +
+       x = "Observado (anuarios hasta 1965, EEVV desde 1979)", y = "Predicho") +
   base
 ggsave("figures/06_backcast/backcast_validation.png", fig2, w = 10, h = 8, bg = "white", dpi = 160)
 
