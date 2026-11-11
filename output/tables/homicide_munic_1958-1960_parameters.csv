@@ -1,0 +1,15 @@
+term,value
+pi_male,0.9
+cv,0.75
+prior,pop
+tau_1plus_common,0.1463
+slope_pop_sex_ratio,0.7821
+tau_1plus_popcov,0.13
+tau_early_all_ages,0.0625
+kappa_drift_eevv,0.0952
+tau_add_validation,0.1051
+eevv_tau_common,0.0809
+eevv_slope_pop_sex_ratio,0.3572
+eevv_tau_popcov,0.0765
+mean_weight_main,0.0978
+mean_weight_did,0.0698
