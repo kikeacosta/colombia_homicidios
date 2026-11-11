@@ -1,0 +1,1681 @@
+census_year,residence,birthplace,age,male,female,total
+1964,Total en el País,Totales,total,8614652,8869856,17484508
+1964,Total en el País,Totales,0-14,4129273,4026256,8155529
+1964,Total en el País,Totales,15-59,4081168,4383583,8464751
+1964,Total en el País,Totales,60+,404211,460017,864228
+1964,Total en el País,Antioquia,total,1271273,1309640,2580913
+1964,Total en el País,Antioquia,0-14,593992,580634,1174626
+1964,Total en el País,Antioquia,15-59,604652,646150,1250802
+1964,Total en el País,Antioquia,60+,72629,82856,155485
+1964,Total en el País,Atlántico,total,300281,301474,601755
+1964,Total en el País,Atlántico,0-14,156841,149888,306729
+1964,Total en el País,Atlántico,15-59,131225,138321,269546
+1964,Total en el País,Atlántico,60+,12215,13265,25480
+1964,Total en el País,Bolívar,total,546546,571877,1118423
+1964,Total en el País,Bolívar,0-14,258572,252320,510892
+1964,Total en el País,Bolívar,15-59,259343,286760,546103
+1964,Total en el País,Bolívar,60+,28631,32797,61428
+1964,Total en el País,Boyacá,total,645845,679207,1325052
+1964,Total en el País,Boyacá,0-14,265211,257450,522661
+1964,Total en el País,Boyacá,15-59,339640,373464,713104
+1964,Total en el País,Boyacá,60+,40994,48293,89287
+1964,Total en el País,Caldas,total,783702,791876,1575578
+1964,Total en el País,Caldas,0-14,367025,357239,724264
+1964,Total en el País,Caldas,15-59,386556,404245,790801
+1964,Total en el País,Caldas,60+,30121,30392,60513
+1964,Total en el País,Cauca,total,320682,330316,650998
+1964,Total en el País,Cauca,0-14,141665,139791,281456
+1964,Total en el País,Cauca,15-59,162702,171554,334256
+1964,Total en el País,Cauca,60+,16315,18971,35286
+1964,Total en el País,Córdoba,total,302729,305516,608245
+1964,Total en el País,Córdoba,0-14,154169,148294,302463
+1964,Total en el País,Córdoba,15-59,136452,143910,280362
+1964,Total en el País,Córdoba,60+,12108,13312,25420
+1964,Total en el País,Bogotá D.E.,total,468116,479559,947675
+1964,Total en el País,Bogotá D.E.,0-14,316940,313625,630565
+1964,Total en el País,Bogotá D.E.,15-59,144457,156893,301350
+1964,Total en el País,Bogotá D.E.,60+,6719,9041,15760
+1964,Total en el País,Cundinamarca,total,695164,723706,1418870
+1964,Total en el País,Cundinamarca,0-14,276172,268323,544495
+1964,Total en el País,Cundinamarca,15-59,374925,404850,779775
+1964,Total en el País,Cundinamarca,60+,44067,50533,94600
+1964,Total en el País,Chocó,total,96448,103919,200367
+1964,Total en el País,Chocó,0-14,47210,46279,93489
+1964,Total en el País,Chocó,15-59,45083,52454,97537
+1964,Total en el País,Chocó,60+,4155,5186,9341
+1964,Total en el País,Huila,total,220105,229126,449231
+1964,Total en el País,Huila,0-14,102521,101209,203730
+1964,Total en el País,Huila,15-59,104747,113814,218561
+1964,Total en el País,Huila,60+,12837,14103,26940
+1964,Total en el País,Magdalena,total,363994,363867,727861
+1964,Total en el País,Magdalena,0-14,190245,182309,372554
+1964,Total en el País,Magdalena,15-59,160555,167290,327845
+1964,Total en el País,Magdalena,60+,13194,14268,27462
+1964,Total en el País,Meta,total,50590,49083,99673
+1964,Total en el País,Meta,0-14,33460,32353,65813
+1964,Total en el País,Meta,15-59,16643,16192,32835
+1964,Total en el País,Meta,60+,487,538,1025
+1964,Total en el País,Nariño,total,392081,400274,792355
+1964,Total en el País,Nariño,0-14,163056,158563,321619
+1964,Total en el País,Nariño,15-59,205370,216741,422111
+1964,Total en el País,Nariño,60+,23655,24970,48625
+1964,Total en el País,Norte de Santander,total,272702,283337,556039
+1964,Total en el País,Norte de Santander,0-14,129634,126910,256544
+1964,Total en el País,Norte de Santander,15-59,130334,141698,272032
+1964,Total en el País,Norte de Santander,60+,12734,14729,27463
+1964,Total en el País,Santander,total,520416,550708,1071124
+1964,Total en el País,Santander,0-14,241639,235789,477428
+1964,Total en el País,Santander,15-59,254790,282557,537347
+1964,Total en el País,Santander,60+,23987,32362,56349
+1964,Total en el País,Tolima,total,506984,527762,1034746
+1964,Total en el País,Tolima,0-14,222834,218059,440893
+1964,Total en el País,Tolima,15-59,261408,285046,546454
+1964,Total en el País,Tolima,60+,22742,24657,47399
+1964,Total en el País,Valle del Cauca,total,664677,679088,1343765
+1964,Total en el País,Valle del Cauca,0-14,374274,367436,741710
+1964,Total en el País,Valle del Cauca,15-59,273564,291607,565171
+1964,Total en el País,Valle del Cauca,60+,16839,20045,36884
+1964,Total en el País,Intendencias y comisarías,total,151981,155804,307785
+1964,Total en el País,Intendencias y comisarías,0-14,83866,80234,164100
+1964,Total en el País,Intendencias y comisarías,15-59,62975,69173,132148
+1964,Total en el País,Intendencias y comisarías,60+,5140,6397,11537
+1964,Total en el País,Exterior,total,40336,33717,74053
+1964,Total en el País,Exterior,0-14,9947,9551,19498
+1964,Total en el País,Exterior,15-59,25747,20864,46611
+1964,Total en el País,Exterior,60+,4642,3302,7944
+1964,Antioquia,Totales,total,1205907,1271392,2477299
+1964,Antioquia,Totales,0-14,594463,581217,1175680
+1964,Antioquia,Totales,15-59,553697,618747,1172444
+1964,Antioquia,Totales,60+,57747,71428,129175
+1964,Antioquia,Antioquia,total,1119221,1184872,2304093
+1964,Antioquia,Antioquia,0-14,568174,555343,1123517
+1964,Antioquia,Antioquia,15-59,496506,561477,1057983
+1964,Antioquia,Antioquia,60+,54541,68052,122593
+1964,Antioquia,Atlántico,total,1460,1332,2792
+1964,Antioquia,Atlántico,0-14,471,518,989
+1964,Antioquia,Atlántico,15-59,959,784,1743
+1964,Antioquia,Atlántico,60+,30,30,60
+1964,Antioquia,Bolívar,total,9252,7325,16577
+1964,Antioquia,Bolívar,0-14,1908,1812,3720
+1964,Antioquia,Bolívar,15-59,6747,5064,11811
+1964,Antioquia,Bolívar,60+,597,449,1046
+1964,Antioquia,Boyacá,total,1229,1336,2565
+1964,Antioquia,Boyacá,0-14,228,261,489
+1964,Antioquia,Boyacá,15-59,950,986,1936
+1964,Antioquia,Boyacá,60+,51,89,140
+1964,Antioquia,Caldas,total,25713,28785,54498
+1964,Antioquia,Caldas,0-14,8776,8750,17526
+1964,Antioquia,Caldas,15-59,16116,19003,35119
+1964,Antioquia,Caldas,60+,821,1032,1853
+1964,Antioquia,Cauca,total,600,597,1197
+1964,Antioquia,Cauca,0-14,146,138,284
+1964,Antioquia,Cauca,15-59,429,434,863
+1964,Antioquia,Cauca,60+,25,25,50
+1964,Antioquia,Córdoba,total,18007,14706,32713
+1964,Antioquia,Córdoba,0-14,4879,4496,9375
+1964,Antioquia,Córdoba,15-59,12490,9755,22245
+1964,Antioquia,Córdoba,60+,638,455,1093
+1964,Antioquia,Bogotá D.E.,total,3013,3241,6254
+1964,Antioquia,Bogotá D.E.,0-14,1587,1576,3163
+1964,Antioquia,Bogotá D.E.,15-59,1367,1543,2910
+1964,Antioquia,Bogotá D.E.,60+,59,122,181
+1964,Antioquia,Cundinamarca,total,1823,2054,3877
+1964,Antioquia,Cundinamarca,0-14,327,318,645
+1964,Antioquia,Cundinamarca,15-59,1397,1600,2997
+1964,Antioquia,Cundinamarca,60+,99,136,235
+1964,Antioquia,Chocó,total,4681,5493,10174
+1964,Antioquia,Chocó,0-14,1063,1290,2353
+1964,Antioquia,Chocó,15-59,3449,3982,7431
+1964,Antioquia,Chocó,60+,169,221,390
+1964,Antioquia,Huila,total,532,723,1255
+1964,Antioquia,Huila,0-14,102,107,209
+1964,Antioquia,Huila,15-59,405,576,981
+1964,Antioquia,Huila,60+,25,40,65
+1964,Antioquia,Magdalena,total,1506,1087,2593
+1964,Antioquia,Magdalena,0-14,317,317,634
+1964,Antioquia,Magdalena,15-59,1145,742,1887
+1964,Antioquia,Magdalena,60+,44,28,72
+1964,Antioquia,Meta,total,143,140,283
+1964,Antioquia,Meta,0-14,75,60,135
+1964,Antioquia,Meta,15-59,66,78,144
+1964,Antioquia,Meta,60+,2,2,4
+1964,Antioquia,Nariño,total,544,447,991
+1964,Antioquia,Nariño,0-14,83,85,168
+1964,Antioquia,Nariño,15-59,439,353,792
+1964,Antioquia,Nariño,60+,22,9,31
+1964,Antioquia,Norte de Santander,total,640,761,1401
+1964,Antioquia,Norte de Santander,0-14,160,163,323
+1964,Antioquia,Norte de Santander,15-59,457,537,994
+1964,Antioquia,Norte de Santander,60+,23,61,84
+1964,Antioquia,Santander,total,2820,3294,6114
+1964,Antioquia,Santander,0-14,914,897,1811
+1964,Antioquia,Santander,15-59,1832,2241,4073
+1964,Antioquia,Santander,60+,74,156,230
+1964,Antioquia,Tolima,total,3219,3696,6915
+1964,Antioquia,Tolima,0-14,674,659,1333
+1964,Antioquia,Tolima,15-59,2417,2835,5252
+1964,Antioquia,Tolima,60+,128,202,330
+1964,Antioquia,Valle del Cauca,total,8696,9120,17816
+1964,Antioquia,Valle del Cauca,0-14,4005,3913,7918
+1964,Antioquia,Valle del Cauca,15-59,4584,5100,9684
+1964,Antioquia,Valle del Cauca,60+,107,107,214
+1964,Antioquia,Intendencias y comisarías,total,364,269,633
+1964,Antioquia,Intendencias y comisarías,0-14,96,85,181
+1964,Antioquia,Intendencias y comisarías,15-59,260,182,442
+1964,Antioquia,Intendencias y comisarías,60+,8,2,10
+1964,Antioquia,Exterior,total,2444,2114,4558
+1964,Antioquia,Exterior,0-14,478,429,907
+1964,Antioquia,Exterior,15-59,1682,1475,3157
+1964,Antioquia,Exterior,60+,284,210,494
+1964,Atlántico,Totales,total,344045,373361,717406
+1964,Atlántico,Totales,0-14,164892,159577,324469
+1964,Atlántico,Totales,15-59,162857,193831,356688
+1964,Atlántico,Totales,60+,16296,19953,36249
+1964,Atlántico,Antioquia,total,4063,4105,8168
+1964,Atlántico,Antioquia,0-14,920,1012,1932
+1964,Atlántico,Antioquia,15-59,2808,2830,5638
+1964,Atlántico,Antioquia,60+,335,263,598
+1964,Atlántico,Atlántico,total,268974,274963,543937
+1964,Atlántico,Atlántico,0-14,146993,140088,287081
+1964,Atlántico,Atlántico,15-59,111341,122809,234150
+1964,Atlántico,Atlántico,60+,10640,12066,22706
+1964,Atlántico,Bolívar,total,27974,41066,69040
+1964,Atlántico,Bolívar,0-14,6589,7251,13840
+1964,Atlántico,Bolívar,15-59,19430,30569,49999
+1964,Atlántico,Bolívar,60+,1955,3246,5201
+1964,Atlántico,Boyacá,total,791,762,1553
+1964,Atlántico,Boyacá,0-14,93,104,197
+1964,Atlántico,Boyacá,15-59,593,570,1163
+1964,Atlántico,Boyacá,60+,105,88,193
+1964,Atlántico,Caldas,total,1241,1127,2368
+1964,Atlántico,Caldas,0-14,237,229,466
+1964,Atlántico,Caldas,15-59,957,847,1804
+1964,Atlántico,Caldas,60+,47,51,98
+1964,Atlántico,Cauca,total,139,124,263
+1964,Atlántico,Cauca,0-14,17,14,31
+1964,Atlántico,Cauca,15-59,111,101,212
+1964,Atlántico,Cauca,60+,11,9,20
+1964,Atlántico,Córdoba,total,2616,4166,6782
+1964,Atlántico,Córdoba,0-14,646,744,1390
+1964,Atlántico,Córdoba,15-59,1813,3178,4991
+1964,Atlántico,Córdoba,60+,157,244,401
+1964,Atlántico,Bogotá D.E.,total,2771,2659,5430
+1964,Atlántico,Bogotá D.E.,0-14,1209,1188,2397
+1964,Atlántico,Bogotá D.E.,15-59,1392,1323,2715
+1964,Atlántico,Bogotá D.E.,60+,170,148,318
+1964,Atlántico,Cundinamarca,total,1314,1299,2613
+1964,Atlántico,Cundinamarca,0-14,128,137,265
+1964,Atlántico,Cundinamarca,15-59,989,945,1934
+1964,Atlántico,Cundinamarca,60+,197,217,414
+1964,Atlántico,Chocó,total,278,256,534
+1964,Atlántico,Chocó,0-14,35,47,82
+1964,Atlántico,Chocó,15-59,235,197,432
+1964,Atlántico,Chocó,60+,8,12,20
+1964,Atlántico,Huila,total,275,356,631
+1964,Atlántico,Huila,0-14,39,52,91
+1964,Atlántico,Huila,15-59,203,266,469
+1964,Atlántico,Huila,60+,33,38,71
+1964,Atlántico,Magdalena,total,19291,27177,46468
+1964,Atlántico,Magdalena,0-14,5161,5881,11042
+1964,Atlántico,Magdalena,15-59,13030,19369,32399
+1964,Atlántico,Magdalena,60+,1100,1927,3027
+1964,Atlántico,Meta,total,87,88,175
+1964,Atlántico,Meta,0-14,31,30,61
+1964,Atlántico,Meta,15-59,55,56,111
+1964,Atlántico,Meta,60+,1,2,3
+1964,Atlántico,Nariño,total,210,152,362
+1964,Atlántico,Nariño,0-14,28,21,49
+1964,Atlántico,Nariño,15-59,166,124,290
+1964,Atlántico,Nariño,60+,16,7,23
+1964,Atlántico,Norte de Santander,total,2609,3507,6116
+1964,Atlántico,Norte de Santander,0-14,343,338,681
+1964,Atlántico,Norte de Santander,15-59,2033,2764,4797
+1964,Atlántico,Norte de Santander,60+,233,405,638
+1964,Atlántico,Santander,total,3980,4416,8396
+1964,Atlántico,Santander,0-14,904,908,1812
+1964,Atlántico,Santander,15-59,2867,3146,6013
+1964,Atlántico,Santander,60+,209,362,571
+1964,Atlántico,Tolima,total,1632,1876,3508
+1964,Atlántico,Tolima,0-14,195,204,399
+1964,Atlántico,Tolima,15-59,1186,1370,2556
+1964,Atlántico,Tolima,60+,251,302,553
+1964,Atlántico,Valle del Cauca,total,1406,1401,2807
+1964,Atlántico,Valle del Cauca,0-14,444,464,908
+1964,Atlántico,Valle del Cauca,15-59,943,915,1858
+1964,Atlántico,Valle del Cauca,60+,19,22,41
+1964,Atlántico,Intendencias y comisarías,total,1040,1237,2277
+1964,Atlántico,Intendencias y comisarías,0-14,255,260,515
+1964,Atlántico,Intendencias y comisarías,15-59,704,880,1584
+1964,Atlántico,Intendencias y comisarías,60+,81,97,178
+1964,Atlántico,Exterior,total,3354,2624,5978
+1964,Atlántico,Exterior,0-14,625,605,1230
+1964,Atlántico,Exterior,15-59,2001,1572,3573
+1964,Atlántico,Exterior,60+,728,447,1175
+1964,Bolívar,Totales,total,491440,514907,1006347
+1964,Bolívar,Totales,0-14,249714,243221,492935
+1964,Bolívar,Totales,15-59,217724,243739,461463
+1964,Bolívar,Totales,60+,24002,27947,51949
+1964,Bolívar,Antioquia,total,3365,3170,6535
+1964,Bolívar,Antioquia,0-14,945,978,1923
+1964,Bolívar,Antioquia,15-59,2212,2038,4250
+1964,Bolívar,Antioquia,60+,208,154,362
+1964,Bolívar,Atlántico,total,5438,5054,10492
+1964,Bolívar,Atlántico,0-14,2132,2137,4269
+1964,Bolívar,Atlántico,15-59,3020,2649,5669
+1964,Bolívar,Atlántico,60+,286,268,554
+1964,Bolívar,Bolívar,total,452263,474935,927198
+1964,Bolívar,Bolívar,0-14,237333,230825,468158
+1964,Bolívar,Bolívar,15-59,193206,218609,411815
+1964,Bolívar,Bolívar,60+,21724,25501,47225
+1964,Bolívar,Boyacá,total,1401,915,2316
+1964,Bolívar,Boyacá,0-14,439,369,808
+1964,Bolívar,Boyacá,15-59,915,514,1429
+1964,Bolívar,Boyacá,60+,47,32,79
+1964,Bolívar,Caldas,total,620,420,1040
+1964,Bolívar,Caldas,0-14,123,85,208
+1964,Bolívar,Caldas,15-59,483,324,807
+1964,Bolívar,Caldas,60+,14,11,25
+1964,Bolívar,Cauca,total,88,66,154
+1964,Bolívar,Cauca,0-14,12,13,25
+1964,Bolívar,Cauca,15-59,74,48,122
+1964,Bolívar,Cauca,60+,2,5,7
+1964,Bolívar,Córdoba,total,10951,14561,25512
+1964,Bolívar,Córdoba,0-14,3548,3871,7419
+1964,Bolívar,Córdoba,15-59,6752,9645,16397
+1964,Bolívar,Córdoba,60+,651,1045,1696
+1964,Bolívar,Bogotá D.E.,total,1344,906,2250
+1964,Bolívar,Bogotá D.E.,0-14,487,437,924
+1964,Bolívar,Bogotá D.E.,15-59,817,434,1251
+1964,Bolívar,Bogotá D.E.,60+,40,35,75
+1964,Bolívar,Cundinamarca,total,701,480,1181
+1964,Bolívar,Cundinamarca,0-14,97,91,188
+1964,Bolívar,Cundinamarca,15-59,559,362,921
+1964,Bolívar,Cundinamarca,60+,45,27,72
+1964,Bolívar,Chocó,total,729,784,1513
+1964,Bolívar,Chocó,0-14,168,182,350
+1964,Bolívar,Chocó,15-59,532,561,1093
+1964,Bolívar,Chocó,60+,29,41,70
+1964,Bolívar,Huila,total,142,110,252
+1964,Bolívar,Huila,0-14,28,20,48
+1964,Bolívar,Huila,15-59,105,83,188
+1964,Bolívar,Huila,60+,9,7,16
+1964,Bolívar,Magdalena,total,5718,6046,11764
+1964,Bolívar,Magdalena,0-14,2013,2004,4017
+1964,Bolívar,Magdalena,15-59,3364,3670,7034
+1964,Bolívar,Magdalena,60+,341,372,713
+1964,Bolívar,Meta,total,53,61,114
+1964,Bolívar,Meta,0-14,25,32,57
+1964,Bolívar,Meta,15-59,27,27,54
+1964,Bolívar,Meta,60+,1,2,3
+1964,Bolívar,Nariño,total,136,77,213
+1964,Bolívar,Nariño,0-14,22,23,45
+1964,Bolívar,Nariño,15-59,105,51,156
+1964,Bolívar,Nariño,60+,9,3,12
+1964,Bolívar,Norte de Santander,total,785,680,1465
+1964,Bolívar,Norte de Santander,0-14,136,119,255
+1964,Bolívar,Norte de Santander,15-59,582,499,1081
+1964,Bolívar,Norte de Santander,60+,67,62,129
+1964,Bolívar,Santander,total,4455,4100,8555
+1964,Bolívar,Santander,0-14,1624,1433,3057
+1964,Bolívar,Santander,15-59,2681,2518,5199
+1964,Bolívar,Santander,60+,150,149,299
+1964,Bolívar,Tolima,total,639,481,1120
+1964,Bolívar,Tolima,0-14,75,70,145
+1964,Bolívar,Tolima,15-59,506,370,876
+1964,Bolívar,Tolima,60+,58,41,99
+1964,Bolívar,Valle del Cauca,total,679,529,1208
+1964,Bolívar,Valle del Cauca,0-14,158,167,325
+1964,Bolívar,Valle del Cauca,15-59,504,351,855
+1964,Bolívar,Valle del Cauca,60+,17,11,28
+1964,Bolívar,Intendencias y comisarías,total,453,444,897
+1964,Bolívar,Intendencias y comisarías,0-14,107,136,243
+1964,Bolívar,Intendencias y comisarías,15-59,322,282,604
+1964,Bolívar,Intendencias y comisarías,60+,24,26,50
+1964,Bolívar,Exterior,total,1480,1088,2568
+1964,Bolívar,Exterior,0-14,242,229,471
+1964,Bolívar,Exterior,15-59,958,704,1662
+1964,Bolívar,Exterior,60+,280,155,435
+1964,Boyacá,Totales,total,518020,540132,1058152
+1964,Boyacá,Totales,0-14,257721,248235,505956
+1964,Boyacá,Totales,15-59,231122,258191,489313
+1964,Boyacá,Totales,60+,29177,33706,62883
+1964,Boyacá,Antioquia,total,3300,2240,5540
+1964,Boyacá,Antioquia,0-14,854,794,1648
+1964,Boyacá,Antioquia,15-59,2323,1338,3661
+1964,Boyacá,Antioquia,60+,123,108,231
+1964,Boyacá,Atlántico,total,242,192,434
+1964,Boyacá,Atlántico,0-14,73,67,140
+1964,Boyacá,Atlántico,15-59,161,119,280
+1964,Boyacá,Atlántico,60+,8,6,14
+1964,Boyacá,Bolívar,total,444,282,726
+1964,Boyacá,Bolívar,0-14,88,105,193
+1964,Boyacá,Bolívar,15-59,343,170,513
+1964,Boyacá,Bolívar,60+,13,7,20
+1964,Boyacá,Boyacá,total,476335,503781,980116
+1964,Boyacá,Boyacá,0-14,242732,233850,476582
+1964,Boyacá,Boyacá,15-59,205957,237669,443626
+1964,Boyacá,Boyacá,60+,27646,32262,59908
+1964,Boyacá,Caldas,total,3524,3024,6548
+1964,Boyacá,Caldas,0-14,1605,1580,3185
+1964,Boyacá,Caldas,15-59,1863,1398,3261
+1964,Boyacá,Caldas,60+,56,46,102
+1964,Boyacá,Cauca,total,182,115,297
+1964,Boyacá,Cauca,0-14,52,38,90
+1964,Boyacá,Cauca,15-59,121,74,195
+1964,Boyacá,Cauca,60+,9,3,12
+1964,Boyacá,Córdoba,total,135,104,239
+1964,Boyacá,Córdoba,0-14,30,31,61
+1964,Boyacá,Córdoba,15-59,100,70,170
+1964,Boyacá,Córdoba,60+,5,3,8
+1964,Boyacá,Bogotá D.E.,total,7117,6773,13890
+1964,Boyacá,Bogotá D.E.,0-14,4804,4490,9294
+1964,Boyacá,Bogotá D.E.,15-59,2243,2217,4460
+1964,Boyacá,Bogotá D.E.,60+,70,66,136
+1964,Boyacá,Cundinamarca,total,9340,7865,17205
+1964,Boyacá,Cundinamarca,0-14,2227,2050,4277
+1964,Boyacá,Cundinamarca,15-59,6552,5300,11852
+1964,Boyacá,Cundinamarca,60+,561,515,1076
+1964,Boyacá,Chocó,total,248,87,335
+1964,Boyacá,Chocó,0-14,21,27,48
+1964,Boyacá,Chocó,15-59,225,58,283
+1964,Boyacá,Chocó,60+,2,2,4
+1964,Boyacá,Huila,total,467,420,887
+1964,Boyacá,Huila,0-14,99,144,243
+1964,Boyacá,Huila,15-59,354,268,622
+1964,Boyacá,Huila,60+,14,8,22
+1964,Boyacá,Magdalena,total,261,178,439
+1964,Boyacá,Magdalena,0-14,63,64,127
+1964,Boyacá,Magdalena,15-59,187,110,297
+1964,Boyacá,Magdalena,60+,11,4,15
+1964,Boyacá,Meta,total,997,843,1840
+1964,Boyacá,Meta,0-14,546,507,1053
+1964,Boyacá,Meta,15-59,441,327,768
+1964,Boyacá,Meta,60+,10,9,19
+1964,Boyacá,Nariño,total,331,144,475
+1964,Boyacá,Nariño,0-14,29,37,66
+1964,Boyacá,Nariño,15-59,297,103,400
+1964,Boyacá,Nariño,60+,5,4,9
+1964,Boyacá,Norte de Santander,total,1551,1307,2858
+1964,Boyacá,Norte de Santander,0-14,516,516,1032
+1964,Boyacá,Norte de Santander,15-59,993,748,1741
+1964,Boyacá,Norte de Santander,60+,42,43,85
+1964,Boyacá,Santander,total,6501,6707,13208
+1964,Boyacá,Santander,0-14,1794,1829,3623
+1964,Boyacá,Santander,15-59,4328,4417,8745
+1964,Boyacá,Santander,60+,379,461,840
+1964,Boyacá,Tolima,total,4433,3990,8423
+1964,Boyacá,Tolima,0-14,1399,1382,2781
+1964,Boyacá,Tolima,15-59,2923,2508,5431
+1964,Boyacá,Tolima,60+,111,100,211
+1964,Boyacá,Valle del Cauca,total,1219,904,2123
+1964,Boyacá,Valle del Cauca,0-14,419,382,801
+1964,Boyacá,Valle del Cauca,15-59,781,512,1293
+1964,Boyacá,Valle del Cauca,60+,19,10,29
+1964,Boyacá,Intendencias y comisarías,total,913,781,1694
+1964,Boyacá,Intendencias y comisarías,0-14,219,215,434
+1964,Boyacá,Intendencias y comisarías,15-59,646,547,1193
+1964,Boyacá,Intendencias y comisarías,60+,48,19,67
+1964,Boyacá,Exterior,total,480,395,875
+1964,Boyacá,Exterior,0-14,151,127,278
+1964,Boyacá,Exterior,15-59,284,238,522
+1964,Boyacá,Exterior,60+,45,30,75
+1964,Caldas,Totales,total,728833,727039,1455872
+1964,Caldas,Totales,0-14,345887,336903,682790
+1964,Caldas,Totales,15-59,350237,358315,708552
+1964,Caldas,Totales,60+,32709,31821,64530
+1964,Caldas,Antioquia,total,54718,46444,101162
+1964,Caldas,Antioquia,0-14,8116,7859,15975
+1964,Caldas,Antioquia,15-59,37701,31178,68879
+1964,Caldas,Antioquia,60+,8901,7407,16308
+1964,Caldas,Atlántico,total,459,229,688
+1964,Caldas,Atlántico,0-14,80,83,163
+1964,Caldas,Atlántico,15-59,370,134,504
+1964,Caldas,Atlántico,60+,9,12,21
+1964,Caldas,Bolívar,total,567,246,813
+1964,Caldas,Bolívar,0-14,66,61,127
+1964,Caldas,Bolívar,15-59,481,174,655
+1964,Caldas,Bolívar,60+,20,11,31
+1964,Caldas,Boyacá,total,5281,3597,8878
+1964,Caldas,Boyacá,0-14,441,374,815
+1964,Caldas,Boyacá,15-59,4442,2894,7336
+1964,Caldas,Boyacá,60+,398,329,727
+1964,Caldas,Caldas,total,589460,596462,1185922
+1964,Caldas,Caldas,0-14,313068,304267,617335
+1964,Caldas,Caldas,15-59,256824,272099,528923
+1964,Caldas,Caldas,60+,19568,20096,39664
+1964,Caldas,Cauca,total,1465,1183,2648
+1964,Caldas,Cauca,0-14,360,389,749
+1964,Caldas,Cauca,15-59,1016,734,1750
+1964,Caldas,Cauca,60+,89,60,149
+1964,Caldas,Córdoba,total,209,128,337
+1964,Caldas,Córdoba,0-14,25,32,57
+1964,Caldas,Córdoba,15-59,174,90,264
+1964,Caldas,Córdoba,60+,10,6,16
+1964,Caldas,Bogotá D.E.,total,3134,3282,6416
+1964,Caldas,Bogotá D.E.,0-14,1564,1572,3136
+1964,Caldas,Bogotá D.E.,15-59,1463,1572,3035
+1964,Caldas,Bogotá D.E.,60+,107,138,245
+1964,Caldas,Cundinamarca,total,9178,8517,17695
+1964,Caldas,Cundinamarca,0-14,1061,1030,2091
+1964,Caldas,Cundinamarca,15-59,7127,6390,13517
+1964,Caldas,Cundinamarca,60+,990,1097,2087
+1964,Caldas,Chocó,total,964,623,1587
+1964,Caldas,Chocó,0-14,131,121,252
+1964,Caldas,Chocó,15-59,793,464,1257
+1964,Caldas,Chocó,60+,40,38,78
+1964,Caldas,Huila,total,1582,1914,3496
+1964,Caldas,Huila,0-14,303,326,629
+1964,Caldas,Huila,15-59,1113,1427,2540
+1964,Caldas,Huila,60+,166,161,327
+1964,Caldas,Magdalena,total,371,186,557
+1964,Caldas,Magdalena,0-14,67,61,128
+1964,Caldas,Magdalena,15-59,292,121,413
+1964,Caldas,Magdalena,60+,12,4,16
+1964,Caldas,Meta,total,296,301,597
+1964,Caldas,Meta,0-14,154,157,311
+1964,Caldas,Meta,15-59,134,138,272
+1964,Caldas,Meta,60+,8,6,14
+1964,Caldas,Nariño,total,1434,699,2133
+1964,Caldas,Nariño,0-14,128,131,259
+1964,Caldas,Nariño,15-59,1225,526,1751
+1964,Caldas,Nariño,60+,81,42,123
+1964,Caldas,Norte de Santander,total,394,291,685
+1964,Caldas,Norte de Santander,0-14,66,61,127
+1964,Caldas,Norte de Santander,15-59,307,218,525
+1964,Caldas,Norte de Santander,60+,21,12,33
+1964,Caldas,Santander,total,3178,2276,5454
+1964,Caldas,Santander,0-14,348,281,629
+1964,Caldas,Santander,15-59,2651,1809,4460
+1964,Caldas,Santander,60+,179,186,365
+1964,Caldas,Tolima,total,23288,26586,49874
+1964,Caldas,Tolima,0-14,5123,5289,10412
+1964,Caldas,Tolima,15-59,16553,19466,36019
+1964,Caldas,Tolima,60+,1612,1831,3443
+1964,Caldas,Valle del Cauca,total,31842,33202,65044
+1964,Caldas,Valle del Cauca,0-14,14580,14553,29133
+1964,Caldas,Valle del Cauca,15-59,16870,18316,35186
+1964,Caldas,Valle del Cauca,60+,392,333,725
+1964,Caldas,Intendencias y comisarías,total,262,263,525
+1964,Caldas,Intendencias y comisarías,0-14,103,129,232
+1964,Caldas,Intendencias y comisarías,15-59,149,130,279
+1964,Caldas,Intendencias y comisarías,60+,10,4,14
+1964,Caldas,Exterior,total,751,610,1361
+1964,Caldas,Exterior,0-14,103,127,230
+1964,Caldas,Exterior,15-59,552,435,987
+1964,Caldas,Exterior,60+,96,48,144
+1964,Cauca,Totales,total,302478,304719,607197
+1964,Cauca,Totales,0-14,142117,139298,281415
+1964,Cauca,Totales,15-59,145961,149492,295453
+1964,Cauca,Totales,60+,14400,15929,30329
+1964,Cauca,Antioquia,total,2028,1370,3398
+1964,Cauca,Antioquia,0-14,232,224,456
+1964,Cauca,Antioquia,15-59,1510,978,2488
+1964,Cauca,Antioquia,60+,286,168,454
+1964,Cauca,Atlántico,total,51,40,91
+1964,Cauca,Atlántico,0-14,19,21,40
+1964,Cauca,Atlántico,15-59,30,19,49
+1964,Cauca,Atlántico,60+,2,0,2
+1964,Cauca,Bolívar,total,54,36,90
+1964,Cauca,Bolívar,0-14,9,11,20
+1964,Cauca,Bolívar,15-59,42,23,65
+1964,Cauca,Bolívar,60+,3,2,5
+1964,Cauca,Boyacá,total,484,251,735
+1964,Cauca,Boyacá,0-14,32,44,76
+1964,Cauca,Boyacá,15-59,429,187,616
+1964,Cauca,Boyacá,60+,23,20,43
+1964,Cauca,Caldas,total,3947,3639,7586
+1964,Cauca,Caldas,0-14,926,894,1820
+1964,Cauca,Caldas,15-59,2744,2562,5306
+1964,Cauca,Caldas,60+,277,183,460
+1964,Cauca,Cauca,total,265561,272083,537644
+1964,Cauca,Cauca,0-14,131354,128878,260232
+1964,Cauca,Cauca,15-59,122142,129021,251163
+1964,Cauca,Cauca,60+,12065,14184,26249
+1964,Cauca,Córdoba,total,39,22,61
+1964,Cauca,Córdoba,0-14,9,9,18
+1964,Cauca,Córdoba,15-59,28,12,40
+1964,Cauca,Córdoba,60+,2,1,3
+1964,Cauca,Bogotá D.E.,total,512,449,961
+1964,Cauca,Bogotá D.E.,0-14,222,224,446
+1964,Cauca,Bogotá D.E.,15-59,279,213,492
+1964,Cauca,Bogotá D.E.,60+,11,12,23
+1964,Cauca,Cundinamarca,total,875,446,1321
+1964,Cauca,Cundinamarca,0-14,98,90,188
+1964,Cauca,Cundinamarca,15-59,725,324,1049
+1964,Cauca,Cundinamarca,60+,52,32,84
+1964,Cauca,Chocó,total,352,233,585
+1964,Cauca,Chocó,0-14,36,39,75
+1964,Cauca,Chocó,15-59,302,185,487
+1964,Cauca,Chocó,60+,14,9,23
+1964,Cauca,Huila,total,1848,1889,3737
+1964,Cauca,Huila,0-14,569,566,1135
+1964,Cauca,Huila,15-59,1116,1219,2335
+1964,Cauca,Huila,60+,163,104,267
+1964,Cauca,Magdalena,total,59,36,95
+1964,Cauca,Magdalena,0-14,10,14,24
+1964,Cauca,Magdalena,15-59,48,21,69
+1964,Cauca,Magdalena,60+,1,1,2
+1964,Cauca,Meta,total,49,24,73
+1964,Cauca,Meta,0-14,20,16,36
+1964,Cauca,Meta,15-59,28,8,36
+1964,Cauca,Meta,60+,1,0,1
+1964,Cauca,Nariño,total,9283,7756,17039
+1964,Cauca,Nariño,0-14,1501,1411,2912
+1964,Cauca,Nariño,15-59,6965,5702,12667
+1964,Cauca,Nariño,60+,817,643,1460
+1964,Cauca,Norte de Santander,total,225,56,281
+1964,Cauca,Norte de Santander,0-14,7,10,17
+1964,Cauca,Norte de Santander,15-59,215,45,260
+1964,Cauca,Norte de Santander,60+,3,1,4
+1964,Cauca,Santander,total,343,186,529
+1964,Cauca,Santander,0-14,38,27,65
+1964,Cauca,Santander,15-59,287,154,441
+1964,Cauca,Santander,60+,18,5,23
+1964,Cauca,Tolima,total,1743,1386,3129
+1964,Cauca,Tolima,0-14,287,289,576
+1964,Cauca,Tolima,15-59,1369,1029,2398
+1964,Cauca,Tolima,60+,87,68,155
+1964,Cauca,Valle del Cauca,total,14045,14031,28076
+1964,Cauca,Valle del Cauca,0-14,6462,6266,12728
+1964,Cauca,Valle del Cauca,15-59,7083,7308,14391
+1964,Cauca,Valle del Cauca,60+,500,457,957
+1964,Cauca,Intendencias y comisarías,total,585,523,1108
+1964,Cauca,Intendencias y comisarías,0-14,242,217,459
+1964,Cauca,Intendencias y comisarías,15-59,325,294,619
+1964,Cauca,Intendencias y comisarías,60+,18,12,30
+1964,Cauca,Exterior,total,395,263,658
+1964,Cauca,Exterior,0-14,44,48,92
+1964,Cauca,Exterior,15-59,294,188,482
+1964,Cauca,Exterior,60+,57,27,84
+1964,Córdoba,Totales,total,293725,291989,585714
+1964,Córdoba,Totales,0-14,151142,145083,296225
+1964,Córdoba,Totales,15-59,129906,133751,263657
+1964,Córdoba,Totales,60+,12677,13155,25832
+1964,Córdoba,Antioquia,total,5147,4356,9503
+1964,Córdoba,Antioquia,0-14,1594,1587,3181
+1964,Córdoba,Antioquia,15-59,3252,2596,5848
+1964,Córdoba,Antioquia,60+,301,173,474
+1964,Córdoba,Atlántico,total,887,666,1553
+1964,Córdoba,Atlántico,0-14,293,319,612
+1964,Córdoba,Atlántico,15-59,561,325,886
+1964,Córdoba,Atlántico,60+,33,22,55
+1964,Córdoba,Bolívar,total,18018,16018,34036
+1964,Córdoba,Bolívar,0-14,4340,4152,8492
+1964,Córdoba,Bolívar,15-59,11983,10457,22440
+1964,Córdoba,Bolívar,60+,1695,1409,3104
+1964,Córdoba,Boyacá,total,122,59,181
+1964,Córdoba,Boyacá,0-14,17,8,25
+1964,Córdoba,Boyacá,15-59,100,50,150
+1964,Córdoba,Boyacá,60+,5,1,6
+1964,Córdoba,Caldas,total,538,428,966
+1964,Córdoba,Caldas,0-14,153,118,271
+1964,Córdoba,Caldas,15-59,368,297,665
+1964,Córdoba,Caldas,60+,17,13,30
+1964,Córdoba,Cauca,total,42,42,84
+1964,Córdoba,Cauca,0-14,13,13,26
+1964,Córdoba,Cauca,15-59,29,26,55
+1964,Córdoba,Cauca,60+,0,3,3
+1964,Córdoba,Córdoba,total,266211,268327,534538
+1964,Córdoba,Córdoba,0-14,144151,138224,282375
+1964,Córdoba,Córdoba,15-59,111622,118665,230287
+1964,Córdoba,Córdoba,60+,10438,11438,21876
+1964,Córdoba,Bogotá D.E.,total,235,185,420
+1964,Córdoba,Bogotá D.E.,0-14,77,100,177
+1964,Córdoba,Bogotá D.E.,15-59,152,78,230
+1964,Córdoba,Bogotá D.E.,60+,6,7,13
+1964,Córdoba,Cundinamarca,total,138,93,231
+1964,Córdoba,Cundinamarca,0-14,12,19,31
+1964,Córdoba,Cundinamarca,15-59,115,66,181
+1964,Córdoba,Cundinamarca,60+,11,8,19
+1964,Córdoba,Chocó,total,253,164,417
+1964,Córdoba,Chocó,0-14,39,35,74
+1964,Córdoba,Chocó,15-59,204,123,327
+1964,Córdoba,Chocó,60+,10,6,16
+1964,Córdoba,Huila,total,55,51,106
+1964,Córdoba,Huila,0-14,4,9,13
+1964,Córdoba,Huila,15-59,47,36,83
+1964,Córdoba,Huila,60+,4,6,10
+1964,Córdoba,Magdalena,total,594,437,1031
+1964,Córdoba,Magdalena,0-14,138,161,299
+1964,Córdoba,Magdalena,15-59,437,266,703
+1964,Córdoba,Magdalena,60+,19,10,29
+1964,Córdoba,Meta,total,28,25,53
+1964,Córdoba,Meta,0-14,16,11,27
+1964,Córdoba,Meta,15-59,12,14,26
+1964,Córdoba,Meta,60+,0,0,0
+1964,Córdoba,Nariño,total,47,23,70
+1964,Córdoba,Nariño,0-14,6,4,10
+1964,Córdoba,Nariño,15-59,41,19,60
+1964,Córdoba,Nariño,60+,0,0,0
+1964,Córdoba,Norte de Santander,total,119,110,229
+1964,Córdoba,Norte de Santander,0-14,12,21,33
+1964,Córdoba,Norte de Santander,15-59,94,87,181
+1964,Córdoba,Norte de Santander,60+,13,2,15
+1964,Córdoba,Santander,total,362,368,730
+1964,Córdoba,Santander,0-14,95,124,219
+1964,Córdoba,Santander,15-59,246,233,479
+1964,Córdoba,Santander,60+,21,11,32
+1964,Córdoba,Tolima,total,260,182,442
+1964,Córdoba,Tolima,0-14,24,29,53
+1964,Córdoba,Tolima,15-59,209,138,347
+1964,Córdoba,Tolima,60+,27,15,42
+1964,Córdoba,Valle del Cauca,total,338,276,614
+1964,Córdoba,Valle del Cauca,0-14,106,105,211
+1964,Córdoba,Valle del Cauca,15-59,221,171,392
+1964,Córdoba,Valle del Cauca,60+,11,0,11
+1964,Córdoba,Intendencias y comisarías,total,82,44,126
+1964,Córdoba,Intendencias y comisarías,0-14,24,13,37
+1964,Córdoba,Intendencias y comisarías,15-59,58,29,87
+1964,Córdoba,Intendencias y comisarías,60+,0,2,2
+1964,Córdoba,Exterior,total,249,135,384
+1964,Córdoba,Exterior,0-14,28,31,59
+1964,Córdoba,Exterior,15-59,155,75,230
+1964,Córdoba,Exterior,60+,66,29,95
+1964,Bogotá D.E.,Totales,total,791946,905365,1697311
+1964,Bogotá D.E.,Totales,0-14,353159,361604,714763
+1964,Bogotá D.E.,Totales,15-59,414396,503637,918033
+1964,Bogotá D.E.,Totales,60+,24391,40124,64515
+1964,Bogotá D.E.,Antioquia,total,14799,12355,27154
+1964,Bogotá D.E.,Antioquia,0-14,2851,3012,5863
+1964,Bogotá D.E.,Antioquia,15-59,11210,8436,19646
+1964,Bogotá D.E.,Antioquia,60+,738,907,1645
+1964,Bogotá D.E.,Atlántico,total,4754,4793,9547
+1964,Bogotá D.E.,Atlántico,0-14,1376,1451,2827
+1964,Bogotá D.E.,Atlántico,15-59,3300,3209,6509
+1964,Bogotá D.E.,Atlántico,60+,78,133,211
+1964,Bogotá D.E.,Bolívar,total,3027,3044,6071
+1964,Bogotá D.E.,Bolívar,0-14,616,667,1283
+1964,Bogotá D.E.,Bolívar,15-59,2331,2257,4588
+1964,Bogotá D.E.,Bolívar,60+,80,120,200
+1964,Bogotá D.E.,Boyacá,total,96372,119504,215876
+1964,Bogotá D.E.,Boyacá,0-14,13072,14910,27982
+1964,Bogotá D.E.,Boyacá,15-59,77647,94939,172586
+1964,Bogotá D.E.,Boyacá,60+,5653,9655,15308
+1964,Bogotá D.E.,Caldas,total,25378,24583,49961
+1964,Bogotá D.E.,Caldas,0-14,6618,6647,13265
+1964,Bogotá D.E.,Caldas,15-59,18120,17060,35180
+1964,Bogotá D.E.,Caldas,60+,640,876,1516
+1964,Bogotá D.E.,Cauca,total,2430,2448,4878
+1964,Bogotá D.E.,Cauca,0-14,386,423,809
+1964,Bogotá D.E.,Cauca,15-59,1942,1893,3835
+1964,Bogotá D.E.,Cauca,60+,102,132,234
+1964,Bogotá D.E.,Córdoba,total,817,881,1698
+1964,Bogotá D.E.,Córdoba,0-14,126,162,288
+1964,Bogotá D.E.,Córdoba,15-59,678,694,1372
+1964,Bogotá D.E.,Córdoba,60+,13,25,38
+1964,Bogotá D.E.,Bogotá D.E.,total,405431,420156,825587
+1964,Bogotá D.E.,Bogotá D.E.,0-14,280857,279338,560195
+1964,Bogotá D.E.,Bogotá D.E.,15-59,119509,133474,252983
+1964,Bogotá D.E.,Bogotá D.E.,60+,5065,7344,12409
+1964,Bogotá D.E.,Cundinamarca,total,123921,173221,297142
+1964,Bogotá D.E.,Cundinamarca,0-14,20389,24904,45293
+1964,Bogotá D.E.,Cundinamarca,15-59,95610,134033,229643
+1964,Bogotá D.E.,Cundinamarca,60+,7922,14284,22206
+1964,Bogotá D.E.,Chocó,total,824,880,1704
+1964,Bogotá D.E.,Chocó,0-14,118,167,285
+1964,Bogotá D.E.,Chocó,15-59,690,689,1379
+1964,Bogotá D.E.,Chocó,60+,16,24,40
+1964,Bogotá D.E.,Huila,total,7639,11577,19216
+1964,Bogotá D.E.,Huila,0-14,1772,2102,3874
+1964,Bogotá D.E.,Huila,15-59,5525,8856,14381
+1964,Bogotá D.E.,Huila,60+,342,619,961
+1964,Bogotá D.E.,Magdalena,total,2932,2713,5645
+1964,Bogotá D.E.,Magdalena,0-14,449,538,987
+1964,Bogotá D.E.,Magdalena,15-59,2422,2090,4512
+1964,Bogotá D.E.,Magdalena,60+,61,85,146
+1964,Bogotá D.E.,Meta,total,3615,4970,8585
+1964,Bogotá D.E.,Meta,0-14,1752,1968,3720
+1964,Bogotá D.E.,Meta,15-59,1814,2931,4745
+1964,Bogotá D.E.,Meta,60+,49,71,120
+1964,Bogotá D.E.,Nariño,total,4699,3969,8668
+1964,Bogotá D.E.,Nariño,0-14,608,677,1285
+1964,Bogotá D.E.,Nariño,15-59,3919,3126,7045
+1964,Bogotá D.E.,Nariño,60+,172,166,338
+1964,Bogotá D.E.,Norte de Santander,total,6387,7133,13520
+1964,Bogotá D.E.,Norte de Santander,0-14,1186,1235,2421
+1964,Bogotá D.E.,Norte de Santander,15-59,4925,5423,10348
+1964,Bogotá D.E.,Norte de Santander,60+,276,475,751
+1964,Bogotá D.E.,Santander,total,25977,36877,62854
+1964,Bogotá D.E.,Santander,0-14,4757,5484,10241
+1964,Bogotá D.E.,Santander,15-59,20157,29103,49260
+1964,Bogotá D.E.,Santander,60+,1063,2290,3353
+1964,Bogotá D.E.,Tolima,total,35414,50235,85649
+1964,Bogotá D.E.,Tolima,0-14,8733,10357,19090
+1964,Bogotá D.E.,Tolima,15-59,25774,38074,63848
+1964,Bogotá D.E.,Tolima,60+,907,1804,2711
+1964,Bogotá D.E.,Valle del Cauca,total,14026,14031,28057
+1964,Bogotá D.E.,Valle del Cauca,0-14,4815,4828,9643
+1964,Bogotá D.E.,Valle del Cauca,15-59,9016,8925,17941
+1964,Bogotá D.E.,Valle del Cauca,60+,195,278,473
+1964,Bogotá D.E.,Intendencias y comisarías,total,1857,2361,4218
+1964,Bogotá D.E.,Intendencias y comisarías,0-14,583,665,1248
+1964,Bogotá D.E.,Intendencias y comisarías,15-59,1245,1652,2897
+1964,Bogotá D.E.,Intendencias y comisarías,60+,29,44,73
+1964,Bogotá D.E.,Exterior,total,11647,9634,21281
+1964,Bogotá D.E.,Exterior,0-14,2095,2069,4164
+1964,Bogotá D.E.,Exterior,15-59,8562,6773,15335
+1964,Bogotá D.E.,Exterior,60+,990,792,1782
+1964,Cundinamarca,Totales,total,568182,554031,1122213
+1964,Cundinamarca,Totales,0-14,271234,257578,528812
+1964,Cundinamarca,Totales,15-59,263664,262637,526301
+1964,Cundinamarca,Totales,60+,33284,33816,67100
+1964,Cundinamarca,Antioquia,total,2476,1761,4237
+1964,Cundinamarca,Antioquia,0-14,486,469,955
+1964,Cundinamarca,Antioquia,15-59,1799,1154,2953
+1964,Cundinamarca,Antioquia,60+,191,138,329
+1964,Cundinamarca,Atlántico,total,320,316,636
+1964,Cundinamarca,Atlántico,0-14,105,115,220
+1964,Cundinamarca,Atlántico,15-59,200,186,386
+1964,Cundinamarca,Atlántico,60+,15,15,30
+1964,Cundinamarca,Bolívar,total,532,263,795
+1964,Cundinamarca,Bolívar,0-14,80,73,153
+1964,Cundinamarca,Bolívar,15-59,413,181,594
+1964,Cundinamarca,Bolívar,60+,39,9,48
+1964,Cundinamarca,Boyacá,total,20294,16617,36911
+1964,Cundinamarca,Boyacá,0-14,2804,2412,5216
+1964,Cundinamarca,Boyacá,15-59,14887,11874,26761
+1964,Cundinamarca,Boyacá,60+,2603,2331,4934
+1964,Cundinamarca,Caldas,total,4978,4187,9165
+1964,Cundinamarca,Caldas,0-14,1829,1724,3553
+1964,Cundinamarca,Caldas,15-59,3013,2346,5359
+1964,Cundinamarca,Caldas,60+,136,117,253
+1964,Cundinamarca,Cauca,total,440,227,667
+1964,Cundinamarca,Cauca,0-14,52,55,107
+1964,Cundinamarca,Cauca,15-59,361,158,519
+1964,Cundinamarca,Cauca,60+,27,14,41
+1964,Cundinamarca,Córdoba,total,115,114,229
+1964,Cundinamarca,Córdoba,0-14,23,32,55
+1964,Cundinamarca,Córdoba,15-59,84,80,164
+1964,Cundinamarca,Córdoba,60+,8,2,10
+1964,Cundinamarca,Bogotá D.E.,total,22139,21158,43297
+1964,Cundinamarca,Bogotá D.E.,0-14,14451,13462,27913
+1964,Cundinamarca,Bogotá D.E.,15-59,7116,7093,14209
+1964,Cundinamarca,Bogotá D.E.,60+,572,603,1175
+1964,Cundinamarca,Cundinamarca,total,485511,477047,962558
+1964,Cundinamarca,Cundinamarca,0-14,240936,229375,470311
+1964,Cundinamarca,Cundinamarca,15-59,216505,218804,435309
+1964,Cundinamarca,Cundinamarca,60+,28070,28868,56938
+1964,Cundinamarca,Chocó,total,151,67,218
+1964,Cundinamarca,Chocó,0-14,13,15,28
+1964,Cundinamarca,Chocó,15-59,137,47,184
+1964,Cundinamarca,Chocó,60+,1,5,6
+1964,Cundinamarca,Huila,total,2191,2380,4571
+1964,Cundinamarca,Huila,0-14,629,613,1242
+1964,Cundinamarca,Huila,15-59,1360,1552,2912
+1964,Cundinamarca,Huila,60+,202,215,417
+1964,Cundinamarca,Magdalena,total,303,247,550
+1964,Cundinamarca,Magdalena,0-14,63,79,142
+1964,Cundinamarca,Magdalena,15-59,235,159,394
+1964,Cundinamarca,Magdalena,60+,5,9,14
+1964,Cundinamarca,Meta,total,2042,2100,4142
+1964,Cundinamarca,Meta,0-14,1216,1220,2436
+1964,Cundinamarca,Meta,15-59,806,858,1664
+1964,Cundinamarca,Meta,60+,20,22,42
+1964,Cundinamarca,Nariño,total,623,427,1050
+1964,Cundinamarca,Nariño,0-14,97,89,186
+1964,Cundinamarca,Nariño,15-59,491,322,813
+1964,Cundinamarca,Nariño,60+,35,16,51
+1964,Cundinamarca,Norte de Santander,total,594,516,1110
+1964,Cundinamarca,Norte de Santander,0-14,128,106,234
+1964,Cundinamarca,Norte de Santander,15-59,430,371,801
+1964,Cundinamarca,Norte de Santander,60+,36,39,75
+1964,Cundinamarca,Santander,total,3770,3758,7528
+1964,Cundinamarca,Santander,0-14,780,690,1470
+1964,Cundinamarca,Santander,15-59,2738,2770,5508
+1964,Cundinamarca,Santander,60+,252,298,550
+1964,Cundinamarca,Tolima,total,17896,19947,37843
+1964,Cundinamarca,Tolima,0-14,6261,5933,12194
+1964,Cundinamarca,Tolima,15-59,10731,12988,23719
+1964,Cundinamarca,Tolima,60+,904,1026,1930
+1964,Cundinamarca,Valle del Cauca,total,2748,2084,4832
+1964,Cundinamarca,Valle del Cauca,0-14,1004,869,1873
+1964,Cundinamarca,Valle del Cauca,15-59,1682,1174,2856
+1964,Cundinamarca,Valle del Cauca,60+,62,41,103
+1964,Cundinamarca,Intendencias y comisarías,total,387,361,748
+1964,Cundinamarca,Intendencias y comisarías,0-14,160,160,320
+1964,Cundinamarca,Intendencias y comisarías,15-59,221,196,417
+1964,Cundinamarca,Intendencias y comisarías,60+,6,5,11
+1964,Cundinamarca,Exterior,total,672,454,1126
+1964,Cundinamarca,Exterior,0-14,117,87,204
+1964,Cundinamarca,Exterior,15-59,455,324,779
+1964,Cundinamarca,Exterior,60+,100,43,143
+1964,Chocó,Totales,total,88387,93476,181863
+1964,Chocó,Totales,0-14,47404,45699,93103
+1964,Chocó,Totales,15-59,36906,43130,80036
+1964,Chocó,Totales,60+,4077,4647,8724
+1964,Chocó,Antioquia,total,3082,2842,5924
+1964,Chocó,Antioquia,0-14,1112,1043,2155
+1964,Chocó,Antioquia,15-59,1751,1631,3382
+1964,Chocó,Antioquia,60+,219,168,387
+1964,Chocó,Atlántico,total,39,36,75
+1964,Chocó,Atlántico,0-14,10,23,33
+1964,Chocó,Atlántico,15-59,28,12,40
+1964,Chocó,Atlántico,60+,1,1,2
+1964,Chocó,Bolívar,total,585,396,981
+1964,Chocó,Bolívar,0-14,144,133,277
+1964,Chocó,Bolívar,15-59,379,219,598
+1964,Chocó,Bolívar,60+,62,44,106
+1964,Chocó,Boyacá,total,115,34,149
+1964,Chocó,Boyacá,0-14,5,7,12
+1964,Chocó,Boyacá,15-59,102,26,128
+1964,Chocó,Boyacá,60+,8,1,9
+1964,Chocó,Caldas,total,900,800,1700
+1964,Chocó,Caldas,0-14,261,249,510
+1964,Chocó,Caldas,15-59,587,529,1116
+1964,Chocó,Caldas,60+,52,22,74
+1964,Chocó,Cauca,total,214,67,281
+1964,Chocó,Cauca,0-14,36,21,57
+1964,Chocó,Cauca,15-59,147,44,191
+1964,Chocó,Cauca,60+,31,2,33
+1964,Chocó,Córdoba,total,668,511,1179
+1964,Chocó,Córdoba,0-14,238,222,460
+1964,Chocó,Córdoba,15-59,390,268,658
+1964,Chocó,Córdoba,60+,40,21,61
+1964,Chocó,Bogotá D.E.,total,100,69,169
+1964,Chocó,Bogotá D.E.,0-14,56,47,103
+1964,Chocó,Bogotá D.E.,15-59,43,22,65
+1964,Chocó,Bogotá D.E.,60+,1,0,1
+1964,Chocó,Cundinamarca,total,93,39,132
+1964,Chocó,Cundinamarca,0-14,9,2,11
+1964,Chocó,Cundinamarca,15-59,77,34,111
+1964,Chocó,Cundinamarca,60+,7,3,10
+1964,Chocó,Chocó,total,80198,86741,166939
+1964,Chocó,Chocó,0-14,44505,42960,87465
+1964,Chocó,Chocó,15-59,32130,39430,71560
+1964,Chocó,Chocó,60+,3563,4351,7914
+1964,Chocó,Huila,total,51,19,70
+1964,Chocó,Huila,0-14,9,3,12
+1964,Chocó,Huila,15-59,34,16,50
+1964,Chocó,Huila,60+,8,0,8
+1964,Chocó,Magdalena,total,29,18,47
+1964,Chocó,Magdalena,0-14,7,4,11
+1964,Chocó,Magdalena,15-59,22,14,36
+1964,Chocó,Magdalena,60+,0,0,0
+1964,Chocó,Meta,total,16,10,26
+1964,Chocó,Meta,0-14,11,7,18
+1964,Chocó,Meta,15-59,5,3,8
+1964,Chocó,Meta,60+,0,0,0
+1964,Chocó,Nariño,total,173,74,247
+1964,Chocó,Nariño,0-14,10,19,29
+1964,Chocó,Nariño,15-59,145,43,188
+1964,Chocó,Nariño,60+,18,12,30
+1964,Chocó,Norte de Santander,total,30,12,42
+1964,Chocó,Norte de Santander,0-14,5,3,8
+1964,Chocó,Norte de Santander,15-59,24,9,33
+1964,Chocó,Norte de Santander,60+,1,0,1
+1964,Chocó,Santander,total,76,29,105
+1964,Chocó,Santander,0-14,4,9,13
+1964,Chocó,Santander,15-59,72,20,92
+1964,Chocó,Santander,60+,0,0,0
+1964,Chocó,Tolima,total,170,114,284
+1964,Chocó,Tolima,0-14,36,22,58
+1964,Chocó,Tolima,15-59,128,90,218
+1964,Chocó,Tolima,60+,6,2,8
+1964,Chocó,Valle del Cauca,total,1520,1380,2900
+1964,Chocó,Valle del Cauca,0-14,823,798,1621
+1964,Chocó,Valle del Cauca,15-59,668,571,1239
+1964,Chocó,Valle del Cauca,60+,29,11,40
+1964,Chocó,Intendencias y comisarías,total,24,9,33
+1964,Chocó,Intendencias y comisarías,0-14,5,3,8
+1964,Chocó,Intendencias y comisarías,15-59,17,6,23
+1964,Chocó,Intendencias y comisarías,60+,2,0,2
+1964,Chocó,Exterior,total,304,276,580
+1964,Chocó,Exterior,0-14,118,124,242
+1964,Chocó,Exterior,15-59,157,143,300
+1964,Chocó,Exterior,60+,29,9,38
+1964,Huila,Totales,total,208341,207948,416289
+1964,Huila,Totales,0-14,100591,98754,199345
+1964,Huila,Totales,15-59,96273,97390,193663
+1964,Huila,Totales,60+,11477,11804,23281
+1964,Huila,Antioquia,total,935,460,1395
+1964,Huila,Antioquia,0-14,93,82,175
+1964,Huila,Antioquia,15-59,754,342,1096
+1964,Huila,Antioquia,60+,88,36,124
+1964,Huila,Atlántico,total,63,51,114
+1964,Huila,Atlántico,0-14,20,26,46
+1964,Huila,Atlántico,15-59,43,24,67
+1964,Huila,Atlántico,60+,0,1,1
+1964,Huila,Bolívar,total,89,46,135
+1964,Huila,Bolívar,0-14,20,14,34
+1964,Huila,Bolívar,15-59,67,31,98
+1964,Huila,Bolívar,60+,2,1,3
+1964,Huila,Boyacá,total,1557,869,2426
+1964,Huila,Boyacá,0-14,152,145,297
+1964,Huila,Boyacá,15-59,1279,657,1936
+1964,Huila,Boyacá,60+,126,67,193
+1964,Huila,Caldas,total,2080,1815,3895
+1964,Huila,Caldas,0-14,552,595,1147
+1964,Huila,Caldas,15-59,1381,1162,2543
+1964,Huila,Caldas,60+,147,58,205
+1964,Huila,Cauca,total,5292,4247,9539
+1964,Huila,Cauca,0-14,905,854,1759
+1964,Huila,Cauca,15-59,3856,2934,6790
+1964,Huila,Cauca,60+,531,459,990
+1964,Huila,Córdoba,total,28,14,42
+1964,Huila,Córdoba,0-14,7,6,13
+1964,Huila,Córdoba,15-59,18,7,25
+1964,Huila,Córdoba,60+,3,1,4
+1964,Huila,Bogotá D.E.,total,1461,1208,2669
+1964,Huila,Bogotá D.E.,0-14,909,791,1700
+1964,Huila,Bogotá D.E.,15-59,523,404,927
+1964,Huila,Bogotá D.E.,60+,29,13,42
+1964,Huila,Cundinamarca,total,4552,3483,8035
+1964,Huila,Cundinamarca,0-14,881,766,1647
+1964,Huila,Cundinamarca,15-59,3279,2495,5774
+1964,Huila,Cundinamarca,60+,392,222,614
+1964,Huila,Chocó,total,71,15,86
+1964,Huila,Chocó,0-14,7,4,11
+1964,Huila,Chocó,15-59,64,10,74
+1964,Huila,Chocó,60+,0,1,1
+1964,Huila,Huila,total,173484,178573,352057
+1964,Huila,Huila,0-14,92034,90746,182780
+1964,Huila,Huila,15-59,72391,77756,150147
+1964,Huila,Huila,60+,9059,10071,19130
+1964,Huila,Magdalena,total,98,80,178
+1964,Huila,Magdalena,0-14,20,36,56
+1964,Huila,Magdalena,15-59,76,42,118
+1964,Huila,Magdalena,60+,2,2,4
+1964,Huila,Meta,total,147,133,280
+1964,Huila,Meta,0-14,79,69,148
+1964,Huila,Meta,15-59,66,61,127
+1964,Huila,Meta,60+,2,3,5
+1964,Huila,Nariño,total,3327,2753,6080
+1964,Huila,Nariño,0-14,431,398,829
+1964,Huila,Nariño,15-59,2537,2071,4608
+1964,Huila,Nariño,60+,359,284,643
+1964,Huila,Norte de Santander,total,296,103,399
+1964,Huila,Norte de Santander,0-14,17,22,39
+1964,Huila,Norte de Santander,15-59,268,75,343
+1964,Huila,Norte de Santander,60+,11,6,17
+1964,Huila,Santander,total,698,432,1130
+1964,Huila,Santander,0-14,98,90,188
+1964,Huila,Santander,15-59,570,324,894
+1964,Huila,Santander,60+,30,18,48
+1964,Huila,Tolima,total,10237,9925,20162
+1964,Huila,Tolima,0-14,2613,2448,5061
+1964,Huila,Tolima,15-59,7017,6963,13980
+1964,Huila,Tolima,60+,607,514,1121
+1964,Huila,Valle del Cauca,total,2449,2252,4701
+1964,Huila,Valle del Cauca,0-14,1064,1014,2078
+1964,Huila,Valle del Cauca,15-59,1339,1213,2552
+1964,Huila,Valle del Cauca,60+,46,25,71
+1964,Huila,Intendencias y comisarías,total,1354,1438,2792
+1964,Huila,Intendencias y comisarías,0-14,682,641,1323
+1964,Huila,Intendencias y comisarías,15-59,653,784,1437
+1964,Huila,Intendencias y comisarías,60+,19,13,32
+1964,Huila,Exterior,total,123,51,174
+1964,Huila,Exterior,0-14,7,7,14
+1964,Huila,Exterior,15-59,92,35,127
+1964,Huila,Exterior,60+,24,9,33
+1964,Magdalena,Totales,total,404778,384632,789410
+1964,Magdalena,Totales,0-14,200609,190318,390927
+1964,Magdalena,Totales,15-59,187310,178721,366031
+1964,Magdalena,Totales,60+,16859,15593,32452
+1964,Magdalena,Antioquia,total,3807,2499,6306
+1964,Magdalena,Antioquia,0-14,793,700,1493
+1964,Magdalena,Antioquia,15-59,2766,1668,4434
+1964,Magdalena,Antioquia,60+,248,131,379
+1964,Magdalena,Atlántico,total,12852,10142,22994
+1964,Magdalena,Atlántico,0-14,3764,3608,7372
+1964,Magdalena,Atlántico,15-59,8093,5910,14003
+1964,Magdalena,Atlántico,60+,995,624,1619
+1964,Magdalena,Bolívar,total,23389,19151,42540
+1964,Magdalena,Bolívar,0-14,5477,5192,10669
+1964,Magdalena,Bolívar,15-59,15948,12500,28448
+1964,Magdalena,Bolívar,60+,1964,1459,3423
+1964,Magdalena,Boyacá,total,712,399,1111
+1964,Magdalena,Boyacá,0-14,96,82,178
+1964,Magdalena,Boyacá,15-59,545,283,828
+1964,Magdalena,Boyacá,60+,71,34,105
+1964,Magdalena,Caldas,total,1432,1089,2521
+1964,Magdalena,Caldas,0-14,422,408,830
+1964,Magdalena,Caldas,15-59,970,659,1629
+1964,Magdalena,Caldas,60+,40,22,62
+1964,Magdalena,Cauca,total,136,106,242
+1964,Magdalena,Cauca,0-14,27,27,54
+1964,Magdalena,Cauca,15-59,100,73,173
+1964,Magdalena,Cauca,60+,9,6,15
+1964,Magdalena,Córdoba,total,1067,784,1851
+1964,Magdalena,Córdoba,0-14,226,206,432
+1964,Magdalena,Córdoba,15-59,776,546,1322
+1964,Magdalena,Córdoba,60+,65,32,97
+1964,Magdalena,Bogotá D.E.,total,1036,823,1859
+1964,Magdalena,Bogotá D.E.,0-14,410,386,796
+1964,Magdalena,Bogotá D.E.,15-59,553,405,958
+1964,Magdalena,Bogotá D.E.,60+,73,32,105
+1964,Magdalena,Cundinamarca,total,1234,853,2087
+1964,Magdalena,Cundinamarca,0-14,254,209,463
+1964,Magdalena,Cundinamarca,15-59,880,594,1474
+1964,Magdalena,Cundinamarca,60+,100,50,150
+1964,Magdalena,Chocó,total,184,116,300
+1964,Magdalena,Chocó,0-14,47,40,87
+1964,Magdalena,Chocó,15-59,132,71,203
+1964,Magdalena,Chocó,60+,5,5,10
+1964,Magdalena,Huila,total,902,650,1552
+1964,Magdalena,Huila,0-14,342,260,602
+1964,Magdalena,Huila,15-59,535,358,893
+1964,Magdalena,Huila,60+,25,32,57
+1964,Magdalena,Magdalena,total,324215,317502,641717
+1964,Magdalena,Magdalena,0-14,179353,170474,349827
+1964,Magdalena,Magdalena,15-59,133603,135574,269177
+1964,Magdalena,Magdalena,60+,11259,11454,22713
+1964,Magdalena,Meta,total,101,104,205
+1964,Magdalena,Meta,0-14,45,47,92
+1964,Magdalena,Meta,15-59,54,56,110
+1964,Magdalena,Meta,60+,2,1,3
+1964,Magdalena,Nariño,total,134,87,221
+1964,Magdalena,Nariño,0-14,18,13,31
+1964,Magdalena,Nariño,15-59,110,71,181
+1964,Magdalena,Nariño,60+,6,3,9
+1964,Magdalena,Norte de Santander,total,15148,14722,29870
+1964,Magdalena,Norte de Santander,0-14,3716,3557,7273
+1964,Magdalena,Norte de Santander,15-59,10520,10309,20829
+1964,Magdalena,Norte de Santander,60+,912,856,1768
+1964,Magdalena,Santander,total,4765,4171,8936
+1964,Magdalena,Santander,0-14,1590,1504,3094
+1964,Magdalena,Santander,15-59,3021,2555,5576
+1964,Magdalena,Santander,60+,154,112,266
+1964,Magdalena,Tolima,total,4206,2961,7167
+1964,Magdalena,Tolima,0-14,1288,1106,2394
+1964,Magdalena,Tolima,15-59,2761,1764,4525
+1964,Magdalena,Tolima,60+,157,91,248
+1964,Magdalena,Valle del Cauca,total,1127,794,1921
+1964,Magdalena,Valle del Cauca,0-14,399,288,687
+1964,Magdalena,Valle del Cauca,15-59,701,498,1199
+1964,Magdalena,Valle del Cauca,60+,27,8,35
+1964,Magdalena,Intendencias y comisarías,total,7186,7050,14236
+1964,Magdalena,Intendencias y comisarías,0-14,2100,2003,4103
+1964,Magdalena,Intendencias y comisarías,15-59,4579,4481,9060
+1964,Magdalena,Intendencias y comisarías,60+,507,566,1073
+1964,Magdalena,Exterior,total,1145,629,1774
+1964,Magdalena,Exterior,0-14,242,208,450
+1964,Magdalena,Exterior,15-59,663,346,1009
+1964,Magdalena,Exterior,60+,240,75,315
+1964,Meta,Totales,total,89950,75580,165530
+1964,Meta,Totales,0-14,39322,37413,76735
+1964,Meta,Totales,15-59,48050,35964,84014
+1964,Meta,Totales,60+,2578,2203,4781
+1964,Meta,Antioquia,total,1460,806,2266
+1964,Meta,Antioquia,0-14,154,158,312
+1964,Meta,Antioquia,15-59,1176,601,1777
+1964,Meta,Antioquia,60+,130,47,177
+1964,Meta,Atlántico,total,97,56,153
+1964,Meta,Atlántico,0-14,18,19,37
+1964,Meta,Atlántico,15-59,75,37,112
+1964,Meta,Atlántico,60+,4,0,4
+1964,Meta,Bolívar,total,82,46,128
+1964,Meta,Bolívar,0-14,11,15,26
+1964,Meta,Bolívar,15-59,64,30,94
+1964,Meta,Bolívar,60+,7,1,8
+1964,Meta,Boyacá,total,7724,5255,12979
+1964,Meta,Boyacá,0-14,1033,969,2002
+1964,Meta,Boyacá,15-59,6353,4000,10353
+1964,Meta,Boyacá,60+,338,286,624
+1964,Meta,Caldas,total,3607,3088,6695
+1964,Meta,Caldas,0-14,1220,1118,2338
+1964,Meta,Caldas,15-59,2244,1907,4151
+1964,Meta,Caldas,60+,143,63,206
+1964,Meta,Cauca,total,210,173,383
+1964,Meta,Cauca,0-14,51,52,103
+1964,Meta,Cauca,15-59,149,119,268
+1964,Meta,Cauca,60+,10,2,12
+1964,Meta,Córdoba,total,38,17,55
+1964,Meta,Córdoba,0-14,2,5,7
+1964,Meta,Córdoba,15-59,35,12,47
+1964,Meta,Córdoba,60+,1,0,1
+1964,Meta,Bogotá D.E.,total,2179,1883,4062
+1964,Meta,Bogotá D.E.,0-14,1154,1142,2296
+1964,Meta,Bogotá D.E.,15-59,995,715,1710
+1964,Meta,Bogotá D.E.,60+,30,26,56
+1964,Meta,Cundinamarca,total,16970,12713,29683
+1964,Meta,Cundinamarca,0-14,2763,2686,5449
+1964,Meta,Cundinamarca,15-59,13116,9030,22146
+1964,Meta,Cundinamarca,60+,1091,997,2088
+1964,Meta,Chocó,total,102,73,175
+1964,Meta,Chocó,0-14,22,11,33
+1964,Meta,Chocó,15-59,78,61,139
+1964,Meta,Chocó,60+,2,1,3
+1964,Meta,Huila,total,1213,847,2060
+1964,Meta,Huila,0-14,252,218,470
+1964,Meta,Huila,15-59,907,571,1478
+1964,Meta,Huila,60+,54,58,112
+1964,Meta,Magdalena,total,97,53,150
+1964,Meta,Magdalena,0-14,26,21,47
+1964,Meta,Magdalena,15-59,68,31,99
+1964,Meta,Magdalena,60+,3,1,4
+1964,Meta,Meta,total,40364,37950,78314
+1964,Meta,Meta,0-14,28188,27006,55194
+1964,Meta,Meta,15-59,11851,10569,22420
+1964,Meta,Meta,60+,325,375,700
+1964,Meta,Nariño,total,168,82,250
+1964,Meta,Nariño,0-14,21,12,33
+1964,Meta,Nariño,15-59,142,69,211
+1964,Meta,Nariño,60+,5,1,6
+1964,Meta,Norte de Santander,total,235,153,388
+1964,Meta,Norte de Santander,0-14,44,33,77
+1964,Meta,Norte de Santander,15-59,176,114,290
+1964,Meta,Norte de Santander,60+,15,6,21
+1964,Meta,Santander,total,3508,2740,6248
+1964,Meta,Santander,0-14,603,494,1097
+1964,Meta,Santander,15-59,2782,2123,4905
+1964,Meta,Santander,60+,123,123,246
+1964,Meta,Tolima,total,8241,6657,14898
+1964,Meta,Tolima,0-14,2465,2239,4704
+1964,Meta,Tolima,15-59,5558,4249,9807
+1964,Meta,Tolima,60+,218,169,387
+1964,Meta,Valle del Cauca,total,2831,2230,5061
+1964,Meta,Valle del Cauca,0-14,1035,957,1992
+1964,Meta,Valle del Cauca,15-59,1761,1252,3013
+1964,Meta,Valle del Cauca,60+,35,21,56
+1964,Meta,Intendencias y comisarías,total,638,626,1264
+1964,Meta,Intendencias y comisarías,0-14,218,226,444
+1964,Meta,Intendencias y comisarías,15-59,405,389,794
+1964,Meta,Intendencias y comisarías,60+,15,11,26
+1964,Meta,Exterior,total,186,132,318
+1964,Meta,Exterior,0-14,42,32,74
+1964,Meta,Exterior,15-59,115,85,200
+1964,Meta,Exterior,60+,29,15,44
+1964,Nariño,Totales,total,344248,361363,705611
+1964,Nariño,Totales,0-14,158953,154102,313055
+1964,Nariño,Totales,15-59,164708,184904,349612
+1964,Nariño,Totales,60+,20587,22357,42944
+1964,Nariño,Antioquia,total,326,311,637
+1964,Nariño,Antioquia,0-14,55,52,107
+1964,Nariño,Antioquia,15-59,248,233,481
+1964,Nariño,Antioquia,60+,23,26,49
+1964,Nariño,Atlántico,total,53,27,80
+1964,Nariño,Atlántico,0-14,21,15,36
+1964,Nariño,Atlántico,15-59,32,11,43
+1964,Nariño,Atlántico,60+,0,1,1
+1964,Nariño,Bolívar,total,41,32,73
+1964,Nariño,Bolívar,0-14,13,13,26
+1964,Nariño,Bolívar,15-59,28,18,46
+1964,Nariño,Bolívar,60+,0,1,1
+1964,Nariño,Boyacá,total,197,127,324
+1964,Nariño,Boyacá,0-14,34,31,65
+1964,Nariño,Boyacá,15-59,156,93,249
+1964,Nariño,Boyacá,60+,7,3,10
+1964,Nariño,Caldas,total,500,486,986
+1964,Nariño,Caldas,0-14,130,111,241
+1964,Nariño,Caldas,15-59,353,353,706
+1964,Nariño,Caldas,60+,17,22,39
+1964,Nariño,Cauca,total,2798,2667,5465
+1964,Nariño,Cauca,0-14,752,733,1485
+1964,Nariño,Cauca,15-59,1742,1674,3416
+1964,Nariño,Cauca,60+,304,260,564
+1964,Nariño,Córdoba,total,5,10,15
+1964,Nariño,Córdoba,0-14,0,3,3
+1964,Nariño,Córdoba,15-59,5,7,12
+1964,Nariño,Córdoba,60+,0,0,0
+1964,Nariño,Bogotá D.E.,total,451,431,882
+1964,Nariño,Bogotá D.E.,0-14,249,242,491
+1964,Nariño,Bogotá D.E.,15-59,198,186,384
+1964,Nariño,Bogotá D.E.,60+,4,3,7
+1964,Nariño,Cundinamarca,total,268,180,448
+1964,Nariño,Cundinamarca,0-14,28,43,71
+1964,Nariño,Cundinamarca,15-59,233,130,363
+1964,Nariño,Cundinamarca,60+,7,7,14
+1964,Nariño,Chocó,total,61,50,111
+1964,Nariño,Chocó,0-14,14,8,22
+1964,Nariño,Chocó,15-59,45,38,83
+1964,Nariño,Chocó,60+,2,4,6
+1964,Nariño,Huila,total,238,188,426
+1964,Nariño,Huila,0-14,61,58,119
+1964,Nariño,Huila,15-59,160,126,286
+1964,Nariño,Huila,60+,17,4,21
+1964,Nariño,Magdalena,total,32,21,53
+1964,Nariño,Magdalena,0-14,8,11,19
+1964,Nariño,Magdalena,15-59,23,8,31
+1964,Nariño,Magdalena,60+,1,2,3
+1964,Nariño,Meta,total,21,29,50
+1964,Nariño,Meta,0-14,9,18,27
+1964,Nariño,Meta,15-59,8,11,19
+1964,Nariño,Meta,60+,4,0,4
+1964,Nariño,Nariño,total,333361,351106,684467
+1964,Nariño,Nariño,0-14,155072,150324,305396
+1964,Nariño,Nariño,15-59,158341,179053,337394
+1964,Nariño,Nariño,60+,19948,21729,41677
+1964,Nariño,Norte de Santander,total,62,56,118
+1964,Nariño,Norte de Santander,0-14,13,12,25
+1964,Nariño,Norte de Santander,15-59,45,43,88
+1964,Nariño,Norte de Santander,60+,4,1,5
+1964,Nariño,Santander,total,183,86,269
+1964,Nariño,Santander,0-14,23,14,37
+1964,Nariño,Santander,15-59,158,67,225
+1964,Nariño,Santander,60+,2,5,7
+1964,Nariño,Tolima,total,300,245,545
+1964,Nariño,Tolima,0-14,67,61,128
+1964,Nariño,Tolima,15-59,226,179,405
+1964,Nariño,Tolima,60+,7,5,12
+1964,Nariño,Valle del Cauca,total,2482,2211,4693
+1964,Nariño,Valle del Cauca,0-14,1407,1322,2729
+1964,Nariño,Valle del Cauca,15-59,1031,868,1899
+1964,Nariño,Valle del Cauca,60+,44,21,65
+1964,Nariño,Intendencias y comisarías,total,758,942,1700
+1964,Nariño,Intendencias y comisarías,0-14,363,372,735
+1964,Nariño,Intendencias y comisarías,15-59,376,551,927
+1964,Nariño,Intendencias y comisarías,60+,19,19,38
+1964,Nariño,Exterior,total,2111,2158,4269
+1964,Nariño,Exterior,0-14,634,659,1293
+1964,Nariño,Exterior,15-59,1300,1255,2555
+1964,Nariño,Exterior,60+,177,244,421
+1964,Norte de Santander,Totales,total,263048,271438,534486
+1964,Norte de Santander,Totales,0-14,130202,127092,257294
+1964,Norte de Santander,Totales,15-59,120602,130425,251027
+1964,Norte de Santander,Totales,60+,12244,13921,26165
+1964,Norte de Santander,Antioquia,total,1331,785,2116
+1964,Norte de Santander,Antioquia,0-14,237,223,460
+1964,Norte de Santander,Antioquia,15-59,1068,529,1597
+1964,Norte de Santander,Antioquia,60+,26,33,59
+1964,Norte de Santander,Atlántico,total,430,398,828
+1964,Norte de Santander,Atlántico,0-14,172,168,340
+1964,Norte de Santander,Atlántico,15-59,248,224,472
+1964,Norte de Santander,Atlántico,60+,10,6,16
+1964,Norte de Santander,Bolívar,total,417,352,769
+1964,Norte de Santander,Bolívar,0-14,96,111,207
+1964,Norte de Santander,Bolívar,15-59,311,228,539
+1964,Norte de Santander,Bolívar,60+,10,13,23
+1964,Norte de Santander,Boyacá,total,4211,3433,7644
+1964,Norte de Santander,Boyacá,0-14,470,507,977
+1964,Norte de Santander,Boyacá,15-59,3134,2487,5621
+1964,Norte de Santander,Boyacá,60+,607,439,1046
+1964,Norte de Santander,Caldas,total,664,503,1167
+1964,Norte de Santander,Caldas,0-14,141,128,269
+1964,Norte de Santander,Caldas,15-59,509,365,874
+1964,Norte de Santander,Caldas,60+,14,10,24
+1964,Norte de Santander,Cauca,total,117,91,208
+1964,Norte de Santander,Cauca,0-14,28,23,51
+1964,Norte de Santander,Cauca,15-59,86,65,151
+1964,Norte de Santander,Cauca,60+,3,3,6
+1964,Norte de Santander,Córdoba,total,76,76,152
+1964,Norte de Santander,Córdoba,0-14,16,14,30
+1964,Norte de Santander,Córdoba,15-59,56,58,114
+1964,Norte de Santander,Córdoba,60+,4,4,8
+1964,Norte de Santander,Bogotá D.E.,total,1357,1280,2637
+1964,Norte de Santander,Bogotá D.E.,0-14,686,694,1380
+1964,Norte de Santander,Bogotá D.E.,15-59,649,565,1214
+1964,Norte de Santander,Bogotá D.E.,60+,22,21,43
+1964,Norte de Santander,Cundinamarca,total,649,520,1169
+1964,Norte de Santander,Cundinamarca,0-14,99,106,205
+1964,Norte de Santander,Cundinamarca,15-59,507,392,899
+1964,Norte de Santander,Cundinamarca,60+,43,22,65
+1964,Norte de Santander,Chocó,total,44,24,68
+1964,Norte de Santander,Chocó,0-14,6,10,16
+1964,Norte de Santander,Chocó,15-59,38,14,52
+1964,Norte de Santander,Chocó,60+,0,0,0
+1964,Norte de Santander,Huila,total,172,158,330
+1964,Norte de Santander,Huila,0-14,50,44,94
+1964,Norte de Santander,Huila,15-59,117,109,226
+1964,Norte de Santander,Huila,60+,5,5,10
+1964,Norte de Santander,Magdalena,total,1940,1955,3895
+1964,Norte de Santander,Magdalena,0-14,631,617,1248
+1964,Norte de Santander,Magdalena,15-59,1188,1191,2379
+1964,Norte de Santander,Magdalena,60+,121,147,268
+1964,Norte de Santander,Meta,total,107,129,236
+1964,Norte de Santander,Meta,0-14,36,45,81
+1964,Norte de Santander,Meta,15-59,65,80,145
+1964,Norte de Santander,Meta,60+,6,4,10
+1964,Norte de Santander,Nariño,total,123,84,207
+1964,Norte de Santander,Nariño,0-14,21,15,36
+1964,Norte de Santander,Nariño,15-59,95,64,159
+1964,Norte de Santander,Nariño,60+,7,5,12
+1964,Norte de Santander,Norte de Santander,total,232620,242245,474865
+1964,Norte de Santander,Norte de Santander,0-14,120842,118107,238949
+1964,Norte de Santander,Norte de Santander,15-59,101490,112299,213789
+1964,Norte de Santander,Norte de Santander,60+,10288,11839,22127
+1964,Norte de Santander,Santander,total,12416,12996,25412
+1964,Norte de Santander,Santander,0-14,3534,3396,6930
+1964,Norte de Santander,Santander,15-59,8184,8702,16886
+1964,Norte de Santander,Santander,60+,698,898,1596
+1964,Norte de Santander,Tolima,total,756,590,1346
+1964,Norte de Santander,Tolima,0-14,141,140,281
+1964,Norte de Santander,Tolima,15-59,595,425,1020
+1964,Norte de Santander,Tolima,60+,20,25,45
+1964,Norte de Santander,Valle del Cauca,total,631,581,1212
+1964,Norte de Santander,Valle del Cauca,0-14,200,185,385
+1964,Norte de Santander,Valle del Cauca,15-59,419,381,800
+1964,Norte de Santander,Valle del Cauca,60+,12,15,27
+1964,Norte de Santander,Intendencias y comisarías,total,232,244,476
+1964,Norte de Santander,Intendencias y comisarías,0-14,69,74,143
+1964,Norte de Santander,Intendencias y comisarías,15-59,156,162,318
+1964,Norte de Santander,Intendencias y comisarías,60+,7,8,15
+1964,Norte de Santander,Exterior,total,4755,4994,9749
+1964,Norte de Santander,Exterior,0-14,2727,2485,5212
+1964,Norte de Santander,Exterior,15-59,1687,2085,3772
+1964,Norte de Santander,Exterior,60+,341,424,765
+1964,Santander,Totales,total,491077,510136,1001213
+1964,Santander,Totales,0-14,236865,230853,467718
+1964,Santander,Totales,15-59,230355,248921,479276
+1964,Santander,Totales,60+,23857,30362,54219
+1964,Santander,Antioquia,total,5939,5005,10944
+1964,Santander,Antioquia,0-14,1692,1631,3323
+1964,Santander,Antioquia,15-59,3900,3050,6950
+1964,Santander,Antioquia,60+,347,324,671
+1964,Santander,Atlántico,total,1029,810,1839
+1964,Santander,Atlántico,0-14,427,382,809
+1964,Santander,Atlántico,15-59,575,408,983
+1964,Santander,Atlántico,60+,27,20,47
+1964,Santander,Bolívar,total,6078,5803,11881
+1964,Santander,Bolívar,0-14,1082,1128,2210
+1964,Santander,Bolívar,15-59,4631,4226,8857
+1964,Santander,Bolívar,60+,365,449,814
+1964,Santander,Boyacá,total,12277,10430,22707
+1964,Santander,Boyacá,0-14,2040,1940,3980
+1964,Santander,Boyacá,15-59,8628,7146,15774
+1964,Santander,Boyacá,60+,1609,1344,2953
+1964,Santander,Caldas,total,2039,1633,3672
+1964,Santander,Caldas,0-14,660,569,1229
+1964,Santander,Caldas,15-59,1337,1037,2374
+1964,Santander,Caldas,60+,42,27,69
+1964,Santander,Cauca,total,205,161,366
+1964,Santander,Cauca,0-14,47,39,86
+1964,Santander,Cauca,15-59,148,120,268
+1964,Santander,Cauca,60+,10,2,12
+1964,Santander,Córdoba,total,853,634,1487
+1964,Santander,Córdoba,0-14,116,128,244
+1964,Santander,Córdoba,15-59,681,483,1164
+1964,Santander,Córdoba,60+,56,23,79
+1964,Santander,Bogotá D.E.,total,3658,3496,7154
+1964,Santander,Bogotá D.E.,0-14,2258,2182,4440
+1964,Santander,Bogotá D.E.,15-59,1346,1269,2615
+1964,Santander,Bogotá D.E.,60+,54,45,99
+1964,Santander,Cundinamarca,total,1993,1621,3614
+1964,Santander,Cundinamarca,0-14,419,340,759
+1964,Santander,Cundinamarca,15-59,1452,1200,2652
+1964,Santander,Cundinamarca,60+,122,81,203
+1964,Santander,Chocó,total,291,127,418
+1964,Santander,Chocó,0-14,29,36,65
+1964,Santander,Chocó,15-59,258,89,347
+1964,Santander,Chocó,60+,4,2,6
+1964,Santander,Huila,total,360,368,728
+1964,Santander,Huila,0-14,84,85,169
+1964,Santander,Huila,15-59,259,265,524
+1964,Santander,Huila,60+,17,18,35
+1964,Santander,Magdalena,total,3464,3507,6971
+1964,Santander,Magdalena,0-14,906,989,1895
+1964,Santander,Magdalena,15-59,2417,2365,4782
+1964,Santander,Magdalena,60+,141,153,294
+1964,Santander,Meta,total,399,327,726
+1964,Santander,Meta,0-14,216,184,400
+1964,Santander,Meta,15-59,174,136,310
+1964,Santander,Meta,60+,9,7,16
+1964,Santander,Nariño,total,233,135,368
+1964,Santander,Nariño,0-14,19,23,42
+1964,Santander,Nariño,15-59,205,107,312
+1964,Santander,Nariño,60+,9,5,14
+1964,Santander,Norte de Santander,total,8366,9693,18059
+1964,Santander,Norte de Santander,0-14,1880,2051,3931
+1964,Santander,Norte de Santander,15-59,5820,6806,12626
+1964,Santander,Norte de Santander,60+,666,836,1502
+1964,Santander,Santander,total,439299,462295,901594
+1964,Santander,Santander,0-14,223555,217685,441240
+1964,Santander,Santander,15-59,195547,217730,413277
+1964,Santander,Santander,60+,20197,26880,47077
+1964,Santander,Tolima,total,2095,1967,4062
+1964,Santander,Tolima,0-14,537,534,1071
+1964,Santander,Tolima,15-59,1488,1370,2858
+1964,Santander,Tolima,60+,70,63,133
+1964,Santander,Valle del Cauca,total,1215,901,2116
+1964,Santander,Valle del Cauca,0-14,351,384,735
+1964,Santander,Valle del Cauca,15-59,852,502,1354
+1964,Santander,Valle del Cauca,60+,12,15,27
+1964,Santander,Intendencias y comisarías,total,223,187,410
+1964,Santander,Intendencias y comisarías,0-14,59,53,112
+1964,Santander,Intendencias y comisarías,15-59,157,127,284
+1964,Santander,Intendencias y comisarías,60+,7,7,14
+1964,Santander,Exterior,total,1061,1036,2097
+1964,Santander,Exterior,0-14,488,490,978
+1964,Santander,Exterior,15-59,480,485,965
+1964,Santander,Exterior,60+,93,61,154
+1964,Tolima,Totales,total,424720,416704,841424
+1964,Tolima,Totales,0-14,202377,195866,398243
+1964,Tolima,Totales,15-59,200358,199366,399724
+1964,Tolima,Totales,60+,21985,21472,43457
+1964,Tolima,Antioquia,total,2938,1646,4584
+1964,Tolima,Antioquia,0-14,384,304,688
+1964,Tolima,Antioquia,15-59,2166,1108,3274
+1964,Tolima,Antioquia,60+,388,234,622
+1964,Tolima,Atlántico,total,284,197,481
+1964,Tolima,Atlántico,0-14,69,63,132
+1964,Tolima,Atlántico,15-59,198,130,328
+1964,Tolima,Atlántico,60+,17,4,21
+1964,Tolima,Bolívar,total,338,143,481
+1964,Tolima,Bolívar,0-14,47,41,88
+1964,Tolima,Bolívar,15-59,281,95,376
+1964,Tolima,Bolívar,60+,10,7,17
+1964,Tolima,Boyacá,total,8575,5445,14020
+1964,Tolima,Boyacá,0-14,524,446,970
+1964,Tolima,Boyacá,15-59,6935,4215,11150
+1964,Tolima,Boyacá,60+,1116,784,1900
+1964,Tolima,Caldas,total,10283,9806,20089
+1964,Tolima,Caldas,0-14,3712,3482,7194
+1964,Tolima,Caldas,15-59,5913,5777,11690
+1964,Tolima,Caldas,60+,658,547,1205
+1964,Tolima,Cauca,total,529,364,893
+1964,Tolima,Cauca,0-14,145,126,271
+1964,Tolima,Cauca,15-59,347,218,565
+1964,Tolima,Cauca,60+,37,20,57
+1964,Tolima,Córdoba,total,414,61,475
+1964,Tolima,Córdoba,0-14,29,15,44
+1964,Tolima,Córdoba,15-59,383,43,426
+1964,Tolima,Córdoba,60+,2,3,5
+1964,Tolima,Bogotá D.E.,total,4211,3847,8058
+1964,Tolima,Bogotá D.E.,0-14,2438,2277,4715
+1964,Tolima,Bogotá D.E.,15-59,1619,1445,3064
+1964,Tolima,Bogotá D.E.,60+,154,125,279
+1964,Tolima,Cundinamarca,total,23844,21612,45456
+1964,Tolima,Cundinamarca,0-14,4921,4627,9548
+1964,Tolima,Cundinamarca,15-59,15712,14152,29864
+1964,Tolima,Cundinamarca,60+,3211,2833,6044
+1964,Tolima,Chocó,total,167,68,235
+1964,Tolima,Chocó,0-14,15,22,37
+1964,Tolima,Chocó,15-59,147,45,192
+1964,Tolima,Chocó,60+,5,1,6
+1964,Tolima,Huila,total,5593,5893,11486
+1964,Tolima,Huila,0-14,1632,1554,3186
+1964,Tolima,Huila,15-59,3403,3758,7161
+1964,Tolima,Huila,60+,558,581,1139
+1964,Tolima,Magdalena,total,231,152,383
+1964,Tolima,Magdalena,0-14,70,72,142
+1964,Tolima,Magdalena,15-59,157,72,229
+1964,Tolima,Magdalena,60+,4,8,12
+1964,Tolima,Meta,total,484,461,945
+1964,Tolima,Meta,0-14,300,287,587
+1964,Tolima,Meta,15-59,172,159,331
+1964,Tolima,Meta,60+,12,15,27
+1964,Tolima,Nariño,total,656,221,877
+1964,Tolima,Nariño,0-14,72,74,146
+1964,Tolima,Nariño,15-59,561,137,698
+1964,Tolima,Nariño,60+,23,10,33
+1964,Tolima,Norte de Santander,total,396,272,668
+1964,Tolima,Norte de Santander,0-14,59,72,131
+1964,Tolima,Norte de Santander,15-59,314,186,500
+1964,Tolima,Norte de Santander,60+,23,14,37
+1964,Tolima,Santander,total,2167,1518,3685
+1964,Tolima,Santander,0-14,241,256,497
+1964,Tolima,Santander,15-59,1757,1153,2910
+1964,Tolima,Santander,60+,169,109,278
+1964,Tolima,Tolima,total,358417,360475,718892
+1964,Tolima,Tolima,0-14,185702,180148,365850
+1964,Tolima,Tolima,15-59,157245,164234,321479
+1964,Tolima,Tolima,60+,15470,16093,31563
+1964,Tolima,Valle del Cauca,total,4547,3984,8531
+1964,Tolima,Valle del Cauca,0-14,1819,1826,3645
+1964,Tolima,Valle del Cauca,15-59,2661,2106,4767
+1964,Tolima,Valle del Cauca,60+,67,52,119
+1964,Tolima,Intendencias y comisarías,total,365,336,701
+1964,Tolima,Intendencias y comisarías,0-14,158,132,290
+1964,Tolima,Intendencias y comisarías,15-59,202,198,400
+1964,Tolima,Intendencias y comisarías,60+,5,6,11
+1964,Tolima,Exterior,total,281,203,484
+1964,Tolima,Exterior,0-14,40,42,82
+1964,Tolima,Exterior,15-59,185,135,320
+1964,Tolima,Exterior,60+,56,26,82
+1964,Valle del Cauca,Totales,total,856250,876803,1733053
+1964,Valle del Cauca,Totales,0-14,387325,382881,770206
+1964,Valle del Cauca,Totales,15-59,430842,452225,883067
+1964,Valle del Cauca,Totales,60+,38083,41697,79780
+1964,Valle del Cauca,Antioquia,total,40077,33334,73411
+1964,Valle del Cauca,Antioquia,0-14,5007,4890,9897
+1964,Valle del Cauca,Antioquia,15-59,29700,24032,53732
+1964,Valle del Cauca,Antioquia,60+,5370,4412,9782
+1964,Valle del Cauca,Atlántico,total,1188,984,2172
+1964,Valle del Cauca,Atlántico,0-14,328,322,650
+1964,Valle del Cauca,Atlántico,15-59,834,627,1461
+1964,Valle del Cauca,Atlántico,60+,26,35,61
+1964,Valle del Cauca,Bolívar,total,750,689,1439
+1964,Valle del Cauca,Bolívar,0-14,148,181,329
+1964,Valle del Cauca,Bolívar,15-59,579,477,1056
+1964,Valle del Cauca,Bolívar,60+,23,31,54
+1964,Valle del Cauca,Boyacá,total,4910,4181,9091
+1964,Valle del Cauca,Boyacá,0-14,364,393,757
+1964,Valle del Cauca,Boyacá,15-59,4140,3388,7528
+1964,Valle del Cauca,Boyacá,60+,406,400,806
+1964,Valle del Cauca,Caldas,total,102760,106826,209586
+1964,Valle del Cauca,Caldas,0-14,25320,25136,50456
+1964,Valle del Cauca,Caldas,15-59,70156,74584,144740
+1964,Valle del Cauca,Caldas,60+,7284,7106,14390
+1964,Valle del Cauca,Cauca,total,38533,44191,82724
+1964,Valle del Cauca,Cauca,0-14,6690,7405,14095
+1964,Valle del Cauca,Cauca,15-59,28887,33061,61948
+1964,Valle del Cauca,Cauca,60+,2956,3725,6681
+1964,Valle del Cauca,Córdoba,total,264,196,460
+1964,Valle del Cauca,Córdoba,0-14,61,55,116
+1964,Valle del Cauca,Córdoba,15-59,196,135,331
+1964,Valle del Cauca,Córdoba,60+,7,6,13
+1964,Valle del Cauca,Bogotá D.E.,total,6836,6909,13745
+1964,Valle del Cauca,Bogotá D.E.,0-14,3047,3022,6069
+1964,Valle del Cauca,Bogotá D.E.,15-59,3562,3593,7155
+1964,Valle del Cauca,Bogotá D.E.,60+,227,294,521
+1964,Valle del Cauca,Cundinamarca,total,9755,9763,19518
+1964,Valle del Cauca,Cundinamarca,0-14,914,1009,1923
+1964,Valle del Cauca,Cundinamarca,15-59,7867,7706,15573
+1964,Valle del Cauca,Cundinamarca,60+,974,1048,2022
+1964,Valle del Cauca,Chocó,total,6672,8026,14698
+1964,Valle del Cauca,Chocó,0-14,904,1233,2137
+1964,Valle del Cauca,Chocó,15-59,5488,6334,11822
+1964,Valle del Cauca,Chocó,60+,280,459,739
+1964,Valle del Cauca,Huila,total,10193,11513,21706
+1964,Valle del Cauca,Huila,0-14,1354,1439,2793
+1964,Valle del Cauca,Huila,15-59,7798,8859,16657
+1964,Valle del Cauca,Huila,60+,1041,1215,2256
+1964,Valle del Cauca,Magdalena,total,531,387,918
+1964,Valle del Cauca,Magdalena,0-14,96,90,186
+1964,Valle del Cauca,Magdalena,15-59,426,287,713
+1964,Valle del Cauca,Magdalena,60+,9,10,19
+1964,Valle del Cauca,Meta,total,449,453,902
+1964,Valle del Cauca,Meta,0-14,223,232,455
+1964,Valle del Cauca,Meta,15-59,216,213,429
+1964,Valle del Cauca,Meta,60+,10,8,18
+1964,Valle del Cauca,Nariño,total,27610,25136,52746
+1964,Valle del Cauca,Nariño,0-14,3029,3515,6544
+1964,Valle del Cauca,Nariño,15-59,23053,20087,43140
+1964,Valle del Cauca,Nariño,60+,1528,1534,3062
+1964,Valle del Cauca,Norte de Santander,total,1178,827,2005
+1964,Valle del Cauca,Norte de Santander,0-14,155,159,314
+1964,Valle del Cauca,Norte de Santander,15-59,960,623,1583
+1964,Valle del Cauca,Norte de Santander,60+,63,45,108
+1964,Valle del Cauca,Santander,total,4528,3626,8154
+1964,Valle del Cauca,Santander,0-14,505,486,991
+1964,Valle del Cauca,Santander,15-59,3803,2872,6675
+1964,Valle del Cauca,Santander,60+,220,268,488
+1964,Valle del Cauca,Tolima,total,24970,29182,54152
+1964,Valle del Cauca,Tolima,0-14,4721,4891,9612
+1964,Valle del Cauca,Tolima,15-59,18525,22239,40764
+1964,Valle del Cauca,Tolima,60+,1724,2052,3776
+1964,Valle del Cauca,Valle del Cauca,total,568376,585450,1153826
+1964,Valle del Cauca,Valle del Cauca,0-14,333322,327314,660636
+1964,Valle del Cauca,Valle del Cauca,15-59,219889,239561,459450
+1964,Valle del Cauca,Valle del Cauca,60+,15165,18575,33740
+1964,Valle del Cauca,Intendencias y comisarías,total,1008,1059,2067
+1964,Valle del Cauca,Intendencias y comisarías,0-14,329,348,677
+1964,Valle del Cauca,Intendencias y comisarías,15-59,657,692,1349
+1964,Valle del Cauca,Intendencias y comisarías,60+,22,19,41
+1964,Valle del Cauca,Exterior,total,5662,4071,9733
+1964,Valle del Cauca,Exterior,0-14,808,761,1569
+1964,Valle del Cauca,Exterior,15-59,4106,2855,6961
+1964,Valle del Cauca,Exterior,60+,748,455,1203
+1964,Intendencias y comisarías,Totales,total,199277,188841,388118
+1964,Intendencias y comisarías,Totales,0-14,95296,90562,185858
+1964,Intendencias y comisarías,Totales,15-59,96200,90197,186397
+1964,Intendencias y comisarías,Totales,60+,7781,8082,15863
+1964,Intendencias y comisarías,Antioquia,total,2261,1279,3540
+1964,Intendencias y comisarías,Antioquia,0-14,293,273,566
+1964,Intendencias y comisarías,Antioquia,15-59,1802,931,2733
+1964,Intendencias y comisarías,Antioquia,60+,166,75,241
+1964,Intendencias y comisarías,Atlántico,total,1661,1188,2849
+1964,Intendencias y comisarías,Atlántico,0-14,470,463,933
+1964,Intendencias y comisarías,Atlántico,15-59,1157,704,1861
+1964,Intendencias y comisarías,Atlántico,60+,34,21,55
+1964,Intendencias y comisarías,Bolívar,total,2646,2004,4650
+1964,Intendencias y comisarías,Bolívar,0-14,505,535,1040
+1964,Intendencias y comisarías,Bolívar,15-59,2079,1432,3511
+1964,Intendencias y comisarías,Bolívar,60+,62,37,99
+1964,Intendencias y comisarías,Boyacá,total,3258,2212,5470
+1964,Intendencias y comisarías,Boyacá,0-14,635,598,1233
+1964,Intendencias y comisarías,Boyacá,15-59,2448,1486,3934
+1964,Intendencias y comisarías,Boyacá,60+,175,128,303
+1964,Intendencias y comisarías,Caldas,total,4038,3175,7213
+1964,Intendencias y comisarías,Caldas,0-14,1272,1149,2421
+1964,Intendencias y comisarías,Caldas,15-59,2618,1936,4554
+1964,Intendencias y comisarías,Caldas,60+,148,90,238
+1964,Intendencias y comisarías,Cauca,total,1701,1364,3065
+1964,Intendencias y comisarías,Cauca,0-14,592,550,1142
+1964,Intendencias y comisarías,Cauca,15-59,1015,757,1772
+1964,Intendencias y comisarías,Cauca,60+,94,57,151
+1964,Intendencias y comisarías,Córdoba,total,216,204,420
+1964,Intendencias y comisarías,Córdoba,0-14,37,39,76
+1964,Intendencias y comisarías,Córdoba,15-59,171,162,333
+1964,Intendencias y comisarías,Córdoba,60+,8,3,11
+1964,Intendencias y comisarías,Bogotá D.E.,total,1131,804,1935
+1964,Intendencias y comisarías,Bogotá D.E.,0-14,475,455,930
+1964,Intendencias y comisarías,Bogotá D.E.,15-59,631,342,973
+1964,Intendencias y comisarías,Bogotá D.E.,60+,25,7,32
+1964,Intendencias y comisarías,Cundinamarca,total,3005,1900,4905
+1964,Intendencias y comisarías,Cundinamarca,0-14,609,521,1130
+1964,Intendencias y comisarías,Cundinamarca,15-59,2223,1293,3516
+1964,Intendencias y comisarías,Cundinamarca,60+,173,86,259
+1964,Intendencias y comisarías,Chocó,total,178,92,270
+1964,Intendencias y comisarías,Chocó,0-14,37,32,69
+1964,Intendencias y comisarías,Chocó,15-59,136,56,192
+1964,Intendencias y comisarías,Chocó,60+,5,4,9
+1964,Intendencias y comisarías,Huila,total,13168,11497,24665
+1964,Intendencias y comisarías,Huila,0-14,3158,2863,6021
+1964,Intendencias y comisarías,Huila,15-59,8915,7713,16628
+1964,Intendencias y comisarías,Huila,60+,1095,921,2016
+1964,Intendencias y comisarías,Magdalena,total,2322,2085,4407
+1964,Intendencias y comisarías,Magdalena,0-14,847,876,1723
+1964,Intendencias y comisarías,Magdalena,15-59,1415,1158,2573
+1964,Intendencias y comisarías,Magdalena,60+,60,51,111
+1964,Intendencias y comisarías,Meta,total,1192,935,2127
+1964,Intendencias y comisarías,Meta,0-14,518,457,975
+1964,Intendencias y comisarías,Meta,15-59,649,467,1116
+1964,Intendencias y comisarías,Meta,60+,25,11,36
+1964,Intendencias y comisarías,Nariño,total,8989,6902,15891
+1964,Intendencias y comisarías,Nariño,0-14,1861,1692,3553
+1964,Intendencias y comisarías,Nariño,15-59,6533,4713,11246
+1964,Intendencias y comisarías,Nariño,60+,595,497,1092
+1964,Intendencias y comisarías,Norte de Santander,total,1067,893,1960
+1964,Intendencias y comisarías,Norte de Santander,0-14,349,325,674
+1964,Intendencias y comisarías,Norte de Santander,15-59,681,542,1223
+1964,Intendencias y comisarías,Norte de Santander,60+,37,26,63
+1964,Intendencias y comisarías,Santander,total,1390,833,2223
+1964,Intendencias y comisarías,Santander,0-14,232,182,414
+1964,Intendencias y comisarías,Santander,15-59,1109,620,1729
+1964,Intendencias y comisarías,Santander,60+,49,31,80
+1964,Intendencias y comisarías,Tolima,total,9068,7267,16335
+1964,Intendencias y comisarías,Tolima,0-14,2493,2258,4751
+1964,Intendencias y comisarías,Tolima,15-59,6197,4755,10952
+1964,Intendencias y comisarías,Tolima,60+,378,254,632
+1964,Intendencias y comisarías,Valle del Cauca,total,4500,3727,8227
+1964,Intendencias y comisarías,Valle del Cauca,0-14,1861,1801,3662
+1964,Intendencias y comisarías,Valle del Cauca,15-59,2559,1883,4442
+1964,Intendencias y comisarías,Valle del Cauca,60+,80,43,123
+1964,Intendencias y comisarías,Intendencias y comisarías,total,134250,137630,271880
+1964,Intendencias y comisarías,Intendencias y comisarías,0-14,78094,74502,152596
+1964,Intendencias y comisarías,Intendencias y comisarías,15-59,51843,57591,109434
+1964,Intendencias y comisarías,Intendencias y comisarías,60+,4313,5537,9850
+1964,Intendencias y comisarías,Exterior,total,3236,2850,6086
+1964,Intendencias y comisarías,Exterior,0-14,958,991,1949
+1964,Intendencias y comisarías,Exterior,15-59,2019,1656,3675
+1964,Intendencias y comisarías,Exterior,60+,259,203,462

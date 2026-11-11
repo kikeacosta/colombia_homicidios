@@ -1,0 +1,201 @@
+residence,birthplace,age,t,h,m
+Caldas,Antioquia,total,101162,54718,46444
+Caldas,Antioquia,0-14,15975,8116,7859
+Caldas,Antioquia,15-59,68879,37701,31178
+Caldas,Antioquia,60+,16308,8901,7407
+Meta,Antioquia,total,2266,1460,806
+Meta,Antioquia,0-14,312,154,158
+Meta,Antioquia,15-59,1777,1176,601
+Meta,Antioquia,60+,177,130,47
+Tolima,Antioquia,total,4584,2938,1646
+Tolima,Antioquia,0-14,688,384,304
+Tolima,Antioquia,15-59,3274,2166,1108
+Tolima,Antioquia,60+,622,388,234
+Valle del Cauca,Antioquia,total,73411,40077,33334
+Valle del Cauca,Antioquia,0-14,9897,5007,4890
+Valle del Cauca,Antioquia,15-59,53732,29700,24032
+Valle del Cauca,Antioquia,60+,9782,5370,4412
+Total en el País,Atlántico,total,601755,300281,301474
+Total en el País,Atlántico,0-14,306729,156841,149888
+Total en el País,Atlántico,15-59,269546,131225,138321
+Total en el País,Atlántico,60+,25480,12215,13265
+Antioquia,Atlántico,total,2792,1460,1332
+Antioquia,Atlántico,0-14,989,471,518
+Antioquia,Atlántico,15-59,1743,959,784
+Antioquia,Atlántico,60+,60,30,30
+Cundinamarca,Atlántico,total,636,320,316
+Cundinamarca,Atlántico,0-14,220,105,115
+Cundinamarca,Atlántico,15-59,386,200,186
+Cundinamarca,Atlántico,60+,30,15,15
+Meta,Atlántico,total,153,97,56
+Meta,Atlántico,0-14,37,18,19
+Meta,Atlántico,15-59,112,75,37
+Meta,Atlántico,60+,4,4,0
+Valle del Cauca,Atlántico,total,2172,1188,984
+Valle del Cauca,Atlántico,0-14,650,328,322
+Valle del Cauca,Atlántico,15-59,1461,834,627
+Valle del Cauca,Atlántico,60+,61,26,35
+Total en el País,Bolívar,total,1118423,546546,571877
+Total en el País,Bolívar,0-14,510892,258572,252320
+Total en el País,Bolívar,15-59,546103,259343,286760
+Total en el País,Bolívar,60+,61428,28631,32797
+Atlántico,Bolívar,total,69040,27974,41066
+Atlántico,Bolívar,0-14,13840,6589,7251
+Atlántico,Bolívar,15-59,49999,19430,30569
+Atlántico,Bolívar,60+,5201,1955,3246
+Cundinamarca,Bolívar,total,795,532,263
+Cundinamarca,Bolívar,0-14,153,80,73
+Cundinamarca,Bolívar,15-59,594,413,181
+Cundinamarca,Bolívar,60+,48,39,9
+Norte de Santander,Bolívar,total,769,417,352
+Norte de Santander,Bolívar,0-14,207,96,111
+Norte de Santander,Bolívar,15-59,539,311,228
+Norte de Santander,Bolívar,60+,23,10,13
+Total en el País,Boyacá,total,1325052,645845,679207
+Total en el País,Boyacá,0-14,522661,265211,257450
+Total en el País,Boyacá,15-59,713104,339640,373464
+Total en el País,Boyacá,60+,89287,40994,48293
+Bogotá D.E.,Boyacá,total,215876,96372,119504
+Bogotá D.E.,Boyacá,0-14,27982,13072,14910
+Bogotá D.E.,Boyacá,15-59,172586,77647,94939
+Bogotá D.E.,Boyacá,60+,15308,5653,9655
+Cundinamarca,Boyacá,total,36911,20294,16617
+Cundinamarca,Boyacá,0-14,5216,2804,2412
+Cundinamarca,Boyacá,15-59,26761,14887,11874
+Cundinamarca,Boyacá,60+,4934,2603,2331
+Norte de Santander,Boyacá,total,7644,4211,3433
+Norte de Santander,Boyacá,0-14,977,470,507
+Norte de Santander,Boyacá,15-59,5621,3134,2487
+Norte de Santander,Boyacá,60+,1046,607,439
+Intendencias y comisarías,Boyacá,total,5470,3258,2212
+Intendencias y comisarías,Boyacá,0-14,1233,635,598
+Intendencias y comisarías,Boyacá,15-59,3934,2448,1486
+Intendencias y comisarías,Boyacá,60+,303,175,128
+Antioquia,Caldas,total,54498,25713,28785
+Antioquia,Caldas,0-14,17526,8776,8750
+Antioquia,Caldas,15-59,35119,16116,19003
+Antioquia,Caldas,60+,1853,821,1032
+Boyacá,Caldas,total,6548,3524,3024
+Boyacá,Caldas,0-14,3185,1605,1580
+Boyacá,Caldas,15-59,3261,1863,1398
+Boyacá,Caldas,60+,102,56,46
+Cundinamarca,Caldas,total,9165,4978,4187
+Cundinamarca,Caldas,0-14,3553,1829,1724
+Cundinamarca,Caldas,15-59,5359,3013,2346
+Cundinamarca,Caldas,60+,253,136,117
+Huila,Caldas,total,3895,2080,1815
+Huila,Caldas,0-14,1147,552,595
+Huila,Caldas,15-59,2543,1381,1162
+Huila,Caldas,60+,205,147,58
+Santander,Caldas,total,3672,2039,1633
+Santander,Caldas,0-14,1229,660,569
+Santander,Caldas,15-59,2374,1337,1037
+Santander,Caldas,60+,69,42,27
+Valle del Cauca,Caldas,total,209586,102760,106826
+Valle del Cauca,Caldas,0-14,50456,25320,25136
+Valle del Cauca,Caldas,15-59,144740,70156,74584
+Valle del Cauca,Caldas,60+,14390,7284,7106
+Intendencias y comisarías,Caldas,total,7213,4038,3175
+Intendencias y comisarías,Caldas,0-14,2421,1272,1149
+Intendencias y comisarías,Caldas,15-59,4554,2618,1936
+Intendencias y comisarías,Caldas,60+,238,148,90
+Total en el País,Córdoba,total,608245,302729,305516
+Total en el País,Córdoba,0-14,302463,154169,148294
+Total en el País,Córdoba,15-59,280362,136452,143910
+Total en el País,Córdoba,60+,25420,12108,13312
+Caldas,Bogotá D.E.,total,6416,3134,3282
+Caldas,Bogotá D.E.,0-14,3136,1564,1572
+Caldas,Bogotá D.E.,15-59,3035,1463,1572
+Caldas,Bogotá D.E.,60+,245,107,138
+Córdoba,Bogotá D.E.,total,420,235,185
+Córdoba,Bogotá D.E.,0-14,177,77,100
+Córdoba,Bogotá D.E.,15-59,230,152,78
+Córdoba,Bogotá D.E.,60+,13,6,7
+Bogotá D.E.,Bogotá D.E.,total,825587,405431,420156
+Bogotá D.E.,Bogotá D.E.,0-14,560195,280857,279338
+Bogotá D.E.,Bogotá D.E.,15-59,252983,119509,133474
+Bogotá D.E.,Bogotá D.E.,60+,12409,5065,7344
+Chocó,Cundinamarca,total,132,93,39
+Chocó,Cundinamarca,0-14,11,9,2
+Chocó,Cundinamarca,15-59,111,77,34
+Chocó,Cundinamarca,60+,10,7,3
+Magdalena,Cundinamarca,total,2087,1234,853
+Magdalena,Cundinamarca,0-14,463,254,209
+Magdalena,Cundinamarca,15-59,1474,880,594
+Magdalena,Cundinamarca,60+,150,100,50
+Meta,Cundinamarca,total,29683,16970,12713
+Meta,Cundinamarca,0-14,5449,2763,2686
+Meta,Cundinamarca,15-59,22146,13116,9030
+Meta,Cundinamarca,60+,2088,1091,997
+Nariño,Cundinamarca,total,448,268,180
+Nariño,Cundinamarca,0-14,71,28,43
+Nariño,Cundinamarca,15-59,363,233,130
+Nariño,Cundinamarca,60+,14,7,7
+Intendencias y comisarías,Cundinamarca,total,4905,3005,1900
+Intendencias y comisarías,Cundinamarca,0-14,1130,609,521
+Intendencias y comisarías,Cundinamarca,15-59,3516,2223,1293
+Intendencias y comisarías,Cundinamarca,60+,259,173,86
+Cauca,Chocó,total,585,352,233
+Cauca,Chocó,0-14,75,36,39
+Cauca,Chocó,15-59,487,302,185
+Cauca,Chocó,60+,23,14,9
+Córdoba,Chocó,total,417,253,164
+Córdoba,Chocó,0-14,74,39,35
+Córdoba,Chocó,15-59,327,204,123
+Córdoba,Chocó,60+,16,10,6
+Chocó,Chocó,total,166939,80198,86741
+Chocó,Chocó,0-14,87465,44505,42960
+Chocó,Chocó,15-59,71560,32130,39430
+Chocó,Chocó,60+,7914,3563,4351
+Huila,Chocó,total,86,71,15
+Huila,Chocó,0-14,11,7,4
+Huila,Chocó,15-59,74,64,10
+Huila,Chocó,60+,1,0,1
+Meta,Chocó,total,175,102,73
+Meta,Chocó,0-14,33,22,11
+Meta,Chocó,15-59,139,78,61
+Meta,Chocó,60+,3,2,1
+Valle del Cauca,Chocó,total,14698,6672,8026
+Valle del Cauca,Chocó,0-14,2137,904,1233
+Valle del Cauca,Chocó,15-59,11822,5488,6334
+Valle del Cauca,Chocó,60+,739,280,459
+Tolima,Huila,total,11486,5593,5893
+Tolima,Huila,0-14,3186,1632,1554
+Tolima,Huila,15-59,7161,3403,3758
+Tolima,Huila,60+,1139,558,581
+Valle del Cauca,Huila,total,21706,10193,11513
+Valle del Cauca,Huila,0-14,2793,1354,1439
+Valle del Cauca,Huila,15-59,16657,7798,8859
+Valle del Cauca,Huila,60+,2256,1041,1215
+Intendencias y comisarías,Huila,total,24665,13168,11497
+Intendencias y comisarías,Huila,0-14,6021,3158,2863
+Intendencias y comisarías,Huila,15-59,16628,8915,7713
+Intendencias y comisarías,Huila,60+,2016,1095,921
+Total en el País,Meta,total,99673,50590,49083
+Total en el País,Meta,0-14,65813,33460,32353
+Total en el País,Meta,15-59,32835,16643,16192
+Total en el País,Meta,60+,1025,487,538
+Cundinamarca,Nariño,total,1050,623,427
+Cundinamarca,Nariño,0-14,186,97,89
+Cundinamarca,Nariño,15-59,813,491,322
+Cundinamarca,Nariño,60+,51,35,16
+Huila,Nariño,total,6080,3327,2753
+Huila,Nariño,0-14,829,431,398
+Huila,Nariño,15-59,4608,2537,2071
+Huila,Nariño,60+,643,359,284
+Tolima,Nariño,total,877,656,221
+Tolima,Nariño,0-14,146,72,74
+Tolima,Nariño,15-59,698,561,137
+Tolima,Nariño,60+,33,23,10
+Valle del Cauca,Nariño,total,52746,27610,25136
+Valle del Cauca,Nariño,0-14,6544,3029,3515
+Valle del Cauca,Nariño,15-59,43140,23053,20087
+Valle del Cauca,Nariño,60+,3062,1528,1534
+Caldas,Tolima,total,49874,23288,26586
+Caldas,Tolima,0-14,10412,5123,5289
+Caldas,Tolima,15-59,36019,16553,19466
+Caldas,Tolima,60+,3443,1612,1831
+Tolima,Tolima,total,718892,358417,360475
+Tolima,Tolima,0-14,365850,185702,180148
+Tolima,Tolima,15-59,321479,157245,164234
+Tolima,Tolima,60+,31563,15470,16093
