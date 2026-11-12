@@ -771,7 +771,7 @@ gap_pred <- function(variant, sr, pl, who) {
   if (!pl) dat$y_p[gap] <- NA
   if (!who) dat$y_w <- NA
   run_model(dat, fit1$par, smooth = TRUE) |>
-    filter(year %in% gap_years, unit %in% chk_units) |>
+    filter(year %in% gap_years) |> # every unit goes to the table; the figure keeps four
     transmute(block = "1966-1978", variant, unit, year, eta, sd_eta)
 }
 chk_gap <- bind_rows(gap_pred("N: nothing in the block", FALSE, FALSE, FALSE), gap_pred("S: sex ratio", TRUE, FALSE, FALSE),
@@ -780,7 +780,7 @@ chk_gap <- bind_rows(gap_pred("N: nothing in the block", FALSE, FALSE, FALSE), g
 chk_pred <- val |>
   filter(unit %in% chk_units, block %in% chk_blocks, variant %in% names(chk_var)) |>
   select(block, variant, unit, year, eta, sd_eta, d, pop) |>
-  bind_rows(chk_gap) |>
+  bind_rows(chk_gap |> filter(unit %in% chk_units)) |>
   mutate(variante = factor(chk_var[variant], chk_var), panel = chk_panel(unit),
          rate = 1e5 * exp(eta) * d / pop, lo = 1e5 * exp(eta - z90 * sd_eta) * d / pop, hi = 1e5 * exp(eta + z90 * sd_eta) * d / pop)
 chk_gap |>
