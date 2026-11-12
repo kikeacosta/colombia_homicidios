@@ -76,7 +76,7 @@ stopifnot(all(units %in% names(unit_lab)), all(variants %in% c("N", "S", "P", "S
 
 blocks <- c("1946-1953", "1954-1965", "1979-1984", "1985-1997", "1998-2010") # the ones that do not overlap
 var_code <- c("N: nothing in the block" = "N", "S: sex ratio" = "S", "P: Policia" = "P", "SP: sex ratio + Policia" = "SP")
-var_lab <- c(N = "Sin usar datos del bloque (interpolación)", S = "Razón de sexos", P = "Policía", SP = "Razón de sexos + Policía")
+var_lab <- c(N = "Sin pistas del bloque (une los extremos)", S = "Razón de sexos", P = "Policía", SP = "Razón de sexos + Policía")
 var_col <- c(N = "grey50", S = "#2a78d6", P = "#b0471c", SP = "#eb6834")
 var_col_name <- c(N = "gris", S = "azul", P = "marrón", SP = "naranja")
 var_lty <- c(N = "22", S = "solid", P = "42", SP = "solid")
