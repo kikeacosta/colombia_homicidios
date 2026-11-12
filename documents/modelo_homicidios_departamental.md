@@ -27,7 +27,7 @@ se apoyan en él: `code/47_homicide_underregistration.R` (de homicidios registra
   homicidios donde no hay causa de muerte. La respuesta del modelo es: **desde 1985, sí; antes de 1966, casi
   nada**. La serie histórica se sostiene en los anuarios y en la Policía.
 - El modelo estima homicidios **registrados**. Un segundo paso los convierte en homicidios totales bajo tres
-  supuestos de subregistro.
+  supuestos de subregistro, más un cuarto escenario que usa directamente la diferencia con la Policía.
 
 # 2. La idea de partida: por qué la razón de sexos habla de homicidios
 
@@ -456,7 +456,7 @@ $$T_{d,t} = H_{d,t} \times C_{d,t}^{-\theta}$$
 | $\theta$ | elasticidad: qué tanto del subregistro general afecta también a los homicidios |
 
 Con $\theta = 0$ los homicidios no se corrigen; con $\theta = 1$ se corrigen igual que las demás muertes. Hay
-tres escenarios:
+tres escenarios con esta fórmula (más abajo hay un cuarto, que no usa el índice):
 
 | Escenario | $\theta$ | Factor nacional, 1950-1997 | Bolívar + Córdoba + Sucre | Magdalena + Cesar |
 |---|---|---|---|---|
@@ -464,7 +464,7 @@ tres escenarios:
 | Central | 0,41 | 1,03 a 1,12 | 1,40 | 1,38 |
 | Como cualquier defunción (criterio del script 30) | 1 | 1,08 a 1,35 | 2,27 | 2,22 |
 
-Desde 1998 los tres escenarios son el conteo registrado.
+Desde 1998 todos los escenarios son el conteo registrado.
 
 La completitud $C$ por departamento no existía antes de 1985. Se construyó un índice para 1950-1997 comparando
 las defunciones no violentas registradas en cada unidad con las que cabría esperar dadas las tasas nacionales
@@ -478,6 +478,44 @@ Dos señales respaldan el escenario central:
 - En las cinco unidades con completitud menor de 0,7, los homicidios registrados saltan 52 % entre 1995-1997 y
   1998-2000. Con el escenario central el salto es de 10 %, parecido al del resto del país; con el escenario
   alto la serie cae 29 %.
+
+## Un cuarto escenario: la Policía donde supera a las estadísticas vitales
+
+Los tres escenarios anteriores dependen del índice de completitud. El cuarto no lo usa: toma directamente la
+diferencia entre las dos fuentes. Donde la Policía cuenta más homicidios que las estadísticas vitales de forma
+sostenida, los homicidios suben al nivel de la Policía; donde cuenta menos, no se corrige.
+
+$$T_{d,t} = H_{d,t} \times \exp\!\big(\max(\beta_{d,t},\, 0)\big)$$
+
+$\beta_{d,t}$ es el estado del modelo de la sección 4: el logaritmo de la razón entre la Policía y las
+estadísticas vitales, ya suavizado. Usar la razón suavizada y no la de cada año evita contar como homicidios
+faltantes lo que es solo ruido: año a año esa razón oscila mucho (en Nariño va de 0,79 a 3,27), y tomar
+siempre el mayor de los dos conteos añadiría cerca de 5 % incluso donde las dos fuentes coinciden en promedio.
+
+Este escenario solo existe para 1962-1997, los años en que el modelo usa la Policía.
+
+| Periodo | Factor nacional, escenario Policía | Factor nacional, escenario central |
+|---|---|---|
+| 1962-1965 | 1,20 | 1,05 |
+| 1966-1978 | 1,11 | 1,04 |
+| 1979-1984 | 1,10 | 1,06 |
+| 1985-1997 | 1,05 | 1,06 |
+
+- **Los dos caminos coinciden en dónde faltan homicidios.** La correlación entre unidades de las dos
+  correcciones es 0,87. En 1962-1997, Magdalena + Cesar sube 50 % con la Policía y 38 % con el central;
+  Bolívar + Córdoba + Sucre, 40 % y 39 %. En 1985-1997 el factor nacional es casi el mismo.
+- **Difieren donde el índice y la Policía dicen cosas distintas.** En Cauca el índice da mal registro (el
+  central sube 16 %) pero la Policía cuenta menos que las vitales (sube 3 %). En Tolima y Nariño pasa lo
+  contrario: 25 % y 41 % con la Policía, 10 % y 25 % con el central.
+- **Hereda los quiebres de la Policía.** El factor nacional es de 1,25 a 1,30 en 1964-1968, cae a 1,10 en
+  1969 y a 1,05 desde 1970. Esa caída está en la serie policial y no en la de la OMS, así que el escalón de
+  1969 es en buena parte un artefacto.
+- **Empalma peor en 1998.** En las unidades con completitud menor de 0,7 deja un salto de 37 % entre
+  1995-1997 y 1998-2000, frente a 10 % del escenario central.
+- **No cubre antes de 1962**, que es cuando el registro era peor.
+
+Sirve como contraste independiente del escenario central más que como reemplazo: confirma su tamaño donde se
+pueden comparar y señala las unidades donde conviene desconfiar del índice.
 
 ![Homicidios registrados y totales por escenario](../figures/07_backcast/underreg_totals.png)
 
@@ -544,6 +582,7 @@ municipio equivocado baja de 20,5 % a 18,6 %.
 | Validación por bloques | `output/tables/homicide_backcast_validation.csv` y `homicide_backcast_validation_predictions.csv` |
 | Homicidios totales por escenario | `output/tables/homicide_total_dept_1950-2019.csv` |
 | Índice de completitud | `output/tables/homicide_underreg_completeness_index.csv` |
+| Escenario Policía frente al central, por unidad | `output/tables/homicide_underreg_police_scenario.csv` |
 | Reparto municipal | `output/tables/homicide_munic_1958-1960.csv` |
 | Figuras | `figures/07_backcast/` |
 

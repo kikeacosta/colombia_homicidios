@@ -1,6 +1,6 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 47. From registered to total homicides by department, 1950-2019:
-#     prototype, three scenarios
+#     prototype, four scenarios
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # PROTOTYPE. 45 estimates homicides among REGISTERED deaths. This script
 # asks how many were not registered. The project has two conventions for
@@ -47,6 +47,14 @@
 #              high     theta = 1        (30: like any other death)
 #            from 1998 the three are the registered count: the test finds
 #            no relation with completeness after the 1998 certificate.
+#            a fourth scenario does not use the index: where the Policia
+#            counts more than the vital statistics in a sustained way, the
+#            homicides go up to the level of the Policia,
+#              total = registered x exp(max(beta, 0))
+#            with beta the smoothed log ratio of the Policia to the vital
+#            statistics estimated by 45. it exists only for 1962-1997 (the
+#            years in which the model uses the Policia) and inherits the
+#            breaks of that series, such as the fall of 1969.
 #            not included: the conflict homicides and disappearances that
 #            the MSE estimates add nationally in 1985-2018 (42); they are not
 #            available by department.
@@ -67,6 +75,7 @@
 #          output/tables/homicide_underreg_sensitivity_level.csv
 #          output/tables/homicide_total_dept_1950-2019.csv
 #          output/tables/homicide_total_national_1950-2019.csv
+#          output/tables/homicide_underreg_police_scenario.csv
 #          figures/07_backcast/underreg_theta.png
 #          figures/07_backcast/underreg_totals.png
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -299,21 +308,28 @@ bind_rows(theta_tab |> mutate(level = "department"), theta_units |> transmute(me
   write_csv("output/tables/homicide_underreg_theta.csv")
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# 4. total homicides, three scenarios ====
+# 4. total homicides, four scenarios ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tot <- bc |>
   filter(year >= 1950) |>
-  select(unit, unit_label, year, pop, hom_reg = hom_est, hom_reg_lo90 = hom_lo90, hom_reg_hi90 = hom_hi90) |>
+  select(unit, unit_label, year, pop, hom_reg = hom_est, hom_reg_lo90 = hom_lo90, hom_reg_hi90 = hom_hi90, police_bias_log) |>
   left_join(idx |> select(unit, year, completeness_index), by = c("unit", "year")) |>
   mutate(
     c_use = ifelse(year <= 1997, completeness_index, 1), # from 1998: no relation with completeness
     hom_total_low = hom_reg,
     hom_total_central = hom_reg * c_use^(-theta),
     hom_total_high = hom_reg / c_use,
+    # Policia scenario: where the smoothed ratio of the Policia to the vital
+    # statistics (45) is above one, the homicides go up to the level of the
+    # Policia. defined only where the model uses the Policia (1962-1997);
+    # none from 1998, as in the other scenarios
+    police_factor = case_when(year < 1962 ~ NA_real_, year <= 1997 ~ exp(pmax(police_bias_log, 0)), TRUE ~ 1),
+    hom_total_police = hom_reg * police_factor,
     across(starts_with("hom_total"), ~ 1e5 * .x / pop, .names = "rate_{sub('hom_', '', .col)}"),
     rate_reg = 1e5 * hom_reg / pop
   ) |>
-  select(-c_use)
+  select(-c_use, -police_bias_log)
+stopifnot(!anyNA(tot$police_factor[tot$year >= 1962]))
 write_csv(tot, "output/tables/homicide_total_dept_1950-2019.csv")
 nat <- tot |>
   summarise(pop = sum(pop), across(c(hom_reg, starts_with("hom_total")), sum), .by = year) |>
@@ -333,6 +349,33 @@ print(as.data.frame(sens |> mutate(across(where(is.double), ~ round(.x, 3)))), r
 cat("\n== 1950-1997 by unit: registered, central, high and factors ==\n")
 print(as.data.frame(tot |> filter(year <= 1997) |> summarise(registered = round(sum(hom_reg)), central = round(sum(hom_total_central)), high = round(sum(hom_total_high)), .by = unit) |>
   mutate(factor_central = round(central / registered, 2), factor_high = round(high / registered, 2)) |> arrange(-factor_central)), row.names = FALSE)
+
+# the Policia scenario against the central one, where both exist
+pol_cmp <- tot |>
+  filter(year %in% 1962:1997) |>
+  mutate(per = case_when(year <= 1965 ~ "1962-1965", year <= 1978 ~ "1966-1978", year <= 1984 ~ "1979-1984", TRUE ~ "1985-1997"))
+cat("\n== Policia scenario against the central one: national factor by period ==\n")
+print(as.data.frame(pol_cmp |> summarise(registered = round(sum(hom_reg)), factor_police = round(sum(hom_total_police) / sum(hom_reg), 3),
+                                         factor_central = round(sum(hom_total_central) / sum(hom_reg), 3),
+                                         factor_high = round(sum(hom_total_high) / sum(hom_reg), 3), .by = per)), row.names = FALSE)
+pol_unit <- pol_cmp |>
+  summarise(completeness = mean(completeness_index), years_police_above = sum(police_factor > 1), factor_police = sum(hom_total_police) / sum(hom_reg),
+            factor_central = sum(hom_total_central) / sum(hom_reg), .by = c(unit, unit_label))
+write_csv(pol_unit, "output/tables/homicide_underreg_police_scenario.csv")
+cat("\n== 1962-1997 by unit: Policia scenario against the central one ==\n")
+print(as.data.frame(pol_unit |> select(-unit) |> mutate(across(where(is.double), ~ round(.x, 2))) |> arrange(-factor_police)), row.names = FALSE)
+say("correlation across units of the two corrections (log factors):", round(cor(log(pol_unit$factor_police), log(pol_unit$factor_central)), 2))
+cat("\n== national, year by year around the break of the Policia in 1969 ==\n")
+print(as.data.frame(nat |> filter(year %in% 1962:1972) |> transmute(year, registered = round(hom_reg), police = round(hom_total_police), central = round(hom_total_central),
+                                                                   factor_police = round(factor_police, 2), factor_central = round(factor_central, 2))), row.names = FALSE)
+jump <- tot |> filter(year %in% 1995:2000) |> mutate(side = ifelse(year <= 1997, "pre", "post")) |>
+  summarise(reg = sum(hom_reg), central = sum(hom_total_central), high = sum(hom_total_high), police = sum(hom_total_police),
+            completeness = mean(completeness_index, na.rm = TRUE), .by = c(unit, side)) |>
+  pivot_wider(names_from = side, values_from = c(reg, central, high, police, completeness)) |>
+  filter(completeness_pre < 0.7)
+say("change from 1995-97 to 1998-2000 in the units with completeness under 0.7 (median): registered", round(median(jump$reg_post / jump$reg_pre), 2),
+    "| central", round(median(jump$central_post / jump$central_pre), 2), "| high", round(median(jump$high_post / jump$high_pre), 2),
+    "| Policia", round(median(jump$police_post / jump$police_pre), 2))
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 5. figures ====
@@ -364,10 +407,12 @@ fig1 <- tst |>
 ggsave("figures/07_backcast/underreg_theta.png", fig1, w = 10, h = 5, bg = "white", dpi = 160)
 
 # 5.2 totals: national and by unit
-esc_col <- c("Registrados (sin corrección)" = ink, "Central" = "#2a78d6", "Como cualquier defunción" = "#eb6834")
+esc_col <- c("Registrados (sin corrección)" = ink, "Central" = "#2a78d6", "Como cualquier defunción" = "#eb6834",
+             "Policía donde supera a las vitales (1962-1997)" = "#1baf7a")
 long <- function(d) d |>
-  pivot_longer(c(hom_total_low, hom_total_central, hom_total_high), names_to = "esc", values_to = "hom") |>
-  mutate(esc = factor(esc, c("hom_total_low", "hom_total_central", "hom_total_high"), names(esc_col)), rate = 1e5 * hom / pop)
+  pivot_longer(c(hom_total_low, hom_total_central, hom_total_high, hom_total_police), names_to = "esc", values_to = "hom") |>
+  filter(!is.na(hom)) |>
+  mutate(esc = factor(esc, c("hom_total_low", "hom_total_central", "hom_total_high", "hom_total_police"), names(esc_col)), rate = 1e5 * hom / pop)
 fig2a <- ggplot(long(nat), aes(year, rate, colour = esc)) +
   geom_vline(xintercept = 1997.5, colour = "grey70", linewidth = 0.3, linetype = 3) +
   geom_line(linewidth = 0.55) +
@@ -375,7 +420,8 @@ fig2a <- ggplot(long(nat), aes(year, rate, colour = esc)) +
   scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
   labs(title = "Homicidios por 100.000 habitantes: registrados y totales según el criterio de subregistro",
        subtitle = paste0("Suma de las 15 unidades. Central: elasticidad de ", format(round(theta, 2), decimal.mark = ","),
-                         " respecto de la completitud general. Desde 1998 (línea punteada) no se corrige."),
+                         " respecto de la completitud general. Desde 1998 (línea punteada) no se corrige.\n",
+                         "Verde: los homicidios suben al nivel de la Policía donde esta supera a las estadísticas vitales de forma sostenida; solo existe desde 1962."),
        x = NULL, y = NULL) +
   base
 fig2b <- ggplot(long(tot), aes(year, rate, colour = esc)) +

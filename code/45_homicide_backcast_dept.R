@@ -614,7 +614,9 @@ est |>
             hom_policia = h_pol, hom_eevv = h_eevv, sources, share_est = h_est, share_lo90 = h_lo,
             share_hi90 = h_hi, hom_est, hom_lo90 = hom_lo, hom_hi90 = hom_hi, rate_est,
             rate_lo90 = rate_lo, rate_hi90 = rate_hi, sd_log_share = sd_eta,
-            anuario_gross_error_prob = p_outlier, anuario_jump_prob = p_jump) |>
+            anuario_gross_error_prob = p_outlier, anuario_jump_prob = p_jump,
+            # smoothed log ratio of the Policia to the vital-statistics count, in the years the model uses the Policia
+            police_bias_log = ifelse(year %in% pol_years, beta, NA), police_bias_sd = ifelse(year %in% pol_years, sd_beta, NA)) |>
   write_csv("output/tables/homicide_backcast_dept_1915-2019.csv")
 
 # Policia bias: model estimate and the raw overlaps it comes from

@@ -212,6 +212,7 @@
 <ul>
 <li><a href="#la-prueba" id="toc-la-prueba">La prueba</a></li>
 <li><a href="#la-corrección" id="toc-la-corrección">La corrección</a></li>
+<li><a href="#un-cuarto-escenario-la-policía-donde-supera-a-las-estadísticas-vitales" id="toc-un-cuarto-escenario-la-policía-donde-supera-a-las-estadísticas-vitales">Un cuarto escenario: la Policía donde supera a las estadísticas vitales</a></li>
 <li><a href="#por-qué-se-entrena-con-registrados-y-se-corrige-al-final" id="toc-por-qué-se-entrena-con-registrados-y-se-corrige-al-final">Por qué se entrena con registrados y se corrige al final</a></li>
 </ul></li>
 <li><a href="#reparto-municipal-1958-1960" id="toc-reparto-municipal-1958-1960">7. Reparto municipal, 1958-1960</a></li>
@@ -226,7 +227,7 @@
 <li>Estima cuántos homicidios se registraron cada año, de 1915 a 2019, en cada una de 15 unidades territoriales (departamentos, algunos agrupados).</li>
 <li>Lo hace combinando cuatro fuentes que por separado son incompletas: los anuarios estadísticos, la Policía, las estadísticas vitales (EEVV) y la razón de sexos de las defunciones.</li>
 <li>La pregunta de origen era si la razón de sexos de las defunciones por todas las causas permite predecir homicidios donde no hay causa de muerte. La respuesta del modelo es: <strong>desde 1985, sí; antes de 1966, casi nada</strong>. La serie histórica se sostiene en los anuarios y en la Policía.</li>
-<li>El modelo estima homicidios <strong>registrados</strong>. Un segundo paso los convierte en homicidios totales bajo tres supuestos de subregistro.</li>
+<li>El modelo estima homicidios <strong>registrados</strong>. Un segundo paso los convierte en homicidios totales bajo tres supuestos de subregistro, más un cuarto escenario que usa directamente la diferencia con la Policía.</li>
 </ul>
 <h1 id="la-idea-de-partida-por-qué-la-razón-de-sexos-habla-de-homicidios">2. La idea de partida: por qué la razón de sexos habla de homicidios</h1>
 <p>Cerca de nueve de cada diez víctimas de homicidio son hombres. Las demás causas de muerte se reparten entre hombres y mujeres de forma mucho más pareja. Por eso, cuando en un lugar aumentan los homicidios, las defunciones masculinas crecen más que las femeninas y la razón entre unas y otras sube, aunque nadie haya anotado la causa de muerte.</p>
@@ -937,7 +938,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 </tr>
 </tbody>
 </table>
-<p>Con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\theta = 0</annotation></semantics></math> los homicidios no se corrigen; con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\theta = 1</annotation></semantics></math> se corrigen igual que las demás muertes. Hay tres escenarios:</p>
+<p>Con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\theta = 0</annotation></semantics></math> los homicidios no se corrigen; con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\theta = 1</annotation></semantics></math> se corrigen igual que las demás muertes. Hay tres escenarios con esta fórmula (más abajo hay un cuarto, que no usa el índice):</p>
 <table>
 <thead>
 <tr class="header">
@@ -972,13 +973,57 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 </tr>
 </tbody>
 </table>
-<p>Desde 1998 los tres escenarios son el conteo registrado.</p>
+<p>Desde 1998 todos los escenarios son el conteo registrado.</p>
 <p>La completitud <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> por departamento no existía antes de 1985. Se construyó un índice para 1950-1997 comparando las defunciones no violentas registradas en cada unidad con las que cabría esperar dadas las tasas nacionales ajustadas (script 42), la estructura por edad de los censos de 1938, 1951 y 1964, y el nivel de mortalidad de cada unidad según las tablas de vida de DANE de 1985-1990.</p>
 <p>Dos señales respaldan el escenario central:</p>
 <ul>
 <li>La pendiente de la prueba es parecida en otros periodos: 0,37 en 1962-1965 y 0,46 en 1979-1984, aunque con errores estándar grandes (0,21 a 0,23).</li>
 <li>En las cinco unidades con completitud menor de 0,7, los homicidios registrados saltan 52 % entre 1995-1997 y 1998-2000. Con el escenario central el salto es de 10 %, parecido al del resto del país; con el escenario alto la serie cae 29 %.</li>
 </ul>
+<h2 id="un-cuarto-escenario-la-policía-donde-supera-a-las-estadísticas-vitales">Un cuarto escenario: la Policía donde supera a las estadísticas vitales</h2>
+<p>Los tres escenarios anteriores dependen del índice de completitud. El cuarto no lo usa: toma directamente la diferencia entre las dos fuentes. Donde la Policía cuenta más homicidios que las estadísticas vitales de forma sostenida, los homicidios suben al nivel de la Policía; donde cuenta menos, no se corrige.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>=</mo><msub><mi>H</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>×</mo><mo>exp</mo><mspace width="-0.167em"></mspace><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mo>max</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>β</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>,</mo><mspace width="0.167em"></mspace><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T_{d,t} = H_{d,t} \times \exp\!\big(\max(\beta_{d,t},\, 0)\big)</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>β</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">\beta_{d,t}</annotation></semantics></math> es el estado del modelo de la sección 4: el logaritmo de la razón entre la Policía y las estadísticas vitales, ya suavizado. Usar la razón suavizada y no la de cada año evita contar como homicidios faltantes lo que es solo ruido: año a año esa razón oscila mucho (en Nariño va de 0,79 a 3,27), y tomar siempre el mayor de los dos conteos añadiría cerca de 5 % incluso donde las dos fuentes coinciden en promedio.</p>
+<p>Este escenario solo existe para 1962-1997, los años en que el modelo usa la Policía.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Factor nacional, escenario Policía</th>
+<th>Factor nacional, escenario central</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1962-1965</td>
+<td>1,20</td>
+<td>1,05</td>
+</tr>
+<tr class="even">
+<td>1966-1978</td>
+<td>1,11</td>
+<td>1,04</td>
+</tr>
+<tr class="odd">
+<td>1979-1984</td>
+<td>1,10</td>
+<td>1,06</td>
+</tr>
+<tr class="even">
+<td>1985-1997</td>
+<td>1,05</td>
+<td>1,06</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Los dos caminos coinciden en dónde faltan homicidios.</strong> La correlación entre unidades de las dos correcciones es 0,87. En 1962-1997, Magdalena + Cesar sube 50 % con la Policía y 38 % con el central; Bolívar + Córdoba + Sucre, 40 % y 39 %. En 1985-1997 el factor nacional es casi el mismo.</li>
+<li><strong>Difieren donde el índice y la Policía dicen cosas distintas.</strong> En Cauca el índice da mal registro (el central sube 16 %) pero la Policía cuenta menos que las vitales (sube 3 %). En Tolima y Nariño pasa lo contrario: 25 % y 41 % con la Policía, 10 % y 25 % con el central.</li>
+<li><strong>Hereda los quiebres de la Policía.</strong> El factor nacional es de 1,25 a 1,30 en 1964-1968, cae a 1,10 en 1969 y a 1,05 desde 1970. Esa caída está en la serie policial y no en la de la OMS, así que el escalón de 1969 es en buena parte un artefacto.</li>
+<li><strong>Empalma peor en 1998.</strong> En las unidades con completitud menor de 0,7 deja un salto de 37 % entre 1995-1997 y 1998-2000, frente a 10 % del escenario central.</li>
+<li><strong>No cubre antes de 1962</strong>, que es cuando el registro era peor.</li>
+</ul>
+<p>Sirve como contraste independiente del escenario central más que como reemplazo: confirma su tamaño donde se pueden comparar y señala las unidades donde conviene desconfiar del índice.</p>
 <figure>
 <img src="../figures/07_backcast/underreg_totals.png" alt="Homicidios registrados y totales por escenario" />
 <figcaption aria-hidden="true">Homicidios registrados y totales por escenario</figcaption>
@@ -1047,10 +1092,14 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <td><code>output/tables/homicide_underreg_completeness_index.csv</code></td>
 </tr>
 <tr class="odd">
+<td>Escenario Policía frente al central, por unidad</td>
+<td><code>output/tables/homicide_underreg_police_scenario.csv</code></td>
+</tr>
+<tr class="even">
 <td>Reparto municipal</td>
 <td><code>output/tables/homicide_munic_1958-1960.csv</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Figuras</td>
 <td><code>figures/07_backcast/</code></td>
 </tr>
