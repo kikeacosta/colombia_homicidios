@@ -283,7 +283,8 @@ who_v <- read_csv("data_input/reference/who_violent_age_colombia_1953-1977.csv",
 nat <- pan |>
   summarise(d = sum(d, na.rm = TRUE),
             dm = sum(dm[!is.na(dm)]), df = sum(df[!is.na(dm)]),
-            d_anu_cov = sum(d[!is.na(h_anu)], na.rm = TRUE), h_anu = sum(h_anu, na.rm = TRUE), n_anu = sum(!is.na(h_anu)),
+            d_anu_cov = sum(d[!is.na(h_anu)], na.rm = TRUE), n_anu = sum(!is.na(h_anu)), # counted before h_anu becomes its sum
+            h_anu = sum(h_anu, na.rm = TRUE),
             h_eevv = sum(h_eevv, na.rm = TRUE), d_adj = sum(d_adj), pop = sum(pop), .by = year) |>
   left_join(who_v, by = "year") |>
   left_join(pol_nat, by = "year") |>

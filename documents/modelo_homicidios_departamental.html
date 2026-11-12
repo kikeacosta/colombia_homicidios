@@ -342,17 +342,18 @@
 </tr>
 <tr class="odd">
 <td>Muertes violentas de la OMS</td>
-<td>1966-1977</td>
-<td>solo el total nacional</td>
-<td>9 años</td>
+<td>disponible 1953-1977 (sin 1970, 1971 ni 1973); el modelo la usa en 1966-1977</td>
+<td>solo el total nacional, no por departamento</td>
+<td>9 años usados</td>
 </tr>
 </tbody>
 </table>
-<p>Tres precisiones:</p>
+<p>Cuatro precisiones:</p>
 <ul>
-<li><strong>“Homicidio” en EEVV</strong> incluye homicidio, lesiones de intención no determinada e intervención legal. Es la convención del resto del proyecto.</li>
-<li><strong>La Policía cuenta otra cosa.</strong> No depende del certificado de defunción, y su relación con las estadísticas vitales cambia de un departamento a otro. Por eso entra al modelo con un sesgo propio, no como una medición directa.</li>
-<li><strong>1966-1978 no tiene homicidios por departamento en las estadísticas vitales.</strong> Los anuarios dejan de publicarlos en 1965 y los microdatos empiezan en 1979. En esos años solo hay Policía, el total nacional de la OMS y la razón de sexos.</li>
+<li><p><strong>La serie de la OMS existe desde 1953, pero el modelo solo la usa desde 1966.</strong> En 1953-1965 es la misma estadística vital que los anuarios: en once de esos trece años el total de la OMS coincide con la suma de los anuarios por departamento, así que no añade información. Las dos excepciones son 1959 (943 homicidios más en la OMS) y 1961 (420 más), y en ambas la diferencia corresponde a una celda departamental que falta o está mal: Valle del Cauca en 1959 y Tolima en 1961.</p></li>
+<li><p><strong>“Homicidio” en EEVV</strong> incluye homicidio, lesiones de intención no determinada e intervención legal. Es la convención del resto del proyecto.</p></li>
+<li><p><strong>La Policía cuenta otra cosa.</strong> No depende del certificado de defunción, y su relación con las estadísticas vitales cambia de un departamento a otro. Por eso entra al modelo con un sesgo propio, no como una medición directa.</p></li>
+<li><p><strong>1966-1978 no tiene homicidios por departamento en las estadísticas vitales.</strong> Los anuarios dejan de publicarlos en 1965 y los microdatos empiezan en 1979. En esos años solo hay Policía, el total nacional de la OMS y la razón de sexos.</p></li>
 </ul>
 <h1 id="el-modelo">4. El modelo</h1>
 <h2 id="qué-tipo-de-modelo-es">4.1 Qué tipo de modelo es</h2>
@@ -430,7 +431,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="odd">
 <td>Regular</td>
 <td>la celda mide bien, con el error normal <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>A</mi></msub><annotation encoding="application/x-tex">\sigma_A</annotation></semantics></math></td>
-<td>95,7 %</td>
+<td>95,8 %</td>
 </tr>
 <tr class="even">
 <td>Error grosero</td>
@@ -440,7 +441,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="odd">
 <td>Salto</td>
 <td>la celda está bien y fue el nivel de homicidios el que cambió bruscamente respecto del año anterior</td>
-<td>1,1 %</td>
+<td>1,0 %</td>
 </tr>
 </tbody>
 </table>
@@ -459,7 +460,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <td>Antioquia</td>
 <td>1923</td>
 <td>3</td>
-<td>86</td>
+<td>85</td>
 </tr>
 <tr class="even">
 <td>Valle del Cauca</td>
@@ -471,31 +472,31 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <td>Santander</td>
 <td>1949</td>
 <td>643</td>
-<td>371</td>
+<td>374</td>
 </tr>
 <tr class="even">
 <td>Valle del Cauca</td>
 <td>1949</td>
 <td>670</td>
-<td>611</td>
+<td>600</td>
 </tr>
 <tr class="odd">
 <td>Tolima</td>
 <td>1951</td>
 <td>365</td>
-<td>437</td>
+<td>445</td>
 </tr>
 <tr class="even">
 <td>Huila</td>
 <td>1953</td>
 <td>182</td>
-<td>171</td>
+<td>169</td>
 </tr>
 <tr class="odd">
 <td>Huila</td>
 <td>1959</td>
 <td>77</td>
-<td>112</td>
+<td>113</td>
 </tr>
 <tr class="even">
 <td>Nariño</td>
@@ -507,7 +508,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <td>Territorios</td>
 <td>1940</td>
 <td>36</td>
-<td>25</td>
+<td>26</td>
 </tr>
 </tbody>
 </table>
@@ -534,7 +535,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tbody>
 <tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>η</mi></msub><annotation encoding="application/x-tex">\sigma_\eta</annotation></semantics></math>, antes de 1979</td>
-<td>0,168</td>
+<td>0,173</td>
 <td>la proporción de homicidios cambia típicamente 17 % por año</td>
 </tr>
 <tr class="even">
@@ -544,7 +545,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 </tr>
 <tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>u</mi></msub><annotation encoding="application/x-tex">\sigma_u</annotation></semantics></math>, antes de 1979</td>
-<td>0,011</td>
+<td>0,010</td>
 <td>la razón de sexos no violenta de una unidad deriva cerca de 1 % por año respecto de la nacional</td>
 </tr>
 <tr class="even">
@@ -559,12 +560,12 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 </tr>
 <tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\sigma_R</annotation></semantics></math>, desde 1979</td>
-<td>0,0003</td>
+<td>menos de 0,0001</td>
 <td>prácticamente ninguno: con buenos datos la identidad contable se cumple casi exacta</td>
 </tr>
 <tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>A</mi></msub><annotation encoding="application/x-tex">\sigma_A</annotation></semantics></math></td>
-<td>0,133</td>
+<td>0,128</td>
 <td>una celda regular de anuario se aparta 13 % del valor estimado</td>
 </tr>
 <tr class="even">
@@ -574,7 +575,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 </tr>
 <tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>β</mi></msub><annotation encoding="application/x-tex">\sigma_\beta</annotation></semantics></math></td>
-<td>0,111</td>
+<td>0,112</td>
 <td>el sesgo de la Policía cambia hasta 11 % por año: es inestable</td>
 </tr>
 <tr class="even">
@@ -584,14 +585,14 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 </tr>
 <tr class="odd">
 <td>Probabilidad de salto</td>
-<td>0,011</td>
-<td>una de cada 95</td>
+<td>0,010</td>
+<td>una de cada 100</td>
 </tr>
 </tbody>
 </table>
 <p>Valores fijados, no estimados: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>90</mn></mrow><annotation encoding="application/x-tex">\pi = 0{,}90</annotation></semantics></math>; error de EEVV 0,03; error del total de la OMS 0,05; desviación adicional de un error grosero 1,5 y de un salto 1,0.</p>
-<p>Dos de estos números resumen el resultado. El ruido de la razón de sexos antes de 1979 (0,021) es del mismo tamaño que la señal que producen homicidios de 1 % a 3 % de las defunciones, y por eso la razón de sexos informa poco en ese periodo. Y la inestabilidad del sesgo de la Policía (0,111 por año) es la razón de que el tramo 1966-1978 tenga intervalos anchos aunque haya dato policial todos los años.</p>
-<p>Tratar las celdas de anuario como posibles errores mejora mucho el ajuste: la log-verosimilitud pasa de 3.081,8 a 3.140,1 con dos parámetros más.</p>
+<p>Dos de estos números resumen el resultado. El ruido de la razón de sexos antes de 1979 (0,021) es del mismo tamaño que la señal que producen homicidios de 1 % a 3 % de las defunciones, y por eso la razón de sexos informa poco en ese periodo. Y la inestabilidad del sesgo de la Policía (0,112 por año) es la razón de que el tramo 1966-1978 tenga intervalos anchos aunque haya dato policial todos los años.</p>
+<p>Tratar las celdas de anuario como posibles errores mejora mucho el ajuste: la log-verosimilitud pasa de 3.086,5 a 3.145,1 con dos parámetros más.</p>
 <h2 id="qué-produce">4.7 Qué produce</h2>
 <p>Para cada unidad y año:</p>
 <ul>
@@ -622,7 +623,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="odd">
 <td>1946-1965</td>
 <td>anuarios (y Policía desde 1962)</td>
-<td>0,13</td>
+<td>0,12</td>
 </tr>
 <tr class="even">
 <td>1966-1978</td>
@@ -661,14 +662,14 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tbody>
 <tr class="odd">
 <td>1946-1953</td>
-<td>41 %</td>
+<td>40 %</td>
 <td>40 %</td>
 <td>no hay Policía</td>
 </tr>
 <tr class="even">
 <td>1954-1965</td>
 <td>23 %</td>
-<td>22 %</td>
+<td>21 %</td>
 <td>21 %</td>
 </tr>
 <tr class="odd">
@@ -695,7 +696,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <li><strong>Desde 1985 la razón de sexos reduce el error a menos de la mitad.</strong> Sigue la subida de los ochenta y el pico de 1991 sin ver un solo homicidio de esos años.</li>
 <li><strong>Antes de 1966 no mejora la interpolación.</strong> Es lo que anticipaba el ejemplo de la sección 2.</li>
 <li><strong>En 1979-1984 ninguna fuente le gana a interpolar</strong>, y con Policía los intervalos resultan demasiado estrechos: solo 61 % de los valores observados cae dentro del intervalo de 90 %.</li>
-<li><strong>El arranque de La Violencia no es predecible desde los años anteriores.</strong> En el bloque 1946-1953 la cobertura del intervalo de 90 % es de 68 %.</li>
+<li><strong>El arranque de La Violencia no es predecible desde los años anteriores.</strong> En el bloque 1946-1953 la cobertura del intervalo de 90 % es de 71 %.</li>
 </ul>
 <h2 id="resumen-por-unidad">5.1 Resumen por unidad</h2>
 <p>La tabla repite la prueba unidad por unidad. Cada celda de error trae dos números: el error absoluto mediano sin insumos en el bloque y con la razón de sexos. La cobertura es el porcentaje de valores observados que cae dentro del intervalo de 90 % de la predicción con razón de sexos, en los cinco bloques; lo esperable es 90 %.</p>
@@ -715,7 +716,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="odd">
 <td>Antioquia</td>
 <td>1,9 %</td>
-<td>36 % / 42 %</td>
+<td>36 % / 40 %</td>
 <td>13 % / 10 %</td>
 <td>23,2 %</td>
 <td>30 % / 3 %</td>
@@ -724,7 +725,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="even">
 <td>Atlántico</td>
 <td>0,7 %</td>
-<td>85 % / 81 %</td>
+<td>86 % / 81 %</td>
 <td>40 % / 30 %</td>
 <td>7,0 %</td>
 <td>14 % / 11 %</td>
@@ -742,7 +743,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="even">
 <td>Boyacá</td>
 <td>2,0 %</td>
-<td>24 % / 21 %</td>
+<td>22 % / 20 %</td>
 <td>14 % / 17 %</td>
 <td>7,0 %</td>
 <td>20 % / 13 %</td>
@@ -751,17 +752,17 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="odd">
 <td>Caldas + Quindío + Risaralda</td>
 <td>3,3 %</td>
-<td>31 % / 22 %</td>
-<td>31 % / 22 %</td>
+<td>31 % / 20 %</td>
+<td>32 % / 22 %</td>
 <td>14,4 %</td>
 <td>22 % / 5 %</td>
-<td>86 %</td>
+<td>88 %</td>
 </tr>
 <tr class="even">
 <td>Cauca</td>
 <td>1,5 %</td>
-<td>34 % / 35 %</td>
-<td>47 % / 52 %</td>
+<td>33 % / 35 %</td>
+<td>46 % / 52 %</td>
 <td>15,5 %</td>
 <td>12 % / 8 %</td>
 <td>84 %</td>
@@ -769,8 +770,8 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="odd">
 <td>Cundinamarca + Bogotá</td>
 <td>1,7 %</td>
-<td>10 % / 7 %</td>
-<td>28 % / 43 %</td>
+<td>9 % / 8 %</td>
+<td>28 % / 42 %</td>
 <td>9,6 %</td>
 <td>14 % / 6 %</td>
 <td>82 %</td>
@@ -778,7 +779,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="even">
 <td>Huila</td>
 <td>2,4 %</td>
-<td>54 % / 54 %</td>
+<td>54 % / 53 %</td>
 <td>27 % / 27 %</td>
 <td>10,2 %</td>
 <td>19 % / 9 %</td>
@@ -787,7 +788,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="odd">
 <td>Magdalena + Cesar</td>
 <td>1,8 %</td>
-<td>45 % / 34 %</td>
+<td>44 % / 35 %</td>
 <td>10 % / 12 %</td>
 <td>15,8 %</td>
 <td>10 % / 10 %</td>
@@ -796,7 +797,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="even">
 <td>Nariño</td>
 <td>0,6 %</td>
-<td>17 % / 18 %</td>
+<td>17 % / 19 %</td>
 <td>43 % / 41 %</td>
 <td>9,5 %</td>
 <td>16 % / 11 %</td>
@@ -805,7 +806,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="odd">
 <td>Norte de Santander</td>
 <td>3,6 %</td>
-<td>11 % / 12 %</td>
+<td>12 % / 12 %</td>
 <td>21 % / 13 %</td>
 <td>15,3 %</td>
 <td>20 % / 9 %</td>
@@ -814,16 +815,16 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="even">
 <td>Santander</td>
 <td>3,1 %</td>
-<td>18 % / 19 %</td>
-<td>12 % / 12 %</td>
+<td>19 % / 19 %</td>
+<td>12 % / 11 %</td>
 <td>9,4 %</td>
 <td>20 % / 7 %</td>
-<td>90 %</td>
+<td>92 %</td>
 </tr>
 <tr class="odd">
 <td>Territorios</td>
 <td>2,5 %</td>
-<td>23 % / 19 %</td>
+<td>22 % / 18 %</td>
 <td>19 % / 7 %</td>
 <td>23,4 %</td>
 <td>15 % / 4 %</td>
@@ -832,7 +833,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="even">
 <td>Tolima</td>
 <td>4,9 %</td>
-<td>60 % / 49 %</td>
+<td>60 % / 46 %</td>
 <td>14 % / 21 %</td>
 <td>9,2 %</td>
 <td>26 % / 18 %</td>
@@ -841,8 +842,8 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tr class="odd">
 <td>Valle del Cauca</td>
 <td>4,3 %</td>
-<td>38 % / 27 %</td>
-<td>34 % / 29 %</td>
+<td>37 % / 27 %</td>
+<td>34 % / 28 %</td>
 <td>17,1 %</td>
 <td>17 % / 3 %</td>
 <td>86 %</td>
@@ -861,7 +862,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <p>Qué se lee en la tabla:</p>
 <ul>
 <li><strong>En 1985-2010 la razón de sexos mejora la predicción en 13 de las 15 unidades.</strong> Las mejoras mayores están donde los homicidios pesan más: Antioquia (de 30 % a 3 %), Valle (de 17 % a 3 %), Territorios (de 15 % a 4 %) y Caldas (de 22 % a 5 %). No mejora en Bolívar + Córdoba + Sucre ni en Magdalena + Cesar, las dos unidades con peor registro de defunciones.</li>
-<li><strong>En 1946-1965 solo ayuda donde la violencia fue alta.</strong> Tolima (de 60 % a 49 %), Valle (de 38 % a 27 %), Caldas (de 31 % a 22 %) y Magdalena (de 45 % a 34 %). En el resto no cambia o empeora un poco, y los errores siguen siendo grandes en casi todas partes.</li>
+<li><strong>En 1946-1965 solo ayuda donde la violencia fue alta.</strong> Tolima (de 60 % a 46 %), Valle (de 37 % a 27 %), Caldas (de 31 % a 20 %) y Magdalena (de 44 % a 35 %). En el resto no cambia o empeora un poco, y los errores siguen siendo grandes en casi todas partes.</li>
 <li><strong>Tolima es la unidad peor cubierta</strong>: solo 57 % de sus valores observados cae dentro del intervalo. Es donde los cambios fueron más bruscos (el pico de 1956-1958 y la caída posterior).</li>
 <li><strong>Atlántico tiene el error más alto de 1946-1965</strong> (más de 80 %) porque sus conteos son muy pequeños: los homicidios eran 0,7 % de las defunciones.</li>
 </ul>
@@ -892,9 +893,9 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <h2 id="otras-comprobaciones">5.3 Otras comprobaciones</h2>
 <p>Tres más:</p>
 <ul>
-<li><strong>Picos.</strong> En 1958 la suma de las unidades es 86 % del conteo de los anuarios, y en 1949, 84 %. Antes de tratar las celdas erróneas eran 76 % y 74 %.</li>
+<li><strong>Picos.</strong> En 1958 la suma de las unidades es 87 % del conteo de los anuarios, y en 1949, 84 %. Antes de tratar las celdas erróneas eran 76 % y 74 %.</li>
 <li><strong>Tramo 1966-1978 frente a la OMS.</strong> La suma queda 10 % a 13 % por encima de la OMS en 1966-1968 y entre 0 % y 4 % por debajo en 1972-1977. La Policía tiene una caída de 37 % en 1969 que la OMS no muestra, y el modelo solo la corrige en parte.</li>
-<li><strong>Reparto en 1966-1978.</strong> No hay dato para contrastarlo. La incertidumbre de cada unidad baja de 0,30 sin insumos a 0,175 con Policía; añadir la razón de sexos y la OMS la deja en 0,164.</li>
+<li><strong>Reparto en 1966-1978.</strong> No hay dato para contrastarlo. La incertidumbre de cada unidad baja de 0,31 sin insumos a 0,176 con Policía; añadir la razón de sexos y la OMS la deja en 0,164.</li>
 </ul>
 <h1 id="de-homicidios-registrados-a-totales">6. De homicidios registrados a totales</h1>
 <p>El modelo estima homicidios entre las defunciones registradas. Cuántos no se registraron lo aborda <code>code/47_homicide_underregistration.R</code>.</p>
@@ -998,7 +999,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <li><strong>1915-1922 no se debe usar.</strong> No hay ningún dato de homicidios y la estimación descansa solo en la razón de sexos. Dos formas equivalentes de calcularla difieren por un factor de 2,5.</li>
 <li><strong>Antes de 1946 la serie depende de anuarios con huecos</strong>, y la incertidumbre es alta (0,24).</li>
 <li><strong>Los picos de La Violencia quedan algo aplanados</strong>: 13 % a 17 % por debajo del anuario en Tolima, Caldas y Valle en 1958.</li>
-<li><strong>1966-1978 descansa en la Policía</strong>, cuyo sesgo es inestable. Los intervalos de ese tramo probablemente son demasiado estrechos.</li>
+<li><strong>En 1966-1978 el reparto entre departamentos descansa en la Policía</strong>, cuyo sesgo es inestable. La OMS fija el total del país en esos años, pero no dice nada de cómo se distribuye. Los intervalos de ese tramo probablemente son demasiado estrechos.</li>
 <li><strong>Las tasas usan población de censos sin corregir por omisión</strong>, que va de 4 % a 12 % según el censo.</li>
 <li><strong>La serie de totales empieza en 1950</strong> y no incluye los homicidios del conflicto ni las desapariciones que las estimaciones de sistemas múltiples añaden a nivel nacional en 1985-2018.</li>
 <li><strong>El índice de completitud anterior a 1985 es una aproximación.</strong> Ordena bien las unidades frente al método de balance de crecimiento de 1985-1995 (correlación 0,87), pero da valores más altos (0,79 frente a 0,71 en promedio).</li>
