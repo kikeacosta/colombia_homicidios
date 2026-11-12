@@ -63,6 +63,7 @@ Run from the project root with `Rscript run_all.R` (`Rscript` must be on the PAT
 | `18_ddm_completeness.R`, `19_completeness_vs_correlation.R` | DDM completeness (GGB, SEG, hybrid) and its relation to the correlation |
 | `45_homicide_backcast_dept.R` | prototype: state-space model of departmental homicides 1915-2019 (15 stable units) combining the sex ratio of deaths, anuario homicides, Policía and EEVV; hidden-block validation |
 | `46_homicide_munic_1958_1960.R` | prototype: municipal split of the 1958-1960 unit homicides from the sex ratio of deaths over age one, with the shrinkage weight calibrated on EEVV under 1958-60 conditions |
+| `47_homicide_underregistration.R` | prototype: from registered to total homicides by unit, 1950-2019. Tests the two conventions for violent deaths against the Policía, builds a completeness index by unit before 1985 and gives three scenarios |
 | `experimental/model_spatial.R` | spatial random-effect variant (not used for results) |
 | `historical/` | 1923-1984 series, WHO and UCDP comparisons; see its README |
 
