@@ -81,13 +81,22 @@ estimates and medium-variant projections; `wpp2024_colombia_pop_single_age_1950-
 single age and sex extracted by `code/37_reconstruction_ccmpp.R`;
 `wpp2024_colombia_fertility_age1.csv`, age-specific fertility 1950-2100) and the
 crisis-mortality extracts of `code/26_wpp_crises_inputs.R`.
-`historical/census_tables/`: population tables extracted from the 1938, 1951
-and 1973 census summary PDFs by `code/historical/23_census_tables_ocr.R`
-(national single ages by sex 1938 and 1973; 5-year ages by sex and department
-for 1938 and 1951; coverage-adjusted population by department and zone 1973;
+`trussell_child_mortality_coefficients.csv` (coefficients of the child
+mortality multipliers k(i) and of the time reference t(i), UN 1983 Manual X,
+tables 47 and 48) and `coale_demeny_child_q_by_level.csv` (q(1) … q(20) by
+level of the Coale-Demeny model life tables, four families, by sex), both
+taken from the R package `u5mr` 0.1.1 (archived on CRAN) and read by
+`code/43_child_mortality_census1973.R`.
+`historical/census_tables/`: population tables extracted from the 1938, 1951,
+1964 and 1973 census summary PDFs by `code/historical/23_census_tables_ocr.R`
+(national single ages by sex 1938, 1964 and 1973; 5-year ages by sex and
+department for 1938, 1951 and 1964, the last also by zone; coverage-adjusted
+population by department and zone 1973; place of birth by place of
+residence, sex and broad age group in 1964, the lifetime migration matrix
+between departments (Cuadro 14);
 women aged 15+ by children ever born and surviving in 1973, by age group and
 by department), with the OCR grids, corrections and transcriptions in `ocr_support/`; see its
-`README.md`. The PDFs themselves (`LD_771_*.pdf`, `LB_*.pdf`, 29 MB) are kept
+`README.md`. The PDFs themselves (`LD_771_*.pdf`, `LB_*.pdf`, 35 MB) are kept
 in `historical/` but not versioned.
 `historical/dane_vitales_1958_1960_*.csv`: DANE "Estadística vital 1958 a
 1960" (1962) read from the library scan `LD_558_1958_1960_EJ_2.pdf` (not
