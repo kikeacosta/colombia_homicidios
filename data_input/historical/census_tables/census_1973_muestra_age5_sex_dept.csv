@@ -1,0 +1,521 @@
+census_year,unit,cod_dpto,unit_type,zone,age,age_start,male,female,total
+1973,Total departamentos,00,total,total,total,,9587026,10148260,19735286
+1973,Total departamentos,00,total,total,<1,0,237176,229124,466300
+1973,Total departamentos,00,total,total,1-4,1,1172322,1141477,2313799
+1973,Total departamentos,00,total,total,5-9,5,1549425,1517480,3066905
+1973,Total departamentos,00,total,total,10-14,10,1437862,1423758,2861620
+1973,Total departamentos,00,total,total,15-19,15,1088977,1226105,2315082
+1973,Total departamentos,00,total,total,20-24,20,798704,945744,1744448
+1973,Total departamentos,00,total,total,25-29,25,619672,713787,1333459
+1973,Total departamentos,00,total,total,30-34,30,516865,567705,1084570
+1973,Total departamentos,00,total,total,35-39,35,467402,543498,1010900
+1973,Total departamentos,00,total,total,40-44,40,412102,440968,853070
+1973,Total departamentos,00,total,total,45-49,45,324438,361971,686409
+1973,Total departamentos,00,total,total,50-54,50,289469,301857,591326
+1973,Total departamentos,00,total,total,55-59,55,201565,207286,408851
+1973,Total departamentos,00,total,total,60-64,60,182052,193115,375167
+1973,Total departamentos,00,total,total,65-69,65,111698,116706,228404
+1973,Total departamentos,00,total,total,70-74,70,92390,103417,195807
+1973,Total departamentos,00,total,total,75-79,75,39919,49737,89656
+1973,Total departamentos,00,total,total,80-84,80,25917,34137,60054
+1973,Total departamentos,00,total,total,85+,85,19071,30388,49459
+1973,Total departamentos,00,total,cabecera,total,,5785492,6667847,12453339
+1973,Total departamentos,00,total,cabecera,<1,0,132665,129400,262065
+1973,Total departamentos,00,total,cabecera,1-4,1,652887,646212,1299099
+1973,Total departamentos,00,total,cabecera,5-9,5,899299,904966,1804265
+1973,Total departamentos,00,total,cabecera,10-14,10,883547,927987,1811534
+1973,Total departamentos,00,total,cabecera,15-19,15,692163,889977,1582140
+1973,Total departamentos,00,total,cabecera,20-24,20,516487,681768,1198255
+1973,Total departamentos,00,total,cabecera,25-29,25,398322,501592,899914
+1973,Total departamentos,00,total,cabecera,30-34,30,328299,386949,715248
+1973,Total departamentos,00,total,cabecera,35-39,35,283835,361200,645035
+1973,Total departamentos,00,total,cabecera,40-44,40,251567,295632,547199
+1973,Total departamentos,00,total,cabecera,45-49,45,194218,246028,440246
+1973,Total departamentos,00,total,cabecera,50-54,50,167429,197517,364946
+1973,Total departamentos,00,total,cabecera,55-59,55,117363,142324,259687
+1973,Total departamentos,00,total,cabecera,60-64,60,101390,127303,228693
+1973,Total departamentos,00,total,cabecera,65-69,65,66473,80878,147351
+1973,Total departamentos,00,total,cabecera,70-74,70,50731,69411,120142
+1973,Total departamentos,00,total,cabecera,75-79,75,23660,34981,58641
+1973,Total departamentos,00,total,cabecera,80-84,80,14942,22409,37351
+1973,Total departamentos,00,total,cabecera,85+,85,10215,21313,31528
+1973,Total departamentos,00,total,resto,total,,3801534,3480413,7281947
+1973,Total departamentos,00,total,resto,<1,0,104511,99724,204235
+1973,Total departamentos,00,total,resto,1-4,1,519435,495265,1014700
+1973,Total departamentos,00,total,resto,5-9,5,650126,612514,1262640
+1973,Total departamentos,00,total,resto,10-14,10,554315,495771,1050086
+1973,Total departamentos,00,total,resto,15-19,15,396814,336128,732942
+1973,Total departamentos,00,total,resto,20-24,20,282217,263976,546193
+1973,Total departamentos,00,total,resto,25-29,25,221350,212195,433545
+1973,Total departamentos,00,total,resto,30-34,30,188566,180756,369322
+1973,Total departamentos,00,total,resto,35-39,35,183567,182298,365865
+1973,Total departamentos,00,total,resto,40-44,40,160535,145336,305871
+1973,Total departamentos,00,total,resto,45-49,45,130220,115943,246163
+1973,Total departamentos,00,total,resto,50-54,50,122040,104340,226380
+1973,Total departamentos,00,total,resto,55-59,55,84202,64962,149164
+1973,Total departamentos,00,total,resto,60-64,60,80662,65812,146474
+1973,Total departamentos,00,total,resto,65-69,65,45225,35828,81053
+1973,Total departamentos,00,total,resto,70-74,70,41659,34006,75665
+1973,Total departamentos,00,total,resto,75-79,75,16259,14756,31015
+1973,Total departamentos,00,total,resto,80-84,80,10975,11728,22703
+1973,Total departamentos,00,total,resto,85+,85,8856,9075,17931
+1973,Antioquia,05,departamento,total,total,,1357300,1469600,2826900
+1973,Antioquia,05,departamento,total,<1,0,33725,31200,64925
+1973,Antioquia,05,departamento,total,1-4,1,159925,158900,318825
+1973,Antioquia,05,departamento,total,5-9,5,220025,222050,442075
+1973,Antioquia,05,departamento,total,10-14,10,210125,208875,419000
+1973,Antioquia,05,departamento,total,15-19,15,158450,183875,342325
+1973,Antioquia,05,departamento,total,20-24,20,120400,138250,258650
+1973,Antioquia,05,departamento,total,25-29,25,90875,102750,193625
+1973,Antioquia,05,departamento,total,30-34,30,71450,83425,154875
+1973,Antioquia,05,departamento,total,35-39,35,62175,72675,134850
+1973,Antioquia,05,departamento,total,40-44,40,56725,62850,119575
+1973,Antioquia,05,departamento,total,45-49,45,43750,51725,95475
+1973,Antioquia,05,departamento,total,50-54,50,37425,45050,82475
+1973,Antioquia,05,departamento,total,55-59,55,26975,30000,56975
+1973,Antioquia,05,departamento,total,60-64,60,23750,27625,51375
+1973,Antioquia,05,departamento,total,65-69,65,15300,17300,32600
+1973,Antioquia,05,departamento,total,70-74,70,13775,15850,29625
+1973,Antioquia,05,departamento,total,75-79,75,5875,7175,13050
+1973,Antioquia,05,departamento,total,80-84,80,4200,5625,9825
+1973,Antioquia,05,departamento,total,85+,85,2375,4400,6775
+1973,Atlántico,08,departamento,total,total,,454725,495125,949850
+1973,Atlántico,08,departamento,total,<1,0,9175,9075,18250
+1973,Atlántico,08,departamento,total,1-4,1,52425,49475,101900
+1973,Atlántico,08,departamento,total,5-9,5,72650,66600,139250
+1973,Atlántico,08,departamento,total,10-14,10,67225,68700,135925
+1973,Atlántico,08,departamento,total,15-19,15,52700,66725,119425
+1973,Atlántico,08,departamento,total,20-24,20,44325,52075,96400
+1973,Atlántico,08,departamento,total,25-29,25,30600,36425,67025
+1973,Atlántico,08,departamento,total,30-34,30,25825,28900,54725
+1973,Atlántico,08,departamento,total,35-39,35,21650,26850,48500
+1973,Atlántico,08,departamento,total,40-44,40,18325,20900,39225
+1973,Atlántico,08,departamento,total,45-49,45,15200,17750,32950
+1973,Atlántico,08,departamento,total,50-54,50,13700,14250,27950
+1973,Atlántico,08,departamento,total,55-59,55,9450,10800,20250
+1973,Atlántico,08,departamento,total,60-64,60,7650,9300,16950
+1973,Atlántico,08,departamento,total,65-69,65,5575,6575,12150
+1973,Atlántico,08,departamento,total,70-74,70,4275,5125,9400
+1973,Atlántico,08,departamento,total,75-79,75,1875,2500,4375
+1973,Atlántico,08,departamento,total,80-84,80,1200,1400,2600
+1973,Atlántico,08,departamento,total,85+,85,900,1700,2600
+1973,Bogotá D.E.,11,distrito especial,total,total,,1310176,1500660,2810836
+1973,Bogotá D.E.,11,distrito especial,total,<1,0,29176,28924,58100
+1973,Bogotá D.E.,11,distrito especial,total,1-4,1,138572,136752,275324
+1973,Bogotá D.E.,11,distrito especial,total,5-9,5,184800,182980,367780
+1973,Bogotá D.E.,11,distrito especial,total,10-14,10,179312,194208,373520
+1973,Bogotá D.E.,11,distrito especial,total,15-19,15,161252,204680,365932
+1973,Bogotá D.E.,11,distrito especial,total,20-24,20,137004,177744,314748
+1973,Bogotá D.E.,11,distrito especial,total,25-29,25,109872,130312,240184
+1973,Bogotá D.E.,11,distrito especial,total,30-34,30,87640,96880,184520
+1973,Bogotá D.E.,11,distrito especial,total,35-39,35,69552,85148,154700
+1973,Bogotá D.E.,11,distrito especial,total,40-44,40,60452,68768,129220
+1973,Bogotá D.E.,11,distrito especial,total,45-49,45,44688,53396,98084
+1973,Bogotá D.E.,11,distrito especial,total,50-54,50,37744,41832,79576
+1973,Bogotá D.E.,11,distrito especial,total,55-59,55,23940,30436,54376
+1973,Bogotá D.E.,11,distrito especial,total,60-64,60,19852,26040,45892
+1973,Bogotá D.E.,11,distrito especial,total,65-69,65,12348,17556,29904
+1973,Bogotá D.E.,11,distrito especial,total,70-74,70,7840,12292,20132
+1973,Bogotá D.E.,11,distrito especial,total,75-79,75,3444,6412,9856
+1973,Bogotá D.E.,11,distrito especial,total,80-84,80,1792,3612,5404
+1973,Bogotá D.E.,11,distrito especial,total,85+,85,896,2688,3584
+1973,Bolívar,13,departamento,total,total,,376150,382250,758400
+1973,Bolívar,13,departamento,total,<1,0,8625,8275,16900
+1973,Bolívar,13,departamento,total,1-4,1,46775,43875,90650
+1973,Bolívar,13,departamento,total,5-9,5,63575,60550,124125
+1973,Bolívar,13,departamento,total,10-14,10,60650,57500,118150
+1973,Bolívar,13,departamento,total,15-19,15,45450,46500,91950
+1973,Bolívar,13,departamento,total,20-24,20,31625,34300,65925
+1973,Bolívar,13,departamento,total,25-29,25,23325,25950,49275
+1973,Bolívar,13,departamento,total,30-34,30,17150,20000,37150
+1973,Bolívar,13,departamento,total,35-39,35,16800,19325,36125
+1973,Bolívar,13,departamento,total,40-44,40,14925,15000,29925
+1973,Bolívar,13,departamento,total,45-49,45,11575,13500,25075
+1973,Bolívar,13,departamento,total,50-54,50,10800,9975,20775
+1973,Bolívar,13,departamento,total,55-59,55,7375,6350,13725
+1973,Bolívar,13,departamento,total,60-64,60,6150,7025,13175
+1973,Bolívar,13,departamento,total,65-69,65,3925,4450,8375
+1973,Bolívar,13,departamento,total,70-74,70,3700,4300,8000
+1973,Bolívar,13,departamento,total,75-79,75,1800,2425,4225
+1973,Bolívar,13,departamento,total,80-84,80,1125,1425,2550
+1973,Bolívar,13,departamento,total,85+,85,800,1525,2325
+1973,Boyacá,15,departamento,total,total,,522925,531550,1054475
+1973,Boyacá,15,departamento,total,<1,0,14125,13100,27225
+1973,Boyacá,15,departamento,total,1-4,1,70775,67750,138525
+1973,Boyacá,15,departamento,total,5-9,5,93725,86500,180225
+1973,Boyacá,15,departamento,total,10-14,10,80275,74625,154900
+1973,Boyacá,15,departamento,total,15-19,15,52775,54900,107675
+1973,Boyacá,15,departamento,total,20-24,20,33925,38925,72850
+1973,Boyacá,15,departamento,total,25-29,25,25800,30500,56300
+1973,Boyacá,15,departamento,total,30-34,30,24425,27050,51475
+1973,Boyacá,15,departamento,total,35-39,35,25100,28250,53350
+1973,Boyacá,15,departamento,total,40-44,40,21325,24050,45375
+1973,Boyacá,15,departamento,total,45-49,45,18025,21175,39200
+1973,Boyacá,15,departamento,total,50-54,50,17725,19125,36850
+1973,Boyacá,15,departamento,total,55-59,55,13825,12975,26800
+1973,Boyacá,15,departamento,total,60-64,60,11825,12375,24200
+1973,Boyacá,15,departamento,total,65-69,65,6775,7175,13950
+1973,Boyacá,15,departamento,total,70-74,70,6825,6625,13450
+1973,Boyacá,15,departamento,total,75-79,75,2550,2475,5025
+1973,Boyacá,15,departamento,total,80-84,80,1825,2200,4025
+1973,Boyacá,15,departamento,total,85+,85,1300,1775,3075
+1973,Caldas,17,departamento,total,total,,313275,337050,650325
+1973,Caldas,17,departamento,total,<1,0,7675,7050,14725
+1973,Caldas,17,departamento,total,1-4,1,38900,37175,76075
+1973,Caldas,17,departamento,total,5-9,5,51300,49675,100975
+1973,Caldas,17,departamento,total,10-14,10,49100,49325,98425
+1973,Caldas,17,departamento,total,15-19,15,35125,42525,77650
+1973,Caldas,17,departamento,total,20-24,20,23950,31000,54950
+1973,Caldas,17,departamento,total,25-29,25,18850,22575,41425
+1973,Caldas,17,departamento,total,30-34,30,14950,17675,32625
+1973,Caldas,17,departamento,total,35-39,35,15750,19100,34850
+1973,Caldas,17,departamento,total,40-44,40,12725,15550,28275
+1973,Caldas,17,departamento,total,45-49,45,12125,12350,24475
+1973,Caldas,17,departamento,total,50-54,50,9750,9925,19675
+1973,Caldas,17,departamento,total,55-59,55,6675,6500,13175
+1973,Caldas,17,departamento,total,60-64,60,6325,6850,13175
+1973,Caldas,17,departamento,total,65-69,65,3675,3200,6875
+1973,Caldas,17,departamento,total,70-74,70,3600,3200,6800
+1973,Caldas,17,departamento,total,75-79,75,1250,1750,3000
+1973,Caldas,17,departamento,total,80-84,80,875,950,1825
+1973,Caldas,17,departamento,total,85+,85,675,675,1350
+1973,Cauca,19,departamento,total,total,,262825,264850,527675
+1973,Cauca,19,departamento,total,<1,0,7175,7125,14300
+1973,Cauca,19,departamento,total,1-4,1,36300,33750,70050
+1973,Cauca,19,departamento,total,5-9,5,43650,42175,85825
+1973,Cauca,19,departamento,total,10-14,10,37925,35975,73900
+1973,Cauca,19,departamento,total,15-19,15,28375,28750,57125
+1973,Cauca,19,departamento,total,20-24,20,19300,21650,40950
+1973,Cauca,19,departamento,total,25-29,25,15300,17375,32675
+1973,Cauca,19,departamento,total,30-34,30,13300,15300,28600
+1973,Cauca,19,departamento,total,35-39,35,13600,14825,28425
+1973,Cauca,19,departamento,total,40-44,40,12150,11675,23825
+1973,Cauca,19,departamento,total,45-49,45,9000,9750,18750
+1973,Cauca,19,departamento,total,50-54,50,8300,8025,16325
+1973,Cauca,19,departamento,total,55-59,55,4850,4800,9650
+1973,Cauca,19,departamento,total,60-64,60,5100,5225,10325
+1973,Cauca,19,departamento,total,65-69,65,3575,2675,6250
+1973,Cauca,19,departamento,total,70-74,70,2475,2725,5200
+1973,Cauca,19,departamento,total,75-79,75,975,900,1875
+1973,Cauca,19,departamento,total,80-84,80,625,1125,1750
+1973,Cauca,19,departamento,total,85+,85,850,1025,1875
+1973,Cesar,20,departamento,total,total,,159025,162825,321850
+1973,Cesar,20,departamento,total,<1,0,4250,3825,8075
+1973,Cesar,20,departamento,total,1-4,1,21725,21150,42875
+1973,Cesar,20,departamento,total,5-9,5,27975,27825,55800
+1973,Cesar,20,departamento,total,10-14,10,24225,24550,48775
+1973,Cesar,20,departamento,total,15-19,15,18050,18750,36800
+1973,Cesar,20,departamento,total,20-24,20,11625,15425,27050
+1973,Cesar,20,departamento,total,25-29,25,10300,10850,21150
+1973,Cesar,20,departamento,total,30-34,30,8600,8725,17325
+1973,Cesar,20,departamento,total,35-39,35,7650,8300,15950
+1973,Cesar,20,departamento,total,40-44,40,6800,5975,12775
+1973,Cesar,20,departamento,total,45-49,45,5075,5300,10375
+1973,Cesar,20,departamento,total,50-54,50,4600,3825,8425
+1973,Cesar,20,departamento,total,55-59,55,2275,2425,4700
+1973,Cesar,20,departamento,total,60-64,60,2375,2300,4675
+1973,Cesar,20,departamento,total,65-69,65,1225,1050,2275
+1973,Cesar,20,departamento,total,70-74,70,1150,975,2125
+1973,Cesar,20,departamento,total,75-79,75,475,525,1000
+1973,Cesar,20,departamento,total,80-84,80,450,450,900
+1973,Cesar,20,departamento,total,85+,85,200,600,800
+1973,Córdoba,23,departamento,total,total,,315750,317925,633675
+1973,Córdoba,23,departamento,total,<1,0,7800,7950,15750
+1973,Córdoba,23,departamento,total,1-4,1,42825,40650,83475
+1973,Córdoba,23,departamento,total,5-9,5,56150,54550,110700
+1973,Córdoba,23,departamento,total,10-14,10,51175,48425,99600
+1973,Córdoba,23,departamento,total,15-19,15,36300,36400,72700
+1973,Córdoba,23,departamento,total,20-24,20,26225,27350,53575
+1973,Córdoba,23,departamento,total,25-29,25,16875,20725,37600
+1973,Córdoba,23,departamento,total,30-34,30,15425,16750,32175
+1973,Córdoba,23,departamento,total,35-39,35,14225,15700,29925
+1973,Córdoba,23,departamento,total,40-44,40,11625,11925,23550
+1973,Córdoba,23,departamento,total,45-49,45,9275,9750,19025
+1973,Córdoba,23,departamento,total,50-54,50,8450,7850,16300
+1973,Córdoba,23,departamento,total,55-59,55,5675,4725,10400
+1973,Córdoba,23,departamento,total,60-64,60,5425,5400,10825
+1973,Córdoba,23,departamento,total,65-69,65,2850,3200,6050
+1973,Córdoba,23,departamento,total,70-74,70,2500,3175,5675
+1973,Córdoba,23,departamento,total,75-79,75,1275,1325,2600
+1973,Córdoba,23,departamento,total,80-84,80,775,1050,1825
+1973,Córdoba,23,departamento,total,85+,85,900,1025,1925
+1973,Chocó,27,departamento,total,total,,81100,88025,169125
+1973,Chocó,27,departamento,total,<1,0,2700,2550,5250
+1973,Chocó,27,departamento,total,1-4,1,11425,12475,23900
+1973,Chocó,27,departamento,total,5-9,5,13475,14650,28125
+1973,Chocó,27,departamento,total,10-14,10,12950,13475,26425
+1973,Chocó,27,departamento,total,15-19,15,9750,9175,18925
+1973,Chocó,27,departamento,total,20-24,20,5250,6725,11975
+1973,Chocó,27,departamento,total,25-29,25,3550,5575,9125
+1973,Chocó,27,departamento,total,30-34,30,3150,3975,7125
+1973,Chocó,27,departamento,total,35-39,35,4075,4275,8350
+1973,Chocó,27,departamento,total,40-44,40,3225,3650,6875
+1973,Chocó,27,departamento,total,45-49,45,2700,2875,5575
+1973,Chocó,27,departamento,total,50-54,50,2600,2900,5500
+1973,Chocó,27,departamento,total,55-59,55,1875,1425,3300
+1973,Chocó,27,departamento,total,60-64,60,1600,1425,3025
+1973,Chocó,27,departamento,total,65-69,65,925,850,1775
+1973,Chocó,27,departamento,total,70-74,70,975,925,1900
+1973,Chocó,27,departamento,total,75-79,75,400,350,750
+1973,Chocó,27,departamento,total,80-84,80,275,400,675
+1973,Chocó,27,departamento,total,85+,85,200,350,550
+1973,Cundinamarca,25,departamento,total,total,,543300,534100,1077400
+1973,Cundinamarca,25,departamento,total,<1,0,13225,11625,24850
+1973,Cundinamarca,25,departamento,total,1-4,1,64025,63200,127225
+1973,Cundinamarca,25,departamento,total,5-9,5,90050,86175,176225
+1973,Cundinamarca,25,departamento,total,10-14,10,81650,76400,158050
+1973,Cundinamarca,25,departamento,total,15-19,15,59850,55775,115625
+1973,Cundinamarca,25,departamento,total,20-24,20,38600,39200,77800
+1973,Cundinamarca,25,departamento,total,25-29,25,30525,31925,62450
+1973,Cundinamarca,25,departamento,total,30-34,30,26475,27975,54450
+1973,Cundinamarca,25,departamento,total,35-39,35,26450,29025,55475
+1973,Cundinamarca,25,departamento,total,40-44,40,24725,25175,49900
+1973,Cundinamarca,25,departamento,total,45-49,45,19875,20500,40375
+1973,Cundinamarca,25,departamento,total,50-54,50,18875,18925,37800
+1973,Cundinamarca,25,departamento,total,55-59,55,14075,13075,27150
+1973,Cundinamarca,25,departamento,total,60-64,60,13850,13100,26950
+1973,Cundinamarca,25,departamento,total,65-69,65,8150,7575,15725
+1973,Cundinamarca,25,departamento,total,70-74,70,6500,6700,13200
+1973,Cundinamarca,25,departamento,total,75-79,75,3350,3900,7250
+1973,Cundinamarca,25,departamento,total,80-84,80,1675,2000,3675
+1973,Cundinamarca,25,departamento,total,85+,85,1375,1850,3225
+1973,Huila,41,departamento,total,total,,225400,231400,456800
+1973,Huila,41,departamento,total,<1,0,6525,7100,13625
+1973,Huila,41,departamento,total,1-4,1,30250,29025,59275
+1973,Huila,41,departamento,total,5-9,5,38150,39225,77375
+1973,Huila,41,departamento,total,10-14,10,33875,32625,66500
+1973,Huila,41,departamento,total,15-19,15,23525,25200,48725
+1973,Huila,41,departamento,total,20-24,20,15850,18475,34325
+1973,Huila,41,departamento,total,25-29,25,13075,14650,27725
+1973,Huila,41,departamento,total,30-34,30,11500,11800,23300
+1973,Huila,41,departamento,total,35-39,35,11275,11850,23125
+1973,Huila,41,departamento,total,40-44,40,9475,9300,18775
+1973,Huila,41,departamento,total,45-49,45,7800,7700,15500
+1973,Huila,41,departamento,total,50-54,50,6725,6350,13075
+1973,Huila,41,departamento,total,55-59,55,4625,4700,9325
+1973,Huila,41,departamento,total,60-64,60,5425,5150,10575
+1973,Huila,41,departamento,total,65-69,65,2825,2400,5225
+1973,Huila,41,departamento,total,70-74,70,2375,2750,5125
+1973,Huila,41,departamento,total,75-79,75,1200,1300,2500
+1973,Huila,41,departamento,total,80-84,80,525,750,1275
+1973,Huila,41,departamento,total,85+,85,400,1050,1450
+1973,La Guajira,44,departamento,total,total,,62125,65650,127775
+1973,La Guajira,44,departamento,total,<1,0,1350,1475,2825
+1973,La Guajira,44,departamento,total,1-4,1,9275,7500,16775
+1973,La Guajira,44,departamento,total,5-9,5,10025,10975,21000
+1973,La Guajira,44,departamento,total,10-14,10,9925,10325,20250
+1973,La Guajira,44,departamento,total,15-19,15,7150,8275,15425
+1973,La Guajira,44,departamento,total,20-24,20,5125,6100,11225
+1973,La Guajira,44,departamento,total,25-29,25,4625,4025,8650
+1973,La Guajira,44,departamento,total,30-34,30,2950,3950,6900
+1973,La Guajira,44,departamento,total,35-39,35,2525,2875,5400
+1973,La Guajira,44,departamento,total,40-44,40,2975,2575,5550
+1973,La Guajira,44,departamento,total,45-49,45,2000,1925,3925
+1973,La Guajira,44,departamento,total,50-54,50,1575,1450,3025
+1973,La Guajira,44,departamento,total,55-59,55,875,900,1775
+1973,La Guajira,44,departamento,total,60-64,60,875,1150,2025
+1973,La Guajira,44,departamento,total,65-69,65,325,800,1125
+1973,La Guajira,44,departamento,total,70-74,70,275,525,800
+1973,La Guajira,44,departamento,total,75-79,75,75,275,350
+1973,La Guajira,44,departamento,total,80-84,80,175,75,250
+1973,La Guajira,44,departamento,total,85+,85,25,475,500
+1973,Magdalena,47,departamento,total,total,,254300,256175,510475
+1973,Magdalena,47,departamento,total,<1,0,6150,6025,12175
+1973,Magdalena,47,departamento,total,1-4,1,32875,32275,65150
+1973,Magdalena,47,departamento,total,5-9,5,43225,44125,87350
+1973,Magdalena,47,departamento,total,10-14,10,41900,39025,80925
+1973,Magdalena,47,departamento,total,15-19,15,29325,30625,59950
+1973,Magdalena,47,departamento,total,20-24,20,21750,22600,44350
+1973,Magdalena,47,departamento,total,25-29,25,14475,16175,30650
+1973,Magdalena,47,departamento,total,30-34,30,12600,12075,24675
+1973,Magdalena,47,departamento,total,35-39,35,11350,13375,24725
+1973,Magdalena,47,departamento,total,40-44,40,9675,10025,19700
+1973,Magdalena,47,departamento,total,45-49,45,8200,7900,16100
+1973,Magdalena,47,departamento,total,50-54,50,6475,6475,12950
+1973,Magdalena,47,departamento,total,55-59,55,4825,4925,9750
+1973,Magdalena,47,departamento,total,60-64,60,3975,2925,6900
+1973,Magdalena,47,departamento,total,65-69,65,2725,2675,5400
+1973,Magdalena,47,departamento,total,70-74,70,2650,2350,5000
+1973,Magdalena,47,departamento,total,75-79,75,1000,1025,2025
+1973,Magdalena,47,departamento,total,80-84,80,600,850,1450
+1973,Magdalena,47,departamento,total,85+,85,525,725,1250
+1973,Meta,50,departamento,total,total,,121325,116775,238100
+1973,Meta,50,departamento,total,<1,0,3800,3025,6825
+1973,Meta,50,departamento,total,1-4,1,16975,16325,33300
+1973,Meta,50,departamento,total,5-9,5,20900,19825,40725
+1973,Meta,50,departamento,total,10-14,10,17850,17000,34850
+1973,Meta,50,departamento,total,15-19,15,11600,13050,24650
+1973,Meta,50,departamento,total,20-24,20,8425,10450,18875
+1973,Meta,50,departamento,total,25-29,25,8000,8400,16400
+1973,Meta,50,departamento,total,30-34,30,7500,6275,13775
+1973,Meta,50,departamento,total,35-39,35,6800,5775,12575
+1973,Meta,50,departamento,total,40-44,40,6050,4625,10675
+1973,Meta,50,departamento,total,45-49,45,3600,3800,7400
+1973,Meta,50,departamento,total,50-54,50,3275,3100,6375
+1973,Meta,50,departamento,total,55-59,55,2700,1400,4100
+1973,Meta,50,departamento,total,60-64,60,1475,1300,2775
+1973,Meta,50,departamento,total,65-69,65,1150,900,2050
+1973,Meta,50,departamento,total,70-74,70,825,700,1525
+1973,Meta,50,departamento,total,75-79,75,175,450,625
+1973,Meta,50,departamento,total,80-84,80,175,225,400
+1973,Meta,50,departamento,total,85+,85,50,150,200
+1973,Nariño,52,departamento,total,total,,366250,380875,747125
+1973,Nariño,52,departamento,total,<1,0,10275,10600,20875
+1973,Nariño,52,departamento,total,1-4,1,48300,47325,95625
+1973,Nariño,52,departamento,total,5-9,5,62550,59850,122400
+1973,Nariño,52,departamento,total,10-14,10,49925,49900,99825
+1973,Nariño,52,departamento,total,15-19,15,37925,38900,76825
+1973,Nariño,52,departamento,total,20-24,20,27400,31050,58450
+1973,Nariño,52,departamento,total,25-29,25,23200,26350,49550
+1973,Nariño,52,departamento,total,30-34,30,18675,21425,40100
+1973,Nariño,52,departamento,total,35-39,35,17975,20925,38900
+1973,Nariño,52,departamento,total,40-44,40,14975,16375,31350
+1973,Nariño,52,departamento,total,45-49,45,12800,13225,26025
+1973,Nariño,52,departamento,total,50-54,50,10450,13225,23675
+1973,Nariño,52,departamento,total,55-59,55,8400,8675,17075
+1973,Nariño,52,departamento,total,60-64,60,8950,8925,17875
+1973,Nariño,52,departamento,total,65-69,65,5250,4750,10000
+1973,Nariño,52,departamento,total,70-74,70,4700,4450,9150
+1973,Nariño,52,departamento,total,75-79,75,1925,2150,4075
+1973,Nariño,52,departamento,total,80-84,80,1325,1425,2750
+1973,Nariño,52,departamento,total,85+,85,1250,1350,2600
+1973,Norte de Santander,54,departamento,total,total,,332575,343275,675850
+1973,Norte de Santander,54,departamento,total,<1,0,9050,8550,17600
+1973,Norte de Santander,54,departamento,total,1-4,1,42325,41775,84100
+1973,Norte de Santander,54,departamento,total,5-9,5,56275,52950,109225
+1973,Norte de Santander,54,departamento,total,10-14,10,50500,50775,101275
+1973,Norte de Santander,54,departamento,total,15-19,15,37275,41875,79150
+1973,Norte de Santander,54,departamento,total,20-24,20,25825,28525,54350
+1973,Norte de Santander,54,departamento,total,25-29,25,20500,23725,44225
+1973,Norte de Santander,54,departamento,total,30-34,30,16500,17425,33925
+1973,Norte de Santander,54,departamento,total,35-39,35,16050,17575,33625
+1973,Norte de Santander,54,departamento,total,40-44,40,13900,14325,28225
+1973,Norte de Santander,54,departamento,total,45-49,45,10575,12000,22575
+1973,Norte de Santander,54,departamento,total,50-54,50,10050,10625,20675
+1973,Norte de Santander,54,departamento,total,55-59,55,6975,6575,13550
+1973,Norte de Santander,54,departamento,total,60-64,60,6650,6325,12975
+1973,Norte de Santander,54,departamento,total,65-69,65,3750,3150,6900
+1973,Norte de Santander,54,departamento,total,70-74,70,3375,3275,6650
+1973,Norte de Santander,54,departamento,total,75-79,75,1175,1525,2700
+1973,Norte de Santander,54,departamento,total,80-84,80,925,1250,2175
+1973,Norte de Santander,54,departamento,total,85+,85,900,1050,1950
+1973,Quindío,63,departamento,total,total,,143150,156925,300075
+1973,Quindío,63,departamento,total,<1,0,3025,3325,6350
+1973,Quindío,63,departamento,total,1-4,1,16900,16500,33400
+1973,Quindío,63,departamento,total,5-9,5,22725,22300,45025
+1973,Quindío,63,departamento,total,10-14,10,22675,23025,45700
+1973,Quindío,63,departamento,total,15-19,15,15800,20950,36750
+1973,Quindío,63,departamento,total,20-24,20,11275,14275,25550
+1973,Quindío,63,departamento,total,25-29,25,8325,11300,19625
+1973,Quindío,63,departamento,total,30-34,30,7600,8500,16100
+1973,Quindío,63,departamento,total,35-39,35,6975,9325,16300
+1973,Quindío,63,departamento,total,40-44,40,6600,7125,13725
+1973,Quindío,63,departamento,total,45-49,45,6200,6025,12225
+1973,Quindío,63,departamento,total,50-54,50,4075,3850,7925
+1973,Quindío,63,departamento,total,55-59,55,3375,3050,6425
+1973,Quindío,63,departamento,total,60-64,60,2950,3325,6275
+1973,Quindío,63,departamento,total,65-69,65,1625,1350,2975
+1973,Quindío,63,departamento,total,70-74,70,1700,1550,3250
+1973,Quindío,63,departamento,total,75-79,75,650,550,1200
+1973,Quindío,63,departamento,total,80-84,80,375,375,750
+1973,Quindío,63,departamento,total,85+,85,300,225,525
+1973,Risaralda,66,departamento,total,total,,207925,224000,431925
+1973,Risaralda,66,departamento,total,<1,0,4600,4400,9000
+1973,Risaralda,66,departamento,total,1-4,1,23400,22275,45675
+1973,Risaralda,66,departamento,total,5-9,5,33400,32800,66200
+1973,Risaralda,66,departamento,total,10-14,10,30375,30850,61225
+1973,Risaralda,66,departamento,total,15-19,15,25200,29550,54750
+1973,Risaralda,66,departamento,total,20-24,20,16750,21850,38600
+1973,Risaralda,66,departamento,total,25-29,25,13675,16775,30450
+1973,Risaralda,66,departamento,total,30-34,30,11825,12500,24325
+1973,Risaralda,66,departamento,total,35-39,35,10125,12750,22875
+1973,Risaralda,66,departamento,total,40-44,40,8925,9900,18825
+1973,Risaralda,66,departamento,total,45-49,45,6925,8900,15825
+1973,Risaralda,66,departamento,total,50-54,50,7050,6675,13725
+1973,Risaralda,66,departamento,total,55-59,55,4675,4250,8925
+1973,Risaralda,66,departamento,total,60-64,60,4250,3950,8200
+1973,Risaralda,66,departamento,total,65-69,65,3000,2675,5675
+1973,Risaralda,66,departamento,total,70-74,70,2175,1725,3900
+1973,Risaralda,66,departamento,total,75-79,75,875,825,1700
+1973,Risaralda,66,departamento,total,80-84,80,375,675,1050
+1973,Risaralda,66,departamento,total,85+,85,325,675,1000
+1973,Santander,68,departamento,total,total,,546050,568375,1114425
+1973,Santander,68,departamento,total,<1,0,14700,14800,29500
+1973,Santander,68,departamento,total,1-4,1,70925,69325,140250
+1973,Santander,68,departamento,total,5-9,5,90625,88750,179375
+1973,Santander,68,departamento,total,10-14,10,81850,80900,162750
+1973,Santander,68,departamento,total,15-19,15,57925,61750,119675
+1973,Santander,68,departamento,total,20-24,20,40950,47825,88775
+1973,Santander,68,departamento,total,25-29,25,33775,36350,70125
+1973,Santander,68,departamento,total,30-34,30,28175,30650,58825
+1973,Santander,68,departamento,total,35-39,35,26400,29200,55600
+1973,Santander,68,departamento,total,40-44,40,24200,24200,48400
+1973,Santander,68,departamento,total,45-49,45,18075,19775,37850
+1973,Santander,68,departamento,total,50-54,50,17825,18775,36600
+1973,Santander,68,departamento,total,55-59,55,12925,12625,25550
+1973,Santander,68,departamento,total,60-64,60,10875,11800,22675
+1973,Santander,68,departamento,total,65-69,65,6875,7575,14450
+1973,Santander,68,departamento,total,70-74,70,5175,6400,11575
+1973,Santander,68,departamento,total,75-79,75,2175,3475,5650
+1973,Santander,68,departamento,total,80-84,80,1650,2425,4075
+1973,Santander,68,departamento,total,85+,85,950,1775,2725
+1973,Sucre,70,departamento,total,total,,174750,181175,355925
+1973,Sucre,70,departamento,total,<1,0,3900,4050,7950
+1973,Sucre,70,departamento,total,1-4,1,23225,22850,46075
+1973,Sucre,70,departamento,total,5-9,5,30100,29350,59450
+1973,Sucre,70,departamento,total,10-14,10,28675,27500,56175
+1973,Sucre,70,departamento,total,15-19,15,20050,20800,40850
+1973,Sucre,70,departamento,total,20-24,20,13675,16800,30475
+1973,Sucre,70,departamento,total,25-29,25,9525,11475,21000
+1973,Sucre,70,departamento,total,30-34,30,8550,8575,17125
+1973,Sucre,70,departamento,total,35-39,35,7525,8675,16200
+1973,Sucre,70,departamento,total,40-44,40,6550,6700,13250
+1973,Sucre,70,departamento,total,45-49,45,5150,5850,11000
+1973,Sucre,70,departamento,total,50-54,50,5275,4850,10125
+1973,Sucre,70,departamento,total,55-59,55,3000,3850,6850
+1973,Sucre,70,departamento,total,60-64,60,3725,3775,7500
+1973,Sucre,70,departamento,total,65-69,65,2075,1575,3650
+1973,Sucre,70,departamento,total,70-74,70,1950,2125,4075
+1973,Sucre,70,departamento,total,75-79,75,625,775,1400
+1973,Sucre,70,departamento,total,80-84,80,725,800,1525
+1973,Sucre,70,departamento,total,85+,85,450,800,1250
+1973,Tolima,73,departamento,total,total,,433700,433250,866950
+1973,Tolima,73,departamento,total,<1,0,11950,10525,22475
+1973,Tolima,73,departamento,total,1-4,1,55275,52150,107425
+1973,Tolima,73,departamento,total,5-9,5,71975,68475,140450
+1973,Tolima,73,departamento,total,10-14,10,66325,62325,128650
+1973,Tolima,73,departamento,total,15-19,15,46875,47125,94000
+1973,Tolima,73,departamento,total,20-24,20,32500,37000,69500
+1973,Tolima,73,departamento,total,25-29,25,24725,27850,52575
+1973,Tolima,73,departamento,total,30-34,30,22600,22800,45400
+1973,Tolima,73,departamento,total,35-39,35,20675,23025,43700
+1973,Tolima,73,departamento,total,40-44,40,18675,18850,37525
+1973,Tolima,73,departamento,total,45-49,45,13900,16325,30225
+1973,Tolima,73,departamento,total,50-54,50,14925,13500,28425
+1973,Tolima,73,departamento,total,55-59,55,10225,9425,19650
+1973,Tolima,73,departamento,total,60-64,60,9600,9050,18650
+1973,Tolima,73,departamento,total,65-69,65,4700,4425,9125
+1973,Tolima,73,departamento,total,70-74,70,4000,5125,9125
+1973,Tolima,73,departamento,total,75-79,75,2250,2475,4725
+1973,Tolima,73,departamento,total,80-84,80,1425,1550,2975
+1973,Tolima,73,departamento,total,85+,85,1100,1250,2350
+1973,Valle del Cauca,76,departamento,total,total,,1022925,1106425,2129350
+1973,Valle del Cauca,76,departamento,total,<1,0,24200,24550,48750
+1973,Valle del Cauca,76,departamento,total,1-4,1,118925,119000,237925
+1973,Valle del Cauca,76,departamento,total,5-9,5,152100,155125,307225
+1973,Valle del Cauca,76,departamento,total,10-14,10,149375,147450,296825
+1973,Valle del Cauca,76,departamento,total,15-19,15,118250,139950,258200
+1973,Valle del Cauca,76,departamento,total,20-24,20,86950,108150,195100
+1973,Valle del Cauca,76,departamento,total,25-29,25,69900,81750,151650
+1973,Valle del Cauca,76,departamento,total,30-34,30,60000,65075,125075
+1973,Valle del Cauca,76,departamento,total,35-39,35,52700,64675,117375
+1973,Valle del Cauca,76,departamento,total,40-44,40,47100,51450,98550
+1973,Valle del Cauca,76,departamento,total,45-49,45,37925,40475,78400
+1973,Valle del Cauca,76,departamento,total,50-54,50,31800,31300,63100
+1973,Valle del Cauca,76,departamento,total,55-59,55,21975,23400,45375
+1973,Valle del Cauca,76,departamento,total,60-64,60,19400,18775,38175
+1973,Valle del Cauca,76,departamento,total,65-69,65,13075,12825,25900
+1973,Valle del Cauca,76,departamento,total,70-74,70,9575,10550,20125
+1973,Valle del Cauca,76,departamento,total,75-79,75,4525,5175,9700
+1973,Valle del Cauca,76,departamento,total,80-84,80,2825,3500,6325
+1973,Valle del Cauca,76,departamento,total,85+,85,2325,3250,5575

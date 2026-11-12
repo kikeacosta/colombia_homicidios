@@ -1,0 +1,5 @@
+identity,residual,note
+col|c2|Boyacá|total|t,1000,"Boyacá, Cuadro 2, p. 117: the age rows add up to 1,000 more than the printed TOTAL because age 56 is printed 5.550 (total) with 2.475 men and 2.075 women"
+dept|c2|56|t,-1000,"national Cuadro 2 (p. 41) age 56 total is 1,000 less than the 23 sections added, for the same cell"
+grp|Boyacá|55-59|t,-1000,"Boyacá Cuadro 1 (p. 116) 55-59 total is 1,000 less than the single ages of Cuadro 2, for the same cell"
+row|c2|Boyacá|total|56,1000,"printed total 5.550 against 2.475 + 2.075 = 4.550: a misprint of the print (the crop agrees with the text layer); the four identities ask for 4,550, which corrections_1973_muestra.csv applies (kind print_misprint)"

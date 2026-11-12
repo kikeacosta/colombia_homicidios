@@ -1,0 +1,175 @@
+table,page,unit,cod_dpto,zone,age,sex,text_layer,value_read,value,kind,note,checked
+Cuadro 1,72,Antioquia,05,total,total,female,1.4691600,,1469600,unreadable,,300 dpi crop
+Cuadro 1,72,Antioquia,05,total,70-74,female,1 5.850,,15850,unreadable,,300 dpi crop
+Cuadro 2,73,Antioquia,05,total,23,female,26.960,26960,26950,misread,,300 dpi crop
+Cuadro 2,73,Antioquia,05,total,29,total,29.B50,,29850,unreadable,,300 dpi crop
+Cuadro 2,73,Antioquia,05,total,43,female,12.660,12660,12650,misread,,300 dpi crop
+Cuadro 2,84,Atlántico,08,total,20,male,9.675,9675,9575,misread,,300 dpi crop
+Cuadro 2,84,Atlántico,08,total,29,male,4:700,,4700,unreadable,,300 dpi crop
+Cuadro 2,84,Atlántico,08,total,51,total,3.976,3976,3975,misread,,300 dpi crop
+Cuadro 2,84,Atlántico,08,total,84,male,,,100,unreadable,text layer has no token; value read on the crop,300 dpi crop
+Cuadro 2,95,Bogotá D.E.,11,total,13,female,40.798,40798,40796,misread,,300 dpi crop
+Cuadro 2,95,Bogotá D.E.,11,total,37,female,16.792,16792,15792,misread,,300 dpi crop
+Cuadro 2,106,Bolívar,13,total,5,female,12.076,12076,12075,misread,,300 dpi crop
+Cuadro 2,106,Bolívar,13,total,12,female,12.960,12960,12950,misread,,300 dpi crop
+Cuadro 2,106,Bolívar,13,total,21,male,6.775,6775,5775,misread,,300 dpi crop
+Cuadro 2,106,Bolívar,13,total,30,total,9.826,9826,9825,misread,,300 dpi crop
+Cuadro 2,106,Bolívar,13,total,31,total,4.976,4976,4975,misread,,300 dpi crop
+Cuadro 2,106,Bolívar,13,total,31,male,2.460,2460,2450,misread,,300 dpi crop
+Cuadro 1,116,Boyacá,15,total,70-74,female,ß.625,625,6625,misread,,300 dpi crop
+Cuadro 2,117,Boyacá,15,total,56,total,5.550,5550,4550,print_misprint,"printed 5.550 (the crop agrees with the text layer) but men + women = 4,550, and the age rows, the 55-59 group of Cuadro 1 and the national table all ask for 4,550",300 dpi crop
+Cuadro 2,117,Boyacá,15,total,81,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,128,Caldas,17,total,14,female,B.625,,8625,unreadable,,300 dpi crop
+Cuadro 2,128,Caldas,17,total,50,female,3:975,,3975,unreadable,,300 dpi crop
+Cuadro 1,138,Cauca,19,total,<1,total,14:300,,14300,unreadable,,300 dpi crop
+Cuadro 2,139,Cauca,19,total,12,female,7.960,7960,7950,misread,,300 dpi crop
+Cuadro 2,139,Cauca,19,total,18,female,5A25,,5425,unreadable,,300 dpi crop
+Cuadro 2,139,Cauca,19,total,43,total,4.ŠOO,,4300,unreadable,,300 dpi crop
+Cuadro 2,139,Cauca,19,total,60,total,5.T50,,5150,unreadable,,300 dpi crop
+Cuadro 2,139,Cauca,19,total,79,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 1,149,Cesar,20,total,1-4,male,21.795,21795,21725,misread,,300 dpi crop
+Cuadro 1,149,Cesar,20,total,35-39,female,8200,,8300,unreadable,,300 dpi crop
+Cuadro 2,150,Cesar,20,total,7,male,6.125,6125,6175,misread,,300 dpi crop
+Cuadro 2,150,Cesar,20,total,41,total,1.476,1476,1475,misread,,300 dpi crop
+Cuadro 2,150,Cesar,20,total,58,total,860,860,850,misread,,300 dpi crop
+Cuadro 2,150,Cesar,20,total,76,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,150,Cesar,20,total,81,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,150,Cesar,20,total,82,total,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,150,Cesar,20,total,82,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,150,Cesar,20,total,82,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,150,Cesar,20,total,84,total,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,150,Cesar,20,total,84,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,150,Cesar,20,total,84,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,161,Córdoba,23,total,2,total,20.476,20476,20475,misread,,300 dpi crop
+Cuadro 2,161,Córdoba,23,total,12,female,1.1.425,,11425,unreadable,,300 dpi crop
+Cuadro 2,161,Córdoba,23,total,33,total,6.676,6676,6675,misread,,300 dpi crop
+Cuadro 2,161,Córdoba,23,total,38,female,3:600,,3600,unreadable,,300 dpi crop
+Cuadro 2,161,Córdoba,23,total,39,total,3.7(f0,,3700,unreadable,,300 dpi crop
+Cuadro 2,161,Córdoba,23,total,57,total,1.276,1276,1275,misread,,300 dpi crop
+Cuadro 2,161,Córdoba,23,total,81,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,161,Córdoba,23,total,82,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 1,171,Chocó,27,total,30-34,female,3.976,3976,3975,misread,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,5,male,:LS75,,2875,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,6,male,:L400,,2400,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,11,female,2.3tK),,2350,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,13,male,:L250,,2250,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,13,female,:L675,,2675,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,15,male,:L725,,2725,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,15,female,:L475,,2475,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,20,total,:L925,,2925,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,24,total,:L150,,2150,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,29,male,930,930,500,misread,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,34,male,ß25,25,625,misread,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,38,total,:LO25,,2025,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,50,total,L400,,2400,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,76,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,172,Chocó,27,total,78,female,1Qt,,100,unreadable,,300 dpi crop
+Cuadro 2,172,Chocó,27,total,81,total,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,172,Chocó,27,total,81,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,172,Chocó,27,total,81,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,172,Chocó,27,total,82,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,172,Chocó,27,total,84,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 1,182,Cundinamarca,25,total,20-24,female,39-200,,39200,unreadable,,300 dpi crop
+Cuadro 2,183,Cundinamarca,25,total,27,male,5ß75,575,5675,misread,,300 dpi crop
+Cuadro 2,183,Cundinamarca,25,total,83,total,376,376,375,misread,,300 dpi crop
+Cuadro 2,183,Cundinamarca,25,total,85+,total,3.226,3226,3225,misread,,300 dpi crop
+Cuadro 2,183,Cundinamarca,25,total,total,total,"1077.400,",,1077400,unreadable,,300 dpi crop
+Cuadro 1,193,Huila,41,total,25-29,female,14.65G,,14650,unreadable,,300 dpi crop
+Cuadro 2,194,Huila,41,total,5,male,7.760,7760,7750,misread,,300 dpi crop
+Cuadro 2,194,Huila,41,total,14,total,11.360,11360,11350,misread,,300 dpi crop
+Cuadro 2,194,Huila,41,total,50,male,2.826,2826,2825,misread,,300 dpi crop
+Cuadro 1,204,La Guajira,44,total,20-24,male,5.1.25,,5125,unreadable,,300 dpi crop
+Cuadro 1,204,La Guajira,44,total,40-44,male,2.97Š,,2975,unreadable,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,3,female,2L525,,2525,unreadable,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,7,female,GL325,,2325,unreadable,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,8,total,·‡.325,325,4325,misread,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,8,male,GLO25,,2025,unreadable,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,9,female,GL325,,2325,unreadable,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,10,total,4.800,4800,4600,misread,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,10,male,L976,,1975,unreadable,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,11,female,2LOOO,,2000,unreadable,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,12,male,GL575,,2575,unreadable,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,13,female,L950,,1950,unreadable,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,16,female,L650,,1650,unreadable,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,17,female,,,1800,unreadable,text layer has no token; value read on the crop,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,24,total,GLO25,,2025,unreadable,,300 dpi crop
+Cuadro 2,205,La Guajira,44,total,71,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,205,La Guajira,44,total,76,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,205,La Guajira,44,total,77,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,205,La Guajira,44,total,81,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,205,La Guajira,44,total,82,total,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,205,La Guajira,44,total,82,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,205,La Guajira,44,total,82,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,205,La Guajira,44,total,84,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,216,Magdalena,47,total,19,female,6.000,6000,5000,misread,,300 dpi crop
+Cuadro 2,216,Magdalena,47,total,23,female,3.976,3976,3975,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,0,total,61.825,61825,6825,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,1,male,3JD50,,3950,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,7,male,26850,,4850,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,14,male,GL925,,2925,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,17,male,GLO75,,2075,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,18,male,GL375,,2375,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,19,female,GL225,,2225,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,20,male,:L125,,2125,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,21,total,).675,675,3675,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,22,female,GLO75,,2075,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,23,male,1.540,1540,1550,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,25,total,ok000,,4000,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,25,male,GL200,,2200,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,26,male,1.326,1326,1325,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,26,female,,,2000,unreadable,text layer has no token; value read on the crop,300 dpi crop
+Cuadro 2,227,Meta,50,total,27,female,1.45Ò,,1450,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,28,male,1.760,1760,1750,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,29,total,:L525,,2525,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,30,total,LL125,,4125,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,37,total,2.393,2393,2350,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,42,total,QL100,,2100,unreadable,,300 dpi crop
+Cuadro 2,227,Meta,50,total,52,female,600,600,500,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,53,female,476,476,475,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,57,total,075,75,675,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,63,total,515,515,575,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,64,total,326,326,325,misread,,300 dpi crop
+Cuadro 2,227,Meta,50,total,74,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,227,Meta,50,total,77,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,227,Meta,50,total,81,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,227,Meta,50,total,83,female,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,227,Meta,50,total,84,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,238,Nariño,52,total,2,male,11.426,11426,11425,misread,,300 dpi crop
+Cuadro 2,238,Nariño,52,total,15,male,"8.6,5û",,8650,unreadable,,300 dpi crop
+Cuadro 2,238,Nariño,52,total,26,female,5.060,5060,5050,misread,,300 dpi crop
+Cuadro 2,238,Nariño,52,total,35,male,5.376,5376,5375,misread,,300 dpi crop
+Cuadro 2,238,Nariño,52,total,49,male,1.476,1476,1475,misread,,300 dpi crop
+Cuadro 1,248,Norte de Santander,54,total,65-69,female,3.1 50,,3150,unreadable,,300 dpi crop
+Cuadro 2,249,Norte de Santander,54,total,43,total,4.776,4776,4775,misread,,300 dpi crop
+Cuadro 2,249,Norte de Santander,54,total,47,female,19950,,1950,unreadable,,300 dpi crop
+Cuadro 2,249,Norte de Santander,54,total,81,female,1 5,,125,unreadable,,300 dpi crop
+Cuadro 2,249,Norte de Santander,54,total,84,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,260,Quindío,63,total,8,total,9.576,9576,9575,misread,,300 dpi crop
+Cuadro 2,260,Quindío,63,total,34,total,2A25,,2425,unreadable,,300 dpi crop
+Cuadro 2,260,Quindío,63,total,81,male,,,0,unreadable,printed as a dash (zero),300 dpi crop
+Cuadro 2,260,Quindío,63,total,84,male,,,50,unreadable,text layer has no token; value read on the crop,300 dpi crop
+Cuadro 1,270,Risaralda,66,total,20-24,female,21.8)O,,21850,unreadable,,300 dpi crop
+Cuadro 2,271,Risaralda,66,total,11,total,12.176,12176,12175,misread,,300 dpi crop
+Cuadro 2,271,Risaralda,66,total,56,female,826,826,825,misread,,300 dpi crop
+Cuadro 2,271,Risaralda,66,total,64,male,476,476,475,misread,,300 dpi crop
+Cuadro 2,282,Santander,68,total,13,total,31.160,31160,31150,misread,,300 dpi crop
+Cuadro 2,282,Santander,68,total,36,female,6.300,6300,5300,misread,,300 dpi crop
+Cuadro 2,282,Santander,68,total,37,female,6.125,6125,5125,misread,,300 dpi crop
+Cuadro 1,292,Sucre,70,total,30-34,female,8Ë75,875,8575,misread,,300 dpi crop
+Cuadro 1,292,Sucre,70,total,65-69,female,1.57ß,,1575,unreadable,,300 dpi crop
+Cuadro 2,293,Sucre,70,total,24,total,4.876,4876,4875,misread,,300 dpi crop
+Cuadro 2,293,Sucre,70,total,43,total,2.576,2576,2575,misread,,300 dpi crop
+Cuadro 2,293,Sucre,70,total,63,female,526,526,525,misread,,300 dpi crop
+Cuadro 2,304,Tolima,73,total,19,total,16.150,16150,15150,misread,,300 dpi crop
+Cuadro 2,304,Tolima,73,total,25,female,7.600,7600,7500,misread,,300 dpi crop
+Cuadro 2,304,Tolima,73,total,32,male,4.276,4276,4275,misread,,300 dpi crop
+Cuadro 2,304,Tolima,73,total,34,female,3.460,3460,3450,misread,,300 dpi crop
+Cuadro 2,304,Tolima,73,total,40,male,6.650,6650,5650,misread,,300 dpi crop
+Cuadro 2,304,Tolima,73,total,52,male,2.560,2560,2550,misread,,300 dpi crop
+Cuadro 2,315,Valle del Cauca,76,total,22,female,21:725,,21725,unreadable,,300 dpi crop
+Cuadro 2,315,Valle del Cauca,76,total,63,total,7.825,7825,7625,misread,,300 dpi crop
+Cuadro 2,315,Valle del Cauca,76,total,84,total,025,25,625,misread,,300 dpi crop
+Cuadro 2,41,Total departamentos,00,total,27,female,13ß.491,13491,136491,misread,,300 dpi crop
+Cuadro 2,41,Total departamentos,00,total,55,female,70.617 1,,70617,unreadable,,300 dpi crop
+Cuadro 1,40,Total departamentos,00,total,60-64,male,182:052,,182052,unreadable,,300 dpi crop
+Cuadro 1,40,Total departamentos,00,cabecera,<1,total,262.066,262066,262065,misread,,300 dpi crop

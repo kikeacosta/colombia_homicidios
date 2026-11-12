@@ -104,7 +104,7 @@ suppressMessages(library(tidyverse))
 options(width = 160)
 
 run_ocr <- FALSE
-pdf_dir <- "data_input/historical/"
+pdf_dir <- "data_input/dane_pdfs/censos/"
 out_dir <- "data_input/historical/census_tables/"
 sup_dir <- paste0(out_dir, "ocr_support/")
 dir.create(sup_dir, recursive = TRUE, showWarnings = FALSE)
@@ -204,7 +204,7 @@ if (run_ocr) {
   }
 
   tmp <- file.path(tempdir(), "census_ocr"); dir.create(tmp, showWarnings = FALSE)
-  pdf <- paste0(pdf_dir, "LD_771_1951.pdf"); stopifnot(file.exists(pdf))
+  pdf <- paste0(pdf_dir, "1951/LD_771_1951.pdf"); stopifnot(file.exists(pdf))
   for (pass in c("500dpi_bw", "300dpi")) {
     dpi <- if (pass == "300dpi") 300 else 500
     grids <- map_dfr(22:32, \(p) {
@@ -222,7 +222,7 @@ if (run_ocr) {
   }
 
   # 1964, Cuadros 7 (pp. 26-32) and 9 (pp. 35-36): five passes on the deskewed page, nine numeric columns
-  pdf <- paste0(pdf_dir, "LD_771_1964.pdf"); stopifnot(file.exists(pdf))
+  pdf <- paste0(pdf_dir, "1964/LD_771_1964.pdf"); stopifnot(file.exists(pdf))
   for (pass in c("500dpi_bw", "600dpi", "500dpi", "400dpi", "300dpi")) {
     dpi <- as.integer(sub("dpi.*", "", pass))
     grids <- map_dfr(c(26:32, 35, 36), \(p) {

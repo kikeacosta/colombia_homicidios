@@ -1,0 +1,6193 @@
+cod_dpto,department,sex,age,age_start,population
+00,Total departamentos,male,0,0,237176
+00,Total departamentos,male,1,1,252411
+00,Total departamentos,male,2,2,296650
+00,Total departamentos,male,3,3,313561
+00,Total departamentos,male,4,4,309700
+00,Total departamentos,male,5,5,312503
+00,Total departamentos,male,6,6,305667
+00,Total departamentos,male,7,7,324934
+00,Total departamentos,male,8,8,321270
+00,Total departamentos,male,9,9,285051
+00,Total departamentos,male,10,10,321584
+00,Total departamentos,male,11,11,269671
+00,Total departamentos,male,12,12,315209
+00,Total departamentos,male,13,13,278382
+00,Total departamentos,male,14,14,253016
+00,Total departamentos,male,15,15,240601
+00,Total departamentos,male,16,16,223099
+00,Total departamentos,male,17,17,219149
+00,Total departamentos,male,18,18,230779
+00,Total departamentos,male,19,19,175349
+00,Total departamentos,male,20,20,180580
+00,Total departamentos,male,21,21,153991
+00,Total departamentos,male,22,22,162804
+00,Total departamentos,male,23,23,163865
+00,Total departamentos,male,24,24,137464
+00,Total departamentos,male,25,25,151069
+00,Total departamentos,male,26,26,122002
+00,Total departamentos,male,27,27,123322
+00,Total departamentos,male,28,28,127888
+00,Total departamentos,male,29,29,95391
+00,Total departamentos,male,30,30,146097
+00,Total departamentos,male,31,31,72317
+00,Total departamentos,male,32,32,101298
+00,Total departamentos,male,33,33,114000
+00,Total departamentos,male,34,34,83153
+00,Total departamentos,male,35,35,113270
+00,Total departamentos,male,36,36,82399
+00,Total departamentos,male,37,37,87363
+00,Total departamentos,male,38,38,110634
+00,Total departamentos,male,39,39,73736
+00,Total departamentos,male,40,40,127966
+00,Total departamentos,male,41,41,48274
+00,Total departamentos,male,42,42,87901
+00,Total departamentos,male,43,43,88314
+00,Total departamentos,male,44,44,59647
+00,Total departamentos,male,45,45,95797
+00,Total departamentos,male,46,46,54634
+00,Total departamentos,male,47,47,55008
+00,Total departamentos,male,48,48,70881
+00,Total departamentos,male,49,49,48118
+00,Total departamentos,male,50,50,94148
+00,Total departamentos,male,51,51,37763
+00,Total departamentos,male,52,52,56759
+00,Total departamentos,male,53,53,56993
+00,Total departamentos,male,54,54,43806
+00,Total departamentos,male,55,55,61083
+00,Total departamentos,male,56,56,40172
+00,Total departamentos,male,57,57,34539
+00,Total departamentos,male,58,58,39124
+00,Total departamentos,male,59,59,26647
+00,Total departamentos,male,60,60,71405
+00,Total departamentos,male,61,61,20255
+00,Total departamentos,male,62,62,32395
+00,Total departamentos,male,63,63,36980
+00,Total departamentos,male,64,64,21017
+00,Total departamentos,male,65,65,38536
+00,Total departamentos,male,66,66,20191
+00,Total departamentos,male,67,67,18715
+00,Total departamentos,male,68,68,21213
+00,Total departamentos,male,69,69,13043
+00,Total departamentos,male,70,70,35377
+00,Total departamentos,male,71,71,9082
+00,Total departamentos,male,72,72,17068
+00,Total departamentos,male,73,73,21008
+00,Total departamentos,male,74,74,9855
+00,Total departamentos,male,75,75,15653
+00,Total departamentos,male,76,76,6922
+00,Total departamentos,male,77,77,5795
+00,Total departamentos,male,78,78,8150
+00,Total departamentos,male,79,79,3399
+00,Total departamentos,male,80,80,12932
+00,Total departamentos,male,81,81,2368
+00,Total departamentos,male,82,82,4148
+00,Total departamentos,male,83,83,3954
+00,Total departamentos,male,84,84,2515
+00,Total departamentos,male,85+,85,19071
+00,Total departamentos,female,0,0,229124
+00,Total departamentos,female,1,1,250408
+00,Total departamentos,female,2,2,290287
+00,Total departamentos,female,3,3,301602
+00,Total departamentos,female,4,4,299180
+00,Total departamentos,female,5,5,303681
+00,Total departamentos,female,6,6,302178
+00,Total departamentos,female,7,7,319026
+00,Total departamentos,female,8,8,309876
+00,Total departamentos,female,9,9,282719
+00,Total departamentos,female,10,10,309600
+00,Total departamentos,female,11,11,272582
+00,Total departamentos,female,12,12,301681
+00,Total departamentos,female,13,13,282496
+00,Total departamentos,female,14,14,257399
+00,Total departamentos,female,15,15,264314
+00,Total departamentos,female,16,16,248777
+00,Total departamentos,female,17,17,245752
+00,Total departamentos,female,18,18,258387
+00,Total departamentos,female,19,19,208875
+00,Total departamentos,female,20,20,224044
+00,Total departamentos,female,21,21,172675
+00,Total departamentos,female,22,22,197130
+00,Total departamentos,female,23,23,189847
+00,Total departamentos,female,24,24,162048
+00,Total departamentos,female,25,25,186088
+00,Total departamentos,female,26,26,138558
+00,Total departamentos,female,27,27,136491
+00,Total departamentos,female,28,28,148814
+00,Total departamentos,female,29,29,103836
+00,Total departamentos,female,30,30,173811
+00,Total departamentos,female,31,31,68760
+00,Total departamentos,female,32,32,116383
+00,Total departamentos,female,33,33,117222
+00,Total departamentos,female,34,34,91529
+00,Total departamentos,female,35,35,147262
+00,Total departamentos,female,36,36,97196
+00,Total departamentos,female,37,37,97017
+00,Total departamentos,female,38,38,123791
+00,Total departamentos,female,39,39,78232
+00,Total departamentos,female,40,40,154212
+00,Total departamentos,female,41,41,46447
+00,Total departamentos,female,42,42,90397
+00,Total departamentos,female,43,43,87500
+00,Total departamentos,female,44,44,62412
+00,Total departamentos,female,45,45,116001
+00,Total departamentos,female,46,46,57795
+00,Total departamentos,female,47,47,58505
+00,Total departamentos,female,48,48,81993
+00,Total departamentos,female,49,49,47677
+00,Total departamentos,female,50,50,114170
+00,Total departamentos,female,51,51,33164
+00,Total departamentos,female,52,52,57176
+00,Total departamentos,female,53,53,55108
+00,Total departamentos,female,54,54,42239
+00,Total departamentos,female,55,55,70617
+00,Total departamentos,female,56,56,40422
+00,Total departamentos,female,57,57,31476
+00,Total departamentos,female,58,58,41503
+00,Total departamentos,female,59,59,23268
+00,Total departamentos,female,60,60,90065
+00,Total departamentos,female,61,61,16472
+00,Total departamentos,female,62,62,29833
+00,Total departamentos,female,63,63,34452
+00,Total departamentos,female,64,64,22293
+00,Total departamentos,female,65,65,46634
+00,Total departamentos,female,66,66,19434
+00,Total departamentos,female,67,67,17599
+00,Total departamentos,female,68,68,21703
+00,Total departamentos,female,69,69,11336
+00,Total departamentos,female,70,70,49777
+00,Total departamentos,female,71,71,6809
+00,Total departamentos,female,72,72,18538
+00,Total departamentos,female,73,73,20120
+00,Total departamentos,female,74,74,8173
+00,Total departamentos,female,75,75,23392
+00,Total departamentos,female,76,76,7517
+00,Total departamentos,female,77,77,5425
+00,Total departamentos,female,78,78,9505
+00,Total departamentos,female,79,79,3898
+00,Total departamentos,female,80,80,20814
+00,Total departamentos,female,81,81,2505
+00,Total departamentos,female,82,82,3860
+00,Total departamentos,female,83,83,3882
+00,Total departamentos,female,84,84,3076
+00,Total departamentos,female,85+,85,30388
+00,Total departamentos,total,0,0,466300
+00,Total departamentos,total,1,1,502819
+00,Total departamentos,total,2,2,586937
+00,Total departamentos,total,3,3,615163
+00,Total departamentos,total,4,4,608880
+00,Total departamentos,total,5,5,616184
+00,Total departamentos,total,6,6,607845
+00,Total departamentos,total,7,7,643960
+00,Total departamentos,total,8,8,631146
+00,Total departamentos,total,9,9,567770
+00,Total departamentos,total,10,10,631184
+00,Total departamentos,total,11,11,542253
+00,Total departamentos,total,12,12,616890
+00,Total departamentos,total,13,13,560878
+00,Total departamentos,total,14,14,510415
+00,Total departamentos,total,15,15,504915
+00,Total departamentos,total,16,16,471876
+00,Total departamentos,total,17,17,464901
+00,Total departamentos,total,18,18,489166
+00,Total departamentos,total,19,19,384224
+00,Total departamentos,total,20,20,404624
+00,Total departamentos,total,21,21,326666
+00,Total departamentos,total,22,22,359934
+00,Total departamentos,total,23,23,353712
+00,Total departamentos,total,24,24,299512
+00,Total departamentos,total,25,25,337157
+00,Total departamentos,total,26,26,260560
+00,Total departamentos,total,27,27,259813
+00,Total departamentos,total,28,28,276702
+00,Total departamentos,total,29,29,199227
+00,Total departamentos,total,30,30,319908
+00,Total departamentos,total,31,31,141077
+00,Total departamentos,total,32,32,217681
+00,Total departamentos,total,33,33,231222
+00,Total departamentos,total,34,34,174682
+00,Total departamentos,total,35,35,260532
+00,Total departamentos,total,36,36,179595
+00,Total departamentos,total,37,37,184380
+00,Total departamentos,total,38,38,234425
+00,Total departamentos,total,39,39,151968
+00,Total departamentos,total,40,40,282178
+00,Total departamentos,total,41,41,94721
+00,Total departamentos,total,42,42,178298
+00,Total departamentos,total,43,43,175814
+00,Total departamentos,total,44,44,122059
+00,Total departamentos,total,45,45,211798
+00,Total departamentos,total,46,46,112429
+00,Total departamentos,total,47,47,113513
+00,Total departamentos,total,48,48,152874
+00,Total departamentos,total,49,49,95795
+00,Total departamentos,total,50,50,208318
+00,Total departamentos,total,51,51,70927
+00,Total departamentos,total,52,52,113935
+00,Total departamentos,total,53,53,112101
+00,Total departamentos,total,54,54,86045
+00,Total departamentos,total,55,55,131700
+00,Total departamentos,total,56,56,80594
+00,Total departamentos,total,57,57,66015
+00,Total departamentos,total,58,58,80627
+00,Total departamentos,total,59,59,49915
+00,Total departamentos,total,60,60,161470
+00,Total departamentos,total,61,61,36727
+00,Total departamentos,total,62,62,62228
+00,Total departamentos,total,63,63,71432
+00,Total departamentos,total,64,64,43310
+00,Total departamentos,total,65,65,85170
+00,Total departamentos,total,66,66,39625
+00,Total departamentos,total,67,67,36314
+00,Total departamentos,total,68,68,42916
+00,Total departamentos,total,69,69,24379
+00,Total departamentos,total,70,70,85154
+00,Total departamentos,total,71,71,15891
+00,Total departamentos,total,72,72,35606
+00,Total departamentos,total,73,73,41128
+00,Total departamentos,total,74,74,18028
+00,Total departamentos,total,75,75,39045
+00,Total departamentos,total,76,76,14439
+00,Total departamentos,total,77,77,11220
+00,Total departamentos,total,78,78,17655
+00,Total departamentos,total,79,79,7297
+00,Total departamentos,total,80,80,33746
+00,Total departamentos,total,81,81,4873
+00,Total departamentos,total,82,82,8008
+00,Total departamentos,total,83,83,7836
+00,Total departamentos,total,84,84,5591
+00,Total departamentos,total,85+,85,49459
+05,Antioquia,male,0,0,33725
+05,Antioquia,male,1,1,35450
+05,Antioquia,male,2,2,39900
+05,Antioquia,male,3,3,43025
+05,Antioquia,male,4,4,41550
+05,Antioquia,male,5,5,43375
+05,Antioquia,male,6,6,44525
+05,Antioquia,male,7,7,45000
+05,Antioquia,male,8,8,45525
+05,Antioquia,male,9,9,41600
+05,Antioquia,male,10,10,45300
+05,Antioquia,male,11,11,40800
+05,Antioquia,male,12,12,45725
+05,Antioquia,male,13,13,41200
+05,Antioquia,male,14,14,37100
+05,Antioquia,male,15,15,35125
+05,Antioquia,male,16,16,32450
+05,Antioquia,male,17,17,32275
+05,Antioquia,male,18,18,33350
+05,Antioquia,male,19,19,25250
+05,Antioquia,male,20,20,26025
+05,Antioquia,male,21,21,24100
+05,Antioquia,male,22,22,24150
+05,Antioquia,male,23,23,23975
+05,Antioquia,male,24,24,22150
+05,Antioquia,male,25,25,21325
+05,Antioquia,male,26,26,18425
+05,Antioquia,male,27,27,17975
+05,Antioquia,male,28,28,18650
+05,Antioquia,male,29,29,14500
+05,Antioquia,male,30,30,19475
+05,Antioquia,male,31,31,10325
+05,Antioquia,male,32,32,13775
+05,Antioquia,male,33,33,15550
+05,Antioquia,male,34,34,12325
+05,Antioquia,male,35,35,13300
+05,Antioquia,male,36,36,12425
+05,Antioquia,male,37,37,11925
+05,Antioquia,male,38,38,14150
+05,Antioquia,male,39,39,10375
+05,Antioquia,male,40,40,15625
+05,Antioquia,male,41,41,7100
+05,Antioquia,male,42,42,13000
+05,Antioquia,male,43,43,12600
+05,Antioquia,male,44,44,8400
+05,Antioquia,male,45,45,12150
+05,Antioquia,male,46,46,7200
+05,Antioquia,male,47,47,8000
+05,Antioquia,male,48,48,10075
+05,Antioquia,male,49,49,6325
+05,Antioquia,male,50,50,10750
+05,Antioquia,male,51,51,5150
+05,Antioquia,male,52,52,8325
+05,Antioquia,male,53,53,7025
+05,Antioquia,male,54,54,6175
+05,Antioquia,male,55,55,7575
+05,Antioquia,male,56,56,5175
+05,Antioquia,male,57,57,4875
+05,Antioquia,male,58,58,5275
+05,Antioquia,male,59,59,4075
+05,Antioquia,male,60,60,8925
+05,Antioquia,male,61,61,2775
+05,Antioquia,male,62,62,4325
+05,Antioquia,male,63,63,4800
+05,Antioquia,male,64,64,2925
+05,Antioquia,male,65,65,4350
+05,Antioquia,male,66,66,2950
+05,Antioquia,male,67,67,2600
+05,Antioquia,male,68,68,2800
+05,Antioquia,male,69,69,2600
+05,Antioquia,male,70,70,5025
+05,Antioquia,male,71,71,1450
+05,Antioquia,male,72,72,2800
+05,Antioquia,male,73,73,2950
+05,Antioquia,male,74,74,1550
+05,Antioquia,male,75,75,2000
+05,Antioquia,male,76,76,1100
+05,Antioquia,male,77,77,875
+05,Antioquia,male,78,78,1450
+05,Antioquia,male,79,79,450
+05,Antioquia,male,80,80,1925
+05,Antioquia,male,81,81,525
+05,Antioquia,male,82,82,650
+05,Antioquia,male,83,83,625
+05,Antioquia,male,84,84,475
+05,Antioquia,male,85+,85,2375
+05,Antioquia,female,0,0,31200
+05,Antioquia,female,1,1,34575
+05,Antioquia,female,2,2,40250
+05,Antioquia,female,3,3,42325
+05,Antioquia,female,4,4,41750
+05,Antioquia,female,5,5,44375
+05,Antioquia,female,6,6,44825
+05,Antioquia,female,7,7,45525
+05,Antioquia,female,8,8,45050
+05,Antioquia,female,9,9,42275
+05,Antioquia,female,10,10,44850
+05,Antioquia,female,11,11,41225
+05,Antioquia,female,12,12,42700
+05,Antioquia,female,13,13,41025
+05,Antioquia,female,14,14,39075
+05,Antioquia,female,15,15,38825
+05,Antioquia,female,16,16,38125
+05,Antioquia,female,17,17,36500
+05,Antioquia,female,18,18,38000
+05,Antioquia,female,19,19,32425
+05,Antioquia,female,20,20,32025
+05,Antioquia,female,21,21,26325
+05,Antioquia,female,22,22,28900
+05,Antioquia,female,23,23,26950
+05,Antioquia,female,24,24,24050
+05,Antioquia,female,25,25,25475
+05,Antioquia,female,26,26,20125
+05,Antioquia,female,27,27,20125
+05,Antioquia,female,28,28,21675
+05,Antioquia,female,29,29,15350
+05,Antioquia,female,30,30,23525
+05,Antioquia,female,31,31,11225
+05,Antioquia,female,32,32,17100
+05,Antioquia,female,33,33,17825
+05,Antioquia,female,34,34,13750
+05,Antioquia,female,35,35,18425
+05,Antioquia,female,36,36,12500
+05,Antioquia,female,37,37,12800
+05,Antioquia,female,38,38,17075
+05,Antioquia,female,39,39,11875
+05,Antioquia,female,40,40,19550
+05,Antioquia,female,41,41,7300
+05,Antioquia,female,42,42,14225
+05,Antioquia,female,43,43,12650
+05,Antioquia,female,44,44,9125
+05,Antioquia,female,45,45,14875
+05,Antioquia,female,46,46,8550
+05,Antioquia,female,47,47,8700
+05,Antioquia,female,48,48,12350
+05,Antioquia,female,49,49,7250
+05,Antioquia,female,50,50,15375
+05,Antioquia,female,51,51,5200
+05,Antioquia,female,52,52,8775
+05,Antioquia,female,53,53,8750
+05,Antioquia,female,54,54,6950
+05,Antioquia,female,55,55,9100
+05,Antioquia,female,56,56,6025
+05,Antioquia,female,57,57,4775
+05,Antioquia,female,58,58,6150
+05,Antioquia,female,59,59,3950
+05,Antioquia,female,60,60,11025
+05,Antioquia,female,61,61,2800
+05,Antioquia,female,62,62,4775
+05,Antioquia,female,63,63,5325
+05,Antioquia,female,64,64,3700
+05,Antioquia,female,65,65,5850
+05,Antioquia,female,66,66,3525
+05,Antioquia,female,67,67,2675
+05,Antioquia,female,68,68,3275
+05,Antioquia,female,69,69,1975
+05,Antioquia,female,70,70,6200
+05,Antioquia,female,71,71,1050
+05,Antioquia,female,72,72,3275
+05,Antioquia,female,73,73,3750
+05,Antioquia,female,74,74,1575
+05,Antioquia,female,75,75,3000
+05,Antioquia,female,76,76,1000
+05,Antioquia,female,77,77,925
+05,Antioquia,female,78,78,1500
+05,Antioquia,female,79,79,750
+05,Antioquia,female,80,80,3150
+05,Antioquia,female,81,81,700
+05,Antioquia,female,82,82,600
+05,Antioquia,female,83,83,525
+05,Antioquia,female,84,84,650
+05,Antioquia,female,85+,85,4400
+05,Antioquia,total,0,0,64925
+05,Antioquia,total,1,1,70025
+05,Antioquia,total,2,2,80150
+05,Antioquia,total,3,3,85350
+05,Antioquia,total,4,4,83300
+05,Antioquia,total,5,5,87750
+05,Antioquia,total,6,6,89350
+05,Antioquia,total,7,7,90525
+05,Antioquia,total,8,8,90575
+05,Antioquia,total,9,9,83875
+05,Antioquia,total,10,10,90150
+05,Antioquia,total,11,11,82025
+05,Antioquia,total,12,12,88425
+05,Antioquia,total,13,13,82225
+05,Antioquia,total,14,14,76175
+05,Antioquia,total,15,15,73950
+05,Antioquia,total,16,16,70575
+05,Antioquia,total,17,17,68775
+05,Antioquia,total,18,18,71350
+05,Antioquia,total,19,19,57675
+05,Antioquia,total,20,20,58050
+05,Antioquia,total,21,21,50425
+05,Antioquia,total,22,22,53050
+05,Antioquia,total,23,23,50925
+05,Antioquia,total,24,24,46200
+05,Antioquia,total,25,25,46800
+05,Antioquia,total,26,26,38550
+05,Antioquia,total,27,27,38100
+05,Antioquia,total,28,28,40325
+05,Antioquia,total,29,29,29850
+05,Antioquia,total,30,30,43000
+05,Antioquia,total,31,31,21550
+05,Antioquia,total,32,32,30875
+05,Antioquia,total,33,33,33375
+05,Antioquia,total,34,34,26075
+05,Antioquia,total,35,35,31725
+05,Antioquia,total,36,36,24925
+05,Antioquia,total,37,37,24725
+05,Antioquia,total,38,38,31225
+05,Antioquia,total,39,39,22250
+05,Antioquia,total,40,40,35175
+05,Antioquia,total,41,41,14400
+05,Antioquia,total,42,42,27225
+05,Antioquia,total,43,43,25250
+05,Antioquia,total,44,44,17525
+05,Antioquia,total,45,45,27025
+05,Antioquia,total,46,46,15750
+05,Antioquia,total,47,47,16700
+05,Antioquia,total,48,48,22425
+05,Antioquia,total,49,49,13575
+05,Antioquia,total,50,50,26125
+05,Antioquia,total,51,51,10350
+05,Antioquia,total,52,52,17100
+05,Antioquia,total,53,53,15775
+05,Antioquia,total,54,54,13125
+05,Antioquia,total,55,55,16675
+05,Antioquia,total,56,56,11200
+05,Antioquia,total,57,57,9650
+05,Antioquia,total,58,58,11425
+05,Antioquia,total,59,59,8025
+05,Antioquia,total,60,60,19950
+05,Antioquia,total,61,61,5575
+05,Antioquia,total,62,62,9100
+05,Antioquia,total,63,63,10125
+05,Antioquia,total,64,64,6625
+05,Antioquia,total,65,65,10200
+05,Antioquia,total,66,66,6475
+05,Antioquia,total,67,67,5275
+05,Antioquia,total,68,68,6075
+05,Antioquia,total,69,69,4575
+05,Antioquia,total,70,70,11225
+05,Antioquia,total,71,71,2500
+05,Antioquia,total,72,72,6075
+05,Antioquia,total,73,73,6700
+05,Antioquia,total,74,74,3125
+05,Antioquia,total,75,75,5000
+05,Antioquia,total,76,76,2100
+05,Antioquia,total,77,77,1800
+05,Antioquia,total,78,78,2950
+05,Antioquia,total,79,79,1200
+05,Antioquia,total,80,80,5075
+05,Antioquia,total,81,81,1225
+05,Antioquia,total,82,82,1250
+05,Antioquia,total,83,83,1150
+05,Antioquia,total,84,84,1125
+05,Antioquia,total,85+,85,6775
+08,Atlántico,male,0,0,9175
+08,Atlántico,male,1,1,10500
+08,Atlántico,male,2,2,14500
+08,Atlántico,male,3,3,13975
+08,Atlántico,male,4,4,13450
+08,Atlántico,male,5,5,14300
+08,Atlántico,male,6,6,14250
+08,Atlántico,male,7,7,14575
+08,Atlántico,male,8,8,15875
+08,Atlántico,male,9,9,13650
+08,Atlántico,male,10,10,15675
+08,Atlántico,male,11,11,13150
+08,Atlántico,male,12,12,14100
+08,Atlántico,male,13,13,12725
+08,Atlántico,male,14,14,11575
+08,Atlántico,male,15,15,10750
+08,Atlántico,male,16,16,10875
+08,Atlántico,male,17,17,10450
+08,Atlántico,male,18,18,11150
+08,Atlántico,male,19,19,9475
+08,Atlántico,male,20,20,9575
+08,Atlántico,male,21,21,8325
+08,Atlántico,male,22,22,9225
+08,Atlántico,male,23,23,9325
+08,Atlántico,male,24,24,7875
+08,Atlántico,male,25,25,7575
+08,Atlántico,male,26,26,6375
+08,Atlántico,male,27,27,6475
+08,Atlántico,male,28,28,5475
+08,Atlántico,male,29,29,4700
+08,Atlántico,male,30,30,6050
+08,Atlántico,male,31,31,3575
+08,Atlántico,male,32,32,5525
+08,Atlántico,male,33,33,6650
+08,Atlántico,male,34,34,4025
+08,Atlántico,male,35,35,4925
+08,Atlántico,male,36,36,3850
+08,Atlántico,male,37,37,4050
+08,Atlántico,male,38,38,4875
+08,Atlántico,male,39,39,3950
+08,Atlántico,male,40,40,5075
+08,Atlántico,male,41,41,2400
+08,Atlántico,male,42,42,4100
+08,Atlántico,male,43,43,3825
+08,Atlántico,male,44,44,2925
+08,Atlántico,male,45,45,3500
+08,Atlántico,male,46,46,2900
+08,Atlántico,male,47,47,3175
+08,Atlántico,male,48,48,3200
+08,Atlántico,male,49,49,2425
+08,Atlántico,male,50,50,3050
+08,Atlántico,male,51,51,2100
+08,Atlántico,male,52,52,3050
+08,Atlántico,male,53,53,3025
+08,Atlántico,male,54,54,2475
+08,Atlántico,male,55,55,2425
+08,Atlántico,male,56,56,1725
+08,Atlántico,male,57,57,2050
+08,Atlántico,male,58,58,1825
+08,Atlántico,male,59,59,1425
+08,Atlántico,male,60,60,1950
+08,Atlántico,male,61,61,1025
+08,Atlántico,male,62,62,1725
+08,Atlántico,male,63,63,1875
+08,Atlántico,male,64,64,1075
+08,Atlántico,male,65,65,1550
+08,Atlántico,male,66,66,1325
+08,Atlántico,male,67,67,1100
+08,Atlántico,male,68,68,925
+08,Atlántico,male,69,69,675
+08,Atlántico,male,70,70,1275
+08,Atlántico,male,71,71,500
+08,Atlántico,male,72,72,1075
+08,Atlántico,male,73,73,775
+08,Atlántico,male,74,74,650
+08,Atlántico,male,75,75,725
+08,Atlántico,male,76,76,325
+08,Atlántico,male,77,77,250
+08,Atlántico,male,78,78,425
+08,Atlántico,male,79,79,150
+08,Atlántico,male,80,80,400
+08,Atlántico,male,81,81,200
+08,Atlántico,male,82,82,325
+08,Atlántico,male,83,83,175
+08,Atlántico,male,84,84,100
+08,Atlántico,male,85+,85,900
+08,Atlántico,female,0,0,9075
+08,Atlántico,female,1,1,10525
+08,Atlántico,female,2,2,12500
+08,Atlántico,female,3,3,12975
+08,Atlántico,female,4,4,13475
+08,Atlántico,female,5,5,12625
+08,Atlántico,female,6,6,12750
+08,Atlántico,female,7,7,13900
+08,Atlántico,female,8,8,14225
+08,Atlántico,female,9,9,13100
+08,Atlántico,female,10,10,15400
+08,Atlántico,female,11,11,12625
+08,Atlántico,female,12,12,14425
+08,Atlántico,female,13,13,13150
+08,Atlántico,female,14,14,13100
+08,Atlántico,female,15,15,13275
+08,Atlántico,female,16,16,13100
+08,Atlántico,female,17,17,13125
+08,Atlántico,female,18,18,15200
+08,Atlántico,female,19,19,12025
+08,Atlántico,female,20,20,11500
+08,Atlántico,female,21,21,9750
+08,Atlántico,female,22,22,11125
+08,Atlántico,female,23,23,10700
+08,Atlántico,female,24,24,9000
+08,Atlántico,female,25,25,8725
+08,Atlántico,female,26,26,7500
+08,Atlántico,female,27,27,6825
+08,Atlántico,female,28,28,7975
+08,Atlántico,female,29,29,5400
+08,Atlántico,female,30,30,8325
+08,Atlántico,female,31,31,3650
+08,Atlántico,female,32,32,5825
+08,Atlántico,female,33,33,5675
+08,Atlántico,female,34,34,5425
+08,Atlántico,female,35,35,6225
+08,Atlántico,female,36,36,4600
+08,Atlántico,female,37,37,5300
+08,Atlántico,female,38,38,6375
+08,Atlántico,female,39,39,4350
+08,Atlántico,female,40,40,6150
+08,Atlántico,female,41,41,2225
+08,Atlántico,female,42,42,4225
+08,Atlántico,female,43,43,5200
+08,Atlántico,female,44,44,3100
+08,Atlántico,female,45,45,4700
+08,Atlántico,female,46,46,3025
+08,Atlántico,female,47,47,3150
+08,Atlántico,female,48,48,4025
+08,Atlántico,female,49,49,2850
+08,Atlántico,female,50,50,3975
+08,Atlántico,female,51,51,1875
+08,Atlántico,female,52,52,3175
+08,Atlántico,female,53,53,2725
+08,Atlántico,female,54,54,2500
+08,Atlántico,female,55,55,2950
+08,Atlántico,female,56,56,2400
+08,Atlántico,female,57,57,1900
+08,Atlántico,female,58,58,2250
+08,Atlántico,female,59,59,1300
+08,Atlántico,female,60,60,3400
+08,Atlántico,female,61,61,925
+08,Atlántico,female,62,62,1675
+08,Atlántico,female,63,63,2050
+08,Atlántico,female,64,64,1250
+08,Atlántico,female,65,65,2450
+08,Atlántico,female,66,66,975
+08,Atlántico,female,67,67,1075
+08,Atlántico,female,68,68,1275
+08,Atlántico,female,69,69,800
+08,Atlántico,female,70,70,1500
+08,Atlántico,female,71,71,450
+08,Atlántico,female,72,72,1050
+08,Atlántico,female,73,73,1350
+08,Atlántico,female,74,74,775
+08,Atlántico,female,75,75,1050
+08,Atlántico,female,76,76,400
+08,Atlántico,female,77,77,425
+08,Atlántico,female,78,78,450
+08,Atlántico,female,79,79,175
+08,Atlántico,female,80,80,800
+08,Atlántico,female,81,81,50
+08,Atlántico,female,82,82,225
+08,Atlántico,female,83,83,175
+08,Atlántico,female,84,84,150
+08,Atlántico,female,85+,85,1700
+08,Atlántico,total,0,0,18250
+08,Atlántico,total,1,1,21025
+08,Atlántico,total,2,2,27000
+08,Atlántico,total,3,3,26950
+08,Atlántico,total,4,4,26925
+08,Atlántico,total,5,5,26925
+08,Atlántico,total,6,6,27000
+08,Atlántico,total,7,7,28475
+08,Atlántico,total,8,8,30100
+08,Atlántico,total,9,9,26750
+08,Atlántico,total,10,10,31075
+08,Atlántico,total,11,11,25775
+08,Atlántico,total,12,12,28525
+08,Atlántico,total,13,13,25875
+08,Atlántico,total,14,14,24675
+08,Atlántico,total,15,15,24025
+08,Atlántico,total,16,16,23975
+08,Atlántico,total,17,17,23575
+08,Atlántico,total,18,18,26350
+08,Atlántico,total,19,19,21500
+08,Atlántico,total,20,20,21075
+08,Atlántico,total,21,21,18075
+08,Atlántico,total,22,22,20350
+08,Atlántico,total,23,23,20025
+08,Atlántico,total,24,24,16875
+08,Atlántico,total,25,25,16300
+08,Atlántico,total,26,26,13875
+08,Atlántico,total,27,27,13300
+08,Atlántico,total,28,28,13450
+08,Atlántico,total,29,29,10100
+08,Atlántico,total,30,30,14375
+08,Atlántico,total,31,31,7225
+08,Atlántico,total,32,32,11350
+08,Atlántico,total,33,33,12325
+08,Atlántico,total,34,34,9450
+08,Atlántico,total,35,35,11150
+08,Atlántico,total,36,36,8450
+08,Atlántico,total,37,37,9350
+08,Atlántico,total,38,38,11250
+08,Atlántico,total,39,39,8300
+08,Atlántico,total,40,40,11225
+08,Atlántico,total,41,41,4625
+08,Atlántico,total,42,42,8325
+08,Atlántico,total,43,43,9025
+08,Atlántico,total,44,44,6025
+08,Atlántico,total,45,45,8200
+08,Atlántico,total,46,46,5925
+08,Atlántico,total,47,47,6325
+08,Atlántico,total,48,48,7225
+08,Atlántico,total,49,49,5275
+08,Atlántico,total,50,50,7025
+08,Atlántico,total,51,51,3975
+08,Atlántico,total,52,52,6225
+08,Atlántico,total,53,53,5750
+08,Atlántico,total,54,54,4975
+08,Atlántico,total,55,55,5375
+08,Atlántico,total,56,56,4125
+08,Atlántico,total,57,57,3950
+08,Atlántico,total,58,58,4075
+08,Atlántico,total,59,59,2725
+08,Atlántico,total,60,60,5350
+08,Atlántico,total,61,61,1950
+08,Atlántico,total,62,62,3400
+08,Atlántico,total,63,63,3925
+08,Atlántico,total,64,64,2325
+08,Atlántico,total,65,65,4000
+08,Atlántico,total,66,66,2300
+08,Atlántico,total,67,67,2175
+08,Atlántico,total,68,68,2200
+08,Atlántico,total,69,69,1475
+08,Atlántico,total,70,70,2775
+08,Atlántico,total,71,71,950
+08,Atlántico,total,72,72,2125
+08,Atlántico,total,73,73,2125
+08,Atlántico,total,74,74,1425
+08,Atlántico,total,75,75,1775
+08,Atlántico,total,76,76,725
+08,Atlántico,total,77,77,675
+08,Atlántico,total,78,78,875
+08,Atlántico,total,79,79,325
+08,Atlántico,total,80,80,1200
+08,Atlántico,total,81,81,250
+08,Atlántico,total,82,82,550
+08,Atlántico,total,83,83,350
+08,Atlántico,total,84,84,250
+08,Atlántico,total,85+,85,2600
+11,Bogotá D.E.,male,0,0,29176
+11,Bogotá D.E.,male,1,1,31136
+11,Bogotá D.E.,male,2,2,37100
+11,Bogotá D.E.,male,3,3,35336
+11,Bogotá D.E.,male,4,4,35000
+11,Bogotá D.E.,male,5,5,37828
+11,Bogotá D.E.,male,6,6,36792
+11,Bogotá D.E.,male,7,7,35784
+11,Bogotá D.E.,male,8,8,37520
+11,Bogotá D.E.,male,9,9,36876
+11,Bogotá D.E.,male,10,10,37884
+11,Bogotá D.E.,male,11,11,35896
+11,Bogotá D.E.,male,12,12,38584
+11,Bogotá D.E.,male,13,13,35532
+11,Bogotá D.E.,male,14,14,31416
+11,Bogotá D.E.,male,15,15,34076
+11,Bogotá D.E.,male,16,16,31724
+11,Bogotá D.E.,male,17,17,32424
+11,Bogotá D.E.,male,18,18,34104
+11,Bogotá D.E.,male,19,19,28924
+11,Bogotá D.E.,male,20,20,28280
+11,Bogotá D.E.,male,21,21,27916
+11,Bogotá D.E.,male,22,22,27104
+11,Bogotá D.E.,male,23,23,28840
+11,Bogotá D.E.,male,24,24,24864
+11,Bogotá D.E.,male,25,25,25144
+11,Bogotá D.E.,male,26,26,21952
+11,Bogotá D.E.,male,27,27,23072
+11,Bogotá D.E.,male,28,28,21588
+11,Bogotá D.E.,male,29,29,18116
+11,Bogotá D.E.,male,30,30,20972
+11,Bogotá D.E.,male,31,31,16492
+11,Bogotá D.E.,male,32,32,17248
+11,Bogotá D.E.,male,33,33,18900
+11,Bogotá D.E.,male,34,34,14028
+11,Bogotá D.E.,male,35,35,15120
+11,Bogotá D.E.,male,36,36,12824
+11,Bogotá D.E.,male,37,37,13888
+11,Bogotá D.E.,male,38,38,16184
+11,Bogotá D.E.,male,39,39,11536
+11,Bogotá D.E.,male,40,40,14616
+11,Bogotá D.E.,male,41,41,7924
+11,Bogotá D.E.,male,42,42,13076
+11,Bogotá D.E.,male,43,43,15064
+11,Bogotá D.E.,male,44,44,9772
+11,Bogotá D.E.,male,45,45,10472
+11,Bogotá D.E.,male,46,46,8484
+11,Bogotá D.E.,male,47,47,8708
+11,Bogotá D.E.,male,48,48,9156
+11,Bogotá D.E.,male,49,49,7868
+11,Bogotá D.E.,male,50,50,10248
+11,Bogotá D.E.,male,51,51,6188
+11,Bogotá D.E.,male,52,52,7784
+11,Bogotá D.E.,male,53,53,7868
+11,Bogotá D.E.,male,54,54,5656
+11,Bogotá D.E.,male,55,55,5908
+11,Bogotá D.E.,male,56,56,5572
+11,Bogotá D.E.,male,57,57,3864
+11,Bogotá D.E.,male,58,58,5124
+11,Bogotá D.E.,male,59,59,3472
+11,Bogotá D.E.,male,60,60,5880
+11,Bogotá D.E.,male,61,61,2380
+11,Bogotá D.E.,male,62,62,4620
+11,Bogotá D.E.,male,63,63,4480
+11,Bogotá D.E.,male,64,64,2492
+11,Bogotá D.E.,male,65,65,3836
+11,Bogotá D.E.,male,66,66,2016
+11,Bogotá D.E.,male,67,67,2240
+11,Bogotá D.E.,male,68,68,2688
+11,Bogotá D.E.,male,69,69,1568
+11,Bogotá D.E.,male,70,70,2352
+11,Bogotá D.E.,male,71,71,1232
+11,Bogotá D.E.,male,72,72,1568
+11,Bogotá D.E.,male,73,73,1708
+11,Bogotá D.E.,male,74,74,980
+11,Bogotá D.E.,male,75,75,1428
+11,Bogotá D.E.,male,76,76,672
+11,Bogotá D.E.,male,77,77,420
+11,Bogotá D.E.,male,78,78,700
+11,Bogotá D.E.,male,79,79,224
+11,Bogotá D.E.,male,80,80,532
+11,Bogotá D.E.,male,81,81,168
+11,Bogotá D.E.,male,82,82,448
+11,Bogotá D.E.,male,83,83,504
+11,Bogotá D.E.,male,84,84,140
+11,Bogotá D.E.,male,85+,85,896
+11,Bogotá D.E.,female,0,0,28924
+11,Bogotá D.E.,female,1,1,31808
+11,Bogotá D.E.,female,2,2,33712
+11,Bogotá D.E.,female,3,3,34552
+11,Bogotá D.E.,female,4,4,36680
+11,Bogotá D.E.,female,5,5,35056
+11,Bogotá D.E.,female,6,6,35728
+11,Bogotá D.E.,female,7,7,37576
+11,Bogotá D.E.,female,8,8,37576
+11,Bogotá D.E.,female,9,9,37044
+11,Bogotá D.E.,female,10,10,37800
+11,Bogotá D.E.,female,11,11,37632
+11,Bogotá D.E.,female,12,12,39256
+11,Bogotá D.E.,female,13,13,40796
+11,Bogotá D.E.,female,14,14,38724
+11,Bogotá D.E.,female,15,15,40964
+11,Bogotá D.E.,female,16,16,38752
+11,Bogotá D.E.,female,17,17,44352
+11,Bogotá D.E.,female,18,18,42812
+11,Bogotá D.E.,female,19,19,37800
+11,Bogotá D.E.,female,20,20,38444
+11,Bogotá D.E.,female,21,21,35700
+11,Bogotá D.E.,female,22,22,36680
+11,Bogotá D.E.,female,23,23,35672
+11,Bogotá D.E.,female,24,24,31248
+11,Bogotá D.E.,female,25,25,32788
+11,Bogotá D.E.,female,26,26,26908
+11,Bogotá D.E.,female,27,27,25116
+11,Bogotá D.E.,female,28,28,26264
+11,Bogotá D.E.,female,29,29,19236
+11,Bogotá D.E.,female,30,30,26936
+11,Bogotá D.E.,female,31,31,13160
+11,Bogotá D.E.,female,32,32,20608
+11,Bogotá D.E.,female,33,33,18872
+11,Bogotá D.E.,female,34,34,17304
+11,Bogotá D.E.,female,35,35,21112
+11,Bogotá D.E.,female,36,36,16296
+11,Bogotá D.E.,female,37,37,15792
+11,Bogotá D.E.,female,38,38,18816
+11,Bogotá D.E.,female,39,39,13132
+11,Bogotá D.E.,female,40,40,20412
+11,Bogotá D.E.,female,41,41,8372
+11,Bogotá D.E.,female,42,42,14672
+11,Bogotá D.E.,female,43,43,14700
+11,Bogotá D.E.,female,44,44,10612
+11,Bogotá D.E.,female,45,45,15176
+11,Bogotá D.E.,female,46,46,9520
+11,Bogotá D.E.,female,47,47,9380
+11,Bogotá D.E.,female,48,48,12068
+11,Bogotá D.E.,female,49,49,7252
+11,Bogotá D.E.,female,50,50,11620
+11,Bogotá D.E.,female,51,51,5264
+11,Bogotá D.E.,female,52,52,9576
+11,Bogotá D.E.,female,53,53,8708
+11,Bogotá D.E.,female,54,54,6664
+11,Bogotá D.E.,female,55,55,9492
+11,Bogotá D.E.,female,56,56,6272
+11,Bogotá D.E.,female,57,57,4676
+11,Bogotá D.E.,female,58,58,6328
+11,Bogotá D.E.,female,59,59,3668
+11,Bogotá D.E.,female,60,60,9940
+11,Bogotá D.E.,female,61,61,2772
+11,Bogotá D.E.,female,62,62,4508
+11,Bogotá D.E.,female,63,63,5152
+11,Bogotá D.E.,female,64,64,3668
+11,Bogotá D.E.,female,65,65,6384
+11,Bogotá D.E.,female,66,66,2884
+11,Bogotá D.E.,female,67,67,3024
+11,Bogotá D.E.,female,68,68,3528
+11,Bogotá D.E.,female,69,69,1736
+11,Bogotá D.E.,female,70,70,5152
+11,Bogotá D.E.,female,71,71,784
+11,Bogotá D.E.,female,72,72,2688
+11,Bogotá D.E.,female,73,73,2520
+11,Bogotá D.E.,female,74,74,1148
+11,Bogotá D.E.,female,75,75,3192
+11,Bogotá D.E.,female,76,76,1092
+11,Bogotá D.E.,female,77,77,700
+11,Bogotá D.E.,female,78,78,980
+11,Bogotá D.E.,female,79,79,448
+11,Bogotá D.E.,female,80,80,1764
+11,Bogotá D.E.,female,81,81,280
+11,Bogotá D.E.,female,82,82,560
+11,Bogotá D.E.,female,83,83,532
+11,Bogotá D.E.,female,84,84,476
+11,Bogotá D.E.,female,85+,85,2688
+11,Bogotá D.E.,total,0,0,58100
+11,Bogotá D.E.,total,1,1,62944
+11,Bogotá D.E.,total,2,2,70812
+11,Bogotá D.E.,total,3,3,69888
+11,Bogotá D.E.,total,4,4,71680
+11,Bogotá D.E.,total,5,5,72884
+11,Bogotá D.E.,total,6,6,72520
+11,Bogotá D.E.,total,7,7,73360
+11,Bogotá D.E.,total,8,8,75096
+11,Bogotá D.E.,total,9,9,73920
+11,Bogotá D.E.,total,10,10,75684
+11,Bogotá D.E.,total,11,11,73528
+11,Bogotá D.E.,total,12,12,77840
+11,Bogotá D.E.,total,13,13,76328
+11,Bogotá D.E.,total,14,14,70140
+11,Bogotá D.E.,total,15,15,75040
+11,Bogotá D.E.,total,16,16,70476
+11,Bogotá D.E.,total,17,17,76776
+11,Bogotá D.E.,total,18,18,76916
+11,Bogotá D.E.,total,19,19,66724
+11,Bogotá D.E.,total,20,20,66724
+11,Bogotá D.E.,total,21,21,63616
+11,Bogotá D.E.,total,22,22,63784
+11,Bogotá D.E.,total,23,23,64512
+11,Bogotá D.E.,total,24,24,56112
+11,Bogotá D.E.,total,25,25,57932
+11,Bogotá D.E.,total,26,26,48860
+11,Bogotá D.E.,total,27,27,48188
+11,Bogotá D.E.,total,28,28,47852
+11,Bogotá D.E.,total,29,29,37352
+11,Bogotá D.E.,total,30,30,47908
+11,Bogotá D.E.,total,31,31,29652
+11,Bogotá D.E.,total,32,32,37856
+11,Bogotá D.E.,total,33,33,37772
+11,Bogotá D.E.,total,34,34,31332
+11,Bogotá D.E.,total,35,35,36232
+11,Bogotá D.E.,total,36,36,29120
+11,Bogotá D.E.,total,37,37,29680
+11,Bogotá D.E.,total,38,38,35000
+11,Bogotá D.E.,total,39,39,24668
+11,Bogotá D.E.,total,40,40,35028
+11,Bogotá D.E.,total,41,41,16296
+11,Bogotá D.E.,total,42,42,27748
+11,Bogotá D.E.,total,43,43,29764
+11,Bogotá D.E.,total,44,44,20384
+11,Bogotá D.E.,total,45,45,25648
+11,Bogotá D.E.,total,46,46,18004
+11,Bogotá D.E.,total,47,47,18088
+11,Bogotá D.E.,total,48,48,21224
+11,Bogotá D.E.,total,49,49,15120
+11,Bogotá D.E.,total,50,50,21868
+11,Bogotá D.E.,total,51,51,11452
+11,Bogotá D.E.,total,52,52,17360
+11,Bogotá D.E.,total,53,53,16576
+11,Bogotá D.E.,total,54,54,12320
+11,Bogotá D.E.,total,55,55,15400
+11,Bogotá D.E.,total,56,56,11844
+11,Bogotá D.E.,total,57,57,8540
+11,Bogotá D.E.,total,58,58,11452
+11,Bogotá D.E.,total,59,59,7140
+11,Bogotá D.E.,total,60,60,15820
+11,Bogotá D.E.,total,61,61,5152
+11,Bogotá D.E.,total,62,62,9128
+11,Bogotá D.E.,total,63,63,9632
+11,Bogotá D.E.,total,64,64,6160
+11,Bogotá D.E.,total,65,65,10220
+11,Bogotá D.E.,total,66,66,4900
+11,Bogotá D.E.,total,67,67,5264
+11,Bogotá D.E.,total,68,68,6216
+11,Bogotá D.E.,total,69,69,3304
+11,Bogotá D.E.,total,70,70,7504
+11,Bogotá D.E.,total,71,71,2016
+11,Bogotá D.E.,total,72,72,4256
+11,Bogotá D.E.,total,73,73,4228
+11,Bogotá D.E.,total,74,74,2128
+11,Bogotá D.E.,total,75,75,4620
+11,Bogotá D.E.,total,76,76,1764
+11,Bogotá D.E.,total,77,77,1120
+11,Bogotá D.E.,total,78,78,1680
+11,Bogotá D.E.,total,79,79,672
+11,Bogotá D.E.,total,80,80,2296
+11,Bogotá D.E.,total,81,81,448
+11,Bogotá D.E.,total,82,82,1008
+11,Bogotá D.E.,total,83,83,1036
+11,Bogotá D.E.,total,84,84,616
+11,Bogotá D.E.,total,85+,85,3584
+13,Bolívar,male,0,0,8625
+13,Bolívar,male,1,1,9850
+13,Bolívar,male,2,2,12050
+13,Bolívar,male,3,3,12350
+13,Bolívar,male,4,4,12525
+13,Bolívar,male,5,5,12100
+13,Bolívar,male,6,6,12600
+13,Bolívar,male,7,7,13875
+13,Bolívar,male,8,8,13200
+13,Bolívar,male,9,9,11800
+13,Bolívar,male,10,10,13900
+13,Bolívar,male,11,11,11450
+13,Bolívar,male,12,12,13050
+13,Bolívar,male,13,13,11550
+13,Bolívar,male,14,14,10700
+13,Bolívar,male,15,15,10050
+13,Bolívar,male,16,16,9300
+13,Bolívar,male,17,17,9625
+13,Bolívar,male,18,18,8875
+13,Bolívar,male,19,19,7600
+13,Bolívar,male,20,20,7725
+13,Bolívar,male,21,21,5775
+13,Bolívar,male,22,22,6550
+13,Bolívar,male,23,23,6275
+13,Bolívar,male,24,24,5300
+13,Bolívar,male,25,25,5825
+13,Bolívar,male,26,26,4600
+13,Bolívar,male,27,27,5350
+13,Bolívar,male,28,28,4450
+13,Bolívar,male,29,29,3100
+13,Bolívar,male,30,30,4375
+13,Bolívar,male,31,31,2450
+13,Bolívar,male,32,32,3475
+13,Bolívar,male,33,33,3925
+13,Bolívar,male,34,34,2925
+13,Bolívar,male,35,35,4025
+13,Bolívar,male,36,36,2900
+13,Bolívar,male,37,37,3050
+13,Bolívar,male,38,38,4125
+13,Bolívar,male,39,39,2700
+13,Bolívar,male,40,40,4325
+13,Bolívar,male,41,41,1950
+13,Bolívar,male,42,42,3325
+13,Bolívar,male,43,43,3325
+13,Bolívar,male,44,44,2000
+13,Bolívar,male,45,45,3325
+13,Bolívar,male,46,46,2050
+13,Bolívar,male,47,47,2000
+13,Bolívar,male,48,48,2450
+13,Bolívar,male,49,49,1750
+13,Bolívar,male,50,50,3225
+13,Bolívar,male,51,51,1175
+13,Bolívar,male,52,52,2275
+13,Bolívar,male,53,53,2225
+13,Bolívar,male,54,54,1900
+13,Bolívar,male,55,55,2300
+13,Bolívar,male,56,56,1350
+13,Bolívar,male,57,57,1500
+13,Bolívar,male,58,58,1300
+13,Bolívar,male,59,59,925
+13,Bolívar,male,60,60,2200
+13,Bolívar,male,61,61,700
+13,Bolívar,male,62,62,1175
+13,Bolívar,male,63,63,1200
+13,Bolívar,male,64,64,875
+13,Bolívar,male,65,65,1450
+13,Bolívar,male,66,66,500
+13,Bolívar,male,67,67,650
+13,Bolívar,male,68,68,850
+13,Bolívar,male,69,69,475
+13,Bolívar,male,70,70,1550
+13,Bolívar,male,71,71,275
+13,Bolívar,male,72,72,725
+13,Bolívar,male,73,73,775
+13,Bolívar,male,74,74,375
+13,Bolívar,male,75,75,475
+13,Bolívar,male,76,76,325
+13,Bolívar,male,77,77,225
+13,Bolívar,male,78,78,575
+13,Bolívar,male,79,79,200
+13,Bolívar,male,80,80,675
+13,Bolívar,male,81,81,50
+13,Bolívar,male,82,82,50
+13,Bolívar,male,83,83,175
+13,Bolívar,male,84,84,175
+13,Bolívar,male,85+,85,800
+13,Bolívar,female,0,0,8275
+13,Bolívar,female,1,1,8600
+13,Bolívar,female,2,2,11275
+13,Bolívar,female,3,3,12825
+13,Bolívar,female,4,4,11175
+13,Bolívar,female,5,5,12075
+13,Bolívar,female,6,6,12100
+13,Bolívar,female,7,7,12550
+13,Bolívar,female,8,8,11975
+13,Bolívar,female,9,9,11850
+13,Bolívar,female,10,10,12425
+13,Bolívar,female,11,11,10575
+13,Bolívar,female,12,12,12950
+13,Bolívar,female,13,13,11125
+13,Bolívar,female,14,14,10425
+13,Bolívar,female,15,15,10275
+13,Bolívar,female,16,16,9375
+13,Bolívar,female,17,17,9325
+13,Bolívar,female,18,18,9825
+13,Bolívar,female,19,19,7700
+13,Bolívar,female,20,20,7850
+13,Bolívar,female,21,21,6175
+13,Bolívar,female,22,22,6600
+13,Bolívar,female,23,23,6950
+13,Bolívar,female,24,24,6725
+13,Bolívar,female,25,25,6750
+13,Bolívar,female,26,26,5250
+13,Bolívar,female,27,27,5025
+13,Bolívar,female,28,28,5450
+13,Bolívar,female,29,29,3475
+13,Bolívar,female,30,30,5450
+13,Bolívar,female,31,31,2525
+13,Bolívar,female,32,32,4025
+13,Bolívar,female,33,33,4950
+13,Bolívar,female,34,34,3050
+13,Bolívar,female,35,35,5075
+13,Bolívar,female,36,36,3400
+13,Bolívar,female,37,37,4125
+13,Bolívar,female,38,38,4275
+13,Bolívar,female,39,39,2450
+13,Bolívar,female,40,40,5350
+13,Bolívar,female,41,41,1875
+13,Bolívar,female,42,42,2975
+13,Bolívar,female,43,43,2700
+13,Bolívar,female,44,44,2100
+13,Bolívar,female,45,45,3775
+13,Bolívar,female,46,46,2625
+13,Bolívar,female,47,47,1975
+13,Bolívar,female,48,48,3150
+13,Bolívar,female,49,49,1975
+13,Bolívar,female,50,50,3350
+13,Bolívar,female,51,51,1000
+13,Bolívar,female,52,52,1750
+13,Bolívar,female,53,53,2150
+13,Bolívar,female,54,54,1725
+13,Bolívar,female,55,55,2200
+13,Bolívar,female,56,56,1300
+13,Bolívar,female,57,57,950
+13,Bolívar,female,58,58,1175
+13,Bolívar,female,59,59,725
+13,Bolívar,female,60,60,3000
+13,Bolívar,female,61,61,750
+13,Bolívar,female,62,62,1050
+13,Bolívar,female,63,63,1325
+13,Bolívar,female,64,64,900
+13,Bolívar,female,65,65,1400
+13,Bolívar,female,66,66,950
+13,Bolívar,female,67,67,625
+13,Bolívar,female,68,68,800
+13,Bolívar,female,69,69,675
+13,Bolívar,female,70,70,1950
+13,Bolívar,female,71,71,400
+13,Bolívar,female,72,72,875
+13,Bolívar,female,73,73,725
+13,Bolívar,female,74,74,350
+13,Bolívar,female,75,75,950
+13,Bolívar,female,76,76,300
+13,Bolívar,female,77,77,325
+13,Bolívar,female,78,78,625
+13,Bolívar,female,79,79,225
+13,Bolívar,female,80,80,650
+13,Bolívar,female,81,81,75
+13,Bolívar,female,82,82,200
+13,Bolívar,female,83,83,300
+13,Bolívar,female,84,84,200
+13,Bolívar,female,85+,85,1525
+13,Bolívar,total,0,0,16900
+13,Bolívar,total,1,1,18450
+13,Bolívar,total,2,2,23325
+13,Bolívar,total,3,3,25175
+13,Bolívar,total,4,4,23700
+13,Bolívar,total,5,5,24175
+13,Bolívar,total,6,6,24700
+13,Bolívar,total,7,7,26425
+13,Bolívar,total,8,8,25175
+13,Bolívar,total,9,9,23650
+13,Bolívar,total,10,10,26325
+13,Bolívar,total,11,11,22025
+13,Bolívar,total,12,12,26000
+13,Bolívar,total,13,13,22675
+13,Bolívar,total,14,14,21125
+13,Bolívar,total,15,15,20325
+13,Bolívar,total,16,16,18675
+13,Bolívar,total,17,17,18950
+13,Bolívar,total,18,18,18700
+13,Bolívar,total,19,19,15300
+13,Bolívar,total,20,20,15575
+13,Bolívar,total,21,21,11950
+13,Bolívar,total,22,22,13150
+13,Bolívar,total,23,23,13225
+13,Bolívar,total,24,24,12025
+13,Bolívar,total,25,25,12575
+13,Bolívar,total,26,26,9850
+13,Bolívar,total,27,27,10375
+13,Bolívar,total,28,28,9900
+13,Bolívar,total,29,29,6575
+13,Bolívar,total,30,30,9825
+13,Bolívar,total,31,31,4975
+13,Bolívar,total,32,32,7500
+13,Bolívar,total,33,33,8875
+13,Bolívar,total,34,34,5975
+13,Bolívar,total,35,35,9100
+13,Bolívar,total,36,36,6300
+13,Bolívar,total,37,37,7175
+13,Bolívar,total,38,38,8400
+13,Bolívar,total,39,39,5150
+13,Bolívar,total,40,40,9675
+13,Bolívar,total,41,41,3825
+13,Bolívar,total,42,42,6300
+13,Bolívar,total,43,43,6025
+13,Bolívar,total,44,44,4100
+13,Bolívar,total,45,45,7100
+13,Bolívar,total,46,46,4675
+13,Bolívar,total,47,47,3975
+13,Bolívar,total,48,48,5600
+13,Bolívar,total,49,49,3725
+13,Bolívar,total,50,50,6575
+13,Bolívar,total,51,51,2175
+13,Bolívar,total,52,52,4025
+13,Bolívar,total,53,53,4375
+13,Bolívar,total,54,54,3625
+13,Bolívar,total,55,55,4500
+13,Bolívar,total,56,56,2650
+13,Bolívar,total,57,57,2450
+13,Bolívar,total,58,58,2475
+13,Bolívar,total,59,59,1650
+13,Bolívar,total,60,60,5200
+13,Bolívar,total,61,61,1450
+13,Bolívar,total,62,62,2225
+13,Bolívar,total,63,63,2525
+13,Bolívar,total,64,64,1775
+13,Bolívar,total,65,65,2850
+13,Bolívar,total,66,66,1450
+13,Bolívar,total,67,67,1275
+13,Bolívar,total,68,68,1650
+13,Bolívar,total,69,69,1150
+13,Bolívar,total,70,70,3500
+13,Bolívar,total,71,71,675
+13,Bolívar,total,72,72,1600
+13,Bolívar,total,73,73,1500
+13,Bolívar,total,74,74,725
+13,Bolívar,total,75,75,1425
+13,Bolívar,total,76,76,625
+13,Bolívar,total,77,77,550
+13,Bolívar,total,78,78,1200
+13,Bolívar,total,79,79,425
+13,Bolívar,total,80,80,1325
+13,Bolívar,total,81,81,125
+13,Bolívar,total,82,82,250
+13,Bolívar,total,83,83,475
+13,Bolívar,total,84,84,375
+13,Bolívar,total,85+,85,2325
+15,Boyacá,male,0,0,14125
+15,Boyacá,male,1,1,15400
+15,Boyacá,male,2,2,17925
+15,Boyacá,male,3,3,17550
+15,Boyacá,male,4,4,19900
+15,Boyacá,male,5,5,20250
+15,Boyacá,male,6,6,18575
+15,Boyacá,male,7,7,19725
+15,Boyacá,male,8,8,19475
+15,Boyacá,male,9,9,15700
+15,Boyacá,male,10,10,18575
+15,Boyacá,male,11,11,13825
+15,Boyacá,male,12,12,17825
+15,Boyacá,male,13,13,15000
+15,Boyacá,male,14,14,15050
+15,Boyacá,male,15,15,13075
+15,Boyacá,male,16,16,10800
+15,Boyacá,male,17,17,10375
+15,Boyacá,male,18,18,11325
+15,Boyacá,male,19,19,7200
+15,Boyacá,male,20,20,8150
+15,Boyacá,male,21,21,6800
+15,Boyacá,male,22,22,7300
+15,Boyacá,male,23,23,6325
+15,Boyacá,male,24,24,5350
+15,Boyacá,male,25,25,7075
+15,Boyacá,male,26,26,5025
+15,Boyacá,male,27,27,4925
+15,Boyacá,male,28,28,5200
+15,Boyacá,male,29,29,3575
+15,Boyacá,male,30,30,8400
+15,Boyacá,male,31,31,2475
+15,Boyacá,male,32,32,4750
+15,Boyacá,male,33,33,5450
+15,Boyacá,male,34,34,3350
+15,Boyacá,male,35,35,7100
+15,Boyacá,male,36,36,3975
+15,Boyacá,male,37,37,4125
+15,Boyacá,male,38,38,6600
+15,Boyacá,male,39,39,3300
+15,Boyacá,male,40,40,8350
+15,Boyacá,male,41,41,1725
+15,Boyacá,male,42,42,4425
+15,Boyacá,male,43,43,4175
+15,Boyacá,male,44,44,2650
+15,Boyacá,male,45,45,6975
+15,Boyacá,male,46,46,2600
+15,Boyacá,male,47,47,2500
+15,Boyacá,male,48,48,4075
+15,Boyacá,male,49,49,1875
+15,Boyacá,male,50,50,7275
+15,Boyacá,male,51,51,1900
+15,Boyacá,male,52,52,3175
+15,Boyacá,male,53,53,2850
+15,Boyacá,male,54,54,2525
+15,Boyacá,male,55,55,5475
+15,Boyacá,male,56,56,2475
+15,Boyacá,male,57,57,1975
+15,Boyacá,male,58,58,2375
+15,Boyacá,male,59,59,1525
+15,Boyacá,male,60,60,6450
+15,Boyacá,male,61,61,1000
+15,Boyacá,male,62,62,1825
+15,Boyacá,male,63,63,1850
+15,Boyacá,male,64,64,700
+15,Boyacá,male,65,65,2975
+15,Boyacá,male,66,66,1025
+15,Boyacá,male,67,67,725
+15,Boyacá,male,68,68,1350
+15,Boyacá,male,69,69,700
+15,Boyacá,male,70,70,3050
+15,Boyacá,male,71,71,450
+15,Boyacá,male,72,72,1275
+15,Boyacá,male,73,73,1400
+15,Boyacá,male,74,74,650
+15,Boyacá,male,75,75,1400
+15,Boyacá,male,76,76,400
+15,Boyacá,male,77,77,125
+15,Boyacá,male,78,78,450
+15,Boyacá,male,79,79,175
+15,Boyacá,male,80,80,1225
+15,Boyacá,male,81,81,0
+15,Boyacá,male,82,82,350
+15,Boyacá,male,83,83,225
+15,Boyacá,male,84,84,25
+15,Boyacá,male,85+,85,1300
+15,Boyacá,female,0,0,13100
+15,Boyacá,female,1,1,14750
+15,Boyacá,female,2,2,16700
+15,Boyacá,female,3,3,18175
+15,Boyacá,female,4,4,18125
+15,Boyacá,female,5,5,17825
+15,Boyacá,female,6,6,17425
+15,Boyacá,female,7,7,18325
+15,Boyacá,female,8,8,17650
+15,Boyacá,female,9,9,15275
+15,Boyacá,female,10,10,17900
+15,Boyacá,female,11,11,13450
+15,Boyacá,female,12,12,17100
+15,Boyacá,female,13,13,13525
+15,Boyacá,female,14,14,12650
+15,Boyacá,female,15,15,13000
+15,Boyacá,female,16,16,11975
+15,Boyacá,female,17,17,10900
+15,Boyacá,female,18,18,11275
+15,Boyacá,female,19,19,7750
+15,Boyacá,female,20,20,10850
+15,Boyacá,female,21,21,6600
+15,Boyacá,female,22,22,7950
+15,Boyacá,female,23,23,7325
+15,Boyacá,female,24,24,6200
+15,Boyacá,female,25,25,9375
+15,Boyacá,female,26,26,5900
+15,Boyacá,female,27,27,4950
+15,Boyacá,female,28,28,6675
+15,Boyacá,female,29,29,3600
+15,Boyacá,female,30,30,10525
+15,Boyacá,female,31,31,2475
+15,Boyacá,female,32,32,5450
+15,Boyacá,female,33,33,5175
+15,Boyacá,female,34,34,3425
+15,Boyacá,female,35,35,9800
+15,Boyacá,female,36,36,3900
+15,Boyacá,female,37,37,4700
+15,Boyacá,female,38,38,6725
+15,Boyacá,female,39,39,3125
+15,Boyacá,female,40,40,11125
+15,Boyacá,female,41,41,2000
+15,Boyacá,female,42,42,4450
+15,Boyacá,female,43,43,3800
+15,Boyacá,female,44,44,2675
+15,Boyacá,female,45,45,8750
+15,Boyacá,female,46,46,2650
+15,Boyacá,female,47,47,2775
+15,Boyacá,female,48,48,4650
+15,Boyacá,female,49,49,2350
+15,Boyacá,female,50,50,9850
+15,Boyacá,female,51,51,1175
+15,Boyacá,female,52,52,3075
+15,Boyacá,female,53,53,2875
+15,Boyacá,female,54,54,2150
+15,Boyacá,female,55,55,5700
+15,Boyacá,female,56,56,2075
+15,Boyacá,female,57,57,1950
+15,Boyacá,female,58,58,2225
+15,Boyacá,female,59,59,1025
+15,Boyacá,female,60,60,7500
+15,Boyacá,female,61,61,675
+15,Boyacá,female,62,62,1550
+15,Boyacá,female,63,63,1450
+15,Boyacá,female,64,64,1200
+15,Boyacá,female,65,65,3975
+15,Boyacá,female,66,66,850
+15,Boyacá,female,67,67,700
+15,Boyacá,female,68,68,1225
+15,Boyacá,female,69,69,425
+15,Boyacá,female,70,70,4175
+15,Boyacá,female,71,71,275
+15,Boyacá,female,72,72,1075
+15,Boyacá,female,73,73,875
+15,Boyacá,female,74,74,225
+15,Boyacá,female,75,75,1350
+15,Boyacá,female,76,76,450
+15,Boyacá,female,77,77,125
+15,Boyacá,female,78,78,350
+15,Boyacá,female,79,79,200
+15,Boyacá,female,80,80,1800
+15,Boyacá,female,81,81,125
+15,Boyacá,female,82,82,150
+15,Boyacá,female,83,83,100
+15,Boyacá,female,84,84,25
+15,Boyacá,female,85+,85,1775
+15,Boyacá,total,0,0,27225
+15,Boyacá,total,1,1,30150
+15,Boyacá,total,2,2,34625
+15,Boyacá,total,3,3,35725
+15,Boyacá,total,4,4,38025
+15,Boyacá,total,5,5,38075
+15,Boyacá,total,6,6,36000
+15,Boyacá,total,7,7,38050
+15,Boyacá,total,8,8,37125
+15,Boyacá,total,9,9,30975
+15,Boyacá,total,10,10,36475
+15,Boyacá,total,11,11,27275
+15,Boyacá,total,12,12,34925
+15,Boyacá,total,13,13,28525
+15,Boyacá,total,14,14,27700
+15,Boyacá,total,15,15,26075
+15,Boyacá,total,16,16,22775
+15,Boyacá,total,17,17,21275
+15,Boyacá,total,18,18,22600
+15,Boyacá,total,19,19,14950
+15,Boyacá,total,20,20,19000
+15,Boyacá,total,21,21,13400
+15,Boyacá,total,22,22,15250
+15,Boyacá,total,23,23,13650
+15,Boyacá,total,24,24,11550
+15,Boyacá,total,25,25,16450
+15,Boyacá,total,26,26,10925
+15,Boyacá,total,27,27,9875
+15,Boyacá,total,28,28,11875
+15,Boyacá,total,29,29,7175
+15,Boyacá,total,30,30,18925
+15,Boyacá,total,31,31,4950
+15,Boyacá,total,32,32,10200
+15,Boyacá,total,33,33,10625
+15,Boyacá,total,34,34,6775
+15,Boyacá,total,35,35,16900
+15,Boyacá,total,36,36,7875
+15,Boyacá,total,37,37,8825
+15,Boyacá,total,38,38,13325
+15,Boyacá,total,39,39,6425
+15,Boyacá,total,40,40,19475
+15,Boyacá,total,41,41,3725
+15,Boyacá,total,42,42,8875
+15,Boyacá,total,43,43,7975
+15,Boyacá,total,44,44,5325
+15,Boyacá,total,45,45,15725
+15,Boyacá,total,46,46,5250
+15,Boyacá,total,47,47,5275
+15,Boyacá,total,48,48,8725
+15,Boyacá,total,49,49,4225
+15,Boyacá,total,50,50,17125
+15,Boyacá,total,51,51,3075
+15,Boyacá,total,52,52,6250
+15,Boyacá,total,53,53,5725
+15,Boyacá,total,54,54,4675
+15,Boyacá,total,55,55,11175
+15,Boyacá,total,56,56,4550
+15,Boyacá,total,57,57,3925
+15,Boyacá,total,58,58,4600
+15,Boyacá,total,59,59,2550
+15,Boyacá,total,60,60,13950
+15,Boyacá,total,61,61,1675
+15,Boyacá,total,62,62,3375
+15,Boyacá,total,63,63,3300
+15,Boyacá,total,64,64,1900
+15,Boyacá,total,65,65,6950
+15,Boyacá,total,66,66,1875
+15,Boyacá,total,67,67,1425
+15,Boyacá,total,68,68,2575
+15,Boyacá,total,69,69,1125
+15,Boyacá,total,70,70,7225
+15,Boyacá,total,71,71,725
+15,Boyacá,total,72,72,2350
+15,Boyacá,total,73,73,2275
+15,Boyacá,total,74,74,875
+15,Boyacá,total,75,75,2750
+15,Boyacá,total,76,76,850
+15,Boyacá,total,77,77,250
+15,Boyacá,total,78,78,800
+15,Boyacá,total,79,79,375
+15,Boyacá,total,80,80,3025
+15,Boyacá,total,81,81,125
+15,Boyacá,total,82,82,500
+15,Boyacá,total,83,83,325
+15,Boyacá,total,84,84,50
+15,Boyacá,total,85+,85,3075
+17,Caldas,male,0,0,7675
+17,Caldas,male,1,1,8500
+17,Caldas,male,2,2,9725
+17,Caldas,male,3,3,10125
+17,Caldas,male,4,4,10550
+17,Caldas,male,5,5,10175
+17,Caldas,male,6,6,9975
+17,Caldas,male,7,7,11000
+17,Caldas,male,8,8,10875
+17,Caldas,male,9,9,9275
+17,Caldas,male,10,10,11225
+17,Caldas,male,11,11,9425
+17,Caldas,male,12,12,10175
+17,Caldas,male,13,13,9300
+17,Caldas,male,14,14,8975
+17,Caldas,male,15,15,8000
+17,Caldas,male,16,16,7550
+17,Caldas,male,17,17,7000
+17,Caldas,male,18,18,6900
+17,Caldas,male,19,19,5675
+17,Caldas,male,20,20,5525
+17,Caldas,male,21,21,4875
+17,Caldas,male,22,22,4625
+17,Caldas,male,23,23,4550
+17,Caldas,male,24,24,4375
+17,Caldas,male,25,25,4500
+17,Caldas,male,26,26,3375
+17,Caldas,male,27,27,3550
+17,Caldas,male,28,28,4625
+17,Caldas,male,29,29,2800
+17,Caldas,male,30,30,3850
+17,Caldas,male,31,31,2075
+17,Caldas,male,32,32,3750
+17,Caldas,male,33,33,3150
+17,Caldas,male,34,34,2125
+17,Caldas,male,35,35,4575
+17,Caldas,male,36,36,2125
+17,Caldas,male,37,37,2725
+17,Caldas,male,38,38,3850
+17,Caldas,male,39,39,2475
+17,Caldas,male,40,40,4125
+17,Caldas,male,41,41,1575
+17,Caldas,male,42,42,2750
+17,Caldas,male,43,43,2500
+17,Caldas,male,44,44,1775
+17,Caldas,male,45,45,4175
+17,Caldas,male,46,46,1600
+17,Caldas,male,47,47,2025
+17,Caldas,male,48,48,2225
+17,Caldas,male,49,49,2100
+17,Caldas,male,50,50,3800
+17,Caldas,male,51,51,1075
+17,Caldas,male,52,52,1675
+17,Caldas,male,53,53,1725
+17,Caldas,male,54,54,1475
+17,Caldas,male,55,55,2000
+17,Caldas,male,56,56,1275
+17,Caldas,male,57,57,1000
+17,Caldas,male,58,58,1350
+17,Caldas,male,59,59,1050
+17,Caldas,male,60,60,2575
+17,Caldas,male,61,61,700
+17,Caldas,male,62,62,1025
+17,Caldas,male,63,63,1250
+17,Caldas,male,64,64,775
+17,Caldas,male,65,65,1350
+17,Caldas,male,66,66,650
+17,Caldas,male,67,67,500
+17,Caldas,male,68,68,625
+17,Caldas,male,69,69,550
+17,Caldas,male,70,70,1425
+17,Caldas,male,71,71,325
+17,Caldas,male,72,72,550
+17,Caldas,male,73,73,800
+17,Caldas,male,74,74,500
+17,Caldas,male,75,75,550
+17,Caldas,male,76,76,250
+17,Caldas,male,77,77,150
+17,Caldas,male,78,78,150
+17,Caldas,male,79,79,150
+17,Caldas,male,80,80,500
+17,Caldas,male,81,81,25
+17,Caldas,male,82,82,150
+17,Caldas,male,83,83,150
+17,Caldas,male,84,84,50
+17,Caldas,male,85+,85,675
+17,Caldas,female,0,0,7050
+17,Caldas,female,1,1,8625
+17,Caldas,female,2,2,9175
+17,Caldas,female,3,3,9550
+17,Caldas,female,4,4,9825
+17,Caldas,female,5,5,9475
+17,Caldas,female,6,6,10475
+17,Caldas,female,7,7,10325
+17,Caldas,female,8,8,9825
+17,Caldas,female,9,9,9575
+17,Caldas,female,10,10,11200
+17,Caldas,female,11,11,10125
+17,Caldas,female,12,12,9975
+17,Caldas,female,13,13,9400
+17,Caldas,female,14,14,8625
+17,Caldas,female,15,15,9425
+17,Caldas,female,16,16,8350
+17,Caldas,female,17,17,9175
+17,Caldas,female,18,18,8875
+17,Caldas,female,19,19,6700
+17,Caldas,female,20,20,7950
+17,Caldas,female,21,21,5450
+17,Caldas,female,22,22,5950
+17,Caldas,female,23,23,6550
+17,Caldas,female,24,24,5100
+17,Caldas,female,25,25,6125
+17,Caldas,female,26,26,3525
+17,Caldas,female,27,27,4650
+17,Caldas,female,28,28,4525
+17,Caldas,female,29,29,3750
+17,Caldas,female,30,30,4725
+17,Caldas,female,31,31,2150
+17,Caldas,female,32,32,3225
+17,Caldas,female,33,33,4050
+17,Caldas,female,34,34,3525
+17,Caldas,female,35,35,5900
+17,Caldas,female,36,36,3550
+17,Caldas,female,37,37,3550
+17,Caldas,female,38,38,3850
+17,Caldas,female,39,39,2250
+17,Caldas,female,40,40,6000
+17,Caldas,female,41,41,1650
+17,Caldas,female,42,42,2925
+17,Caldas,female,43,43,2775
+17,Caldas,female,44,44,2200
+17,Caldas,female,45,45,3650
+17,Caldas,female,46,46,2050
+17,Caldas,female,47,47,2325
+17,Caldas,female,48,48,2575
+17,Caldas,female,49,49,1750
+17,Caldas,female,50,50,3975
+17,Caldas,female,51,51,1200
+17,Caldas,female,52,52,1925
+17,Caldas,female,53,53,1600
+17,Caldas,female,54,54,1225
+17,Caldas,female,55,55,2050
+17,Caldas,female,56,56,1075
+17,Caldas,female,57,57,1050
+17,Caldas,female,58,58,1625
+17,Caldas,female,59,59,700
+17,Caldas,female,60,60,3425
+17,Caldas,female,61,61,575
+17,Caldas,female,62,62,975
+17,Caldas,female,63,63,1200
+17,Caldas,female,64,64,675
+17,Caldas,female,65,65,1450
+17,Caldas,female,66,66,500
+17,Caldas,female,67,67,550
+17,Caldas,female,68,68,575
+17,Caldas,female,69,69,125
+17,Caldas,female,70,70,1350
+17,Caldas,female,71,71,350
+17,Caldas,female,72,72,550
+17,Caldas,female,73,73,650
+17,Caldas,female,74,74,300
+17,Caldas,female,75,75,925
+17,Caldas,female,76,76,225
+17,Caldas,female,77,77,200
+17,Caldas,female,78,78,250
+17,Caldas,female,79,79,150
+17,Caldas,female,80,80,725
+17,Caldas,female,81,81,50
+17,Caldas,female,82,82,100
+17,Caldas,female,83,83,25
+17,Caldas,female,84,84,50
+17,Caldas,female,85+,85,675
+17,Caldas,total,0,0,14725
+17,Caldas,total,1,1,17125
+17,Caldas,total,2,2,18900
+17,Caldas,total,3,3,19675
+17,Caldas,total,4,4,20375
+17,Caldas,total,5,5,19650
+17,Caldas,total,6,6,20450
+17,Caldas,total,7,7,21325
+17,Caldas,total,8,8,20700
+17,Caldas,total,9,9,18850
+17,Caldas,total,10,10,22425
+17,Caldas,total,11,11,19550
+17,Caldas,total,12,12,20150
+17,Caldas,total,13,13,18700
+17,Caldas,total,14,14,17600
+17,Caldas,total,15,15,17425
+17,Caldas,total,16,16,15900
+17,Caldas,total,17,17,16175
+17,Caldas,total,18,18,15775
+17,Caldas,total,19,19,12375
+17,Caldas,total,20,20,13475
+17,Caldas,total,21,21,10325
+17,Caldas,total,22,22,10575
+17,Caldas,total,23,23,11100
+17,Caldas,total,24,24,9475
+17,Caldas,total,25,25,10625
+17,Caldas,total,26,26,6900
+17,Caldas,total,27,27,8200
+17,Caldas,total,28,28,9150
+17,Caldas,total,29,29,6550
+17,Caldas,total,30,30,8575
+17,Caldas,total,31,31,4225
+17,Caldas,total,32,32,6975
+17,Caldas,total,33,33,7200
+17,Caldas,total,34,34,5650
+17,Caldas,total,35,35,10475
+17,Caldas,total,36,36,5675
+17,Caldas,total,37,37,6275
+17,Caldas,total,38,38,7700
+17,Caldas,total,39,39,4725
+17,Caldas,total,40,40,10125
+17,Caldas,total,41,41,3225
+17,Caldas,total,42,42,5675
+17,Caldas,total,43,43,5275
+17,Caldas,total,44,44,3975
+17,Caldas,total,45,45,7825
+17,Caldas,total,46,46,3650
+17,Caldas,total,47,47,4350
+17,Caldas,total,48,48,4800
+17,Caldas,total,49,49,3850
+17,Caldas,total,50,50,7775
+17,Caldas,total,51,51,2275
+17,Caldas,total,52,52,3600
+17,Caldas,total,53,53,3325
+17,Caldas,total,54,54,2700
+17,Caldas,total,55,55,4050
+17,Caldas,total,56,56,2350
+17,Caldas,total,57,57,2050
+17,Caldas,total,58,58,2975
+17,Caldas,total,59,59,1750
+17,Caldas,total,60,60,6000
+17,Caldas,total,61,61,1275
+17,Caldas,total,62,62,2000
+17,Caldas,total,63,63,2450
+17,Caldas,total,64,64,1450
+17,Caldas,total,65,65,2800
+17,Caldas,total,66,66,1150
+17,Caldas,total,67,67,1050
+17,Caldas,total,68,68,1200
+17,Caldas,total,69,69,675
+17,Caldas,total,70,70,2775
+17,Caldas,total,71,71,675
+17,Caldas,total,72,72,1100
+17,Caldas,total,73,73,1450
+17,Caldas,total,74,74,800
+17,Caldas,total,75,75,1475
+17,Caldas,total,76,76,475
+17,Caldas,total,77,77,350
+17,Caldas,total,78,78,400
+17,Caldas,total,79,79,300
+17,Caldas,total,80,80,1225
+17,Caldas,total,81,81,75
+17,Caldas,total,82,82,250
+17,Caldas,total,83,83,175
+17,Caldas,total,84,84,100
+17,Caldas,total,85+,85,1350
+19,Cauca,male,0,0,7175
+19,Cauca,male,1,1,7550
+19,Cauca,male,2,2,9800
+19,Cauca,male,3,3,9350
+19,Cauca,male,4,4,9600
+19,Cauca,male,5,5,8750
+19,Cauca,male,6,6,9225
+19,Cauca,male,7,7,9150
+19,Cauca,male,8,8,8825
+19,Cauca,male,9,9,7700
+19,Cauca,male,10,10,8725
+19,Cauca,male,11,11,6725
+19,Cauca,male,12,12,8625
+19,Cauca,male,13,13,7525
+19,Cauca,male,14,14,6325
+19,Cauca,male,15,15,6650
+19,Cauca,male,16,16,6075
+19,Cauca,male,17,17,5350
+19,Cauca,male,18,18,6175
+19,Cauca,male,19,19,4125
+19,Cauca,male,20,20,4175
+19,Cauca,male,21,21,3750
+19,Cauca,male,22,22,3825
+19,Cauca,male,23,23,4400
+19,Cauca,male,24,24,3150
+19,Cauca,male,25,25,4400
+19,Cauca,male,26,26,2525
+19,Cauca,male,27,27,2925
+19,Cauca,male,28,28,3100
+19,Cauca,male,29,29,2350
+19,Cauca,male,30,30,3800
+19,Cauca,male,31,31,1625
+19,Cauca,male,32,32,2425
+19,Cauca,male,33,33,3125
+19,Cauca,male,34,34,2325
+19,Cauca,male,35,35,3975
+19,Cauca,male,36,36,2225
+19,Cauca,male,37,37,2275
+19,Cauca,male,38,38,3150
+19,Cauca,male,39,39,1975
+19,Cauca,male,40,40,4675
+19,Cauca,male,41,41,1150
+19,Cauca,male,42,42,2400
+19,Cauca,male,43,43,2250
+19,Cauca,male,44,44,1675
+19,Cauca,male,45,45,3000
+19,Cauca,male,46,46,1400
+19,Cauca,male,47,47,1050
+19,Cauca,male,48,48,2025
+19,Cauca,male,49,49,1525
+19,Cauca,male,50,50,3275
+19,Cauca,male,51,51,950
+19,Cauca,male,52,52,1350
+19,Cauca,male,53,53,1850
+19,Cauca,male,54,54,875
+19,Cauca,male,55,55,1525
+19,Cauca,male,56,56,925
+19,Cauca,male,57,57,825
+19,Cauca,male,58,58,975
+19,Cauca,male,59,59,600
+19,Cauca,male,60,60,2200
+19,Cauca,male,61,61,525
+19,Cauca,male,62,62,650
+19,Cauca,male,63,63,1025
+19,Cauca,male,64,64,700
+19,Cauca,male,65,65,1350
+19,Cauca,male,66,66,600
+19,Cauca,male,67,67,750
+19,Cauca,male,68,68,550
+19,Cauca,male,69,69,325
+19,Cauca,male,70,70,1125
+19,Cauca,male,71,71,225
+19,Cauca,male,72,72,400
+19,Cauca,male,73,73,425
+19,Cauca,male,74,74,300
+19,Cauca,male,75,75,375
+19,Cauca,male,76,76,200
+19,Cauca,male,77,77,100
+19,Cauca,male,78,78,225
+19,Cauca,male,79,79,75
+19,Cauca,male,80,80,300
+19,Cauca,male,81,81,50
+19,Cauca,male,82,82,50
+19,Cauca,male,83,83,75
+19,Cauca,male,84,84,150
+19,Cauca,male,85+,85,850
+19,Cauca,female,0,0,7125
+19,Cauca,female,1,1,7025
+19,Cauca,female,2,2,8700
+19,Cauca,female,3,3,9125
+19,Cauca,female,4,4,8900
+19,Cauca,female,5,5,8300
+19,Cauca,female,6,6,7825
+19,Cauca,female,7,7,9575
+19,Cauca,female,8,8,9225
+19,Cauca,female,9,9,7250
+19,Cauca,female,10,10,7850
+19,Cauca,female,11,11,7475
+19,Cauca,female,12,12,7950
+19,Cauca,female,13,13,6700
+19,Cauca,female,14,14,6000
+19,Cauca,female,15,15,6625
+19,Cauca,female,16,16,6300
+19,Cauca,female,17,17,5350
+19,Cauca,female,18,18,5425
+19,Cauca,female,19,19,5050
+19,Cauca,female,20,20,5300
+19,Cauca,female,21,21,3425
+19,Cauca,female,22,22,5400
+19,Cauca,female,23,23,4025
+19,Cauca,female,24,24,3500
+19,Cauca,female,25,25,5150
+19,Cauca,female,26,26,3375
+19,Cauca,female,27,27,2900
+19,Cauca,female,28,28,3225
+19,Cauca,female,29,29,2725
+19,Cauca,female,30,30,5725
+19,Cauca,female,31,31,2025
+19,Cauca,female,32,32,2800
+19,Cauca,female,33,33,2925
+19,Cauca,female,34,34,1825
+19,Cauca,female,35,35,4700
+19,Cauca,female,36,36,2300
+19,Cauca,female,37,37,2725
+19,Cauca,female,38,38,3150
+19,Cauca,female,39,39,1950
+19,Cauca,female,40,40,5225
+19,Cauca,female,41,41,700
+19,Cauca,female,42,42,2250
+19,Cauca,female,43,43,2050
+19,Cauca,female,44,44,1450
+19,Cauca,female,45,45,3425
+19,Cauca,female,46,46,1600
+19,Cauca,female,47,47,1375
+19,Cauca,female,48,48,2250
+19,Cauca,female,49,49,1100
+19,Cauca,female,50,50,3525
+19,Cauca,female,51,51,900
+19,Cauca,female,52,52,1325
+19,Cauca,female,53,53,1300
+19,Cauca,female,54,54,975
+19,Cauca,female,55,55,1950
+19,Cauca,female,56,56,650
+19,Cauca,female,57,57,725
+19,Cauca,female,58,58,925
+19,Cauca,female,59,59,550
+19,Cauca,female,60,60,2950
+19,Cauca,female,61,61,300
+19,Cauca,female,62,62,600
+19,Cauca,female,63,63,900
+19,Cauca,female,64,64,475
+19,Cauca,female,65,65,1250
+19,Cauca,female,66,66,325
+19,Cauca,female,67,67,275
+19,Cauca,female,68,68,525
+19,Cauca,female,69,69,300
+19,Cauca,female,70,70,1400
+19,Cauca,female,71,71,75
+19,Cauca,female,72,72,400
+19,Cauca,female,73,73,650
+19,Cauca,female,74,74,200
+19,Cauca,female,75,75,550
+19,Cauca,female,76,76,125
+19,Cauca,female,77,77,50
+19,Cauca,female,78,78,175
+19,Cauca,female,79,79,0
+19,Cauca,female,80,80,775
+19,Cauca,female,81,81,75
+19,Cauca,female,82,82,100
+19,Cauca,female,83,83,125
+19,Cauca,female,84,84,50
+19,Cauca,female,85+,85,1025
+19,Cauca,total,0,0,14300
+19,Cauca,total,1,1,14575
+19,Cauca,total,2,2,18500
+19,Cauca,total,3,3,18475
+19,Cauca,total,4,4,18500
+19,Cauca,total,5,5,17050
+19,Cauca,total,6,6,17050
+19,Cauca,total,7,7,18725
+19,Cauca,total,8,8,18050
+19,Cauca,total,9,9,14950
+19,Cauca,total,10,10,16575
+19,Cauca,total,11,11,14200
+19,Cauca,total,12,12,16575
+19,Cauca,total,13,13,14225
+19,Cauca,total,14,14,12325
+19,Cauca,total,15,15,13275
+19,Cauca,total,16,16,12375
+19,Cauca,total,17,17,10700
+19,Cauca,total,18,18,11600
+19,Cauca,total,19,19,9175
+19,Cauca,total,20,20,9475
+19,Cauca,total,21,21,7175
+19,Cauca,total,22,22,9225
+19,Cauca,total,23,23,8425
+19,Cauca,total,24,24,6650
+19,Cauca,total,25,25,9550
+19,Cauca,total,26,26,5900
+19,Cauca,total,27,27,5825
+19,Cauca,total,28,28,6325
+19,Cauca,total,29,29,5075
+19,Cauca,total,30,30,9525
+19,Cauca,total,31,31,3650
+19,Cauca,total,32,32,5225
+19,Cauca,total,33,33,6050
+19,Cauca,total,34,34,4150
+19,Cauca,total,35,35,8675
+19,Cauca,total,36,36,4525
+19,Cauca,total,37,37,5000
+19,Cauca,total,38,38,6300
+19,Cauca,total,39,39,3925
+19,Cauca,total,40,40,9900
+19,Cauca,total,41,41,1850
+19,Cauca,total,42,42,4650
+19,Cauca,total,43,43,4300
+19,Cauca,total,44,44,3125
+19,Cauca,total,45,45,6425
+19,Cauca,total,46,46,3000
+19,Cauca,total,47,47,2425
+19,Cauca,total,48,48,4275
+19,Cauca,total,49,49,2625
+19,Cauca,total,50,50,6800
+19,Cauca,total,51,51,1850
+19,Cauca,total,52,52,2675
+19,Cauca,total,53,53,3150
+19,Cauca,total,54,54,1850
+19,Cauca,total,55,55,3475
+19,Cauca,total,56,56,1575
+19,Cauca,total,57,57,1550
+19,Cauca,total,58,58,1900
+19,Cauca,total,59,59,1150
+19,Cauca,total,60,60,5150
+19,Cauca,total,61,61,825
+19,Cauca,total,62,62,1250
+19,Cauca,total,63,63,1925
+19,Cauca,total,64,64,1175
+19,Cauca,total,65,65,2600
+19,Cauca,total,66,66,925
+19,Cauca,total,67,67,1025
+19,Cauca,total,68,68,1075
+19,Cauca,total,69,69,625
+19,Cauca,total,70,70,2525
+19,Cauca,total,71,71,300
+19,Cauca,total,72,72,800
+19,Cauca,total,73,73,1075
+19,Cauca,total,74,74,500
+19,Cauca,total,75,75,925
+19,Cauca,total,76,76,325
+19,Cauca,total,77,77,150
+19,Cauca,total,78,78,400
+19,Cauca,total,79,79,75
+19,Cauca,total,80,80,1075
+19,Cauca,total,81,81,125
+19,Cauca,total,82,82,150
+19,Cauca,total,83,83,200
+19,Cauca,total,84,84,200
+19,Cauca,total,85+,85,1875
+20,Cesar,male,0,0,4250
+20,Cesar,male,1,1,4525
+20,Cesar,male,2,2,5875
+20,Cesar,male,3,3,5700
+20,Cesar,male,4,4,5625
+20,Cesar,male,5,5,5725
+20,Cesar,male,6,6,5650
+20,Cesar,male,7,7,6175
+20,Cesar,male,8,8,5675
+20,Cesar,male,9,9,4750
+20,Cesar,male,10,10,5900
+20,Cesar,male,11,11,4100
+20,Cesar,male,12,12,5300
+20,Cesar,male,13,13,4675
+20,Cesar,male,14,14,4250
+20,Cesar,male,15,15,3900
+20,Cesar,male,16,16,3600
+20,Cesar,male,17,17,3725
+20,Cesar,male,18,18,4175
+20,Cesar,male,19,19,2650
+20,Cesar,male,20,20,2700
+20,Cesar,male,21,21,2150
+20,Cesar,male,22,22,2200
+20,Cesar,male,23,23,2600
+20,Cesar,male,24,24,1975
+20,Cesar,male,25,25,2575
+20,Cesar,male,26,26,2200
+20,Cesar,male,27,27,1875
+20,Cesar,male,28,28,2250
+20,Cesar,male,29,29,1400
+20,Cesar,male,30,30,2400
+20,Cesar,male,31,31,1375
+20,Cesar,male,32,32,1925
+20,Cesar,male,33,33,1775
+20,Cesar,male,34,34,1125
+20,Cesar,male,35,35,1550
+20,Cesar,male,36,36,1450
+20,Cesar,male,37,37,1325
+20,Cesar,male,38,38,1975
+20,Cesar,male,39,39,1350
+20,Cesar,male,40,40,2525
+20,Cesar,male,41,41,850
+20,Cesar,male,42,42,1425
+20,Cesar,male,43,43,1350
+20,Cesar,male,44,44,650
+20,Cesar,male,45,45,1500
+20,Cesar,male,46,46,775
+20,Cesar,male,47,47,1025
+20,Cesar,male,48,48,1025
+20,Cesar,male,49,49,750
+20,Cesar,male,50,50,1700
+20,Cesar,male,51,51,550
+20,Cesar,male,52,52,900
+20,Cesar,male,53,53,900
+20,Cesar,male,54,54,550
+20,Cesar,male,55,55,700
+20,Cesar,male,56,56,400
+20,Cesar,male,57,57,450
+20,Cesar,male,58,58,500
+20,Cesar,male,59,59,225
+20,Cesar,male,60,60,1050
+20,Cesar,male,61,61,300
+20,Cesar,male,62,62,375
+20,Cesar,male,63,63,525
+20,Cesar,male,64,64,125
+20,Cesar,male,65,65,475
+20,Cesar,male,66,66,275
+20,Cesar,male,67,67,125
+20,Cesar,male,68,68,175
+20,Cesar,male,69,69,175
+20,Cesar,male,70,70,550
+20,Cesar,male,71,71,100
+20,Cesar,male,72,72,175
+20,Cesar,male,73,73,225
+20,Cesar,male,74,74,100
+20,Cesar,male,75,75,125
+20,Cesar,male,76,76,100
+20,Cesar,male,77,77,25
+20,Cesar,male,78,78,150
+20,Cesar,male,79,79,75
+20,Cesar,male,80,80,350
+20,Cesar,male,81,81,25
+20,Cesar,male,82,82,0
+20,Cesar,male,83,83,75
+20,Cesar,male,84,84,0
+20,Cesar,male,85+,85,200
+20,Cesar,female,0,0,3825
+20,Cesar,female,1,1,4625
+20,Cesar,female,2,2,5625
+20,Cesar,female,3,3,5650
+20,Cesar,female,4,4,5250
+20,Cesar,female,5,5,6150
+20,Cesar,female,6,6,5700
+20,Cesar,female,7,7,5775
+20,Cesar,female,8,8,5525
+20,Cesar,female,9,9,4675
+20,Cesar,female,10,10,5750
+20,Cesar,female,11,11,4325
+20,Cesar,female,12,12,5150
+20,Cesar,female,13,13,4850
+20,Cesar,female,14,14,4475
+20,Cesar,female,15,15,4525
+20,Cesar,female,16,16,3850
+20,Cesar,female,17,17,3200
+20,Cesar,female,18,18,3925
+20,Cesar,female,19,19,3250
+20,Cesar,female,20,20,3950
+20,Cesar,female,21,21,2700
+20,Cesar,female,22,22,3250
+20,Cesar,female,23,23,3000
+20,Cesar,female,24,24,2525
+20,Cesar,female,25,25,2725
+20,Cesar,female,26,26,2125
+20,Cesar,female,27,27,2425
+20,Cesar,female,28,28,2050
+20,Cesar,female,29,29,1525
+20,Cesar,female,30,30,2700
+20,Cesar,female,31,31,1100
+20,Cesar,female,32,32,1750
+20,Cesar,female,33,33,2125
+20,Cesar,female,34,34,1050
+20,Cesar,female,35,35,1825
+20,Cesar,female,36,36,1525
+20,Cesar,female,37,37,1600
+20,Cesar,female,38,38,2150
+20,Cesar,female,39,39,1200
+20,Cesar,female,40,40,2100
+20,Cesar,female,41,41,625
+20,Cesar,female,42,42,975
+20,Cesar,female,43,43,1075
+20,Cesar,female,44,44,1200
+20,Cesar,female,45,45,1475
+20,Cesar,female,46,46,975
+20,Cesar,female,47,47,1000
+20,Cesar,female,48,48,1200
+20,Cesar,female,49,49,650
+20,Cesar,female,50,50,1650
+20,Cesar,female,51,51,250
+20,Cesar,female,52,52,500
+20,Cesar,female,53,53,800
+20,Cesar,female,54,54,625
+20,Cesar,female,55,55,825
+20,Cesar,female,56,56,525
+20,Cesar,female,57,57,375
+20,Cesar,female,58,58,350
+20,Cesar,female,59,59,350
+20,Cesar,female,60,60,1050
+20,Cesar,female,61,61,150
+20,Cesar,female,62,62,350
+20,Cesar,female,63,63,450
+20,Cesar,female,64,64,300
+20,Cesar,female,65,65,325
+20,Cesar,female,66,66,200
+20,Cesar,female,67,67,150
+20,Cesar,female,68,68,325
+20,Cesar,female,69,69,50
+20,Cesar,female,70,70,700
+20,Cesar,female,71,71,25
+20,Cesar,female,72,72,75
+20,Cesar,female,73,73,75
+20,Cesar,female,74,74,100
+20,Cesar,female,75,75,250
+20,Cesar,female,76,76,0
+20,Cesar,female,77,77,75
+20,Cesar,female,78,78,125
+20,Cesar,female,79,79,75
+20,Cesar,female,80,80,350
+20,Cesar,female,81,81,0
+20,Cesar,female,82,82,0
+20,Cesar,female,83,83,100
+20,Cesar,female,84,84,0
+20,Cesar,female,85+,85,600
+20,Cesar,total,0,0,8075
+20,Cesar,total,1,1,9150
+20,Cesar,total,2,2,11500
+20,Cesar,total,3,3,11350
+20,Cesar,total,4,4,10875
+20,Cesar,total,5,5,11875
+20,Cesar,total,6,6,11350
+20,Cesar,total,7,7,11950
+20,Cesar,total,8,8,11200
+20,Cesar,total,9,9,9425
+20,Cesar,total,10,10,11650
+20,Cesar,total,11,11,8425
+20,Cesar,total,12,12,10450
+20,Cesar,total,13,13,9525
+20,Cesar,total,14,14,8725
+20,Cesar,total,15,15,8425
+20,Cesar,total,16,16,7450
+20,Cesar,total,17,17,6925
+20,Cesar,total,18,18,8100
+20,Cesar,total,19,19,5900
+20,Cesar,total,20,20,6650
+20,Cesar,total,21,21,4850
+20,Cesar,total,22,22,5450
+20,Cesar,total,23,23,5600
+20,Cesar,total,24,24,4500
+20,Cesar,total,25,25,5300
+20,Cesar,total,26,26,4325
+20,Cesar,total,27,27,4300
+20,Cesar,total,28,28,4300
+20,Cesar,total,29,29,2925
+20,Cesar,total,30,30,5100
+20,Cesar,total,31,31,2475
+20,Cesar,total,32,32,3675
+20,Cesar,total,33,33,3900
+20,Cesar,total,34,34,2175
+20,Cesar,total,35,35,3375
+20,Cesar,total,36,36,2975
+20,Cesar,total,37,37,2925
+20,Cesar,total,38,38,4125
+20,Cesar,total,39,39,2550
+20,Cesar,total,40,40,4625
+20,Cesar,total,41,41,1475
+20,Cesar,total,42,42,2400
+20,Cesar,total,43,43,2425
+20,Cesar,total,44,44,1850
+20,Cesar,total,45,45,2975
+20,Cesar,total,46,46,1750
+20,Cesar,total,47,47,2025
+20,Cesar,total,48,48,2225
+20,Cesar,total,49,49,1400
+20,Cesar,total,50,50,3350
+20,Cesar,total,51,51,800
+20,Cesar,total,52,52,1400
+20,Cesar,total,53,53,1700
+20,Cesar,total,54,54,1175
+20,Cesar,total,55,55,1525
+20,Cesar,total,56,56,925
+20,Cesar,total,57,57,825
+20,Cesar,total,58,58,850
+20,Cesar,total,59,59,575
+20,Cesar,total,60,60,2100
+20,Cesar,total,61,61,450
+20,Cesar,total,62,62,725
+20,Cesar,total,63,63,975
+20,Cesar,total,64,64,425
+20,Cesar,total,65,65,800
+20,Cesar,total,66,66,475
+20,Cesar,total,67,67,275
+20,Cesar,total,68,68,500
+20,Cesar,total,69,69,225
+20,Cesar,total,70,70,1250
+20,Cesar,total,71,71,125
+20,Cesar,total,72,72,250
+20,Cesar,total,73,73,300
+20,Cesar,total,74,74,200
+20,Cesar,total,75,75,375
+20,Cesar,total,76,76,100
+20,Cesar,total,77,77,100
+20,Cesar,total,78,78,275
+20,Cesar,total,79,79,150
+20,Cesar,total,80,80,700
+20,Cesar,total,81,81,25
+20,Cesar,total,82,82,0
+20,Cesar,total,83,83,175
+20,Cesar,total,84,84,0
+20,Cesar,total,85+,85,800
+23,Córdoba,male,0,0,7800
+23,Córdoba,male,1,1,8575
+23,Córdoba,male,2,2,9950
+23,Córdoba,male,3,3,12700
+23,Córdoba,male,4,4,11600
+23,Córdoba,male,5,5,11675
+23,Córdoba,male,6,6,10875
+23,Córdoba,male,7,7,12700
+23,Córdoba,male,8,8,11475
+23,Córdoba,male,9,9,9425
+23,Córdoba,male,10,10,11425
+23,Córdoba,male,11,11,8675
+23,Córdoba,male,12,12,11675
+23,Córdoba,male,13,13,9275
+23,Córdoba,male,14,14,10125
+23,Córdoba,male,15,15,7825
+23,Córdoba,male,16,16,7075
+23,Córdoba,male,17,17,7375
+23,Córdoba,male,18,18,8325
+23,Córdoba,male,19,19,5700
+23,Córdoba,male,20,20,6075
+23,Córdoba,male,21,21,4750
+23,Córdoba,male,22,22,5200
+23,Córdoba,male,23,23,5425
+23,Córdoba,male,24,24,4775
+23,Córdoba,male,25,25,4150
+23,Córdoba,male,26,26,3475
+23,Córdoba,male,27,27,3125
+23,Córdoba,male,28,28,3950
+23,Córdoba,male,29,29,2175
+23,Córdoba,male,30,30,4600
+23,Córdoba,male,31,31,1650
+23,Córdoba,male,32,32,3300
+23,Córdoba,male,33,33,3225
+23,Córdoba,male,34,34,2650
+23,Córdoba,male,35,35,4000
+23,Córdoba,male,36,36,2375
+23,Córdoba,male,37,37,2750
+23,Córdoba,male,38,38,3225
+23,Córdoba,male,39,39,1875
+23,Córdoba,male,40,40,4400
+23,Córdoba,male,41,41,1050
+23,Córdoba,male,42,42,2450
+23,Córdoba,male,43,43,2300
+23,Córdoba,male,44,44,1425
+23,Córdoba,male,45,45,2875
+23,Córdoba,male,46,46,1375
+23,Córdoba,male,47,47,1300
+23,Córdoba,male,48,48,2150
+23,Córdoba,male,49,49,1575
+23,Córdoba,male,50,50,3375
+23,Córdoba,male,51,51,1025
+23,Córdoba,male,52,52,1525
+23,Córdoba,male,53,53,1550
+23,Córdoba,male,54,54,975
+23,Córdoba,male,55,55,1875
+23,Córdoba,male,56,56,1450
+23,Córdoba,male,57,57,825
+23,Córdoba,male,58,58,875
+23,Córdoba,male,59,59,650
+23,Córdoba,male,60,60,2725
+23,Córdoba,male,61,61,400
+23,Córdoba,male,62,62,875
+23,Córdoba,male,63,63,850
+23,Córdoba,male,64,64,575
+23,Córdoba,male,65,65,1075
+23,Córdoba,male,66,66,425
+23,Córdoba,male,67,67,600
+23,Córdoba,male,68,68,600
+23,Córdoba,male,69,69,150
+23,Córdoba,male,70,70,1225
+23,Córdoba,male,71,71,75
+23,Córdoba,male,72,72,500
+23,Córdoba,male,73,73,475
+23,Córdoba,male,74,74,225
+23,Córdoba,male,75,75,650
+23,Córdoba,male,76,76,125
+23,Córdoba,male,77,77,200
+23,Córdoba,male,78,78,225
+23,Córdoba,male,79,79,75
+23,Córdoba,male,80,80,425
+23,Córdoba,male,81,81,0
+23,Córdoba,male,82,82,50
+23,Córdoba,male,83,83,175
+23,Córdoba,male,84,84,125
+23,Córdoba,male,85+,85,900
+23,Córdoba,female,0,0,7950
+23,Córdoba,female,1,1,9100
+23,Córdoba,female,2,2,10525
+23,Córdoba,female,3,3,11075
+23,Córdoba,female,4,4,9950
+23,Córdoba,female,5,5,11450
+23,Córdoba,female,6,6,11050
+23,Córdoba,female,7,7,11575
+23,Córdoba,female,8,8,10925
+23,Córdoba,female,9,9,9550
+23,Córdoba,female,10,10,10725
+23,Córdoba,female,11,11,8800
+23,Córdoba,female,12,12,11425
+23,Córdoba,female,13,13,9350
+23,Córdoba,female,14,14,8125
+23,Córdoba,female,15,15,7475
+23,Córdoba,female,16,16,7650
+23,Córdoba,female,17,17,7375
+23,Córdoba,female,18,18,8000
+23,Córdoba,female,19,19,5900
+23,Córdoba,female,20,20,6725
+23,Córdoba,female,21,21,4600
+23,Córdoba,female,22,22,5975
+23,Córdoba,female,23,23,6225
+23,Córdoba,female,24,24,3825
+23,Córdoba,female,25,25,5750
+23,Córdoba,female,26,26,3825
+23,Córdoba,female,27,27,4025
+23,Córdoba,female,28,28,4575
+23,Córdoba,female,29,29,2550
+23,Córdoba,female,30,30,6150
+23,Córdoba,female,31,31,1425
+23,Córdoba,female,32,32,3175
+23,Córdoba,female,33,33,3450
+23,Córdoba,female,34,34,2550
+23,Córdoba,female,35,35,4550
+23,Córdoba,female,36,36,3050
+23,Córdoba,female,37,37,2675
+23,Córdoba,female,38,38,3600
+23,Córdoba,female,39,39,1825
+23,Córdoba,female,40,40,5050
+23,Córdoba,female,41,41,900
+23,Córdoba,female,42,42,2575
+23,Córdoba,female,43,43,1925
+23,Córdoba,female,44,44,1475
+23,Córdoba,female,45,45,3425
+23,Córdoba,female,46,46,1400
+23,Córdoba,female,47,47,1675
+23,Córdoba,female,48,48,1975
+23,Córdoba,female,49,49,1275
+23,Córdoba,female,50,50,3475
+23,Córdoba,female,51,51,775
+23,Córdoba,female,52,52,1450
+23,Córdoba,female,53,53,1350
+23,Córdoba,female,54,54,800
+23,Córdoba,female,55,55,1600
+23,Córdoba,female,56,56,925
+23,Córdoba,female,57,57,450
+23,Córdoba,female,58,58,1200
+23,Córdoba,female,59,59,550
+23,Córdoba,female,60,60,3150
+23,Córdoba,female,61,61,275
+23,Córdoba,female,62,62,650
+23,Córdoba,female,63,63,875
+23,Córdoba,female,64,64,450
+23,Córdoba,female,65,65,1525
+23,Córdoba,female,66,66,625
+23,Córdoba,female,67,67,350
+23,Córdoba,female,68,68,450
+23,Córdoba,female,69,69,250
+23,Córdoba,female,70,70,2000
+23,Córdoba,female,71,71,75
+23,Córdoba,female,72,72,450
+23,Córdoba,female,73,73,525
+23,Córdoba,female,74,74,125
+23,Córdoba,female,75,75,750
+23,Córdoba,female,76,76,200
+23,Córdoba,female,77,77,100
+23,Córdoba,female,78,78,250
+23,Córdoba,female,79,79,25
+23,Córdoba,female,80,80,775
+23,Córdoba,female,81,81,75
+23,Córdoba,female,82,82,0
+23,Córdoba,female,83,83,125
+23,Córdoba,female,84,84,75
+23,Córdoba,female,85+,85,1025
+23,Córdoba,total,0,0,15750
+23,Córdoba,total,1,1,17675
+23,Córdoba,total,2,2,20475
+23,Córdoba,total,3,3,23775
+23,Córdoba,total,4,4,21550
+23,Córdoba,total,5,5,23125
+23,Córdoba,total,6,6,21925
+23,Córdoba,total,7,7,24275
+23,Córdoba,total,8,8,22400
+23,Córdoba,total,9,9,18975
+23,Córdoba,total,10,10,22150
+23,Córdoba,total,11,11,17475
+23,Córdoba,total,12,12,23100
+23,Córdoba,total,13,13,18625
+23,Córdoba,total,14,14,18250
+23,Córdoba,total,15,15,15300
+23,Córdoba,total,16,16,14725
+23,Córdoba,total,17,17,14750
+23,Córdoba,total,18,18,16325
+23,Córdoba,total,19,19,11600
+23,Córdoba,total,20,20,12800
+23,Córdoba,total,21,21,9350
+23,Córdoba,total,22,22,11175
+23,Córdoba,total,23,23,11650
+23,Córdoba,total,24,24,8600
+23,Córdoba,total,25,25,9900
+23,Córdoba,total,26,26,7300
+23,Córdoba,total,27,27,7150
+23,Córdoba,total,28,28,8525
+23,Córdoba,total,29,29,4725
+23,Córdoba,total,30,30,10750
+23,Córdoba,total,31,31,3075
+23,Córdoba,total,32,32,6475
+23,Córdoba,total,33,33,6675
+23,Córdoba,total,34,34,5200
+23,Córdoba,total,35,35,8550
+23,Córdoba,total,36,36,5425
+23,Córdoba,total,37,37,5425
+23,Córdoba,total,38,38,6825
+23,Córdoba,total,39,39,3700
+23,Córdoba,total,40,40,9450
+23,Córdoba,total,41,41,1950
+23,Córdoba,total,42,42,5025
+23,Córdoba,total,43,43,4225
+23,Córdoba,total,44,44,2900
+23,Córdoba,total,45,45,6300
+23,Córdoba,total,46,46,2775
+23,Córdoba,total,47,47,2975
+23,Córdoba,total,48,48,4125
+23,Córdoba,total,49,49,2850
+23,Córdoba,total,50,50,6850
+23,Córdoba,total,51,51,1800
+23,Córdoba,total,52,52,2975
+23,Córdoba,total,53,53,2900
+23,Córdoba,total,54,54,1775
+23,Córdoba,total,55,55,3475
+23,Córdoba,total,56,56,2375
+23,Córdoba,total,57,57,1275
+23,Córdoba,total,58,58,2075
+23,Córdoba,total,59,59,1200
+23,Córdoba,total,60,60,5875
+23,Córdoba,total,61,61,675
+23,Córdoba,total,62,62,1525
+23,Córdoba,total,63,63,1725
+23,Córdoba,total,64,64,1025
+23,Córdoba,total,65,65,2600
+23,Córdoba,total,66,66,1050
+23,Córdoba,total,67,67,950
+23,Córdoba,total,68,68,1050
+23,Córdoba,total,69,69,400
+23,Córdoba,total,70,70,3225
+23,Córdoba,total,71,71,150
+23,Córdoba,total,72,72,950
+23,Córdoba,total,73,73,1000
+23,Córdoba,total,74,74,350
+23,Córdoba,total,75,75,1400
+23,Córdoba,total,76,76,325
+23,Córdoba,total,77,77,300
+23,Córdoba,total,78,78,475
+23,Córdoba,total,79,79,100
+23,Córdoba,total,80,80,1200
+23,Córdoba,total,81,81,75
+23,Córdoba,total,82,82,50
+23,Córdoba,total,83,83,300
+23,Córdoba,total,84,84,200
+23,Córdoba,total,85+,85,1925
+27,Chocó,male,0,0,2700
+27,Chocó,male,1,1,2375
+27,Chocó,male,2,2,2675
+27,Chocó,male,3,3,3325
+27,Chocó,male,4,4,3050
+27,Chocó,male,5,5,2875
+27,Chocó,male,6,6,2400
+27,Chocó,male,7,7,2550
+27,Chocó,male,8,8,3150
+27,Chocó,male,9,9,2500
+27,Chocó,male,10,10,3050
+27,Chocó,male,11,11,1800
+27,Chocó,male,12,12,3225
+27,Chocó,male,13,13,2250
+27,Chocó,male,14,14,2625
+27,Chocó,male,15,15,2725
+27,Chocó,male,16,16,1875
+27,Chocó,male,17,17,1450
+27,Chocó,male,18,18,2450
+27,Chocó,male,19,19,1250
+27,Chocó,male,20,20,1150
+27,Chocó,male,21,21,825
+27,Chocó,male,22,22,1200
+27,Chocó,male,23,23,1050
+27,Chocó,male,24,24,1025
+27,Chocó,male,25,25,875
+27,Chocó,male,26,26,675
+27,Chocó,male,27,27,650
+27,Chocó,male,28,28,850
+27,Chocó,male,29,29,500
+27,Chocó,male,30,30,1150
+27,Chocó,male,31,31,225
+27,Chocó,male,32,32,475
+27,Chocó,male,33,33,675
+27,Chocó,male,34,34,625
+27,Chocó,male,35,35,800
+27,Chocó,male,36,36,850
+27,Chocó,male,37,37,600
+27,Chocó,male,38,38,1100
+27,Chocó,male,39,39,725
+27,Chocó,male,40,40,1275
+27,Chocó,male,41,41,375
+27,Chocó,male,42,42,550
+27,Chocó,male,43,43,500
+27,Chocó,male,44,44,525
+27,Chocó,male,45,45,1050
+27,Chocó,male,46,46,425
+27,Chocó,male,47,47,550
+27,Chocó,male,48,48,450
+27,Chocó,male,49,49,225
+27,Chocó,male,50,50,1175
+27,Chocó,male,51,51,325
+27,Chocó,male,52,52,450
+27,Chocó,male,53,53,350
+27,Chocó,male,54,54,300
+27,Chocó,male,55,55,675
+27,Chocó,male,56,56,275
+27,Chocó,male,57,57,300
+27,Chocó,male,58,58,375
+27,Chocó,male,59,59,250
+27,Chocó,male,60,60,725
+27,Chocó,male,61,61,200
+27,Chocó,male,62,62,150
+27,Chocó,male,63,63,450
+27,Chocó,male,64,64,75
+27,Chocó,male,65,65,225
+27,Chocó,male,66,66,225
+27,Chocó,male,67,67,200
+27,Chocó,male,68,68,225
+27,Chocó,male,69,69,50
+27,Chocó,male,70,70,550
+27,Chocó,male,71,71,75
+27,Chocó,male,72,72,75
+27,Chocó,male,73,73,200
+27,Chocó,male,74,74,75
+27,Chocó,male,75,75,175
+27,Chocó,male,76,76,25
+27,Chocó,male,77,77,100
+27,Chocó,male,78,78,75
+27,Chocó,male,79,79,25
+27,Chocó,male,80,80,200
+27,Chocó,male,81,81,0
+27,Chocó,male,82,82,25
+27,Chocó,male,83,83,25
+27,Chocó,male,84,84,25
+27,Chocó,male,85+,85,200
+27,Chocó,female,0,0,2550
+27,Chocó,female,1,1,2350
+27,Chocó,female,2,2,3425
+27,Chocó,female,3,3,3450
+27,Chocó,female,4,4,3250
+27,Chocó,female,5,5,2700
+27,Chocó,female,6,6,3225
+27,Chocó,female,7,7,3150
+27,Chocó,female,8,8,3150
+27,Chocó,female,9,9,2425
+27,Chocó,female,10,10,3200
+27,Chocó,female,11,11,2350
+27,Chocó,female,12,12,2775
+27,Chocó,female,13,13,2675
+27,Chocó,female,14,14,2475
+27,Chocó,female,15,15,2475
+27,Chocó,female,16,16,2150
+27,Chocó,female,17,17,1825
+27,Chocó,female,18,18,1500
+27,Chocó,female,19,19,1225
+27,Chocó,female,20,20,1775
+27,Chocó,female,21,21,1225
+27,Chocó,female,22,22,1275
+27,Chocó,female,23,23,1325
+27,Chocó,female,24,24,1125
+27,Chocó,female,25,25,1300
+27,Chocó,female,26,26,1175
+27,Chocó,female,27,27,875
+27,Chocó,female,28,28,1350
+27,Chocó,female,29,29,875
+27,Chocó,female,30,30,1425
+27,Chocó,female,31,31,450
+27,Chocó,female,32,32,675
+27,Chocó,female,33,33,725
+27,Chocó,female,34,34,700
+27,Chocó,female,35,35,1250
+27,Chocó,female,36,36,1000
+27,Chocó,female,37,37,500
+27,Chocó,female,38,38,925
+27,Chocó,female,39,39,600
+27,Chocó,female,40,40,1500
+27,Chocó,female,41,41,500
+27,Chocó,female,42,42,575
+27,Chocó,female,43,43,550
+27,Chocó,female,44,44,525
+27,Chocó,female,45,45,825
+27,Chocó,female,46,46,575
+27,Chocó,female,47,47,475
+27,Chocó,female,48,48,600
+27,Chocó,female,49,49,400
+27,Chocó,female,50,50,1225
+27,Chocó,female,51,51,250
+27,Chocó,female,52,52,525
+27,Chocó,female,53,53,500
+27,Chocó,female,54,54,400
+27,Chocó,female,55,55,425
+27,Chocó,female,56,56,325
+27,Chocó,female,57,57,300
+27,Chocó,female,58,58,200
+27,Chocó,female,59,59,175
+27,Chocó,female,60,60,700
+27,Chocó,female,61,61,100
+27,Chocó,female,62,62,125
+27,Chocó,female,63,63,275
+27,Chocó,female,64,64,225
+27,Chocó,female,65,65,450
+27,Chocó,female,66,66,75
+27,Chocó,female,67,67,75
+27,Chocó,female,68,68,125
+27,Chocó,female,69,69,125
+27,Chocó,female,70,70,425
+27,Chocó,female,71,71,100
+27,Chocó,female,72,72,150
+27,Chocó,female,73,73,200
+27,Chocó,female,74,74,50
+27,Chocó,female,75,75,175
+27,Chocó,female,76,76,0
+27,Chocó,female,77,77,50
+27,Chocó,female,78,78,100
+27,Chocó,female,79,79,25
+27,Chocó,female,80,80,325
+27,Chocó,female,81,81,0
+27,Chocó,female,82,82,0
+27,Chocó,female,83,83,75
+27,Chocó,female,84,84,0
+27,Chocó,female,85+,85,350
+27,Chocó,total,0,0,5250
+27,Chocó,total,1,1,4725
+27,Chocó,total,2,2,6100
+27,Chocó,total,3,3,6775
+27,Chocó,total,4,4,6300
+27,Chocó,total,5,5,5575
+27,Chocó,total,6,6,5625
+27,Chocó,total,7,7,5700
+27,Chocó,total,8,8,6300
+27,Chocó,total,9,9,4925
+27,Chocó,total,10,10,6250
+27,Chocó,total,11,11,4150
+27,Chocó,total,12,12,6000
+27,Chocó,total,13,13,4925
+27,Chocó,total,14,14,5100
+27,Chocó,total,15,15,5200
+27,Chocó,total,16,16,4025
+27,Chocó,total,17,17,3275
+27,Chocó,total,18,18,3950
+27,Chocó,total,19,19,2475
+27,Chocó,total,20,20,2925
+27,Chocó,total,21,21,2050
+27,Chocó,total,22,22,2475
+27,Chocó,total,23,23,2375
+27,Chocó,total,24,24,2150
+27,Chocó,total,25,25,2175
+27,Chocó,total,26,26,1850
+27,Chocó,total,27,27,1525
+27,Chocó,total,28,28,2200
+27,Chocó,total,29,29,1375
+27,Chocó,total,30,30,2575
+27,Chocó,total,31,31,675
+27,Chocó,total,32,32,1150
+27,Chocó,total,33,33,1400
+27,Chocó,total,34,34,1325
+27,Chocó,total,35,35,2050
+27,Chocó,total,36,36,1850
+27,Chocó,total,37,37,1100
+27,Chocó,total,38,38,2025
+27,Chocó,total,39,39,1325
+27,Chocó,total,40,40,2775
+27,Chocó,total,41,41,875
+27,Chocó,total,42,42,1125
+27,Chocó,total,43,43,1050
+27,Chocó,total,44,44,1050
+27,Chocó,total,45,45,1875
+27,Chocó,total,46,46,1000
+27,Chocó,total,47,47,1025
+27,Chocó,total,48,48,1050
+27,Chocó,total,49,49,625
+27,Chocó,total,50,50,2400
+27,Chocó,total,51,51,575
+27,Chocó,total,52,52,975
+27,Chocó,total,53,53,850
+27,Chocó,total,54,54,700
+27,Chocó,total,55,55,1100
+27,Chocó,total,56,56,600
+27,Chocó,total,57,57,600
+27,Chocó,total,58,58,575
+27,Chocó,total,59,59,425
+27,Chocó,total,60,60,1425
+27,Chocó,total,61,61,300
+27,Chocó,total,62,62,275
+27,Chocó,total,63,63,725
+27,Chocó,total,64,64,300
+27,Chocó,total,65,65,675
+27,Chocó,total,66,66,300
+27,Chocó,total,67,67,275
+27,Chocó,total,68,68,350
+27,Chocó,total,69,69,175
+27,Chocó,total,70,70,975
+27,Chocó,total,71,71,175
+27,Chocó,total,72,72,225
+27,Chocó,total,73,73,400
+27,Chocó,total,74,74,125
+27,Chocó,total,75,75,350
+27,Chocó,total,76,76,25
+27,Chocó,total,77,77,150
+27,Chocó,total,78,78,175
+27,Chocó,total,79,79,50
+27,Chocó,total,80,80,525
+27,Chocó,total,81,81,0
+27,Chocó,total,82,82,25
+27,Chocó,total,83,83,100
+27,Chocó,total,84,84,25
+27,Chocó,total,85+,85,550
+25,Cundinamarca,male,0,0,13225
+25,Cundinamarca,male,1,1,13600
+25,Cundinamarca,male,2,2,15075
+25,Cundinamarca,male,3,3,17375
+25,Cundinamarca,male,4,4,17975
+25,Cundinamarca,male,5,5,18250
+25,Cundinamarca,male,6,6,17975
+25,Cundinamarca,male,7,7,19225
+25,Cundinamarca,male,8,8,18150
+25,Cundinamarca,male,9,9,16450
+25,Cundinamarca,male,10,10,17025
+25,Cundinamarca,male,11,11,15650
+25,Cundinamarca,male,12,12,18275
+25,Cundinamarca,male,13,13,16825
+25,Cundinamarca,male,14,14,13875
+25,Cundinamarca,male,15,15,13975
+25,Cundinamarca,male,16,16,12825
+25,Cundinamarca,male,17,17,11550
+25,Cundinamarca,male,18,18,12900
+25,Cundinamarca,male,19,19,8600
+25,Cundinamarca,male,20,20,9550
+25,Cundinamarca,male,21,21,7075
+25,Cundinamarca,male,22,22,8500
+25,Cundinamarca,male,23,23,7800
+25,Cundinamarca,male,24,24,5675
+25,Cundinamarca,male,25,25,7275
+25,Cundinamarca,male,26,26,6025
+25,Cundinamarca,male,27,27,5675
+25,Cundinamarca,male,28,28,6525
+25,Cundinamarca,male,29,29,5025
+25,Cundinamarca,male,30,30,7525
+25,Cundinamarca,male,31,31,3425
+25,Cundinamarca,male,32,32,5550
+25,Cundinamarca,male,33,33,6000
+25,Cundinamarca,male,34,34,3975
+25,Cundinamarca,male,35,35,6700
+25,Cundinamarca,male,36,36,4475
+25,Cundinamarca,male,37,37,4500
+25,Cundinamarca,male,38,38,6725
+25,Cundinamarca,male,39,39,4050
+25,Cundinamarca,male,40,40,8950
+25,Cundinamarca,male,41,41,2475
+25,Cundinamarca,male,42,42,5700
+25,Cundinamarca,male,43,43,4575
+25,Cundinamarca,male,44,44,3025
+25,Cundinamarca,male,45,45,6475
+25,Cundinamarca,male,46,46,2825
+25,Cundinamarca,male,47,47,3100
+25,Cundinamarca,male,48,48,4800
+25,Cundinamarca,male,49,49,2675
+25,Cundinamarca,male,50,50,6275
+25,Cundinamarca,male,51,51,2400
+25,Cundinamarca,male,52,52,3925
+25,Cundinamarca,male,53,53,3650
+25,Cundinamarca,male,54,54,2625
+25,Cundinamarca,male,55,55,4800
+25,Cundinamarca,male,56,56,2625
+25,Cundinamarca,male,57,57,2175
+25,Cundinamarca,male,58,58,2825
+25,Cundinamarca,male,59,59,1650
+25,Cundinamarca,male,60,60,5450
+25,Cundinamarca,male,61,61,1325
+25,Cundinamarca,male,62,62,2675
+25,Cundinamarca,male,63,63,3000
+25,Cundinamarca,male,64,64,1400
+25,Cundinamarca,male,65,65,3250
+25,Cundinamarca,male,66,66,1400
+25,Cundinamarca,male,67,67,1050
+25,Cundinamarca,male,68,68,1625
+25,Cundinamarca,male,69,69,825
+25,Cundinamarca,male,70,70,2750
+25,Cundinamarca,male,71,71,625
+25,Cundinamarca,male,72,72,950
+25,Cundinamarca,male,73,73,1625
+25,Cundinamarca,male,74,74,550
+25,Cundinamarca,male,75,75,1450
+25,Cundinamarca,male,76,76,500
+25,Cundinamarca,male,77,77,625
+25,Cundinamarca,male,78,78,500
+25,Cundinamarca,male,79,79,275
+25,Cundinamarca,male,80,80,775
+25,Cundinamarca,male,81,81,175
+25,Cundinamarca,male,82,82,300
+25,Cundinamarca,male,83,83,225
+25,Cundinamarca,male,84,84,200
+25,Cundinamarca,male,85+,85,1375
+25,Cundinamarca,female,0,0,11625
+25,Cundinamarca,female,1,1,14200
+25,Cundinamarca,female,2,2,16125
+25,Cundinamarca,female,3,3,16125
+25,Cundinamarca,female,4,4,16750
+25,Cundinamarca,female,5,5,17925
+25,Cundinamarca,female,6,6,17225
+25,Cundinamarca,female,7,7,18675
+25,Cundinamarca,female,8,8,17250
+25,Cundinamarca,female,9,9,15100
+25,Cundinamarca,female,10,10,16700
+25,Cundinamarca,female,11,11,14975
+25,Cundinamarca,female,12,12,15875
+25,Cundinamarca,female,13,13,15975
+25,Cundinamarca,female,14,14,12875
+25,Cundinamarca,female,15,15,13825
+25,Cundinamarca,female,16,16,11150
+25,Cundinamarca,female,17,17,10650
+25,Cundinamarca,female,18,18,11750
+25,Cundinamarca,female,19,19,8400
+25,Cundinamarca,female,20,20,9525
+25,Cundinamarca,female,21,21,7150
+25,Cundinamarca,female,22,22,8325
+25,Cundinamarca,female,23,23,8175
+25,Cundinamarca,female,24,24,6025
+25,Cundinamarca,female,25,25,8600
+25,Cundinamarca,female,26,26,5075
+25,Cundinamarca,female,27,27,5625
+25,Cundinamarca,female,28,28,7875
+25,Cundinamarca,female,29,29,4750
+25,Cundinamarca,female,30,30,8950
+25,Cundinamarca,female,31,31,2725
+25,Cundinamarca,female,32,32,5650
+25,Cundinamarca,female,33,33,5725
+25,Cundinamarca,female,34,34,4925
+25,Cundinamarca,female,35,35,8675
+25,Cundinamarca,female,36,36,5500
+25,Cundinamarca,female,37,37,4875
+25,Cundinamarca,female,38,38,5950
+25,Cundinamarca,female,39,39,4025
+25,Cundinamarca,female,40,40,9400
+25,Cundinamarca,female,41,41,2600
+25,Cundinamarca,female,42,42,4325
+25,Cundinamarca,female,43,43,5425
+25,Cundinamarca,female,44,44,3425
+25,Cundinamarca,female,45,45,7950
+25,Cundinamarca,female,46,46,2800
+25,Cundinamarca,female,47,47,2875
+25,Cundinamarca,female,48,48,4325
+25,Cundinamarca,female,49,49,2550
+25,Cundinamarca,female,50,50,8650
+25,Cundinamarca,female,51,51,1875
+25,Cundinamarca,female,52,52,3450
+25,Cundinamarca,female,53,53,2900
+25,Cundinamarca,female,54,54,2050
+25,Cundinamarca,female,55,55,5175
+25,Cundinamarca,female,56,56,2350
+25,Cundinamarca,female,57,57,1650
+25,Cundinamarca,female,58,58,2400
+25,Cundinamarca,female,59,59,1500
+25,Cundinamarca,female,60,60,6800
+25,Cundinamarca,female,61,61,800
+25,Cundinamarca,female,62,62,2000
+25,Cundinamarca,female,63,63,1975
+25,Cundinamarca,female,64,64,1525
+25,Cundinamarca,female,65,65,3450
+25,Cundinamarca,female,66,66,1025
+25,Cundinamarca,female,67,67,1000
+25,Cundinamarca,female,68,68,1400
+25,Cundinamarca,female,69,69,700
+25,Cundinamarca,female,70,70,4150
+25,Cundinamarca,female,71,71,350
+25,Cundinamarca,female,72,72,975
+25,Cundinamarca,female,73,73,875
+25,Cundinamarca,female,74,74,350
+25,Cundinamarca,female,75,75,2125
+25,Cundinamarca,female,76,76,500
+25,Cundinamarca,female,77,77,450
+25,Cundinamarca,female,78,78,650
+25,Cundinamarca,female,79,79,175
+25,Cundinamarca,female,80,80,1300
+25,Cundinamarca,female,81,81,150
+25,Cundinamarca,female,82,82,250
+25,Cundinamarca,female,83,83,150
+25,Cundinamarca,female,84,84,150
+25,Cundinamarca,female,85+,85,1850
+25,Cundinamarca,total,0,0,24850
+25,Cundinamarca,total,1,1,27800
+25,Cundinamarca,total,2,2,31200
+25,Cundinamarca,total,3,3,33500
+25,Cundinamarca,total,4,4,34725
+25,Cundinamarca,total,5,5,36175
+25,Cundinamarca,total,6,6,35200
+25,Cundinamarca,total,7,7,37900
+25,Cundinamarca,total,8,8,35400
+25,Cundinamarca,total,9,9,31550
+25,Cundinamarca,total,10,10,33725
+25,Cundinamarca,total,11,11,30625
+25,Cundinamarca,total,12,12,34150
+25,Cundinamarca,total,13,13,32800
+25,Cundinamarca,total,14,14,26750
+25,Cundinamarca,total,15,15,27800
+25,Cundinamarca,total,16,16,23975
+25,Cundinamarca,total,17,17,22200
+25,Cundinamarca,total,18,18,24650
+25,Cundinamarca,total,19,19,17000
+25,Cundinamarca,total,20,20,19075
+25,Cundinamarca,total,21,21,14225
+25,Cundinamarca,total,22,22,16825
+25,Cundinamarca,total,23,23,15975
+25,Cundinamarca,total,24,24,11700
+25,Cundinamarca,total,25,25,15875
+25,Cundinamarca,total,26,26,11100
+25,Cundinamarca,total,27,27,11300
+25,Cundinamarca,total,28,28,14400
+25,Cundinamarca,total,29,29,9775
+25,Cundinamarca,total,30,30,16475
+25,Cundinamarca,total,31,31,6150
+25,Cundinamarca,total,32,32,11200
+25,Cundinamarca,total,33,33,11725
+25,Cundinamarca,total,34,34,8900
+25,Cundinamarca,total,35,35,15375
+25,Cundinamarca,total,36,36,9975
+25,Cundinamarca,total,37,37,9375
+25,Cundinamarca,total,38,38,12675
+25,Cundinamarca,total,39,39,8075
+25,Cundinamarca,total,40,40,18350
+25,Cundinamarca,total,41,41,5075
+25,Cundinamarca,total,42,42,10025
+25,Cundinamarca,total,43,43,10000
+25,Cundinamarca,total,44,44,6450
+25,Cundinamarca,total,45,45,14425
+25,Cundinamarca,total,46,46,5625
+25,Cundinamarca,total,47,47,5975
+25,Cundinamarca,total,48,48,9125
+25,Cundinamarca,total,49,49,5225
+25,Cundinamarca,total,50,50,14925
+25,Cundinamarca,total,51,51,4275
+25,Cundinamarca,total,52,52,7375
+25,Cundinamarca,total,53,53,6550
+25,Cundinamarca,total,54,54,4675
+25,Cundinamarca,total,55,55,9975
+25,Cundinamarca,total,56,56,4975
+25,Cundinamarca,total,57,57,3825
+25,Cundinamarca,total,58,58,5225
+25,Cundinamarca,total,59,59,3150
+25,Cundinamarca,total,60,60,12250
+25,Cundinamarca,total,61,61,2125
+25,Cundinamarca,total,62,62,4675
+25,Cundinamarca,total,63,63,4975
+25,Cundinamarca,total,64,64,2925
+25,Cundinamarca,total,65,65,6700
+25,Cundinamarca,total,66,66,2425
+25,Cundinamarca,total,67,67,2050
+25,Cundinamarca,total,68,68,3025
+25,Cundinamarca,total,69,69,1525
+25,Cundinamarca,total,70,70,6900
+25,Cundinamarca,total,71,71,975
+25,Cundinamarca,total,72,72,1925
+25,Cundinamarca,total,73,73,2500
+25,Cundinamarca,total,74,74,900
+25,Cundinamarca,total,75,75,3575
+25,Cundinamarca,total,76,76,1000
+25,Cundinamarca,total,77,77,1075
+25,Cundinamarca,total,78,78,1150
+25,Cundinamarca,total,79,79,450
+25,Cundinamarca,total,80,80,2075
+25,Cundinamarca,total,81,81,325
+25,Cundinamarca,total,82,82,550
+25,Cundinamarca,total,83,83,375
+25,Cundinamarca,total,84,84,350
+25,Cundinamarca,total,85+,85,3225
+41,Huila,male,0,0,6525
+41,Huila,male,1,1,6625
+41,Huila,male,2,2,7075
+41,Huila,male,3,3,7850
+41,Huila,male,4,4,8700
+41,Huila,male,5,5,7750
+41,Huila,male,6,6,7975
+41,Huila,male,7,7,8525
+41,Huila,male,8,8,7475
+41,Huila,male,9,9,6425
+41,Huila,male,10,10,8250
+41,Huila,male,11,11,6425
+41,Huila,male,12,12,7350
+41,Huila,male,13,13,6450
+41,Huila,male,14,14,5400
+41,Huila,male,15,15,5250
+41,Huila,male,16,16,4875
+41,Huila,male,17,17,5250
+41,Huila,male,18,18,4750
+41,Huila,male,19,19,3400
+41,Huila,male,20,20,3475
+41,Huila,male,21,21,2650
+41,Huila,male,22,22,3275
+41,Huila,male,23,23,3550
+41,Huila,male,24,24,2900
+41,Huila,male,25,25,3725
+41,Huila,male,26,26,2250
+41,Huila,male,27,27,2175
+41,Huila,male,28,28,2825
+41,Huila,male,29,29,2100
+41,Huila,male,30,30,3550
+41,Huila,male,31,31,1350
+41,Huila,male,32,32,2225
+41,Huila,male,33,33,2275
+41,Huila,male,34,34,2100
+41,Huila,male,35,35,2625
+41,Huila,male,36,36,1800
+41,Huila,male,37,37,2400
+41,Huila,male,38,38,2700
+41,Huila,male,39,39,1750
+41,Huila,male,40,40,3175
+41,Huila,male,41,41,925
+41,Huila,male,42,42,2175
+41,Huila,male,43,43,1800
+41,Huila,male,44,44,1400
+41,Huila,male,45,45,2675
+41,Huila,male,46,46,1400
+41,Huila,male,47,47,1050
+41,Huila,male,48,48,1750
+41,Huila,male,49,49,925
+41,Huila,male,50,50,2825
+41,Huila,male,51,51,700
+41,Huila,male,52,52,925
+41,Huila,male,53,53,1075
+41,Huila,male,54,54,1200
+41,Huila,male,55,55,1525
+41,Huila,male,56,56,1075
+41,Huila,male,57,57,700
+41,Huila,male,58,58,800
+41,Huila,male,59,59,525
+41,Huila,male,60,60,2325
+41,Huila,male,61,61,525
+41,Huila,male,62,62,775
+41,Huila,male,63,63,1175
+41,Huila,male,64,64,625
+41,Huila,male,65,65,1000
+41,Huila,male,66,66,650
+41,Huila,male,67,67,300
+41,Huila,male,68,68,625
+41,Huila,male,69,69,250
+41,Huila,male,70,70,825
+41,Huila,male,71,71,175
+41,Huila,male,72,72,300
+41,Huila,male,73,73,775
+41,Huila,male,74,74,300
+41,Huila,male,75,75,450
+41,Huila,male,76,76,150
+41,Huila,male,77,77,175
+41,Huila,male,78,78,275
+41,Huila,male,79,79,150
+41,Huila,male,80,80,325
+41,Huila,male,81,81,75
+41,Huila,male,82,82,25
+41,Huila,male,83,83,25
+41,Huila,male,84,84,75
+41,Huila,male,85+,85,400
+41,Huila,female,0,0,7100
+41,Huila,female,1,1,6450
+41,Huila,female,2,2,7025
+41,Huila,female,3,3,7800
+41,Huila,female,4,4,7750
+41,Huila,female,5,5,8325
+41,Huila,female,6,6,8125
+41,Huila,female,7,7,8375
+41,Huila,female,8,8,7900
+41,Huila,female,9,9,6500
+41,Huila,female,10,10,6825
+41,Huila,female,11,11,6125
+41,Huila,female,12,12,6900
+41,Huila,female,13,13,6825
+41,Huila,female,14,14,5950
+41,Huila,female,15,15,6425
+41,Huila,female,16,16,5275
+41,Huila,female,17,17,4500
+41,Huila,female,18,18,5400
+41,Huila,female,19,19,3600
+41,Huila,female,20,20,4850
+41,Huila,female,21,21,2850
+41,Huila,female,22,22,4100
+41,Huila,female,23,23,3125
+41,Huila,female,24,24,3550
+41,Huila,female,25,25,3800
+41,Huila,female,26,26,2725
+41,Huila,female,27,27,3175
+41,Huila,female,28,28,3025
+41,Huila,female,29,29,1925
+41,Huila,female,30,30,3550
+41,Huila,female,31,31,1175
+41,Huila,female,32,32,2450
+41,Huila,female,33,33,2850
+41,Huila,female,34,34,1775
+41,Huila,female,35,35,3625
+41,Huila,female,36,36,2400
+41,Huila,female,37,37,2100
+41,Huila,female,38,38,2300
+41,Huila,female,39,39,1425
+41,Huila,female,40,40,3850
+41,Huila,female,41,41,800
+41,Huila,female,42,42,1900
+41,Huila,female,43,43,1550
+41,Huila,female,44,44,1200
+41,Huila,female,45,45,2675
+41,Huila,female,46,46,1075
+41,Huila,female,47,47,1250
+41,Huila,female,48,48,1650
+41,Huila,female,49,49,1050
+41,Huila,female,50,50,2975
+41,Huila,female,51,51,400
+41,Huila,female,52,52,1150
+41,Huila,female,53,53,950
+41,Huila,female,54,54,875
+41,Huila,female,55,55,1600
+41,Huila,female,56,56,850
+41,Huila,female,57,57,925
+41,Huila,female,58,58,925
+41,Huila,female,59,59,400
+41,Huila,female,60,60,2525
+41,Huila,female,61,61,550
+41,Huila,female,62,62,850
+41,Huila,female,63,63,850
+41,Huila,female,64,64,375
+41,Huila,female,65,65,1025
+41,Huila,female,66,66,375
+41,Huila,female,67,67,450
+41,Huila,female,68,68,475
+41,Huila,female,69,69,75
+41,Huila,female,70,70,1700
+41,Huila,female,71,71,125
+41,Huila,female,72,72,250
+41,Huila,female,73,73,550
+41,Huila,female,74,74,125
+41,Huila,female,75,75,625
+41,Huila,female,76,76,275
+41,Huila,female,77,77,100
+41,Huila,female,78,78,200
+41,Huila,female,79,79,100
+41,Huila,female,80,80,475
+41,Huila,female,81,81,25
+41,Huila,female,82,82,75
+41,Huila,female,83,83,125
+41,Huila,female,84,84,50
+41,Huila,female,85+,85,1050
+41,Huila,total,0,0,13625
+41,Huila,total,1,1,13075
+41,Huila,total,2,2,14100
+41,Huila,total,3,3,15650
+41,Huila,total,4,4,16450
+41,Huila,total,5,5,16075
+41,Huila,total,6,6,16100
+41,Huila,total,7,7,16900
+41,Huila,total,8,8,15375
+41,Huila,total,9,9,12925
+41,Huila,total,10,10,15075
+41,Huila,total,11,11,12550
+41,Huila,total,12,12,14250
+41,Huila,total,13,13,13275
+41,Huila,total,14,14,11350
+41,Huila,total,15,15,11675
+41,Huila,total,16,16,10150
+41,Huila,total,17,17,9750
+41,Huila,total,18,18,10150
+41,Huila,total,19,19,7000
+41,Huila,total,20,20,8325
+41,Huila,total,21,21,5500
+41,Huila,total,22,22,7375
+41,Huila,total,23,23,6675
+41,Huila,total,24,24,6450
+41,Huila,total,25,25,7525
+41,Huila,total,26,26,4975
+41,Huila,total,27,27,5350
+41,Huila,total,28,28,5850
+41,Huila,total,29,29,4025
+41,Huila,total,30,30,7100
+41,Huila,total,31,31,2525
+41,Huila,total,32,32,4675
+41,Huila,total,33,33,5125
+41,Huila,total,34,34,3875
+41,Huila,total,35,35,6250
+41,Huila,total,36,36,4200
+41,Huila,total,37,37,4500
+41,Huila,total,38,38,5000
+41,Huila,total,39,39,3175
+41,Huila,total,40,40,7025
+41,Huila,total,41,41,1725
+41,Huila,total,42,42,4075
+41,Huila,total,43,43,3350
+41,Huila,total,44,44,2600
+41,Huila,total,45,45,5350
+41,Huila,total,46,46,2475
+41,Huila,total,47,47,2300
+41,Huila,total,48,48,3400
+41,Huila,total,49,49,1975
+41,Huila,total,50,50,5800
+41,Huila,total,51,51,1100
+41,Huila,total,52,52,2075
+41,Huila,total,53,53,2025
+41,Huila,total,54,54,2075
+41,Huila,total,55,55,3125
+41,Huila,total,56,56,1925
+41,Huila,total,57,57,1625
+41,Huila,total,58,58,1725
+41,Huila,total,59,59,925
+41,Huila,total,60,60,4850
+41,Huila,total,61,61,1075
+41,Huila,total,62,62,1625
+41,Huila,total,63,63,2025
+41,Huila,total,64,64,1000
+41,Huila,total,65,65,2025
+41,Huila,total,66,66,1025
+41,Huila,total,67,67,750
+41,Huila,total,68,68,1100
+41,Huila,total,69,69,325
+41,Huila,total,70,70,2525
+41,Huila,total,71,71,300
+41,Huila,total,72,72,550
+41,Huila,total,73,73,1325
+41,Huila,total,74,74,425
+41,Huila,total,75,75,1075
+41,Huila,total,76,76,425
+41,Huila,total,77,77,275
+41,Huila,total,78,78,475
+41,Huila,total,79,79,250
+41,Huila,total,80,80,800
+41,Huila,total,81,81,100
+41,Huila,total,82,82,100
+41,Huila,total,83,83,150
+41,Huila,total,84,84,125
+41,Huila,total,85+,85,1450
+44,La Guajira,male,0,0,1350
+44,La Guajira,male,1,1,2200
+44,La Guajira,male,2,2,2150
+44,La Guajira,male,3,3,2750
+44,La Guajira,male,4,4,2175
+44,La Guajira,male,5,5,2000
+44,La Guajira,male,6,6,1900
+44,La Guajira,male,7,7,2300
+44,La Guajira,male,8,8,2025
+44,La Guajira,male,9,9,1800
+44,La Guajira,male,10,10,1975
+44,La Guajira,male,11,11,1450
+44,La Guajira,male,12,12,2575
+44,La Guajira,male,13,13,1900
+44,La Guajira,male,14,14,2025
+44,La Guajira,male,15,15,1325
+44,La Guajira,male,16,16,1475
+44,La Guajira,male,17,17,1400
+44,La Guajira,male,18,18,1500
+44,La Guajira,male,19,19,1450
+44,La Guajira,male,20,20,1325
+44,La Guajira,male,21,21,775
+44,La Guajira,male,22,22,1125
+44,La Guajira,male,23,23,1100
+44,La Guajira,male,24,24,800
+44,La Guajira,male,25,25,950
+44,La Guajira,male,26,26,950
+44,La Guajira,male,27,27,725
+44,La Guajira,male,28,28,1275
+44,La Guajira,male,29,29,725
+44,La Guajira,male,30,30,850
+44,La Guajira,male,31,31,425
+44,La Guajira,male,32,32,625
+44,La Guajira,male,33,33,725
+44,La Guajira,male,34,34,325
+44,La Guajira,male,35,35,650
+44,La Guajira,male,36,36,425
+44,La Guajira,male,37,37,500
+44,La Guajira,male,38,38,700
+44,La Guajira,male,39,39,250
+44,La Guajira,male,40,40,775
+44,La Guajira,male,41,41,400
+44,La Guajira,male,42,42,625
+44,La Guajira,male,43,43,600
+44,La Guajira,male,44,44,575
+44,La Guajira,male,45,45,475
+44,La Guajira,male,46,46,375
+44,La Guajira,male,47,47,325
+44,La Guajira,male,48,48,575
+44,La Guajira,male,49,49,250
+44,La Guajira,male,50,50,450
+44,La Guajira,male,51,51,250
+44,La Guajira,male,52,52,300
+44,La Guajira,male,53,53,350
+44,La Guajira,male,54,54,225
+44,La Guajira,male,55,55,100
+44,La Guajira,male,56,56,275
+44,La Guajira,male,57,57,125
+44,La Guajira,male,58,58,275
+44,La Guajira,male,59,59,100
+44,La Guajira,male,60,60,275
+44,La Guajira,male,61,61,100
+44,La Guajira,male,62,62,125
+44,La Guajira,male,63,63,175
+44,La Guajira,male,64,64,200
+44,La Guajira,male,65,65,175
+44,La Guajira,male,66,66,25
+44,La Guajira,male,67,67,50
+44,La Guajira,male,68,68,25
+44,La Guajira,male,69,69,50
+44,La Guajira,male,70,70,100
+44,La Guajira,male,71,71,0
+44,La Guajira,male,72,72,25
+44,La Guajira,male,73,73,125
+44,La Guajira,male,74,74,25
+44,La Guajira,male,75,75,25
+44,La Guajira,male,76,76,0
+44,La Guajira,male,77,77,0
+44,La Guajira,male,78,78,25
+44,La Guajira,male,79,79,25
+44,La Guajira,male,80,80,75
+44,La Guajira,male,81,81,50
+44,La Guajira,male,82,82,0
+44,La Guajira,male,83,83,25
+44,La Guajira,male,84,84,25
+44,La Guajira,male,85+,85,25
+44,La Guajira,female,0,0,1475
+44,La Guajira,female,1,1,1475
+44,La Guajira,female,2,2,2000
+44,La Guajira,female,3,3,2525
+44,La Guajira,female,4,4,1500
+44,La Guajira,female,5,5,2050
+44,La Guajira,female,6,6,1975
+44,La Guajira,female,7,7,2325
+44,La Guajira,female,8,8,2300
+44,La Guajira,female,9,9,2325
+44,La Guajira,female,10,10,2625
+44,La Guajira,female,11,11,2000
+44,La Guajira,female,12,12,2550
+44,La Guajira,female,13,13,1950
+44,La Guajira,female,14,14,1200
+44,La Guajira,female,15,15,1825
+44,La Guajira,female,16,16,1650
+44,La Guajira,female,17,17,1800
+44,La Guajira,female,18,18,1800
+44,La Guajira,female,19,19,1200
+44,La Guajira,female,20,20,1325
+44,La Guajira,female,21,21,1175
+44,La Guajira,female,22,22,1350
+44,La Guajira,female,23,23,1025
+44,La Guajira,female,24,24,1225
+44,La Guajira,female,25,25,1125
+44,La Guajira,female,26,26,750
+44,La Guajira,female,27,27,1100
+44,La Guajira,female,28,28,850
+44,La Guajira,female,29,29,200
+44,La Guajira,female,30,30,1375
+44,La Guajira,female,31,31,500
+44,La Guajira,female,32,32,750
+44,La Guajira,female,33,33,825
+44,La Guajira,female,34,34,500
+44,La Guajira,female,35,35,650
+44,La Guajira,female,36,36,600
+44,La Guajira,female,37,37,550
+44,La Guajira,female,38,38,550
+44,La Guajira,female,39,39,525
+44,La Guajira,female,40,40,850
+44,La Guajira,female,41,41,275
+44,La Guajira,female,42,42,550
+44,La Guajira,female,43,43,525
+44,La Guajira,female,44,44,375
+44,La Guajira,female,45,45,625
+44,La Guajira,female,46,46,200
+44,La Guajira,female,47,47,400
+44,La Guajira,female,48,48,275
+44,La Guajira,female,49,49,425
+44,La Guajira,female,50,50,525
+44,La Guajira,female,51,51,150
+44,La Guajira,female,52,52,250
+44,La Guajira,female,53,53,250
+44,La Guajira,female,54,54,275
+44,La Guajira,female,55,55,350
+44,La Guajira,female,56,56,325
+44,La Guajira,female,57,57,75
+44,La Guajira,female,58,58,75
+44,La Guajira,female,59,59,75
+44,La Guajira,female,60,60,500
+44,La Guajira,female,61,61,125
+44,La Guajira,female,62,62,125
+44,La Guajira,female,63,63,275
+44,La Guajira,female,64,64,125
+44,La Guajira,female,65,65,300
+44,La Guajira,female,66,66,150
+44,La Guajira,female,67,67,150
+44,La Guajira,female,68,68,100
+44,La Guajira,female,69,69,100
+44,La Guajira,female,70,70,150
+44,La Guajira,female,71,71,100
+44,La Guajira,female,72,72,100
+44,La Guajira,female,73,73,125
+44,La Guajira,female,74,74,50
+44,La Guajira,female,75,75,50
+44,La Guajira,female,76,76,75
+44,La Guajira,female,77,77,75
+44,La Guajira,female,78,78,25
+44,La Guajira,female,79,79,50
+44,La Guajira,female,80,80,50
+44,La Guajira,female,81,81,0
+44,La Guajira,female,82,82,0
+44,La Guajira,female,83,83,25
+44,La Guajira,female,84,84,0
+44,La Guajira,female,85+,85,475
+44,La Guajira,total,0,0,2825
+44,La Guajira,total,1,1,3675
+44,La Guajira,total,2,2,4150
+44,La Guajira,total,3,3,5275
+44,La Guajira,total,4,4,3675
+44,La Guajira,total,5,5,4050
+44,La Guajira,total,6,6,3875
+44,La Guajira,total,7,7,4625
+44,La Guajira,total,8,8,4325
+44,La Guajira,total,9,9,4125
+44,La Guajira,total,10,10,4600
+44,La Guajira,total,11,11,3450
+44,La Guajira,total,12,12,5125
+44,La Guajira,total,13,13,3850
+44,La Guajira,total,14,14,3225
+44,La Guajira,total,15,15,3150
+44,La Guajira,total,16,16,3125
+44,La Guajira,total,17,17,3200
+44,La Guajira,total,18,18,3300
+44,La Guajira,total,19,19,2650
+44,La Guajira,total,20,20,2650
+44,La Guajira,total,21,21,1950
+44,La Guajira,total,22,22,2475
+44,La Guajira,total,23,23,2125
+44,La Guajira,total,24,24,2025
+44,La Guajira,total,25,25,2075
+44,La Guajira,total,26,26,1700
+44,La Guajira,total,27,27,1825
+44,La Guajira,total,28,28,2125
+44,La Guajira,total,29,29,925
+44,La Guajira,total,30,30,2225
+44,La Guajira,total,31,31,925
+44,La Guajira,total,32,32,1375
+44,La Guajira,total,33,33,1550
+44,La Guajira,total,34,34,825
+44,La Guajira,total,35,35,1300
+44,La Guajira,total,36,36,1025
+44,La Guajira,total,37,37,1050
+44,La Guajira,total,38,38,1250
+44,La Guajira,total,39,39,775
+44,La Guajira,total,40,40,1625
+44,La Guajira,total,41,41,675
+44,La Guajira,total,42,42,1175
+44,La Guajira,total,43,43,1125
+44,La Guajira,total,44,44,950
+44,La Guajira,total,45,45,1100
+44,La Guajira,total,46,46,575
+44,La Guajira,total,47,47,725
+44,La Guajira,total,48,48,850
+44,La Guajira,total,49,49,675
+44,La Guajira,total,50,50,975
+44,La Guajira,total,51,51,400
+44,La Guajira,total,52,52,550
+44,La Guajira,total,53,53,600
+44,La Guajira,total,54,54,500
+44,La Guajira,total,55,55,450
+44,La Guajira,total,56,56,600
+44,La Guajira,total,57,57,200
+44,La Guajira,total,58,58,350
+44,La Guajira,total,59,59,175
+44,La Guajira,total,60,60,775
+44,La Guajira,total,61,61,225
+44,La Guajira,total,62,62,250
+44,La Guajira,total,63,63,450
+44,La Guajira,total,64,64,325
+44,La Guajira,total,65,65,475
+44,La Guajira,total,66,66,175
+44,La Guajira,total,67,67,200
+44,La Guajira,total,68,68,125
+44,La Guajira,total,69,69,150
+44,La Guajira,total,70,70,250
+44,La Guajira,total,71,71,100
+44,La Guajira,total,72,72,125
+44,La Guajira,total,73,73,250
+44,La Guajira,total,74,74,75
+44,La Guajira,total,75,75,75
+44,La Guajira,total,76,76,75
+44,La Guajira,total,77,77,75
+44,La Guajira,total,78,78,50
+44,La Guajira,total,79,79,75
+44,La Guajira,total,80,80,125
+44,La Guajira,total,81,81,50
+44,La Guajira,total,82,82,0
+44,La Guajira,total,83,83,50
+44,La Guajira,total,84,84,25
+44,La Guajira,total,85+,85,500
+47,Magdalena,male,0,0,6150
+47,Magdalena,male,1,1,6675
+47,Magdalena,male,2,2,8950
+47,Magdalena,male,3,3,8975
+47,Magdalena,male,4,4,8275
+47,Magdalena,male,5,5,8725
+47,Magdalena,male,6,6,9125
+47,Magdalena,male,7,7,9150
+47,Magdalena,male,8,8,9250
+47,Magdalena,male,9,9,6975
+47,Magdalena,male,10,10,9575
+47,Magdalena,male,11,11,7525
+47,Magdalena,male,12,12,9650
+47,Magdalena,male,13,13,7525
+47,Magdalena,male,14,14,7625
+47,Magdalena,male,15,15,6275
+47,Magdalena,male,16,16,6700
+47,Magdalena,male,17,17,5575
+47,Magdalena,male,18,18,6375
+47,Magdalena,male,19,19,4400
+47,Magdalena,male,20,20,5000
+47,Magdalena,male,21,21,4250
+47,Magdalena,male,22,22,4725
+47,Magdalena,male,23,23,4475
+47,Magdalena,male,24,24,3300
+47,Magdalena,male,25,25,3775
+47,Magdalena,male,26,26,3025
+47,Magdalena,male,27,27,2825
+47,Magdalena,male,28,28,2950
+47,Magdalena,male,29,29,1900
+47,Magdalena,male,30,30,4075
+47,Magdalena,male,31,31,1650
+47,Magdalena,male,32,32,2325
+47,Magdalena,male,33,33,2925
+47,Magdalena,male,34,34,1625
+47,Magdalena,male,35,35,2825
+47,Magdalena,male,36,36,1575
+47,Magdalena,male,37,37,2475
+47,Magdalena,male,38,38,3075
+47,Magdalena,male,39,39,1400
+47,Magdalena,male,40,40,3425
+47,Magdalena,male,41,41,1200
+47,Magdalena,male,42,42,1525
+47,Magdalena,male,43,43,2050
+47,Magdalena,male,44,44,1475
+47,Magdalena,male,45,45,2300
+47,Magdalena,male,46,46,1025
+47,Magdalena,male,47,47,1400
+47,Magdalena,male,48,48,2200
+47,Magdalena,male,49,49,1275
+47,Magdalena,male,50,50,2050
+47,Magdalena,male,51,51,625
+47,Magdalena,male,52,52,1575
+47,Magdalena,male,53,53,1125
+47,Magdalena,male,54,54,1100
+47,Magdalena,male,55,55,1525
+47,Magdalena,male,56,56,925
+47,Magdalena,male,57,57,825
+47,Magdalena,male,58,58,1025
+47,Magdalena,male,59,59,525
+47,Magdalena,male,60,60,1550
+47,Magdalena,male,61,61,450
+47,Magdalena,male,62,62,650
+47,Magdalena,male,63,63,775
+47,Magdalena,male,64,64,550
+47,Magdalena,male,65,65,725
+47,Magdalena,male,66,66,600
+47,Magdalena,male,67,67,575
+47,Magdalena,male,68,68,500
+47,Magdalena,male,69,69,325
+47,Magdalena,male,70,70,900
+47,Magdalena,male,71,71,275
+47,Magdalena,male,72,72,500
+47,Magdalena,male,73,73,650
+47,Magdalena,male,74,74,325
+47,Magdalena,male,75,75,325
+47,Magdalena,male,76,76,225
+47,Magdalena,male,77,77,225
+47,Magdalena,male,78,78,100
+47,Magdalena,male,79,79,125
+47,Magdalena,male,80,80,325
+47,Magdalena,male,81,81,50
+47,Magdalena,male,82,82,100
+47,Magdalena,male,83,83,50
+47,Magdalena,male,84,84,75
+47,Magdalena,male,85+,85,525
+47,Magdalena,female,0,0,6025
+47,Magdalena,female,1,1,7025
+47,Magdalena,female,2,2,8200
+47,Magdalena,female,3,3,8325
+47,Magdalena,female,4,4,8725
+47,Magdalena,female,5,5,9375
+47,Magdalena,female,6,6,9200
+47,Magdalena,female,7,7,8900
+47,Magdalena,female,8,8,8450
+47,Magdalena,female,9,9,8200
+47,Magdalena,female,10,10,8600
+47,Magdalena,female,11,11,7075
+47,Magdalena,female,12,12,8700
+47,Magdalena,female,13,13,7150
+47,Magdalena,female,14,14,7500
+47,Magdalena,female,15,15,6225
+47,Magdalena,female,16,16,6600
+47,Magdalena,female,17,17,6350
+47,Magdalena,female,18,18,6450
+47,Magdalena,female,19,19,5000
+47,Magdalena,female,20,20,5325
+47,Magdalena,female,21,21,4375
+47,Magdalena,female,22,22,4675
+47,Magdalena,female,23,23,3975
+47,Magdalena,female,24,24,4250
+47,Magdalena,female,25,25,4075
+47,Magdalena,female,26,26,3575
+47,Magdalena,female,27,27,3100
+47,Magdalena,female,28,28,3500
+47,Magdalena,female,29,29,1925
+47,Magdalena,female,30,30,4325
+47,Magdalena,female,31,31,1150
+47,Magdalena,female,32,32,2525
+47,Magdalena,female,33,33,2475
+47,Magdalena,female,34,34,1600
+47,Magdalena,female,35,35,3550
+47,Magdalena,female,36,36,2100
+47,Magdalena,female,37,37,2650
+47,Magdalena,female,38,38,3000
+47,Magdalena,female,39,39,2075
+47,Magdalena,female,40,40,2875
+47,Magdalena,female,41,41,1175
+47,Magdalena,female,42,42,2225
+47,Magdalena,female,43,43,2025
+47,Magdalena,female,44,44,1725
+47,Magdalena,female,45,45,2425
+47,Magdalena,female,46,46,1325
+47,Magdalena,female,47,47,1375
+47,Magdalena,female,48,48,1525
+47,Magdalena,female,49,49,1250
+47,Magdalena,female,50,50,2050
+47,Magdalena,female,51,51,925
+47,Magdalena,female,52,52,1250
+47,Magdalena,female,53,53,1575
+47,Magdalena,female,54,54,675
+47,Magdalena,female,55,55,1250
+47,Magdalena,female,56,56,1275
+47,Magdalena,female,57,57,825
+47,Magdalena,female,58,58,1225
+47,Magdalena,female,59,59,350
+47,Magdalena,female,60,60,1050
+47,Magdalena,female,61,61,275
+47,Magdalena,female,62,62,475
+47,Magdalena,female,63,63,800
+47,Magdalena,female,64,64,325
+47,Magdalena,female,65,65,850
+47,Magdalena,female,66,66,500
+47,Magdalena,female,67,67,550
+47,Magdalena,female,68,68,600
+47,Magdalena,female,69,69,175
+47,Magdalena,female,70,70,975
+47,Magdalena,female,71,71,250
+47,Magdalena,female,72,72,550
+47,Magdalena,female,73,73,500
+47,Magdalena,female,74,74,75
+47,Magdalena,female,75,75,325
+47,Magdalena,female,76,76,125
+47,Magdalena,female,77,77,200
+47,Magdalena,female,78,78,250
+47,Magdalena,female,79,79,125
+47,Magdalena,female,80,80,425
+47,Magdalena,female,81,81,25
+47,Magdalena,female,82,82,150
+47,Magdalena,female,83,83,125
+47,Magdalena,female,84,84,125
+47,Magdalena,female,85+,85,725
+47,Magdalena,total,0,0,12175
+47,Magdalena,total,1,1,13700
+47,Magdalena,total,2,2,17150
+47,Magdalena,total,3,3,17300
+47,Magdalena,total,4,4,17000
+47,Magdalena,total,5,5,18100
+47,Magdalena,total,6,6,18325
+47,Magdalena,total,7,7,18050
+47,Magdalena,total,8,8,17700
+47,Magdalena,total,9,9,15175
+47,Magdalena,total,10,10,18175
+47,Magdalena,total,11,11,14600
+47,Magdalena,total,12,12,18350
+47,Magdalena,total,13,13,14675
+47,Magdalena,total,14,14,15125
+47,Magdalena,total,15,15,12500
+47,Magdalena,total,16,16,13300
+47,Magdalena,total,17,17,11925
+47,Magdalena,total,18,18,12825
+47,Magdalena,total,19,19,9400
+47,Magdalena,total,20,20,10325
+47,Magdalena,total,21,21,8625
+47,Magdalena,total,22,22,9400
+47,Magdalena,total,23,23,8450
+47,Magdalena,total,24,24,7550
+47,Magdalena,total,25,25,7850
+47,Magdalena,total,26,26,6600
+47,Magdalena,total,27,27,5925
+47,Magdalena,total,28,28,6450
+47,Magdalena,total,29,29,3825
+47,Magdalena,total,30,30,8400
+47,Magdalena,total,31,31,2800
+47,Magdalena,total,32,32,4850
+47,Magdalena,total,33,33,5400
+47,Magdalena,total,34,34,3225
+47,Magdalena,total,35,35,6375
+47,Magdalena,total,36,36,3675
+47,Magdalena,total,37,37,5125
+47,Magdalena,total,38,38,6075
+47,Magdalena,total,39,39,3475
+47,Magdalena,total,40,40,6300
+47,Magdalena,total,41,41,2375
+47,Magdalena,total,42,42,3750
+47,Magdalena,total,43,43,4075
+47,Magdalena,total,44,44,3200
+47,Magdalena,total,45,45,4725
+47,Magdalena,total,46,46,2350
+47,Magdalena,total,47,47,2775
+47,Magdalena,total,48,48,3725
+47,Magdalena,total,49,49,2525
+47,Magdalena,total,50,50,4100
+47,Magdalena,total,51,51,1550
+47,Magdalena,total,52,52,2825
+47,Magdalena,total,53,53,2700
+47,Magdalena,total,54,54,1775
+47,Magdalena,total,55,55,2775
+47,Magdalena,total,56,56,2200
+47,Magdalena,total,57,57,1650
+47,Magdalena,total,58,58,2250
+47,Magdalena,total,59,59,875
+47,Magdalena,total,60,60,2600
+47,Magdalena,total,61,61,725
+47,Magdalena,total,62,62,1125
+47,Magdalena,total,63,63,1575
+47,Magdalena,total,64,64,875
+47,Magdalena,total,65,65,1575
+47,Magdalena,total,66,66,1100
+47,Magdalena,total,67,67,1125
+47,Magdalena,total,68,68,1100
+47,Magdalena,total,69,69,500
+47,Magdalena,total,70,70,1875
+47,Magdalena,total,71,71,525
+47,Magdalena,total,72,72,1050
+47,Magdalena,total,73,73,1150
+47,Magdalena,total,74,74,400
+47,Magdalena,total,75,75,650
+47,Magdalena,total,76,76,350
+47,Magdalena,total,77,77,425
+47,Magdalena,total,78,78,350
+47,Magdalena,total,79,79,250
+47,Magdalena,total,80,80,750
+47,Magdalena,total,81,81,75
+47,Magdalena,total,82,82,250
+47,Magdalena,total,83,83,175
+47,Magdalena,total,84,84,200
+47,Magdalena,total,85+,85,1250
+50,Meta,male,0,0,3800
+50,Meta,male,1,1,3950
+50,Meta,male,2,2,4250
+50,Meta,male,3,3,4250
+50,Meta,male,4,4,4525
+50,Meta,male,5,5,4200
+50,Meta,male,6,6,3825
+50,Meta,male,7,7,4850
+50,Meta,male,8,8,4450
+50,Meta,male,9,9,3575
+50,Meta,male,10,10,4475
+50,Meta,male,11,11,3275
+50,Meta,male,12,12,3450
+50,Meta,male,13,13,3725
+50,Meta,male,14,14,2925
+50,Meta,male,15,15,2575
+50,Meta,male,16,16,2875
+50,Meta,male,17,17,2075
+50,Meta,male,18,18,2375
+50,Meta,male,19,19,1700
+50,Meta,male,20,20,2125
+50,Meta,male,21,21,1700
+50,Meta,male,22,22,1700
+50,Meta,male,23,23,1550
+50,Meta,male,24,24,1350
+50,Meta,male,25,25,2200
+50,Meta,male,26,26,1325
+50,Meta,male,27,27,1600
+50,Meta,male,28,28,1750
+50,Meta,male,29,29,1125
+50,Meta,male,30,30,2175
+50,Meta,male,31,31,1125
+50,Meta,male,32,32,1375
+50,Meta,male,33,33,1450
+50,Meta,male,34,34,1375
+50,Meta,male,35,35,1725
+50,Meta,male,36,36,925
+50,Meta,male,37,37,1500
+50,Meta,male,38,38,1475
+50,Meta,male,39,39,1175
+50,Meta,male,40,40,1950
+50,Meta,male,41,41,625
+50,Meta,male,42,42,1225
+50,Meta,male,43,43,1575
+50,Meta,male,44,44,675
+50,Meta,male,45,45,925
+50,Meta,male,46,46,575
+50,Meta,male,47,47,600
+50,Meta,male,48,48,925
+50,Meta,male,49,49,575
+50,Meta,male,50,50,700
+50,Meta,male,51,51,450
+50,Meta,male,52,52,750
+50,Meta,male,53,53,850
+50,Meta,male,54,54,525
+50,Meta,male,55,55,725
+50,Meta,male,56,56,650
+50,Meta,male,57,57,425
+50,Meta,male,58,58,450
+50,Meta,male,59,59,450
+50,Meta,male,60,60,600
+50,Meta,male,61,61,175
+50,Meta,male,62,62,175
+50,Meta,male,63,63,325
+50,Meta,male,64,64,200
+50,Meta,male,65,65,475
+50,Meta,male,66,66,225
+50,Meta,male,67,67,300
+50,Meta,male,68,68,75
+50,Meta,male,69,69,75
+50,Meta,male,70,70,325
+50,Meta,male,71,71,150
+50,Meta,male,72,72,125
+50,Meta,male,73,73,225
+50,Meta,male,74,74,0
+50,Meta,male,75,75,50
+50,Meta,male,76,76,25
+50,Meta,male,77,77,50
+50,Meta,male,78,78,25
+50,Meta,male,79,79,25
+50,Meta,male,80,80,50
+50,Meta,male,81,81,25
+50,Meta,male,82,82,25
+50,Meta,male,83,83,75
+50,Meta,male,84,84,0
+50,Meta,male,85+,85,50
+50,Meta,female,0,0,3025
+50,Meta,female,1,1,3150
+50,Meta,female,2,2,4600
+50,Meta,female,3,3,4375
+50,Meta,female,4,4,4200
+50,Meta,female,5,5,3875
+50,Meta,female,6,6,3850
+50,Meta,female,7,7,4425
+50,Meta,female,8,8,4100
+50,Meta,female,9,9,3575
+50,Meta,female,10,10,4150
+50,Meta,female,11,11,3650
+50,Meta,female,12,12,3175
+50,Meta,female,13,13,3825
+50,Meta,female,14,14,2200
+50,Meta,female,15,15,2725
+50,Meta,female,16,16,2675
+50,Meta,female,17,17,2375
+50,Meta,female,18,18,3050
+50,Meta,female,19,19,2225
+50,Meta,female,20,20,2625
+50,Meta,female,21,21,1975
+50,Meta,female,22,22,2075
+50,Meta,female,23,23,1975
+50,Meta,female,24,24,1800
+50,Meta,female,25,25,1800
+50,Meta,female,26,26,2000
+50,Meta,female,27,27,1450
+50,Meta,female,28,28,1750
+50,Meta,female,29,29,1400
+50,Meta,female,30,30,1950
+50,Meta,female,31,31,575
+50,Meta,female,32,32,1550
+50,Meta,female,33,33,1475
+50,Meta,female,34,34,725
+50,Meta,female,35,35,1450
+50,Meta,female,36,36,850
+50,Meta,female,37,37,850
+50,Meta,female,38,38,1650
+50,Meta,female,39,39,975
+50,Meta,female,40,40,1925
+50,Meta,female,41,41,450
+50,Meta,female,42,42,875
+50,Meta,female,43,43,850
+50,Meta,female,44,44,525
+50,Meta,female,45,45,1200
+50,Meta,female,46,46,775
+50,Meta,female,47,47,600
+50,Meta,female,48,48,875
+50,Meta,female,49,49,350
+50,Meta,female,50,50,1325
+50,Meta,female,51,51,300
+50,Meta,female,52,52,500
+50,Meta,female,53,53,475
+50,Meta,female,54,54,500
+50,Meta,female,55,55,525
+50,Meta,female,56,56,325
+50,Meta,female,57,57,250
+50,Meta,female,58,58,250
+50,Meta,female,59,59,50
+50,Meta,female,60,60,725
+50,Meta,female,61,61,75
+50,Meta,female,62,62,125
+50,Meta,female,63,63,250
+50,Meta,female,64,64,125
+50,Meta,female,65,65,225
+50,Meta,female,66,66,200
+50,Meta,female,67,67,225
+50,Meta,female,68,68,175
+50,Meta,female,69,69,75
+50,Meta,female,70,70,350
+50,Meta,female,71,71,75
+50,Meta,female,72,72,75
+50,Meta,female,73,73,150
+50,Meta,female,74,74,50
+50,Meta,female,75,75,250
+50,Meta,female,76,76,25
+50,Meta,female,77,77,0
+50,Meta,female,78,78,150
+50,Meta,female,79,79,25
+50,Meta,female,80,80,175
+50,Meta,female,81,81,0
+50,Meta,female,82,82,25
+50,Meta,female,83,83,0
+50,Meta,female,84,84,25
+50,Meta,female,85+,85,150
+50,Meta,total,0,0,6825
+50,Meta,total,1,1,7100
+50,Meta,total,2,2,8850
+50,Meta,total,3,3,8625
+50,Meta,total,4,4,8725
+50,Meta,total,5,5,8075
+50,Meta,total,6,6,7675
+50,Meta,total,7,7,9275
+50,Meta,total,8,8,8550
+50,Meta,total,9,9,7150
+50,Meta,total,10,10,8625
+50,Meta,total,11,11,6925
+50,Meta,total,12,12,6625
+50,Meta,total,13,13,7550
+50,Meta,total,14,14,5125
+50,Meta,total,15,15,5300
+50,Meta,total,16,16,5550
+50,Meta,total,17,17,4450
+50,Meta,total,18,18,5425
+50,Meta,total,19,19,3925
+50,Meta,total,20,20,4750
+50,Meta,total,21,21,3675
+50,Meta,total,22,22,3775
+50,Meta,total,23,23,3525
+50,Meta,total,24,24,3150
+50,Meta,total,25,25,4000
+50,Meta,total,26,26,3325
+50,Meta,total,27,27,3050
+50,Meta,total,28,28,3500
+50,Meta,total,29,29,2525
+50,Meta,total,30,30,4125
+50,Meta,total,31,31,1700
+50,Meta,total,32,32,2925
+50,Meta,total,33,33,2925
+50,Meta,total,34,34,2100
+50,Meta,total,35,35,3175
+50,Meta,total,36,36,1775
+50,Meta,total,37,37,2350
+50,Meta,total,38,38,3125
+50,Meta,total,39,39,2150
+50,Meta,total,40,40,3875
+50,Meta,total,41,41,1075
+50,Meta,total,42,42,2100
+50,Meta,total,43,43,2425
+50,Meta,total,44,44,1200
+50,Meta,total,45,45,2125
+50,Meta,total,46,46,1350
+50,Meta,total,47,47,1200
+50,Meta,total,48,48,1800
+50,Meta,total,49,49,925
+50,Meta,total,50,50,2025
+50,Meta,total,51,51,750
+50,Meta,total,52,52,1250
+50,Meta,total,53,53,1325
+50,Meta,total,54,54,1025
+50,Meta,total,55,55,1250
+50,Meta,total,56,56,975
+50,Meta,total,57,57,675
+50,Meta,total,58,58,700
+50,Meta,total,59,59,500
+50,Meta,total,60,60,1325
+50,Meta,total,61,61,250
+50,Meta,total,62,62,300
+50,Meta,total,63,63,575
+50,Meta,total,64,64,325
+50,Meta,total,65,65,700
+50,Meta,total,66,66,425
+50,Meta,total,67,67,525
+50,Meta,total,68,68,250
+50,Meta,total,69,69,150
+50,Meta,total,70,70,675
+50,Meta,total,71,71,225
+50,Meta,total,72,72,200
+50,Meta,total,73,73,375
+50,Meta,total,74,74,50
+50,Meta,total,75,75,300
+50,Meta,total,76,76,50
+50,Meta,total,77,77,50
+50,Meta,total,78,78,175
+50,Meta,total,79,79,50
+50,Meta,total,80,80,225
+50,Meta,total,81,81,25
+50,Meta,total,82,82,50
+50,Meta,total,83,83,75
+50,Meta,total,84,84,25
+50,Meta,total,85+,85,200
+52,Nariño,male,0,0,10275
+52,Nariño,male,1,1,10275
+52,Nariño,male,2,2,11425
+52,Nariño,male,3,3,13500
+52,Nariño,male,4,4,13100
+52,Nariño,male,5,5,13500
+52,Nariño,male,6,6,12775
+52,Nariño,male,7,7,13475
+52,Nariño,male,8,8,12475
+52,Nariño,male,9,9,10325
+52,Nariño,male,10,10,12075
+52,Nariño,male,11,11,8500
+52,Nariño,male,12,12,11750
+52,Nariño,male,13,13,9150
+52,Nariño,male,14,14,8450
+52,Nariño,male,15,15,8650
+52,Nariño,male,16,16,8075
+52,Nariño,male,17,17,7225
+52,Nariño,male,18,18,8300
+52,Nariño,male,19,19,5675
+52,Nariño,male,20,20,6650
+52,Nariño,male,21,21,4850
+52,Nariño,male,22,22,5800
+52,Nariño,male,23,23,5625
+52,Nariño,male,24,24,4475
+52,Nariño,male,25,25,6550
+52,Nariño,male,26,26,4300
+52,Nariño,male,27,27,4400
+52,Nariño,male,28,28,5250
+52,Nariño,male,29,29,2700
+52,Nariño,male,30,30,7275
+52,Nariño,male,31,31,1925
+52,Nariño,male,32,32,3400
+52,Nariño,male,33,33,3750
+52,Nariño,male,34,34,2325
+52,Nariño,male,35,35,5375
+52,Nariño,male,36,36,3225
+52,Nariño,male,37,37,2950
+52,Nariño,male,38,38,4250
+52,Nariño,male,39,39,2175
+52,Nariño,male,40,40,7125
+52,Nariño,male,41,41,1475
+52,Nariño,male,42,42,2525
+52,Nariño,male,43,43,2075
+52,Nariño,male,44,44,1775
+52,Nariño,male,45,45,4875
+52,Nariño,male,46,46,1875
+52,Nariño,male,47,47,1625
+52,Nariño,male,48,48,2950
+52,Nariño,male,49,49,1475
+52,Nariño,male,50,50,4875
+52,Nariño,male,51,51,925
+52,Nariño,male,52,52,2000
+52,Nariño,male,53,53,1450
+52,Nariño,male,54,54,1200
+52,Nariño,male,55,55,2950
+52,Nariño,male,56,56,1750
+52,Nariño,male,57,57,1000
+52,Nariño,male,58,58,1575
+52,Nariño,male,59,59,1125
+52,Nariño,male,60,60,4550
+52,Nariño,male,61,61,675
+52,Nariño,male,62,62,1450
+52,Nariño,male,63,63,1125
+52,Nariño,male,64,64,1150
+52,Nariño,male,65,65,2100
+52,Nariño,male,66,66,975
+52,Nariño,male,67,67,750
+52,Nariño,male,68,68,900
+52,Nariño,male,69,69,525
+52,Nariño,male,70,70,2275
+52,Nariño,male,71,71,300
+52,Nariño,male,72,72,725
+52,Nariño,male,73,73,900
+52,Nariño,male,74,74,500
+52,Nariño,male,75,75,900
+52,Nariño,male,76,76,275
+52,Nariño,male,77,77,150
+52,Nariño,male,78,78,425
+52,Nariño,male,79,79,175
+52,Nariño,male,80,80,825
+52,Nariño,male,81,81,75
+52,Nariño,male,82,82,150
+52,Nariño,male,83,83,225
+52,Nariño,male,84,84,50
+52,Nariño,male,85+,85,1250
+52,Nariño,female,0,0,10600
+52,Nariño,female,1,1,10950
+52,Nariño,female,2,2,11450
+52,Nariño,female,3,3,12500
+52,Nariño,female,4,4,12425
+52,Nariño,female,5,5,12250
+52,Nariño,female,6,6,12475
+52,Nariño,female,7,7,13300
+52,Nariño,female,8,8,12450
+52,Nariño,female,9,9,9375
+52,Nariño,female,10,10,11950
+52,Nariño,female,11,11,8450
+52,Nariño,female,12,12,11500
+52,Nariño,female,13,13,9200
+52,Nariño,female,14,14,8800
+52,Nariño,female,15,15,8900
+52,Nariño,female,16,16,8075
+52,Nariño,female,17,17,7075
+52,Nariño,female,18,18,8825
+52,Nariño,female,19,19,6025
+52,Nariño,female,20,20,8975
+52,Nariño,female,21,21,4425
+52,Nariño,female,22,22,6875
+52,Nariño,female,23,23,5700
+52,Nariño,female,24,24,5075
+52,Nariño,female,25,25,7600
+52,Nariño,female,26,26,5050
+52,Nariño,female,27,27,4300
+52,Nariño,female,28,28,5900
+52,Nariño,female,29,29,3500
+52,Nariño,female,30,30,9100
+52,Nariño,female,31,31,2150
+52,Nariño,female,32,32,4225
+52,Nariño,female,33,33,3650
+52,Nariño,female,34,34,2300
+52,Nariño,female,35,35,7075
+52,Nariño,female,36,36,3250
+52,Nariño,female,37,37,3225
+52,Nariño,female,38,38,4875
+52,Nariño,female,39,39,2500
+52,Nariño,female,40,40,7700
+52,Nariño,female,41,41,1475
+52,Nariño,female,42,42,2700
+52,Nariño,female,43,43,2625
+52,Nariño,female,44,44,1875
+52,Nariño,female,45,45,4900
+52,Nariño,female,46,46,2400
+52,Nariño,female,47,47,1475
+52,Nariño,female,48,48,3075
+52,Nariño,female,49,49,1375
+52,Nariño,female,50,50,7000
+52,Nariño,female,51,51,1325
+52,Nariño,female,52,52,1775
+52,Nariño,female,53,53,1725
+52,Nariño,female,54,54,1400
+52,Nariño,female,55,55,3375
+52,Nariño,female,56,56,1625
+52,Nariño,female,57,57,900
+52,Nariño,female,58,58,1900
+52,Nariño,female,59,59,875
+52,Nariño,female,60,60,5575
+52,Nariño,female,61,61,500
+52,Nariño,female,62,62,1275
+52,Nariño,female,63,63,875
+52,Nariño,female,64,64,700
+52,Nariño,female,65,65,2350
+52,Nariño,female,66,66,575
+52,Nariño,female,67,67,550
+52,Nariño,female,68,68,800
+52,Nariño,female,69,69,475
+52,Nariño,female,70,70,2675
+52,Nariño,female,71,71,175
+52,Nariño,female,72,72,825
+52,Nariño,female,73,73,575
+52,Nariño,female,74,74,200
+52,Nariño,female,75,75,1150
+52,Nariño,female,76,76,250
+52,Nariño,female,77,77,125
+52,Nariño,female,78,78,475
+52,Nariño,female,79,79,150
+52,Nariño,female,80,80,950
+52,Nariño,female,81,81,50
+52,Nariño,female,82,82,200
+52,Nariño,female,83,83,125
+52,Nariño,female,84,84,100
+52,Nariño,female,85+,85,1350
+52,Nariño,total,0,0,20875
+52,Nariño,total,1,1,21225
+52,Nariño,total,2,2,22875
+52,Nariño,total,3,3,26000
+52,Nariño,total,4,4,25525
+52,Nariño,total,5,5,25750
+52,Nariño,total,6,6,25250
+52,Nariño,total,7,7,26775
+52,Nariño,total,8,8,24925
+52,Nariño,total,9,9,19700
+52,Nariño,total,10,10,24025
+52,Nariño,total,11,11,16950
+52,Nariño,total,12,12,23250
+52,Nariño,total,13,13,18350
+52,Nariño,total,14,14,17250
+52,Nariño,total,15,15,17550
+52,Nariño,total,16,16,16150
+52,Nariño,total,17,17,14300
+52,Nariño,total,18,18,17125
+52,Nariño,total,19,19,11700
+52,Nariño,total,20,20,15625
+52,Nariño,total,21,21,9275
+52,Nariño,total,22,22,12675
+52,Nariño,total,23,23,11325
+52,Nariño,total,24,24,9550
+52,Nariño,total,25,25,14150
+52,Nariño,total,26,26,9350
+52,Nariño,total,27,27,8700
+52,Nariño,total,28,28,11150
+52,Nariño,total,29,29,6200
+52,Nariño,total,30,30,16375
+52,Nariño,total,31,31,4075
+52,Nariño,total,32,32,7625
+52,Nariño,total,33,33,7400
+52,Nariño,total,34,34,4625
+52,Nariño,total,35,35,12450
+52,Nariño,total,36,36,6475
+52,Nariño,total,37,37,6175
+52,Nariño,total,38,38,9125
+52,Nariño,total,39,39,4675
+52,Nariño,total,40,40,14825
+52,Nariño,total,41,41,2950
+52,Nariño,total,42,42,5225
+52,Nariño,total,43,43,4700
+52,Nariño,total,44,44,3650
+52,Nariño,total,45,45,9775
+52,Nariño,total,46,46,4275
+52,Nariño,total,47,47,3100
+52,Nariño,total,48,48,6025
+52,Nariño,total,49,49,2850
+52,Nariño,total,50,50,11875
+52,Nariño,total,51,51,2250
+52,Nariño,total,52,52,3775
+52,Nariño,total,53,53,3175
+52,Nariño,total,54,54,2600
+52,Nariño,total,55,55,6325
+52,Nariño,total,56,56,3375
+52,Nariño,total,57,57,1900
+52,Nariño,total,58,58,3475
+52,Nariño,total,59,59,2000
+52,Nariño,total,60,60,10125
+52,Nariño,total,61,61,1175
+52,Nariño,total,62,62,2725
+52,Nariño,total,63,63,2000
+52,Nariño,total,64,64,1850
+52,Nariño,total,65,65,4450
+52,Nariño,total,66,66,1550
+52,Nariño,total,67,67,1300
+52,Nariño,total,68,68,1700
+52,Nariño,total,69,69,1000
+52,Nariño,total,70,70,4950
+52,Nariño,total,71,71,475
+52,Nariño,total,72,72,1550
+52,Nariño,total,73,73,1475
+52,Nariño,total,74,74,700
+52,Nariño,total,75,75,2050
+52,Nariño,total,76,76,525
+52,Nariño,total,77,77,275
+52,Nariño,total,78,78,900
+52,Nariño,total,79,79,325
+52,Nariño,total,80,80,1775
+52,Nariño,total,81,81,125
+52,Nariño,total,82,82,350
+52,Nariño,total,83,83,350
+52,Nariño,total,84,84,150
+52,Nariño,total,85+,85,2600
+54,Norte de Santander,male,0,0,9050
+54,Norte de Santander,male,1,1,9150
+54,Norte de Santander,male,2,2,10975
+54,Norte de Santander,male,3,3,11300
+54,Norte de Santander,male,4,4,10900
+54,Norte de Santander,male,5,5,11675
+54,Norte de Santander,male,6,6,10850
+54,Norte de Santander,male,7,7,11925
+54,Norte de Santander,male,8,8,11925
+54,Norte de Santander,male,9,9,9900
+54,Norte de Santander,male,10,10,12000
+54,Norte de Santander,male,11,11,9350
+54,Norte de Santander,male,12,12,11450
+54,Norte de Santander,male,13,13,9200
+54,Norte de Santander,male,14,14,8500
+54,Norte de Santander,male,15,15,8925
+54,Norte de Santander,male,16,16,6975
+54,Norte de Santander,male,17,17,7375
+54,Norte de Santander,male,18,18,8150
+54,Norte de Santander,male,19,19,5850
+54,Norte de Santander,male,20,20,6775
+54,Norte de Santander,male,21,21,3650
+54,Norte de Santander,male,22,22,5450
+54,Norte de Santander,male,23,23,5450
+54,Norte de Santander,male,24,24,4500
+54,Norte de Santander,male,25,25,5175
+54,Norte de Santander,male,26,26,3900
+54,Norte de Santander,male,27,27,4150
+54,Norte de Santander,male,28,28,4225
+54,Norte de Santander,male,29,29,3050
+54,Norte de Santander,male,30,30,5525
+54,Norte de Santander,male,31,31,1475
+54,Norte de Santander,male,32,32,3125
+54,Norte de Santander,male,33,33,3575
+54,Norte de Santander,male,34,34,2800
+54,Norte de Santander,male,35,35,4450
+54,Norte de Santander,male,36,36,2725
+54,Norte de Santander,male,37,37,2900
+54,Norte de Santander,male,38,38,3650
+54,Norte de Santander,male,39,39,2325
+54,Norte de Santander,male,40,40,5000
+54,Norte de Santander,male,41,41,1525
+54,Norte de Santander,male,42,42,3050
+54,Norte de Santander,male,43,43,2550
+54,Norte de Santander,male,44,44,1775
+54,Norte de Santander,male,45,45,3375
+54,Norte de Santander,male,46,46,1925
+54,Norte de Santander,male,47,47,1450
+54,Norte de Santander,male,48,48,2475
+54,Norte de Santander,male,49,49,1350
+54,Norte de Santander,male,50,50,3550
+54,Norte de Santander,male,51,51,1125
+54,Norte de Santander,male,52,52,1650
+54,Norte de Santander,male,53,53,2150
+54,Norte de Santander,male,54,54,1575
+54,Norte de Santander,male,55,55,2100
+54,Norte de Santander,male,56,56,1225
+54,Norte de Santander,male,57,57,1300
+54,Norte de Santander,male,58,58,1500
+54,Norte de Santander,male,59,59,850
+54,Norte de Santander,male,60,60,2800
+54,Norte de Santander,male,61,61,825
+54,Norte de Santander,male,62,62,1025
+54,Norte de Santander,male,63,63,1450
+54,Norte de Santander,male,64,64,550
+54,Norte de Santander,male,65,65,1450
+54,Norte de Santander,male,66,66,650
+54,Norte de Santander,male,67,67,500
+54,Norte de Santander,male,68,68,775
+54,Norte de Santander,male,69,69,375
+54,Norte de Santander,male,70,70,1375
+54,Norte de Santander,male,71,71,250
+54,Norte de Santander,male,72,72,525
+54,Norte de Santander,male,73,73,925
+54,Norte de Santander,male,74,74,300
+54,Norte de Santander,male,75,75,625
+54,Norte de Santander,male,76,76,150
+54,Norte de Santander,male,77,77,100
+54,Norte de Santander,male,78,78,200
+54,Norte de Santander,male,79,79,100
+54,Norte de Santander,male,80,80,600
+54,Norte de Santander,male,81,81,75
+54,Norte de Santander,male,82,82,175
+54,Norte de Santander,male,83,83,75
+54,Norte de Santander,male,84,84,0
+54,Norte de Santander,male,85+,85,900
+54,Norte de Santander,female,0,0,8550
+54,Norte de Santander,female,1,1,9225
+54,Norte de Santander,female,2,2,10700
+54,Norte de Santander,female,3,3,10550
+54,Norte de Santander,female,4,4,11300
+54,Norte de Santander,female,5,5,11400
+54,Norte de Santander,female,6,6,10600
+54,Norte de Santander,female,7,7,11700
+54,Norte de Santander,female,8,8,10450
+54,Norte de Santander,female,9,9,8800
+54,Norte de Santander,female,10,10,11650
+54,Norte de Santander,female,11,11,9400
+54,Norte de Santander,female,12,12,10800
+54,Norte de Santander,female,13,13,10050
+54,Norte de Santander,female,14,14,8875
+54,Norte de Santander,female,15,15,8925
+54,Norte de Santander,female,16,16,8525
+54,Norte de Santander,female,17,17,7925
+54,Norte de Santander,female,18,18,9225
+54,Norte de Santander,female,19,19,7275
+54,Norte de Santander,female,20,20,7625
+54,Norte de Santander,female,21,21,4950
+54,Norte de Santander,female,22,22,5625
+54,Norte de Santander,female,23,23,5775
+54,Norte de Santander,female,24,24,4550
+54,Norte de Santander,female,25,25,6550
+54,Norte de Santander,female,26,26,4300
+54,Norte de Santander,female,27,27,4675
+54,Norte de Santander,female,28,28,4925
+54,Norte de Santander,female,29,29,3275
+54,Norte de Santander,female,30,30,5900
+54,Norte de Santander,female,31,31,1900
+54,Norte de Santander,female,32,32,3350
+54,Norte de Santander,female,33,33,3350
+54,Norte de Santander,female,34,34,2925
+54,Norte de Santander,female,35,35,4950
+54,Norte de Santander,female,36,36,3525
+54,Norte de Santander,female,37,37,2875
+54,Norte de Santander,female,38,38,3925
+54,Norte de Santander,female,39,39,2300
+54,Norte de Santander,female,40,40,5975
+54,Norte de Santander,female,41,41,1500
+54,Norte de Santander,female,42,42,2850
+54,Norte de Santander,female,43,43,2225
+54,Norte de Santander,female,44,44,1775
+54,Norte de Santander,female,45,45,4500
+54,Norte de Santander,female,46,46,1250
+54,Norte de Santander,female,47,47,1950
+54,Norte de Santander,female,48,48,2750
+54,Norte de Santander,female,49,49,1550
+54,Norte de Santander,female,50,50,4425
+54,Norte de Santander,female,51,51,1175
+54,Norte de Santander,female,52,52,2000
+54,Norte de Santander,female,53,53,1950
+54,Norte de Santander,female,54,54,1075
+54,Norte de Santander,female,55,55,2475
+54,Norte de Santander,female,56,56,1325
+54,Norte de Santander,female,57,57,825
+54,Norte de Santander,female,58,58,1150
+54,Norte de Santander,female,59,59,800
+54,Norte de Santander,female,60,60,3350
+54,Norte de Santander,female,61,61,650
+54,Norte de Santander,female,62,62,775
+54,Norte de Santander,female,63,63,1025
+54,Norte de Santander,female,64,64,525
+54,Norte de Santander,female,65,65,1250
+54,Norte de Santander,female,66,66,500
+54,Norte de Santander,female,67,67,450
+54,Norte de Santander,female,68,68,575
+54,Norte de Santander,female,69,69,375
+54,Norte de Santander,female,70,70,1750
+54,Norte de Santander,female,71,71,200
+54,Norte de Santander,female,72,72,450
+54,Norte de Santander,female,73,73,675
+54,Norte de Santander,female,74,74,200
+54,Norte de Santander,female,75,75,875
+54,Norte de Santander,female,76,76,250
+54,Norte de Santander,female,77,77,125
+54,Norte de Santander,female,78,78,175
+54,Norte de Santander,female,79,79,100
+54,Norte de Santander,female,80,80,825
+54,Norte de Santander,female,81,81,125
+54,Norte de Santander,female,82,82,75
+54,Norte de Santander,female,83,83,150
+54,Norte de Santander,female,84,84,75
+54,Norte de Santander,female,85+,85,1050
+54,Norte de Santander,total,0,0,17600
+54,Norte de Santander,total,1,1,18375
+54,Norte de Santander,total,2,2,21675
+54,Norte de Santander,total,3,3,21850
+54,Norte de Santander,total,4,4,22200
+54,Norte de Santander,total,5,5,23075
+54,Norte de Santander,total,6,6,21450
+54,Norte de Santander,total,7,7,23625
+54,Norte de Santander,total,8,8,22375
+54,Norte de Santander,total,9,9,18700
+54,Norte de Santander,total,10,10,23650
+54,Norte de Santander,total,11,11,18750
+54,Norte de Santander,total,12,12,22250
+54,Norte de Santander,total,13,13,19250
+54,Norte de Santander,total,14,14,17375
+54,Norte de Santander,total,15,15,17850
+54,Norte de Santander,total,16,16,15500
+54,Norte de Santander,total,17,17,15300
+54,Norte de Santander,total,18,18,17375
+54,Norte de Santander,total,19,19,13125
+54,Norte de Santander,total,20,20,14400
+54,Norte de Santander,total,21,21,8600
+54,Norte de Santander,total,22,22,11075
+54,Norte de Santander,total,23,23,11225
+54,Norte de Santander,total,24,24,9050
+54,Norte de Santander,total,25,25,11725
+54,Norte de Santander,total,26,26,8200
+54,Norte de Santander,total,27,27,8825
+54,Norte de Santander,total,28,28,9150
+54,Norte de Santander,total,29,29,6325
+54,Norte de Santander,total,30,30,11425
+54,Norte de Santander,total,31,31,3375
+54,Norte de Santander,total,32,32,6475
+54,Norte de Santander,total,33,33,6925
+54,Norte de Santander,total,34,34,5725
+54,Norte de Santander,total,35,35,9400
+54,Norte de Santander,total,36,36,6250
+54,Norte de Santander,total,37,37,5775
+54,Norte de Santander,total,38,38,7575
+54,Norte de Santander,total,39,39,4625
+54,Norte de Santander,total,40,40,10975
+54,Norte de Santander,total,41,41,3025
+54,Norte de Santander,total,42,42,5900
+54,Norte de Santander,total,43,43,4775
+54,Norte de Santander,total,44,44,3550
+54,Norte de Santander,total,45,45,7875
+54,Norte de Santander,total,46,46,3175
+54,Norte de Santander,total,47,47,3400
+54,Norte de Santander,total,48,48,5225
+54,Norte de Santander,total,49,49,2900
+54,Norte de Santander,total,50,50,7975
+54,Norte de Santander,total,51,51,2300
+54,Norte de Santander,total,52,52,3650
+54,Norte de Santander,total,53,53,4100
+54,Norte de Santander,total,54,54,2650
+54,Norte de Santander,total,55,55,4575
+54,Norte de Santander,total,56,56,2550
+54,Norte de Santander,total,57,57,2125
+54,Norte de Santander,total,58,58,2650
+54,Norte de Santander,total,59,59,1650
+54,Norte de Santander,total,60,60,6150
+54,Norte de Santander,total,61,61,1475
+54,Norte de Santander,total,62,62,1800
+54,Norte de Santander,total,63,63,2475
+54,Norte de Santander,total,64,64,1075
+54,Norte de Santander,total,65,65,2700
+54,Norte de Santander,total,66,66,1150
+54,Norte de Santander,total,67,67,950
+54,Norte de Santander,total,68,68,1350
+54,Norte de Santander,total,69,69,750
+54,Norte de Santander,total,70,70,3125
+54,Norte de Santander,total,71,71,450
+54,Norte de Santander,total,72,72,975
+54,Norte de Santander,total,73,73,1600
+54,Norte de Santander,total,74,74,500
+54,Norte de Santander,total,75,75,1500
+54,Norte de Santander,total,76,76,400
+54,Norte de Santander,total,77,77,225
+54,Norte de Santander,total,78,78,375
+54,Norte de Santander,total,79,79,200
+54,Norte de Santander,total,80,80,1425
+54,Norte de Santander,total,81,81,200
+54,Norte de Santander,total,82,82,250
+54,Norte de Santander,total,83,83,225
+54,Norte de Santander,total,84,84,75
+54,Norte de Santander,total,85+,85,1950
+63,Quindío,male,0,0,3025
+63,Quindío,male,1,1,3425
+63,Quindío,male,2,2,4450
+63,Quindío,male,3,3,4600
+63,Quindío,male,4,4,4425
+63,Quindío,male,5,5,4325
+63,Quindío,male,6,6,4425
+63,Quindío,male,7,7,4850
+63,Quindío,male,8,8,4425
+63,Quindío,male,9,9,4700
+63,Quindío,male,10,10,4725
+63,Quindío,male,11,11,4750
+63,Quindío,male,12,12,4800
+63,Quindío,male,13,13,4725
+63,Quindío,male,14,14,3675
+63,Quindío,male,15,15,3575
+63,Quindío,male,16,16,2625
+63,Quindío,male,17,17,3350
+63,Quindío,male,18,18,3400
+63,Quindío,male,19,19,2850
+63,Quindío,male,20,20,2550
+63,Quindío,male,21,21,2425
+63,Quindío,male,22,22,2150
+63,Quindío,male,23,23,2125
+63,Quindío,male,24,24,2025
+63,Quindío,male,25,25,2000
+63,Quindío,male,26,26,1675
+63,Quindío,male,27,27,1925
+63,Quindío,male,28,28,1500
+63,Quindío,male,29,29,1225
+63,Quindío,male,30,30,2025
+63,Quindío,male,31,31,1075
+63,Quindío,male,32,32,1475
+63,Quindío,male,33,33,1925
+63,Quindío,male,34,34,1100
+63,Quindío,male,35,35,1575
+63,Quindío,male,36,36,1525
+63,Quindío,male,37,37,1200
+63,Quindío,male,38,38,1500
+63,Quindío,male,39,39,1175
+63,Quindío,male,40,40,1725
+63,Quindío,male,41,41,725
+63,Quindío,male,42,42,1400
+63,Quindío,male,43,43,1700
+63,Quindío,male,44,44,1050
+63,Quindío,male,45,45,1325
+63,Quindío,male,46,46,1250
+63,Quindío,male,47,47,1200
+63,Quindío,male,48,48,1475
+63,Quindío,male,49,49,950
+63,Quindío,male,50,50,1250
+63,Quindío,male,51,51,550
+63,Quindío,male,52,52,775
+63,Quindío,male,53,53,975
+63,Quindío,male,54,54,525
+63,Quindío,male,55,55,1150
+63,Quindío,male,56,56,850
+63,Quindío,male,57,57,350
+63,Quindío,male,58,58,725
+63,Quindío,male,59,59,300
+63,Quindío,male,60,60,925
+63,Quindío,male,61,61,350
+63,Quindío,male,62,62,600
+63,Quindío,male,63,63,625
+63,Quindío,male,64,64,450
+63,Quindío,male,65,65,550
+63,Quindío,male,66,66,425
+63,Quindío,male,67,67,225
+63,Quindío,male,68,68,300
+63,Quindío,male,69,69,125
+63,Quindío,male,70,70,475
+63,Quindío,male,71,71,350
+63,Quindío,male,72,72,300
+63,Quindío,male,73,73,400
+63,Quindío,male,74,74,175
+63,Quindío,male,75,75,275
+63,Quindío,male,76,76,25
+63,Quindío,male,77,77,125
+63,Quindío,male,78,78,175
+63,Quindío,male,79,79,50
+63,Quindío,male,80,80,150
+63,Quindío,male,81,81,0
+63,Quindío,male,82,82,125
+63,Quindío,male,83,83,50
+63,Quindío,male,84,84,50
+63,Quindío,male,85+,85,300
+63,Quindío,female,0,0,3325
+63,Quindío,female,1,1,3450
+63,Quindío,female,2,2,4500
+63,Quindío,female,3,3,4350
+63,Quindío,female,4,4,4200
+63,Quindío,female,5,5,4625
+63,Quindío,female,6,6,4025
+63,Quindío,female,7,7,4025
+63,Quindío,female,8,8,5150
+63,Quindío,female,9,9,4475
+63,Quindío,female,10,10,4750
+63,Quindío,female,11,11,4575
+63,Quindío,female,12,12,4950
+63,Quindío,female,13,13,5050
+63,Quindío,female,14,14,3700
+63,Quindío,female,15,15,4375
+63,Quindío,female,16,16,4375
+63,Quindío,female,17,17,4650
+63,Quindío,female,18,18,4000
+63,Quindío,female,19,19,3550
+63,Quindío,female,20,20,2975
+63,Quindío,female,21,21,2650
+63,Quindío,female,22,22,2875
+63,Quindío,female,23,23,3225
+63,Quindío,female,24,24,2550
+63,Quindío,female,25,25,3550
+63,Quindío,female,26,26,1975
+63,Quindío,female,27,27,2150
+63,Quindío,female,28,28,1825
+63,Quindío,female,29,29,1800
+63,Quindío,female,30,30,2150
+63,Quindío,female,31,31,1275
+63,Quindío,female,32,32,1875
+63,Quindío,female,33,33,1875
+63,Quindío,female,34,34,1325
+63,Quindío,female,35,35,2025
+63,Quindío,female,36,36,1775
+63,Quindío,female,37,37,1625
+63,Quindío,female,38,38,2225
+63,Quindío,female,39,39,1675
+63,Quindío,female,40,40,2350
+63,Quindío,female,41,41,650
+63,Quindío,female,42,42,1475
+63,Quindío,female,43,43,1525
+63,Quindío,female,44,44,1125
+63,Quindío,female,45,45,1850
+63,Quindío,female,46,46,1125
+63,Quindío,female,47,47,975
+63,Quindío,female,48,48,1250
+63,Quindío,female,49,49,825
+63,Quindío,female,50,50,1275
+63,Quindío,female,51,51,400
+63,Quindío,female,52,52,825
+63,Quindío,female,53,53,850
+63,Quindío,female,54,54,500
+63,Quindío,female,55,55,1150
+63,Quindío,female,56,56,400
+63,Quindío,female,57,57,425
+63,Quindío,female,58,58,775
+63,Quindío,female,59,59,300
+63,Quindío,female,60,60,1700
+63,Quindío,female,61,61,250
+63,Quindío,female,62,62,500
+63,Quindío,female,63,63,600
+63,Quindío,female,64,64,275
+63,Quindío,female,65,65,575
+63,Quindío,female,66,66,225
+63,Quindío,female,67,67,225
+63,Quindío,female,68,68,225
+63,Quindío,female,69,69,100
+63,Quindío,female,70,70,825
+63,Quindío,female,71,71,125
+63,Quindío,female,72,72,225
+63,Quindío,female,73,73,325
+63,Quindío,female,74,74,50
+63,Quindío,female,75,75,200
+63,Quindío,female,76,76,75
+63,Quindío,female,77,77,50
+63,Quindío,female,78,78,175
+63,Quindío,female,79,79,50
+63,Quindío,female,80,80,250
+63,Quindío,female,81,81,25
+63,Quindío,female,82,82,25
+63,Quindío,female,83,83,50
+63,Quindío,female,84,84,25
+63,Quindío,female,85+,85,225
+63,Quindío,total,0,0,6350
+63,Quindío,total,1,1,6875
+63,Quindío,total,2,2,8950
+63,Quindío,total,3,3,8950
+63,Quindío,total,4,4,8625
+63,Quindío,total,5,5,8950
+63,Quindío,total,6,6,8450
+63,Quindío,total,7,7,8875
+63,Quindío,total,8,8,9575
+63,Quindío,total,9,9,9175
+63,Quindío,total,10,10,9475
+63,Quindío,total,11,11,9325
+63,Quindío,total,12,12,9750
+63,Quindío,total,13,13,9775
+63,Quindío,total,14,14,7375
+63,Quindío,total,15,15,7950
+63,Quindío,total,16,16,7000
+63,Quindío,total,17,17,8000
+63,Quindío,total,18,18,7400
+63,Quindío,total,19,19,6400
+63,Quindío,total,20,20,5525
+63,Quindío,total,21,21,5075
+63,Quindío,total,22,22,5025
+63,Quindío,total,23,23,5350
+63,Quindío,total,24,24,4575
+63,Quindío,total,25,25,5550
+63,Quindío,total,26,26,3650
+63,Quindío,total,27,27,4075
+63,Quindío,total,28,28,3325
+63,Quindío,total,29,29,3025
+63,Quindío,total,30,30,4175
+63,Quindío,total,31,31,2350
+63,Quindío,total,32,32,3350
+63,Quindío,total,33,33,3800
+63,Quindío,total,34,34,2425
+63,Quindío,total,35,35,3600
+63,Quindío,total,36,36,3300
+63,Quindío,total,37,37,2825
+63,Quindío,total,38,38,3725
+63,Quindío,total,39,39,2850
+63,Quindío,total,40,40,4075
+63,Quindío,total,41,41,1375
+63,Quindío,total,42,42,2875
+63,Quindío,total,43,43,3225
+63,Quindío,total,44,44,2175
+63,Quindío,total,45,45,3175
+63,Quindío,total,46,46,2375
+63,Quindío,total,47,47,2175
+63,Quindío,total,48,48,2725
+63,Quindío,total,49,49,1775
+63,Quindío,total,50,50,2525
+63,Quindío,total,51,51,950
+63,Quindío,total,52,52,1600
+63,Quindío,total,53,53,1825
+63,Quindío,total,54,54,1025
+63,Quindío,total,55,55,2300
+63,Quindío,total,56,56,1250
+63,Quindío,total,57,57,775
+63,Quindío,total,58,58,1500
+63,Quindío,total,59,59,600
+63,Quindío,total,60,60,2625
+63,Quindío,total,61,61,600
+63,Quindío,total,62,62,1100
+63,Quindío,total,63,63,1225
+63,Quindío,total,64,64,725
+63,Quindío,total,65,65,1125
+63,Quindío,total,66,66,650
+63,Quindío,total,67,67,450
+63,Quindío,total,68,68,525
+63,Quindío,total,69,69,225
+63,Quindío,total,70,70,1300
+63,Quindío,total,71,71,475
+63,Quindío,total,72,72,525
+63,Quindío,total,73,73,725
+63,Quindío,total,74,74,225
+63,Quindío,total,75,75,475
+63,Quindío,total,76,76,100
+63,Quindío,total,77,77,175
+63,Quindío,total,78,78,350
+63,Quindío,total,79,79,100
+63,Quindío,total,80,80,400
+63,Quindío,total,81,81,25
+63,Quindío,total,82,82,150
+63,Quindío,total,83,83,100
+63,Quindío,total,84,84,75
+63,Quindío,total,85+,85,525
+66,Risaralda,male,0,0,4600
+66,Risaralda,male,1,1,5100
+66,Risaralda,male,2,2,5325
+66,Risaralda,male,3,3,7025
+66,Risaralda,male,4,4,5950
+66,Risaralda,male,5,5,6400
+66,Risaralda,male,6,6,6150
+66,Risaralda,male,7,7,7300
+66,Risaralda,male,8,8,6650
+66,Risaralda,male,9,9,6900
+66,Risaralda,male,10,10,7225
+66,Risaralda,male,11,11,5975
+66,Risaralda,male,12,12,6875
+66,Risaralda,male,13,13,5275
+66,Risaralda,male,14,14,5025
+66,Risaralda,male,15,15,5075
+66,Risaralda,male,16,16,5300
+66,Risaralda,male,17,17,4975
+66,Risaralda,male,18,18,5675
+66,Risaralda,male,19,19,4175
+66,Risaralda,male,20,20,4000
+66,Risaralda,male,21,21,3725
+66,Risaralda,male,22,22,2975
+66,Risaralda,male,23,23,3075
+66,Risaralda,male,24,24,2975
+66,Risaralda,male,25,25,3250
+66,Risaralda,male,26,26,2425
+66,Risaralda,male,27,27,2750
+66,Risaralda,male,28,28,2925
+66,Risaralda,male,29,29,2325
+66,Risaralda,male,30,30,3300
+66,Risaralda,male,31,31,1775
+66,Risaralda,male,32,32,2225
+66,Risaralda,male,33,33,2525
+66,Risaralda,male,34,34,2000
+66,Risaralda,male,35,35,2600
+66,Risaralda,male,36,36,1925
+66,Risaralda,male,37,37,1875
+66,Risaralda,male,38,38,1950
+66,Risaralda,male,39,39,1775
+66,Risaralda,male,40,40,2925
+66,Risaralda,male,41,41,1025
+66,Risaralda,male,42,42,2000
+66,Risaralda,male,43,43,1750
+66,Risaralda,male,44,44,1225
+66,Risaralda,male,45,45,1675
+66,Risaralda,male,46,46,1225
+66,Risaralda,male,47,47,1400
+66,Risaralda,male,48,48,1575
+66,Risaralda,male,49,49,1050
+66,Risaralda,male,50,50,2075
+66,Risaralda,male,51,51,975
+66,Risaralda,male,52,52,1525
+66,Risaralda,male,53,53,1400
+66,Risaralda,male,54,54,1075
+66,Risaralda,male,55,55,1475
+66,Risaralda,male,56,56,700
+66,Risaralda,male,57,57,900
+66,Risaralda,male,58,58,1000
+66,Risaralda,male,59,59,600
+66,Risaralda,male,60,60,1475
+66,Risaralda,male,61,61,400
+66,Risaralda,male,62,62,925
+66,Risaralda,male,63,63,975
+66,Risaralda,male,64,64,475
+66,Risaralda,male,65,65,1250
+66,Risaralda,male,66,66,525
+66,Risaralda,male,67,67,400
+66,Risaralda,male,68,68,550
+66,Risaralda,male,69,69,275
+66,Risaralda,male,70,70,425
+66,Risaralda,male,71,71,300
+66,Risaralda,male,72,72,450
+66,Risaralda,male,73,73,750
+66,Risaralda,male,74,74,250
+66,Risaralda,male,75,75,225
+66,Risaralda,male,76,76,250
+66,Risaralda,male,77,77,125
+66,Risaralda,male,78,78,200
+66,Risaralda,male,79,79,75
+66,Risaralda,male,80,80,175
+66,Risaralda,male,81,81,50
+66,Risaralda,male,82,82,25
+66,Risaralda,male,83,83,75
+66,Risaralda,male,84,84,50
+66,Risaralda,male,85+,85,325
+66,Risaralda,female,0,0,4400
+66,Risaralda,female,1,1,4500
+66,Risaralda,female,2,2,6000
+66,Risaralda,female,3,3,6350
+66,Risaralda,female,4,4,5425
+66,Risaralda,female,5,5,6475
+66,Risaralda,female,6,6,6450
+66,Risaralda,female,7,7,6750
+66,Risaralda,female,8,8,6725
+66,Risaralda,female,9,9,6400
+66,Risaralda,female,10,10,6575
+66,Risaralda,female,11,11,6200
+66,Risaralda,female,12,12,6025
+66,Risaralda,female,13,13,6150
+66,Risaralda,female,14,14,5900
+66,Risaralda,female,15,15,6300
+66,Risaralda,female,16,16,5975
+66,Risaralda,female,17,17,5625
+66,Risaralda,female,18,18,6450
+66,Risaralda,female,19,19,5200
+66,Risaralda,female,20,20,4725
+66,Risaralda,female,21,21,4075
+66,Risaralda,female,22,22,4700
+66,Risaralda,female,23,23,4900
+66,Risaralda,female,24,24,3450
+66,Risaralda,female,25,25,4525
+66,Risaralda,female,26,26,3625
+66,Risaralda,female,27,27,3050
+66,Risaralda,female,28,28,3150
+66,Risaralda,female,29,29,2425
+66,Risaralda,female,30,30,3525
+66,Risaralda,female,31,31,1800
+66,Risaralda,female,32,32,2500
+66,Risaralda,female,33,33,2525
+66,Risaralda,female,34,34,2150
+66,Risaralda,female,35,35,3350
+66,Risaralda,female,36,36,2075
+66,Risaralda,female,37,37,1650
+66,Risaralda,female,38,38,3500
+66,Risaralda,female,39,39,2175
+66,Risaralda,female,40,40,3275
+66,Risaralda,female,41,41,800
+66,Risaralda,female,42,42,2175
+66,Risaralda,female,43,43,2025
+66,Risaralda,female,44,44,1625
+66,Risaralda,female,45,45,2700
+66,Risaralda,female,46,46,1600
+66,Risaralda,female,47,47,1650
+66,Risaralda,female,48,48,1900
+66,Risaralda,female,49,49,1050
+66,Risaralda,female,50,50,2275
+66,Risaralda,female,51,51,850
+66,Risaralda,female,52,52,1575
+66,Risaralda,female,53,53,1200
+66,Risaralda,female,54,54,775
+66,Risaralda,female,55,55,1425
+66,Risaralda,female,56,56,825
+66,Risaralda,female,57,57,750
+66,Risaralda,female,58,58,800
+66,Risaralda,female,59,59,450
+66,Risaralda,female,60,60,1750
+66,Risaralda,female,61,61,425
+66,Risaralda,female,62,62,625
+66,Risaralda,female,63,63,575
+66,Risaralda,female,64,64,575
+66,Risaralda,female,65,65,1050
+66,Risaralda,female,66,66,575
+66,Risaralda,female,67,67,450
+66,Risaralda,female,68,68,350
+66,Risaralda,female,69,69,250
+66,Risaralda,female,70,70,800
+66,Risaralda,female,71,71,75
+66,Risaralda,female,72,72,350
+66,Risaralda,female,73,73,275
+66,Risaralda,female,74,74,225
+66,Risaralda,female,75,75,450
+66,Risaralda,female,76,76,75
+66,Risaralda,female,77,77,100
+66,Risaralda,female,78,78,175
+66,Risaralda,female,79,79,25
+66,Risaralda,female,80,80,325
+66,Risaralda,female,81,81,75
+66,Risaralda,female,82,82,50
+66,Risaralda,female,83,83,75
+66,Risaralda,female,84,84,150
+66,Risaralda,female,85+,85,675
+66,Risaralda,total,0,0,9000
+66,Risaralda,total,1,1,9600
+66,Risaralda,total,2,2,11325
+66,Risaralda,total,3,3,13375
+66,Risaralda,total,4,4,11375
+66,Risaralda,total,5,5,12875
+66,Risaralda,total,6,6,12600
+66,Risaralda,total,7,7,14050
+66,Risaralda,total,8,8,13375
+66,Risaralda,total,9,9,13300
+66,Risaralda,total,10,10,13800
+66,Risaralda,total,11,11,12175
+66,Risaralda,total,12,12,12900
+66,Risaralda,total,13,13,11425
+66,Risaralda,total,14,14,10925
+66,Risaralda,total,15,15,11375
+66,Risaralda,total,16,16,11275
+66,Risaralda,total,17,17,10600
+66,Risaralda,total,18,18,12125
+66,Risaralda,total,19,19,9375
+66,Risaralda,total,20,20,8725
+66,Risaralda,total,21,21,7800
+66,Risaralda,total,22,22,7675
+66,Risaralda,total,23,23,7975
+66,Risaralda,total,24,24,6425
+66,Risaralda,total,25,25,7775
+66,Risaralda,total,26,26,6050
+66,Risaralda,total,27,27,5800
+66,Risaralda,total,28,28,6075
+66,Risaralda,total,29,29,4750
+66,Risaralda,total,30,30,6825
+66,Risaralda,total,31,31,3575
+66,Risaralda,total,32,32,4725
+66,Risaralda,total,33,33,5050
+66,Risaralda,total,34,34,4150
+66,Risaralda,total,35,35,5950
+66,Risaralda,total,36,36,4000
+66,Risaralda,total,37,37,3525
+66,Risaralda,total,38,38,5450
+66,Risaralda,total,39,39,3950
+66,Risaralda,total,40,40,6200
+66,Risaralda,total,41,41,1825
+66,Risaralda,total,42,42,4175
+66,Risaralda,total,43,43,3775
+66,Risaralda,total,44,44,2850
+66,Risaralda,total,45,45,4375
+66,Risaralda,total,46,46,2825
+66,Risaralda,total,47,47,3050
+66,Risaralda,total,48,48,3475
+66,Risaralda,total,49,49,2100
+66,Risaralda,total,50,50,4350
+66,Risaralda,total,51,51,1825
+66,Risaralda,total,52,52,3100
+66,Risaralda,total,53,53,2600
+66,Risaralda,total,54,54,1850
+66,Risaralda,total,55,55,2900
+66,Risaralda,total,56,56,1525
+66,Risaralda,total,57,57,1650
+66,Risaralda,total,58,58,1800
+66,Risaralda,total,59,59,1050
+66,Risaralda,total,60,60,3225
+66,Risaralda,total,61,61,825
+66,Risaralda,total,62,62,1550
+66,Risaralda,total,63,63,1550
+66,Risaralda,total,64,64,1050
+66,Risaralda,total,65,65,2300
+66,Risaralda,total,66,66,1100
+66,Risaralda,total,67,67,850
+66,Risaralda,total,68,68,900
+66,Risaralda,total,69,69,525
+66,Risaralda,total,70,70,1225
+66,Risaralda,total,71,71,375
+66,Risaralda,total,72,72,800
+66,Risaralda,total,73,73,1025
+66,Risaralda,total,74,74,475
+66,Risaralda,total,75,75,675
+66,Risaralda,total,76,76,325
+66,Risaralda,total,77,77,225
+66,Risaralda,total,78,78,375
+66,Risaralda,total,79,79,100
+66,Risaralda,total,80,80,500
+66,Risaralda,total,81,81,125
+66,Risaralda,total,82,82,75
+66,Risaralda,total,83,83,150
+66,Risaralda,total,84,84,200
+66,Risaralda,total,85+,85,1000
+68,Santander,male,0,0,14700
+68,Santander,male,1,1,15275
+68,Santander,male,2,2,16975
+68,Santander,male,3,3,19550
+68,Santander,male,4,4,19125
+68,Santander,male,5,5,17975
+68,Santander,male,6,6,17975
+68,Santander,male,7,7,19125
+68,Santander,male,8,8,18750
+68,Santander,male,9,9,16800
+68,Santander,male,10,10,18625
+68,Santander,male,11,11,14425
+68,Santander,male,12,12,18175
+68,Santander,male,13,13,15825
+68,Santander,male,14,14,14800
+68,Santander,male,15,15,12575
+68,Santander,male,16,16,11875
+68,Santander,male,17,17,10950
+68,Santander,male,18,18,13200
+68,Santander,male,19,19,9325
+68,Santander,male,20,20,9000
+68,Santander,male,21,21,8575
+68,Santander,male,22,22,8575
+68,Santander,male,23,23,8400
+68,Santander,male,24,24,6400
+68,Santander,male,25,25,7600
+68,Santander,male,26,26,7125
+68,Santander,male,27,27,6950
+68,Santander,male,28,28,7475
+68,Santander,male,29,29,4625
+68,Santander,male,30,30,9375
+68,Santander,male,31,31,3050
+68,Santander,male,32,32,5375
+68,Santander,male,33,33,5650
+68,Santander,male,34,34,4725
+68,Santander,male,35,35,6525
+68,Santander,male,36,36,4150
+68,Santander,male,37,37,5275
+68,Santander,male,38,38,6100
+68,Santander,male,39,39,4350
+68,Santander,male,40,40,7350
+68,Santander,male,41,41,2900
+68,Santander,male,42,42,5200
+68,Santander,male,43,43,5150
+68,Santander,male,44,44,3600
+68,Santander,male,45,45,5900
+68,Santander,male,46,46,3400
+68,Santander,male,47,47,2575
+68,Santander,male,48,48,3625
+68,Santander,male,49,49,2575
+68,Santander,male,50,50,5750
+68,Santander,male,51,51,2075
+68,Santander,male,52,52,3250
+68,Santander,male,53,53,3700
+68,Santander,male,54,54,3050
+68,Santander,male,55,55,4175
+68,Santander,male,56,56,2475
+68,Santander,male,57,57,2400
+68,Santander,male,58,58,2250
+68,Santander,male,59,59,1625
+68,Santander,male,60,60,4425
+68,Santander,male,61,61,1225
+68,Santander,male,62,62,1900
+68,Santander,male,63,63,2175
+68,Santander,male,64,64,1150
+68,Santander,male,65,65,2500
+68,Santander,male,66,66,1225
+68,Santander,male,67,67,1325
+68,Santander,male,68,68,1100
+68,Santander,male,69,69,725
+68,Santander,male,70,70,2350
+68,Santander,male,71,71,550
+68,Santander,male,72,72,775
+68,Santander,male,73,73,1050
+68,Santander,male,74,74,450
+68,Santander,male,75,75,675
+68,Santander,male,76,76,525
+68,Santander,male,77,77,275
+68,Santander,male,78,78,475
+68,Santander,male,79,79,225
+68,Santander,male,80,80,800
+68,Santander,male,81,81,175
+68,Santander,male,82,82,250
+68,Santander,male,83,83,250
+68,Santander,male,84,84,175
+68,Santander,male,85+,85,950
+68,Santander,female,0,0,14800
+68,Santander,female,1,1,15200
+68,Santander,female,2,2,17375
+68,Santander,female,3,3,18350
+68,Santander,female,4,4,18400
+68,Santander,female,5,5,17775
+68,Santander,female,6,6,17975
+68,Santander,female,7,7,17975
+68,Santander,female,8,8,18300
+68,Santander,female,9,9,16725
+68,Santander,female,10,10,18275
+68,Santander,female,11,11,15575
+68,Santander,female,12,12,17750
+68,Santander,female,13,13,15325
+68,Santander,female,14,14,13975
+68,Santander,female,15,15,14000
+68,Santander,female,16,16,12850
+68,Santander,female,17,17,12000
+68,Santander,female,18,18,12950
+68,Santander,female,19,19,9950
+68,Santander,female,20,20,12025
+68,Santander,female,21,21,8500
+68,Santander,female,22,22,10075
+68,Santander,female,23,23,9575
+68,Santander,female,24,24,7650
+68,Santander,female,25,25,9425
+68,Santander,female,26,26,7125
+68,Santander,female,27,27,7025
+68,Santander,female,28,28,7475
+68,Santander,female,29,29,5300
+68,Santander,female,30,30,9550
+68,Santander,female,31,31,3850
+68,Santander,female,32,32,6400
+68,Santander,female,33,33,6125
+68,Santander,female,34,34,4725
+68,Santander,female,35,35,8250
+68,Santander,female,36,36,5300
+68,Santander,female,37,37,5125
+68,Santander,female,38,38,6700
+68,Santander,female,39,39,3825
+68,Santander,female,40,40,8050
+68,Santander,female,41,41,2225
+68,Santander,female,42,42,5100
+68,Santander,female,43,43,5150
+68,Santander,female,44,44,3675
+68,Santander,female,45,45,6950
+68,Santander,female,46,46,3125
+68,Santander,female,47,47,2900
+68,Santander,female,48,48,4150
+68,Santander,female,49,49,2650
+68,Santander,female,50,50,7325
+68,Santander,female,51,51,2225
+68,Santander,female,52,52,3800
+68,Santander,female,53,53,3250
+68,Santander,female,54,54,2175
+68,Santander,female,55,55,4575
+68,Santander,female,56,56,2575
+68,Santander,female,57,57,2125
+68,Santander,female,58,58,2250
+68,Santander,female,59,59,1100
+68,Santander,female,60,60,5850
+68,Santander,female,61,61,975
+68,Santander,female,62,62,1625
+68,Santander,female,63,63,2375
+68,Santander,female,64,64,975
+68,Santander,female,65,65,2900
+68,Santander,female,66,66,1150
+68,Santander,female,67,67,1025
+68,Santander,female,68,68,1650
+68,Santander,female,69,69,850
+68,Santander,female,70,70,2950
+68,Santander,female,71,71,450
+68,Santander,female,72,72,975
+68,Santander,female,73,73,1350
+68,Santander,female,74,74,675
+68,Santander,female,75,75,1475
+68,Santander,female,76,76,675
+68,Santander,female,77,77,350
+68,Santander,female,78,78,700
+68,Santander,female,79,79,275
+68,Santander,female,80,80,1450
+68,Santander,female,81,81,175
+68,Santander,female,82,82,275
+68,Santander,female,83,83,325
+68,Santander,female,84,84,200
+68,Santander,female,85+,85,1775
+68,Santander,total,0,0,29500
+68,Santander,total,1,1,30475
+68,Santander,total,2,2,34350
+68,Santander,total,3,3,37900
+68,Santander,total,4,4,37525
+68,Santander,total,5,5,35750
+68,Santander,total,6,6,35950
+68,Santander,total,7,7,37100
+68,Santander,total,8,8,37050
+68,Santander,total,9,9,33525
+68,Santander,total,10,10,36900
+68,Santander,total,11,11,30000
+68,Santander,total,12,12,35925
+68,Santander,total,13,13,31150
+68,Santander,total,14,14,28775
+68,Santander,total,15,15,26575
+68,Santander,total,16,16,24725
+68,Santander,total,17,17,22950
+68,Santander,total,18,18,26150
+68,Santander,total,19,19,19275
+68,Santander,total,20,20,21025
+68,Santander,total,21,21,17075
+68,Santander,total,22,22,18650
+68,Santander,total,23,23,17975
+68,Santander,total,24,24,14050
+68,Santander,total,25,25,17025
+68,Santander,total,26,26,14250
+68,Santander,total,27,27,13975
+68,Santander,total,28,28,14950
+68,Santander,total,29,29,9925
+68,Santander,total,30,30,18925
+68,Santander,total,31,31,6900
+68,Santander,total,32,32,11775
+68,Santander,total,33,33,11775
+68,Santander,total,34,34,9450
+68,Santander,total,35,35,14775
+68,Santander,total,36,36,9450
+68,Santander,total,37,37,10400
+68,Santander,total,38,38,12800
+68,Santander,total,39,39,8175
+68,Santander,total,40,40,15400
+68,Santander,total,41,41,5125
+68,Santander,total,42,42,10300
+68,Santander,total,43,43,10300
+68,Santander,total,44,44,7275
+68,Santander,total,45,45,12850
+68,Santander,total,46,46,6525
+68,Santander,total,47,47,5475
+68,Santander,total,48,48,7775
+68,Santander,total,49,49,5225
+68,Santander,total,50,50,13075
+68,Santander,total,51,51,4300
+68,Santander,total,52,52,7050
+68,Santander,total,53,53,6950
+68,Santander,total,54,54,5225
+68,Santander,total,55,55,8750
+68,Santander,total,56,56,5050
+68,Santander,total,57,57,4525
+68,Santander,total,58,58,4500
+68,Santander,total,59,59,2725
+68,Santander,total,60,60,10275
+68,Santander,total,61,61,2200
+68,Santander,total,62,62,3525
+68,Santander,total,63,63,4550
+68,Santander,total,64,64,2125
+68,Santander,total,65,65,5400
+68,Santander,total,66,66,2375
+68,Santander,total,67,67,2350
+68,Santander,total,68,68,2750
+68,Santander,total,69,69,1575
+68,Santander,total,70,70,5300
+68,Santander,total,71,71,1000
+68,Santander,total,72,72,1750
+68,Santander,total,73,73,2400
+68,Santander,total,74,74,1125
+68,Santander,total,75,75,2150
+68,Santander,total,76,76,1200
+68,Santander,total,77,77,625
+68,Santander,total,78,78,1175
+68,Santander,total,79,79,500
+68,Santander,total,80,80,2250
+68,Santander,total,81,81,350
+68,Santander,total,82,82,525
+68,Santander,total,83,83,575
+68,Santander,total,84,84,375
+68,Santander,total,85+,85,2725
+70,Sucre,male,0,0,3900
+70,Sucre,male,1,1,4950
+70,Sucre,male,2,2,5650
+70,Sucre,male,3,3,6100
+70,Sucre,male,4,4,6525
+70,Sucre,male,5,5,6175
+70,Sucre,male,6,6,5725
+70,Sucre,male,7,7,6250
+70,Sucre,male,8,8,6150
+70,Sucre,male,9,9,5800
+70,Sucre,male,10,10,6650
+70,Sucre,male,11,11,4675
+70,Sucre,male,12,12,6800
+70,Sucre,male,13,13,5700
+70,Sucre,male,14,14,4850
+70,Sucre,male,15,15,4650
+70,Sucre,male,16,16,4325
+70,Sucre,male,17,17,3925
+70,Sucre,male,18,18,4200
+70,Sucre,male,19,19,2950
+70,Sucre,male,20,20,3400
+70,Sucre,male,21,21,2650
+70,Sucre,male,22,22,2650
+70,Sucre,male,23,23,2750
+70,Sucre,male,24,24,2225
+70,Sucre,male,25,25,3225
+70,Sucre,male,26,26,1725
+70,Sucre,male,27,27,1650
+70,Sucre,male,28,28,1700
+70,Sucre,male,29,29,1225
+70,Sucre,male,30,30,3100
+70,Sucre,male,31,31,925
+70,Sucre,male,32,32,1625
+70,Sucre,male,33,33,1875
+70,Sucre,male,34,34,1025
+70,Sucre,male,35,35,2075
+70,Sucre,male,36,36,1475
+70,Sucre,male,37,37,1225
+70,Sucre,male,38,38,2000
+70,Sucre,male,39,39,750
+70,Sucre,male,40,40,2550
+70,Sucre,male,41,41,575
+70,Sucre,male,42,42,1375
+70,Sucre,male,43,43,1250
+70,Sucre,male,44,44,800
+70,Sucre,male,45,45,1725
+70,Sucre,male,46,46,1250
+70,Sucre,male,47,47,750
+70,Sucre,male,48,48,825
+70,Sucre,male,49,49,600
+70,Sucre,male,50,50,2000
+70,Sucre,male,51,51,625
+70,Sucre,male,52,52,975
+70,Sucre,male,53,53,875
+70,Sucre,male,54,54,800
+70,Sucre,male,55,55,1150
+70,Sucre,male,56,56,650
+70,Sucre,male,57,57,400
+70,Sucre,male,58,58,375
+70,Sucre,male,59,59,425
+70,Sucre,male,60,60,1875
+70,Sucre,male,61,61,275
+70,Sucre,male,62,62,500
+70,Sucre,male,63,63,750
+70,Sucre,male,64,64,325
+70,Sucre,male,65,65,825
+70,Sucre,male,66,66,325
+70,Sucre,male,67,67,325
+70,Sucre,male,68,68,375
+70,Sucre,male,69,69,225
+70,Sucre,male,70,70,1000
+70,Sucre,male,71,71,125
+70,Sucre,male,72,72,300
+70,Sucre,male,73,73,450
+70,Sucre,male,74,74,75
+70,Sucre,male,75,75,275
+70,Sucre,male,76,76,75
+70,Sucre,male,77,77,125
+70,Sucre,male,78,78,125
+70,Sucre,male,79,79,25
+70,Sucre,male,80,80,450
+70,Sucre,male,81,81,50
+70,Sucre,male,82,82,125
+70,Sucre,male,83,83,50
+70,Sucre,male,84,84,50
+70,Sucre,male,85+,85,450
+70,Sucre,female,0,0,4050
+70,Sucre,female,1,1,4575
+70,Sucre,female,2,2,6150
+70,Sucre,female,3,3,6350
+70,Sucre,female,4,4,5775
+70,Sucre,female,5,5,5800
+70,Sucre,female,6,6,5800
+70,Sucre,female,7,7,6325
+70,Sucre,female,8,8,5875
+70,Sucre,female,9,9,5550
+70,Sucre,female,10,10,6450
+70,Sucre,female,11,11,4475
+70,Sucre,female,12,12,6200
+70,Sucre,female,13,13,5750
+70,Sucre,female,14,14,4625
+70,Sucre,female,15,15,4900
+70,Sucre,female,16,16,4000
+70,Sucre,female,17,17,3850
+70,Sucre,female,18,18,4425
+70,Sucre,female,19,19,3625
+70,Sucre,female,20,20,3950
+70,Sucre,female,21,21,2750
+70,Sucre,female,22,22,3750
+70,Sucre,female,23,23,3700
+70,Sucre,female,24,24,2650
+70,Sucre,female,25,25,2975
+70,Sucre,female,26,26,2150
+70,Sucre,female,27,27,2300
+70,Sucre,female,28,28,2475
+70,Sucre,female,29,29,1575
+70,Sucre,female,30,30,3100
+70,Sucre,female,31,31,675
+70,Sucre,female,32,32,2050
+70,Sucre,female,33,33,1525
+70,Sucre,female,34,34,1225
+70,Sucre,female,35,35,2450
+70,Sucre,female,36,36,1525
+70,Sucre,female,37,37,1525
+70,Sucre,female,38,38,2175
+70,Sucre,female,39,39,1000
+70,Sucre,female,40,40,2525
+70,Sucre,female,41,41,575
+70,Sucre,female,42,42,1325
+70,Sucre,female,43,43,1325
+70,Sucre,female,44,44,950
+70,Sucre,female,45,45,1950
+70,Sucre,female,46,46,900
+70,Sucre,female,47,47,800
+70,Sucre,female,48,48,1800
+70,Sucre,female,49,49,400
+70,Sucre,female,50,50,2275
+70,Sucre,female,51,51,325
+70,Sucre,female,52,52,700
+70,Sucre,female,53,53,825
+70,Sucre,female,54,54,725
+70,Sucre,female,55,55,1600
+70,Sucre,female,56,56,625
+70,Sucre,female,57,57,600
+70,Sucre,female,58,58,650
+70,Sucre,female,59,59,375
+70,Sucre,female,60,60,2200
+70,Sucre,female,61,61,275
+70,Sucre,female,62,62,525
+70,Sucre,female,63,63,525
+70,Sucre,female,64,64,250
+70,Sucre,female,65,65,725
+70,Sucre,female,66,66,200
+70,Sucre,female,67,67,325
+70,Sucre,female,68,68,225
+70,Sucre,female,69,69,100
+70,Sucre,female,70,70,1400
+70,Sucre,female,71,71,50
+70,Sucre,female,72,72,375
+70,Sucre,female,73,73,225
+70,Sucre,female,74,74,75
+70,Sucre,female,75,75,475
+70,Sucre,female,76,76,75
+70,Sucre,female,77,77,100
+70,Sucre,female,78,78,50
+70,Sucre,female,79,79,75
+70,Sucre,female,80,80,525
+70,Sucre,female,81,81,50
+70,Sucre,female,82,82,125
+70,Sucre,female,83,83,50
+70,Sucre,female,84,84,50
+70,Sucre,female,85+,85,800
+70,Sucre,total,0,0,7950
+70,Sucre,total,1,1,9525
+70,Sucre,total,2,2,11800
+70,Sucre,total,3,3,12450
+70,Sucre,total,4,4,12300
+70,Sucre,total,5,5,11975
+70,Sucre,total,6,6,11525
+70,Sucre,total,7,7,12575
+70,Sucre,total,8,8,12025
+70,Sucre,total,9,9,11350
+70,Sucre,total,10,10,13100
+70,Sucre,total,11,11,9150
+70,Sucre,total,12,12,13000
+70,Sucre,total,13,13,11450
+70,Sucre,total,14,14,9475
+70,Sucre,total,15,15,9550
+70,Sucre,total,16,16,8325
+70,Sucre,total,17,17,7775
+70,Sucre,total,18,18,8625
+70,Sucre,total,19,19,6575
+70,Sucre,total,20,20,7350
+70,Sucre,total,21,21,5400
+70,Sucre,total,22,22,6400
+70,Sucre,total,23,23,6450
+70,Sucre,total,24,24,4875
+70,Sucre,total,25,25,6200
+70,Sucre,total,26,26,3875
+70,Sucre,total,27,27,3950
+70,Sucre,total,28,28,4175
+70,Sucre,total,29,29,2800
+70,Sucre,total,30,30,6200
+70,Sucre,total,31,31,1600
+70,Sucre,total,32,32,3675
+70,Sucre,total,33,33,3400
+70,Sucre,total,34,34,2250
+70,Sucre,total,35,35,4525
+70,Sucre,total,36,36,3000
+70,Sucre,total,37,37,2750
+70,Sucre,total,38,38,4175
+70,Sucre,total,39,39,1750
+70,Sucre,total,40,40,5075
+70,Sucre,total,41,41,1150
+70,Sucre,total,42,42,2700
+70,Sucre,total,43,43,2575
+70,Sucre,total,44,44,1750
+70,Sucre,total,45,45,3675
+70,Sucre,total,46,46,2150
+70,Sucre,total,47,47,1550
+70,Sucre,total,48,48,2625
+70,Sucre,total,49,49,1000
+70,Sucre,total,50,50,4275
+70,Sucre,total,51,51,950
+70,Sucre,total,52,52,1675
+70,Sucre,total,53,53,1700
+70,Sucre,total,54,54,1525
+70,Sucre,total,55,55,2750
+70,Sucre,total,56,56,1275
+70,Sucre,total,57,57,1000
+70,Sucre,total,58,58,1025
+70,Sucre,total,59,59,800
+70,Sucre,total,60,60,4075
+70,Sucre,total,61,61,550
+70,Sucre,total,62,62,1025
+70,Sucre,total,63,63,1275
+70,Sucre,total,64,64,575
+70,Sucre,total,65,65,1550
+70,Sucre,total,66,66,525
+70,Sucre,total,67,67,650
+70,Sucre,total,68,68,600
+70,Sucre,total,69,69,325
+70,Sucre,total,70,70,2400
+70,Sucre,total,71,71,175
+70,Sucre,total,72,72,675
+70,Sucre,total,73,73,675
+70,Sucre,total,74,74,150
+70,Sucre,total,75,75,750
+70,Sucre,total,76,76,150
+70,Sucre,total,77,77,225
+70,Sucre,total,78,78,175
+70,Sucre,total,79,79,100
+70,Sucre,total,80,80,975
+70,Sucre,total,81,81,100
+70,Sucre,total,82,82,250
+70,Sucre,total,83,83,100
+70,Sucre,total,84,84,100
+70,Sucre,total,85+,85,1250
+73,Tolima,male,0,0,11950
+73,Tolima,male,1,1,12075
+73,Tolima,male,2,2,14500
+73,Tolima,male,3,3,14725
+73,Tolima,male,4,4,13975
+73,Tolima,male,5,5,15300
+73,Tolima,male,6,6,13025
+73,Tolima,male,7,7,15650
+73,Tolima,male,8,8,15175
+73,Tolima,male,9,9,12825
+73,Tolima,male,10,10,15175
+73,Tolima,male,11,11,12550
+73,Tolima,male,12,12,14375
+73,Tolima,male,13,13,12300
+73,Tolima,male,14,14,11925
+73,Tolima,male,15,15,10175
+73,Tolima,male,16,16,9050
+73,Tolima,male,17,17,10050
+73,Tolima,male,18,18,10200
+73,Tolima,male,19,19,7400
+73,Tolima,male,20,20,7225
+73,Tolima,male,21,21,5800
+73,Tolima,male,22,22,6850
+73,Tolima,male,23,23,7025
+73,Tolima,male,24,24,5600
+73,Tolima,male,25,25,6125
+73,Tolima,male,26,26,4850
+73,Tolima,male,27,27,5000
+73,Tolima,male,28,28,4875
+73,Tolima,male,29,29,3875
+73,Tolima,male,30,30,7275
+73,Tolima,male,31,31,2725
+73,Tolima,male,32,32,4275
+73,Tolima,male,33,33,5075
+73,Tolima,male,34,34,3250
+73,Tolima,male,35,35,5275
+73,Tolima,male,36,36,3700
+73,Tolima,male,37,37,3950
+73,Tolima,male,38,38,4800
+73,Tolima,male,39,39,2950
+73,Tolima,male,40,40,5650
+73,Tolima,male,41,41,2175
+73,Tolima,male,42,42,3900
+73,Tolima,male,43,43,4000
+73,Tolima,male,44,44,2950
+73,Tolima,male,45,45,4525
+73,Tolima,male,46,46,1900
+73,Tolima,male,47,47,2425
+73,Tolima,male,48,48,2925
+73,Tolima,male,49,49,2125
+73,Tolima,male,50,50,4900
+73,Tolima,male,51,51,2050
+73,Tolima,male,52,52,2550
+73,Tolima,male,53,53,3425
+73,Tolima,male,54,54,2000
+73,Tolima,male,55,55,3300
+73,Tolima,male,56,56,1900
+73,Tolima,male,57,57,2025
+73,Tolima,male,58,58,1875
+73,Tolima,male,59,59,1125
+73,Tolima,male,60,60,3775
+73,Tolima,male,61,61,1150
+73,Tolima,male,62,62,1450
+73,Tolima,male,63,63,2100
+73,Tolima,male,64,64,1125
+73,Tolima,male,65,65,1250
+73,Tolima,male,66,66,775
+73,Tolima,male,67,67,975
+73,Tolima,male,68,68,1100
+73,Tolima,male,69,69,600
+73,Tolima,male,70,70,1375
+73,Tolima,male,71,71,250
+73,Tolima,male,72,72,750
+73,Tolima,male,73,73,1150
+73,Tolima,male,74,74,475
+73,Tolima,male,75,75,825
+73,Tolima,male,76,76,275
+73,Tolima,male,77,77,400
+73,Tolima,male,78,78,525
+73,Tolima,male,79,79,225
+73,Tolima,male,80,80,725
+73,Tolima,male,81,81,125
+73,Tolima,male,82,82,125
+73,Tolima,male,83,83,225
+73,Tolima,male,84,84,225
+73,Tolima,male,85+,85,1100
+73,Tolima,female,0,0,10525
+73,Tolima,female,1,1,11100
+73,Tolima,female,2,2,13675
+73,Tolima,female,3,3,13425
+73,Tolima,female,4,4,13950
+73,Tolima,female,5,5,13650
+73,Tolima,female,6,6,13450
+73,Tolima,female,7,7,14375
+73,Tolima,female,8,8,14450
+73,Tolima,female,9,9,12550
+73,Tolima,female,10,10,13575
+73,Tolima,female,11,11,12100
+73,Tolima,female,12,12,13825
+73,Tolima,female,13,13,12400
+73,Tolima,female,14,14,10425
+73,Tolima,female,15,15,9975
+73,Tolima,female,16,16,9375
+73,Tolima,female,17,17,10050
+73,Tolima,female,18,18,9975
+73,Tolima,female,19,19,7750
+73,Tolima,female,20,20,8725
+73,Tolima,female,21,21,6450
+73,Tolima,female,22,22,7875
+73,Tolima,female,23,23,7900
+73,Tolima,female,24,24,6050
+73,Tolima,female,25,25,7500
+73,Tolima,female,26,26,5375
+73,Tolima,female,27,27,5300
+73,Tolima,female,28,28,5725
+73,Tolima,female,29,29,3950
+73,Tolima,female,30,30,7250
+73,Tolima,female,31,31,2375
+73,Tolima,female,32,32,4625
+73,Tolima,female,33,33,5100
+73,Tolima,female,34,34,3450
+73,Tolima,female,35,35,6825
+73,Tolima,female,36,36,4100
+73,Tolima,female,37,37,4125
+73,Tolima,female,38,38,4850
+73,Tolima,female,39,39,3125
+73,Tolima,female,40,40,6625
+73,Tolima,female,41,41,1800
+73,Tolima,female,42,42,3725
+73,Tolima,female,43,43,3850
+73,Tolima,female,44,44,2850
+73,Tolima,female,45,45,6075
+73,Tolima,female,46,46,2225
+73,Tolima,female,47,47,2100
+73,Tolima,female,48,48,3925
+73,Tolima,female,49,49,2000
+73,Tolima,female,50,50,5450
+73,Tolima,female,51,51,1675
+73,Tolima,female,52,52,2175
+73,Tolima,female,53,53,2350
+73,Tolima,female,54,54,1850
+73,Tolima,female,55,55,3225
+73,Tolima,female,56,56,1850
+73,Tolima,female,57,57,1350
+73,Tolima,female,58,58,2050
+73,Tolima,female,59,59,950
+73,Tolima,female,60,60,4650
+73,Tolima,female,61,61,550
+73,Tolima,female,62,62,1275
+73,Tolima,female,63,63,1725
+73,Tolima,female,64,64,850
+73,Tolima,female,65,65,2075
+73,Tolima,female,66,66,725
+73,Tolima,female,67,67,600
+73,Tolima,female,68,68,725
+73,Tolima,female,69,69,300
+73,Tolima,female,70,70,2525
+73,Tolima,female,71,71,400
+73,Tolima,female,72,72,850
+73,Tolima,female,73,73,1050
+73,Tolima,female,74,74,300
+73,Tolima,female,75,75,1225
+73,Tolima,female,76,76,325
+73,Tolima,female,77,77,150
+73,Tolima,female,78,78,575
+73,Tolima,female,79,79,200
+73,Tolima,female,80,80,1000
+73,Tolima,female,81,81,150
+73,Tolima,female,82,82,150
+73,Tolima,female,83,83,150
+73,Tolima,female,84,84,100
+73,Tolima,female,85+,85,1250
+73,Tolima,total,0,0,22475
+73,Tolima,total,1,1,23175
+73,Tolima,total,2,2,28175
+73,Tolima,total,3,3,28150
+73,Tolima,total,4,4,27925
+73,Tolima,total,5,5,28950
+73,Tolima,total,6,6,26475
+73,Tolima,total,7,7,30025
+73,Tolima,total,8,8,29625
+73,Tolima,total,9,9,25375
+73,Tolima,total,10,10,28750
+73,Tolima,total,11,11,24650
+73,Tolima,total,12,12,28200
+73,Tolima,total,13,13,24700
+73,Tolima,total,14,14,22350
+73,Tolima,total,15,15,20150
+73,Tolima,total,16,16,18425
+73,Tolima,total,17,17,20100
+73,Tolima,total,18,18,20175
+73,Tolima,total,19,19,15150
+73,Tolima,total,20,20,15950
+73,Tolima,total,21,21,12250
+73,Tolima,total,22,22,14725
+73,Tolima,total,23,23,14925
+73,Tolima,total,24,24,11650
+73,Tolima,total,25,25,13625
+73,Tolima,total,26,26,10225
+73,Tolima,total,27,27,10300
+73,Tolima,total,28,28,10600
+73,Tolima,total,29,29,7825
+73,Tolima,total,30,30,14525
+73,Tolima,total,31,31,5100
+73,Tolima,total,32,32,8900
+73,Tolima,total,33,33,10175
+73,Tolima,total,34,34,6700
+73,Tolima,total,35,35,12100
+73,Tolima,total,36,36,7800
+73,Tolima,total,37,37,8075
+73,Tolima,total,38,38,9650
+73,Tolima,total,39,39,6075
+73,Tolima,total,40,40,12275
+73,Tolima,total,41,41,3975
+73,Tolima,total,42,42,7625
+73,Tolima,total,43,43,7850
+73,Tolima,total,44,44,5800
+73,Tolima,total,45,45,10600
+73,Tolima,total,46,46,4125
+73,Tolima,total,47,47,4525
+73,Tolima,total,48,48,6850
+73,Tolima,total,49,49,4125
+73,Tolima,total,50,50,10350
+73,Tolima,total,51,51,3725
+73,Tolima,total,52,52,4725
+73,Tolima,total,53,53,5775
+73,Tolima,total,54,54,3850
+73,Tolima,total,55,55,6525
+73,Tolima,total,56,56,3750
+73,Tolima,total,57,57,3375
+73,Tolima,total,58,58,3925
+73,Tolima,total,59,59,2075
+73,Tolima,total,60,60,8425
+73,Tolima,total,61,61,1700
+73,Tolima,total,62,62,2725
+73,Tolima,total,63,63,3825
+73,Tolima,total,64,64,1975
+73,Tolima,total,65,65,3325
+73,Tolima,total,66,66,1500
+73,Tolima,total,67,67,1575
+73,Tolima,total,68,68,1825
+73,Tolima,total,69,69,900
+73,Tolima,total,70,70,3900
+73,Tolima,total,71,71,650
+73,Tolima,total,72,72,1600
+73,Tolima,total,73,73,2200
+73,Tolima,total,74,74,775
+73,Tolima,total,75,75,2050
+73,Tolima,total,76,76,600
+73,Tolima,total,77,77,550
+73,Tolima,total,78,78,1100
+73,Tolima,total,79,79,425
+73,Tolima,total,80,80,1725
+73,Tolima,total,81,81,275
+73,Tolima,total,82,82,275
+73,Tolima,total,83,83,375
+73,Tolima,total,84,84,325
+73,Tolima,total,85+,85,2350
+76,Valle del Cauca,male,0,0,24200
+76,Valle del Cauca,male,1,1,25250
+76,Valle del Cauca,male,2,2,30350
+76,Valle del Cauca,male,3,3,32125
+76,Valle del Cauca,male,4,4,31200
+76,Valle del Cauca,male,5,5,29175
+76,Valle del Cauca,male,6,6,29075
+76,Valle del Cauca,male,7,7,31775
+76,Valle del Cauca,male,8,8,32775
+76,Valle del Cauca,male,9,9,29300
+76,Valle del Cauca,male,10,10,32150
+76,Valle del Cauca,male,11,11,29275
+76,Valle del Cauca,male,12,12,31400
+76,Valle del Cauca,male,13,13,30750
+76,Valle del Cauca,male,14,14,25800
+76,Valle del Cauca,male,15,15,25400
+76,Valle del Cauca,male,16,16,24800
+76,Valle del Cauca,male,17,17,25400
+76,Valle del Cauca,male,18,18,22925
+76,Valle del Cauca,male,19,19,19725
+76,Valle del Cauca,male,20,20,20125
+76,Valle del Cauca,male,21,21,16600
+76,Valle del Cauca,male,22,22,17650
+76,Valle del Cauca,male,23,23,18175
+76,Valle del Cauca,male,24,24,14400
+76,Valle del Cauca,male,25,25,15775
+76,Valle del Cauca,male,26,26,13800
+76,Valle del Cauca,male,27,27,13575
+76,Valle del Cauca,male,28,28,14475
+76,Valle del Cauca,male,29,29,12275
+76,Valle del Cauca,male,30,30,14975
+76,Valle del Cauca,male,31,31,9125
+76,Valle del Cauca,male,32,32,11050
+76,Valle del Cauca,male,33,33,13825
+76,Valle del Cauca,male,34,34,11025
+76,Valle del Cauca,male,35,35,11500
+76,Valle del Cauca,male,36,36,9475
+76,Valle del Cauca,male,37,37,9900
+76,Valle del Cauca,male,38,38,12475
+76,Valle del Cauca,male,39,39,9350
+76,Valle del Cauca,male,40,40,12375
+76,Valle del Cauca,male,41,41,6150
+76,Valle del Cauca,male,42,42,9700
+76,Valle del Cauca,male,43,43,11350
+76,Valle del Cauca,male,44,44,7525
+76,Valle del Cauca,male,45,45,10525
+76,Valle del Cauca,male,46,46,6800
+76,Valle del Cauca,male,47,47,6775
+76,Valle del Cauca,male,48,48,7950
+76,Valle del Cauca,male,49,49,5875
+76,Valle del Cauca,male,50,50,9575
+76,Valle del Cauca,male,51,51,4575
+76,Valle del Cauca,male,52,52,6050
+76,Valle del Cauca,male,53,53,6600
+76,Valle del Cauca,male,54,54,5000
+76,Valle del Cauca,male,55,55,5650
+76,Valle del Cauca,male,56,56,4450
+76,Valle del Cauca,male,57,57,4250
+76,Valle del Cauca,male,58,58,4475
+76,Valle del Cauca,male,59,59,3150
+76,Valle del Cauca,male,60,60,6700
+76,Valle del Cauca,male,61,61,2775
+76,Valle del Cauca,male,62,62,3400
+76,Valle del Cauca,male,63,63,4025
+76,Valle del Cauca,male,64,64,2500
+76,Valle del Cauca,male,65,65,4350
+76,Valle del Cauca,male,66,66,2400
+76,Valle del Cauca,male,67,67,2450
+76,Valle del Cauca,male,68,68,2475
+76,Valle del Cauca,male,69,69,1400
+76,Valle del Cauca,male,70,70,3075
+76,Valle del Cauca,male,71,71,1025
+76,Valle del Cauca,male,72,72,2200
+76,Valle del Cauca,male,73,73,2250
+76,Valle del Cauca,male,74,74,1025
+76,Valle del Cauca,male,75,75,1650
+76,Valle del Cauca,male,76,76,925
+76,Valle del Cauca,male,77,77,950
+76,Valle del Cauca,male,78,78,675
+76,Valle del Cauca,male,79,79,325
+76,Valle del Cauca,male,80,80,1125
+76,Valle del Cauca,male,81,81,400
+76,Valle del Cauca,male,82,82,625
+76,Valle del Cauca,male,83,83,400
+76,Valle del Cauca,male,84,84,275
+76,Valle del Cauca,male,85+,85,2325
+76,Valle del Cauca,female,0,0,24550
+76,Valle del Cauca,female,1,1,27125
+76,Valle del Cauca,female,2,2,30600
+76,Valle del Cauca,female,3,3,30875
+76,Valle del Cauca,female,4,4,30400
+76,Valle del Cauca,female,5,5,30125
+76,Valle del Cauca,female,6,6,29925
+76,Valle del Cauca,female,7,7,33600
+76,Valle del Cauca,female,8,8,31350
+76,Valle del Cauca,female,9,9,30125
+76,Valle del Cauca,female,10,10,30375
+76,Valle del Cauca,female,11,11,29400
+76,Valle del Cauca,female,12,12,29725
+76,Valle del Cauca,female,13,13,30250
+76,Valle del Cauca,female,14,14,27700
+76,Valle del Cauca,female,15,15,29050
+76,Valle del Cauca,female,16,16,28625
+76,Valle del Cauca,female,17,17,27775
+76,Valle del Cauca,female,18,18,29250
+76,Valle del Cauca,female,19,19,25250
+76,Valle del Cauca,female,20,20,25025
+76,Valle del Cauca,female,21,21,19400
+76,Valle del Cauca,female,22,22,21725
+76,Valle del Cauca,female,23,23,22075
+76,Valle del Cauca,female,24,24,19925
+76,Valle del Cauca,female,25,25,20400
+76,Valle del Cauca,female,26,26,15125
+76,Valle del Cauca,female,27,27,16325
+76,Valle del Cauca,female,28,28,16575
+76,Valle del Cauca,female,29,29,13325
+76,Valle del Cauca,female,30,30,17600
+76,Valle del Cauca,female,31,31,8425
+76,Valle del Cauca,female,32,32,13800
+76,Valle del Cauca,female,33,33,13950
+76,Valle del Cauca,female,34,34,11300
+76,Valle del Cauca,female,35,35,15525
+76,Valle del Cauca,female,36,36,12075
+76,Valle del Cauca,female,37,37,12075
+76,Valle del Cauca,female,38,38,15150
+76,Valle del Cauca,female,39,39,9850
+76,Valle del Cauca,female,40,40,16350
+76,Valle del Cauca,female,41,41,5975
+76,Valle del Cauca,female,42,42,11325
+76,Valle del Cauca,female,43,43,10975
+76,Valle del Cauca,female,44,44,6825
+76,Valle del Cauca,female,45,45,12125
+76,Valle del Cauca,female,46,46,6025
+76,Valle del Cauca,female,47,47,7325
+76,Valle del Cauca,female,48,48,9650
+76,Valle del Cauca,female,49,49,5350
+76,Valle del Cauca,female,50,50,10600
+76,Valle del Cauca,female,51,51,3650
+76,Valle del Cauca,female,52,52,5650
+76,Valle del Cauca,female,53,53,6050
+76,Valle del Cauca,female,54,54,5350
+76,Valle del Cauca,female,55,55,7600
+76,Valle del Cauca,female,56,56,4500
+76,Valle del Cauca,female,57,57,3625
+76,Valle del Cauca,female,58,58,4625
+76,Valle del Cauca,female,59,59,3050
+76,Valle del Cauca,female,60,60,7250
+76,Valle del Cauca,female,61,61,1700
+76,Valle del Cauca,female,62,62,3400
+76,Valle del Cauca,female,63,63,3600
+76,Valle del Cauca,female,64,64,2825
+76,Valle del Cauca,female,65,65,4800
+76,Valle del Cauca,female,66,66,2325
+76,Valle del Cauca,female,67,67,2100
+76,Valle del Cauca,female,68,68,2300
+76,Valle del Cauca,female,69,69,1300
+76,Valle del Cauca,female,70,70,4675
+76,Valle del Cauca,female,71,71,850
+76,Valle del Cauca,female,72,72,1950
+76,Valle del Cauca,female,73,73,2125
+76,Valle del Cauca,female,74,74,950
+76,Valle del Cauca,female,75,75,1975
+76,Valle del Cauca,female,76,76,1000
+76,Valle del Cauca,female,77,77,625
+76,Valle del Cauca,female,78,78,1100
+76,Valle del Cauca,female,79,79,475
+76,Valle del Cauca,female,80,80,1950
+76,Valle del Cauca,female,81,81,225
+76,Valle del Cauca,female,82,82,525
+76,Valle del Cauca,female,83,83,450
+76,Valle del Cauca,female,84,84,350
+76,Valle del Cauca,female,85+,85,3250
+76,Valle del Cauca,total,0,0,48750
+76,Valle del Cauca,total,1,1,52375
+76,Valle del Cauca,total,2,2,60950
+76,Valle del Cauca,total,3,3,63000
+76,Valle del Cauca,total,4,4,61600
+76,Valle del Cauca,total,5,5,59300
+76,Valle del Cauca,total,6,6,59000
+76,Valle del Cauca,total,7,7,65375
+76,Valle del Cauca,total,8,8,64125
+76,Valle del Cauca,total,9,9,59425
+76,Valle del Cauca,total,10,10,62525
+76,Valle del Cauca,total,11,11,58675
+76,Valle del Cauca,total,12,12,61125
+76,Valle del Cauca,total,13,13,61000
+76,Valle del Cauca,total,14,14,53500
+76,Valle del Cauca,total,15,15,54450
+76,Valle del Cauca,total,16,16,53425
+76,Valle del Cauca,total,17,17,53175
+76,Valle del Cauca,total,18,18,52175
+76,Valle del Cauca,total,19,19,44975
+76,Valle del Cauca,total,20,20,45150
+76,Valle del Cauca,total,21,21,36000
+76,Valle del Cauca,total,22,22,39375
+76,Valle del Cauca,total,23,23,40250
+76,Valle del Cauca,total,24,24,34325
+76,Valle del Cauca,total,25,25,36175
+76,Valle del Cauca,total,26,26,28925
+76,Valle del Cauca,total,27,27,29900
+76,Valle del Cauca,total,28,28,31050
+76,Valle del Cauca,total,29,29,25600
+76,Valle del Cauca,total,30,30,32575
+76,Valle del Cauca,total,31,31,17550
+76,Valle del Cauca,total,32,32,24850
+76,Valle del Cauca,total,33,33,27775
+76,Valle del Cauca,total,34,34,22325
+76,Valle del Cauca,total,35,35,27025
+76,Valle del Cauca,total,36,36,21550
+76,Valle del Cauca,total,37,37,21975
+76,Valle del Cauca,total,38,38,27625
+76,Valle del Cauca,total,39,39,19200
+76,Valle del Cauca,total,40,40,28725
+76,Valle del Cauca,total,41,41,12125
+76,Valle del Cauca,total,42,42,21025
+76,Valle del Cauca,total,43,43,22325
+76,Valle del Cauca,total,44,44,14350
+76,Valle del Cauca,total,45,45,22650
+76,Valle del Cauca,total,46,46,12825
+76,Valle del Cauca,total,47,47,14100
+76,Valle del Cauca,total,48,48,17600
+76,Valle del Cauca,total,49,49,11225
+76,Valle del Cauca,total,50,50,20175
+76,Valle del Cauca,total,51,51,8225
+76,Valle del Cauca,total,52,52,11700
+76,Valle del Cauca,total,53,53,12650
+76,Valle del Cauca,total,54,54,10350
+76,Valle del Cauca,total,55,55,13250
+76,Valle del Cauca,total,56,56,8950
+76,Valle del Cauca,total,57,57,7875
+76,Valle del Cauca,total,58,58,9100
+76,Valle del Cauca,total,59,59,6200
+76,Valle del Cauca,total,60,60,13950
+76,Valle del Cauca,total,61,61,4475
+76,Valle del Cauca,total,62,62,6800
+76,Valle del Cauca,total,63,63,7625
+76,Valle del Cauca,total,64,64,5325
+76,Valle del Cauca,total,65,65,9150
+76,Valle del Cauca,total,66,66,4725
+76,Valle del Cauca,total,67,67,4550
+76,Valle del Cauca,total,68,68,4775
+76,Valle del Cauca,total,69,69,2700
+76,Valle del Cauca,total,70,70,7750
+76,Valle del Cauca,total,71,71,1875
+76,Valle del Cauca,total,72,72,4150
+76,Valle del Cauca,total,73,73,4375
+76,Valle del Cauca,total,74,74,1975
+76,Valle del Cauca,total,75,75,3625
+76,Valle del Cauca,total,76,76,1925
+76,Valle del Cauca,total,77,77,1575
+76,Valle del Cauca,total,78,78,1775
+76,Valle del Cauca,total,79,79,800
+76,Valle del Cauca,total,80,80,3075
+76,Valle del Cauca,total,81,81,625
+76,Valle del Cauca,total,82,82,1150
+76,Valle del Cauca,total,83,83,850
+76,Valle del Cauca,total,84,84,625
+76,Valle del Cauca,total,85+,85,5575

@@ -1,0 +1,13 @@
+identity,residual,note
+ages|1968|Bolívar|female,-20,"Bolívar 1968, 1-6 days: printed 41 men and 63 women (p. 56, read on a 300-dpi crop); the national total, the department total and the other 22 age rows ask for 61 and 43 (men and women swapped in print)"
+ages|1968|Bolívar|male,20,same row
+units|1968|female|1-6 days,-20,same row (the national row by sex is printed 4.080 men and 2.846 women)
+units|1968|male|1-6 days,20,same row
+ages|1968|La Guajira|female,10,"La Guajira 1968, 85+: printed 17 men and 2 women (p. 58, read on a 300-dpi crop); total, national row and the age column ask for 7 and 12"
+ages|1968|La Guajira|male,-10,same row
+units|1968|female|85+,10,same row
+units|1968|male|85+,-10,same row
+ages|1969|Guainía|female,-1,"Comisaría del Guainía 1969: the TOTAL row prints 1 death, a man; the only death by age (20-24) is printed as a woman (p. 153, crop)"
+ages|1969|Guainía|male,1,same block
+units|1969|female|all,1,same block: the comisarías add 1 man more and 1 woman less than the national row
+units|1969|male|all,-1,same block

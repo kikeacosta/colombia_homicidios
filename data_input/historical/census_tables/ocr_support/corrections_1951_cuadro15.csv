@@ -1,0 +1,69 @@
+group,sex,column,ocr_vote,set
+NACION,hombres,Cauca,212444,212446
+NACION,hombres,Cundinamarca,722951,722952
+DEPARTAMENTOS,total,Boyacá,952264,952262
+COMISARIAS,mujeres,Nariño,3,3182
+Antioquia,hombres,Sin información,894,854
+Antioquia,mujeres,Sin información,42,172
+Atlántico,hombres,Santander,NA,1930
+Atlántico,mujeres,Santander,NA,2220
+Atlántico,total,Sin información,346,0
+Atlántico,hombres,Sin información,2,0
+Atlántico,mujeres,Sin información,158,0
+Atlántico,mujeres,Intendencias y comisarías,NA,158
+Bolívar,mujeres,Sin información,2362,2361
+Caldas,hombres,Caldas,419252,419251
+Cauca,total,Cundinamarca,1212,1112
+Cauca,hombres,Huila,3091,1091
+Cauca,total,Sin información,NA,597
+Cauca,hombres,Sin información,25592,591
+Cundinamarca,total,total,595395,1595395
+Cundinamarca,mujeres,Boyacá,77371,77171
+Cundinamarca,mujeres,Cauca,2,1012
+Cundinamarca,mujeres,Chocó,19,198
+Cundinamarca,mujeres,Sin información,NA,1164
+Huila,total,Cundinamarca,234,7234
+Huila,hombres,Magdalena,1,18
+Huila,hombres,Norte de Santander,7,71
+Huila,hombres,Santander,43,431
+Huila,mujeres,Sin información,113,1113
+Magdalena,total,Chocó,9,49
+Nariño,mujeres,Huila,7,74
+Norte de Santander,total,Bolívar,31,315
+Norte de Santander,total,Cauca,52,51
+Tolima,total,Chocó,89,59
+Meta,total,Chocó,5,51
+Amazonas,total,Antioquia,2,82
+DEPARTAMENTOS,mujeres,Tolima,387976350636,350636
+DEPARTAMENTOS,hombres,Santander,372543,372548
+Tolima,mujeres,Tolima,175508,275508
+Caquetá,hombres,Cundinamarca,948,949
+San Andrés y Providencia,total,Nariño,NA,0
+San Andrés y Providencia,hombres,Nariño,NA,0
+San Andrés y Providencia,mujeres,Nariño,7,0
+Magdalena,total,Norte de Santander,NA,16001
+Magdalena,mujeres,Norte de Santander,7303,7301
+La Guajira,total,Atlántico,14,114
+La Guajira,hombres,Atlántico,NA,71
+La Guajira,total,Caldas,4,14
+La Guajira,hombres,Caldas,NA,10
+La Guajira,total,Chocó,NA,0
+La Guajira,hombres,Chocó,NA,0
+La Guajira,mujeres,Chocó,NA,0
+La Guajira,hombres,Norte de Santander,59,50
+La Guajira,hombres,Valle del Cauca,1,11
+Putumayo,total,Antioquia,NA,116
+Putumayo,hombres,Antioquia,NA,77
+Putumayo,hombres,Atlántico,NA,1
+Putumayo,mujeres,Atlántico,NA,0
+Putumayo,hombres,Bolívar,NA,1
+Putumayo,hombres,Caldas,NA,171
+Putumayo,total,Cundinamarca,63,88
+Putumayo,total,Chocó,NA,1
+Putumayo,mujeres,Chocó,NA,0
+Putumayo,mujeres,Magdalena,NA,0
+Vaupés,mujeres,Atlántico,NA,0
+Vaupés,mujeres,Bolívar,NA,0
+Vaupés,total,Caldas,4,11
+Vaupés,hombres,Cundinamarca,48,43
+Vaupés,mujeres,Nariño,NA,0

@@ -2,7 +2,7 @@
 # DANE, Sección IV Demografía (1962) "Estadística Vital: matrimonios,
 # nacimientos (bautizos) y defunciones por municipios, durante los años 1958
 # a 1960", Bogotá, marzo de 1962, 90 pp. Library scan (Atalasoft OCR layer,
-# 2008): data_input/historical/LD_558_1958_1960_EJ_2.pdf (not versioned).
+# 2008): data_input/dane_pdfs/vitales/LD_558_1958_1960_EJ_2.pdf (not versioned).
 #
 # Contents (same layout for the three years)
 #   departmental summary (pdf p. 5, 33, 62): mid-year population, marriages,
@@ -85,7 +85,7 @@
 suppressMessages({library(tidyverse); library(magick); library(tesseract)})
 options(width = 200)
 
-pdf <- "data_input/historical/LD_558_1958_1960_EJ_2.pdf"
+pdf <- "data_input/dane_pdfs/vitales/LD_558_1958_1960_EJ_2.pdf"
 sup <- "data_input/historical/vitales_1958_1960_support/"
 dir.create(sup, showWarnings = FALSE); dir.create("data_inter", showWarnings = FALSE)
 stopifnot(file.exists(pdf))

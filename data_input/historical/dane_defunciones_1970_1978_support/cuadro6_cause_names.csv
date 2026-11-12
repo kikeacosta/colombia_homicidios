@@ -1,0 +1,144 @@
+cause_code,cause_name
+002,Fiebre tifoidea
+003,Fiebre paratifoidea y otras salmonelosis
+004,Disentería bacilar y amibiasis
+005,Enteritis y otras enfermedades diarreicas
+006,Tuberculosis del aparato respiratorio
+007,Tuberculosis de las meninges y del sistema nervioso central
+008,"Tuberculosis de los intestinos, del peritoneo y de los ganglios mesentéricos"
+009,Tuberculosis de los huesos y de las articulaciones
+010,"Otras tuberculosis, incluyendo efectos tardíos"
+012,Carbunco
+013,Brucelosis
+014,Lepra
+015,Difteria
+016,Tos ferina
+017,Angina estreptocócica y escarlatina
+018,Erisipela
+019,Infecciones meningocócicas
+020,Tétanos
+021,Otras enfermedades bacterianas
+022,Poliomielitis aguda
+023,Efectos tardíos de la poliomielitis aguda
+025,Sarampión
+026,Fiebre amarilla
+027,Encefalitis vírica
+028,Hepatitis infecciosa
+029,Otras virosis
+030,Tifus y otras rickettsiosis
+031,Paludismo
+032,Tripanosomiasis
+033,Fiebre recurrente
+034,Sífilis congénita
+035,Sífilis precoz sintomática
+036,Sífilis del sistema nervioso central
+037,Otras sífilis
+038,Infecciones gonocócicas
+039,Esquistosomiasis
+041,Filariasis
+042,Anquilostomiasis
+043,Otras helmintiasis
+044,Todas las demás enfermedades clasificadas como infecciosas y parasitarias
+045,Tumor maligno de la cavidad bucal y de la faringe
+046,Tumor maligno del esófago
+047,Tumor maligno del estómago
+048,"Tumor maligno del intestino, excepto del recto"
+049,Tumor maligno del recto y de la porción rectosigmoide
+050,Tumor maligno de la laringe
+051,"Tumor maligno de la tráquea, de los bronquios y del pulmón"
+052,Tumor maligno de los huesos
+053,Tumor maligno de la piel
+054,Tumor maligno de la mama
+055,Tumor maligno del cuello del útero
+056,Otros tumores malignos del útero
+057,Tumor maligno de la próstata
+058,Tumor maligno de otras localizaciones y de localizaciones no especificadas
+059,Leucemia
+060,Otros tumores del tejido linfático y de los órganos hematopoyéticos
+061,Tumores benignos y tumores de naturaleza no especificada
+062,Bocio no tóxico
+063,Tirotoxicosis con o sin bocio
+064,Diabetes mellitus
+065,Avitaminosis y otras deficiencias nutricionales
+066,Otras enfermedades de las glándulas endocrinas y del metabolismo
+067,Anemias
+068,Otras enfermedades de la sangre y de los órganos hematopoyéticos
+069,Psicosis
+070,"Neurosis, trastornos de la personalidad y otros trastornos mentales no psicóticos"
+071,Oligofrenia
+072,Meningitis
+073,Esclerosis múltiple
+074,Epilepsia
+075,Enfermedades inflamatorias del ojo
+076,Catarata
+077,Glaucoma
+078,Otitis media y mastoiditis
+079,Otras enfermedades del sistema nervioso y de los órganos de los sentidos
+080,Fiebre reumática activa
+081,Enfermedades reumáticas crónicas del corazón
+082,Enfermedades hipertensivas
+083,Enfermedades isquémicas del corazón
+084,Otras formas de enfermedades del corazón
+085,Enfermedades cerebrovasculares
+086,"Enfermedades de las arterias, de las arteriolas y de los vasos capilares"
+087,Trombosis venosas y embolias
+088,Otras enfermedades del aparato circulatorio
+089,Infecciones respiratorias agudas
+090,Influenza
+091,Neumonía vírica
+092,Otras neumonías
+093,"Bronquitis, enfisema y asma"
+094,Hipertrofia de las amígdalas y vegetaciones adenoides
+095,Empiema y absceso del pulmón
+096,Otras enfermedades del aparato respiratorio
+097,Enfermedades de los dientes y de sus estructuras de sostén
+098,Úlcera péptica
+099,Gastritis y duodenitis
+100,Apendicitis
+101,Obstrucción intestinal y hernia
+102,Cirrosis hepática
+103,Colelitiasis y colecistitis
+104,Otras enfermedades del aparato digestivo
+105,Nefritis aguda
+106,Otras nefritis y nefrosis
+107,Infecciones del riñón
+108,Cálculos del aparato urinario
+109,Hiperplasia de la próstata
+110,Enfermedades de la mama
+111,Otras enfermedades del aparato genitourinario
+112,Toxemias del embarazo y del puerperio
+113,Hemorragias del embarazo y del parto
+114,Aborto inducido por razones admitidas legalmente
+115,Otros abortos y los no especificados
+116,Sepsis del parto y del puerperio
+117,"Otras complicaciones del embarazo, del parto y del puerperio"
+119,Infecciones de la piel y del tejido celular subcutáneo
+120,Otras enfermedades de la piel y del tejido celular subcutáneo
+121,Artritis y espondilitis
+122,Reumatismos no articulares y no especificados
+123,Osteomielitis y periostitis
+125,Otras enfermedades del sistema osteomuscular y del tejido conjuntivo
+126,Espina bífida
+127,Anomalías congénitas del corazón
+128,Otras anomalías congénitas del aparato circulatorio
+129,Fisura del paladar y labio leporino
+130,Las demás anomalías congénitas
+131,Lesiones al nacer y partos distócicos
+132,Afecciones de la placenta y del cordón umbilical
+133,Enfermedad hemolítica del recién nacido
+134,Afecciones anóxicas e hipóxicas no clasificadas en otra parte
+135,Otras causas de morbilidad y de mortalidad perinatales
+136,Senilidad sin mención de psicosis
+137,Síntomas y estados morbosos mal definidos
+138,Accidentes de vehículos de motor
+139,Otros accidentes de transporte
+140,Envenenamientos accidentales
+141,Caídas accidentales
+142,Accidentes causados por el fuego
+143,Ahogamiento y sumersión accidentales
+144,Accidentes causados por arma de fuego
+145,Accidentes de carácter principalmente industrial
+146,Las demás causas accidentales
+147,Suicidio y lesiones autoinfligidas
+148,Homicidio y lesiones provocadas intencionalmente por otras personas; intervención legal
+149,Lesiones en las que se ignora si fueron accidental o intencionalmente infligidas

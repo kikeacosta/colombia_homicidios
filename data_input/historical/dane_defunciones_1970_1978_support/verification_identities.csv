@@ -1,0 +1,23 @@
+tables,identity,n_identities,n_failing_in_source
+c10,1-4 = 12-23 months + 2-4,675,0
+c10,secciones = national total,270,0
+c10,total = men + women,2250,0
+c10,under 1 = its five ages,675,0
+c10,under 5 = under 1 + 1-4,675,0
+c10=c11,the same cell in two tables,4725,26
+c11,age rows = total,675,0
+c11,secciones = national total,702,47
+c11,total = men + women,5850,0
+c11=c2,the same cell in two tables,675,0
+c2,secciones = national total,45,0
+c2,total = men + women,390,0
+c2=c1,the same cell in two tables,15,1
+c3,age rows = total,81,0
+c3,total = men + women,702,0
+c3,total = urban + rural,702,0
+c3=c11,the same cell in two tables,702,0
+c6,Total general equal in both halves,2463,0
+c6,age rows = total,2463,22
+c6,causes = TOTAL NACIONAL,486,16
+c6,total = men + women,22167,0
+c6=c3,the same cell in two tables,486,0
