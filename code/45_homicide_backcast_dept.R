@@ -81,6 +81,8 @@
 # outputs  output/tables/homicide_backcast_dept_1915-2019.csv
 #          output/tables/homicide_backcast_parameters.csv
 #          output/tables/homicide_backcast_validation.csv
+#          output/tables/homicide_backcast_validation_predictions.csv
+#          output/tables/homicide_backcast_gap_readings.csv
 #          output/tables/homicide_backcast_police_bias.csv
 #          output/tables/homicide_backcast_gap_information.csv
 #          output/tables/homicide_backcast_national.csv
@@ -551,7 +553,7 @@ for (b in names(blocks)) {
     val[[length(val) + 1]] <- sm |>
       mutate(block = b, variant = vv$variant, truth = truth, q_truth = q_truth,
              s_obs = ifelse(max(blocks[[b]]) <= 1965, p[["s_a"]], s_e),
-             d = dat$d, in_block = inb) |>
+             d = dat$d, pop = dat$pop, in_block = inb) |>
       select(-p_outlier, -p_jump) |>
       left_join(flag |> transmute(unit, year, p_flag = p_outlier), by = c("unit", "year")) |>
       filter(in_block, !is.na(truth), is.na(p_flag) | p_flag <= 0.5)
@@ -580,6 +582,12 @@ val_tab <- bind_rows(
   mutate(variant = factor(variant, variants$variant)) |>
   arrange(block, level, variant)
 write_csv(val_tab, "output/tables/homicide_backcast_validation.csv")
+# the predictions themselves, one row per block, variant and unit-year
+val |>
+  transmute(block, variant, unit, year, deaths_reg = d, pop, hom_obs = exp(truth) * d, hom_pred = exp(eta) * d,
+            hom_pred_lo90 = exp(eta - z90 * sd_eta) * d, hom_pred_hi90 = exp(eta + z90 * sd_eta) * d,
+            rate_obs = 1e5 * hom_obs / pop, rate_pred = 1e5 * hom_pred / pop, sd_log_share = sd_eta, covered90 = covered) |>
+  write_csv("output/tables/homicide_backcast_validation_predictions.csv")
 cat("\n== validation: hidden blocks ==\n")
 print(as.data.frame(val_tab |> mutate(across(where(is.numeric), ~ round(.x, 2)))), row.names = FALSE)
 
@@ -738,5 +746,78 @@ fig4 <- ggplot(gfig, aes(sd_log_share, unit, colour = inputs, shape = inputs)) +
        x = NULL, y = NULL) +
   base
 ggsave("figures/07_backcast/backcast_gap_information.png", fig4, w = 8.5, h = 5.5, bg = "white", dpi = 160)
+
+# 6.5 observed against predicted in the hidden blocks, four units, and the
+#     readings of 1966-1978, where there is no observed count to compare with
+chk_units <- c("antioquia", "valle_del_cauca", "tolima", "bolivar")
+chk_blocks <- c("1946-1953", "1954-1965", "1979-1984", "1985-1997", "1998-2010") # the ones that do not overlap
+chk_var <- c("N: nothing in the block" = "Sin insumos en el bloque", "S: sex ratio" = "Razón de sexos",
+             "SP: sex ratio + Policia" = "Razón de sexos + Policía")
+chk_col <- c("Sin insumos en el bloque" = "grey50", "Razón de sexos" = "#2a78d6", "Razón de sexos + Policía" = "#eb6834")
+chk_lty <- c("Sin insumos en el bloque" = "22", "Razón de sexos" = "solid", "Razón de sexos + Policía" = "solid")
+chk_panel <- function(u) factor(unit_lab[u], unit_lab[chk_units])
+chk_obs <- est |>
+  filter(unit %in% chk_units, year >= 1938, year <= 2014) |>
+  mutate(n = ifelse(!is.na(h_eevv) & h_eevv > 0, h_eevv, ifelse(!is.na(p_outlier) & p_outlier > 0.5, NA, h_anu)),
+         src = ifelse(!is.na(h_eevv) & h_eevv > 0, "EEVV", "anuarios"), # the observed line is not drawn across 1966-78
+         rate = 1e5 * n / pop, panel = chk_panel(unit)) |>
+  filter(!is.na(rate), rate > 0)
+# 1966-78: the same three sets of inputs, with nothing to hide (the last one
+# is the full model, which in these years also has the WHO national total)
+gap_years <- 1966:1978
+gap_pred <- function(variant, sr, pl, who) {
+  dat <- md
+  if (!sr) dat$y_sr[gap] <- NA
+  if (!pl) dat$y_p[gap] <- NA
+  if (!who) dat$y_w <- NA
+  run_model(dat, fit1$par, smooth = TRUE) |>
+    filter(year %in% gap_years, unit %in% chk_units) |>
+    transmute(block = "1966-1978", variant, unit, year, eta, sd_eta)
+}
+chk_gap <- bind_rows(gap_pred("N: nothing in the block", FALSE, FALSE, FALSE), gap_pred("S: sex ratio", TRUE, FALSE, FALSE),
+                     gap_pred("SP: sex ratio + Policia", TRUE, TRUE, TRUE)) |>
+  left_join(md |> transmute(unit, year, d = d_adj, pop), by = c("unit", "year"))
+chk_pred <- val |>
+  filter(unit %in% chk_units, block %in% chk_blocks, variant %in% names(chk_var)) |>
+  select(block, variant, unit, year, eta, sd_eta, d, pop) |>
+  bind_rows(chk_gap) |>
+  mutate(variante = factor(chk_var[variant], chk_var), panel = chk_panel(unit),
+         rate = 1e5 * exp(eta) * d / pop, lo = 1e5 * exp(eta - z90 * sd_eta) * d / pop, hi = 1e5 * exp(eta + z90 * sd_eta) * d / pop)
+chk_gap |>
+  transmute(block, variant, unit, year, deaths_adj = d, pop, hom_pred = exp(eta) * d, hom_pred_lo90 = exp(eta - z90 * sd_eta) * d,
+            hom_pred_hi90 = exp(eta + z90 * sd_eta) * d, rate_pred = 1e5 * hom_pred / pop, sd_log_share = sd_eta) |>
+  left_join(est |> transmute(unit, year, hom_policia = h_pol), by = c("unit", "year")) |>
+  write_csv("output/tables/homicide_backcast_gap_readings.csv")
+chk_pol <- est |>
+  filter(unit %in% chk_units, year %in% gap_years, !is.na(h_pol), h_pol > 0) |>
+  mutate(rate = 1e5 * h_pol / pop, panel = chk_panel(unit))
+chk_rect <- tibble(block = c(chk_blocks, "1966-1978")) |>
+  mutate(x0 = as.numeric(substr(block, 1, 4)) - 0.5, x1 = as.numeric(substr(block, 6, 9)) + 0.5,
+         tipo = ifelse(block == "1966-1978", "gap", "val"))
+chk_lab <- tibble(panel = chk_panel(chk_units), x = 1972, label = "sin dato para\ncontrastar")
+fig5 <- ggplot() +
+  geom_rect(data = chk_rect, aes(xmin = x0, xmax = x1, ymin = 0, ymax = Inf, fill = tipo)) +
+  scale_fill_manual(values = c(val = "grey95", gap = "#fbefe1"), guide = "none") +
+  geom_vline(xintercept = c(1953.5, 1965.5, 1978.5, 1984.5, 1997.5), colour = "white", linewidth = 0.9) +
+  geom_ribbon(data = chk_pred |> filter(variante == "Razón de sexos"), aes(year, ymin = lo, ymax = hi, group = block),
+              fill = "#2a78d6", alpha = 0.15) +
+  geom_line(data = chk_pred, aes(year, rate, colour = variante, linetype = variante, group = interaction(block, variante)), linewidth = 0.6) +
+  geom_point(data = chk_pol, aes(year, rate), colour = "#b0471c", shape = 2, size = 1.4, stroke = 0.5) +
+  geom_line(data = chk_obs, aes(year, rate, group = src), colour = ink, linewidth = 0.35) +
+  geom_point(data = chk_obs, aes(year, rate), colour = ink, size = 0.9) +
+  geom_text(data = chk_lab, aes(x, Inf, label = label), vjust = 1.3, size = 2.7, colour = "grey30", lineheight = 0.9) +
+  scale_colour_manual(values = chk_col) +
+  scale_linetype_manual(values = chk_lty) +
+  scale_y_log10(labels = scales::label_number(drop0trailing = TRUE)) +
+  facet_wrap(~panel, ncol = 2, scales = "free_y") +
+  labs(title = "Capacidad predictiva: homicidios observados y predichos en años ocultos al modelo",
+       subtitle = paste0("Homicidios por 100.000 habitantes, escala logarítmica. Negro: observado (anuarios hasta 1965, EEVV desde 1979).\n",
+                         "Franjas grises: el modelo no vio los homicidios de esos años y los predijo con el insumo indicado. Banda azul: intervalo de 90 % con razón de sexos.\n",
+                         "Franja crema, 1966-1978: no hay dato observado; se muestran las mismas tres lecturas y, en triángulos, el conteo original de la Policía."),
+       x = NULL, y = NULL, colour = NULL, linetype = NULL,
+       caption = paste0("La Policía solo existe en 1962-1997; en 1966-1978 la línea naranja es el modelo completo, que además usa el total nacional de la OMS.\n",
+                        "Parámetros estimados con todos los datos; solo se ocultan los homicidios del bloque.")) +
+  base
+ggsave("figures/07_backcast/backcast_predictive_check.png", fig5, w = 12, h = 8, bg = "white", dpi = 160)
 
 say("done")
