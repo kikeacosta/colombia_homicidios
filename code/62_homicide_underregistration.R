@@ -1,8 +1,8 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# 47. From registered to total homicides by department, 1950-2019:
+# 62. From registered to total homicides by department, 1950-2019:
 #     prototype, four scenarios
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# PROTOTYPE. 45 estimates homicides among REGISTERED deaths. This script
+# PROTOTYPE. 60 estimates homicides among REGISTERED deaths. This script
 # asks how many were not registered. The project has two conventions for
 # violent deaths: 42 applies no completeness factor to them ("certified by
 # legal medicine"), 30 applies the factor of all deaths. Both are put to a
@@ -21,11 +21,11 @@
 #            where registration is poor, theta is too low.
 #
 # 2. index   there is no completeness by department before 1985. an index is
-#            built for the 15 units of 45, 1950-1997:
+#            built for the 15 units of 60, 1950-1997:
 #              expected non-violent deaths of the unit = national adjusted
 #              non-violent rates by age and sex (42) x population of the
 #              unit by age and sex (censuses 1938, 1951, 1964 and DANE from
-#              1985; age shares interpolated; totals of 45)
+#              1985; age shares interpolated; totals of 60)
 #              R = (registered non-violent / expected), relative to the same
 #              ratio for the country, median of five years
 #              completeness of the unit = national completeness (42) x R,
@@ -52,15 +52,15 @@
 #            homicides go up to the level of the Policia,
 #              total = registered x exp(max(beta, 0))
 #            with beta the smoothed log ratio of the Policia to the vital
-#            statistics estimated by 45. it exists only for 1962-1997 (the
+#            statistics estimated by 60. it exists only for 1962-1997 (the
 #            years in which the model uses the Policia) and inherits the
 #            breaks of that series, such as the fall of 1969.
 #            not included: the conflict homicides and disappearances that
 #            the MSE estimates add nationally in 1985-2018 (42); they are not
 #            available by department.
 #
-# inputs   output/tables/homicide_backcast_dept_1915-2019.csv           (45)
-#          output/tables/homicide_backcast_police_bias.csv               (45)
+# inputs   output/tables/homicide_backcast_dept_1915-2019.csv           (60)
+#          output/tables/homicide_backcast_police_bias.csv               (60)
 #          output/tables/mortality_adjusted_components_1950-2023.csv     (42)
 #          output/tables/child_mortality_census1973_departments.csv      (43)
 #          output/tables/completeness_ggb.csv, completeness_ddm.csv,
@@ -76,15 +76,15 @@
 #          output/tables/homicide_total_dept_1950-2019.csv
 #          output/tables/homicide_total_national_1950-2019.csv
 #          output/tables/homicide_underreg_police_scenario.csv
-#          figures/07_backcast/underreg_theta.png
-#          figures/07_backcast/underreg_totals.png
+#          figures/08_backcast/underreg_theta.png
+#          figures/08_backcast/underreg_totals.png
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm(list = ls())
 gc()
 source("code/00_setup.R")
 library(arrow)
 
-dir.create("figures/07_backcast", showWarnings = FALSE, recursive = TRUE)
+dir.create("figures/08_backcast", showWarnings = FALSE, recursive = TRUE)
 say <- function(...) cat(format(Sys.time(), "%H:%M:%S"), ..., "\n")
 norm_name <- function(x) {
   x |> stringi::stri_trans_general("Latin-ASCII") |> tolower() |> trimws() |>
@@ -95,7 +95,7 @@ cod_unit <- c(
   "15" = "boyaca", "17" = "caldas", "63" = "caldas", "66" = "caldas", "19" = "cauca",
   "11" = "cundinamarca", "25" = "cundinamarca", "41" = "huila", "47" = "magdalena", "20" = "magdalena",
   "52" = "narino", "54" = "norte_de_santander", "68" = "santander", "73" = "tolima", "76" = "valle_del_cauca"
-) # every other code is "territorios" (same units as 45)
+) # every other code is "territorios" (same units as 60)
 unit_of_cod <- function(cod) coalesce(unname(cod_unit[sprintf("%02d", as.integer(cod))]), "territorios")
 name_unit <- c(antioquia = "antioquia", atlantico = "atlantico", bolivar = "bolivar", cordoba = "bolivar", boyaca = "boyaca",
                caldas = "caldas", cauca = "cauca", cundinamarca = "cundinamarca", "bogota_d.e." = "cundinamarca", huila = "huila",
@@ -292,7 +292,7 @@ cat("\n== which level of mortality brings the index closer to the GGB of 1985-19
 print(as.data.frame(fit_chk |> mutate(across(where(is.double), ~ round(.x, 2)))), row.names = FALSE)
 
 # the same test as in 1, in 1962-1965 and 1979-1984, with the bias of the
-# Policia estimated by 45 (log Policia / vital statistics) and the index
+# Policia estimated by 60 (log Policia / vital statistics) and the index
 pb <- read_csv("output/tables/homicide_backcast_police_bias.csv", show_col_types = FALSE)
 early <- pb |> transmute(unit, `1962-1965` = log_ratio_anuario_1962_65, `1979-1984` = log_ratio_eevv_1979_84, `1985-1997` = log_ratio_eevv_1985_97) |>
   pivot_longer(-unit, names_to = "per", values_to = "log_ratio") |>
@@ -320,7 +320,7 @@ tot <- bc |>
     hom_total_central = hom_reg * c_use^(-theta),
     hom_total_high = hom_reg / c_use,
     # Policia scenario: where the smoothed ratio of the Policia to the vital
-    # statistics (45) is above one, the homicides go up to the level of the
+    # statistics (60) is above one, the homicides go up to the level of the
     # Policia. defined only where the model uses the Policia (1962-1997);
     # none from 1998, as in the other scenarios
     police_factor = case_when(year < 1962 ~ NA_real_, year <= 1997 ~ exp(pmax(police_bias_log, 0)), TRUE ~ 1),
@@ -404,7 +404,7 @@ fig1 <- tst |>
        subtitle = "Cada punto es un departamento. Línea azul: relación observada. Líneas grises: lo que se vería bajo cada uno de los dos criterios del proyecto.",
        x = "Completitud del registro de defunciones de hombres adultos (GGB)", y = "Homicidios según la Policía / según EEVV") +
   base
-ggsave("figures/07_backcast/underreg_theta.png", fig1, w = 10, h = 5, bg = "white", dpi = 160)
+ggsave("figures/08_backcast/underreg_theta.png", fig1, w = 10, h = 5, bg = "white", dpi = 160)
 
 # 5.2 totals: national and by unit
 esc_col <- c("Registrados (sin corrección)" = ink, "Central" = "#2a78d6", "Como cualquier defunción" = "#eb6834",
@@ -432,6 +432,6 @@ fig2b <- ggplot(long(tot), aes(year, rate, colour = esc)) +
   labs(x = NULL, y = NULL,
        caption = "Prototipo. No incluye los homicidios del conflicto y las desapariciones que las estimaciones de sistemas múltiples añaden a nivel nacional en 1985-2018.") +
   base
-ggsave("figures/07_backcast/underreg_totals.png", ggpubr::ggarrange(fig2a, fig2b, ncol = 1, heights = c(1, 1.5)), w = 12, h = 11, bg = "white", dpi = 160)
+ggsave("figures/08_backcast/underreg_totals.png", ggpubr::ggarrange(fig2a, fig2b, ncol = 1, heights = c(1, 1.5)), w = 12, h = 11, bg = "white", dpi = 160)
 
 say("done")

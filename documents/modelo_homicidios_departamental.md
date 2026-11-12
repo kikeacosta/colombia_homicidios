@@ -12,9 +12,9 @@ header-includes: |
   </style>
 ---
 
-Estado: prototipo. Describe el modelo tal como está en `code/45_homicide_backcast_dept.R` y los dos pasos que
-se apoyan en él: `code/47_homicide_underregistration.R` (de homicidios registrados a totales) y
-`code/46_homicide_munic_1958_1960.R` (reparto municipal de 1958-1960). Las cifras son las de las tablas de
+Estado: prototipo. Describe el modelo tal como está en `code/60_homicide_backcast_dept.R` y los dos pasos que
+se apoyan en él: `code/62_homicide_underregistration.R` (de homicidios registrados a totales) y
+`code/61_homicide_munic_1958_1960.R` (reparto municipal de 1958-1960). Las cifras son las de las tablas de
 `output/tables/` a la fecha del documento.
 
 # 1. Qué hace, en pocas líneas
@@ -324,7 +324,7 @@ La incertidumbre depende de qué fuentes hay cada año:
 
 Una desviación de 0,16 equivale a un intervalo de 90 % de más o menos 26 %.
 
-![Estimación del modelo e insumos por unidad](../figures/07_backcast/backcast_rate_by_unit.png)
+![Estimación del modelo e insumos por unidad](../figures/08_backcast/backcast_rate_by_unit.png)
 
 # 5. Qué tan bien predice
 
@@ -406,13 +406,13 @@ Las cuatro figuras siguientes muestran la prueba para las 15 unidades. En cada p
   mismas tres lecturas, pero ahí no se puede decir cuál acierta; el único conteo es el de la Policía. En ese
   tramo la línea naranja es el modelo completo, que además usa el total nacional de la OMS.
 
-![Observado y predicho, unidades 1 a 4](../figures/07_backcast/backcast_predictive_check_all_1.png)
+![Observado y predicho, unidades 1 a 4](../figures/08_backcast/backcast_predictive_check_all_1.png)
 
-![Observado y predicho, unidades 5 a 8](../figures/07_backcast/backcast_predictive_check_all_2.png)
+![Observado y predicho, unidades 5 a 8](../figures/08_backcast/backcast_predictive_check_all_2.png)
 
-![Observado y predicho, unidades 9 a 12](../figures/07_backcast/backcast_predictive_check_all_3.png)
+![Observado y predicho, unidades 9 a 12](../figures/08_backcast/backcast_predictive_check_all_3.png)
 
-![Observado y predicho, unidades 13 a 15](../figures/07_backcast/backcast_predictive_check_all_4.png)
+![Observado y predicho, unidades 13 a 15](../figures/08_backcast/backcast_predictive_check_all_4.png)
 
 ## 5.3 Otras comprobaciones
 
@@ -429,7 +429,7 @@ Tres más:
 # 6. De homicidios registrados a totales
 
 El modelo estima homicidios entre las defunciones registradas. Cuántos no se registraron lo aborda
-`code/47_homicide_underregistration.R`.
+`code/62_homicide_underregistration.R`.
 
 ## La prueba
 
@@ -442,7 +442,7 @@ perdieran como cualquier otra muerte, se movería uno a uno con él. Entre depar
 - **1998-2002:** la pendiente cae a entre 0,05 y 0,26. Con el certificado de defunción de 1998, el registro de
   homicidios deja de depender de la completitud general.
 
-![Prueba contra la Policía](../figures/07_backcast/underreg_theta.png)
+![Prueba contra la Policía](../figures/08_backcast/underreg_theta.png)
 
 ## La corrección
 
@@ -517,7 +517,7 @@ Este escenario solo existe para 1962-1997, los años en que el modelo usa la Pol
 Sirve como contraste independiente del escenario central más que como reemplazo: confirma su tamaño donde se
 pueden comparar y señala las unidades donde conviene desconfiar del índice.
 
-![Homicidios registrados y totales por escenario](../figures/07_backcast/underreg_totals.png)
+![Homicidios registrados y totales por escenario](../figures/08_backcast/underreg_totals.png)
 
 ## Por qué se entrena con registrados y se corrige al final
 
@@ -527,7 +527,7 @@ cambia 0,1 %, y cada unidad menos de 1 %. Los dos caminos son equivalentes; el a
 
 # 7. Reparto municipal, 1958-1960
 
-No hay homicidios por municipio antes de 1979. `code/46_homicide_munic_1958_1960.R` reparte los homicidios de
+No hay homicidios por municipio antes de 1979. `code/61_homicide_munic_1958_1960.R` reparte los homicidios de
 cada unidad entre sus municipios para 1958-1960, los únicos años de ese periodo con defunciones municipales por
 sexo, con los tres años juntos.
 
@@ -568,15 +568,15 @@ municipio equivocado baja de 20,5 % a 18,6 %.
   de balance de crecimiento de 1985-1995 (correlación 0,87), pero da valores más altos (0,79 frente a 0,71 en
   promedio).
 - **Hay dos criterios en el proyecto para el subregistro de muertes violentas.** El script 42 no las corrige;
-  el script 47 usa $\theta = 0{,}41$ antes de 1998. Las dos series nacionales difieren entre 3 % y 12 %.
+  el script 62 usa $\theta = 0{,}41$ antes de 1998. Las dos series nacionales difieren entre 3 % y 12 %.
 
 # 9. Dónde está cada cosa
 
 | Qué | Archivo |
 |---|---|
-| Modelo departamental | `code/45_homicide_backcast_dept.R` |
-| Reparto municipal 1958-1960 | `code/46_homicide_munic_1958_1960.R` |
-| De registrados a totales | `code/47_homicide_underregistration.R` |
+| Modelo departamental | `code/60_homicide_backcast_dept.R` |
+| Reparto municipal 1958-1960 | `code/61_homicide_munic_1958_1960.R` |
+| De registrados a totales | `code/62_homicide_underregistration.R` |
 | Estimaciones por unidad y año | `output/tables/homicide_backcast_dept_1915-2019.csv` |
 | Parámetros | `output/tables/homicide_backcast_parameters.csv` |
 | Validación por bloques | `output/tables/homicide_backcast_validation.csv` y `homicide_backcast_validation_predictions.csv` |
@@ -584,7 +584,7 @@ municipio equivocado baja de 20,5 % a 18,6 %.
 | Índice de completitud | `output/tables/homicide_underreg_completeness_index.csv` |
 | Escenario Policía frente al central, por unidad | `output/tables/homicide_underreg_police_scenario.csv` |
 | Reparto municipal | `output/tables/homicide_munic_1958-1960.csv` |
-| Figuras | `figures/07_backcast/` |
+| Figuras | `figures/08_backcast/` |
 
 # Glosario de símbolos
 

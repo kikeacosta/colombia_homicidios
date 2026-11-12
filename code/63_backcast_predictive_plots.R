@@ -1,9 +1,9 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# 48. Predictive check of the departmental homicide backcast: figures only
+# 63. Predictive check of the departmental homicide backcast: figures only
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Redraws the predictive-check figure of 45 (its section 6.5) from the tables
-# that 45 saves, so the plot can be changed in seconds. It does NOT estimate
-# anything: 45 takes about five minutes because it fits the model, and has to
+# Redraws the predictive-check figure of 60 (its section 6.5) from the tables
+# that 60 saves, so the plot can be changed in seconds. It does NOT estimate
+# anything: 60 takes about five minutes because it fits the model, and has to
 # be run again only when the model or its inputs change.
 #
 # figure   observed against predicted homicides by unit. Black: the original
@@ -29,13 +29,13 @@
 #
 # limits   a unit that is not in homicide_backcast_gap_readings.csv is drawn
 #          with no readings in the cream strip, and the script says so (the
-#          table holds the 15 units since 45 writes all of them).
+#          table holds the 15 units since 60 writes all of them).
 #
 # inputs   output/tables/homicide_backcast_validation_predictions.csv
 #          output/tables/homicide_backcast_gap_readings.csv
 #          output/tables/homicide_backcast_dept_1915-2019.csv
-# outputs  figures/07_backcast/backcast_predictive_check.png
-#          figures/07_backcast/backcast_predictive_check_all_1.png ... _4.png
+# outputs  figures/08_backcast/backcast_predictive_check.png
+#          figures/08_backcast/backcast_predictive_check_all_1.png ... _4.png
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm(list = ls()); gc(); source("code/00_setup.R")
 
@@ -47,12 +47,12 @@ rm(list = ls()); gc(); source("code/00_setup.R")
 # cundinamarca, huila, magdalena, narino, norte_de_santander, santander,
 # tolima, valle_del_cauca, territorios
 units <- c("antioquia", "valle_del_cauca", "tolima", "bolivar")
-out_file <- "figures/07_backcast/backcast_predictive_check.png"
+out_file <- "figures/08_backcast/backcast_predictive_check.png"
 
 # all 15 units in pages: files <out_all>_1.png, _2.png, ...
 all_pages <- TRUE
 per_page <- 4
-out_all <- "figures/07_backcast/backcast_predictive_check_all"
+out_all <- "figures/08_backcast/backcast_predictive_check_all"
 
 # predictions to draw: any of "N", "S", "P", "SP"
 variants <- c("N", "S", "SP")
@@ -192,5 +192,5 @@ if (all_pages) {
 no_gap <- setdiff(if (all_pages) all_units else units, gap$unit)
 if (length(no_gap) > 0) {
   message("Sin lecturas de 1966-1978 en homicide_backcast_gap_readings.csv para: ", paste(no_gap, collapse = ", "),
-          ". Esa tabla sale del script 45.")
+          ". Esa tabla sale del script 60.")
 }

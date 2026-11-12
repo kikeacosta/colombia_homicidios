@@ -221,7 +221,7 @@
 <li><a href="#glosario-de-símbolos" id="toc-glosario-de-símbolos">Glosario de símbolos</a></li>
 </ul>
 </nav>
-<p>Estado: prototipo. Describe el modelo tal como está en <code>code/45_homicide_backcast_dept.R</code> y los dos pasos que se apoyan en él: <code>code/47_homicide_underregistration.R</code> (de homicidios registrados a totales) y <code>code/46_homicide_munic_1958_1960.R</code> (reparto municipal de 1958-1960). Las cifras son las de las tablas de <code>output/tables/</code> a la fecha del documento.</p>
+<p>Estado: prototipo. Describe el modelo tal como está en <code>code/60_homicide_backcast_dept.R</code> y los dos pasos que se apoyan en él: <code>code/62_homicide_underregistration.R</code> (de homicidios registrados a totales) y <code>code/61_homicide_munic_1958_1960.R</code> (reparto municipal de 1958-1960). Las cifras son las de las tablas de <code>output/tables/</code> a la fecha del documento.</p>
 <h1 id="qué-hace-en-pocas-líneas">1. Qué hace, en pocas líneas</h1>
 <ul>
 <li>Estima cuántos homicidios se registraron cada año, de 1915 a 2019, en cada una de 15 unidades territoriales (departamentos, algunos agrupados).</li>
@@ -645,7 +645,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 </table>
 <p>Una desviación de 0,16 equivale a un intervalo de 90 % de más o menos 26 %.</p>
 <figure>
-<img src="../figures/07_backcast/backcast_rate_by_unit.png" alt="Estimación del modelo e insumos por unidad" />
+<img src="../figures/08_backcast/backcast_rate_by_unit.png" alt="Estimación del modelo e insumos por unidad" />
 <figcaption aria-hidden="true">Estimación del modelo e insumos por unidad</figcaption>
 </figure>
 <h1 id="qué-tan-bien-predice">5. Qué tan bien predice</h1>
@@ -876,19 +876,19 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <li><strong>Franja crema, 1966-1978:</strong> no hay homicidios en las estadísticas vitales para contrastar. Se muestran las mismas tres lecturas, pero ahí no se puede decir cuál acierta; el único conteo es el de la Policía. En ese tramo la línea naranja es el modelo completo, que además usa el total nacional de la OMS.</li>
 </ul>
 <figure>
-<img src="../figures/07_backcast/backcast_predictive_check_all_1.png" alt="Observado y predicho, unidades 1 a 4" />
+<img src="../figures/08_backcast/backcast_predictive_check_all_1.png" alt="Observado y predicho, unidades 1 a 4" />
 <figcaption aria-hidden="true">Observado y predicho, unidades 1 a 4</figcaption>
 </figure>
 <figure>
-<img src="../figures/07_backcast/backcast_predictive_check_all_2.png" alt="Observado y predicho, unidades 5 a 8" />
+<img src="../figures/08_backcast/backcast_predictive_check_all_2.png" alt="Observado y predicho, unidades 5 a 8" />
 <figcaption aria-hidden="true">Observado y predicho, unidades 5 a 8</figcaption>
 </figure>
 <figure>
-<img src="../figures/07_backcast/backcast_predictive_check_all_3.png" alt="Observado y predicho, unidades 9 a 12" />
+<img src="../figures/08_backcast/backcast_predictive_check_all_3.png" alt="Observado y predicho, unidades 9 a 12" />
 <figcaption aria-hidden="true">Observado y predicho, unidades 9 a 12</figcaption>
 </figure>
 <figure>
-<img src="../figures/07_backcast/backcast_predictive_check_all_4.png" alt="Observado y predicho, unidades 13 a 15" />
+<img src="../figures/08_backcast/backcast_predictive_check_all_4.png" alt="Observado y predicho, unidades 13 a 15" />
 <figcaption aria-hidden="true">Observado y predicho, unidades 13 a 15</figcaption>
 </figure>
 <h2 id="otras-comprobaciones">5.3 Otras comprobaciones</h2>
@@ -899,7 +899,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <li><strong>Reparto en 1966-1978.</strong> No hay dato para contrastarlo. La incertidumbre de cada unidad baja de 0,31 sin insumos a 0,176 con Policía; añadir la razón de sexos y la OMS la deja en 0,164.</li>
 </ul>
 <h1 id="de-homicidios-registrados-a-totales">6. De homicidios registrados a totales</h1>
-<p>El modelo estima homicidios entre las defunciones registradas. Cuántos no se registraron lo aborda <code>code/47_homicide_underregistration.R</code>.</p>
+<p>El modelo estima homicidios entre las defunciones registradas. Cuántos no se registraron lo aborda <code>code/62_homicide_underregistration.R</code>.</p>
 <h2 id="la-prueba">La prueba</h2>
 <p>La Policía cuenta homicidios sin depender del registro de defunciones. Si los homicidios se registraran siempre, la razón Policía/EEVV no dependería de qué tan bueno es el registro general de un departamento. Si se perdieran como cualquier otra muerte, se movería uno a uno con él. Entre departamentos:</p>
 <ul>
@@ -907,7 +907,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <li><strong>1998-2002:</strong> la pendiente cae a entre 0,05 y 0,26. Con el certificado de defunción de 1998, el registro de homicidios deja de depender de la completitud general.</li>
 </ul>
 <figure>
-<img src="../figures/07_backcast/underreg_theta.png" alt="Prueba contra la Policía" />
+<img src="../figures/08_backcast/underreg_theta.png" alt="Prueba contra la Policía" />
 <figcaption aria-hidden="true">Prueba contra la Policía</figcaption>
 </figure>
 <h2 id="la-corrección">La corrección</h2>
@@ -1025,13 +1025,13 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 </ul>
 <p>Sirve como contraste independiente del escenario central más que como reemplazo: confirma su tamaño donde se pueden comparar y señala las unidades donde conviene desconfiar del índice.</p>
 <figure>
-<img src="../figures/07_backcast/underreg_totals.png" alt="Homicidios registrados y totales por escenario" />
+<img src="../figures/08_backcast/underreg_totals.png" alt="Homicidios registrados y totales por escenario" />
 <figcaption aria-hidden="true">Homicidios registrados y totales por escenario</figcaption>
 </figure>
 <h2 id="por-qué-se-entrena-con-registrados-y-se-corrige-al-final">Por qué se entrena con registrados y se corrige al final</h2>
 <p>La razón de sexos de las defunciones registradas solo informa sobre los homicidios que están dentro de esas mismas defunciones. Se comprobó qué pasa si se ajusta todo antes de estimar: el total nacional de 1950-1997 cambia 0,1 %, y cada unidad menos de 1 %. Los dos caminos son equivalentes; el actual es más simple.</p>
 <h1 id="reparto-municipal-1958-1960">7. Reparto municipal, 1958-1960</h1>
-<p>No hay homicidios por municipio antes de 1979. <code>code/46_homicide_munic_1958_1960.R</code> reparte los homicidios de cada unidad entre sus municipios para 1958-1960, los únicos años de ese periodo con defunciones municipales por sexo, con los tres años juntos.</p>
+<p>No hay homicidios por municipio antes de 1979. <code>code/61_homicide_munic_1958_1960.R</code> reparte los homicidios de cada unidad entre sus municipios para 1958-1960, los únicos años de ese periodo con defunciones municipales por sexo, con los tres años juntos.</p>
 <p>Para cada municipio <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> se calcula el exceso de muertes masculinas sobre lo que daría la razón de sexos no violenta:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext mathvariant="normal">exceso</mtext><mi>i</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>A</mi><mrow><mi>M</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>−</mo><msub><mi>ρ</mi><mi>i</mi></msub><mspace width="0.167em"></mspace><msub><mi>A</mi><mrow><mi>F</mi><mo>,</mo><mi>i</mi></mrow></msub></mrow><mrow><mi>π</mi><mo>−</mo><msub><mi>ρ</mi><mi>i</mi></msub><mspace width="0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>π</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{exceso}_i = \frac{A_{M,i} - \rho_i\, A_{F,i}}{\pi - \rho_i\,(1-\pi)}</annotation></semantics></math></p>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mrow><mi>M</mi><mo>,</mo><mi>i</mi></mrow></msub><annotation encoding="application/x-tex">A_{M,i}</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mrow><mi>F</mi><mo>,</mo><mi>i</mi></mrow></msub><annotation encoding="application/x-tex">A_{F,i}</annotation></semantics></math> son las defunciones de hombres y mujeres de un año de edad o más (las de menores de un año se descuentan porque no llevan señal de homicidio). <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mi>i</mi></msub><annotation encoding="application/x-tex">\rho_i</annotation></semantics></math> es la razón de sexos no violenta esperada en el municipio. Es la misma identidad contable de la sección 2, despejada para los homicidios.</p>
@@ -1048,7 +1048,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <li><strong>Las tasas usan población de censos sin corregir por omisión</strong>, que va de 4 % a 12 % según el censo.</li>
 <li><strong>La serie de totales empieza en 1950</strong> y no incluye los homicidios del conflicto ni las desapariciones que las estimaciones de sistemas múltiples añaden a nivel nacional en 1985-2018.</li>
 <li><strong>El índice de completitud anterior a 1985 es una aproximación.</strong> Ordena bien las unidades frente al método de balance de crecimiento de 1985-1995 (correlación 0,87), pero da valores más altos (0,79 frente a 0,71 en promedio).</li>
-<li><strong>Hay dos criterios en el proyecto para el subregistro de muertes violentas.</strong> El script 42 no las corrige; el script 47 usa <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>41</mn></mrow><annotation encoding="application/x-tex">\theta = 0{,}41</annotation></semantics></math> antes de 1998. Las dos series nacionales difieren entre 3 % y 12 %.</li>
+<li><strong>Hay dos criterios en el proyecto para el subregistro de muertes violentas.</strong> El script 42 no las corrige; el script 62 usa <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>41</mn></mrow><annotation encoding="application/x-tex">\theta = 0{,}41</annotation></semantics></math> antes de 1998. Las dos series nacionales difieren entre 3 % y 12 %.</li>
 </ul>
 <h1 id="dónde-está-cada-cosa">9. Dónde está cada cosa</h1>
 <table>
@@ -1061,15 +1061,15 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 <tbody>
 <tr class="odd">
 <td>Modelo departamental</td>
-<td><code>code/45_homicide_backcast_dept.R</code></td>
+<td><code>code/60_homicide_backcast_dept.R</code></td>
 </tr>
 <tr class="even">
 <td>Reparto municipal 1958-1960</td>
-<td><code>code/46_homicide_munic_1958_1960.R</code></td>
+<td><code>code/61_homicide_munic_1958_1960.R</code></td>
 </tr>
 <tr class="odd">
 <td>De registrados a totales</td>
-<td><code>code/47_homicide_underregistration.R</code></td>
+<td><code>code/62_homicide_underregistration.R</code></td>
 </tr>
 <tr class="even">
 <td>Estimaciones por unidad y año</td>
@@ -1101,7 +1101,7 @@ u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
 </tr>
 <tr class="odd">
 <td>Figuras</td>
-<td><code>figures/07_backcast/</code></td>
+<td><code>figures/08_backcast/</code></td>
 </tr>
 </tbody>
 </table>
