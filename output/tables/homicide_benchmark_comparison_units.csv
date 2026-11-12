@@ -1,0 +1,136 @@
+era,unit,family,n,median_abs_error_pct
+1946-1965,antioquia,state-space (60),19,31.766898644931253
+1946-1965,atlantico,state-space (60),19,71.4645252061996
+1946-1965,bolivar,state-space (60),19,15.061700853879834
+1946-1965,boyaca,state-space (60),19,15.589705259432973
+1946-1965,caldas,state-space (60),19,9.026049050334706
+1946-1965,cauca,state-space (60),19,32.4072717883918
+1946-1965,cundinamarca,state-space (60),19,43.227882148566096
+1946-1965,huila,state-space (60),17,58.162537003945026
+1946-1965,magdalena,state-space (60),19,32.454311578616
+1946-1965,narino,state-space (60),19,22.285814270276592
+1946-1965,norte_de_santander,state-space (60),19,15.866829420325923
+1946-1965,santander,state-space (60),18,22.110481283803257
+1946-1965,territorios,state-space (60),19,21.03969242945267
+1946-1965,tolima,state-space (60),17,40.78459440192043
+1946-1965,valle_del_cauca,state-space (60),17,14.245673958713656
+1979-1984,antioquia,state-space (60),6,21.08357905953242
+1979-1984,atlantico,state-space (60),6,35.5186196225467
+1979-1984,bolivar,state-space (60),6,16.976165077823612
+1979-1984,boyaca,state-space (60),6,7.966576163815908
+1979-1984,caldas,state-space (60),5,7.66399963880251
+1979-1984,cauca,state-space (60),6,36.13059168238233
+1979-1984,cundinamarca,state-space (60),6,19.606484854473283
+1979-1984,huila,state-space (60),6,18.84661829899301
+1979-1984,magdalena,state-space (60),6,7.0415473894207
+1979-1984,narino,state-space (60),6,29.75801669392815
+1979-1984,norte_de_santander,state-space (60),5,8.685193737016593
+1979-1984,santander,state-space (60),5,6.821049816275937
+1979-1984,territorios,state-space (60),6,3.8071818763456
+1979-1984,tolima,state-space (60),6,27.616413588054506
+1979-1984,valle_del_cauca,state-space (60),6,13.781732402514724
+1985-2010,antioquia,state-space (60),26,3.313013922655905
+1985-2010,atlantico,state-space (60),26,11.583465551402005
+1985-2010,bolivar,state-space (60),26,14.858561639718415
+1985-2010,boyaca,state-space (60),26,12.551368627025173
+1985-2010,caldas,state-space (60),26,3.6632631770723236
+1985-2010,cauca,state-space (60),26,7.0934457775445106
+1985-2010,cundinamarca,state-space (60),26,6.89639417776331
+1985-2010,huila,state-space (60),26,7.872098979786757
+1985-2010,magdalena,state-space (60),26,9.169837855192291
+1985-2010,narino,state-space (60),26,8.848853867134343
+1985-2010,norte_de_santander,state-space (60),26,8.660366183090861
+1985-2010,santander,state-space (60),26,8.195436500035292
+1985-2010,territorios,state-space (60),26,3.568315357566998
+1985-2010,tolima,state-space (60),26,18.864570190314268
+1985-2010,valle_del_cauca,state-space (60),26,2.5963592327873264
+1946-1965,antioquia,"simple (64), trained on all",19,43.598971545996946
+1946-1965,atlantico,"simple (64), trained on all",19,141.16651999647564
+1946-1965,bolivar,"simple (64), trained on all",19,70.56910335735631
+1946-1965,boyaca,"simple (64), trained on all",19,41.40604725990138
+1946-1965,caldas,"simple (64), trained on all",19,34.112557554772394
+1946-1965,cauca,"simple (64), trained on all",19,19.417207832628357
+1946-1965,cundinamarca,"simple (64), trained on all",19,12.793560771420376
+1946-1965,huila,"simple (64), trained on all",17,57.3952068599625
+1946-1965,magdalena,"simple (64), trained on all",19,41.99085431017298
+1946-1965,narino,"simple (64), trained on all",19,77.39335805151232
+1946-1965,norte_de_santander,"simple (64), trained on all",19,31.778181452939048
+1946-1965,santander,"simple (64), trained on all",18,17.219540181712333
+1946-1965,territorios,"simple (64), trained on all",19,34.73491818234966
+1946-1965,tolima,"simple (64), trained on all",17,58.09024312400155
+1946-1965,valle_del_cauca,"simple (64), trained on all",17,18.44794349358385
+1946-1965,antioquia,"simple (64), trained on modern",19,87.63027622618706
+1946-1965,atlantico,"simple (64), trained on modern",19,179.97483772531834
+1946-1965,bolivar,"simple (64), trained on modern",19,70.7632034511487
+1946-1965,boyaca,"simple (64), trained on modern",19,44.416436204387544
+1946-1965,caldas,"simple (64), trained on modern",19,21.942404816638938
+1946-1965,cauca,"simple (64), trained on modern",19,36.41242713041846
+1946-1965,cundinamarca,"simple (64), trained on modern",19,29.128629213561386
+1946-1965,huila,"simple (64), trained on modern",17,32.860386879520796
+1946-1965,magdalena,"simple (64), trained on modern",19,50.40241915031316
+1946-1965,narino,"simple (64), trained on modern",19,190.73253491918703
+1946-1965,norte_de_santander,"simple (64), trained on modern",19,35.47527443419425
+1946-1965,santander,"simple (64), trained on modern",18,56.43632328758541
+1946-1965,territorios,"simple (64), trained on modern",19,27.03787971140139
+1946-1965,tolima,"simple (64), trained on modern",17,60.47344610740857
+1946-1965,valle_del_cauca,"simple (64), trained on modern",17,18.131193269516743
+1979-1984,antioquia,"simple (64), trained on all",6,19.091900636169278
+1979-1984,atlantico,"simple (64), trained on all",6,30.863386928372822
+1979-1984,bolivar,"simple (64), trained on all",6,14.589288232150166
+1979-1984,boyaca,"simple (64), trained on all",6,31.47020887262366
+1979-1984,caldas,"simple (64), trained on all",5,15.723027234356412
+1979-1984,cauca,"simple (64), trained on all",6,8.247174003284584
+1979-1984,cundinamarca,"simple (64), trained on all",6,7.790079096386537
+1979-1984,huila,"simple (64), trained on all",6,14.481635258262616
+1979-1984,magdalena,"simple (64), trained on all",6,29.08120862316725
+1979-1984,narino,"simple (64), trained on all",6,47.648215330000745
+1979-1984,norte_de_santander,"simple (64), trained on all",5,81.19449544304653
+1979-1984,santander,"simple (64), trained on all",5,11.888856917556524
+1979-1984,territorios,"simple (64), trained on all",6,21.432493021055077
+1979-1984,tolima,"simple (64), trained on all",6,83.26191796108847
+1979-1984,valle_del_cauca,"simple (64), trained on all",6,61.3418022090238
+1979-1984,antioquia,"simple (64), trained on modern",6,6.235684755148246
+1979-1984,atlantico,"simple (64), trained on modern",6,17.616877971805167
+1979-1984,bolivar,"simple (64), trained on modern",6,14.3413739056668
+1979-1984,boyaca,"simple (64), trained on modern",6,40.44662931197542
+1979-1984,caldas,"simple (64), trained on modern",5,13.82402459540094
+1979-1984,cauca,"simple (64), trained on modern",6,35.3598865616727
+1979-1984,cundinamarca,"simple (64), trained on modern",6,11.790170862579268
+1979-1984,huila,"simple (64), trained on modern",6,11.316973520606899
+1979-1984,magdalena,"simple (64), trained on modern",6,27.719011323407077
+1979-1984,narino,"simple (64), trained on modern",6,115.68969583225221
+1979-1984,norte_de_santander,"simple (64), trained on modern",5,16.345548042654844
+1979-1984,santander,"simple (64), trained on modern",5,24.875549084441296
+1979-1984,territorios,"simple (64), trained on modern",6,5.3375118213112085
+1979-1984,tolima,"simple (64), trained on modern",6,16.513054648970932
+1979-1984,valle_del_cauca,"simple (64), trained on modern",6,42.13408870411973
+1985-2010,antioquia,"simple (64), trained on all",26,5.110674032394996
+1985-2010,atlantico,"simple (64), trained on all",26,21.924451791175215
+1985-2010,bolivar,"simple (64), trained on all",26,27.65590446917208
+1985-2010,boyaca,"simple (64), trained on all",26,25.518391957563054
+1985-2010,caldas,"simple (64), trained on all",26,4.8551406691298595
+1985-2010,cauca,"simple (64), trained on all",26,18.67712101729284
+1985-2010,cundinamarca,"simple (64), trained on all",26,11.977407234960191
+1985-2010,huila,"simple (64), trained on all",26,15.517554929726007
+1985-2010,magdalena,"simple (64), trained on all",26,10.008674973148345
+1985-2010,narino,"simple (64), trained on all",26,16.9431237941983
+1985-2010,norte_de_santander,"simple (64), trained on all",26,19.7248460298317
+1985-2010,santander,"simple (64), trained on all",26,29.966565518042724
+1985-2010,territorios,"simple (64), trained on all",26,9.120538757228713
+1985-2010,tolima,"simple (64), trained on all",26,19.521320172288497
+1985-2010,valle_del_cauca,"simple (64), trained on all",26,9.040199556878353
+1985-2010,antioquia,"simple (64), trained on modern",26,7.839705099507838
+1985-2010,atlantico,"simple (64), trained on modern",26,11.859661872803128
+1985-2010,bolivar,"simple (64), trained on modern",26,9.5720872014580909
+1985-2010,boyaca,"simple (64), trained on modern",26,19.842296741308324
+1985-2010,caldas,"simple (64), trained on modern",26,5.301550256504061
+1985-2010,cauca,"simple (64), trained on modern",26,10.292871918006325
+1985-2010,cundinamarca,"simple (64), trained on modern",26,6.641296164472877
+1985-2010,huila,"simple (64), trained on modern",26,7.580611849343333
+1985-2010,magdalena,"simple (64), trained on modern",26,15.72099748857041
+1985-2010,narino,"simple (64), trained on modern",26,14.623683247360963
+1985-2010,norte_de_santander,"simple (64), trained on modern",26,5.281560838526866
+1985-2010,santander,"simple (64), trained on modern",26,8.254197509835064
+1985-2010,territorios,"simple (64), trained on modern",26,5.237766456441717
+1985-2010,tolima,"simple (64), trained on modern",26,18.374767145172605
+1985-2010,valle_del_cauca,"simple (64), trained on modern",26,3.7062420325614296

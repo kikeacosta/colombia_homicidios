@@ -65,6 +65,7 @@ Run from the project root with `Rscript run_all.R` (`Rscript` must be on the PAT
 | `61_homicide_munic_1958_1960.R` | prototype: municipal split of the 1958-1960 unit homicides from the sex ratio of deaths over age one, with the shrinkage weight calibrated on EEVV under 1958-60 conditions |
 | `62_homicide_underregistration.R` | prototype: from registered to total homicides by unit, 1950-2019. Tests the two conventions for violent deaths against the Policía, builds a completeness index by unit before 1985 and gives four scenarios |
 | `63_backcast_predictive_plots.R` | figure only: redraws the predictive check of 60 (observed against predicted homicides by unit in the hidden blocks, and the readings of 1966-1978) from the tables 60 saves, without fitting the model, for four units and for all 15 units in four pages; units, variants, rate or count and scale are options at the top |
+| `64_homicide_benchmark_simple.R` | benchmark: a negative binomial mixed model that distributes the national total of homicides among the units with the sex ratio (the municipal model of 07 one level up), against the state-space model of 60 in the same hidden blocks and with the same information |
 | `experimental/model_spatial.R` | spatial random-effect variant (not used for results) |
 | `historical/` | 1923-1984 series, WHO and UCDP comparisons; see its README |
 

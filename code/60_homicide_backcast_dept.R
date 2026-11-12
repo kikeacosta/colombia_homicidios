@@ -54,6 +54,13 @@
 #          truth), 1979-84, 1985-97
 #          and 1998-2010 (EEVV as truth). Inside the block the model gets
 #          nothing (N), the sex ratio (S), the Policia (P) or both (SP).
+#          Two more variants also get the NATIONAL TOTAL of the hidden
+#          homicides of each year (T, and ST with the sex ratio), as the WHO
+#          constraint does in 1966-1977: they are the fair counterpart of a
+#          model that distributes a known national total (64). Their
+#          smoothed estimates add up to 1-25 % more than the total given
+#          (the total is a sum of exponentials, linearised by the filter);
+#          64 rescales them before comparing.
 #          (a variant without the national offset rho_t was dropped: it
 #          predicted the same and fitted worse, log-likelihood about 90 lower.)
 #          Parameters are the full-data estimates (not re-estimated per block).
@@ -528,12 +535,16 @@ say("anuario cells:", sum(!is.na(flag$p_outlier)), "| probability of gross error
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blocks <- list("1946-1965" = 1946:1965, "1946-1953" = 1946:1953, "1954-1965" = 1954:1965, "1979-1984" = 1979:1984, "1985-1997" = 1985:1997, "1998-2010" = 1998:2010)
 variants <- tribble(
-  ~variant, ~use_sr, ~use_pol, ~offset,
-  "N: nothing in the block", FALSE, FALSE, TRUE,
-  "S: sex ratio", TRUE, FALSE, TRUE,
-  "P: Policia", FALSE, TRUE, TRUE,
-  "SP: sex ratio + Policia", TRUE, TRUE, TRUE
+  ~variant, ~use_sr, ~use_pol, ~offset, ~use_tot,
+  "N: nothing in the block", FALSE, FALSE, TRUE, FALSE,
+  "S: sex ratio", TRUE, FALSE, TRUE, FALSE,
+  "P: Policia", FALSE, TRUE, TRUE, FALSE,
+  "SP: sex ratio + Policia", TRUE, TRUE, TRUE, FALSE,
+  "T: national total", FALSE, FALSE, TRUE, TRUE,
+  "ST: sex ratio + national total", TRUE, FALSE, TRUE, TRUE
 )
+s_w_who <- s_w
+flagged <- with(filter(flag, p_outlier > 0.5), paste(unit, year))
 
 val <- list()
 for (b in names(blocks)) {
@@ -549,8 +560,22 @@ for (b in names(blocks)) {
     dat$y_e[inb] <- NA
     if (!vv$use_sr) dat$y_sr[inb] <- NA
     if (!vv$use_pol) dat$y_p[inb] <- NA
+    # national total of the hidden homicides, year by year, through the
+    # national observation of the model (the one of the WHO): the share of
+    # homicides in the deaths of the units that have a count that year
+    s_w <- s_w_who
+    if (vv$use_tot) {
+      ok <- inb & !is.na(truth) & !(paste(dat$unit, dat$year) %in% flagged)
+      tot <- tibble(year = dat$year, h = ifelse(ok, exp(truth) * dat$d, 0), dd = ifelse(ok, dat$d, 0)) |>
+        mutate(yw = ifelse(sum(dd) > 0, log(sum(h) / sum(dd)), NA), ww = dd / sum(dd), .by = year)
+      use <- inb & !is.na(tot$yw)
+      dat$y_w[use] <- tot$yw[use]
+      dat$w[use] <- tot$ww[use]
+      s_w <- 0.01 # the total is known, not estimated
+    }
     p <- if (vv$offset) fit1$par else fit0$par
     sm <- run_model(dat, p, smooth = TRUE)
+    s_w <- s_w_who
     val[[length(val) + 1]] <- sm |>
       mutate(block = b, variant = vv$variant, truth = truth, q_truth = q_truth,
              s_obs = ifelse(max(blocks[[b]]) <= 1965, p[["s_a"]], s_e),
