@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-11-12" />
+  <title>Modelo de homicidios por departamento, 1915-2019: qué es y cómo funciona</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 62em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  img { max-width: 100%; height: auto; }
+  table { font-size: 0.9em; margin: 1em 0; }
+  th, td { padding: 0.3em 0.6em; vertical-align: top; }
+  math[display="block"] { margin: 1em 0; }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Modelo de homicidios por departamento, 1915-2019: qué es y cómo funciona</h1>
+<p class="date">2026-11-12</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Contenido</h2>
+<ul>
+<li><a href="#qué-hace-en-pocas-líneas" id="toc-qué-hace-en-pocas-líneas">1. Qué hace, en pocas líneas</a></li>
+<li><a href="#la-idea-de-partida-por-qué-la-razón-de-sexos-habla-de-homicidios" id="toc-la-idea-de-partida-por-qué-la-razón-de-sexos-habla-de-homicidios">2. La idea de partida: por qué la razón de sexos habla de homicidios</a></li>
+<li><a href="#unidades-y-datos" id="toc-unidades-y-datos">3. Unidades y datos</a>
+<ul>
+<li><a href="#las-15-unidades" id="toc-las-15-unidades">Las 15 unidades</a></li>
+<li><a href="#las-fuentes" id="toc-las-fuentes">Las fuentes</a></li>
+</ul></li>
+<li><a href="#el-modelo" id="toc-el-modelo">4. El modelo</a>
+<ul>
+<li><a href="#qué-tipo-de-modelo-es" id="toc-qué-tipo-de-modelo-es">4.1 Qué tipo de modelo es</a></li>
+<li><a href="#las-tres-cantidades-ocultas" id="toc-las-tres-cantidades-ocultas">4.2 Las tres cantidades ocultas</a></li>
+<li><a href="#cómo-se-relaciona-cada-fuente-con-lo-oculto" id="toc-cómo-se-relaciona-cada-fuente-con-lo-oculto">4.3 Cómo se relaciona cada fuente con lo oculto</a></li>
+<li><a href="#celdas-erróneas-en-los-anuarios" id="toc-celdas-erróneas-en-los-anuarios">4.4 Celdas erróneas en los anuarios</a></li>
+<li><a href="#cómo-se-estima" id="toc-cómo-se-estima">4.5 Cómo se estima</a></li>
+<li><a href="#los-parámetros-estimados" id="toc-los-parámetros-estimados">4.6 Los parámetros estimados</a></li>
+<li><a href="#qué-produce" id="toc-qué-produce">4.7 Qué produce</a></li>
+</ul></li>
+<li><a href="#qué-tan-bien-predice" id="toc-qué-tan-bien-predice">5. Qué tan bien predice</a>
+<ul>
+<li><a href="#resumen-por-unidad" id="toc-resumen-por-unidad">5.1 Resumen por unidad</a></li>
+<li><a href="#observado-y-predicho-en-todas-las-unidades" id="toc-observado-y-predicho-en-todas-las-unidades">5.2 Observado y predicho en todas las unidades</a></li>
+<li><a href="#otras-comprobaciones" id="toc-otras-comprobaciones">5.3 Otras comprobaciones</a></li>
+</ul></li>
+<li><a href="#de-homicidios-registrados-a-totales" id="toc-de-homicidios-registrados-a-totales">6. De homicidios registrados a totales</a>
+<ul>
+<li><a href="#la-prueba" id="toc-la-prueba">La prueba</a></li>
+<li><a href="#la-corrección" id="toc-la-corrección">La corrección</a></li>
+<li><a href="#por-qué-se-entrena-con-registrados-y-se-corrige-al-final" id="toc-por-qué-se-entrena-con-registrados-y-se-corrige-al-final">Por qué se entrena con registrados y se corrige al final</a></li>
+</ul></li>
+<li><a href="#reparto-municipal-1958-1960" id="toc-reparto-municipal-1958-1960">7. Reparto municipal, 1958-1960</a></li>
+<li><a href="#límites" id="toc-límites">8. Límites</a></li>
+<li><a href="#dónde-está-cada-cosa" id="toc-dónde-está-cada-cosa">9. Dónde está cada cosa</a></li>
+<li><a href="#glosario-de-símbolos" id="toc-glosario-de-símbolos">Glosario de símbolos</a></li>
+</ul>
+</nav>
+<p>Estado: prototipo. Describe el modelo tal como está en <code>code/45_homicide_backcast_dept.R</code> y los dos pasos que se apoyan en él: <code>code/47_homicide_underregistration.R</code> (de homicidios registrados a totales) y <code>code/46_homicide_munic_1958_1960.R</code> (reparto municipal de 1958-1960). Las cifras son las de las tablas de <code>output/tables/</code> a la fecha del documento.</p>
+<h1 id="qué-hace-en-pocas-líneas">1. Qué hace, en pocas líneas</h1>
+<ul>
+<li>Estima cuántos homicidios se registraron cada año, de 1915 a 2019, en cada una de 15 unidades territoriales (departamentos, algunos agrupados).</li>
+<li>Lo hace combinando cuatro fuentes que por separado son incompletas: los anuarios estadísticos, la Policía, las estadísticas vitales (EEVV) y la razón de sexos de las defunciones.</li>
+<li>La pregunta de origen era si la razón de sexos de las defunciones por todas las causas permite predecir homicidios donde no hay causa de muerte. La respuesta del modelo es: <strong>desde 1985, sí; antes de 1966, casi nada</strong>. La serie histórica se sostiene en los anuarios y en la Policía.</li>
+<li>El modelo estima homicidios <strong>registrados</strong>. Un segundo paso los convierte en homicidios totales bajo tres supuestos de subregistro.</li>
+</ul>
+<h1 id="la-idea-de-partida-por-qué-la-razón-de-sexos-habla-de-homicidios">2. La idea de partida: por qué la razón de sexos habla de homicidios</h1>
+<p>Cerca de nueve de cada diez víctimas de homicidio son hombres. Las demás causas de muerte se reparten entre hombres y mujeres de forma mucho más pareja. Por eso, cuando en un lugar aumentan los homicidios, las defunciones masculinas crecen más que las femeninas y la razón entre unas y otras sube, aunque nadie haya anotado la causa de muerte.</p>
+<p>Esto se puede escribir como una identidad contable. Las defunciones de cada sexo son la suma de las no violentas y las violentas:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>M</mi></msub><mo>=</mo><msub><mi>N</mi><mi>M</mi></msub><mo>+</mo><mi>π</mi><mi>H</mi><mspace width="2.0em"></mspace><mspace width="2.0em"></mspace><msub><mi>D</mi><mi>F</mi></msub><mo>=</mo><msub><mi>N</mi><mi>F</mi></msub><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>π</mi><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="0.167em"></mspace><mi>H</mi></mrow><annotation encoding="application/x-tex">D_M = N_M + \pi H \qquad\qquad D_F = N_F + (1-\pi)\,H</annotation></semantics></math></p>
+<table>
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>M</mi></msub><annotation encoding="application/x-tex">D_M</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math></td>
+<td>defunciones registradas de hombres (masculinas) y de mujeres (femeninas), por todas las causas</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>M</mi></msub><annotation encoding="application/x-tex">N_M</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>F</mi></msub><annotation encoding="application/x-tex">N_F</annotation></semantics></math></td>
+<td>defunciones no violentas de hombres y de mujeres</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math></td>
+<td>homicidios</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math></td>
+<td>proporción de los homicidios cuyas víctimas son hombres. Se fija en 0,90; en los datos va de 0,87 a 0,92</td>
+</tr>
+</tbody>
+</table>
+<p>La razón de sexos de las defunciones es <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><msub><mi>D</mi><mi>M</mi></msub><mi>/</mi><msub><mi>D</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">R = D_M / D_F</annotation></semantics></math>. Para ver cómo depende de los homicidios conviene definir dos cantidades:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><msub><mi>N</mi><mi>M</mi></msub><mi>/</mi><msub><mi>N</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">\rho = N_M / N_F</annotation></semantics></math>, la <strong>razón de sexos no violenta</strong>: la que habría si no hubiera homicidios.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mi>H</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>D</mi><mi>M</mi></msub><mo>+</mo><msub><mi>D</mi><mi>F</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">h = H / (D_M + D_F)</annotation></semantics></math>, la <strong>proporción de homicidios</strong> dentro de todas las defunciones.</li>
+</ul>
+<p>Con ellas, la identidad de arriba se convierte en:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mspace width="0.278em"></mspace><mo>=</mo><mspace width="0.278em"></mspace><mfrac><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>h</mi><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="0.167em"></mspace><mi>ρ</mi><mspace width="0.278em"></mspace><mo>+</mo><mspace width="0.278em"></mspace><mi>h</mi><mspace width="0.167em"></mspace><mi>π</mi><mspace width="0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>ρ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>h</mi><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="0.278em"></mspace><mo>+</mo><mspace width="0.278em"></mspace><mi>h</mi><mspace width="0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>π</mi><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>ρ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">R \;=\; \frac{(1-h)\,\rho \;+\; h\,\pi\,(1+\rho)}{(1-h) \;+\; h\,(1-\pi)\,(1+\rho)}</annotation></semantics></math></p>
+<p>Esta fórmula no es un supuesto estadístico: es aritmética. Dice cuánto vale la razón de sexos observada si se conocen la razón no violenta y la proporción de homicidios. El modelo la usa al revés: observa <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math> y trata de deducir <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>.</p>
+<p><strong>Ejemplo.</strong> Con una razón no violenta de 1,05:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Homicidios como % de las defunciones</th>
+<th>Razón de sexos resultante</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0 %</td>
+<td>1,05</td>
+</tr>
+<tr class="even">
+<td>1 %</td>
+<td>1,07</td>
+</tr>
+<tr class="odd">
+<td>3 %</td>
+<td>1,10</td>
+</tr>
+<tr class="even">
+<td>15 %</td>
+<td>1,33</td>
+</tr>
+</tbody>
+</table>
+<p>El ejemplo muestra el límite de la idea. En la Colombia de 1985-1997 los homicidios eran cerca del 15 % de las defunciones y movían la razón de sexos de 1,05 a 1,33: una señal enorme. En 1923-1965 eran entre 0,4 % y 3 %, y la movían de 1,05 a 1,10 como mucho. La razón de sexos de un departamento cambia de un año a otro entre 2 % y 5 % por motivos que nada tienen que ver con la violencia, así que una señal de ese tamaño queda tapada por el ruido.</p>
+<h1 id="unidades-y-datos">3. Unidades y datos</h1>
+<h2 id="las-15-unidades">Las 15 unidades</h2>
+<p>Varios departamentos se crearon después de 1950 a partir de otros. Para que las series no se rompan, se agrupan con su departamento de origen:</p>
+<ul>
+<li>Antioquia, Atlántico, Boyacá, Cauca, Huila, Nariño, Norte de Santander, Santander, Tolima y Valle del Cauca quedan solos.</li>
+<li>Bolívar + Córdoba + Sucre.</li>
+<li>Caldas + Quindío + Risaralda.</li>
+<li>Cundinamarca + Bogotá.</li>
+<li>Magdalena + Cesar.</li>
+<li>Territorios: las antiguas intendencias y comisarías, más Chocó, Meta, Caquetá y La Guajira, que aparecen dentro de ese renglón de los anuarios antes de ser departamentos.</li>
+</ul>
+<h2 id="las-fuentes">Las fuentes</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Fuente</th>
+<th>Años</th>
+<th>Qué aporta</th>
+<th>Celdas unidad-año</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Defunciones por sexo: anuarios hasta 1978, EEVV desde 1979</td>
+<td>1915-2019</td>
+<td>la razón de sexos</td>
+<td>1.525</td>
+</tr>
+<tr class="even">
+<td>Homicidios de los anuarios estadísticos</td>
+<td>1923-1965, con huecos</td>
+<td>conteo de homicidios en las estadísticas vitales</td>
+<td>417</td>
+</tr>
+<tr class="odd">
+<td>Homicidios de la Policía Nacional</td>
+<td>1962-1997</td>
+<td>conteo independiente del registro de defunciones</td>
+<td>540</td>
+</tr>
+<tr class="even">
+<td>Muertes violentas de EEVV (microdatos)</td>
+<td>1979-2019</td>
+<td>conteo de homicidios en las estadísticas vitales</td>
+<td>612</td>
+</tr>
+<tr class="odd">
+<td>Muertes violentas de la OMS</td>
+<td>1966-1977</td>
+<td>solo el total nacional</td>
+<td>9 años</td>
+</tr>
+</tbody>
+</table>
+<p>Tres precisiones:</p>
+<ul>
+<li><strong>“Homicidio” en EEVV</strong> incluye homicidio, lesiones de intención no determinada e intervención legal. Es la convención del resto del proyecto.</li>
+<li><strong>La Policía cuenta otra cosa.</strong> No depende del certificado de defunción, y su relación con las estadísticas vitales cambia de un departamento a otro. Por eso entra al modelo con un sesgo propio, no como una medición directa.</li>
+<li><strong>1966-1978 no tiene homicidios por departamento en las estadísticas vitales.</strong> Los anuarios dejan de publicarlos en 1965 y los microdatos empiezan en 1979. En esos años solo hay Policía, el total nacional de la OMS y la razón de sexos.</li>
+</ul>
+<h1 id="el-modelo">4. El modelo</h1>
+<h2 id="qué-tipo-de-modelo-es">4.1 Qué tipo de modelo es</h2>
+<p>Es un <strong>modelo de espacio de estados</strong>, también llamado modelo de estados latentes. La idea es sencilla:</p>
+<ol type="1">
+<li>Hay cantidades que interesan pero no se observan directamente. Se llaman <strong>estados</strong>. Aquí la principal es la proporción de homicidios en las defunciones de cada unidad y año.</li>
+<li>Los estados cambian poco a poco de un año al siguiente. Esa regla de cambio lento es lo que permite estimar un año sin datos a partir de sus vecinos.</li>
+<li>Cada fuente es una <strong>medición imperfecta</strong> de los estados, con su propio margen de error.</li>
+<li>El modelo combina todas las mediciones y la regla de cambio lento, y da para cada año la estimación más compatible con todo, junto con su incertidumbre.</li>
+</ol>
+<p>Es la misma familia de modelos que se usa para seguir la posición de un vehículo con un GPS impreciso: se sabe que el vehículo no salta de un sitio a otro, y cada lectura del GPS corrige un poco la posición estimada.</p>
+<h2 id="las-tres-cantidades-ocultas">4.2 Las tres cantidades ocultas</h2>
+<p>Para cada unidad <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math> y cada año <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math> el modelo lleva tres estados:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Estado</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>η</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">\eta_{d,t}</annotation></semantics></math></td>
+<td>logaritmo de la proporción de homicidios en las defunciones registradas: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo>=</mo><mo>log</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">\eta = \log h</annotation></semantics></math>. Es lo que se quiere estimar</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">u_{d,t}</annotation></semantics></math></td>
+<td>cuánto se aparta la razón de sexos no violenta de la unidad de la nacional, en logaritmos</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>β</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">\beta_{d,t}</annotation></semantics></math></td>
+<td>sesgo de la Policía: logaritmo de la razón entre lo que cuenta la Policía y lo que cuentan las estadísticas vitales</td>
+</tr>
+</tbody>
+</table>
+<p>Se trabaja en logaritmos porque así un cambio de 0,10 significa siempre “cerca de 10 %”, sea cual sea el nivel, y porque la proporción nunca puede resultar negativa.</p>
+<p>Los tres evolucionan como una <strong>caminata aleatoria</strong>: el valor de un año es el del año anterior más un cambio pequeño e impredecible.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>η</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>=</mo><msub><mi>η</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msubsup><mi>ε</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow><mi>η</mi></msubsup><mspace width="2.0em"></mspace><msub><mi>u</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>=</mo><msub><mi>u</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msubsup><mi>ε</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow><mi>u</mi></msubsup><mspace width="2.0em"></mspace><msub><mi>β</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>=</mo><msub><mi>β</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msubsup><mi>ε</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow><mi>β</mi></msubsup></mrow><annotation encoding="application/x-tex">\eta_{d,t} = \eta_{d,t-1} + \varepsilon^{\eta}_{d,t} \qquad
+u_{d,t} = u_{d,t-1} + \varepsilon^{u}_{d,t} \qquad
+\beta_{d,t} = \beta_{d,t-1} + \varepsilon^{\beta}_{d,t}</annotation></semantics></math></p>
+<p>Cada <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ε</mi><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> es un número al azar con media cero y una desviación estándar propia: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>η</mi></msub><annotation encoding="application/x-tex">\sigma_\eta</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>u</mi></msub><annotation encoding="application/x-tex">\sigma_u</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>β</mi></msub><annotation encoding="application/x-tex">\sigma_\beta</annotation></semantics></math>. Esas desviaciones dicen cuánto puede moverse cada estado en un año. Por ejemplo, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>η</mi></msub><mo>=</mo><mn>0</mn><mo>,</mo><mn>17</mn></mrow><annotation encoding="application/x-tex">\sigma_\eta = 0{,}17</annotation></semantics></math> significa que la proporción de homicidios cambia típicamente un 17 % de un año al siguiente. El modelo las estima a partir de los datos.</p>
+<p>La razón de sexos no violenta de la unidad se arma con dos piezas:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>log</mo><msub><mi>ρ</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>=</mo><msubsup><mi>ρ</mi><mi>t</mi><mtext mathvariant="normal">nac</mtext></msubsup><mo>+</mo><msub><mi>u</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\log \rho_{d,t} = \rho^{\text{nac}}_t + u_{d,t}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>ρ</mi><mi>t</mi><mtext mathvariant="normal">nac</mtext></msubsup><annotation encoding="application/x-tex">\rho^{\text{nac}}_t</annotation></semantics></math> es el logaritmo de la razón de sexos no violenta del país en el año <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>. No es un estado: se calcula antes, a partir de las defunciones nacionales por sexo y de la proporción nacional de muertes violentas (anuarios, OMS y EEVV según el año). Recoge la tendencia común a todo el país, que es fuerte: la razón de sexos de las defunciones pasa de 1,04 en los años veinte a 1,29 en los ochenta por razones ajenas a la violencia. Al estado <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math> le queda solo lo propio de cada unidad.</p>
+<h2 id="cómo-se-relaciona-cada-fuente-con-lo-oculto">4.3 Cómo se relaciona cada fuente con lo oculto</h2>
+<p>En lo que sigue, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">D_{d,t}</annotation></semantics></math> son las defunciones registradas de la unidad en el año, y cada <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math> es el error de medición de esa fuente.</p>
+<p><strong>Anuarios.</strong> Si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">A_{d,t}</annotation></semantics></math> es el número de homicidios que publica el anuario:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>log</mo><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mi>A</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><msub><mi>D</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>η</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>+</mo><msubsup><mi>e</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow><mi>A</mi></msubsup></mrow><annotation encoding="application/x-tex">\log\!\left(\frac{A_{d,t}}{D_{d,t}}\right) = \eta_{d,t} + e^{A}_{d,t}</annotation></semantics></math></p>
+<p>El anuario mide directamente la proporción de homicidios, con un error de desviación estándar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>A</mi></msub><annotation encoding="application/x-tex">\sigma_A</annotation></semantics></math>.</p>
+<p><strong>EEVV.</strong> Igual, con las muertes violentas <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">E_{d,t}</annotation></semantics></math> de los microdatos:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>log</mo><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mi>E</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><msub><mi>D</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>η</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>+</mo><msubsup><mi>e</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow><mi>E</mi></msubsup></mrow><annotation encoding="application/x-tex">\log\!\left(\frac{E_{d,t}}{D_{d,t}}\right) = \eta_{d,t} + e^{E}_{d,t}</annotation></semantics></math></p>
+<p>Aquí el error se fija en un valor muy pequeño (0,03): las EEVV <em>son</em> la definición de lo que se quiere medir, así que la estimación en esos años coincide casi exactamente con el dato.</p>
+<p><strong>Policía.</strong> Con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">P_{d,t}</annotation></semantics></math> homicidios de la Policía:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>log</mo><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mi>P</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><msub><mi>D</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>η</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>+</mo><msub><mi>β</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>+</mo><msubsup><mi>e</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow><mi>P</mi></msubsup></mrow><annotation encoding="application/x-tex">\log\!\left(\frac{P_{d,t}}{D_{d,t}}\right) = \eta_{d,t} + \beta_{d,t} + e^{P}_{d,t}</annotation></semantics></math></p>
+<p>La Policía mide la misma proporción, desplazada por su sesgo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>. El sesgo se aprende en los años en que la Policía coincide con los anuarios (1962-1965) o con EEVV (1979-1997), y se proyecta a los años intermedios.</p>
+<p><strong>Razón de sexos.</strong> Es la identidad contable de la sección 2, escrita con los estados:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>log</mo><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mi>D</mi><mrow><mi>M</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><msub><mi>D</mi><mrow><mi>F</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>g</mi><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mi>ρ</mi><mi>t</mi><mtext mathvariant="normal">nac</mtext></msubsup><mo>+</mo><msub><mi>u</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>,</mo><mspace width="0.278em"></mspace><msub><mi>η</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><msubsup><mi>e</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow><mi>R</mi></msubsup></mrow><annotation encoding="application/x-tex">\log\!\left(\frac{D_{M,d,t}}{D_{F,d,t}}\right) = g\!\left(\rho^{\text{nac}}_t + u_{d,t},\; \eta_{d,t}\right) + e^{R}_{d,t}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math> es el logaritmo de la fórmula de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math> de la sección 2, con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mo>exp</mo><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mi>ρ</mi><mi>t</mi><mtext mathvariant="normal">nac</mtext></msubsup><mo>+</mo><msub><mi>u</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\rho = \exp(\rho^{\text{nac}}_t + u_{d,t})</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mo>exp</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>η</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">h = \exp(\eta_{d,t})</annotation></semantics></math>. Es la única relación del modelo que no es una simple suma.</p>
+<p><strong>Total nacional de la OMS.</strong> Si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>t</mi></msub><annotation encoding="application/x-tex">V_t</annotation></semantics></math> son las muertes violentas del país según la OMS y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>t</mi></msub><annotation encoding="application/x-tex">D_t</annotation></semantics></math> las defunciones nacionales:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>log</mo><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mi>V</mi><mi>t</mi></msub><msub><mi>D</mi><mi>t</mi></msub></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>log</mo><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><munder><mo>∑</mo><mi>d</mi></munder><msub><mi>w</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mspace width="0.167em"></mspace><mo>exp</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>η</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><msubsup><mi>e</mi><mi>t</mi><mi>V</mi></msubsup></mrow><annotation encoding="application/x-tex">\log\!\left(\frac{V_t}{D_t}\right) = \log\!\left(\sum_{d} w_{d,t}\, \exp(\eta_{d,t})\right) + e^{V}_t</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>w</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">w_{d,t}</annotation></semantics></math> es el peso de la unidad en las defunciones del país. La ecuación dice que la proporción nacional es el promedio ponderado de las proporciones de las unidades. Es lo único que liga unas unidades con otras, y solo se usa en 1966-1977: en 1953-1965 la serie de la OMS es la suma de los mismos anuarios que ya están en el modelo.</p>
+<p><strong>El tamaño de los errores.</strong> Cada error tiene dos partes. Una es propia de la fuente (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>A</mi></msub><annotation encoding="application/x-tex">\sigma_A</annotation></semantics></math> para los anuarios, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>P</mi></msub><annotation encoding="application/x-tex">\sigma_P</annotation></semantics></math> para la Policía, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\sigma_R</annotation></semantics></math> para la razón de sexos) y el modelo la estima. La otra es el azar de contar pocos casos: con 20 homicidios, uno más o uno menos cambia el resultado un 5 %; con 2.000, no se nota. Esa segunda parte se calcula con el propio conteo (vale <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">1/A</annotation></semantics></math> para un conteo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>, y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msub><mi>D</mi><mi>M</mi></msub><mo>+</mo><mn>1</mn><mi>/</mi><msub><mi>D</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">1/D_M + 1/D_F</annotation></semantics></math> para la razón de sexos), de modo que las unidades pequeñas pesan menos.</p>
+<h2 id="celdas-erróneas-en-los-anuarios">4.4 Celdas erróneas en los anuarios</h2>
+<p>Algunas celdas de los anuarios están mal. Valle del Cauca en 1959 aparece con 52 homicidios, entre 1.479 el año anterior y 855 el siguiente; Antioquia en 1923, con 3. Si el modelo tratara todas las celdas igual, esas pocas lo obligarían a suponer que <em>todos</em> los anuarios son muy imprecisos, y entonces suavizaría los picos de La Violencia como si fueran ruido. Eso ocurría en la primera versión.</p>
+<p>Para evitarlo, cada celda de anuario puede ser de tres tipos:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Qué supone el modelo</th>
+<th>Probabilidad estimada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Regular</td>
+<td>la celda mide bien, con el error normal <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>A</mi></msub><annotation encoding="application/x-tex">\sigma_A</annotation></semantics></math></td>
+<td>95,7 %</td>
+</tr>
+<tr class="even">
+<td>Error grosero</td>
+<td>la celda está mal: su error es mucho mayor (desviación estándar adicional de 1,5 en logaritmos)</td>
+<td>3,2 %</td>
+</tr>
+<tr class="odd">
+<td>Salto</td>
+<td>la celda está bien y fue el nivel de homicidios el que cambió bruscamente respecto del año anterior</td>
+<td>1,1 %</td>
+</tr>
+</tbody>
+</table>
+<p>El modelo no decide a mano cuál es cuál. Para cada celda calcula qué tan compatible es con cada tipo, dado lo que ya sabe de ese año por las demás fuentes y por los años vecinos, y pondera las tres lecturas. De las 417 celdas, nueve quedan leídas como error grosero con probabilidad mayor de 50 %:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Unidad</th>
+<th>Año</th>
+<th>Anuario</th>
+<th>Estimación del modelo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Antioquia</td>
+<td>1923</td>
+<td>3</td>
+<td>86</td>
+</tr>
+<tr class="even">
+<td>Valle del Cauca</td>
+<td>1959</td>
+<td>52</td>
+<td>922</td>
+</tr>
+<tr class="odd">
+<td>Santander</td>
+<td>1949</td>
+<td>643</td>
+<td>371</td>
+</tr>
+<tr class="even">
+<td>Valle del Cauca</td>
+<td>1949</td>
+<td>670</td>
+<td>611</td>
+</tr>
+<tr class="odd">
+<td>Tolima</td>
+<td>1951</td>
+<td>365</td>
+<td>437</td>
+</tr>
+<tr class="even">
+<td>Huila</td>
+<td>1953</td>
+<td>182</td>
+<td>171</td>
+</tr>
+<tr class="odd">
+<td>Huila</td>
+<td>1959</td>
+<td>77</td>
+<td>112</td>
+</tr>
+<tr class="even">
+<td>Nariño</td>
+<td>1930</td>
+<td>26</td>
+<td>17</td>
+</tr>
+<tr class="odd">
+<td>Territorios</td>
+<td>1940</td>
+<td>36</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<p>Las dos primeras son errores evidentes. Santander y Valle en 1949 probablemente no lo son: es el arranque de La Violencia, y el modelo lo confunde con un error porque en 1950 no hay dato que lo confirme.</p>
+<h2 id="cómo-se-estima">4.5 Cómo se estima</h2>
+<p>El procedimiento se llama <strong>filtro de Kalman</strong> y tiene dos pasadas:</p>
+<ol type="1">
+<li><strong>Hacia adelante.</strong> Recorre los años de 1915 a 2019. En cada año parte de lo que estimó el año anterior, lo deja evolucionar según la caminata aleatoria (con lo que la incertidumbre crece un poco) y luego lo corrige con cada dato disponible de ese año. Una fuente precisa corrige mucho; una imprecisa, poco.</li>
+<li><strong>Hacia atrás.</strong> Recorre los años de 2019 a 1915 y revisa cada estimación con lo que se supo después. Así un año sin datos queda informado por los años anteriores y por los posteriores.</li>
+</ol>
+<p>Se le dice filtro de Kalman <em>extendido</em> porque la relación de la razón de sexos (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>) no es una suma simple y hay que aproximarla en cada paso por una recta.</p>
+<p>Las 15 unidades se estiman a la vez, porque el total de la OMS las liga. Son 45 estados por año (tres por unidad).</p>
+<p>Las desviaciones estándar y las dos probabilidades se eligen por <strong>máxima verosimilitud</strong>: se toman los valores con los que los datos observados resultan más probables. Con esos valores fijos se hacen las dos pasadas.</p>
+<h2 id="los-parámetros-estimados">4.6 Los parámetros estimados</h2>
+<p>Las desviaciones de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>, de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math> y de la razón de sexos tienen un valor antes de 1979 y otro desde 1979, porque con los microdatos de EEVV el comportamiento cambia.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Parámetro</th>
+<th>Valor</th>
+<th>Lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>η</mi></msub><annotation encoding="application/x-tex">\sigma_\eta</annotation></semantics></math>, antes de 1979</td>
+<td>0,168</td>
+<td>la proporción de homicidios cambia típicamente 17 % por año</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>η</mi></msub><annotation encoding="application/x-tex">\sigma_\eta</annotation></semantics></math>, desde 1979</td>
+<td>0,140</td>
+<td>14 % por año</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>u</mi></msub><annotation encoding="application/x-tex">\sigma_u</annotation></semantics></math>, antes de 1979</td>
+<td>0,011</td>
+<td>la razón de sexos no violenta de una unidad deriva cerca de 1 % por año respecto de la nacional</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>u</mi></msub><annotation encoding="application/x-tex">\sigma_u</annotation></semantics></math>, desde 1979</td>
+<td>0,008</td>
+<td>algo menos</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\sigma_R</annotation></semantics></math>, antes de 1979</td>
+<td>0,021</td>
+<td>la razón de sexos tiene un ruido propio de 2 % que la violencia no explica</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\sigma_R</annotation></semantics></math>, desde 1979</td>
+<td>0,0003</td>
+<td>prácticamente ninguno: con buenos datos la identidad contable se cumple casi exacta</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>A</mi></msub><annotation encoding="application/x-tex">\sigma_A</annotation></semantics></math></td>
+<td>0,133</td>
+<td>una celda regular de anuario se aparta 13 % del valor estimado</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>P</mi></msub><annotation encoding="application/x-tex">\sigma_P</annotation></semantics></math></td>
+<td>0,056</td>
+<td>ruido de la Policía de un año a otro, una vez descontado su sesgo</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>β</mi></msub><annotation encoding="application/x-tex">\sigma_\beta</annotation></semantics></math></td>
+<td>0,111</td>
+<td>el sesgo de la Policía cambia hasta 11 % por año: es inestable</td>
+</tr>
+<tr class="even">
+<td>Probabilidad de error grosero</td>
+<td>0,032</td>
+<td>una de cada 31 celdas de anuario</td>
+</tr>
+<tr class="odd">
+<td>Probabilidad de salto</td>
+<td>0,011</td>
+<td>una de cada 95</td>
+</tr>
+</tbody>
+</table>
+<p>Valores fijados, no estimados: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>90</mn></mrow><annotation encoding="application/x-tex">\pi = 0{,}90</annotation></semantics></math>; error de EEVV 0,03; error del total de la OMS 0,05; desviación adicional de un error grosero 1,5 y de un salto 1,0.</p>
+<p>Dos de estos números resumen el resultado. El ruido de la razón de sexos antes de 1979 (0,021) es del mismo tamaño que la señal que producen homicidios de 1 % a 3 % de las defunciones, y por eso la razón de sexos informa poco en ese periodo. Y la inestabilidad del sesgo de la Policía (0,111 por año) es la razón de que el tramo 1966-1978 tenga intervalos anchos aunque haya dato policial todos los años.</p>
+<p>Tratar las celdas de anuario como posibles errores mejora mucho el ajuste: la log-verosimilitud pasa de 3.081,8 a 3.140,1 con dos parámetros más.</p>
+<h2 id="qué-produce">4.7 Qué produce</h2>
+<p>Para cada unidad y año:</p>
+<ul>
+<li>la proporción estimada de homicidios, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>exp</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>η</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\exp(\eta_{d,t})</annotation></semantics></math>, con su intervalo de 90 %;</li>
+<li>el número de homicidios registrados, que es esa proporción por las defunciones registradas;</li>
+<li>la tasa por 100.000 habitantes, con la población de los censos interpolada.</li>
+</ul>
+<p>La incertidumbre depende de qué fuentes hay cada año:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Fuentes de homicidio</th>
+<th>Desviación estándar típica de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1915-1922</td>
+<td>ninguna</td>
+<td>0,47</td>
+</tr>
+<tr class="even">
+<td>1923-1945</td>
+<td>anuarios, con huecos</td>
+<td>0,24</td>
+</tr>
+<tr class="odd">
+<td>1946-1965</td>
+<td>anuarios (y Policía desde 1962)</td>
+<td>0,13</td>
+</tr>
+<tr class="even">
+<td>1966-1978</td>
+<td>Policía y total de la OMS</td>
+<td>0,16</td>
+</tr>
+<tr class="odd">
+<td>1979-1984</td>
+<td>EEVV y Policía</td>
+<td>0,05</td>
+</tr>
+<tr class="even">
+<td>1985-2019</td>
+<td>EEVV</td>
+<td>0,04</td>
+</tr>
+</tbody>
+</table>
+<p>Una desviación de 0,16 equivale a un intervalo de 90 % de más o menos 26 %.</p>
+<figure>
+<img src="../figures/07_backcast/backcast_rate_by_unit.png" alt="Estimación del modelo e insumos por unidad" />
+<figcaption aria-hidden="true">Estimación del modelo e insumos por unidad</figcaption>
+</figure>
+<h1 id="qué-tan-bien-predice">5. Qué tan bien predice</h1>
+<p>Que el modelo siga los datos que ve no prueba nada. La prueba es ocultarle los homicidios de un bloque de años y pedirle que los prediga con lo que le queda. Se hizo con cinco bloques y tres conjuntos de insumos dentro del bloque: ninguno (el modelo solo interpola entre los años vecinos), la razón de sexos, y la razón de sexos más la Policía.</p>
+<p>Error absoluto mediano de la predicción, en las 15 unidades:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Bloque oculto</th>
+<th>Sin insumos</th>
+<th>Razón de sexos</th>
+<th>Razón de sexos + Policía</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1946-1953</td>
+<td>41 %</td>
+<td>40 %</td>
+<td>no hay Policía</td>
+</tr>
+<tr class="even">
+<td>1954-1965</td>
+<td>23 %</td>
+<td>22 %</td>
+<td>21 %</td>
+</tr>
+<tr class="odd">
+<td>1979-1984</td>
+<td>20 %</td>
+<td>20 %</td>
+<td>18 %</td>
+</tr>
+<tr class="even">
+<td>1985-1997</td>
+<td>20 %</td>
+<td>9 %</td>
+<td>7 %</td>
+</tr>
+<tr class="odd">
+<td>1998-2010</td>
+<td>16 %</td>
+<td>7 %</td>
+<td>no se usa Policía</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Desde 1985 la razón de sexos reduce el error a menos de la mitad.</strong> Sigue la subida de los ochenta y el pico de 1991 sin ver un solo homicidio de esos años.</li>
+<li><strong>Antes de 1966 no mejora la interpolación.</strong> Es lo que anticipaba el ejemplo de la sección 2.</li>
+<li><strong>En 1979-1984 ninguna fuente le gana a interpolar</strong>, y con Policía los intervalos resultan demasiado estrechos: solo 61 % de los valores observados cae dentro del intervalo de 90 %.</li>
+<li><strong>El arranque de La Violencia no es predecible desde los años anteriores.</strong> En el bloque 1946-1953 la cobertura del intervalo de 90 % es de 68 %.</li>
+</ul>
+<h2 id="resumen-por-unidad">5.1 Resumen por unidad</h2>
+<p>La tabla repite la prueba unidad por unidad. Cada celda de error trae dos números: el error absoluto mediano sin insumos en el bloque y con la razón de sexos. La cobertura es el porcentaje de valores observados que cae dentro del intervalo de 90 % de la predicción con razón de sexos, en los cinco bloques; lo esperable es 90 %.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Unidad</th>
+<th>Homicidios como % de las defunciones, 1946-1965</th>
+<th>Error 1946-1965: sin insumos / razón de sexos</th>
+<th>Error 1979-1984: sin insumos / razón de sexos</th>
+<th>Homicidios como % de las defunciones, 1985-2010</th>
+<th>Error 1985-2010: sin insumos / razón de sexos</th>
+<th>Cobertura del intervalo de 90 %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Antioquia</td>
+<td>1,9 %</td>
+<td>36 % / 42 %</td>
+<td>13 % / 10 %</td>
+<td>23,2 %</td>
+<td>30 % / 3 %</td>
+<td>82 %</td>
+</tr>
+<tr class="even">
+<td>Atlántico</td>
+<td>0,7 %</td>
+<td>85 % / 81 %</td>
+<td>40 % / 30 %</td>
+<td>7,0 %</td>
+<td>14 % / 11 %</td>
+<td>75 %</td>
+</tr>
+<tr class="odd">
+<td>Bolívar + Córdoba + Sucre</td>
+<td>0,9 %</td>
+<td>21 % / 23 %</td>
+<td>12 % / 11 %</td>
+<td>8,2 %</td>
+<td>15 % / 16 %</td>
+<td>94 %</td>
+</tr>
+<tr class="even">
+<td>Boyacá</td>
+<td>2,0 %</td>
+<td>24 % / 21 %</td>
+<td>14 % / 17 %</td>
+<td>7,0 %</td>
+<td>20 % / 13 %</td>
+<td>88 %</td>
+</tr>
+<tr class="odd">
+<td>Caldas + Quindío + Risaralda</td>
+<td>3,3 %</td>
+<td>31 % / 22 %</td>
+<td>31 % / 22 %</td>
+<td>14,4 %</td>
+<td>22 % / 5 %</td>
+<td>86 %</td>
+</tr>
+<tr class="even">
+<td>Cauca</td>
+<td>1,5 %</td>
+<td>34 % / 35 %</td>
+<td>47 % / 52 %</td>
+<td>15,5 %</td>
+<td>12 % / 8 %</td>
+<td>84 %</td>
+</tr>
+<tr class="odd">
+<td>Cundinamarca + Bogotá</td>
+<td>1,7 %</td>
+<td>10 % / 7 %</td>
+<td>28 % / 43 %</td>
+<td>9,6 %</td>
+<td>14 % / 6 %</td>
+<td>82 %</td>
+</tr>
+<tr class="even">
+<td>Huila</td>
+<td>2,4 %</td>
+<td>54 % / 54 %</td>
+<td>27 % / 27 %</td>
+<td>10,2 %</td>
+<td>19 % / 9 %</td>
+<td>84 %</td>
+</tr>
+<tr class="odd">
+<td>Magdalena + Cesar</td>
+<td>1,8 %</td>
+<td>45 % / 34 %</td>
+<td>10 % / 12 %</td>
+<td>15,8 %</td>
+<td>10 % / 10 %</td>
+<td>94 %</td>
+</tr>
+<tr class="even">
+<td>Nariño</td>
+<td>0,6 %</td>
+<td>17 % / 18 %</td>
+<td>43 % / 41 %</td>
+<td>9,5 %</td>
+<td>16 % / 11 %</td>
+<td>96 %</td>
+</tr>
+<tr class="odd">
+<td>Norte de Santander</td>
+<td>3,6 %</td>
+<td>11 % / 12 %</td>
+<td>21 % / 13 %</td>
+<td>15,3 %</td>
+<td>20 % / 9 %</td>
+<td>94 %</td>
+</tr>
+<tr class="even">
+<td>Santander</td>
+<td>3,1 %</td>
+<td>18 % / 19 %</td>
+<td>12 % / 12 %</td>
+<td>9,4 %</td>
+<td>20 % / 7 %</td>
+<td>90 %</td>
+</tr>
+<tr class="odd">
+<td>Territorios</td>
+<td>2,5 %</td>
+<td>23 % / 19 %</td>
+<td>19 % / 7 %</td>
+<td>23,4 %</td>
+<td>15 % / 4 %</td>
+<td>94 %</td>
+</tr>
+<tr class="even">
+<td>Tolima</td>
+<td>4,9 %</td>
+<td>60 % / 49 %</td>
+<td>14 % / 21 %</td>
+<td>9,2 %</td>
+<td>26 % / 18 %</td>
+<td>57 %</td>
+</tr>
+<tr class="odd">
+<td>Valle del Cauca</td>
+<td>4,3 %</td>
+<td>38 % / 27 %</td>
+<td>34 % / 29 %</td>
+<td>17,1 %</td>
+<td>17 % / 3 %</td>
+<td>86 %</td>
+</tr>
+<tr class="even">
+<td><strong>Las 15 unidades</strong></td>
+<td></td>
+<td><strong>29 % / 26 %</strong></td>
+<td><strong>20 % / 20 %</strong></td>
+<td></td>
+<td><strong>18 % / 8 %</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Qué se lee en la tabla:</p>
+<ul>
+<li><strong>En 1985-2010 la razón de sexos mejora la predicción en 13 de las 15 unidades.</strong> Las mejoras mayores están donde los homicidios pesan más: Antioquia (de 30 % a 3 %), Valle (de 17 % a 3 %), Territorios (de 15 % a 4 %) y Caldas (de 22 % a 5 %). No mejora en Bolívar + Córdoba + Sucre ni en Magdalena + Cesar, las dos unidades con peor registro de defunciones.</li>
+<li><strong>En 1946-1965 solo ayuda donde la violencia fue alta.</strong> Tolima (de 60 % a 49 %), Valle (de 38 % a 27 %), Caldas (de 31 % a 22 %) y Magdalena (de 45 % a 34 %). En el resto no cambia o empeora un poco, y los errores siguen siendo grandes en casi todas partes.</li>
+<li><strong>Tolima es la unidad peor cubierta</strong>: solo 57 % de sus valores observados cae dentro del intervalo. Es donde los cambios fueron más bruscos (el pico de 1956-1958 y la caída posterior).</li>
+<li><strong>Atlántico tiene el error más alto de 1946-1965</strong> (más de 80 %) porque sus conteos son muy pequeños: los homicidios eran 0,7 % de las defunciones.</li>
+</ul>
+<p>La tabla se calcula con <code>output/tables/homicide_backcast_validation_predictions.csv</code>, que trae cada predicción por bloque, insumo, unidad y año.</p>
+<h2 id="observado-y-predicho-en-todas-las-unidades">5.2 Observado y predicho en todas las unidades</h2>
+<p>Las cuatro figuras siguientes muestran la prueba para las 15 unidades. En cada panel:</p>
+<ul>
+<li><strong>Negro:</strong> los datos originales, sin ajuste por subregistro. Círculos huecos para los anuarios, puntos llenos para EEVV y triángulos para la Policía.</li>
+<li><strong>Franjas grises:</strong> los cinco bloques ocultos. Dentro de cada uno, la línea gris punteada es la predicción sin usar datos del bloque (interpolación), la azul la que usa la razón de sexos y la naranja la que usa además la Policía. La banda azul es el intervalo de 90 % de la predicción con razón de sexos.</li>
+<li><strong>Franja crema, 1966-1978:</strong> no hay homicidios en las estadísticas vitales para contrastar. Se muestran las mismas tres lecturas, pero ahí no se puede decir cuál acierta; el único conteo es el de la Policía. En ese tramo la línea naranja es el modelo completo, que además usa el total nacional de la OMS.</li>
+</ul>
+<figure>
+<img src="../figures/07_backcast/backcast_predictive_check_all_1.png" alt="Observado y predicho, unidades 1 a 4" />
+<figcaption aria-hidden="true">Observado y predicho, unidades 1 a 4</figcaption>
+</figure>
+<figure>
+<img src="../figures/07_backcast/backcast_predictive_check_all_2.png" alt="Observado y predicho, unidades 5 a 8" />
+<figcaption aria-hidden="true">Observado y predicho, unidades 5 a 8</figcaption>
+</figure>
+<figure>
+<img src="../figures/07_backcast/backcast_predictive_check_all_3.png" alt="Observado y predicho, unidades 9 a 12" />
+<figcaption aria-hidden="true">Observado y predicho, unidades 9 a 12</figcaption>
+</figure>
+<figure>
+<img src="../figures/07_backcast/backcast_predictive_check_all_4.png" alt="Observado y predicho, unidades 13 a 15" />
+<figcaption aria-hidden="true">Observado y predicho, unidades 13 a 15</figcaption>
+</figure>
+<h2 id="otras-comprobaciones">5.3 Otras comprobaciones</h2>
+<p>Tres más:</p>
+<ul>
+<li><strong>Picos.</strong> En 1958 la suma de las unidades es 86 % del conteo de los anuarios, y en 1949, 84 %. Antes de tratar las celdas erróneas eran 76 % y 74 %.</li>
+<li><strong>Tramo 1966-1978 frente a la OMS.</strong> La suma queda 10 % a 13 % por encima de la OMS en 1966-1968 y entre 0 % y 4 % por debajo en 1972-1977. La Policía tiene una caída de 37 % en 1969 que la OMS no muestra, y el modelo solo la corrige en parte.</li>
+<li><strong>Reparto en 1966-1978.</strong> No hay dato para contrastarlo. La incertidumbre de cada unidad baja de 0,30 sin insumos a 0,175 con Policía; añadir la razón de sexos y la OMS la deja en 0,164.</li>
+</ul>
+<h1 id="de-homicidios-registrados-a-totales">6. De homicidios registrados a totales</h1>
+<p>El modelo estima homicidios entre las defunciones registradas. Cuántos no se registraron lo aborda <code>code/47_homicide_underregistration.R</code>.</p>
+<h2 id="la-prueba">La prueba</h2>
+<p>La Policía cuenta homicidios sin depender del registro de defunciones. Si los homicidios se registraran siempre, la razón Policía/EEVV no dependería de qué tan bueno es el registro general de un departamento. Si se perdieran como cualquier otra muerte, se movería uno a uno con él. Entre departamentos:</p>
+<ul>
+<li><strong>1985-1997:</strong> la razón sube con el subregistro general a un 41 % del ritmo uno a uno (pendientes de 0,38 a 0,42 con tres medidas de completitud; error estándar cerca de 0,1).</li>
+<li><strong>1998-2002:</strong> la pendiente cae a entre 0,05 y 0,26. Con el certificado de defunción de 1998, el registro de homicidios deja de depender de la completitud general.</li>
+</ul>
+<figure>
+<img src="../figures/07_backcast/underreg_theta.png" alt="Prueba contra la Policía" />
+<figcaption aria-hidden="true">Prueba contra la Policía</figcaption>
+</figure>
+<h2 id="la-corrección">La corrección</h2>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>=</mo><msub><mi>H</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>×</mo><msubsup><mi>C</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow><mrow><mo>−</mo><mi>θ</mi></mrow></msubsup></mrow><annotation encoding="application/x-tex">T_{d,t} = H_{d,t} \times C_{d,t}^{-\theta}</annotation></semantics></math></p>
+<table>
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">T_{d,t}</annotation></semantics></math></td>
+<td>homicidios totales de la unidad en el año</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">H_{d,t}</annotation></semantics></math></td>
+<td>homicidios registrados, estimados por el modelo de la sección 4</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">C_{d,t}</annotation></semantics></math></td>
+<td>completitud del registro de defunciones no violentas de la unidad: fracción de esas muertes que llega a registrarse (entre 0 y 1)</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math></td>
+<td>elasticidad: qué tanto del subregistro general afecta también a los homicidios</td>
+</tr>
+</tbody>
+</table>
+<p>Con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\theta = 0</annotation></semantics></math> los homicidios no se corrigen; con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\theta = 1</annotation></semantics></math> se corrigen igual que las demás muertes. Hay tres escenarios:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Escenario</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math></th>
+<th>Factor nacional, 1950-1997</th>
+<th>Bolívar + Córdoba + Sucre</th>
+<th>Magdalena + Cesar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sin corrección (criterio del script 42)</td>
+<td>0</td>
+<td>1,00</td>
+<td>1,00</td>
+<td>1,00</td>
+</tr>
+<tr class="even">
+<td>Central</td>
+<td>0,41</td>
+<td>1,03 a 1,12</td>
+<td>1,40</td>
+<td>1,38</td>
+</tr>
+<tr class="odd">
+<td>Como cualquier defunción (criterio del script 30)</td>
+<td>1</td>
+<td>1,08 a 1,35</td>
+<td>2,27</td>
+<td>2,22</td>
+</tr>
+</tbody>
+</table>
+<p>Desde 1998 los tres escenarios son el conteo registrado.</p>
+<p>La completitud <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> por departamento no existía antes de 1985. Se construyó un índice para 1950-1997 comparando las defunciones no violentas registradas en cada unidad con las que cabría esperar dadas las tasas nacionales ajustadas (script 42), la estructura por edad de los censos de 1938, 1951 y 1964, y el nivel de mortalidad de cada unidad según las tablas de vida de DANE de 1985-1990.</p>
+<p>Dos señales respaldan el escenario central:</p>
+<ul>
+<li>La pendiente de la prueba es parecida en otros periodos: 0,37 en 1962-1965 y 0,46 en 1979-1984, aunque con errores estándar grandes (0,21 a 0,23).</li>
+<li>En las cinco unidades con completitud menor de 0,7, los homicidios registrados saltan 52 % entre 1995-1997 y 1998-2000. Con el escenario central el salto es de 10 %, parecido al del resto del país; con el escenario alto la serie cae 29 %.</li>
+</ul>
+<figure>
+<img src="../figures/07_backcast/underreg_totals.png" alt="Homicidios registrados y totales por escenario" />
+<figcaption aria-hidden="true">Homicidios registrados y totales por escenario</figcaption>
+</figure>
+<h2 id="por-qué-se-entrena-con-registrados-y-se-corrige-al-final">Por qué se entrena con registrados y se corrige al final</h2>
+<p>La razón de sexos de las defunciones registradas solo informa sobre los homicidios que están dentro de esas mismas defunciones. Se comprobó qué pasa si se ajusta todo antes de estimar: el total nacional de 1950-1997 cambia 0,1 %, y cada unidad menos de 1 %. Los dos caminos son equivalentes; el actual es más simple.</p>
+<h1 id="reparto-municipal-1958-1960">7. Reparto municipal, 1958-1960</h1>
+<p>No hay homicidios por municipio antes de 1979. <code>code/46_homicide_munic_1958_1960.R</code> reparte los homicidios de cada unidad entre sus municipios para 1958-1960, los únicos años de ese periodo con defunciones municipales por sexo, con los tres años juntos.</p>
+<p>Para cada municipio <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> se calcula el exceso de muertes masculinas sobre lo que daría la razón de sexos no violenta:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext mathvariant="normal">exceso</mtext><mi>i</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>A</mi><mrow><mi>M</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>−</mo><msub><mi>ρ</mi><mi>i</mi></msub><mspace width="0.167em"></mspace><msub><mi>A</mi><mrow><mi>F</mi><mo>,</mo><mi>i</mi></mrow></msub></mrow><mrow><mi>π</mi><mo>−</mo><msub><mi>ρ</mi><mi>i</mi></msub><mspace width="0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>π</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{exceso}_i = \frac{A_{M,i} - \rho_i\, A_{F,i}}{\pi - \rho_i\,(1-\pi)}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mrow><mi>M</mi><mo>,</mo><mi>i</mi></mrow></msub><annotation encoding="application/x-tex">A_{M,i}</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mrow><mi>F</mi><mo>,</mo><mi>i</mi></mrow></msub><annotation encoding="application/x-tex">A_{F,i}</annotation></semantics></math> son las defunciones de hombres y mujeres de un año de edad o más (las de menores de un año se descuentan porque no llevan señal de homicidio). <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mi>i</mi></msub><annotation encoding="application/x-tex">\rho_i</annotation></semantics></math> es la razón de sexos no violenta esperada en el municipio. Es la misma identidad contable de la sección 2, despejada para los homicidios.</p>
+<p>Ese exceso es muy ruidoso en municipios pequeños, así que se combina con un reparto simple por población:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext mathvariant="normal">estimación</mtext><mi>i</mi></msub><mo>=</mo><msub><mtext mathvariant="normal">reparto</mtext><mi>i</mi></msub><mo>+</mo><msub><mi>w</mi><mi>i</mi></msub><mo>×</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mtext mathvariant="normal">exceso</mtext><mi>i</mi></msub><mo>−</mo><msub><mtext mathvariant="normal">reparto</mtext><mi>i</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\text{estimación}_i = \text{reparto}_i + w_i \times (\text{exceso}_i - \text{reparto}_i)</annotation></semantics></math></p>
+<p>El peso <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>w</mi><mi>i</mi></msub><annotation encoding="application/x-tex">w_i</annotation></semantics></math> va de 0 a 1 y es mayor cuanto más grande es el municipio y más violenta su unidad. En promedio es 0,42 en Tolima, 0,28 en Caldas, 0,18 en Valle y menos de 0,15 en el resto.</p>
+<p>Como no hay dato de la época para validarlo, el método se calibró en EEVV, reduciendo artificialmente los homicidios modernos al nivel de 1958-1960. En esas condiciones, la proporción de homicidios asignada al municipio equivocado baja de 20,5 % a 18,6 %.</p>
+<h1 id="límites">8. Límites</h1>
+<ul>
+<li><strong>1915-1922 no se debe usar.</strong> No hay ningún dato de homicidios y la estimación descansa solo en la razón de sexos. Dos formas equivalentes de calcularla difieren por un factor de 2,5.</li>
+<li><strong>Antes de 1946 la serie depende de anuarios con huecos</strong>, y la incertidumbre es alta (0,24).</li>
+<li><strong>Los picos de La Violencia quedan algo aplanados</strong>: 13 % a 17 % por debajo del anuario en Tolima, Caldas y Valle en 1958.</li>
+<li><strong>1966-1978 descansa en la Policía</strong>, cuyo sesgo es inestable. Los intervalos de ese tramo probablemente son demasiado estrechos.</li>
+<li><strong>Las tasas usan población de censos sin corregir por omisión</strong>, que va de 4 % a 12 % según el censo.</li>
+<li><strong>La serie de totales empieza en 1950</strong> y no incluye los homicidios del conflicto ni las desapariciones que las estimaciones de sistemas múltiples añaden a nivel nacional en 1985-2018.</li>
+<li><strong>El índice de completitud anterior a 1985 es una aproximación.</strong> Ordena bien las unidades frente al método de balance de crecimiento de 1985-1995 (correlación 0,87), pero da valores más altos (0,79 frente a 0,71 en promedio).</li>
+<li><strong>Hay dos criterios en el proyecto para el subregistro de muertes violentas.</strong> El script 42 no las corrige; el script 47 usa <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>41</mn></mrow><annotation encoding="application/x-tex">\theta = 0{,}41</annotation></semantics></math> antes de 1998. Las dos series nacionales difieren entre 3 % y 12 %.</li>
+</ul>
+<h1 id="dónde-está-cada-cosa">9. Dónde está cada cosa</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Qué</th>
+<th>Archivo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Modelo departamental</td>
+<td><code>code/45_homicide_backcast_dept.R</code></td>
+</tr>
+<tr class="even">
+<td>Reparto municipal 1958-1960</td>
+<td><code>code/46_homicide_munic_1958_1960.R</code></td>
+</tr>
+<tr class="odd">
+<td>De registrados a totales</td>
+<td><code>code/47_homicide_underregistration.R</code></td>
+</tr>
+<tr class="even">
+<td>Estimaciones por unidad y año</td>
+<td><code>output/tables/homicide_backcast_dept_1915-2019.csv</code></td>
+</tr>
+<tr class="odd">
+<td>Parámetros</td>
+<td><code>output/tables/homicide_backcast_parameters.csv</code></td>
+</tr>
+<tr class="even">
+<td>Validación por bloques</td>
+<td><code>output/tables/homicide_backcast_validation.csv</code> y <code>homicide_backcast_validation_predictions.csv</code></td>
+</tr>
+<tr class="odd">
+<td>Homicidios totales por escenario</td>
+<td><code>output/tables/homicide_total_dept_1950-2019.csv</code></td>
+</tr>
+<tr class="even">
+<td>Índice de completitud</td>
+<td><code>output/tables/homicide_underreg_completeness_index.csv</code></td>
+</tr>
+<tr class="odd">
+<td>Reparto municipal</td>
+<td><code>output/tables/homicide_munic_1958-1960.csv</code></td>
+</tr>
+<tr class="even">
+<td>Figuras</td>
+<td><code>figures/07_backcast/</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="glosario-de-símbolos">Glosario de símbolos</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math></td>
+<td>unidad territorial y año</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>M</mi></msub><annotation encoding="application/x-tex">D_M</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math></td>
+<td>defunciones registradas: total, de hombres y de mujeres</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>M</mi></msub><annotation encoding="application/x-tex">N_M</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>F</mi></msub><annotation encoding="application/x-tex">N_F</annotation></semantics></math></td>
+<td>defunciones no violentas de hombres y de mujeres</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math></td>
+<td>homicidios registrados</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math></td>
+<td>proporción de homicidios en las defunciones, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mi>/</mi><mi>D</mi></mrow><annotation encoding="application/x-tex">H / D</annotation></semantics></math></td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math></td>
+<td>proporción de víctimas de homicidio que son hombres (0,90)</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math></td>
+<td>razón de sexos de las defunciones, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>M</mi></msub><mi>/</mi><msub><mi>D</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">D_M / D_F</annotation></semantics></math></td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math></td>
+<td>razón de sexos no violenta, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>M</mi></msub><mi>/</mi><msub><mi>N</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">N_M / N_F</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>ρ</mi><mi>t</mi><mtext mathvariant="normal">nac</mtext></msubsup><annotation encoding="application/x-tex">\rho^{\text{nac}}_t</annotation></semantics></math></td>
+<td>logaritmo de la razón de sexos no violenta del país</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math></td>
+<td>estado: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>log</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">\log h</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math></td>
+<td>estado: desvío de la unidad respecto de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>ρ</mi><mi>t</mi><mtext mathvariant="normal">nac</mtext></msubsup><annotation encoding="application/x-tex">\rho^{\text{nac}}_t</annotation></semantics></math></td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math></td>
+<td>estado: sesgo de la Policía, en logaritmos</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math></td>
+<td>función que da el logaritmo de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math> a partir de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>log</mo><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\log \rho</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math></td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math></td>
+<td>homicidios según los anuarios, EEVV y la Policía</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>t</mi></msub><annotation encoding="application/x-tex">V_t</annotation></semantics></math></td>
+<td>muertes violentas del país según la OMS</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>w</mi><mrow><mi>d</mi><mo>,</mo><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">w_{d,t}</annotation></semantics></math></td>
+<td>peso de la unidad en las defunciones del país</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></td>
+<td>desviación estándar de un cambio anual o de un error de medición</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math></td>
+<td>completitud del registro de defunciones no violentas</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math></td>
+<td>elasticidad del subregistro de homicidios respecto del general</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math></td>
+<td>homicidios totales</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
