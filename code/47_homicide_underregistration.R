@@ -30,10 +30,16 @@
 #              ratio for the country, median of five years
 #              completeness of the unit = national completeness (42) x R,
 #              capped at 1
-#            assumption: the same non-violent mortality by age and sex in
-#            every unit. where true mortality is higher than the national,
-#            the index overstates completeness (and the correction is too
-#            small). checked against the GGB of 1985-1995.
+#            the expected deaths of a unit are scaled by its level of
+#            mortality: child mortality of the unit over the national (DANE
+#            life tables of 1985-1990, held constant over time), raised to
+#            the elasticity of each age to child mortality in the national
+#            series. without it the index assumes the same mortality
+#            everywhere and overstates completeness where mortality is
+#            higher. the index of the 1973 census (43) is kept only as a
+#            sensitivity check: it puts child mortality below the national
+#            in the Caribbean, where dead children are under-reported.
+#            checked against the GGB of 1985-1995.
 #
 # 3. totals  total = registered x completeness^(-theta), up to 1997:
 #              low      theta = 0        (42: no correction)
@@ -48,6 +54,7 @@
 # inputs   output/tables/homicide_backcast_dept_1915-2019.csv           (45)
 #          output/tables/homicide_backcast_police_bias.csv               (45)
 #          output/tables/mortality_adjusted_components_1950-2023.csv     (42)
+#          output/tables/child_mortality_census1973_departments.csv      (43)
 #          output/tables/completeness_ggb.csv, completeness_ddm.csv,
 #          completeness_empirical_dept_1985-2023.csv             (10, 18, 33)
 #          output/deaths_pop_munic_1985_2023.csv.gz, ..._age_1985_2023.parquet
@@ -57,6 +64,7 @@
 # outputs  output/tables/homicide_underreg_theta.csv
 #          output/tables/homicide_underreg_completeness_index.csv
 #          output/tables/homicide_underreg_index_validation.csv
+#          output/tables/homicide_underreg_sensitivity_level.csv
 #          output/tables/homicide_total_dept_1950-2019.csv
 #          output/tables/homicide_total_national_1950-2019.csv
 #          figures/07_backcast/underreg_theta.png
@@ -181,22 +189,63 @@ m42 <- read_csv("output/tables/mortality_adjusted_components_1950-2023.csv", sho
 c_nat <- m42 |>
   summarise(c_nat = sum(mx_nv * pop_nat) / sum(mx_nv * pop_nat / completeness_natural), .by = year) # both sexes
 
-idx <- shares_y |>
-  left_join(bc |> select(unit, year, pop, deaths_adj, hom_est), by = c("unit", "year")) |>
-  left_join(m42 |> select(year, sex, age, mx_nv), by = c("year", "sex", "age")) |>
-  summarise(expected = sum(share * pop * mx_nv), registered_nv = first(deaths_adj) - first(hom_est), pop = first(pop), .by = c(unit, year)) |>
-  mutate(ratio = registered_nv / expected, ratio_nat = sum(registered_nv) / sum(expected), .by = year) |>
-  arrange(unit, year) |>
-  mutate(rel = ratio / ratio_nat,
-         rel_smooth = exp(vapply(seq_along(year), function(i) median(log(rel[abs(year - year[i]) <= 2])), numeric(1))),
-         .by = unit) |>
-  left_join(c_nat, by = "year") |>
-  mutate(completeness_index = pmin(c_nat * rel_smooth, 1))
+# relative level of mortality of each unit, from child mortality. two
+# sources: the index of the 1973 census (43; depends on how well dead
+# children are reported, which is worse where registration is worse) and the
+# DANE life tables of 1985-1990. q5 of the unit over the national, weighted
+# by women aged 15+ in 1973.
+name_unit_73 <- c(name_unit, valle = "valle_del_cauca", cesar = "magdalena", sucre = "bolivar", quindio = "caldas", risaralda = "caldas")
+level <- read_csv("output/tables/child_mortality_census1973_departments.csv", show_col_types = FALSE) |>
+  filter(zone == "total") |>
+  mutate(unit = coalesce(unname(name_unit_73[norm_name(unit)]), "territorios")) |>
+  summarise(q5_1973 = weighted.mean(q5_index, women), q5_dane = weighted.mean(q5_dane_1985_1990, women * !is.na(q5_dane_1985_1990), na.rm = TRUE),
+            women = sum(women), .by = unit) |>
+  mutate(r_census1973 = q5_1973 / weighted.mean(q5_1973, women), r_dane = q5_dane / weighted.mean(q5_dane, women), r_none = 1)
+cat("\n== child mortality of the unit relative to the country ==\n")
+print(as.data.frame(level |> transmute(unit, census_1973 = round(r_census1973, 2), dane_1985_1990 = round(r_dane, 2)) |> arrange(dane_1985_1990)), row.names = FALSE)
+say("correlation between the two sources of level:", round(cor(level$r_census1973, level$r_dane), 2))
+
+# how much mortality at each age moves with child mortality: elasticity of
+# the national non-violent rate of each age and sex to the rate under five,
+# across the years of the index (the country's own transition as the family
+# of schedules). 1 under five, bounded to [0, 1] above.
+child <- m42 |> filter(age < 5) |> summarise(child = sum(mx_nv * pop_nat) / sum(pop_nat), .by = year)
+elas <- m42 |> filter(age >= 5) |> left_join(child, by = "year") |>
+  summarise(elasticity = pmin(pmax(coef(lm(log(mx_nv) ~ log(child)))[2], 0), 1), .by = c(sex, age)) |>
+  bind_rows(expand_grid(sex = c("m", "f"), age = c(0, 1), elasticity = 1))
+cat("\n== elasticity of the rate of each age to child mortality (men / women) ==\n")
+print(as.data.frame(elas |> mutate(elasticity = round(elasticity, 2)) |> pivot_wider(names_from = sex, values_from = elasticity) |> arrange(age)), row.names = FALSE)
+
+# index with the expected deaths of each unit scaled by its level of
+# mortality (r^elasticity), keeping the national expected deaths of the year
+build_idx <- function(source) {
+  shares_y |>
+    left_join(bc |> select(unit, year, pop, deaths_adj, hom_est), by = c("unit", "year")) |>
+    left_join(m42 |> select(year, sex, age, mx_nv), by = c("year", "sex", "age")) |>
+    left_join(elas, by = c("sex", "age")) |>
+    left_join(level |> transmute(unit, r = .data[[paste0("r_", source)]]), by = "unit") |>
+    summarise(expected_plain = sum(share * pop * mx_nv), expected = sum(share * pop * mx_nv * r^elasticity),
+              registered_nv = first(deaths_adj) - first(hom_est), pop = first(pop), .by = c(unit, year)) |>
+    mutate(expected = expected * sum(expected_plain) / sum(expected),
+           ratio = registered_nv / expected, ratio_nat = sum(registered_nv) / sum(expected), .by = year) |>
+    arrange(unit, year) |>
+    mutate(rel = ratio / ratio_nat,
+           rel_smooth = exp(vapply(seq_along(year), function(i) median(log(rel[abs(year - year[i]) <= 2])), numeric(1))),
+           .by = unit) |>
+    left_join(c_nat, by = "year") |>
+    mutate(completeness_index = pmin(c_nat * rel_smooth, 1))
+}
+idx_all <- list(none = build_idx("none"), census1973 = build_idx("census1973"), dane = build_idx("dane"))
+# the version used below is chosen in section 3; until then idx is the DANE one
+level_used <- "dane"
+idx <- idx_all[[level_used]]
 cat("\n== national: registered / expected non-violent deaths against the completeness of 42 ==\n")
 print(as.data.frame(idx |> distinct(year, ratio_nat = round(ratio_nat, 2), c_nat = round(c_nat, 2)) |> filter(year %% 5 == 0)), row.names = FALSE)
 idx |>
   transmute(unit, unit_label = unit_lab[unit], year, registered_nonviolent = registered_nv, expected_nonviolent = expected,
             relative_to_national = rel, relative_smooth = rel_smooth, completeness_national = c_nat, completeness_index) |>
+  left_join(idx_all$none |> select(unit, year, completeness_index_no_level = completeness_index), by = c("unit", "year")) |>
+  left_join(idx_all$census1973 |> select(unit, year, completeness_index_level_census1973 = completeness_index), by = c("unit", "year")) |>
   write_csv("output/tables/homicide_underreg_completeness_index.csv")
 cat("\n== completeness index by unit, selected years ==\n")
 print(as.data.frame(idx |> filter(year %in% c(1950, 1955, 1960, 1965, 1970, 1975, 1980, 1985, 1990, 1995)) |>
@@ -216,15 +265,22 @@ agg_c <- function(tab, cod, completeness) {
     mutate(unit = unit_of_cod(cod)) |>
     summarise(c = sum(d) / sum(d / completeness), .by = unit)
 }
-chk <- idx |> filter(year %in% 1985:1995) |> summarise(index = mean(completeness_index), .by = unit) |>
+chk <- bind_rows(idx_all, .id = "level") |> filter(year %in% 1985:1995) |>
+  summarise(index = mean(completeness_index), .by = c(level, unit)) |>
+  pivot_wider(names_from = level, values_from = index, names_prefix = "index_") |>
   left_join(agg_c(read_csv("output/tables/completeness_ggb.csv", show_col_types = FALSE) |> filter(period == "1985-1995"), cod_dpto, completeness) |> rename(ggb = c), by = "unit") |>
   left_join(agg_c(read_csv("output/tables/completeness_ddm.csv", show_col_types = FALSE) |> filter(window == "1985-1993", cod != "91"), cod, ggbseg) |> rename(ddm = c), by = "unit")
 write_csv(chk, "output/tables/homicide_underreg_index_validation.csv")
 cat("\n== index against GGB and DDM, 1985-1995 ==\n")
-print(as.data.frame(chk |> mutate(across(where(is.double), ~ round(.x, 2))) |> arrange(index)), row.names = FALSE)
-say("correlation of the index with GGB:", round(cor(chk$index, chk$ggb, use = "complete.obs"), 2),
-    "| with DDM:", round(cor(chk$index, chk$ddm, use = "complete.obs"), 2),
-    "| mean index", round(mean(chk$index), 2), "GGB", round(mean(chk$ggb, na.rm = TRUE), 2), "DDM", round(mean(chk$ddm, na.rm = TRUE), 2))
+print(as.data.frame(chk |> mutate(across(where(is.double), ~ round(.x, 2))) |> arrange(ggb)), row.names = FALSE)
+fit_chk <- tibble(level = names(idx_all)) |>
+  mutate(mean_index = map_dbl(level, ~ mean(chk[[paste0("index_", .x)]])),
+         r_ggb = map_dbl(level, ~ cor(chk[[paste0("index_", .x)]], chk$ggb, use = "complete.obs")),
+         r_ddm = map_dbl(level, ~ cor(chk[[paste0("index_", .x)]], chk$ddm, use = "complete.obs")),
+         rmse_log_ggb = map_dbl(level, ~ sqrt(mean(log(chk[[paste0("index_", .x)]] / chk$ggb)^2, na.rm = TRUE))),
+         mean_ggb = mean(chk$ggb, na.rm = TRUE), mean_ddm = mean(chk$ddm, na.rm = TRUE))
+cat("\n== which level of mortality brings the index closer to the GGB of 1985-1995 ==\n")
+print(as.data.frame(fit_chk |> mutate(across(where(is.double), ~ round(.x, 2)))), row.names = FALSE)
 
 # the same test as in 1, in 1962-1965 and 1979-1984, with the bias of the
 # Policia estimated by 45 (log Policia / vital statistics) and the index
@@ -267,6 +323,13 @@ cat("\n== national totals by scenario ==\n")
 print(as.data.frame(nat |> filter(year %in% c(1950, 1955, 1958, 1960, 1965, 1970, 1975, 1980, 1985, 1990, 1995, 1997, 1998)) |>
   transmute(year, registered = round(hom_reg), central = round(hom_total_central), high = round(hom_total_high),
             factor_central = round(factor_central, 2), factor_high = round(factor_high, 2))), row.names = FALSE)
+sens <- bind_rows(idx_all, .id = "level") |>
+  inner_join(bc |> select(unit, year, hom_est), by = c("unit", "year")) |>
+  summarise(registered = sum(hom_est), central = sum(hom_est * completeness_index^(-theta)), high = sum(hom_est / completeness_index), .by = level) |>
+  mutate(factor_central = central / registered, factor_high = high / registered)
+write_csv(sens, "output/tables/homicide_underreg_sensitivity_level.csv")
+cat("\n== 1950-1997, national: factors by version of the index ==\n")
+print(as.data.frame(sens |> mutate(across(where(is.double), ~ round(.x, 3)))), row.names = FALSE)
 cat("\n== 1950-1997 by unit: registered, central, high and factors ==\n")
 print(as.data.frame(tot |> filter(year <= 1997) |> summarise(registered = round(sum(hom_reg)), central = round(sum(hom_total_central)), high = round(sum(hom_total_high)), .by = unit) |>
   mutate(factor_central = round(central / registered, 2), factor_high = round(high / registered, 2)) |> arrange(-factor_central)), row.names = FALSE)
