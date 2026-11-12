@@ -10,8 +10,15 @@
 #                         intervention from 1979), by sex and age group:
 #                         1953-1967 WHO ICD-7 A149; 1968-1977 WHO ICD-8
 #                         A148 + A149 (21); 1979-2023 EEVV dx_v (01-02).
-#                         1970, 1971, 1973 and 1978 have no cause detail and
-#                         are interpolated log-linearly by sex and age.
+#                         WHO has no causes for 1970, 1971, 1973 and 1978.
+#                         1973 and 1978 come from DANE, "Registro de
+#                         defunciones en Colombia 1970-1978", Cuadro 6 (150
+#                         causes by age and sex, hist/25), causes 148 + 149
+#                         of the same ICD-8 list A: for 1974-1977 that table
+#                         equals the WHO series in every sex, age and cause
+#                         cell, which is asserted below. 1970 and 1971 have
+#                         no cause detail anywhere and are interpolated
+#                         log-linearly by sex and age.
 #   violent, adjusted     1985-2018: registered + MSE conflict homicides not
 #                         registered as violent + enforced disappearances
 #                         (27). Other years: registered violent deaths scaled
@@ -22,8 +29,8 @@
 #                         independent estimate for those years.
 #   non-violent           expected total - violent adjusted.
 #
-# quality flag per year: "MSE" (1985-2018), "scaled" (1953-1969, 1972,
-# 1974-1977, 1979-1984, 2019-2023), "interpolated" (1970, 1971, 1973, 1978).
+# quality flag per year: "MSE" (1985-2018), "scaled" (1953-1969, 1972-1984,
+# 2019-2023), "interpolated" (1970, 1971).
 #
 # output: output/tables/deaths_by_cause_sex_age_1953-2023.csv
 #           (year, sex, age, pop, total, violent_reg, violent_adj,
@@ -40,16 +47,42 @@ exp <- read_csv("output/tables/deaths_expected_wpp_mse_1950-2023.csv", show_col_
   filter(year >= 1953)
 
 # registered violent deaths ---------------------------------------------------
-who_v <- read_rds("data_inter/who_violent_age_1953-1977.rds") |>
+who_raw <- read_rds("data_inter/who_violent_age_1953-1977.rds")
+who_v <- who_raw |>
   mutate(age = pmin(age, age_top)) |>
   summarise(violent_reg = sum(dx), .by = c(year, sex, age))
+# DANE, Registro de defunciones 1970-1978, Cuadro 6: causes 148 (homicide and legal intervention) and 149
+# (undetermined intent) by sex and age, with the unknown ages spread pro rata as in 21. Used for the
+# years WHO lacks (1973, 1978); the other years (1974-1977) must reproduce the WHO series exactly.
+dane_c6 <- read_csv("data_input/historical/dane_defunciones_1970_1978_cuadro06_causas_edad_1973_1978.csv",
+                    show_col_types = FALSE, col_types = cols(cause_code = col_character())) |>
+  filter(cause_code %in% c("148", "149"), age != "all") |>
+  mutate(group = if_else(cause_code == "148", "homicide", "undetermined"),
+         age = case_when(str_detect(age, "day|months$") & age != "12-23 months" ~ 0, age %in% c("12-23 months", "2-4") ~ 1,
+                         str_detect(age, "^[0-9]+-[0-9]+$") ~ suppressWarnings(as.numeric(str_extract(age, "^[0-9]+"))),
+                         str_detect(age, "^85") ~ 85, TRUE ~ NA_real_)) |>
+  pivot_longer(c(male, female), names_to = "sex", values_to = "dx") |>
+  mutate(sex = if_else(sex == "male", "m", "f")) |>
+  summarise(dx = sum(dx), .by = c(year, sex, group, age)) |>
+  mutate(unk = sum(dx[is.na(age)]), tot = sum(dx[!is.na(age)]), .by = c(year, sex, group)) |>
+  filter(!is.na(age)) |>
+  mutate(dx = if_else(tot > 0, dx * (1 + unk / tot), dx)) |>
+  select(year, sex, group, age, dx)
+overlap <- inner_join(dane_c6, who_raw, by = c("year", "sex", "group", "age"), suffix = c("_dane", "_who"))
+stopifnot(n_distinct(overlap$year) == 4, nrow(overlap) == sum(who_raw$year %in% overlap$year), max(abs(overlap$dx_dane - overlap$dx_who)) < 1e-6)
+cat("DANE Cuadro 6 against WHO, causes 148 and 149 by sex and age:", nrow(overlap), "cells in", paste(range(overlap$year), collapse = "-"), "identical\n")
+dane_v <- dane_c6 |>
+  filter(!year %in% who_raw$year) |>
+  mutate(age = pmin(age, age_top)) |>
+  summarise(violent_reg = sum(dx), .by = c(year, sex, age))
+cat("violent deaths taken from DANE Cuadro 6:", paste(sort(unique(dane_v$year)), collapse = ", "), "\n")
 eevv_v <- read_rds("data_inter/deaths_munic_age_1979-2023.rds") |>
   filter(sex %in% c("m", "f"), !is.na(age)) |>
   mutate(age = pmin(age, age_top)) |>
   summarise(violent_reg = sum(dx_v), .by = c(year, sex, age))
 
 violent <-
-  bind_rows(who_v, eevv_v) |>
+  bind_rows(who_v, dane_v, eevv_v) |>
   complete(year = 1953:2023, sex, age = unique(exp$age)) |>
   mutate(quality = if_else(is.na(violent_reg), "interpolated", "registered")) |>
   arrange(sex, age, year) |>

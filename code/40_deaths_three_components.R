@@ -20,7 +20,12 @@
 #               other external causes"), ill-defined B045
 #   1979-2023   DANE microdata, list 105: external 90-105, violent 101-103,
 #               ill-defined 89
-#   1950-1952, 1971, 1973, 1978: no cause detail; the shares are interpolated
+#   1973, 1978  DANE, Registro de defunciones 1970-1978, Cuadro 6 (150 causes
+#               by age and sex, ICD-8 list A, hist/25): total, ill-defined
+#               136-137, external 138-149, violent 148-149. For 1974-1977 the
+#               same table reproduces the WHO total, external and violent
+#               cells (checked below); its ill-defined count is 2 % higher
+#   1950-1952, 1971: no cause detail; the shares are interpolated
 #               on the logit scale by sex and age (held at 1953 before it)
 # Deaths of unknown age are spread proportionally within year, sex and
 # component. The shares are applied to the registered deaths by age of 22
@@ -73,6 +78,42 @@ who <-
   mutate(src = "WHO")
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# DANE, Registro de defunciones 1970-1978, Cuadro 6: 1973 and 1978 ====
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ICD-8 list A, the same list as the WHO 1968-1977 series: all = TOTAL row, ill-defined 136-137,
+# external 138-149 (violent 148-149). Unknown ages are spread pro rata as for WHO. 1974-1977 of
+# the same table must reproduce the WHO shares (asserted), so only the years WHO lacks are used.
+c6 <-
+  read_csv("data_input/historical/dane_defunciones_1970_1978_cuadro06_causas_edad_1973_1978.csv",
+           show_col_types = FALSE, col_types = cols(cause_code = col_character())) |>
+  filter(age != "all") |>
+  mutate(what = case_when(cause_code == "TOTAL" ~ "all", cause_code %in% c("136", "137") ~ "ill_defined", cause_code %in% c("148", "149") ~ "violent",
+                          cause_code %in% as.character(138:147) ~ "other_external", TRUE ~ NA_character_),
+         age = case_when(str_detect(age, "day|months$") & age != "12-23 months" ~ 0, age %in% c("12-23 months", "2-4") ~ 1,
+                         str_detect(age, "^[0-9]+-[0-9]+$") ~ suppressWarnings(as.numeric(str_extract(age, "^[0-9]+"))),
+                         str_detect(age, "^85") ~ 85, TRUE ~ NA_real_)) |>
+  filter(!is.na(what)) |>
+  pivot_longer(c(male, female), names_to = "sex", values_to = "dx") |>
+  mutate(sex = if_else(sex == "male", "m", "f")) |>
+  summarise(dx = sum(dx), .by = c(year, sex, what, age)) |>
+  mutate(unk = sum(dx[is.na(age)]), tot = sum(dx[!is.na(age)]), .by = c(year, sex, what)) |>
+  filter(!is.na(age)) |>
+  mutate(dx = if_else(tot > 0, dx * (1 + unk / tot), dx), age = grp(age)) |>
+  summarise(dx = sum(dx), .by = c(year, sex, what, age)) |>
+  pivot_wider(names_from = what, values_from = dx, values_fill = 0)
+chk6 <- inner_join(c6, who, by = c("year", "sex", "age"), suffix = c("_c6", "_who")) |>
+  mutate(diff = pmax(abs(all_c6 - all_who), abs(violent_c6 - violent_who), abs(other_external_c6 - other_external_who)),
+         diff_ill = ill_defined_c6 - ill_defined_who)
+# the table reproduces the WHO total, external and violent cells (the largest gap, under one death, is rounding of the unknown ages);
+# its ill-defined causes (136 + 137) are about 2 % above WHO's A136-A137, which only moves the reported share of ill-defined deaths
+stopifnot(nrow(chk6) == 144, max(chk6$diff) < 2)
+cat("DANE Cuadro 6 against WHO, 1974-1977, by sex and age group:", nrow(chk6), "cells; total, external and violent deaths differ by at most",
+    round(max(chk6$diff), 2), "; ill-defined deaths differ by", round(sum(chk6$diff_ill)), "in all four years (",
+    round(100 * sum(chk6$diff_ill) / sum(chk6$ill_defined_who), 1), "%)
+")
+dane6 <- c6 |> filter(!year %in% who$year) |> mutate(src = "DANE C6")
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # DANE microdata, 1979-2023 ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 micro <-
@@ -101,7 +142,7 @@ reg <- read_csv("output/tables/deaths_expected_wpp_mse_1950-2023.csv", show_col_
 lg <- \(p) qlogis(pmin(pmax(p, 1e-5), 1 - 1e-5))
 fill <- \(year, p) if (all(is.na(p))) p else plogis(approx(year[!is.na(p)], lg(p[!is.na(p)]), xout = year, rule = 2)$y)
 shares <-
-  bind_rows(who, eevv) |>
+  bind_rows(who, dane6, eevv) |>
   transmute(year, sex, age, src, p_ext = (other_external + violent) / all, p_viol_ext = if_else(other_external + violent > 0, violent / (other_external + violent), NA),
             p_ill = ill_defined / all) |>
   right_join(reg, by = c("year", "sex", "age")) |>
@@ -129,7 +170,7 @@ print(out |> filter(year %in% c(1950, 1953, 1960, 1970, 1975, 1980, 1985, 1990, 
 v30 <- read_csv("output/tables/deaths_by_cause_sex_age_1953-2023.csv", show_col_types = FALSE) |> summarise(v30 = sum(violent_reg), .by = year)
 cmp30 <- out |> filter(shares_source != "interpolado") |> summarise(v = sum(violent), .by = year) |> inner_join(v30, by = "year") |>
   mutate(rel = v / v30 - 1)
-cat("\nviolent deaths here against script 30 (which interpolates 1970 and scales nothing): years differing by more than 1 %:\n")
+cat("\nviolent deaths here against script 30 (which interpolates 1970 and 1971 and scales nothing): years differing by more than 1 %:\n")
 print(cmp30 |> filter(abs(rel) > 0.01) |> mutate(v = round(v), v30 = round(v30), rel = round(rel, 3)) |> as.data.frame())
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -138,7 +179,7 @@ print(cmp30 |> filter(abs(rel) > 0.01) |> mutate(v = round(v), v30 = round(v30),
 lab_sex <- \(s) factor(s, c("m", "f"), c("Hombres", "Mujeres"))
 band <- \(a) cut(a, c(-1, 4, 14, 44, 64, Inf), c("0-4", "5-14", "15-44", "45-64", "65+"))
 comp_cols <- c("Natural" = "#2a78d6", "Otras externas" = "#eda100", "Violenta" = "#eb6834")
-nodata <- tibble(xmin = c(1949.5, 1970.5, 1972.5, 1977.5), xmax = c(1952.5, 1971.5, 1973.5, 1978.5))
+nodata <- tibble(xmin = c(1949.5, 1970.5), xmax = c(1952.5, 1971.5))
 out |>
   mutate(band = band(age), sex = lab_sex(sex)) |>
   summarise(Natural = sum(natural), `Otras externas` = sum(other_external), Violenta = sum(violent), .by = c(year, sex, band)) |>

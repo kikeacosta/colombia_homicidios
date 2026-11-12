@@ -5,6 +5,8 @@
 # added up, instead of adjusting total mortality in one go:
 #
 #   under five      all causes from UN IGME (41): m0 and 4m1
+#                   (kept over NRC 1982, whose 5q0 is 12 % higher in 1959-1970:
+#                   the Brass estimates of the 1973 census side with IGME, 45)
 #   natural, 5-64   registered natural deaths / completeness (see below),
 #                   then smoothed over age and time with a tensor P-spline
 #                   (quasi-Poisson GAM by sex, 1950-2019), which irons out
@@ -35,6 +37,13 @@
 #                   enforced disappearances, 27). No completeness factor:
 #                   violent deaths are certified by legal medicine and the
 #                   natural-death factor does not apply to them
+#   crisis          deaths the registry never saw, from external counts (47):
+#                   the police homicide count and the demographic estimate of
+#                   La Violencia (Romero-Prieto and Meisel-Roca 2019) as
+#                   floors of the violent deaths of 1950-1984, and the Armero
+#                   disaster of 1985 (22,654 deaths, WPP / EM-DAT). Added as
+#                   counts, no completeness factor, also under five (IGME's
+#                   smooth curve does not carry a one-year disaster)
 #
 # completeness of the natural and other external deaths at ages 5+
 #   1970-2023   empirical method (Adair-Lopez model 1 on non-violent deaths,
@@ -87,6 +96,7 @@ exp <- read_csv("output/tables/deaths_expected_wpp_mse_1950-2023.csv", show_col_
 c_al <- read_csv("output/tables/completeness_compared_annual.csv", show_col_types = FALSE) |>
   filter(method == "Adair-Lopez, modelo 1") |> select(year, sex, c_al = completeness)
 child <- read_csv("output/tables/igme_child_mortality_1950-2023.csv", show_col_types = FALSE)
+crisis <- read_csv("output/tables/crisis_deaths_1950-2023.csv", show_col_types = FALSE) |> select(year, sex, age, crisis)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # completeness variants ====
@@ -131,6 +141,7 @@ build <- function(cc, verbose = FALSE) {
   d <- comp |>
     left_join(exp |> select(year, sex, age, wpp_total, expected, hom_excess, dsp), by = c("year", "sex", "age")) |>
     left_join(cc, by = c("year", "sex")) |>
+    left_join(crisis, by = c("year", "sex", "age")) |>
     mutate(nat_c = natural / c, oext_c = other_external / c, viol_adj = violent + hom_excess + dsp, x = age_mid(age))
 
   # natural mortality at 5-79: smooth surface (used below 65)
@@ -160,18 +171,18 @@ build <- function(cc, verbose = FALSE) {
     left_join(nat, by = c("year", "sex", "age")) |>
     left_join(old, by = c("year", "sex", "age")) |>
     left_join(child |> select(year, sex, m0, m1_4), by = c("year", "sex")) |>
-    mutate(mx_other_external = oext_c / pop, mx_violent = viol_adj / pop,
+    mutate(mx_other_external = oext_c / pop, mx_violent = viol_adj / pop, mx_crisis = crisis / pop,
            mx_natural = case_when(age == 0 ~ pmax(m0 - mx_other_external - mx_violent, 0), age == 1 ~ pmax(m1_4 - mx_other_external - mx_violent, 0),
                                   age >= 65 ~ mx_nat_old, TRUE ~ mx_nat),
-           # under five the total is IGME's; the external rates are capped by it
-           mx_total = case_when(age == 0 ~ m0, age == 1 ~ m1_4, TRUE ~ mx_natural + mx_other_external + mx_violent),
+           # under five the total is IGME's plus the crisis deaths; the other external rates are capped by IGME
+           mx_total = case_when(age == 0 ~ m0 + mx_crisis, age == 1 ~ m1_4 + mx_crisis, TRUE ~ mx_natural + mx_other_external + mx_violent + mx_crisis),
            mx_registered = registered / pop, mx_wpp = wpp_total / pop, mx_wpp_mse = expected / pop,
            method_natural = case_when(age < 5 ~ "UN IGME (todas las causas)", age >= 65 ~ "modelo relacional 65+",
                                       year <= last_smooth ~ "corregida y suavizada", TRUE ~ "corregida, anual"),
            method_completeness = if_else(year < 1970, "anclada (NRC 1982 y WPP 2024)", "empírica (Adair-Lopez)")) |>
-    select(year, sex, age, pop, mx_natural, mx_other_external, mx_violent, mx_total, mx_registered, mx_wpp, mx_wpp_mse,
+    select(year, sex, age, pop, mx_natural, mx_other_external, mx_violent, mx_crisis, mx_total, mx_registered, mx_wpp, mx_wpp_mse,
            completeness_natural = c, method_natural, method_completeness)
-  stopifnot(!anyNA(adj$mx_total), all(adj$mx_total > 0))
+  stopifnot(!anyNA(adj$mx_total), all(adj$mx_total > 0), !anyNA(adj$mx_crisis))
   list(adj = adj, nat = nat, old1 = old1, d = d)
 }
 
@@ -231,9 +242,9 @@ print(summ |> filter(series %in% c("Ajustada por componentes", "WPP 2024"), year
                   r_45q15 = round(`q45_15_Ajustada por componentes` / `q45_15_WPP 2024`, 2),
                   e60 = round(`e60_Ajustada por componentes`, 1), e60_wpp = round(`e60_WPP 2024`, 1)) |> arrange(sex, year) |> as.data.frame())
 cat("\ndeaths by component, thousands (WPP population), central variant:\n")
-print(adj |> filter(year %in% c(1950, 1960, 1980, 1990, 2000, 2010, 2018, 2021)) |>
+print(adj |> filter(year %in% c(1950, 1952, 1958, 1966, 1980, 1985, 1990, 2000, 2010, 2021)) |>
         summarise(natural = round(sum(mx_natural * pop) / 1e3, 1), otras_externas = round(sum(mx_other_external * pop) / 1e3, 1), violenta = round(sum(mx_violent * pop) / 1e3, 1),
-                  total = round(sum(mx_total * pop) / 1e3, 1), registradas = round(sum(mx_registered * pop) / 1e3, 1), wpp = round(sum(mx_wpp * pop) / 1e3, 1), .by = year) |> as.data.frame())
+                  crisis = round(sum(mx_crisis * pop) / 1e3, 1), total = round(sum(mx_total * pop) / 1e3, 1), registradas = round(sum(mx_registered * pop) / 1e3, 1), wpp = round(sum(mx_wpp * pop) / 1e3, 1), .by = year) |> as.data.frame())
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # figures ====

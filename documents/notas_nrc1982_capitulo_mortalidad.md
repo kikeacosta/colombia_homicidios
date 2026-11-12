@@ -124,3 +124,11 @@ p73 Authors: Lopez's 1951-64 parameters follow UN Manual IV and are not a true i
 ## Verification pass (second reading of pp. 85, 91, 93, 95, 99, 101, 102, 105, 111, 112)
 All completeness figures in T44, T45, T46, T48, T49, T50 and the 1973 values 0.825 / 0.735 (p105) re-read and confirmed digit by digit. 1973 plateau: males 10-30, females 20-35. p85 and p112 assembly rules confirmed. All 97 pages (1-12, 32-116) downloaded and read; none failed.
 Not confirmed / flagged: Table 2 male e5 1963 (56.35?) ; T16 and T32 small print (8/0/6) ; T54 header misprint ; p12 table mis-titled "Table 5 Regions...".
+
+## Arbitraje con Brass del censo 1973 (script 45, 2026-11-12)
+
+Pregunta: la brecha de e0 entre NRC 1982 y la serie propia (3-4 años en 1950-1975), ¿viene de los menores de cinco o de los adultos? `code/45_brass1973_arbitration.R` reconstruye las tres tablas (propia, WPP 2024, NRC) con las mismas fórmulas abreviadas a partir de l(x) y e(80), y parte la brecha en dos.
+
+- Menores de cinco: las 20 estimaciones Brass-Trussell utilizables del censo 1973 (madres de 25-49, fechas 1959-1970, cuatro familias) dan 5q0 ambos sexos igual a IGME/WPP en promedio (Brass / IGME = 1,03, rango 0,90-1,09) y 12 % por debajo de NRC (Brass / NRC = 0,88, rango 0,77-0,93). NRC usó para 1955-1960 el ajuste estable (Set 2) porque juzgó bajos los valores de las historias de fecundidad (T32); el censo 1973 respalda los valores bajos. Conclusión: el bloque de menores de cinco de la serie propia (UN IGME) se mantiene; NRC 1982 sobreestima 5q0 en 1959-1970.
+- Cinco y más: 1,3-2,6 años de la brecha (60 % en promedio) están en e5, no en la niñez. NRC tiene e5 2-3 años por debajo de la propia en todos los quinquenios, incluido 1950-1955, donde las anclas de completitud adulta (NRC y WPP) coinciden. Esa parte no la arbitra Brass: viene de la redistribución de edades de NRC (exageración de la edad al morir) y de la tabla modelo West, frente a nuestro modelo relacional sobre el estándar WPP en 65+ y las tasas corregidas en 5-64.
+- Tablas: `output/tables/brass1973_arbitration_q5.csv`, `brass1973_e0_gap_decomposition.csv`; figura `figures/06_components/brass1973_arbitration.png`.

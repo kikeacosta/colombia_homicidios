@@ -9,16 +9,18 @@
 # the two censuses and the hybrid corrects for it.
 #
 # deaths: WHO Mortality Database 1953-1977 (21), DANE microdata 1979-2023,
-# LAMBdA (UN Demographic Yearbook transcriptions, 21) for 1938-1952, 1971 and
-# 1973, all at ages 0, 1, 5, ..., 80+ (the 1973 census stops at 80+; LAMBdA
-# groups 40-49, ..., 70+ before 1947 are split with the age pattern of the
-# nearest year that has 5-year groups). 1978 takes the log-linearly
-# interpolated age pattern of the neighbouring years, scaled to the national
-# total of the DANE anuarios (col_gap_analysis national file in
-# data_input/historical); 1979 microdata are short (110,400 against 135,925
-# in the anuario) and are scaled up the same way. WHO and LAMBdA match the
-# anuarios year by year, including the 1969-1971 dip. Average annual deaths per window are weighted by the share
-# of each calendar year that falls between the two census dates.
+# the DANE Registro de defunciones 1970-1978 (Cuadro 11, historical/25) for
+# the years WHO lacks (1971, 1973, 1978; unknown age spread proportionally),
+# LAMBdA (UN Demographic Yearbook transcriptions, 21) for 1938-1952, all at
+# ages 0, 1, 5, ..., 80+ (the 1973 census stops at 80+; LAMBdA groups 40-49,
+# ..., 70+ before 1947 are split with the age pattern of the nearest year
+# that has 5-year groups). 1979 microdata are short (110,400 against 135,925
+# in the anuario) and are scaled up to the national total of the DANE
+# anuarios (col_gap_analysis national file in data_input/historical). WHO
+# and the DANE cuadros match the anuarios year by year, including the
+# 1969-1971 dip, and WHO reproduces Cuadro 11 age by age in 1970-1977.
+# Average annual deaths per window are weighted by the share of each
+# calendar year that falls between the two census dates.
 #
 # migration: two population variants.
 #   "closed": the census counts as they are.
@@ -86,10 +88,32 @@ anuario <-
   filter(!is.na(total)) |>
   select(year, tot = total, m = male, f = female)
 
+# DANE Registro de defunciones 1970-1978, Cuadro 11 (national rows), for the
+# years WHO lacks; deaths of unknown age spread proportionally, as in micro
+c11 <-
+  read_csv("data_input/historical/dane_defunciones_1970_1978_cuadro11_secciones_edad.csv", show_col_types = FALSE) |>
+  filter(unit == "Total nacional", age != "all", !year %in% unique(who$year)) |>
+  select(year, age, m = male, f = female) |>
+  pivot_longer(c(m, f), names_to = "sex", values_to = "dx") |>
+  mutate(age = case_when(age == "not stated" ~ NA_real_,
+                         age %in% c("under 1 day", "1-6 days", "7-29 days", "1-5 months", "6-11 months") ~ 0,
+                         age %in% c("12-23 months", "2-4") ~ 1,
+                         TRUE ~ pmin(suppressWarnings(as.numeric(sub("-.*|\\+", "", age))), age_top))) |>
+  summarise(dx = sum(dx), .by = c(year, sex, age))
+unk11 <- c11 |> filter(is.na(age)) |> select(year, sex, unk = dx)
+c11 <-
+  c11 |>
+  filter(!is.na(age)) |>
+  mutate(tot = sum(dx), .by = c(year, sex)) |>
+  left_join(unk11, by = c("year", "sex")) |>
+  replace_na(list(unk = 0)) |>
+  mutate(dx = dx * (1 + unk / tot), src = "DANE 1970-1978") |>
+  select(year, sex, age, dx, src)
+
 # LAMBdA years not covered by WHO or DANE. Groups wider than 5 years (40-49,
 # ..., 70+ in 1938-1946; 50-59, 60-69, 70-79 in 1947-1951) are split with
 # the within-group shares of 1952, the first year with 5-year groups, by sex
-lam_years <- setdiff(unique(lambda$year), c(unique(who$year), unique(micro$year), 1970))
+lam_years <- setdiff(unique(lambda$year), c(unique(who$year), unique(micro$year), unique(c11$year), 1970))
 lam <- lambda |> filter(year %in% lam_years, year >= 1938) |> mutate(age = pmin(age, age_top)) |> summarise(dx = sum(dx), .by = c(year, sex, age))
 ref <- lam |> filter(year == 1952) |> select(sex, age5 = age, ref = dx)
 lam <-
@@ -103,7 +127,7 @@ lam <-
   mutate(src = "LAMBdA")
 
 deaths <-
-  bind_rows(who |> mutate(age = pmin(age, age_top), src = "WHO"), micro, lam) |>
+  bind_rows(who |> mutate(age = pmin(age, age_top), src = "WHO"), c11, micro, lam) |>
   summarise(dx = sum(dx), .by = c(year, sex, age, src)) |>
   complete(year = 1938:2023, sex, age) |>
   arrange(sex, age, year) |>
@@ -114,9 +138,9 @@ deaths <-
   ) |>
   ungroup()
 
-# scale the years without age detail, and 1979, to the anuario totals (by sex
-# when available, else the interpolated sex ratio is kept)
-fix_years <- c(1978, 1979)
+# scale 1979 (short microdata) to the anuario totals (by sex when available,
+# else the interpolated sex ratio is kept)
+fix_years <- 1979
 target <-
   deaths |>
   filter(year %in% fix_years) |>
