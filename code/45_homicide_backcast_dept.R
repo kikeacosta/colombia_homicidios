@@ -24,7 +24,7 @@
 #            log(Dm / Df)       = g(rho_t + u, eta) + e   accounting identity:
 #                                 non-violent deaths with sex ratio
 #                                 exp(rho_t + u) plus homicides, 90 % male
-#            log(H_anuario / D) = eta + e
+#            log(H_anuario / D) = eta + e                 (e with gross errors)
 #            log(H_eevv / D)    = eta + e                 (1979-2019, near exact)
 #            log(H_policia / D) = eta + beta + e          (1962-1997)
 #          plus one national observation that links the units:
@@ -37,15 +37,28 @@
 #          rho_t is the national non-violent log sex ratio, computed from the
 #          panel and the national share of violent deaths (anuarios, WHO
 #          1953-77, EEVV). Joint extended Kalman filter and RTS smoother, written
-#          here in base R; seven standard deviations by maximum likelihood (the
-#          innovation sd of eta differs before and from 1979).
+#          here in base R; nine standard deviations and two probabilities by
+#          maximum likelihood (the sds of eta, of u and of the sex-ratio
+#          error differ before and from 1979: the sex ratio is much noisier
+#          as a signal in the anuario years).
+#          an anuario cell is read as one of three cases: a regular
+#          observation, a gross error (e.g. Valle del Cauca 1959, 52
+#          homicides between 1,479 and 855) or a jump of the level since the
+#          year before (the start of La Violencia). without this, a few bad
+#          cells inflate the error of all the others and the peaks are
+#          flattened. a transitory white-noise part of eta was tried instead
+#          and its variance was estimated at zero.
 #
 # validation  blocks of years in which the homicide counts are hidden and
 #          predicted back: 1946-65 whole, 1946-53 and 1954-65 (anuarios as
 #          truth), 1979-84, 1985-97
 #          and 1998-2010 (EEVV as truth). Inside the block the model gets
 #          nothing (N), the sex ratio (S), the Policia (P) or both (SP).
+#          (a variant without the national offset rho_t was dropped: it
+#          predicted the same and fitted worse, log-likelihood about 90 lower.)
 #          Parameters are the full-data estimates (not re-estimated per block).
+#          anuario cells flagged as gross errors in the full fit are left
+#          out of the scores.
 #
 # caveats  - the target is homicides among REGISTERED deaths; deaths that
 #            were never registered are outside the model
@@ -87,6 +100,8 @@ s_e <- 0.03 # sd of the EEVV observation of eta (near exact by construction)
 pol_years <- 1962:1997 # the Policia series is used up to the 1998 certificate
 who_years <- 1966:1977 # WHO national violent deaths as a constraint (see header)
 s_w <- 0.05 # sd of the WHO national observation (log share), fixed
+s_out <- 1.5 # extra sd of an anuario cell that is a gross error (log scale), fixed
+s_jump <- 1 # extra sd of eta in a year with a jump (log scale), fixed
 eta_break <- 1979 # first year of the modern innovation sd of eta (EEVV microdata)
 z90 <- qnorm(0.95)
 
@@ -329,9 +344,22 @@ prep <- function(dat) {
 
 # extended Kalman filter for all units jointly (state: eta, u, beta of each
 # unit). observations are processed one at a time; the units are linked only
-# by the national WHO observation. returns the log-likelihood and, if asked,
-# the smoothed states. par = c(s_eta_hist, s_eta_mod, s_u, s_0, s_a, s_p,
-# s_b); the innovation sd of eta differs before and from `eta_break`.
+# by the national WHO observation.
+# the anuario observation is a mixture of three cases:
+#   regular      error with sd s_a
+#   gross error  the cell is wrong: error with sd sqrt(s_a^2 + s_out^2)
+#   jump         the cell is right and eta moved by more than a random-walk
+#                step since last year: eta gets an extra sd s_jump first
+#                (jumps are allowed only before eta_break; in a year without
+#                an anuario cell their variance, p_jump s_jump^2, is added to
+#                the random-walk step)
+# the three updates are collapsed to one Gaussian by moment matching, so an
+# ambiguous cell leaves a wide variance and the next years decide.
+# returns the log-likelihood and, if asked, the smoothed states and the
+# probabilities of gross error and jump of each anuario cell (as seen by the
+# filter when the cell arrives).
+# par: see par_names. the sds of eta, u and of the sex-ratio error differ
+# before and from `eta_break`.
 kf_joint <- function(m, par, smooth = FALSE) {
   n <- m$n
   K <- m$K
@@ -339,14 +367,20 @@ kf_joint <- function(m, par, smooth = FALSE) {
   ie <- seq(1, ns, 3)
   iu <- ie + 1
   ib <- ie + 2
+  hist <- m$year < eta_break
   x <- rep(x0, K)
   P <- diag(rep(P0, K))
-  s_eta2 <- ifelse(m$year < eta_break, par[1], par[2])^2
+  s_eta2 <- ifelse(hist, par[1], par[2])^2
+  s_u2 <- ifelse(hist, par[3], par[4])^2
   y_a <- m$y_a; y_e <- m$y_e; y_p <- m$y_p; y_sr <- m$y_sr; y_w <- m$y_w; W <- m$W; rho <- m$rho
-  V_a <- par[5]^2 + m$q_a
+  V_s <- ifelse(hist, par[5], par[6])^2 + m$q_sr # the vector recycles down the years
+  V_a <- par[7]^2 + m$q_a
   V_e <- s_e^2 + m$q_e
-  V_p <- par[6]^2 + m$q_p
-  V_s <- par[4]^2 + m$q_sr
+  V_p <- par[8]^2 + m$q_p
+  p_out <- par[10]
+  p_jump <- par[11]
+  mix <- p_out + p_jump > 0
+  lp_mix <- log(c(1 - p_out - p_jump, p_out, p_jump))
   ll <- 0
   e <- 1e-4
   upd <- function(idx, Hs, v, R) {
@@ -356,22 +390,53 @@ kf_joint <- function(m, par, smooth = FALSE) {
     P <<- P - tcrossprod(PH) / S
     ll <<- ll - 0.5 * (log(2 * pi * S) + v^2 / S)
   }
+  # anuario observation of eta_i: regular, gross error or jump
+  upd_mix <- function(i, v, R) {
+    PH <- P[, i]
+    PH3 <- PH
+    PH3[i] <- PH3[i] + s_jump^2
+    S <- c(PH[i] + R, PH[i] + R + s_out^2, PH3[i] + R)
+    l <- lp_mix + dnorm(v, 0, sqrt(S), log = TRUE)
+    lmax <- max(l)
+    lsum <- lmax + log(sum(exp(l - lmax)))
+    w <- exp(l - lsum)
+    d1 <- PH * (v / S[1])
+    d2 <- PH * (v / S[2])
+    d3 <- PH3 * (v / S[3])
+    dm <- w[1] * d1 + w[2] * d2 + w[3] * d3
+    Pn <- P - tcrossprod(PH) * (w[1] / S[1] + w[2] / S[2]) - tcrossprod(PH3) * (w[3] / S[3]) +
+      w[1] * tcrossprod(d1 - dm) + w[2] * tcrossprod(d2 - dm) + w[3] * tcrossprod(d3 - dm)
+    Pn[i, i] <- Pn[i, i] + w[3] * s_jump^2
+    P <<- Pn
+    x <<- x + dm
+    ll <<- ll + lsum
+    w
+  }
   if (smooth) {
     xp <- xf <- matrix(NA_real_, n, ns)
     Pp <- Pf <- array(NA_real_, c(ns, ns, n))
+    pout <- pjmp <- matrix(NA_real_, n, K)
   }
   for (t in seq_len(n)) {
     if (t > 1) {
       d <- diag(P)
       d[ie] <- d[ie] + s_eta2[t]
-      d[iu] <- d[iu] + par[3]^2
-      d[ib] <- d[ib] + par[7]^2
+      d[iu] <- d[iu] + s_u2[t]
+      d[ib] <- d[ib] + par[9]^2
+      # before eta_break a jump can happen in any year: where the anuario
+      # cell is missing its variance goes into the step (with a cell, the
+      # mixture below deals with it)
+      if (mix && hist[t]) {
+        noa <- is.na(y_a[t, ])
+        d[ie[noa]] <- d[ie[noa]] + p_jump * s_jump^2
+      }
       diag(P) <- d
     }
     if (smooth) { xp[t, ] <- x; Pp[, , t] <- P }
     for (k in seq_len(K)) {
       i <- ie[k]
-      if (!is.na(y_a[t, k])) upd(i, 1, y_a[t, k] - x[i], V_a[t, k])
+      # the sources without gross errors go first, so that the anuario cell
+      # is judged against everything else known about the year
       if (!is.na(y_e[t, k])) upd(i, 1, y_e[t, k] - x[i], V_e[t, k])
       if (!is.na(y_p[t, k])) upd(c(i, i + 2L), c(1, 1), y_p[t, k] - x[i] - x[i + 2L], V_p[t, k])
       if (!is.na(y_sr[t, k])) {
@@ -379,6 +444,14 @@ kf_joint <- function(m, par, smooth = FALSE) {
         Hs <- c((g_sr(dl, x[i] + e) - g_sr(dl, x[i] - e)) / (2 * e),
                 (g_sr(dl + e, x[i]) - g_sr(dl - e, x[i])) / (2 * e))
         upd(c(i, i + 1L), Hs, y_sr[t, k] - g_sr(dl, x[i]), V_s[t, k])
+      }
+      if (!is.na(y_a[t, k])) {
+        if (mix) {
+          w <- upd_mix(i, y_a[t, k] - x[i], V_a[t, k])
+          if (smooth) { pout[t, k] <- w[2]; pjmp[t, k] <- w[3] }
+        } else {
+          upd(i, 1, y_a[t, k] - x[i], V_a[t, k])
+        }
       }
     }
     if (!is.na(y_w[t])) {
@@ -398,7 +471,7 @@ kf_joint <- function(m, par, smooth = FALSE) {
   }
   sds <- sqrt(pmax(apply(Ps, 3, diag), 0)) # ns x n
   list(ll = ll, eta = xs[, ie], u = xs[, iu], beta = xs[, ib],
-       sd_eta = t(sds[ie, ]), sd_u = t(sds[iu, ]), sd_beta = t(sds[ib, ]))
+       sd_eta = t(sds[ie, ]), sd_u = t(sds[iu, ]), sd_beta = t(sds[ib, ]), p_out = pout, p_jump = pjmp)
 }
 
 # run the model on a long table (sorted by unit, then year)
@@ -406,28 +479,46 @@ run_model <- function(dat, par, smooth = FALSE) {
   o <- kf_joint(prep(dat), par, smooth = smooth)
   if (!smooth) return(o)
   tibble(unit = dat$unit, year = dat$year, eta = c(o$eta), sd_eta = c(o$sd_eta), u = c(o$u), sd_u = c(o$sd_u),
-         beta = c(o$beta), sd_beta = c(o$sd_beta))
+         beta = c(o$beta), sd_beta = c(o$sd_beta), p_outlier = c(o$p_out), p_jump = c(o$p_jump))
 }
 
-fit_par <- function(dat, start = c(0.25, 0.15, 0.015, 0.03, 0.3, 0.12, 0.03)) {
-  o <- optim(log(start), function(lp) -run_model(dat, exp(lp)), method = "BFGS",
-             control = list(maxit = 200, reltol = 1e-7))
-  list(par = setNames(exp(o$par), c("s_eta_hist", "s_eta_mod", "s_u", "s_0", "s_a", "s_p", "s_b")), ll = -o$value, conv = o$convergence)
+par_names <- c("s_eta_hist", "s_eta_mod", "s_u_hist", "s_u_mod", "s_0_hist", "s_0_mod", "s_a", "s_p", "s_b", "p_out", "p_jump")
+# nine sds on the log scale and, with `mixture`, the two probabilities on
+# the logit scale. the likelihood has more than one local maximum, so every
+# starting point given is tried and the best is kept.
+fit_par <- function(dat, mixture = TRUE, starts) {
+  expand <- function(lp) if (mixture) c(exp(lp[1:9]), plogis(lp[10:11])) else c(exp(lp), 0, 0)
+  best <- NULL
+  for (s in starts) {
+    lp0 <- if (mixture) c(log(s), qlogis(c(0.05, 0.03))) else log(s)
+    o <- optim(lp0, function(lp) -run_model(dat, expand(lp)), method = "BFGS", control = list(maxit = 300, reltol = 1e-8))
+    if (is.null(best) || o$value < best$value) best <- o
+  }
+  list(par = setNames(expand(best$par), par_names), ll = -best$value, conv = best$convergence, k = length(best$par))
 }
+aic_of <- function(f) 2 * f$k - 2 * f$ll
 
-say("estimating the standard deviations (with national offset)...")
-fit1 <- fit_par(md)
-print(round(fit1$par, 4))
-say("... and without the national offset")
-md0 <- md |> mutate(rho = 0)
-fit0 <- fit_par(md0)
-print(round(fit0$par, 4))
+say("estimating: regular anuario errors only...")
+fit_plain <- fit_par(md, mixture = FALSE, starts = list(c(0.18, 0.14, 0.013, 0.013, 0.02, 0.02, 0.26, 0.06, 0.11)))
+say("  loglik", round(fit_plain$ll, 1), "| AIC", round(aic_of(fit_plain), 1))
+say("... with gross errors and jumps")
+fit1 <- fit_par(md, mixture = TRUE, starts = list(c(0.18, 0.14, 0.013, 0.013, 0.02, 0.02, 0.15, 0.06, 0.11),
+                                                  c(0.24, 0.14, 0.02, 0.009, 0.04, 0.009, 0.09, 0.05, 0.11)))
+say("  loglik", round(fit1$ll, 1), "| AIC", round(aic_of(fit1), 1))
+print(round(rbind(plain = fit_plain$par, mixture = fit1$par), 4))
 
 pars <- bind_rows(
-  tibble(model = "national offset", term = names(fit1$par), estimate = fit1$par, loglik = fit1$ll, convergence = fit1$conv),
-  tibble(model = "no offset", term = names(fit0$par), estimate = fit0$par, loglik = fit0$ll, convergence = fit0$conv)
+  tibble(model = "gross errors and jumps", term = names(fit1$par), estimate = fit1$par, loglik = fit1$ll,
+         aic = aic_of(fit1), convergence = fit1$conv, used = TRUE),
+  tibble(model = "regular errors only", term = names(fit_plain$par), estimate = fit_plain$par, loglik = fit_plain$ll,
+         aic = aic_of(fit_plain), convergence = fit_plain$conv, used = FALSE)
 )
 write_csv(pars, "output/tables/homicide_backcast_parameters.csv")
+
+# anuario cells read as gross errors or as jumps with every source in the model
+flag <- run_model(md, fit1$par, smooth = TRUE) |> transmute(unit, year, p_outlier, p_jump)
+say("anuario cells:", sum(!is.na(flag$p_outlier)), "| probability of gross error over 0.5:", sum(flag$p_outlier > 0.5, na.rm = TRUE),
+    "| of jump over 0.5:", sum(flag$p_jump > 0.5, na.rm = TRUE))
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 4. validation: hidden blocks ====
@@ -437,7 +528,6 @@ variants <- tribble(
   ~variant, ~use_sr, ~use_pol, ~offset,
   "N: nothing in the block", FALSE, FALSE, TRUE,
   "S: sex ratio", TRUE, FALSE, TRUE,
-  "S0: sex ratio, no national offset", TRUE, FALSE, FALSE,
   "P: Policia", FALSE, TRUE, TRUE,
   "SP: sex ratio + Policia", TRUE, TRUE, TRUE
 )
@@ -462,7 +552,9 @@ for (b in names(blocks)) {
       mutate(block = b, variant = vv$variant, truth = truth, q_truth = q_truth,
              s_obs = ifelse(max(blocks[[b]]) <= 1965, p[["s_a"]], s_e),
              d = dat$d, in_block = inb) |>
-      filter(in_block, !is.na(truth))
+      select(-p_outlier, -p_jump) |>
+      left_join(flag |> transmute(unit, year, p_flag = p_outlier), by = c("unit", "year")) |>
+      filter(in_block, !is.na(truth), is.na(p_flag) | p_flag <= 0.5)
   }
 }
 val <- bind_rows(val) |>
@@ -512,7 +604,8 @@ est |>
             pop, sex_ratio_deaths = exp(y_sr), sr_nonviolent, hom_anuario = h_anu,
             hom_policia = h_pol, hom_eevv = h_eevv, sources, share_est = h_est, share_lo90 = h_lo,
             share_hi90 = h_hi, hom_est, hom_lo90 = hom_lo, hom_hi90 = hom_hi, rate_est,
-            rate_lo90 = rate_lo, rate_hi90 = rate_hi, sd_log_share = sd_eta) |>
+            rate_lo90 = rate_lo, rate_hi90 = rate_hi, sd_log_share = sd_eta,
+            anuario_gross_error_prob = p_outlier, anuario_jump_prob = p_jump) |>
   write_csv("output/tables/homicide_backcast_dept_1915-2019.csv")
 
 # Policia bias: model estimate and the raw overlaps it comes from
@@ -561,12 +654,14 @@ obs_long <- est |>
   transmute(unit, year, pop, Anuarios = h_anu, `Policía` = ifelse(year %in% pol_years, h_pol, NA), EEVV = h_eevv) |>
   pivot_longer(c(Anuarios, `Policía`, EEVV), names_to = "source", values_to = "n") |>
   filter(!is.na(n), n > 0) |>
-  mutate(rate = 1e5 * n / pop, source = factor(source, names(col_src)))
+  left_join(est |> transmute(unit, year, source = "Anuarios", flagged = !is.na(p_outlier) & p_outlier > 0.5), by = c("unit", "year", "source")) |>
+  mutate(rate = 1e5 * n / pop, source = factor(source, names(col_src)), flagged = replace_na(flagged, FALSE))
 fig1 <- est |>
   filter(year >= 1923) |>
   ggplot(aes(year)) +
   geom_ribbon(aes(ymin = pmax(rate_lo, 0.3), ymax = pmin(rate_hi, 2000)), fill = "grey75", alpha = 0.6) +
-  geom_point(data = obs_long |> filter(year >= 1923), aes(y = rate, colour = source, shape = source), size = 0.9, alpha = 0.85) +
+  geom_point(data = obs_long |> filter(year >= 1923, !flagged), aes(y = rate, colour = source, shape = source), size = 0.9, alpha = 0.85) +
+  geom_point(data = obs_long |> filter(year >= 1923, flagged), aes(y = rate), colour = "grey35", shape = 4, size = 1.4, stroke = 0.5) +
   geom_line(aes(y = rate_est), colour = ink, linewidth = 0.45) +
   annotate("rect", xmin = 1965.5, xmax = 1978.5, ymin = 0.3, ymax = 2000, fill = NA, colour = "grey55", linewidth = 0.25, linetype = 3) +
   scale_y_log10(breaks = c(1, 3, 10, 30, 100, 300), labels = scales::label_number(accuracy = 1)) +
@@ -577,7 +672,8 @@ fig1 <- est |>
   labs(title = "Homicidios por 100.000 habitantes, estimación del modelo e insumos, 1923-2019",
        subtitle = "Línea: estimación; banda: intervalo de 90 %; entre las líneas punteadas, 1966-1978, solo hay Policía. Escala logarítmica.",
        x = NULL, y = NULL,
-       caption = "Homicidios entre las defunciones registradas. 1979-2019: homicidio + intención no determinada + intervención legal. Población: censos interpolados.") +
+       caption = "Cruces grises: celdas de los anuarios que el modelo lee como error grosero.
+Homicidios entre las defunciones registradas. 1979-2019: homicidio + intención no determinada + intervención legal. Población: censos interpolados.") +
   base
 ggsave("figures/07_backcast/backcast_rate_by_unit.png", fig1, w = 11, h = 12.5, bg = "white", dpi = 160)
 
