@@ -400,8 +400,9 @@ Las cuatro figuras siguientes muestran la prueba para las 15 unidades. En cada p
 - **Negro:** los datos originales, sin ajuste por subregistro. Círculos huecos para los anuarios, puntos
   llenos para EEVV y triángulos para la Policía.
 - **Franjas grises:** los cinco bloques ocultos. Dentro de cada uno, la línea gris punteada es la predicción
-  sin usar datos del bloque (interpolación), la azul la que usa la razón de sexos y la naranja la que usa
-  además la Policía. La banda azul es el intervalo de 90 % de la predicción con razón de sexos.
+  sin pistas del bloque (solo une lo que el modelo sabe de antes y de después), la azul la que usa la razón
+  de sexos y la naranja la que usa además la Policía. La banda azul es el intervalo de 90 % de la predicción
+  con razón de sexos.
 - **Franja crema, 1966-1978:** no hay homicidios en las estadísticas vitales para contrastar. Se muestran las
   mismas tres lecturas, pero ahí no se puede decir cuál acierta; el único conteo es el de la Policía. En ese
   tramo la línea naranja es el modelo completo, que además usa el total nacional de la OMS.
