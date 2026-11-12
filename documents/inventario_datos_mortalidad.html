@@ -184,7 +184,7 @@
 id="inventario-de-datos-de-mortalidad-colombia-niveles-nacional-departamental-y-municipal">Inventario
 de datos de mortalidad: Colombia, niveles nacional, departamental y
 municipal</h1>
-<p>Estado al 2026-11-11 (versión anterior: 2026-11-10). Rutas relativas
+<p>Estado al 2026-11-12 (versión anterior: 2026-11-10). Rutas relativas
 a la raíz del proyecto
 (<code>C:\Users\kikep\gits\colombia_homicidios</code>).
 <code>data_input/</code> contiene insumos originales o transcritos;
@@ -199,8 +199,8 @@ sha256, si está en git) y escribe en
 los documentos fuente.</p>
 <h2 id="novedades-desde-la-versión-del-2026-11-10">Novedades desde la
 versión del 2026-11-10</h2>
-<p>Estado del 2026-11-11 a las 22:45. Si un archivo está o no en git lo
-dice la columna <code>en_git</code> de
+<p>Estado del 2026-11-12. Si un archivo está o no en git lo dice la
+columna <code>en_git</code> de
 <code>output/tables/data_catalog_files.csv</code>; aquí no se repite
 porque cambia con cada commit.</p>
 <table>
@@ -285,8 +285,8 @@ mortalidad en la niñez (sección 5)</td>
 <td>scripts 34 a 44</td>
 </tr>
 <tr class="even">
-<td><strong>Carpeta <code>data_input/dane_pdfs/</code></strong>: 41 PDF
-de la biblioteca digital del DANE (833 MB). Anuarios de 1915 a 1931 y de
+<td><strong>Carpeta <code>data_input/dane_pdfs/</code></strong>: 49 PDF
+de la biblioteca digital del DANE (907 MB). Anuarios de 1915 a 1931 y de
 1968-1969, once boletines mensuales de 1977 a 2005, <em>Nacimientos
 registrados 1973-1984</em>, estimaciones departamentales de mortalidad
 infantil 1981-1993, mortalidad materna 1992-1996, la muestra de avance
@@ -298,6 +298,24 @@ documentos que citaban las transcripciones; tres duplican PDF de
 <code>historical/</code></td>
 </tr>
 <tr class="odd">
+<td><strong>Series postcensales e intercensales del DANE</strong>
+(<code>data_input/dane_pdfs/censos/</code>): proyecciones de población
+por área, sexo y edad simple, nacionales 1950-2017 y 2018-2070 y
+departamentales 1985-2050 (cuatro libros); y <em>Conciliación censal
+1985-2005: estimación de la mortalidad</em> (2007, 299 páginas), con
+tablas de mortalidad por sexo, nacionales y departamentales, de 1985,
+1993 y 2005 y de los quinquenios 1985-2005, e0 y mortalidad infantil en
+los censos de 1951 a 2005 y factores de ajuste de las defunciones de
+2005</td>
+<td><code>PPED-AreaSexoEdadNac-*.xlsx</code>,
+<code>DCD-area-sexo-edad-proypoblacion-dep-*.xlsx</code>,
+<code>PPED-AreaSexoEdadDep-2018-2050_VP.xlsx</code>,
+<code>5Mortalidad85_05.pdf</code></td>
+<td>catalogados el 2026-11-12; sin extraer ni usar. No cambian la figura
+0.1: la población nacional por edad y sexo desde 1950 ya la daba WPP, y
+la departamental desde 1985 sale de los municipios de DANEpop</td>
+</tr>
+<tr class="even">
 <td>Registro de fuentes, catálogo de archivos y lista de documentos
 fuente con su dirección de origen (sección 8)</td>
 <td><code>documents/inventory/</code>,
@@ -450,9 +468,11 @@ PDF)</td>
 </tr>
 </tbody>
 </table>
-<p>Nada es nuevo a nivel municipal, ni en los homicidios (la OMS ya daba
-la edad y el sexo de 1953 a 1977). Las defunciones nacionales por edad y
-sexo de 1953 a 1977 ya estaban en la OMS, y WPP 2024 ya cubría
+<p>Las proyecciones DANE nacionales (1950-2070) y departamentales
+(1985-2050) llegadas el 2026-11-12 no añaden años ni detalle a esta
+figura. Nada es nuevo a nivel municipal, ni en los homicidios (la OMS ya
+daba la edad y el sexo de 1953 a 1977). Las defunciones nacionales por
+edad y sexo de 1953 a 1977 ya estaban en la OMS, y WPP 2024 ya cubría
 1950-2023, de modo que ninguna de las dos cuenta. LAMBdA sí cuenta como
 nueva. Es una comparación por fuente: marca si la información existe y
 con qué detalle, no distingue correcciones dentro de una
@@ -807,6 +827,19 @@ publicar</td>
 <td>hist/20, hist/22</td>
 </tr>
 <tr class="even">
+<td><code>data_input/conflict/mse_documented_dept_1985-2018.csv</code>,
+<code>mse_regional_age5_1985-2018.csv</code></td>
+<td>1985-2018</td>
+<td>víctimas documentadas por departamento y año (media de 10 réplicas
+de verdata) y media de los sorteos MSE por región natural, sexo y
+edad</td>
+<td>JEP-CEV-HRDAG vía el repositorio
+<code>colombia_bereavement_pdr</code> (Drive)</td>
+<td>cachés de 51; el MSE no se publica por departamento: el
+departamental es la media regional por la participación documentada</td>
+<td>51</td>
+</tr>
+<tr class="odd">
 <td><code>data_input/conflict/mse_national_age5_1985-2018.rds</code>,
 <code>data_inter/conflict_mse_age5_1985-2018.rds</code></td>
 <td>1985-2018 (desapariciones hasta 2016)</td>
@@ -818,7 +851,7 @@ volcada en 0-4 y en 85-89 (hasta 1988), 90-94 (1989-93) y 95+
 (1994-2000); se trata como desconocida y se redistribuye en 5-84</td>
 <td>21, 23, 27</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_input/ucdp/GEDEvent_v25_1.csv</code>,
 <code>GEDEvent_v25_01_25_12.csv</code> (270 MB, no versionado)</td>
 <td>1989-2024</td>
@@ -827,7 +860,7 @@ volcada en 0-4 y en 85-89 (hasta 1988), 90-94 (1989-93) y 95+
 <td>Solo comparación</td>
 <td>hist/22</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>data_input/historical/Homicidio 1962-2002 por depto de Policía_v1.xlsx</code>
 (hoja <code>Tabla_ancha</code>)</td>
 <td>1962-2002</td>
@@ -927,6 +960,25 @@ población censada 17.484.508</td>
 <td>DANE, resumen general de 1964, cuadro 9 (OCR validado,
 hist/23).</td>
 <td>hist/23 (produce); sin uso aún</td>
+</tr>
+<tr class="odd">
+<td><code>data_input/dane_pdfs/censos/PPED-AreaSexoEdadNac-1950-2017.xlsx</code>,
+<code>PPED-AreaSexoEdadNac-2018-2070.xlsx</code></td>
+<td>1950-2070</td>
+<td>área (cabecera, resto, total) × sexo × edad simple (0-100)</td>
+<td>DANE, retroproyecciones y proyecciones nacionales (nuevo el
+2026-11-12)</td>
+<td>sin uso aún; sirve para contrastar con WPP 2024 antes de 1985</td>
+</tr>
+<tr class="even">
+<td><code>data_input/dane_pdfs/censos/DCD-area-sexo-edad-proypoblacion-dep-1985-1992.xlsx</code>,
+<code>…-1993-2004.xlsx</code>, <code>…-2005-2017_VP.xlsx</code>,
+<code>PPED-AreaSexoEdadDep-2018-2050_VP.xlsx</code></td>
+<td>1985-2050</td>
+<td>área × sexo × edad simple, 33 unidades</td>
+<td>DANE, proyecciones departamentales (nuevo el 2026-11-12)</td>
+<td>sin uso aún; control de la suma de DANEpop y años 2043-2050 que
+DANEpop no trae</td>
 </tr>
 <tr class="odd">
 <td><code>data_input/migration/undesa_pd_2020_ims_stock_by_age_sex_and_destination.xlsx</code>,
@@ -1046,6 +1098,16 @@ independiente de WPP para el tramo sin ajuste propio (1950-1969).</td>
 <td>29</td>
 </tr>
 <tr class="even">
+<td><code>data_input/dane_pdfs/censos/5Mortalidad85_05.pdf</code></td>
+<td>1985, 1993, 2005; quinquenios 1985-2005; e0 en 1951-2005</td>
+<td>tablas de mortalidad por sexo, nacionales y departamentales (anexos
+1 y 3); e0 por sexo (tabla 3.14) y mortalidad infantil 1962-1993 por
+varias fuentes (tabla 3.13)</td>
+<td>DANE, Conciliación censal 1985-2005 (2007); nuevo el 2026-11-12</td>
+<td>sin extraer; origen de las tablas 1985-2005 que recoge Estudios
+postcensales n.º 8</td>
+</tr>
+<tr class="odd">
 <td><code>data_input/lifetables/tablas_utf8.txt</code>,
 <code>data_input/reference/dane_lifetables_nmx_1985_2020.csv</code></td>
 <td>1985-2020</td>
@@ -1553,8 +1615,30 @@ y 4m1; 1950-1953 con WPP escalado.</td>
 <td>mortalidad ajustada componente a componente (menores de cinco de UN
 IGME; natural 5-79 con completitud empírica y suavizado; 65 y más con
 modelo relacional; violenta con el faltante del conflicto), con e0, 5q0,
-45q15, e60 y e80 por serie.</td>
-<td>42</td>
+45q15, e60 y e80 por serie; crisis: pisos de la Policía y de La
+Violencia y Armero 1985, de
+<code>crisis_deaths_1950-2023.csv</code>.</td>
+<td>42, 47</td>
+</tr>
+<tr class="even">
+<td><code>output/tables/dept_mortality_adjusted_components_1985-2023.csv</code>,
+<code>dept_mortality_adjusted_summary.csv</code>,
+<code>dept_completeness_applied_1985-2023.csv</code>,
+<code>dept_vs_national_adjusted_deaths.csv</code></td>
+<td>1985-2023</td>
+<td>el mismo ajuste por departamento (29 unidades, Amazonía agrupada),
+con población DANE; completitud departamental calibrada a la serie
+nacional; MSE departamental de 51; e0 frente al registro y a las tablas
+DANE</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td><code>output/tables/mse_departments_1985-2018.csv</code></td>
+<td>1985-2018</td>
+<td>muertes del conflicto por departamento, sexo y edad quinquenal: MSE
+regional por participación documentada, exceso sobre las violentas EEVV
+y desapariciones, calibrados a la serie nacional</td>
+<td>51</td>
 </tr>
 <tr class="even">
 <td><code>output/tables/child_mortality_brass_census1973.csv</code>,
@@ -1906,7 +1990,7 @@ versionados, se apunta a la copia principal con la variable de entorno
 <code>COL_PROJECT_ROOT</code>.</p>
 <h3 id="documentos-fuente-en-el-proyecto">8.2 Documentos fuente en el
 proyecto</h3>
-<p>Hay 68 documentos fuente en el proyecto (973 MB) y 56 de ellos (969
+<p>Hay 66 documentos fuente en el proyecto (949 MB) y 54 de ellos (945
 MB) están solo en el disco local: <code>.gitignore</code> excluye los
 PDF de <code>data_input/historical/</code> y la carpeta
 <code>literature/</code>, y los de <code>data_input/dane_pdfs/</code>
@@ -2104,6 +2188,16 @@ al 5q0 departamental del script 33</td>
 departamento que el resumen nacional de 1973 no trae (por revisar)</td>
 </tr>
 <tr class="odd">
+<td><code>5Mortalidad85_05.pdf</code> (en
+<code>dane_pdfs/censos/</code>)</td>
+<td><em>Conciliación censal 1985-2005. Colombia. Estimación de la
+mortalidad 1985-2005</em> (2007)</td>
+<td>299</td>
+<td>tablas de mortalidad 1985, 1993, 2005 y quinquenales, nacionales y
+departamentales; e0 en los censos 1951-2005; factores de ajuste de las
+defunciones de 2005</td>
+</tr>
+<tr class="even">
 <td><code>estudios_postcensales_07.pdf</code>,
 <code>estudios_postcensales_08.pdf</code></td>
 <td>Estudios postcensales n.º 7 (2009) y n.º 8 (2008)</td>
@@ -2112,20 +2206,20 @@ departamento que el resumen nacional de 1973 no trae (por revisar)</td>
 n.º 8 es el documento de las tablas abreviadas 1985-2020 (el PDF local
 tiene 12 páginas con texto: comprobar que esté completo)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>LD_773_1971_1974_V_2_EJ_4.pdf</code></td>
 <td>Población y hechos vitales en las áreas del estudio CIMED-ERED, tomo
 2</td>
 <td>181</td>
 <td>hechos vitales de una encuesta por muestreo 1971-1974</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>LD_70106_1968_1969_EJ_3.pdf</code></td>
 <td><em>Anuario demográfico</em> 1968-1969</td>
 <td>178</td>
 <td>citado en 22 celdas de las defunciones departamentales</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>LD_70104_1915.pdf</code>, <code>LD_70104_1924_1926.pdf</code>
 … <code>LD_70104_1931_EJ_2.pdf</code></td>
 <td>anuarios estadísticos de 1915 y de 1925 a 1931</td>

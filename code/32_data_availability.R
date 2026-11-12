@@ -102,6 +102,8 @@ nat <- bind_rows(
         "reference/wpp2024_colombia_pop_single_age_1950-2023.csv"),
   serie("Nacional", "Población", "DANE proyecciones, suma municipal (hasta 2023; a 2042)", 1985:2023, "Edad y sexo",
         "DANEpop/*.xlsx"),
+  serie("Nacional", "Población", "DANE proyecciones nacionales (1950-2017; a 2070)", 1950:2023, "Edad y sexo",
+        "dane_pdfs/censos/PPED-AreaSexoEdadNac-*.xlsx"),
   # all-cause deaths
   serie_csv("Nacional", "Defunciones", "Anuarios DANE, total y sexo", "national_deaths_clean_v03.csv",
             delim = ";", min_share = 0) |>

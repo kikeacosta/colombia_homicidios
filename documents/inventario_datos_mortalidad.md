@@ -1,6 +1,6 @@
 # Inventario de datos de mortalidad: Colombia, niveles nacional, departamental y municipal
 
-Estado al 2026-11-11 (versión anterior: 2026-11-10). Rutas relativas a la raíz del proyecto
+Estado al 2026-11-12 (versión anterior: 2026-11-10). Rutas relativas a la raíz del proyecto
 (`C:\Users\kikep\gits\colombia_homicidios`). `data_input/` contiene insumos originales o transcritos;
 `data_inter/` productos intermedios de los scripts; `output/tables/` las series finales.
 
@@ -11,7 +11,7 @@ lo describe, junto con los documentos fuente.
 
 ## Novedades desde la versión del 2026-11-10
 
-Estado del 2026-11-11 a las 22:45. Si un archivo está o no en git lo dice la columna `en_git` de
+Estado del 2026-11-12. Si un archivo está o no en git lo dice la columna `en_git` de
 `output/tables/data_catalog_files.csv`; aquí no se repite porque cambia con cada commit.
 
 | Qué entra | Archivos | Estado |
@@ -25,7 +25,8 @@ Estado del 2026-11-11 a las 22:45. Si un archivo está o no en git lo dice la co
 | Coeficientes de Trussell y tablas modelo Coale-Demeny para el método de Brass | `data_input/reference/trussell_child_mortality_coefficients.csv`, `coale_demeny_child_q_by_level.csv` | script 43 |
 | WPP 2024, población al 1 de enero por edad simple y sexo, 1950-2024 | `data_input/reference/wpp2024_colombia_pop_1jan_single_age_1950-2024.csv` | versionado; scripts 37-39 |
 | Productos de los scripts 34 a 44: contraste con WPP, completitud comparada, reconstrucción poblacional, componentes de la mortalidad, mortalidad en la niñez (sección 5) | `output/tables/` | scripts 34 a 44 |
-| **Carpeta `data_input/dane_pdfs/`**: 41 PDF de la biblioteca digital del DANE (833 MB). Anuarios de 1915 a 1931 y de 1968-1969, once boletines mensuales de 1977 a 2005, *Nacimientos registrados 1973-1984*, estimaciones departamentales de mortalidad infantil 1981-1993, mortalidad materna 1992-1996, la muestra de avance del censo de 1973, Estudios postcensales 7 y 8 y el estudio CIMED-ERED 1971-1974, entre otros | `data_input/dane_pdfs/*.pdf` | catalogados con su dirección de origen; sin extraer. Ocho son documentos que citaban las transcripciones; tres duplican PDF de `historical/` |
+| **Carpeta `data_input/dane_pdfs/`**: 49 PDF de la biblioteca digital del DANE (907 MB). Anuarios de 1915 a 1931 y de 1968-1969, once boletines mensuales de 1977 a 2005, *Nacimientos registrados 1973-1984*, estimaciones departamentales de mortalidad infantil 1981-1993, mortalidad materna 1992-1996, la muestra de avance del censo de 1973, Estudios postcensales 7 y 8 y el estudio CIMED-ERED 1971-1974, entre otros | `data_input/dane_pdfs/*.pdf` | catalogados con su dirección de origen; sin extraer. Ocho son documentos que citaban las transcripciones; tres duplican PDF de `historical/` |
+| **Series postcensales e intercensales del DANE** (`data_input/dane_pdfs/censos/`): proyecciones de población por área, sexo y edad simple, nacionales 1950-2017 y 2018-2070 y departamentales 1985-2050 (cuatro libros); y *Conciliación censal 1985-2005: estimación de la mortalidad* (2007, 299 páginas), con tablas de mortalidad por sexo, nacionales y departamentales, de 1985, 1993 y 2005 y de los quinquenios 1985-2005, e0 y mortalidad infantil en los censos de 1951 a 2005 y factores de ajuste de las defunciones de 2005 | `PPED-AreaSexoEdadNac-*.xlsx`, `DCD-area-sexo-edad-proypoblacion-dep-*.xlsx`, `PPED-AreaSexoEdadDep-2018-2050_VP.xlsx`, `5Mortalidad85_05.pdf` | catalogados el 2026-11-12; sin extraer ni usar. No cambian la figura 0.1: la población nacional por edad y sexo desde 1950 ya la daba WPP, y la departamental desde 1985 sale de los municipios de DANEpop |
 | Registro de fuentes, catálogo de archivos y lista de documentos fuente con su dirección de origen (sección 8) | `documents/inventory/`, `output/tables/data_catalog*.csv` | nuevo en esta versión |
 
 ## 0. Vista rápida: qué información hay y de qué fuentes
@@ -106,7 +107,7 @@ nivel, dominio y año con información:
 | Departamental | Defunciones | 9 (1970-1978) | edad y sexo por sección del país (*Registro de defunciones*, cuadros 10 y 11) |
 | Departamental | Población | 3 (1938, 1951, 1964) | edad quinquenal por departamento (tablas censales extraídas de los PDF) |
 
-Nada es nuevo a nivel municipal, ni en los homicidios (la OMS ya daba la edad y el sexo de 1953 a
+Las proyecciones DANE nacionales (1950-2070) y departamentales (1985-2050) llegadas el 2026-11-12 no añaden años ni detalle a esta figura. Nada es nuevo a nivel municipal, ni en los homicidios (la OMS ya daba la edad y el sexo de 1953 a
 1977). Las defunciones nacionales por edad y sexo de 1953 a 1977 ya estaban en la OMS, y WPP 2024
 ya cubría 1950-2023, de modo que ninguna de las dos cuenta. LAMBdA sí cuenta como nueva. Es una
 comparación por fuente: marca si la información existe y con qué detalle, no distingue correcciones
@@ -211,6 +212,8 @@ Huecos principales:
 | `data_input/reference/wpp2024_colombia_pop_1jan_single_age_1950-2024.csv` | 1950-2024 | población al 1 de enero, edad simple × sexo | WPP 2024 | 37 (produce); 38, 39 |
 | `data_input/historical/census_tables/census1938_single_age_sex.csv`, `census1973_single_age_sex.csv` | censos 1938 y 1973 | edad simple (0-98, 99+) × sexo; 1938 con fila indígena; 1973 población censada sin ajuste | DANE, resúmenes censales (OCR / transcripción validada, hist/23) | hist/23 (produce); sin uso aún |
 | `data_input/historical/census_tables/census1964_single_age_sex_zone.csv` | censo 1964 | edad simple (0-98, 99+) × sexo × zona (total, cabecera, resto); población censada 17.484.508 | DANE, resumen general de 1964, cuadro 9 (OCR validado, hist/23). | hist/23 (produce); sin uso aún |
+| `data_input/dane_pdfs/censos/PPED-AreaSexoEdadNac-1950-2017.xlsx`, `PPED-AreaSexoEdadNac-2018-2070.xlsx` | 1950-2070 | área (cabecera, resto, total) × sexo × edad simple (0-100) | DANE, retroproyecciones y proyecciones nacionales (nuevo el 2026-11-12) | sin uso aún; sirve para contrastar con WPP 2024 antes de 1985 |
+| `data_input/dane_pdfs/censos/DCD-area-sexo-edad-proypoblacion-dep-1985-1992.xlsx`, `…-1993-2004.xlsx`, `…-2005-2017_VP.xlsx`, `PPED-AreaSexoEdadDep-2018-2050_VP.xlsx` | 1985-2050 | área × sexo × edad simple, 33 unidades | DANE, proyecciones departamentales (nuevo el 2026-11-12) | sin uso aún; control de la suma de DANEpop y años 2043-2050 que DANEpop no trae |
 | `data_input/migration/undesa_pd_2020_ims_stock_by_age_sex_and_destination.xlsx`, `undesa_pd_2024_ims_stock_by_sex_destination_and_origin.xlsx` | 1990-2024 | stock de emigrantes colombianos por edad y sexo | UN DESA | 21 → `data_inter/emigrant_stock_age_1990-2024.rds` → 22, 23 |
 
 ### 2.4 Mortalidad en la niñez
@@ -228,6 +231,7 @@ Huecos principales:
 | `data_input/reference/nrc1982_colombia_lifetables.csv` | 1950, 1955, 1960, 1965, 1970, 1975 | l(x) por sexo en las edades 0, 1, 2, 3, 4, 5, 10, …, 80, y e(0) | National Research Council (1982), *Levels and Recent Trends in Fertility and Mortality in Colombia*, apéndice F; leído a ojo del lector en línea y verificado contra Q(x) impreso. Estimación independiente de WPP para el tramo sin ajuste propio (1950-1969). | 44 (produce) |
 | `data_input/historical/lambda_Col_mltper_1x1.txt`, `lambda_Col_fltper_1x1.txt` | 1950-2015 | 1x1: mx, qx, lx, Lx, Tx, ex | LAMBdA | 25, 28 |
 | `I:/My Drive/gits_drive/colombia_bereavement_pdr/data_input/life_tables_lambda.csv` (fuera del repo) | pivotales 1905, 1912, 1918, 1928, 1938, 1944, 1957 … 2008 | abreviadas × sexo | LAMBdA | 29 |
+| `data_input/dane_pdfs/censos/5Mortalidad85_05.pdf` | 1985, 1993, 2005; quinquenios 1985-2005; e0 en 1951-2005 | tablas de mortalidad por sexo, nacionales y departamentales (anexos 1 y 3); e0 por sexo (tabla 3.14) y mortalidad infantil 1962-1993 por varias fuentes (tabla 3.13) | DANE, Conciliación censal 1985-2005 (2007); nuevo el 2026-11-12 | sin extraer; origen de las tablas 1985-2005 que recoge Estudios postcensales n.º 8 |
 | `data_input/lifetables/tablas_utf8.txt`, `data_input/reference/dane_lifetables_nmx_1985_2020.csv` | 1985-2020 | nmx abreviadas, nacional y departamental | DANE, proyecciones 2005-2020 | 24, 25, 28 |
 
 ## 3. Nivel departamental
@@ -364,7 +368,7 @@ tiene los insumos no versionados, se apunta a la copia principal con la variable
 
 ### 8.2 Documentos fuente en el proyecto
 
-Hay 68 documentos fuente en el proyecto (973 MB) y 56 de ellos (969 MB) están solo en el disco
+Hay 66 documentos fuente en el proyecto (949 MB) y 54 de ellos (945 MB) están solo en el disco
 local: `.gitignore` excluye los PDF de `data_input/historical/` y la carpeta `literature/`, y los
 de `data_input/dane_pdfs/` tampoco están en git. Su sha256 está en `data_catalog_files.csv`. Los del
 DANE se pueden volver a bajar de la biblioteca digital
@@ -403,6 +407,7 @@ extraer:
 | `LB_10353_1985_1993.pdf` | *Estimaciones departamentales de la mortalidad infantil 1985-1993*, con perspectivas 1995-2005 | 21 | tasas de mortalidad infantil por departamento 1981-1993; alternativa al 5q0 departamental del script 33 |
 | `LB_10525_1992-1996.pdf` | *La mortalidad materna en Colombia, 1992-1996* | 108 | mortalidad materna por departamento y municipio |
 | `LD_1007_1973_EJ_4.pdf` | *La población en Colombia*, muestra de avance del censo de 1973 | 422 | resumen por departamentos y capitales; posible fuente de la edad por departamento que el resumen nacional de 1973 no trae (por revisar) |
+| `5Mortalidad85_05.pdf` (en `dane_pdfs/censos/`) | *Conciliación censal 1985-2005. Colombia. Estimación de la mortalidad 1985-2005* (2007) | 299 | tablas de mortalidad 1985, 1993, 2005 y quinquenales, nacionales y departamentales; e0 en los censos 1951-2005; factores de ajuste de las defunciones de 2005 |
 | `estudios_postcensales_07.pdf`, `estudios_postcensales_08.pdf` | Estudios postcensales n.º 7 (2009) y n.º 8 (2008) | 300 y 12 | niveles y escenarios de mortalidad de las proyecciones 1985-2005; el n.º 8 es el documento de las tablas abreviadas 1985-2020 (el PDF local tiene 12 páginas con texto: comprobar que esté completo) |
 | `LD_773_1971_1974_V_2_EJ_4.pdf` | Población y hechos vitales en las áreas del estudio CIMED-ERED, tomo 2 | 181 | hechos vitales de una encuesta por muestreo 1971-1974 |
 | `LD_70106_1968_1969_EJ_3.pdf` | *Anuario demográfico* 1968-1969 | 178 | citado en 22 celdas de las defunciones departamentales |
