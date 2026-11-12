@@ -6,14 +6,18 @@
 # anything: 45 takes about five minutes because it fits the model, and has to
 # be run again only when the model or its inputs change.
 #
-# figure   observed against predicted homicides by unit. Black: observed
+# figure   observed against predicted homicides by unit. Black points:
+#          observed, i.e. the registered counts as published, with no
+#          adjustment for under-registration
 #          (anuarios to 1965, EEVV from 1979; anuario cells that the model
 #          reads as gross errors are not drawn). Grey strips: blocks of years
 #          in which the homicide counts were hidden and predicted back with
 #          the inputs of each variant (N nothing, S sex ratio, SP sex ratio +
 #          Policia; P Policia alone is also in the table). Cream strip,
 #          1966-1978: no observed count exists, so the same readings are
-#          shown without a truth, next to the original Policia counts.
+#          shown without a truth, next to the original Policia counts
+#          (hollow black triangles). N is an interpolation: inside the block
+#          the model gets only the total of registered deaths of each year.
 #
 # options  at the top of section 1: units, variants, rate or count, log or
 #          linear scale, the variant that gets the 90 % band.
@@ -65,7 +69,10 @@ panel_of <- function(u) factor(unit_lab[u], unit_lab[units])
 blocks <- c("1946-1953", "1954-1965", "1979-1984", "1985-1997", "1998-2010") # the ones that do not overlap
 gap_years <- 1966:1978
 var_code <- c("N: nothing in the block" = "N", "S: sex ratio" = "S", "P: Policia" = "P", "SP: sex ratio + Policia" = "SP")
-var_lab <- c(N = "Sin insumos en el bloque", S = "Razón de sexos", P = "Policía", SP = "Razón de sexos + Policía")
+# original data are all black, one symbol per source
+shp_lab <- c(anu = "Anuarios", eevv = "EEVV", pol = "Policía")
+shp_val <- c(anu = 21, eevv = 16, pol = 24) # 21 and 24 are filled in white
+var_lab <- c(N = "Sin usar datos del bloque (interpolación)",S = "Razón de sexos", P = "Policía", SP = "Razón de sexos + Policía")
 var_col <- c(N = "grey50", S = "#2a78d6", P = "#b0471c", SP = "#eb6834")
 var_lty <- c(N = "22", S = "solid", P = "42", SP = "solid")
 ink <- "#1f1f1e"
@@ -135,9 +142,13 @@ fig <- ggplot() +
   geom_ribbon(data = pred |> filter(code %in% band_variant), aes(year, ymin = lo, ymax = hi, group = block),
               fill = var_col[band_variant], alpha = 0.15) +
   geom_line(data = pred, aes(year, y, colour = variante, linetype = variante, group = interaction(block, variante)), linewidth = 0.6) +
-  geom_point(data = pol, aes(year, y), colour = "#b0471c", shape = 2, size = 1.4, stroke = 0.5) +
+  geom_point(data = pol, aes(year, y, shape = shp_lab[["pol"]]), colour = ink, fill = "white", size = 1.3, stroke = 0.5) +
   geom_line(data = obs, aes(year, y, group = src), colour = ink, linewidth = 0.35) +
-  geom_point(data = obs, aes(year, y), colour = ink, size = 0.9) +
+  geom_point(data = obs |> filter(src == "anuarios"), aes(year, y, shape = shp_lab[["anu"]]), colour = ink, fill = "white", size = 1.2, stroke = 0.5) +
+  geom_point(data = obs |> filter(src == "EEVV"), aes(year, y, shape = shp_lab[["eevv"]]), colour = ink, size = 0.9) +
+  scale_shape_manual(values = setNames(shp_val, shp_lab), limits = unname(shp_lab),
+                     guide = guide_legend(order = 2, override.aes = list(size = 1.7, stroke = 0.5, fill = "white"))) +
+  guides(colour = guide_legend(order = 1), linetype = guide_legend(order = 1)) +
   geom_text(data = lab, aes(x, Inf, label = label), vjust = 1.3, size = 2.7, colour = "grey30", lineheight = 0.9) +
   scale_colour_manual(values = setNames(var_col[variants], var_lab[variants])) +
   scale_linetype_manual(values = setNames(var_lty[variants], var_lab[variants])) +
@@ -146,10 +157,10 @@ fig <- ggplot() +
                            expand = expansion(mult = c(0, 0.05)))) +
   facet_wrap(~panel, ncol = n_col, scales = "free_y") +
   labs(title = "Capacidad predictiva: homicidios observados y predichos en años ocultos al modelo",
-       subtitle = paste0(txt_measure, ". Negro: observado (anuarios hasta 1965, EEVV desde 1979).\n",
+       subtitle = paste0(txt_measure, ". En negro, los datos originales, sin ajuste por subregistro: anuarios hasta 1965, EEVV desde 1979 y Policía en 1966-1978.\n",
                          "Franjas grises: el modelo no vio los homicidios de esos años y los predijo con el insumo indicado.", txt_band, "\n",
-                         "Franja crema, 1966-1978: no hay dato observado; se muestran ", txt_readings,
-                         " y, en triángulos, el conteo original de la Policía."),
+                         "Franja crema, 1966-1978: no hay homicidios en las estadísticas vitales para contrastar; se muestran ", txt_readings,
+                         " junto al conteo de la Policía."),
        x = NULL, y = NULL, colour = NULL, linetype = NULL,
        caption = paste0(if ("SP" %in% variants) "La Policía solo existe en 1962-1997; en 1966-1978 la línea naranja es el modelo completo, que además usa el total nacional de la OMS.\n" else "",
                         "Parámetros estimados con todos los datos; solo se ocultan los homicidios del bloque.")) +
