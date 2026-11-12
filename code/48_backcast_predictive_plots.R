@@ -15,8 +15,9 @@
 #          the inputs of each variant (N nothing, S sex ratio, SP sex ratio +
 #          Policia; P Policia alone is also in the table). Cream strip,
 #          1966-1978: no observed count exists, so the same readings are
-#          shown without a truth, next to the original Policia counts
-#          (hollow black triangles). N is an interpolation: inside the block
+#          shown without a truth. The original Policia counts (hollow black
+#          triangles) are drawn in all the years the model uses them,
+#          1962-1997; in 1966-1978 they are the only count. N is an interpolation: inside the block
 #          the model gets only the total of registered deaths of each year.
 #
 # options  at the top of section 1: units, variants, rate or count, log or
@@ -67,7 +68,7 @@ stopifnot(all(units %in% names(unit_lab)), all(variants %in% c("N", "S", "P", "S
 panel_of <- function(u) factor(unit_lab[u], unit_lab[units])
 
 blocks <- c("1946-1953", "1954-1965", "1979-1984", "1985-1997", "1998-2010") # the ones that do not overlap
-gap_years <- 1966:1978
+pol_years <- 1962:1997 # years of the Policia counts to draw: the ones the model uses (the table goes to 2002)
 var_code <- c("N: nothing in the block" = "N", "S: sex ratio" = "S", "P: Policia" = "P", "SP: sex ratio + Policia" = "SP")
 # original data are all black, one symbol per source
 shp_lab <- c(anu = "Anuarios", eevv = "EEVV", pol = "Policía")
@@ -100,9 +101,9 @@ pred <- bind_rows(val |> filter(block %in% blocks), gap) |>
   mutate(variante = factor(var_lab[code], var_lab[variants]), panel = panel_of(unit),
          y = as_measure(hom_pred, pop), lo = as_measure(hom_pred_lo90, pop), hi = as_measure(hom_pred_hi90, pop))
 
-# original Policia counts in 1966-1978
+# original Policia counts
 pol <- est |>
-  filter(unit %in% units, year %in% gap_years, !is.na(hom_policia), hom_policia > 0) |>
+  filter(unit %in% units, year %in% pol_years,!is.na(hom_policia), hom_policia > 0) |>
   mutate(y = as_measure(hom_policia, pop), panel = panel_of(unit))
 
 no_gap <- setdiff(units, gap$unit)
@@ -157,12 +158,12 @@ fig <- ggplot() +
                            expand = expansion(mult = c(0, 0.05)))) +
   facet_wrap(~panel, ncol = n_col, scales = "free_y") +
   labs(title = "Capacidad predictiva: homicidios observados y predichos en años ocultos al modelo",
-       subtitle = paste0(txt_measure, ". En negro, los datos originales, sin ajuste por subregistro: anuarios hasta 1965, EEVV desde 1979 y Policía en 1966-1978.\n",
+       subtitle = paste0(txt_measure, ". En negro, los datos originales, sin ajuste por subregistro: anuarios hasta 1965, EEVV desde 1979 y Policía en ", min(pol_years), "-", max(pol_years), ".\n",
                          "Franjas grises: el modelo no vio los homicidios de esos años y los predijo con el insumo indicado.", txt_band, "\n",
                          "Franja crema, 1966-1978: no hay homicidios en las estadísticas vitales para contrastar; se muestran ", txt_readings,
-                         " junto al conteo de la Policía."),
+                         "; el único conteo es el de la Policía."),
        x = NULL, y = NULL, colour = NULL, linetype = NULL,
-       caption = paste0(if ("SP" %in% variants) "La Policía solo existe en 1962-1997; en 1966-1978 la línea naranja es el modelo completo, que además usa el total nacional de la OMS.\n" else "",
+       caption = paste0(if ("SP" %in% variants) "El modelo usa la Policía solo en 1962-1997; en 1966-1978 la línea naranja es el modelo completo, que además usa el total nacional de la OMS.\n" else "",
                         "Parámetros estimados con todos los datos; solo se ocultan los homicidios del bloque.")) +
   base
 
