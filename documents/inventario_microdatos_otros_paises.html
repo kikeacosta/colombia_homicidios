@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-11-14" />
+  <title>Microdatos de mortalidad de Brasil, México y Estados Unidos: qué hay y qué falta</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 62em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style>
+table { font-size: 0.9em; margin: 1em 0; }
+th, td { padding: 0.3em 0.6em; vertical-align: top; }
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Microdatos de mortalidad de Brasil, México y Estados Unidos: qué hay y qué falta</h1>
+<p class="date">2026-11-14</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Contenido</h2>
+<ul>
+<li><a href="#resumen" id="toc-resumen">1. Resumen</a></li>
+<li><a href="#brasil" id="toc-brasil">2. Brasil</a></li>
+<li><a href="#méxico" id="toc-méxico">3. México</a></li>
+<li><a href="#estados-unidos" id="toc-estados-unidos">4. Estados Unidos</a></li>
+<li><a href="#qué-falta-para-el-análisis-en-conjunto" id="toc-qué-falta-para-el-análisis-en-conjunto">5. Qué falta para el análisis en conjunto</a></li>
+<li><a href="#disco" id="toc-disco">6. Disco</a></li>
+<li><a href="#qué-no-se-verificó" id="toc-qué-no-se-verificó">7. Qué no se verificó</a></li>
+</ul>
+</nav>
+<p>Inventario de <code>D:\data</code> al 14 de noviembre de 2026, hecho para replicar por estado la validación del modelo de homicidios con la razón de sexos. Lo que el análisis necesita de cada país es un panel de defunciones por estado, año, sexo, edad y causa (homicidio o no).</p>
+<p>El inventario se hizo en modo de solo lectura: se abrieron encabezados y primeras filas, no archivos completos. La última sección dice qué quedó sin verificar.</p>
+<p><strong>Actualización del 22 de noviembre de 2026.</strong> Las secciones siguientes describen lo que había el 14 de noviembre. Desde entonces:</p>
+<table>
+<thead>
+<tr class="header">
+<th>País</th>
+<th>Qué cambió</th>
+<th>Panel por estado que se usa ahora</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Brasil</td>
+<td>se bajaron de DATASUS los archivos nacionales de 1979-1989 (CIE-9, <code>.dbc</code>) a <code>brazil_mortality\sim_cid9_1979_1989</code>; Tocantins se mantiene dentro de Goiás para que las unidades sean estables</td>
+<td>1979-2020, 26 unidades (<code>code/71</code>)</td>
+</tr>
+<tr class="even">
+<td>México</td>
+<td>llegaron los dbf de INEGI de todos los años de registro, 1990-2025; el de 2020 reemplaza al CSV, que INEGI corrigió en 2022</td>
+<td>1990-2025 por año de ocurrencia, 32 entidades (<code>code/73</code>); la validación usa 1990-2024</td>
+</tr>
+<tr class="odd">
+<td>Estados Unidos</td>
+<td>se leyeron los microdatos de 1979-2004 (posiciones comprobadas contra los totales publicados) y llegaron tablas de CDC WONDER 1999-2020 por estado</td>
+<td>1979-2020, 48 estados en todas las edades y 44 en 15-44 (<code>code/74</code>, <code>code/76</code>); definición estrecha de muerte violenta, sin intención no determinada</td>
+</tr>
+</tbody>
+</table>
+<p>Todo se respalda en el disco externo (<code>H:\data</code>, con un README que describe cada carpeta). La sección 5 queda superada en lo que respecta a México 1990-2011 y a EE. UU. después de 2004. Lo que sigue faltando de EE. UU.: las defunciones de todas las causas de 1968-1978 por estado y sexo (el archivo con ese nombre es en realidad la consulta de homicidios) y, si se quiere la misma definición que en los otros países, la intención no determinada desde 2005.</p>
+<h1 id="resumen">1. Resumen</h1>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Brasil</th>
+<th>México</th>
+<th>Estados Unidos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Carpeta</td>
+<td><code>brazil_mortality</code></td>
+<td><code>mexico_mortality</code></td>
+<td><code>us_mortality</code></td>
+</tr>
+<tr class="even">
+<td>Fuente</td>
+<td>SIM, Ministerio de Salud</td>
+<td>INEGI, defunciones registradas</td>
+<td>NCHS, archivos de uso público</td>
+</tr>
+<tr class="odd">
+<td>Años en la carpeta</td>
+<td>1990-2020</td>
+<td>2012-2020 (año de registro)</td>
+<td>1979-2021</td>
+</tr>
+<tr class="even">
+<td>Archivos y tamaño</td>
+<td>31 CSV, 7,2 GB</td>
+<td>9 CSV, 0,4 GB (8 dentro de un zip)</td>
+<td>43 zip, 3,5 GB (unos 45 GB al descomprimir)</td>
+</tr>
+<tr class="odd">
+<td>Formato</td>
+<td>CSV con encabezado</td>
+<td>CSV con encabezado</td>
+<td>texto de ancho fijo, sin encabezado</td>
+</tr>
+<tr class="even">
+<td>Estado de residencia</td>
+<td>sí, todos los años</td>
+<td>sí, todos los años</td>
+<td><strong>solo 1979-2004</strong></td>
+</tr>
+<tr class="odd">
+<td>Sexo, edad y causa</td>
+<td>sí</td>
+<td>sí</td>
+<td>sí, pero falta el diccionario para ubicarlos antes de 2003</td>
+</tr>
+<tr class="even">
+<td>Clasificación de causas</td>
+<td>CIE-9 hasta 1995, CIE-10 desde 1996</td>
+<td>CIE-10</td>
+<td>CIE-9 hasta 1998, CIE-10 desde 1999</td>
+</tr>
+<tr class="odd">
+<td>Diccionario en la carpeta</td>
+<td>sí (PDF)</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr class="even">
+<td><strong>Panel por estado que se puede armar hoy</strong></td>
+<td><strong>1990-2020, 27 unidades</strong></td>
+<td><strong>2012-2020, 32 entidades</strong></td>
+<td><strong>1979-2004, 51 unidades</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Ninguna carpeta trae tablas ya agregadas ni población.</p>
+<h1 id="brasil">2. Brasil</h1>
+<p><strong>Lo que hay</strong></p>
+<ul>
+<li>Un CSV por año, de 1990 a 2020, sin huecos.</li>
+<li>El estado sale de los dos primeros dígitos del código de municipio, tanto de residencia como de ocurrencia. No hay una columna de estado aparte.</li>
+<li>Sexo, edad (código de tres dígitos: unidad y valor), fecha de defunción y causa básica en todos los años.</li>
+<li>El diccionario oficial del SIM, con la definición de cada variable y el año en que empezó.</li>
+</ul>
+<p><strong>Lo que falta o complica</strong></p>
+<ul>
+<li><strong>Los nombres de las columnas cambian tres veces</strong> (1990-1995, 1996-2005, 2006 en adelante). Hay que armonizarlos.</li>
+<li><strong>Cambio de clasificación en 1996.</strong> La serie de homicidios cruza de CIE-9 a CIE-10; hay que comprobar que no deje un escalón.</li>
+<li><strong>En 1990-1995 algunas defunciones traen residencia solo a nivel de estado.</strong> No afecta un análisis por estado.</li>
+<li><strong>1979-1989 no está en la carpeta.</strong> El SIM existe desde 1979; esos años alargarían la serie, pero no son indispensables.</li>
+<li><strong>Calidad del registro.</strong> Es conocido que en el norte y el nordeste hubo subregistro y muchas causas mal definidas o de intención no determinada, sobre todo en los años noventa. No se midió aquí.</li>
+</ul>
+<h1 id="méxico">3. México</h1>
+<p><strong>Lo que hay</strong></p>
+<ul>
+<li>Un CSV por año de registro, de 2012 a 2020, con la misma estructura de 59 columnas.</li>
+<li>Entidad de residencia, de ocurrencia y de registro; sexo; edad; año de ocurrencia; causa en CIE-10.</li>
+<li>Una variable propia de muerte violenta (<code>presunto</code>), además del código de causa.</li>
+</ul>
+<p><strong>Lo que falta o complica</strong></p>
+<ul>
+<li><strong>Solo nueve años.</strong> Es poco para la prueba de bloques ocultos, que necesita una serie larga a cada lado del bloque.</li>
+<li><strong>Falta 1990-2011.</strong> INEGI publica estos microdatos desde 1990. Sin esos años no se ve la subida de la violencia de 2007 a 2011, que es el tramo más informativo para el método.</li>
+<li><strong>Los archivos van por año de registro, no de ocurrencia.</strong> Cada archivo trae defunciones de años anteriores. Hay que reclasificar por año de ocurrencia, y el último año queda incompleto.</li>
+<li><strong>No hay diccionario en la carpeta.</strong> Los códigos de sexo y edad se leyeron según la convención de INEGI, sin comprobarlos.</li>
+<li><strong>Detalles de formato:</strong> los códigos de entidad de 2012-2019 traen un tabulador pegado, y el archivo de 2020 está fuera del zip, con los nombres en mayúsculas y una columna de más.</li>
+</ul>
+<h1 id="estados-unidos">4. Estados Unidos</h1>
+<p><strong>Lo que hay</strong></p>
+<ul>
+<li>Un zip por año, de 1979 a 2021, sin huecos. Cada uno contiene un archivo de texto de ancho fijo.</li>
+<li>Estado de ocurrencia en 1979-2004, y estado de residencia confirmado en 2003-2004.</li>
+<li>Causa básica en todos los años; sexo y edad ubicados desde 2003.</li>
+</ul>
+<p><strong>Lo que falta o complica</strong></p>
+<ul>
+<li><strong>De 2005 a 2021 no hay estado ni condado.</strong> Son los archivos de uso público, a los que NCHS les quita la geografía desde 2005. Para esos años haría falta otra fuente: los archivos restringidos de NCHS o los conteos por estado de CDC WONDER.</li>
+<li><strong>No hay diccionario.</strong> Las posiciones de 1979-2002 se dedujeron mirando los registros. El estado de residencia parece estar en las columnas 31-32, pero no está confirmado; el sexo y la edad de esos años no se ubicaron. Los diccionarios son públicos y hay que bajarlos de NCHS.</li>
+<li><strong>Dos sistemas de códigos de estado:</strong> numéricos hasta 2002 y de dos letras en 2003-2004. Hace falta una tabla de equivalencias.</li>
+<li><strong>Cambio de clasificación en 1999</strong> (CIE-9 a CIE-10).</li>
+<li><strong>Los zip de 2020 y 2021 usan una compresión que R no lee.</strong> Se pueden leer con 7-Zip, que está instalado.</li>
+<li><strong>El archivo suelto <code>Vs81mort</code> (0,8 GB) duplica</strong> el contenido de <code>mort1981us.zip</code>.</li>
+</ul>
+<h1 id="qué-falta-para-el-análisis-en-conjunto">5. Qué falta para el análisis en conjunto</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Qué falta</th>
+<th>Para qué</th>
+<th>Qué tan necesario</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Diccionarios de NCHS de 1979-2002</td>
+<td>ubicar sexo, edad y estado de residencia en Estados Unidos</td>
+<td>indispensable para usar ese país</td>
+</tr>
+<tr class="even">
+<td>Estado en Estados Unidos desde 2005</td>
+<td>alargar la serie de 26 a 43 años</td>
+<td>opcional: 1979-2004 ya alcanza para validar</td>
+</tr>
+<tr class="odd">
+<td>México 1990-2011</td>
+<td>tener una serie larga y el periodo de mayor cambio</td>
+<td>casi indispensable: con nueve años la prueba es débil</td>
+</tr>
+<tr class="even">
+<td>Definición común de homicidio</td>
+<td>comparar países y cruzar los cambios de clasificación</td>
+<td>indispensable; se propone la de Colombia: homicidio, intención no determinada e intervención legal</td>
+</tr>
+<tr class="odd">
+<td>Tablas de equivalencia de códigos de estado</td>
+<td>armar las unidades</td>
+<td>indispensable, trabajo menor</td>
+</tr>
+<tr class="even">
+<td>Población por estado y año</td>
+<td>tasas por habitante y el modelo simple de comparación</td>
+<td>opcional: el modelo principal usa defunciones, no población</td>
+</tr>
+<tr class="odd">
+<td>Brasil 1979-1989</td>
+<td>alargar la serie</td>
+<td>opcional</td>
+</tr>
+</tbody>
+</table>
+<h1 id="disco">6. Disco</h1>
+<ul>
+<li><strong>No hace falta copiar nada al proyecto.</strong> Los scripts pueden leer los microdatos desde <code>D:\data</code> y guardar solo el panel agregado por país, que pesa unos pocos megabytes.</li>
+<li><strong>Estados Unidos no se debe descomprimir entero:</strong> son unos 45 GB. Se lee cada año directamente del zip.</li>
+<li>Espacio libre al hacer el inventario: 17 GB en C:, donde está el proyecto, y 129 GB en D:.</li>
+</ul>
+<h1 id="qué-no-se-verificó">7. Qué no se verificó</h1>
+<ul>
+<li>No se contaron filas ni se revisó la distribución de años dentro de cada archivo.</li>
+<li>No se comprobó la integridad de los zip completos; solo su índice y el comienzo de los archivos abiertos.</li>
+<li>En Estados Unidos se abrieron 14 de los 43 años; los demás se suponen iguales a sus vecinos.</li>
+<li>No se probó la definición de homicidio en ningún país, ni los códigos de estado fuera de los valores esperados (extranjero, desconocido).</li>
+<li>Lo que se dice sobre lo que existe fuera de la carpeta (INEGI desde 1990, SIM desde 1979, archivos restringidos de NCHS, CDC WONDER) es conocimiento general, no algo comprobado en este inventario.</li>
+</ul>
+</body>
+</html>
