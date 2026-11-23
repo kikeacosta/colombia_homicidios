@@ -22,10 +22,10 @@
 # 2022-2024), Mexico (2000-2006; the rise from 2008, COVID-19 in 2020-2021),
 # Colombia (1979-1983; the rise of 1985-1993 and 1998-2002), Brazil
 # (1996-2000), United States (1999-2004).
-# Colombia: deaths by sex from the sex ratio of 60, violent deaths by sex not
-# known (pi not measured). United States: no violent deaths by sex from 2005.
+# Colombia: EEVV microdata by age (deaths and violent deaths by sex), the 15
+# units of 60. United States: no violent deaths by sex from 2005.
 #
-# input    data_inter/intl_datasets.rds (72)
+# input    data_inter/intl_datasets.rds (72), data_inter/deaths_munic_age_1979-2023.rds
 # output   output/tables/intl_blind_test_spain_estimator.csv (country, ages, year)
 #          output/tables/intl_blind_test_spain_estimator_units.csv (unit, period)
 #          figures/09_international/intl_blind_test_spain_estimator.png
@@ -34,6 +34,21 @@ rm(list = ls()); gc(); source("code/00_setup.R")
 options(width = 220)
 
 ds <- readRDS("data_inter/intl_datasets.rds")$datasets
+# Colombia from the EEVV microdata by age (deaths and violent deaths by sex),
+# the 15 units of 60; violent = homicide + undetermined intent + legal
+# intervention (dx_v, as in 60)
+cod_unit <- c("05" = "antioquia", "08" = "atlantico", "13" = "bolivar", "23" = "bolivar", "70" = "bolivar",
+              "15" = "boyaca", "17" = "caldas", "63" = "caldas", "66" = "caldas", "19" = "cauca",
+              "11" = "cundinamarca", "25" = "cundinamarca", "41" = "huila", "47" = "magdalena", "20" = "magdalena",
+              "52" = "narino", "54" = "norte_de_santander", "68" = "santander", "73" = "tolima", "76" = "valle_del_cauca")
+ca <- readRDS("data_inter/deaths_munic_age_1979-2023.rds") |>
+  mutate(cod_dpto = sprintf("%02d", as.integer(cod_dpto)), unit = coalesce(unname(cod_unit[cod_dpto]), "territorios")) |>
+  filter(year %in% 1979:2019)
+col_ds <- function(dat) dat |> summarise(d = sum(dx_tot), dm = sum(dx_tot[sex %in% "m"]), df = sum(dx_tot[sex %in% "f"]), # a few deaths have no sex
+                                         h = sum(dx_v), hm = sum(dx_v[sex %in% "m"]), hf = sum(dx_v[sex %in% "f"]), .by = c(unit, year)) |>
+  mutate(unit_label = unit) |> arrange(unit, year)
+ds[["colombia all"]] <- list(md = list(md = col_ds(ca)))
+ds[["colombia 15-44"]] <- list(md = list(md = col_ds(filter(ca, age %in% seq(15, 40, 5)))))
 tests <- tribble(~country, ~base0, ~base1, ~label,
                  "ecuador", 2015, 2019, "Ecuador",
                  "mexico", 2000, 2006, "México",
@@ -54,7 +69,7 @@ blind <- function(dat, base, pi = PI, country_name = "") {
               excess = d - E, nv_hat = excess - H,
               v_true = h - s * E, nv_true = (d - h) - (1 - s) * E,
               v_true2 = h - s / (1 - s) * (d - h), # without the expected deaths: violent deaths above the base share of the deaths observed
-              pi_true = ifelse(country_name == "colombia", NA, hm / (hm + hf)),
+              pi_true = hm / (hm + hf),
               dlsr_nv = log((dm - hm) / (df - hf)) - lsr_nv)
 }
 
@@ -68,7 +83,7 @@ for (k in seq_len(nrow(tests))) for (a in c("all", "15-44")) {
 res <- bind_rows(res)
 
 nat <- res |> summarise(across(c(d, h, E, excess, H, v_true, v_true2, nv_hat, nv_true), sum),
-                        pi_true = sum(hm) / sum(hm + hf) * ifelse(country[1] == "colombia", NA, 1), dlsr_nv = log(sum(dm - hm) / sum(df - hf)) - log(sum(exp(lsr_nv) * (df - hf)) / sum(df - hf)),
+                        pi_true = sum(hm) / sum(hm + hf), dlsr_nv = log(sum(dm - hm) / sum(df - hf)) - log(sum(exp(lsr_nv) * (df - hf)) / sum(df - hf)),
                         .by = c(country, label, ages, base, year))
 write_csv(nat, "output/tables/intl_blind_test_spain_estimator.csv")
 
@@ -106,6 +121,9 @@ print(as.data.frame(sc |> mutate(across(c(H, v_true, v_true2, nv_hat, nv_true), 
 fl <- nat |> select(label, ages, year, `violent: estimated` = H, `violent: true` = v_true2, `non-violent: estimated` = nv_hat, `non-violent: true` = nv_true) |>
   pivot_longer(-c(label, ages, year)) |>
   separate(name, c("part", "kind"), sep = ": ") |>
+  # Colombia: registration grew fast in 1979-1983, so the expected deaths (and
+  # the non-violent part) cannot be judged there; only the violent part is drawn
+  filter(!(label == "Colombia" & part == "non-violent")) |>
   mutate(label = factor(label, tests$label), ages = factor(ifelse(ages == "all", "all ages", "ages 15-44"), c("all ages", "ages 15-44")))
 fig <- ggplot(fl, aes(year, value / 1000, colour = part, linetype = kind)) +
   geom_hline(yintercept = 0, colour = "grey60", linewidth = 0.3) +
@@ -115,7 +133,7 @@ fig <- ggplot(fl, aes(year, value / 1000, colour = part, linetype = kind)) +
   facet_grid(ages ~ label, scales = "free") +
   labs(title = "Blind test of the Spain estimator: deaths above the base years, estimated from deaths by sex only, against the causes",
        subtitle = paste0("Violent: male deaths above the base-year sex ratio (95 % of victims men), against violent deaths above the base-year share. ",
-                         "Non-violent: excess deaths minus the violent part.\nBase years: Ecuador 2015-2019, Mexico 2000-2006, Colombia 1979-1983, Brazil 1996-2000, United States 1999-2004."),
+                         "Non-violent: excess deaths minus the violent part.\nBase years: Ecuador 2015-2019, Mexico 2000-2006, Colombia 1979-1983 (violent part only: registration grew fast in the base), Brazil 1996-2000, United States 1999-2004."),
        x = NULL, y = "thousand deaths") +
   theme_minimal(base_size = 9) +
   theme(legend.position = "bottom", panel.grid.minor = element_blank(), plot.title = element_text(face = "bold"), strip.text = element_text(face = "bold"))
