@@ -1,8 +1,8 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# 76. United States, 1979-2020: unit-year data for the validation (72),
-#     joining the microdata of 1979-2004 (74) and CDC WONDER for 2005-2020
+# 76. United States, 1968-2020: unit-year data for the validation (72),
+#     joining the microdata of 1968-2004 (74) and CDC WONDER for 2005-2020
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# The public-use microdata carry the state only until 2004. From 2005 the
+# The public-use microdata carry the state from 1968 until 2004. From 2005 the
 # counts come from CDC WONDER (Underlying Cause of Death, 1999-2020), which
 # suppresses counts of 0-9 by state. The tables were queried so that the
 # model gets what it needs without any suppressed count being derived:
@@ -34,7 +34,7 @@
 #          D:/data/us_mortality/cdc_wonder/us_all_cause_state_sex_all_ages.xls, _15_44.xls
 #          D:/data/us_mortality/cdc_wonder/us_homicides_state.xls, _15_44.xls
 #          D:/data/us_mortality/cdc_wonder/us_homicides_sex.xls, _15_44.xls
-# output   output/tables/intl_us_unit_year_1979-2020.csv
+# output   output/tables/intl_us_unit_year_1968-2020.csv
 #            (country, unit, unit_label, ages, year, d, dm, df, h, hm, hf, source)
 #          output/tables/intl_us_male_share.csv (ages, pi, years, source)
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -80,7 +80,7 @@ male_share <- function(ages) {
   w <- read_wonder(if (ages == "all") "us_homicides_sex.xls" else "us_homicides_sex_15_44.xls")[year >= 2005]
   stopifnot(!any(w$suppressed))
   hm <- sum(m$hm) + sum(w$deaths[w$Sex == "Male"]); hf <- sum(m$hf) + sum(w$deaths[w$Sex == "Female"])
-  data.table(ages = ages, pi = hm / (hm + hf), pi_micro_1979_2004 = sum(m$hm) / sum(m$hm + m$hf),
+  data.table(ages = ages, pi = hm / (hm + hf), pi_micro_1968_2004 = sum(m$hm) / sum(m$hm + m$hf),
              pi_wonder_2005_2020 = sum(w$deaths[w$Sex == "Male"]) / sum(w$deaths))
 }
 
@@ -104,8 +104,8 @@ for (ages in c("all", "15-44")) {
 res <- rbindlist(out, use.names = TRUE)[, country := "us"]
 setcolorder(res, c("country", "unit", "unit_label", "ages", "year", "d", "dm", "df", "h", "hm", "hf", "source"))
 setorder(res, ages, unit, year)
-stopifnot(res[, uniqueN(year), by = .(ages, unit)][, all(V1 == 42)])
-fwrite(res, "output/tables/intl_us_unit_year_1979-2020.csv")
+stopifnot(res[, uniqueN(year), by = .(ages, unit)][, all(V1 == 53)])
+fwrite(res, "output/tables/intl_us_unit_year_1968-2020.csv")
 pis <- rbindlist(pis)
 fwrite(pis, "output/tables/intl_us_male_share.csv")
 

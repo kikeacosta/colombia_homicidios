@@ -1,6 +1,6 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 74. United States: deaths by state, year, sex, age band and cause group,
-#     1979-2004, from the NCHS public-use mortality files
+#     1968-2004, from the NCHS public-use mortality files
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Input for the validation of the sex-ratio model outside Colombia (70, 72).
 # Each year is a zip with one fixed-width text file (0.7-1 GB unzipped). The
@@ -19,7 +19,16 @@
 # The public-use files carry the state only until 2004: from 2005 NCHS
 # removes all geography, so those years need another source (CDC WONDER).
 #
-# layout   there is no layout document in the folder. the positions below are
+# 1968-78  layout of the NCHS documentation dt78icd8.pdf (in the folder docs):
+#            resident status 12 (4 = foreign resident, from 1970), state of
+#            residence 13-14 (01-51 as below; 52-59 abroad), sex 35, age
+#            39-41 (unit at 39 as in 1979-2002), underlying cause 60-63 in
+#            ICD-8, external causes without the letter E (E960-E969 homicide,
+#            E970-E978 legal intervention, E980-E989 undetermined: the same
+#            ranges as ICD-9). 1972 is a 50 % sample of the death records:
+#            its counts are doubled. 1968-1969 have no foreign residents
+#            (NCHS allocated them to the place of occurrence)
+# layout   for 1979-2004 there is no layout document in the folder. the positions below are
 #          the ones of the NCHS documentation as remembered, and they were
 #          CHECKED against the data: the 1990 file gives 2,148,463 deaths of
 #          residents, the published total of the year, 51 state codes, and
@@ -49,7 +58,7 @@ source("code/70_intl_model_functions.R")
 library(data.table)
 
 us_dir <- "D:/data/us_mortality/"
-years <- 1979:2004
+years <- 1968:2004
 chunk_bytes <- 1e8
 only <- Sys.getenv("US_YEARS")
 years_run <- if (nzchar(only)) as.integer(strsplit(only, ",")[[1]]) else years
@@ -65,7 +74,9 @@ read_year <- function(y) {
   zip <- sprintf("%smort%dus.zip", us_dir, y)
   entry <- unzip(zip, list = TRUE)$Name[1]
   new <- y >= 2003
-  need <- if (new) 149 else 145 # last column that is read
+  icd8 <- y <= 1978
+  need <- if (new) 149 else if (icd8) 63 else 145 # last column that is read
+  weight <- if (y == 1972) 2L else 1L # 1972: NCHS processed a 50 % sample
   con <- unz(zip, entry, open = "rb"); on.exit(close(con))
   out <- list(); n <- 0; n_bad <- 0; n_foreign <- 0; n_terr <- 0
   carry <- raw(0); n_nul <- 0
@@ -84,16 +95,25 @@ read_year <- function(y) {
     # latter is enough for R to return a whole chunk as NA (1992 and 1996)
     nul <- buf == as.raw(0) | buf >= as.raw(128)
     n_nul <- n_nul + sum(nul); buf[nul] <- as.raw(32); rm(nul)
-    l <- strsplit(rawToChar(buf), "
-", fixed = TRUE, useBytes = TRUE)[[1]]
+    l <- strsplit(rawToChar(buf), "\n", fixed = TRUE, useBytes = TRUE)[[1]]
     rm(buf)
     n <- n + length(l)
     stopifnot(!anyNA(l))
     ok <- nchar(l, type = "bytes") >= need
     n_bad <- n_bad + sum(!ok); l <- l[ok]
-    foreign <- substr(l, 20, 20) == "4"
+    foreign <- substr(l, if (icd8) 12 else 20, if (icd8) 12 else 20) == "4"
     n_foreign <- n_foreign + sum(foreign); l <- l[!foreign]
-    if (new) {
+    if (icd8) {
+      # 1968-1978 (dt78icd8.pdf): residence 13-14 (52-59 abroad), occurrence
+      # 26-27, sex 35, age 39-41 (unit at 39 as in 1979-2002), underlying
+      # cause 60-63, ICD-8, external causes without the letter E
+      unit <- num_to_abb[substr(l, 13, 14)]
+      sx <- substr(l, 35, 35); sex <- fifelse(sx == "1", "m", fifelse(sx == "2", "f", "u"))
+      au <- substr(l, 39, 39); av <- suppressWarnings(as.integer(substr(l, 40, 41)))
+      age_band <- fcase(au == "1", "45+", au %in% c("2", "3", "4", "5", "6"), "0-14", au != "0" | is.na(av), "unknown",
+                        av <= 14, "0-14", av <= 44, "15-44", default = "45+")
+      cause <- intl_cause_icd9(trimws(substr(l, 60, 63))) # same ranges in ICD-8: E960-E969, E970-E978, E980-E989
+    } else if (new) {
       unit <- substr(l, 29, 30)
       sx <- substr(l, 69, 69); sex <- fifelse(sx == "M", "m", fifelse(sx == "F", "f", "u"))
       au <- substr(l, 70, 70); av <- suppressWarnings(as.integer(substr(l, 71, 73)))
@@ -115,7 +135,7 @@ read_year <- function(y) {
       , .(deaths = .N), by = .(unit, sex, age_band, cause)]
     if (done) break
   }
-  res <- rbindlist(out)[, .(deaths = sum(deaths)), by = .(unit, sex, age_band, cause)]
+  res <- rbindlist(out)[, .(deaths = sum(deaths) * weight), by = .(unit, sex, age_band, cause)]
   res[, year := y]
   say(y, entry, "| records", n, "| null or non-ASCII bytes", n_nul, "| too short", n_bad, "| foreign residents", n_foreign, "| territories or no state", n_terr,
       "| kept", sum(res$deaths), "| states", uniqueN(res$unit), "| men", sum(res$deaths[res$sex == "m"]), "| unknown sex", sum(res$deaths[res$sex == "u"]),

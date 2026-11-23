@@ -16,7 +16,8 @@
 #
 # inputs   output/tables/intl_<country>_deaths_state_year.csv
 #          (71 Brazil, 73 Mexico)
-#          output/tables/intl_us_unit_year_1979-2020.csv, intl_us_male_share.csv (76)
+#          output/tables/intl_ecuador_deaths_province_year.csv (77)
+#          output/tables/intl_us_unit_year_1968-2020.csv, intl_us_male_share.csv (76)
 #          output/tables/homicide_backcast_dept_1915-2019.csv   (60, Colombia)
 # outputs  output/tables/intl_validation_parameters.csv
 #          output/tables/intl_validation_predictions.csv
@@ -24,6 +25,7 @@
 #          output/tables/intl_validation_scores_units.csv
 #          figures/09_international/<country>_predictive_check.png
 #          figures/09_international/intl_error_by_violent_share.png
+#          data_inter/intl_datasets.rds (the unit-year data of each country, for 78)
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm(list = ls()); gc(); source("code/00_setup.R")
 source("code/70_intl_model_functions.R")
@@ -50,13 +52,19 @@ cfg <- list(
                 back = list("1990-2004" = 1990:2004),
                 fig_units = c("08", "12", "11", "06", "15", "09")),
   # United States: the public-use files carry the state only in 1979-2004
-  # United States: microdata 1979-2004 and CDC WONDER 2005-2020 (76), with
+  # United States: microdata 1968-2004 and CDC WONDER 2005-2020 (76), with
   # the narrow definition of violent deaths (no undetermined intent). 2020
   # is left out (COVID-19)
-  us = list(label = "Estados Unidos", years = 1979:2019, unit_year = "output/tables/intl_us_unit_year_1979-2020.csv",
+  us = list(label = "Estados Unidos", years = 1968:2019, unit_year = "output/tables/intl_us_unit_year_1968-2020.csv",
             male_share = "output/tables/intl_us_male_share.csv",
-            blocks = list("1984-1991" = 1984:1991, "1992-1999" = 1992:1999, "2006-2013" = 2006:2013), back = list("1979-1993" = 1979:1993),
+            blocks = list("1984-1991" = 1984:1991, "1992-1999" = 1992:1999, "2006-2013" = 2006:2013), back = list("1968-1982" = 1968:1982),
             fig_units = c("CA", "NY", "TX", "LA", "DC", "MN")),
+  # Ecuador: 21 provinces (77). the last four years are hidden as a third
+  # kind of test, "forward": the surge of 2022-2024, without precedent,
+  # predicted from the years before it and the sex ratio
+  ecuador = list(label = "Ecuador", file = "output/tables/intl_ecuador_deaths_province_year.csv",
+                 blocks = list("1995-2002" = 1995:2002, "2005-2012" = 2005:2012), back = list("1990-2004" = 1990:2004),
+                 forward = list("2021-2024" = 2021:2024), fig_units = c("09", "17", "08", "12", "07", "13")),
   colombia = list(label = "Colombia", blocks = list("1985-1997" = 1985:1997, "1998-2010" = 1998:2010),
                   back = list("1979-1993" = 1979:1993),
                   fig_units = c("antioquia", "valle_del_cauca", "tolima", "bolivar", "cundinamarca", "santander"))
@@ -74,7 +82,7 @@ for (cc in setdiff(names(cfg), "colombia")) {
     }
     next
   }
-  f <- paste0("output/tables/intl_", cc, "_deaths_state_year.csv")
+  f <- if (!is.null(cfg[[cc]]$file)) cfg[[cc]]$file else paste0("output/tables/intl_", cc, "_deaths_state_year.csv")
   if (!file.exists(f)) next
   panel <- read_csv(f, show_col_types = FALSE, col_types = cols(unit = col_character()))
   if (!is.null(cfg[[cc]]$years)) panel <- filter(panel, year %in% cfg[[cc]]$years)
@@ -89,6 +97,9 @@ col <- read_csv("output/tables/homicide_backcast_dept_1915-2019.csv", show_col_t
   arrange(unit, year)
 datasets[["colombia all"]] <- list(country = "colombia", ages = "all", md = intl_model_data(col, pi_m = 0.90))
 
+# the data and the settings, for the comparison of model versions (78)
+saveRDS(list(cfg = cfg, datasets = datasets), "data_inter/intl_datasets.rds")
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 2. fit and hidden blocks ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -102,9 +113,9 @@ for (nm in names(datasets)) {
   pars[[nm]] <- tibble(country = ds$country, ages = ds$ages, units = n_distinct(md$unit), years = paste(range(md$year), collapse = "-"),
                        pi_m = pi_m, violent_share_pct = 100 * sum(md$h) / sum(md$d),
                        s_eta = ft$par[1], s_u = ft$par[2], s_0 = ft$par[3], loglik = ft$loglik, convergence = ft$convergence)
-  bl <- c(cfg[[ds$country]]$blocks, cfg[[ds$country]]$back)
+  bl <- c(cfg[[ds$country]]$blocks, cfg[[ds$country]]$back, cfg[[ds$country]]$forward)
   pred[[nm]] <- bind_rows(intl_validate(md, ft$par, pi_m, bl), intl_simple(md, bl)) |>
-    mutate(country = ds$country, ages = ds$ages, test = ifelse(block %in% names(cfg[[ds$country]]$back), "backcast", "interior"), .before = 1)
+    mutate(country = ds$country, ages = ds$ages, test = case_when(block %in% names(cfg[[ds$country]]$back) ~ "backcast", block %in% names(cfg[[ds$country]]$forward) ~ "forward", TRUE ~ "interior"), .before = 1)
   fitted[[nm]] <- intl_run(md, ft$par, pi_m, smooth = TRUE) |> mutate(country = ds$country, ages = ds$ages)
 }
 pars <- bind_rows(pars); pred <- bind_rows(pred)
@@ -150,10 +161,10 @@ for (cc in unique(pars$country)) {
   md <- datasets[[paste(cc, "all")]]$md$md |> filter(unit %in% u)
   labs_u <- md |> distinct(unit, unit_label)
   lev <- labs_u$unit_label[match(u, labs_u$unit)]
-  p <- pred |> filter(country == cc, ages == "all", test == "interior", unit %in% u, model %in% names(lines_lab)) |>
+  p <- pred |> filter(country == cc, ages == "all", test != "backcast", unit %in% u, model %in% names(lines_lab)) |>
     mutate(line = factor(lines_lab[model], lines_lab), unit_label = factor(unit_label, lev), share = 100 * hom_pred / d)
   band <- p |> filter(model == "S: sex ratio")
-  rect <- tibble(block = names(cfg[[cc]]$blocks)) |> mutate(x0 = as.numeric(substr(block, 1, 4)) - 0.4, x1 = as.numeric(substr(block, 6, 9)) + 0.4)
+  rect <- tibble(block = c(names(cfg[[cc]]$blocks), names(cfg[[cc]]$forward))) |> mutate(x0 = as.numeric(substr(block, 1, 4)) - 0.4, x1 = as.numeric(substr(block, 6, 9)) + 0.4)
   fig <- ggplot() +
     geom_rect(data = rect, aes(xmin = x0, xmax = x1, ymin = 0, ymax = Inf), fill = "grey94") +
     geom_ribbon(data = band, aes(year, ymin = 100 * hom_lo90 / d, ymax = 100 * hom_hi90 / d, group = block), fill = "#2a78d6", alpha = 0.15) +
@@ -183,7 +194,7 @@ fig2 <- ggplot(eu, aes(violent_share_pct, median_abs_error_pct, colour = pais, s
   geom_point(size = 2, alpha = 0.85) +
   scale_x_log10(labels = scales::label_number(drop0trailing = TRUE)) +
   scale_shape_manual(values = c("Sin pistas del bloque" = 1, "Con razón de sexos" = 16), name = NULL) +
-  scale_colour_manual(values = c("Brasil" = "#1baf7a", "Colombia" = "#eb6834", "México" = "#2a78d6", "Estados Unidos" = "#8a5cc2"), name = NULL) +
+  scale_colour_manual(values = c("Brasil" = "#1baf7a", "Colombia" = "#eb6834", "México" = "#2a78d6", "Estados Unidos" = "#8a5cc2", "Ecuador" = "#d6a02a"), name = NULL) +
   facet_wrap(~panel, scales = "free_x") +
   labs(title = "El error de predicción según el peso de las muertes violentas",
        subtitle = "Un punto por unidad territorial: error absoluto mediano en los años ocultos. Círculo hueco: sin usar la razón de sexos; lleno: usándola.",

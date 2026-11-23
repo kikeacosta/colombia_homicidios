@@ -34,6 +34,10 @@
 #            S   sex ratio in the block
 #            ST  S, then rescaled to the national total of the year
 #          parameters from the fit with all the data, as in 60
+# versions the state-space model can run on the log of the violent share (as
+#          in 60) or on its logit, and with the share of men among the
+#          violent deaths fixed (as in 60) or as a third state per unit (the
+#          compositional versions; see 78)
 # simple   the benchmark of 64: negative binomial mixed model
 #            h ~ national share + log sex ratio (slope by unit) + offset(log d)
 #          refitted without each block and rescaled to the national total
@@ -86,17 +90,26 @@ intl_data <- function(panel, ages = "all", violent = intl_violent) {
     dplyr::arrange(unit, year)
 }
 
-# log sex ratio of all deaths given the non-violent log sex ratio (delta) and
-# the log share of violent deaths (eta)
-intl_g <- function(delta, eta, pi_m) {
-  h <- pmin(exp(eta), 0.9)
+# link: "log" (the share of violent deaths in logs, as in 60; it is capped at
+#   0.9 inside g) or "logit" (the log-ratio of violent to non-violent deaths,
+#   bounded between 0 and 1: the compositional version)
+intl_link <- function(p, link) if (link == "logit") qlogis(p) else log(p)
+intl_inv <- function(x, link) if (link == "logit") plogis(x) else exp(x)
+
+# log sex ratio of all deaths given the non-violent log sex ratio (delta), the
+# violent share on the scale of `link` (eta) and the share of men among the
+# violent deaths (pi_m)
+intl_g <- function(delta, eta, pi_m, link = "log") {
+  h <- if (link == "logit") plogis(eta) else pmin(exp(eta), 0.9)
   ed <- exp(delta)
   log((1 - h) * ed + h * pi_m * (1 + ed)) - log((1 - h) + h * (1 - pi_m) * (1 + ed))
 }
 
 # national quantities and the observations of the model
 # pi_m: share of men among the violent deaths; measured in the data unless given
-intl_model_data <- function(dat, pi_m = NULL) {
+# y_pi: logit of the share of men among the violent deaths of the unit-year,
+#   for the version with a free share (NA where the sex of the victims is unknown)
+intl_model_data <- function(dat, pi_m = NULL, link = "log") {
   if (is.null(pi_m)) pi_m <- sum(dat$hm) / sum(dat$hm + dat$hf)
   nat <- dat |>
     dplyr::summarise(d = sum(d), dm = sum(dm), df = sum(df), h = sum(h), .by = year) |>
@@ -106,19 +119,26 @@ intl_model_data <- function(dat, pi_m = NULL) {
     dplyr::left_join(dplyr::select(nat, year, rho, h_nat = h, d_nat = d), by = "year") |>
     dplyr::mutate(
       y_sr = ifelse(dm > 0 & df > 0, log(dm / df), NA), q_sr = 1 / dm + 1 / df,
-      y_e = ifelse(h > 0, log(h / d), NA), q_e = 1 / h
+      y_e = ifelse(h > 0 & h < d, intl_link(h / d, link), NA),
+      q_e = if (link == "logit") 1 / h + 1 / (d - h) else 1 / h,
+      y_pi = ifelse(!is.na(hm) & !is.na(hf) & hm > 0 & hf > 0, qlogis(hm / (hm + hf)), NA),
+      q_pi = 1 / hm + 1 / hf
     )
-  list(md = md, nat = nat, pi_m = pi_m)
+  list(md = md, nat = nat, pi_m = pi_m, link = link)
 }
 
-# filter and smoother for one unit. z: rows of one unit sorted by year
-intl_kf_unit <- function(z, par, pi_m, x0, smooth = FALSE) {
+# filter and smoother for one unit. z: rows of one unit sorted by year.
+# states: eta (violent share on the scale of `link`), u, and with free_pi a
+# third one, the logit of the share of men among the violent deaths, a random
+# walk with sd par[4] observed through y_pi
+intl_kf_unit <- function(z, par, pi_m, x0, smooth = FALSE, link = "log", free_pi = FALSE) {
   n <- nrow(z)
-  Q <- diag(c(par[1]^2, par[2]^2))
-  x <- x0
-  P <- diag(c(2, 0.3)^2)
+  k <- if (free_pi) 3 else 2
+  Q <- diag(c(par[1]^2, par[2]^2, if (free_pi) par[4]^2), k)
+  x <- x0[seq_len(k)]
+  P <- diag(c(2, 0.3, 0.5)[seq_len(k)]^2, k)
   ll <- 0
-  if (smooth) { xp <- xf <- matrix(NA, n, 2); Pp <- Pf <- array(NA, c(2, 2, n)) }
+  if (smooth) { xp <- xf <- matrix(NA, n, k); Pp <- Pf <- array(NA, c(k, k, n)) }
   upd <- function(H, innov, R) {
     S <- drop(H %*% P %*% H) + R
     K <- drop(P %*% H) / S
@@ -126,15 +146,17 @@ intl_kf_unit <- function(z, par, pi_m, x0, smooth = FALSE) {
     P <<- P - tcrossprod(K, drop(H %*% P))
     ll <<- ll - 0.5 * (log(2 * pi * S) + innov^2 / S)
   }
+  gx <- function(s, rho) intl_g(rho + s[2], s[1], if (free_pi) plogis(s[3]) else pi_m, link)
   for (t in seq_len(n)) {
     if (t > 1) P <- P + Q
     if (smooth) { xp[t, ] <- x; Pp[, , t] <- P }
     if (!is.na(z$y_sr[t])) {
-      g0 <- intl_g(z$rho[t] + x[2], x[1], pi_m)
-      H <- c((intl_g(z$rho[t] + x[2], x[1] + 1e-5, pi_m) - g0) / 1e-5, (intl_g(z$rho[t] + x[2] + 1e-5, x[1], pi_m) - g0) / 1e-5)
+      g0 <- gx(x, z$rho[t])
+      H <- vapply(seq_len(k), function(j) { s <- x; s[j] <- s[j] + 1e-5; (gx(s, z$rho[t]) - g0) / 1e-5 }, numeric(1))
       upd(H, z$y_sr[t] - g0, par[3]^2 + z$q_sr[t])
     }
-    if (!is.na(z$y_e[t])) upd(c(1, 0), z$y_e[t] - x[1], intl_s_e^2 + z$q_e[t])
+    if (!is.na(z$y_e[t])) upd(c(1, 0, 0)[seq_len(k)], z$y_e[t] - x[1], intl_s_e^2 + z$q_e[t])
+    if (free_pi && !is.na(z$y_pi[t])) upd(c(0, 0, 1), z$y_pi[t] - x[3], intl_s_e^2 + z$q_pi[t])
     if (smooth) { xf[t, ] <- x; Pf[, , t] <- P }
   }
   if (!smooth) return(ll)
@@ -144,40 +166,45 @@ intl_kf_unit <- function(z, par, pi_m, x0, smooth = FALSE) {
     xs[t, ] <- xf[t, ] + drop(C %*% (xs[t + 1, ] - xp[t + 1, ]))
     Ps[, , t] <- Pf[, , t] + C %*% (Ps[, , t + 1] - Pp[, , t + 1]) %*% t(C)
   }
-  data.frame(eta = xs[, 1], sd_eta = sqrt(pmax(Ps[1, 1, ], 0)), u = xs[, 2])
+  out <- data.frame(eta = xs[, 1], sd_eta = sqrt(pmax(Ps[1, 1, ], 0)), u = xs[, 2])
+  if (free_pi) out$pi_hat <- plogis(xs[, 3])
+  out
 }
 
-intl_run <- function(md, par, pi_m, smooth = FALSE) {
-  x0 <- c(log(sum(md$h) / sum(md$d)), 0)
+intl_run <- function(md, par, pi_m, smooth = FALSE, link = "log", free_pi = FALSE) {
+  x0 <- c(intl_link(sum(md$h) / sum(md$d), link), 0, qlogis(pi_m))
   parts <- split(md, md$unit)
-  if (!smooth) return(sum(vapply(parts, intl_kf_unit, numeric(1), par = par, pi_m = pi_m, x0 = x0)))
-  dplyr::bind_rows(lapply(parts, function(z) cbind(z, intl_kf_unit(z, par, pi_m, x0, smooth = TRUE))))
+  if (!smooth) return(sum(vapply(parts, intl_kf_unit, numeric(1), par = par, pi_m = pi_m, x0 = x0, link = link, free_pi = free_pi)))
+  dplyr::bind_rows(lapply(parts, function(z) cbind(z, intl_kf_unit(z, par, pi_m, x0, smooth = TRUE, link = link, free_pi = free_pi))))
 }
 
-intl_fit <- function(md, pi_m, starts = list(c(0.15, 0.01, 0.02), c(0.08, 0.03, 0.05))) {
+intl_fit <- function(md, pi_m, starts = list(c(0.15, 0.01, 0.02), c(0.08, 0.03, 0.05)), link = "log", free_pi = FALSE) {
+  if (free_pi) starts <- lapply(starts, function(s) c(s, 0.05))
   best <- NULL
   for (s in starts) {
-    o <- optim(log(s), function(lp) -intl_run(md, exp(lp), pi_m), method = "BFGS", control = list(maxit = 300))
+    o <- optim(log(s), function(lp) -intl_run(md, exp(lp), pi_m, link = link, free_pi = free_pi), method = "BFGS", control = list(maxit = 300))
     if (is.null(best) || o$value < best$value) best <- o
   }
-  list(par = setNames(exp(best$par), c("s_eta", "s_u", "s_0")), loglik = -best$value, convergence = best$convergence)
+  list(par = setNames(exp(best$par), c("s_eta", "s_u", "s_0", if (free_pi) "s_pi")), loglik = -best$value, convergence = best$convergence)
 }
 
 # hidden blocks, state-space model. returns one row per block, variant and unit-year of the block
-intl_validate <- function(md, par, pi_m, blocks) {
+# (y_pi, the sex of the victims, is hidden with the counts)
+intl_validate <- function(md, par, pi_m, blocks, link = "log", free_pi = FALSE) {
   out <- list()
   for (b in names(blocks)) {
     inb <- md$year %in% blocks[[b]]
     for (v in c("N: nothing in the block", "S: sex ratio")) {
       dat <- md
       dat$y_e[inb] <- NA
+      dat$y_pi[inb] <- NA
       if (v == "N: nothing in the block") dat$y_sr[inb] <- NA
-      sm <- intl_run(dat, par, pi_m, smooth = TRUE)
+      sm <- intl_run(dat, par, pi_m, smooth = TRUE, link = link, free_pi = free_pi)
       sm$truth <- md$y_e[match(paste(sm$unit, sm$year), paste(md$unit, md$year))]
       out[[length(out) + 1]] <- sm |>
         dplyr::filter(year %in% blocks[[b]], !is.na(truth)) |>
-        dplyr::transmute(block = b, model = v, unit, unit_label, year, d, hom_obs = h, hom_pred = exp(eta) * d,
-                         hom_lo90 = exp(eta - intl_z90 * sd_eta) * d, hom_hi90 = exp(eta + intl_z90 * sd_eta) * d,
+        dplyr::transmute(block = b, model = v, unit, unit_label, year, d, hom_obs = h, hom_pred = intl_inv(eta, link) * d,
+                         hom_lo90 = intl_inv(eta - intl_z90 * sd_eta, link) * d, hom_hi90 = intl_inv(eta + intl_z90 * sd_eta, link) * d,
                          covered90 = abs(truth - eta) <= intl_z90 * sqrt(sd_eta^2 + intl_s_e^2 + q_e))
     }
   }
