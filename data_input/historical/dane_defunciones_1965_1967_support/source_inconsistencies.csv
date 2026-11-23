@@ -1,0 +1,5 @@
+identity,year,unit,age,sex,value,expected,note
+"units = TOTAL GENERAL",1965,"Total nacional","50-54","male",2907,2908,"impreso: la suma de las secciones da 2908; TOTAL GENERAL releido ampliado dice 2907"
+"units = TOTAL GENERAL",1965,"Total nacional","50-54","total",5316,5317,"impreso: la suma de las secciones da 5317"
+"units = TOTAL GENERAL",1965,"Total nacional","not stated","male",386,385,"impreso: la suma de las secciones da 385; TOTAL GENERAL releido ampliado dice 386"
+"units = TOTAL GENERAL",1965,"Total nacional","not stated","total",677,676,"impreso: la suma de las secciones da 676"

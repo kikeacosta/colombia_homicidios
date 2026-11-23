@@ -1,0 +1,531 @@
+"check","year","item","department","ours","reference","diff"
+"units_vs_total_column",1951," TOTAL female","TOTAL",77916,77916,0
+"units_vs_total_column",1951," TOTAL male","TOTAL",87253,87253,0
+"units_vs_total_column",1951,"40 Suicidios female","TOTAL",22,22,0
+"units_vs_total_column",1951,"40 Suicidios male","TOTAL",167,167,0
+"units_vs_total_column",1951,"41 Homicidios female","TOTAL",329,329,0
+"units_vs_total_column",1951,"41 Homicidios male","TOTAL",3279,3279,0
+"units_vs_total_column",1951,"42 Accidentes automovilisticos female","TOTAL",150,150,0
+"units_vs_total_column",1951,"42 Accidentes automovilisticos male","TOTAL",575,575,0
+"units_vs_total_column",1951,"43 Otras muertes violentas o accidentes (excepto suicidios, homicidios y accidentes automoviliarios) female","TOTAL",1381,1381,0
+"units_vs_total_column",1951,"43 Otras muertes violentas o accidentes (excepto suicidios, homicidios y accidentes automoviliarios) male","TOTAL",3335,3325,10
+"units_vs_total_column",1952," TOTAL female","TOTAL",73679,73679,0
+"units_vs_total_column",1952," TOTAL male","TOTAL",80059,80059,0
+"units_vs_total_column",1952,"40 Suicidios female","TOTAL",29,29,0
+"units_vs_total_column",1952,"40 Suicidios male","TOTAL",145,145,0
+"units_vs_total_column",1952,"41 Homicidios female","TOTAL",444,444,0
+"units_vs_total_column",1952,"41 Homicidios male","TOTAL",4226,4226,0
+"units_vs_total_column",1952,"42 Accidentes automovilisticos female","TOTAL",158,158,0
+"units_vs_total_column",1952,"42 Accidentes automovilisticos male","TOTAL",520,520,0
+"units_vs_total_column",1952,"43 Otras muertes violentas o accidentes (excepto suicidios, homicidios y accidentes automoviliarios) female","TOTAL",1168,1168,0
+"units_vs_total_column",1952,"43 Otras muertes violentas o accidentes (excepto suicidios, homicidios y accidentes automoviliarios) male","TOTAL",3028,3028,0
+"units_vs_total_column",1953," TOTAL female","TOTAL",78441,78441,0
+"units_vs_total_column",1953," TOTAL male","TOTAL",85212,85212,0
+"units_vs_total_column",1953,"138 Accidentes de vehiculos automoviles female","TOTAL",246,246,0
+"units_vs_total_column",1953,"138 Accidentes de vehiculos automoviles male","TOTAL",852,852,0
+"units_vs_total_column",1953,"139 Otros accidentes de transportes female","TOTAL",6,6,0
+"units_vs_total_column",1953,"139 Otros accidentes de transportes male","TOTAL",38,38,0
+"units_vs_total_column",1953,"140 Envenenamientos accidentales female","TOTAL",110,110,0
+"units_vs_total_column",1953,"140 Envenenamientos accidentales male","TOTAL",177,177,0
+"units_vs_total_column",1953,"141 Caidas accidentales female","TOTAL",45,45,0
+"units_vs_total_column",1953,"141 Caidas accidentales male","TOTAL",73,73,0
+"units_vs_total_column",1953,"142 Accidente causado por maquinaria female","TOTAL",0,0,0
+"units_vs_total_column",1953,"142 Accidente causado por maquinaria male","TOTAL",2,2,0
+"units_vs_total_column",1953,"143 Accidente causado por el fuego y por la explosion de materiales combustibles female","TOTAL",96,96,0
+"units_vs_total_column",1953,"143 Accidente causado por el fuego y por la explosion de materiales combustibles male","TOTAL",111,111,0
+"units_vs_total_column",1953,"144 Accidente causado por una substancia caliente, liquido corrosivo, vapor y radiaciones female","TOTAL",114,114,0
+"units_vs_total_column",1953,"144 Accidente causado por una substancia caliente, liquido corrosivo, vapor y radiaciones male","TOTAL",126,126,0
+"units_vs_total_column",1953,"145 Accidentes causados por las armas de fuego female","TOTAL",12,12,0
+"units_vs_total_column",1953,"145 Accidentes causados por las armas de fuego male","TOTAL",66,66,0
+"units_vs_total_column",1953,"146 Ahogado y sumersion accidental female","TOTAL",226,226,0
+"units_vs_total_column",1953,"146 Ahogado y sumersion accidental male","TOTAL",544,544,0
+"units_vs_total_column",1953,"147 Todas las otras causas accidentales female","TOTAL",531,531,0
+"units_vs_total_column",1953,"147 Todas las otras causas accidentales male","TOTAL",1864,1864,0
+"units_vs_total_column",1953,"148 Suicidio y traumatismo infligido a si mismo female","TOTAL",21,21,0
+"units_vs_total_column",1953,"148 Suicidio y traumatismo infligido a si mismo male","TOTAL",97,97,0
+"units_vs_total_column",1953,"149 Homicidio y traumatismo provocado intencionalmente por otras personas (no operaciones de guerra) female","TOTAL",329,329,0
+"units_vs_total_column",1953,"149 Homicidio y traumatismo provocado intencionalmente por otras personas (no operaciones de guerra) male","TOTAL",3443,3443,0
+"units_vs_total_column",1953,"150 Traumatismo procedente de operaciones de guerra female","TOTAL",0,0,0
+"units_vs_total_column",1953,"150 Traumatismo procedente de operaciones de guerra male","TOTAL",0,0,0
+"units_vs_total_column",1954," TOTAL female","TOTAL",72201,72201,0
+"units_vs_total_column",1954," TOTAL male","TOTAL",78560,78560,0
+"units_vs_total_column",1954,"138 Accidentes de vehiculos automoviles female","TOTAL",197,197,0
+"units_vs_total_column",1954,"138 Accidentes de vehiculos automoviles male","TOTAL",698,698,0
+"units_vs_total_column",1954,"139 Otros accidentes de transportes female","TOTAL",32,32,0
+"units_vs_total_column",1954,"139 Otros accidentes de transportes male","TOTAL",86,86,0
+"units_vs_total_column",1954,"140 Envenenamientos accidentales female","TOTAL",95,95,0
+"units_vs_total_column",1954,"140 Envenenamientos accidentales male","TOTAL",204,204,0
+"units_vs_total_column",1954,"141 Caidas accidentales female","TOTAL",143,143,0
+"units_vs_total_column",1954,"141 Caidas accidentales male","TOTAL",366,366,0
+"units_vs_total_column",1954,"142 Accidente causado por maquinaria female","TOTAL",1,1,0
+"units_vs_total_column",1954,"142 Accidente causado por maquinaria male","TOTAL",20,20,0
+"units_vs_total_column",1954,"143 Accidente causado por el fuego y por la explosion de materiales combustibles female","TOTAL",140,140,0
+"units_vs_total_column",1954,"143 Accidente causado por el fuego y por la explosion de materiales combustibles male","TOTAL",112,119,-7
+"units_vs_total_column",1954,"144 Accidente causado por una substancia caliente, liquido corrosivo, vapor y radiaciones female","TOTAL",115,115,0
+"units_vs_total_column",1954,"144 Accidente causado por una substancia caliente, liquido corrosivo, vapor y radiaciones male","TOTAL",98,98,0
+"units_vs_total_column",1954,"145 Accidentes causados por las armas de fuego female","TOTAL",4,4,0
+"units_vs_total_column",1954,"145 Accidentes causados por las armas de fuego male","TOTAL",51,51,0
+"units_vs_total_column",1954,"146 Ahogado y sumersion accidental female","TOTAL",249,249,0
+"units_vs_total_column",1954,"146 Ahogado y sumersion accidental male","TOTAL",724,724,0
+"units_vs_total_column",1954,"147 Todas las otras causas accidentales female","TOTAL",542,542,0
+"units_vs_total_column",1954,"147 Todas las otras causas accidentales male","TOTAL",1795,1795,0
+"units_vs_total_column",1954,"148 Suicidio y traumatismo infligido a si mismo female","TOTAL",42,42,0
+"units_vs_total_column",1954,"148 Suicidio y traumatismo infligido a si mismo male","TOTAL",160,160,0
+"units_vs_total_column",1954,"149 Homicidio y traumatismo provocado intencionalmente por otras personas (no operaciones de guerra) female","TOTAL",297,297,0
+"units_vs_total_column",1954,"149 Homicidio y traumatismo provocado intencionalmente por otras personas (no operaciones de guerra) male","TOTAL",2824,2824,0
+"units_vs_total_column",1955," TOTAL female","TOTAL",77362,77362,0
+"units_vs_total_column",1955," TOTAL male","TOTAL",84501,84501,0
+"units_vs_total_column",1955,"138 Accidentes de vehiculos automoviles female","TOTAL",219,219,0
+"units_vs_total_column",1955,"138 Accidentes de vehiculos automoviles male","TOTAL",792,792,0
+"units_vs_total_column",1955,"139 Otros accidentes de transportes female","TOTAL",8,8,0
+"units_vs_total_column",1955,"139 Otros accidentes de transportes male","TOTAL",64,64,0
+"units_vs_total_column",1955,"140 Envenenamientos accidentales female","TOTAL",105,105,0
+"units_vs_total_column",1955,"140 Envenenamientos accidentales male","TOTAL",221,221,0
+"units_vs_total_column",1955,"141 Caidas accidentales female","TOTAL",157,157,0
+"units_vs_total_column",1955,"141 Caidas accidentales male","TOTAL",482,482,0
+"units_vs_total_column",1955,"142 Accidente causado por maquinaria female","TOTAL",1,1,0
+"units_vs_total_column",1955,"142 Accidente causado por maquinaria male","TOTAL",11,11,0
+"units_vs_total_column",1955,"143 Accidente causado por el fuego y por la explosion de materiales combustibles female","TOTAL",103,103,0
+"units_vs_total_column",1955,"143 Accidente causado por el fuego y por la explosion de materiales combustibles male","TOTAL",118,118,0
+"units_vs_total_column",1955,"144 Accidente causado por substancia caliente, liquido corrosivo, vapor y radiaciones female","TOTAL",145,145,0
+"units_vs_total_column",1955,"144 Accidente causado por substancia caliente, liquido corrosivo, vapor y radiaciones male","TOTAL",102,102,0
+"units_vs_total_column",1955,"145 Accidente causado por las armas de fuego female","TOTAL",7,7,0
+"units_vs_total_column",1955,"145 Accidente causado por las armas de fuego male","TOTAL",32,32,0
+"units_vs_total_column",1955,"146 Ahogados y sumersion accidental female","TOTAL",345,345,0
+"units_vs_total_column",1955,"146 Ahogados y sumersion accidental male","TOTAL",812,812,0
+"units_vs_total_column",1955,"147 Todas las otras causas accidentales female","TOTAL",495,495,0
+"units_vs_total_column",1955,"147 Todas las otras causas accidentales male","TOTAL",1842,1842,0
+"units_vs_total_column",1955,"148 Suicidio y traumatismo infligido a si mismo female","TOTAL",25,25,0
+"units_vs_total_column",1955,"148 Suicidio y traumatismo infligido a si mismo male","TOTAL",141,141,0
+"units_vs_total_column",1955,"149 Homicidio y traumatismo provocado intencionalmente por otras personas (no procedente de operaciones de guerra) female","TOTAL",424,424,0
+"units_vs_total_column",1955,"149 Homicidio y traumatismo provocado intencionalmente por otras personas (no procedente de operaciones de guerra) male","TOTAL",3732,3732,0
+"units_vs_total_column",1957," TOTAL female","TOTAL",82642,82642,0
+"units_vs_total_column",1957," TOTAL male","TOTAL",91231,91231,0
+"units_vs_total_column",1957,"138 Accidentes de vehiculos automoviles female","TOTAL",214,214,0
+"units_vs_total_column",1957,"138 Accidentes de vehiculos automoviles male","TOTAL",828,828,0
+"units_vs_total_column",1957,"139 Otros accidentes de transporte female","TOTAL",17,17,0
+"units_vs_total_column",1957,"139 Otros accidentes de transporte male","TOTAL",55,55,0
+"units_vs_total_column",1957,"140 Envenenamientos accidentales female","TOTAL",138,138,0
+"units_vs_total_column",1957,"140 Envenenamientos accidentales male","TOTAL",195,195,0
+"units_vs_total_column",1957,"141 Caidas accidentales female","TOTAL",91,91,0
+"units_vs_total_column",1957,"141 Caidas accidentales male","TOTAL",303,303,0
+"units_vs_total_column",1957,"142 Accidente causado por maquinaria female","TOTAL",2,2,0
+"units_vs_total_column",1957,"142 Accidente causado por maquinaria male","TOTAL",11,11,0
+"units_vs_total_column",1957,"143 Accidente causado por el fuego y la explosion de materiales combustibles female","TOTAL",50,50,0
+"units_vs_total_column",1957,"143 Accidente causado por el fuego y la explosion de materiales combustibles male","TOTAL",85,85,0
+"units_vs_total_column",1957,"144 Accidente causado por substancia caliente, liquido corrosivo, vapor y radiaciones female","TOTAL",217,217,0
+"units_vs_total_column",1957,"144 Accidente causado por substancia caliente, liquido corrosivo, vapor y radiaciones male","TOTAL",228,228,0
+"units_vs_total_column",1957,"145 Accidente causado por las armas de fuego female","TOTAL",14,14,0
+"units_vs_total_column",1957,"145 Accidente causado por las armas de fuego male","TOTAL",29,29,0
+"units_vs_total_column",1957,"146 Ahogados y sumersion accidental female","TOTAL",328,328,0
+"units_vs_total_column",1957,"146 Ahogados y sumersion accidental male","TOTAL",702,702,0
+"units_vs_total_column",1957,"147 Todas las otras causas accidentales female","TOTAL",606,606,0
+"units_vs_total_column",1957,"147 Todas las otras causas accidentales male","TOTAL",2067,2067,0
+"units_vs_total_column",1957,"148 Suicidio y traumatismo infligido a si mismo female","TOTAL",12,12,0
+"units_vs_total_column",1957,"148 Suicidio y traumatismo infligido a si mismo male","TOTAL",71,71,0
+"units_vs_total_column",1957,"149 Homicidio y traumatismo provocado intencionalmente por otras personas (no procedente de operaciones de guerra) female","TOTAL",476,476,0
+"units_vs_total_column",1957,"149 Homicidio y traumatismo provocado intencionalmente por otras personas (no procedente de operaciones de guerra) male","TOTAL",4995,4995,0
+"homicide_vs_v02",1951,"female","ANTIOQUIA",35,35,0
+"homicide_vs_v02",1951,"male","ANTIOQUIA",362,362,0
+"homicide_vs_v02",1951,"female","ATLANTICO",4,4,0
+"homicide_vs_v02",1951,"male","ATLANTICO",37,37,0
+"homicide_vs_v02",1951,"female","BOLIVAR",7,7,0
+"homicide_vs_v02",1951,"male","BOLIVAR",57,57,0
+"homicide_vs_v02",1951,"female","BOYACA",46,46,0
+"homicide_vs_v02",1951,"male","BOYACA",231,231,0
+"homicide_vs_v02",1951,"female","CALDAS",20,20,0
+"homicide_vs_v02",1951,"male","CALDAS",374,374,0
+"homicide_vs_v02",1951,"female","CAUCA",3,3,0
+"homicide_vs_v02",1951,"male","CAUCA",69,69,0
+"homicide_vs_v02",1951,"female","CHOCO",0,0,0
+"homicide_vs_v02",1951,"male","CHOCO",15,15,0
+"homicide_vs_v02",1951,"female","CUNDINAMARCA",75,75,0
+"homicide_vs_v02",1951,"male","CUNDINAMARCA",393,393,0
+"homicide_vs_v02",1951,"female","HUILA",3,3,0
+"homicide_vs_v02",1951,"male","HUILA",53,53,0
+"homicide_vs_v02",1951,"female","INTENDENCIAS Y COMISARIAS",12,12,0
+"homicide_vs_v02",1951,"male","INTENDENCIAS Y COMISARIAS",84,84,0
+"homicide_vs_v02",1951,"female","MAGDALENA",9,9,0
+"homicide_vs_v02",1951,"male","MAGDALENA",61,61,0
+"homicide_vs_v02",1951,"female","NARINO",5,5,0
+"homicide_vs_v02",1951,"male","NARINO",46,46,0
+"homicide_vs_v02",1951,"female","NORTE DE SANTANDER",15,15,0
+"homicide_vs_v02",1951,"male","NORTE DE SANTANDER",177,177,0
+"homicide_vs_v02",1951,"female","SANTANDER",22,22,0
+"homicide_vs_v02",1951,"male","SANTANDER",313,313,0
+"homicide_vs_v02",1951,"female","TOLIMA",22,22,0
+"homicide_vs_v02",1951,"male","TOLIMA",343,343,0
+"homicide_vs_v02",1951,"female","VALLE DEL CAUCA",51,51,0
+"homicide_vs_v02",1951,"male","VALLE DEL CAUCA",664,664,0
+"homicide_vs_v02",1952,"female","ANTIOQUIA",44,44,0
+"homicide_vs_v02",1952,"male","ANTIOQUIA",661,661,0
+"homicide_vs_v02",1952,"female","ATLANTICO",3,3,0
+"homicide_vs_v02",1952,"male","ATLANTICO",24,24,0
+"homicide_vs_v02",1952,"female","BOLIVAR",1,1,0
+"homicide_vs_v02",1952,"male","BOLIVAR",40,40,0
+"homicide_vs_v02",1952,"female","BOYACA",43,43,0
+"homicide_vs_v02",1952,"male","BOYACA",253,253,0
+"homicide_vs_v02",1952,"female","CALDAS",32,32,0
+"homicide_vs_v02",1952,"male","CALDAS",400,400,0
+"homicide_vs_v02",1952,"female","CAUCA",9,9,0
+"homicide_vs_v02",1952,"male","CAUCA",61,61,0
+"homicide_vs_v02",1952,"female","CHOCO",2,2,0
+"homicide_vs_v02",1952,"male","CHOCO",19,19,0
+"homicide_vs_v02",1952,"female","CORDOBA",0,0,0
+"homicide_vs_v02",1952,"male","CORDOBA",5,5,0
+"homicide_vs_v02",1952,"female","CUNDINAMARCA",89,89,0
+"homicide_vs_v02",1952,"male","CUNDINAMARCA",446,446,0
+"homicide_vs_v02",1952,"female","HUILA",6,6,0
+"homicide_vs_v02",1952,"male","HUILA",39,39,0
+"homicide_vs_v02",1952,"female","INTENDENCIAS Y COMISARIAS",17,17,0
+"homicide_vs_v02",1952,"male","INTENDENCIAS Y COMISARIAS",111,111,0
+"homicide_vs_v02",1952,"female","MAGDALENA",7,7,0
+"homicide_vs_v02",1952,"male","MAGDALENA",39,39,0
+"homicide_vs_v02",1952,"female","NARINO",6,6,0
+"homicide_vs_v02",1952,"male","NARINO",34,34,0
+"homicide_vs_v02",1952,"female","NORTE DE SANTANDER",14,14,0
+"homicide_vs_v02",1952,"male","NORTE DE SANTANDER",220,220,0
+"homicide_vs_v02",1952,"female","SANTANDER",45,45,0
+"homicide_vs_v02",1952,"male","SANTANDER",401,401,0
+"homicide_vs_v02",1952,"female","TOLIMA",74,74,0
+"homicide_vs_v02",1952,"male","TOLIMA",608,608,0
+"homicide_vs_v02",1952,"female","VALLE DEL CAUCA",52,52,0
+"homicide_vs_v02",1952,"male","VALLE DEL CAUCA",865,865,0
+"homicide_vs_v02",1953,"female","ANTIOQUIA",41,41,0
+"homicide_vs_v02",1953,"male","ANTIOQUIA",516,516,0
+"homicide_vs_v02",1953,"female","ATLANTICO",2,2,0
+"homicide_vs_v02",1953,"male","ATLANTICO",33,33,0
+"homicide_vs_v02",1953,"female","BOLIVAR",2,2,0
+"homicide_vs_v02",1953,"male","BOLIVAR",43,43,0
+"homicide_vs_v02",1953,"female","BOYACA",20,20,0
+"homicide_vs_v02",1953,"male","BOYACA",185,185,0
+"homicide_vs_v02",1953,"female","CALDAS",33,33,0
+"homicide_vs_v02",1953,"male","CALDAS",438,438,0
+"homicide_vs_v02",1953,"female","CAUCA",5,5,0
+"homicide_vs_v02",1953,"male","CAUCA",68,68,0
+"homicide_vs_v02",1953,"female","CHOCO",0,0,0
+"homicide_vs_v02",1953,"male","CHOCO",8,8,0
+"homicide_vs_v02",1953,"female","CORDOBA",3,3,0
+"homicide_vs_v02",1953,"male","CORDOBA",7,7,0
+"homicide_vs_v02",1953,"female","CUNDINAMARCA",54,54,0
+"homicide_vs_v02",1953,"male","CUNDINAMARCA",330,330,0
+"homicide_vs_v02",1953,"female","HUILA",27,27,0
+"homicide_vs_v02",1953,"male","HUILA",155,155,0
+"homicide_vs_v02",1953,"female","INTENDENCIAS Y COMISARIAS",5,5,0
+"homicide_vs_v02",1953,"male","INTENDENCIAS Y COMISARIAS",93,93,0
+"homicide_vs_v02",1953,"female","MAGDALENA",3,3,0
+"homicide_vs_v02",1953,"male","MAGDALENA",83,83,0
+"homicide_vs_v02",1953,"female","NARINO",6,6,0
+"homicide_vs_v02",1953,"male","NARINO",30,30,0
+"homicide_vs_v02",1953,"female","NORTE DE SANTANDER",18,18,0
+"homicide_vs_v02",1953,"male","NORTE DE SANTANDER",183,183,0
+"homicide_vs_v02",1953,"female","SANTANDER",26,26,0
+"homicide_vs_v02",1953,"male","SANTANDER",336,336,0
+"homicide_vs_v02",1953,"female","TOLIMA",38,38,0
+"homicide_vs_v02",1953,"male","TOLIMA",433,433,0
+"homicide_vs_v02",1953,"female","VALLE DEL CAUCA",46,46,0
+"homicide_vs_v02",1953,"male","VALLE DEL CAUCA",502,502,0
+"homicide_vs_v02",1954,"female","ANTIOQUIA",30,30,0
+"homicide_vs_v02",1954,"male","ANTIOQUIA",327,327,0
+"homicide_vs_v02",1954,"female","ATLANTICO",3,3,0
+"homicide_vs_v02",1954,"male","ATLANTICO",35,35,0
+"homicide_vs_v02",1954,"female","BOLIVAR",5,5,0
+"homicide_vs_v02",1954,"male","BOLIVAR",38,38,0
+"homicide_vs_v02",1954,"female","BOYACA",9,9,0
+"homicide_vs_v02",1954,"male","BOYACA",155,155,0
+"homicide_vs_v02",1954,"female","CALDAS",34,34,0
+"homicide_vs_v02",1954,"male","CALDAS",453,453,0
+"homicide_vs_v02",1954,"female","CAUCA",5,5,0
+"homicide_vs_v02",1954,"male","CAUCA",88,88,0
+"homicide_vs_v02",1954,"female","CHOCO",2,2,0
+"homicide_vs_v02",1954,"male","CHOCO",9,9,0
+"homicide_vs_v02",1954,"female","CORDOBA",5,5,0
+"homicide_vs_v02",1954,"male","CORDOBA",27,27,0
+"homicide_vs_v02",1954,"female","CUNDINAMARCA",41,41,0
+"homicide_vs_v02",1954,"male","CUNDINAMARCA",266,266,0
+"homicide_vs_v02",1954,"female","HUILA",27,27,0
+"homicide_vs_v02",1954,"male","HUILA",134,134,0
+"homicide_vs_v02",1954,"female","INTENDENCIAS Y COMISARIAS",2,2,0
+"homicide_vs_v02",1954,"male","INTENDENCIAS Y COMISARIAS",45,45,0
+"homicide_vs_v02",1954,"female","MAGDALENA",7,7,0
+"homicide_vs_v02",1954,"male","MAGDALENA",67,67,0
+"homicide_vs_v02",1954,"female","NARINO",9,9,0
+"homicide_vs_v02",1954,"male","NARINO",45,45,0
+"homicide_vs_v02",1954,"female","NORTE DE SANTANDER",9,9,0
+"homicide_vs_v02",1954,"male","NORTE DE SANTANDER",175,175,0
+"homicide_vs_v02",1954,"female","SANTANDER",26,26,0
+"homicide_vs_v02",1954,"male","SANTANDER",257,257,0
+"homicide_vs_v02",1954,"female","TOLIMA",40,40,0
+"homicide_vs_v02",1954,"male","TOLIMA",323,323,0
+"homicide_vs_v02",1954,"female","VALLE DEL CAUCA",43,43,0
+"homicide_vs_v02",1954,"male","VALLE DEL CAUCA",380,380,0
+"homicide_vs_v02",1955,"female","ANTIOQUIA",47,47,0
+"homicide_vs_v02",1955,"male","ANTIOQUIA",356,356,0
+"homicide_vs_v02",1955,"female","ATLANTICO",6,6,0
+"homicide_vs_v02",1955,"male","ATLANTICO",27,27,0
+"homicide_vs_v02",1955,"female","BOLIVAR",4,4,0
+"homicide_vs_v02",1955,"male","BOLIVAR",40,40,0
+"homicide_vs_v02",1955,"female","BOYACA",17,17,0
+"homicide_vs_v02",1955,"male","BOYACA",123,123,0
+"homicide_vs_v02",1955,"female","CALDAS",34,34,0
+"homicide_vs_v02",1955,"male","CALDAS",579,579,0
+"homicide_vs_v02",1955,"female","CAUCA",12,12,0
+"homicide_vs_v02",1955,"male","CAUCA",112,112,0
+"homicide_vs_v02",1955,"female","CHOCO",2,2,0
+"homicide_vs_v02",1955,"male","CHOCO",3,3,0
+"homicide_vs_v02",1955,"female","CORDOBA",4,4,0
+"homicide_vs_v02",1955,"male","CORDOBA",14,14,0
+"homicide_vs_v02",1955,"female","CUNDINAMARCA",49,49,0
+"homicide_vs_v02",1955,"male","CUNDINAMARCA",352,352,0
+"homicide_vs_v02",1955,"female","HUILA",30,30,0
+"homicide_vs_v02",1955,"male","HUILA",124,124,0
+"homicide_vs_v02",1955,"female","INTENDENCIAS Y COMISARIAS",12,12,0
+"homicide_vs_v02",1955,"male","INTENDENCIAS Y COMISARIAS",60,60,0
+"homicide_vs_v02",1955,"female","MAGDALENA",6,6,0
+"homicide_vs_v02",1955,"male","MAGDALENA",48,48,0
+"homicide_vs_v02",1955,"female","NARINO",11,11,0
+"homicide_vs_v02",1955,"male","NARINO",55,55,0
+"homicide_vs_v02",1955,"female","NORTE DE SANTANDER",13,13,0
+"homicide_vs_v02",1955,"male","NORTE DE SANTANDER",178,178,0
+"homicide_vs_v02",1955,"female","SANTANDER",43,43,0
+"homicide_vs_v02",1955,"male","SANTANDER",276,276,0
+"homicide_vs_v02",1955,"female","TOLIMA",76,76,0
+"homicide_vs_v02",1955,"male","TOLIMA",682,682,0
+"homicide_vs_v02",1955,"female","VALLE DEL CAUCA",58,58,0
+"homicide_vs_v02",1955,"male","VALLE DEL CAUCA",703,703,0
+"homicide_vs_v02",1957,"female","ANTIOQUIA",34,34,0
+"homicide_vs_v02",1957,"male","ANTIOQUIA",397,397,0
+"homicide_vs_v02",1957,"female","ATLANTICO",3,3,0
+"homicide_vs_v02",1957,"male","ATLANTICO",22,22,0
+"homicide_vs_v02",1957,"female","BOLIVAR",6,6,0
+"homicide_vs_v02",1957,"male","BOLIVAR",51,51,0
+"homicide_vs_v02",1957,"female","BOYACA",18,18,0
+"homicide_vs_v02",1957,"male","BOYACA",145,145,0
+"homicide_vs_v02",1957,"female","CALDAS",52,52,0
+"homicide_vs_v02",1957,"male","CALDAS",1079,1079,0
+"homicide_vs_v02",1957,"female","CAUCA",19,19,0
+"homicide_vs_v02",1957,"male","CAUCA",138,138,0
+"homicide_vs_v02",1957,"female","CHOCO",2,2,0
+"homicide_vs_v02",1957,"male","CHOCO",15,15,0
+"homicide_vs_v02",1957,"female","CORDOBA",2,2,0
+"homicide_vs_v02",1957,"male","CORDOBA",29,29,0
+"homicide_vs_v02",1957,"female","CUNDINAMARCA",40,40,0
+"homicide_vs_v02",1957,"male","CUNDINAMARCA",348,348,0
+"homicide_vs_v02",1957,"female","HUILA",35,35,0
+"homicide_vs_v02",1957,"male","HUILA",125,125,0
+"homicide_vs_v02",1957,"female","INTENDENCIAS Y COMISARIAS",11,11,0
+"homicide_vs_v02",1957,"male","INTENDENCIAS Y COMISARIAS",78,78,0
+"homicide_vs_v02",1957,"female","MAGDALENA",5,5,0
+"homicide_vs_v02",1957,"male","MAGDALENA",60,60,0
+"homicide_vs_v02",1957,"female","NARINO",7,7,0
+"homicide_vs_v02",1957,"male","NARINO",45,45,0
+"homicide_vs_v02",1957,"female","NORTE DE SANTANDER",19,19,0
+"homicide_vs_v02",1957,"male","NORTE DE SANTANDER",183,183,0
+"homicide_vs_v02",1957,"female","SANTANDER",28,28,0
+"homicide_vs_v02",1957,"male","SANTANDER",267,267,0
+"homicide_vs_v02",1957,"female","TOLIMA",109,109,0
+"homicide_vs_v02",1957,"male","TOLIMA",820,820,0
+"homicide_vs_v02",1957,"female","VALLE DEL CAUCA",86,86,0
+"homicide_vs_v02",1957,"male","VALLE DEL CAUCA",1193,1193,0
+"all_causes_vs_v06",1951,"female","ANTIOQUIA",11779,11779,0
+"all_causes_vs_v06",1951,"male","ANTIOQUIA",13346,13346,0
+"all_causes_vs_v06",1951,"female","ATLANTICO",2262,2262,0
+"all_causes_vs_v06",1951,"male","ATLANTICO",2736,2736,0
+"all_causes_vs_v06",1951,"female","BOLIVAR",2671,2671,0
+"all_causes_vs_v06",1951,"male","BOLIVAR",2785,2785,0
+"all_causes_vs_v06",1951,"female","BOYACA",5246,5246,0
+"all_causes_vs_v06",1951,"male","BOYACA",5534,5534,0
+"all_causes_vs_v06",1951,"female","CALDAS",9377,9377,0
+"all_causes_vs_v06",1951,"male","CALDAS",10019,10019,0
+"all_causes_vs_v06",1951,"female","CAUCA",3050,3050,0
+"all_causes_vs_v06",1951,"male","CAUCA",3455,3455,0
+"all_causes_vs_v06",1951,"female","CHOCO",509,509,0
+"all_causes_vs_v06",1951,"male","CHOCO",646,646,0
+"all_causes_vs_v06",1951,"female","CUNDINAMARCA",10983,10983,0
+"all_causes_vs_v06",1951,"male","CUNDINAMARCA",12457,12457,0
+"all_causes_vs_v06",1951,"female","HUILA",2485,2485,0
+"all_causes_vs_v06",1951,"male","HUILA",2726,2726,0
+"all_causes_vs_v06",1951,"female","INTENDENCIAS Y COMISARIAS",1124,1124,0
+"all_causes_vs_v06",1951,"male","INTENDENCIAS Y COMISARIAS",1339,1339,0
+"all_causes_vs_v06",1951,"female","MAGDALENA",1698,1698,0
+"all_causes_vs_v06",1951,"male","MAGDALENA",2207,2207,0
+"all_causes_vs_v06",1951,"female","NARINO",4403,4403,0
+"all_causes_vs_v06",1951,"male","NARINO",4791,4791,0
+"all_causes_vs_v06",1951,"female","NORTE DE SANTANDER",3222,3222,0
+"all_causes_vs_v06",1951,"male","NORTE DE SANTANDER",3452,3452,0
+"all_causes_vs_v06",1951,"female","SANTANDER",5842,5842,0
+"all_causes_vs_v06",1951,"male","SANTANDER",6408,6408,0
+"all_causes_vs_v06",1951,"female","TOLIMA",5306,5306,0
+"all_causes_vs_v06",1951,"male","TOLIMA",5953,5953,0
+"all_causes_vs_v06",1951,"female","VALLE DEL CAUCA",7959,7959,0
+"all_causes_vs_v06",1951,"male","VALLE DEL CAUCA",9399,9399,0
+"all_causes_vs_v06",1952,"female","ANTIOQUIA",12604,12604,0
+"all_causes_vs_v06",1952,"male","ANTIOQUIA",11728,11728,0
+"all_causes_vs_v06",1952,"female","ATLANTICO",2139,2139,0
+"all_causes_vs_v06",1952,"male","ATLANTICO",2354,2354,0
+"all_causes_vs_v06",1952,"female","BOLIVAR",2130,2130,0
+"all_causes_vs_v06",1952,"male","BOLIVAR",2352,2352,0
+"all_causes_vs_v06",1952,"female","BOYACA",5092,5092,0
+"all_causes_vs_v06",1952,"male","BOYACA",5177,5177,0
+"all_causes_vs_v06",1952,"female","CALDAS",8164,8164,0
+"all_causes_vs_v06",1952,"male","CALDAS",9232,9232,0
+"all_causes_vs_v06",1952,"female","CAUCA",3047,3047,0
+"all_causes_vs_v06",1952,"male","CAUCA",3346,3346,0
+"all_causes_vs_v06",1952,"female","CHOCO",460,460,0
+"all_causes_vs_v06",1952,"male","CHOCO",536,536,0
+"all_causes_vs_v06",1952,"female","CORDOBA",302,302,0
+"all_causes_vs_v06",1952,"male","CORDOBA",338,338,0
+"all_causes_vs_v06",1952,"female","CUNDINAMARCA",10243,10243,0
+"all_causes_vs_v06",1952,"male","CUNDINAMARCA",10822,10822,0
+"all_causes_vs_v06",1952,"female","HUILA",2350,2350,0
+"all_causes_vs_v06",1952,"male","HUILA",2542,2542,0
+"all_causes_vs_v06",1952,"female","INTENDENCIAS Y COMISARIAS",1009,1009,0
+"all_causes_vs_v06",1952,"male","INTENDENCIAS Y COMISARIAS",1331,1331,0
+"all_causes_vs_v06",1952,"female","MAGDALENA",1584,1584,0
+"all_causes_vs_v06",1952,"male","MAGDALENA",1801,1801,0
+"all_causes_vs_v06",1952,"female","NARINO",4191,4191,0
+"all_causes_vs_v06",1952,"male","NARINO",4364,4364,0
+"all_causes_vs_v06",1952,"female","NORTE DE SANTANDER",2759,2759,0
+"all_causes_vs_v06",1952,"male","NORTE DE SANTANDER",3158,3158,0
+"all_causes_vs_v06",1952,"female","SANTANDER",4959,4959,0
+"all_causes_vs_v06",1952,"male","SANTANDER",5737,5737,0
+"all_causes_vs_v06",1952,"female","TOLIMA",5630,5630,0
+"all_causes_vs_v06",1952,"male","TOLIMA",6416,6416,0
+"all_causes_vs_v06",1952,"female","VALLE DEL CAUCA",7016,7016,0
+"all_causes_vs_v06",1952,"male","VALLE DEL CAUCA",8825,8825,0
+"all_causes_vs_v06",1953,"female","ANTIOQUIA",11646,11646,0
+"all_causes_vs_v06",1953,"male","ANTIOQUIA",12592,12592,0
+"all_causes_vs_v06",1953,"female","ATLANTICO",2190,2190,0
+"all_causes_vs_v06",1953,"male","ATLANTICO",2207,2207,0
+"all_causes_vs_v06",1953,"female","BOLIVAR",2404,2404,0
+"all_causes_vs_v06",1953,"male","BOLIVAR",2769,2769,0
+"all_causes_vs_v06",1953,"female","BOYACA",5788,5788,0
+"all_causes_vs_v06",1953,"male","BOYACA",5606,5606,0
+"all_causes_vs_v06",1953,"female","CALDAS",8306,8306,0
+"all_causes_vs_v06",1953,"male","CALDAS",9491,9491,0
+"all_causes_vs_v06",1953,"female","CAUCA",3534,3534,0
+"all_causes_vs_v06",1953,"male","CAUCA",3703,3703,0
+"all_causes_vs_v06",1953,"female","CHOCO",618,618,0
+"all_causes_vs_v06",1953,"male","CHOCO",555,555,0
+"all_causes_vs_v06",1953,"female","CORDOBA",656,656,0
+"all_causes_vs_v06",1953,"male","CORDOBA",704,704,0
+"all_causes_vs_v06",1953,"female","CUNDINAMARCA",11571,11571,0
+"all_causes_vs_v06",1953,"male","CUNDINAMARCA",12002,12002,0
+"all_causes_vs_v06",1953,"female","HUILA",2583,2583,0
+"all_causes_vs_v06",1953,"male","HUILA",2825,2825,0
+"all_causes_vs_v06",1953,"female","INTENDENCIAS Y COMISARIAS",1021,1021,0
+"all_causes_vs_v06",1953,"male","INTENDENCIAS Y COMISARIAS",1196,1196,0
+"all_causes_vs_v06",1953,"female","MAGDALENA",1627,1627,0
+"all_causes_vs_v06",1953,"male","MAGDALENA",1894,1894,0
+"all_causes_vs_v06",1953,"female","NARINO",4891,4891,0
+"all_causes_vs_v06",1953,"male","NARINO",5042,5042,0
+"all_causes_vs_v06",1953,"female","NORTE DE SANTANDER",2922,2922,0
+"all_causes_vs_v06",1953,"male","NORTE DE SANTANDER",3251,3251,0
+"all_causes_vs_v06",1953,"female","SANTANDER",5393,5393,0
+"all_causes_vs_v06",1953,"male","SANTANDER",5989,5989,0
+"all_causes_vs_v06",1953,"female","TOLIMA",5924,5924,0
+"all_causes_vs_v06",1953,"male","TOLIMA",6786,6786,0
+"all_causes_vs_v06",1953,"female","VALLE DEL CAUCA",7367,7367,0
+"all_causes_vs_v06",1953,"male","VALLE DEL CAUCA",8600,8600,0
+"all_causes_vs_v06",1954,"female","ANTIOQUIA",10292,10292,0
+"all_causes_vs_v06",1954,"male","ANTIOQUIA",11099,11099,0
+"all_causes_vs_v06",1954,"female","ATLANTICO",2215,2215,0
+"all_causes_vs_v06",1954,"male","ATLANTICO",2408,2408,0
+"all_causes_vs_v06",1954,"female","BOLIVAR",2962,2962,0
+"all_causes_vs_v06",1954,"male","BOLIVAR",3068,3068,0
+"all_causes_vs_v06",1954,"female","BOYACA",5376,5376,0
+"all_causes_vs_v06",1954,"male","BOYACA",5372,5372,0
+"all_causes_vs_v06",1954,"female","CALDAS",8001,8001,0
+"all_causes_vs_v06",1954,"male","CALDAS",9228,9228,0
+"all_causes_vs_v06",1954,"female","CAUCA",2918,2918,0
+"all_causes_vs_v06",1954,"male","CAUCA",3054,3054,0
+"all_causes_vs_v06",1954,"female","CHOCO",575,621,-46
+"all_causes_vs_v06",1954,"male","CHOCO",603,649,-46
+"all_causes_vs_v06",1954,"female","CORDOBA",779,779,0
+"all_causes_vs_v06",1954,"male","CORDOBA",800,800,0
+"all_causes_vs_v06",1954,"female","CUNDINAMARCA",10471,10471,0
+"all_causes_vs_v06",1954,"male","CUNDINAMARCA",10771,10771,0
+"all_causes_vs_v06",1954,"female","HUILA",2177,2177,0
+"all_causes_vs_v06",1954,"male","HUILA",2411,2411,0
+"all_causes_vs_v06",1954,"female","INTENDENCIAS Y COMISARIAS",859,859,0
+"all_causes_vs_v06",1954,"male","INTENDENCIAS Y COMISARIAS",1036,1036,0
+"all_causes_vs_v06",1954,"female","MAGDALENA",1442,1442,0
+"all_causes_vs_v06",1954,"male","MAGDALENA",1789,1789,0
+"all_causes_vs_v06",1954,"female","NARINO",4063,4063,0
+"all_causes_vs_v06",1954,"male","NARINO",4423,4423,0
+"all_causes_vs_v06",1954,"female","NORTE DE SANTANDER",2771,2771,0
+"all_causes_vs_v06",1954,"male","NORTE DE SANTANDER",3022,3022,0
+"all_causes_vs_v06",1954,"female","SANTANDER",5363,5363,0
+"all_causes_vs_v06",1954,"male","SANTANDER",5959,5959,0
+"all_causes_vs_v06",1954,"female","TOLIMA",4892,4892,0
+"all_causes_vs_v06",1954,"male","TOLIMA",5554,5554,0
+"all_causes_vs_v06",1954,"female","VALLE DEL CAUCA",7045,7045,0
+"all_causes_vs_v06",1954,"male","VALLE DEL CAUCA",7963,7963,0
+"all_causes_vs_v06",1955,"female","ANTIOQUIA",11270,11270,0
+"all_causes_vs_v06",1955,"male","ANTIOQUIA",11862,11862,0
+"all_causes_vs_v06",1955,"female","ATLANTICO",2240,2240,0
+"all_causes_vs_v06",1955,"male","ATLANTICO",2341,2341,0
+"all_causes_vs_v06",1955,"female","BOLIVAR",2603,2603,0
+"all_causes_vs_v06",1955,"male","BOLIVAR",2740,2740,0
+"all_causes_vs_v06",1955,"female","BOYACA",5223,5223,0
+"all_causes_vs_v06",1955,"male","BOYACA",5061,5061,0
+"all_causes_vs_v06",1955,"female","CALDAS",8747,8747,0
+"all_causes_vs_v06",1955,"male","CALDAS",10116,10116,0
+"all_causes_vs_v06",1955,"female","CAUCA",3597,3597,0
+"all_causes_vs_v06",1955,"male","CAUCA",3735,3735,0
+"all_causes_vs_v06",1955,"female","CHOCO",747,747,0
+"all_causes_vs_v06",1955,"male","CHOCO",711,711,0
+"all_causes_vs_v06",1955,"female","CORDOBA",875,875,0
+"all_causes_vs_v06",1955,"male","CORDOBA",836,836,0
+"all_causes_vs_v06",1955,"female","CUNDINAMARCA",11410,11410,0
+"all_causes_vs_v06",1955,"male","CUNDINAMARCA",11824,11824,0
+"all_causes_vs_v06",1955,"female","HUILA",2260,2260,0
+"all_causes_vs_v06",1955,"male","HUILA",2414,2414,0
+"all_causes_vs_v06",1955,"female","INTENDENCIAS Y COMISARIAS",894,894,0
+"all_causes_vs_v06",1955,"male","INTENDENCIAS Y COMISARIAS",1202,1202,0
+"all_causes_vs_v06",1955,"female","MAGDALENA",1529,1529,0
+"all_causes_vs_v06",1955,"male","MAGDALENA",1795,1795,0
+"all_causes_vs_v06",1955,"female","NARINO",4531,4531,0
+"all_causes_vs_v06",1955,"male","NARINO",4968,4968,0
+"all_causes_vs_v06",1955,"female","NORTE DE SANTANDER",2909,2909,0
+"all_causes_vs_v06",1955,"male","NORTE DE SANTANDER",3266,3266,0
+"all_causes_vs_v06",1955,"female","SANTANDER",5333,5333,0
+"all_causes_vs_v06",1955,"male","SANTANDER",5814,5814,0
+"all_causes_vs_v06",1955,"female","TOLIMA",5344,5344,0
+"all_causes_vs_v06",1955,"male","TOLIMA",6486,6486,0
+"all_causes_vs_v06",1955,"female","VALLE DEL CAUCA",7850,7850,0
+"all_causes_vs_v06",1955,"male","VALLE DEL CAUCA",9330,9330,0
+"all_causes_vs_v06",1957,"female","ANTIOQUIA",11772,11772,0
+"all_causes_vs_v06",1957,"male","ANTIOQUIA",12833,12833,0
+"all_causes_vs_v06",1957,"female","ATLANTICO",2739,2739,0
+"all_causes_vs_v06",1957,"male","ATLANTICO",2860,2860,0
+"all_causes_vs_v06",1957,"female","BOLIVAR",2818,2818,0
+"all_causes_vs_v06",1957,"male","BOLIVAR",3053,3053,0
+"all_causes_vs_v06",1957,"female","BOYACA",5659,5659,0
+"all_causes_vs_v06",1957,"male","BOYACA",5394,5394,0
+"all_causes_vs_v06",1957,"female","CALDAS",8819,8819,0
+"all_causes_vs_v06",1957,"male","CALDAS",10491,10491,0
+"all_causes_vs_v06",1957,"female","CAUCA",3950,3950,0
+"all_causes_vs_v06",1957,"male","CAUCA",4039,4039,0
+"all_causes_vs_v06",1957,"female","CHOCO",689,689,0
+"all_causes_vs_v06",1957,"male","CHOCO",773,773,0
+"all_causes_vs_v06",1957,"female","CORDOBA",998,998,0
+"all_causes_vs_v06",1957,"male","CORDOBA",1103,1103,0
+"all_causes_vs_v06",1957,"female","CUNDINAMARCA",11785,11785,0
+"all_causes_vs_v06",1957,"male","CUNDINAMARCA",12595,12595,0
+"all_causes_vs_v06",1957,"female","HUILA",2332,2332,0
+"all_causes_vs_v06",1957,"male","HUILA",2442,2442,0
+"all_causes_vs_v06",1957,"female","INTENDENCIAS Y COMISARIAS",1300,1300,0
+"all_causes_vs_v06",1957,"male","INTENDENCIAS Y COMISARIAS",1530,1530,0
+"all_causes_vs_v06",1957,"female","MAGDALENA",2020,2020,0
+"all_causes_vs_v06",1957,"male","MAGDALENA",2276,2276,0
+"all_causes_vs_v06",1957,"female","NARINO",4836,4836,0
+"all_causes_vs_v06",1957,"male","NARINO",5154,5154,0
+"all_causes_vs_v06",1957,"female","NORTE DE SANTANDER",3426,3426,0
+"all_causes_vs_v06",1957,"male","NORTE DE SANTANDER",3766,3766,0
+"all_causes_vs_v06",1957,"female","SANTANDER",5830,5830,0
+"all_causes_vs_v06",1957,"male","SANTANDER",6359,6359,0
+"all_causes_vs_v06",1957,"female","TOLIMA",5226,5226,0
+"all_causes_vs_v06",1957,"male","TOLIMA",6278,6278,0
+"all_causes_vs_v06",1957,"female","VALLE DEL CAUCA",8443,8443,0
+"all_causes_vs_v06",1957,"male","VALLE DEL CAUCA",10285,10285,0
