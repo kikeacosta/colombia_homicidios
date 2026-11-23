@@ -1,6 +1,7 @@
 # Inventario de datos de mortalidad: Colombia, niveles nacional, departamental y municipal
 
-Estado al 2026-11-12 (versión anterior: 2026-11-10). Rutas relativas a la raíz del proyecto
+Estado al 2026-11-12 (versión anterior: 2026-11-10), con una actualización del 2026-11-23 en la
+sección 0.3 y en los huecos de la sección 1 (información nueva desde el 12 de noviembre). Rutas relativas a la raíz del proyecto
 (`C:\Users\kikep\gits\colombia_homicidios`). `data_input/` contiene insumos originales o transcritos;
 `data_inter/` productos intermedios de los scripts; `output/tables/` las series finales.
 
@@ -80,11 +81,12 @@ departamento), en `data_input/historical/census_tables/`. Esta figura no incluye
 causa de muerte (LAMBdA por 19 causas) ni las de mortalidad en la niñez, que están catalogadas en
 `documents/inventory/archivos.csv`.
 
-### 0.3 Qué información es nueva desde el lunes 9 de noviembre
+### 0.3 Qué información es nueva desde el lunes 9 de noviembre y desde el 12
 
 ![Información nueva desde el lunes](../figures/inventory/data_availability_information_new.png)
 
-La misma figura 0.1, con gris para lo que ya se tenía antes del lunes y azul para lo nuevo: un año de
+La misma figura 0.1, con gris para lo que ya se tenía antes del lunes 9, azul para lo nuevo entre
+el 9 y el 12, y naranja para lo nuevo desde la versión del 12 de noviembre: un año de
 un nivel y dominio es nuevo si antes no había nada a ese nivel o si ahora hay más desagregación.
 Antes del lunes se tenían los microdatos EEVV 1979-2023, las proyecciones DANE, UCDP, las tablas de
 vida DANE, la Base de Mortalidad de la OMS (defunciones y homicidios por edad y sexo, 1953-1977), WPP 2024 (en la carpeta compartida desde agosto de 2024), las transcripciones de los anuarios
@@ -112,6 +114,28 @@ Las proyecciones DANE nacionales (1950-2070) y departamentales (1985-2050) llega
 ya cubría 1950-2023, de modo que ninguna de las dos cuenta. LAMBdA sí cuenta como nueva. Es una
 comparación por fuente: marca si la información existe y con qué detalle, no distingue correcciones
 dentro de una transcripción.
+
+**Desde el 12 de noviembre** (naranja) llegó información con edad a nivel departamental en 5
+combinaciones de nivel, dominio y año, todas en años en que antes solo había total y sexo:
+
+| Nivel | Dominio | Años nuevos | Qué llegó | Script |
+|---|---|---|---|---|
+| Departamental | Defunciones | 2 (1968, 1969) | edad y sexo por sección del país (*Anuario de estadísticas vitales 1968-1969*, cuadros 30 y 76) | `historical/26` |
+| Departamental | Defunciones | 3 (1965-1967) | edad y sexo por sección del país (anuarios generales, cuadros 46 de 1965, 66 de 1966 y 67 de 1967), verificadas con tres identidades: total = hombres + mujeres, edades = total, secciones = total nacional; los totales de las 19-20 secciones coinciden con la serie v06 (59 de 59) | `historical/33` |
+| Departamental | Población | 1 (1973) | edad simple y sexo por sección (censo de 1973, muestra de avance) | `historical/27` |
+
+Con esto la mortalidad departamental por edad y sexo pasa de empezar en 1970 a cubrir 1965-1978
+sin huecos. En 1967 el impreso trae nueve cifras que no cumplen las identidades: en ocho celdas un
+dígito cambiado, y en Sucre la fila 45-49 repite la de 35-39. Se revisaron en recortes a 250 dpi, se
+usó el valor que piden a la vez dos identidades y cada caso queda anotado en
+`dane_defunciones_1965_1967_support/misprints_in_source.csv`.
+
+No es nuevo, aunque se extrajo: la relectura de las causas violentas por sección de los anuarios
+1951-1955 y 1957 (`historical/32`) da exactamente los mismos homicidios por departamento y sexo que
+la serie v02 (202 de 202 valores) y las mismas defunciones totales que la v06 (200 de 202; la
+diferencia es Chocó 1954, entre fuentes), de modo que confirma esas series y añade suicidios y
+accidentes por tipo, por departamento y sexo, que no son un dominio de la figura. Las intendencias y
+comisarías siguen agregadas porque así las imprime la fuente.
 
 ### 0.4 Dónde se pueden estimar los homicidios con la mortalidad por sexo
 
@@ -166,7 +190,7 @@ Lo que la figura muestra de un vistazo:
 Huecos principales:
 
 - **Municipal 1961-1978**: no hay defunciones municipales. Antes de 1979 nunca hay detalle por edad ni causa a nivel municipal.
-- **Departamental por edad antes de 1979**: en defunciones las series 1915-1984 son totales, con sexo parcial; el *Registro de defunciones 1970-1978* (cuadro 11) dará edad y sexo por sección para esos nueve años, y antes de 1970 sigue sin haber nada. En población, los censos 1938, 1951 y 1964 tienen edad quinquenal por departamento (`census_tables`); 1973 no (su resumen solo trae edad a nivel nacional).
+- **Departamental por edad antes de 1979**: en defunciones las series 1915-1984 son totales, con sexo parcial; el *Registro de defunciones 1970-1978* (cuadro 11) da edad y sexo por sección para esos nueve años, y desde la actualización del 23 de noviembre también hay 1965-1969 (anuarios DANE, `historical/33` y `historical/26`), así que la serie va de 1965 a 1978 sin huecos; antes de 1965 sigue sin haber nada. En población, los censos 1938, 1951 y 1964 tienen edad quinquenal por departamento (`census_tables`), y 1973 tiene edad simple por sección desde la muestra de avance del censo (`historical/27`).
 - **Homicidios departamentales 1966-1978**: solo la fuente policial (1962-2002) cubre ese tramo; los anuarios paran en 1965 y EEVV empieza en 1979.
 - **Nacional sin causa en 1970, 1971, 1973 y 1978**: OMS no tiene causas esos años (1970 solo en lista B) y EEVV no tiene 1978. Interpolados en los scripts 30 y 40. El cuadro 6 del *Registro de defunciones* (ya extraído) cubre 1973 y 1978; 1971 queda sin causa. Los scripts 30 y 40 todavía no lo usan.
 - **Censos 1985-2018 sin ajuste de omisión por edad**: las conciliaciones DANE dan omisión total (1985 ~11 %, 1993 ~11,7 %, 2005 ~3,7 %, 2018 ~8,5 %) pero no se ha incorporado el perfil por edad y sexo.

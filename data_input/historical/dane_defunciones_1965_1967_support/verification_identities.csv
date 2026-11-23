@@ -1,0 +1,5 @@
+"identity","year","unit","age","sex","value","expected"
+"units = TOTAL GENERAL",1965,"Total nacional","50-54","male",2907,2908
+"units = TOTAL GENERAL",1965,"Total nacional","50-54","total",5316,5317
+"units = TOTAL GENERAL",1965,"Total nacional","not stated","male",386,385
+"units = TOTAL GENERAL",1965,"Total nacional","not stated","total",677,676

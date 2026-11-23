@@ -161,6 +161,8 @@ dep <- bind_rows(
         "historical/census_tables/census1951_dept_age5_sex_1938_1951.csv; census1964_dept_age5_sex_zone.csv"),
   serie("Departamental", "Población", "Censo 1973 ajustado por cobertura, cabecera y resto (OCR cap. VIII)", 1973,
         "Solo total", "historical/census_tables/census1973_adjusted_population_units.csv"),
+  serie("Departamental", "Población", "Censo 1973, muestra de avance: edad simple y sexo por sección (OCR)", 1973,
+        "Edad y sexo", "historical/census_tables/census_1973_muestra_single_age_sex_dept.csv"),
   serie("Departamental", "Población", "DANE proyecciones (hasta 2023; a 2042)", 1985:2023, "Edad y sexo",
         "DANEpop/*.xlsx"),
   serie_vitales("Departamental"),
@@ -171,8 +173,15 @@ dep <- bind_rows(
     mutate(detalle = if_else(year <= 1978, "Edad y sexo", detalle)),
   serie("Departamental", "Defunciones", "EEVV (suma municipal)", 1979:2023, "Edad, sexo y causa",
         "data_inter/deaths_munic_age_1979-2023.rds", parcial = 1979),
+  # extracted after the 2026-11-12 version of the inventory
+  serie("Departamental", "Defunciones", "DANE Anuario de estadísticas vitales 1968-1969, por sección: edad y sexo", 1968:1969,
+        "Edad y sexo", "historical/dane_defunciones_1968_1969_secciones_sexo_edad.csv"),
+  serie("Departamental", "Defunciones", "DANE anuarios generales 1965-1967, por sección: edad y sexo", 1965:1967,
+        "Edad y sexo", "historical/dane_defunciones_1965_1967_secciones_sexo_edad.csv"),
   serie_csv("Departamental", "Homicidios y violencia", "Anuarios DANE, total y sexo",
             "department_homicides_clean_v02.csv", extra_parcial = 1943:1945),
+  serie("Departamental", "Homicidios y violencia", "Anuarios DANE, causas violentas por sección (relectura 1951-1957)",
+        c(1951:1955, 1957), "Por sexo", "historical/dane_causas_violentas_dept_1951_1964.csv"),
   serie("Departamental", "Homicidios y violencia", "Policía Nacional, 40 jurisdicciones", 1962:2002, "Solo total",
         "historical/Homicidio 1962-2002 por depto de Policía_v1.xlsx"),
   serie("Departamental", "Homicidios y violencia", "EEVV, muertes violentas", 1979:2023, "Edad y sexo",
@@ -219,8 +228,16 @@ avail <- bind_rows(nat, dep, mun) |>
 # the files themselves: the col_gap files carry only total, male and female, and the EEVV start in 1979.
 baseline <- as.Date("2026-11-09")
 avail <- avail |>
-  mutate(anterior = str_detect(serie, "^EEVV|^DANE proyecciones|^UCDP|^DANE abreviadas|^Anuarios|^Censos \\(|^Estadística vital y anuarios|^Policía") |
+  mutate(anterior = str_detect(serie, "^EEVV|^DANE proyecciones|^UCDP|^DANE abreviadas|^Anuarios DANE, (total|población|suma)|^Anuarios y boletines|^Censos \\(|^Estadística vital y anuarios|^Policía") |
            startsWith(serie, "OMS") | startsWith(serie, "WPP"))
+# A second cut, the version of the inventory of 2026-11-12: the series below were extracted after it
+# (historical/26, 27, 32 and 33); everything else was already in that version.
+baseline2 <- as.Date("2026-11-12")
+nuevas_12 <- c("DANE Anuario de estadísticas vitales 1968-1969, por sección: edad y sexo",
+               "DANE anuarios generales 1965-1967, por sección: edad y sexo",
+               "Censo 1973, muestra de avance: edad simple y sexo por sección (OCR)",
+               "Anuarios DANE, causas violentas por sección (relectura 1951-1957)")
+avail <- avail |> mutate(antes_12 = !serie %in% nuevas_12)
 
 # ---------------------------------------------------------------------------
 # figure 1: the information available, whatever the source ====
@@ -264,6 +281,8 @@ compute_info <- function(av) {
 info <- compute_info(avail)
 # the same, with what the project held before the baseline
 info_before <- compute_info(filter(avail, anterior))
+# and with what it held at the 2026-11-12 version
+info_12 <- compute_info(filter(avail, antes_12))
 
 # ---------------------------------------------------------------------------
 # figure 2: the sources ====
@@ -340,16 +359,20 @@ ggsave("figures/inventory/data_availability_information.png", p1, width = 14, he
 #     by sex (or by age and sex) at that level, which is what the sex ratio of mortality needs
 info_full <- info |>
   left_join(info_before |> select(destino, dominio, year, detalle_antes = detalle), by = c("destino", "dominio", "year")) |>
+  left_join(info_12 |> select(destino, dominio, year, detalle_12 = detalle), by = c("destino", "dominio", "year")) |>
   left_join(info |> filter(dominio == "Defunciones") |> transmute(destino, year, defunciones = detalle), by = c("destino", "year")) |>
   mutate(nuevo = !is.na(detalle) & (is.na(detalle_antes) | as.integer(detalle) > as.integer(detalle_antes)),
+         nuevo_12 = !is.na(detalle) & (is.na(detalle_12) | as.integer(detalle) > as.integer(detalle_12)),
          homicidios_estimables = dominio == "Homicidios y violencia" & is.na(detalle) & !is.na(defunciones) &
            as.integer(defunciones) >= as.integer(factor("Por sexo", detalles)))
 info_p <- info_full |> mutate(destino = factor(destino, niveles), dominio_f = factor(dominio, rev(dominios)))
 
-new_lev <- c(paste0("Antes: ", detalles), paste0("Nuevo: ", detalles))
-new_cols <- c(setNames(c("#e3e3e3", "#b4b4b4", "#7d7d7d"), new_lev[1:3]), setNames(unname(fill_cols), new_lev[4:6]))
+pre <- c("Antes del 9 nov: ", "Nuevo 9-12 nov: ", "Nuevo desde el 12 nov: ")
+new_lev <- c(paste0(pre[1], detalles), paste0(pre[2], detalles), paste0(pre[3], detalles))
+new_cols <- c(setNames(c("#e3e3e3", "#b4b4b4", "#7d7d7d"), new_lev[1:3]), setNames(unname(fill_cols), new_lev[4:6]),
+              setNames(c("#fdd0a2", "#fd8d3c", "#d94801"), new_lev[7:9]))
 info_new <- info_p |> filter(!is.na(detalle)) |>
-  mutate(cat = factor(paste0(if_else(nuevo, "Nuevo: ", "Antes: "), detalle), new_lev))
+  mutate(cat = factor(paste0(case_when(nuevo_12 ~ pre[3], nuevo ~ pre[2], TRUE ~ pre[1]), detalle), new_lev))
 p_new <- ggplot(info_p, aes(x = year, y = dominio_f)) +
   geom_tile(fill = "grey95", width = 1, height = 0.8) +
   geom_tile(data = info_new, aes(fill = cat), width = 1, height = 0.8) +
@@ -360,18 +383,19 @@ p_new <- ggplot(info_p, aes(x = year, y = dominio_f)) +
   scale_colour_manual(values = setNames("black", lab_agregable), name = NULL) +
   scale_shape_manual(values = setNames(21, lab_parcial), name = NULL) +
   scale_y_discrete(drop = FALSE) +
-  guides(fill = guide_legend(order = 1, ncol = 3, byrow = TRUE),
+  guides(fill = guide_legend(order = 1, ncol = 3, byrow = FALSE),
          colour = guide_legend(order = 2, override.aes = list(fill = "black", linewidth = 0)),
          shape = guide_legend(order = 3)) +
   x_axis +
   facet_grid(rows = vars(destino), switch = "y") +
   labs(x = NULL, y = NULL,
-       title = paste0("Qué información es nueva desde el lunes ", format(baseline, "%Y-%m-%d")),
-       subtitle = "Gris: ya se tenía antes del lunes. Azul: información nueva, porque ese año no había nada a ese nivel o ahora hay más desagregación. El tono marca la desagregación",
-       caption = paste0("Antes del lunes: microdatos EEVV 1979-2023, proyecciones DANE, UCDP, tablas de vida DANE, OMS, WPP 2024, anuarios transcritos (total y sexo) y serie policial (total).\n",
+       title = paste0("Qué información es nueva desde el lunes ", format(baseline, "%Y-%m-%d"), " y desde el ", format(baseline2, "%Y-%m-%d")),
+       subtitle = "Gris: ya se tenía antes del 9. Azul: nueva entre el 9 y el 12. Naranja: nueva desde el 12. Nuevo = ese año no había nada a ese nivel o ahora hay más desagregación; el tono marca la desagregación",
+       caption = paste0("Antes del 9: microdatos EEVV 1979-2023, proyecciones DANE, UCDP, tablas de vida DANE, OMS, WPP 2024, anuarios transcritos (total y sexo) y serie policial (total).\n",
+                        "Desde el 12: defunciones por sección, edad y sexo 1965-1969 (anuarios DANE) y población por sección, edad y sexo 1973 (censo, muestra de avance).\n",
                         "Los datos municipales se agregan a departamento y nación, y los departamentales a nación; las tablas de vida no se agregan. Hasta 2023. Script: code/32_data_availability.R")) +
   theme_avail
-ggsave("figures/inventory/data_availability_information_new.png", p_new, width = 14, height = 8.9, dpi = 200, bg = "white")
+ggsave("figures/inventory/data_availability_information_new.png", p_new, width = 14, height = 9.4, dpi = 200, bg = "white")
 
 lab_est <- "Naranja: homicidios sin dato directo a ese nivel, estimables a partir de la mortalidad total por sexo"
 est_cols <- c(fill_cols, setNames("#e8801a", lab_est))
@@ -402,6 +426,8 @@ ggsave("figures/inventory/data_availability_information_homicides.png", p_est, w
 
 cat("\nNew since the baseline (level, domain: years):\n")
 print(info_full |> filter(nuevo) |> summarise(anios = n(), desde = min(year), hasta = max(year), .by = c(destino, dominio)), n = 20)
+cat("\nNew since the 2026-11-12 version (level, domain, year, detail):\n")
+print(info_full |> filter(nuevo_12) |> select(destino, dominio, year, detalle, detalle_12, serie), n = 40)
 cat("\nHomicides that can be estimated (years):\n")
 print(info_full |> filter(homicidios_estimables) |> summarise(anios = n(), .by = destino))
 
@@ -431,7 +457,8 @@ write_csv(avail |> select(nivel, dominio, serie, year, detalle, parcial, share, 
 # the information available, one row per level, domain and year with something
 write_csv(info_full |> filter(!is.na(detalle) | extraccion | homicidios_estimables) |>
             transmute(nivel = destino, dominio, year, detalle, parcial, agregado, agregable, fuente_del_detalle = serie,
-                      detalle_antes_del_lunes = detalle_antes, nuevo_desde_el_lunes = nuevo, homicidios_estimables,
+                      detalle_antes_del_lunes = detalle_antes, nuevo_desde_el_lunes = nuevo,
+                      detalle_al_12nov = detalle_12, nuevo_desde_el_12nov = nuevo_12, homicidios_estimables,
                       en_extraccion = extraccion, detalle_en_extraccion = if_else(extraccion, as.character(detalle_soon), NA_character_),
                       fuente_en_extraccion = if_else(extraccion, serie_soon, NA_character_)),
           "output/tables/data_availability_information.csv", na = "")
