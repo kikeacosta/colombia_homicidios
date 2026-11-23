@@ -176,10 +176,8 @@ dep <- bind_rows(
   # extracted after the 2026-11-12 version of the inventory
   serie("Departamental", "Defunciones", "DANE Anuario de estadísticas vitales 1968-1969, por sección: edad y sexo", 1968:1969,
         "Edad y sexo", "historical/dane_defunciones_1968_1969_secciones_sexo_edad.csv"),
-  serie("Departamental", "Defunciones", "DANE anuarios generales 1965-1966, por sección: edad y sexo", 1965:1966,
+  serie("Departamental", "Defunciones", "DANE anuarios generales 1965-1967, por sección: edad y sexo", 1965:1967,
         "Edad y sexo", "historical/dane_defunciones_1965_1967_secciones_sexo_edad.csv"),
-  serie("Departamental", "Defunciones", "DANE anuario general 1967, por sección: edad y sexo (en extracción)", 1967,
-        "Edad y sexo", "historical/dane_defunciones_1965_1967_support/transcripcion_1967.csv"),
   serie_csv("Departamental", "Homicidios y violencia", "Anuarios DANE, total y sexo",
             "department_homicides_clean_v02.csv", extra_parcial = 1943:1945),
   serie("Departamental", "Homicidios y violencia", "Anuarios DANE, causas violentas por sección (relectura 1951-1957)",
@@ -236,8 +234,7 @@ avail <- avail |>
 # (historical/26, 27, 32 and 33); everything else was already in that version.
 baseline2 <- as.Date("2026-11-12")
 nuevas_12 <- c("DANE Anuario de estadísticas vitales 1968-1969, por sección: edad y sexo",
-               "DANE anuarios generales 1965-1966, por sección: edad y sexo",
-               "DANE anuario general 1967, por sección: edad y sexo (en extracción)",
+               "DANE anuarios generales 1965-1967, por sección: edad y sexo",
                "Censo 1973, muestra de avance: edad simple y sexo por sección (OCR)",
                "Anuarios DANE, causas violentas por sección (relectura 1951-1957)")
 avail <- avail |> mutate(antes_12 = !serie %in% nuevas_12)
@@ -395,7 +392,7 @@ p_new <- ggplot(info_p, aes(x = year, y = dominio_f)) +
        title = paste0("Qué información es nueva desde el lunes ", format(baseline, "%Y-%m-%d"), " y desde el ", format(baseline2, "%Y-%m-%d")),
        subtitle = "Gris: ya se tenía antes del 9. Azul: nueva entre el 9 y el 12. Naranja: nueva desde el 12. Nuevo = ese año no había nada a ese nivel o ahora hay más desagregación; el tono marca la desagregación",
        caption = paste0("Antes del 9: microdatos EEVV 1979-2023, proyecciones DANE, UCDP, tablas de vida DANE, OMS, WPP 2024, anuarios transcritos (total y sexo) y serie policial (total).\n",
-                        "Desde el 12: defunciones por sección, edad y sexo 1965-1966 y 1968-1969 (anuarios DANE) y población por sección, edad y sexo 1973 (censo, muestra de avance); 1967 en extracción.\n",
+                        "Desde el 12: defunciones por sección, edad y sexo 1965-1969 (anuarios DANE) y población por sección, edad y sexo 1973 (censo, muestra de avance).\n",
                         "Los datos municipales se agregan a departamento y nación, y los departamentales a nación; las tablas de vida no se agregan. Hasta 2023. Script: code/32_data_availability.R")) +
   theme_avail
 ggsave("figures/inventory/data_availability_information_new.png", p_new, width = 14, height = 9.4, dpi = 200, bg = "white")

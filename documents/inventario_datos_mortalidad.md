@@ -121,12 +121,14 @@ combinaciones de nivel, dominio y año, todas en años en que antes solo había 
 | Nivel | Dominio | Años nuevos | Qué llegó | Script |
 |---|---|---|---|---|
 | Departamental | Defunciones | 2 (1968, 1969) | edad y sexo por sección del país (*Anuario de estadísticas vitales 1968-1969*, cuadros 30 y 76) | `historical/26` |
-| Departamental | Defunciones | 2 (1965, 1966) | edad y sexo por sección del país (anuarios generales, cuadros 46 de 1965 y 66 de 1966), verificadas con tres identidades: total = hombres + mujeres, edades = total, secciones = total nacional; los totales de las 19-20 secciones coinciden con la serie v06 | `historical/33` |
+| Departamental | Defunciones | 3 (1965-1967) | edad y sexo por sección del país (anuarios generales, cuadros 46 de 1965, 66 de 1966 y 67 de 1967), verificadas con tres identidades: total = hombres + mujeres, edades = total, secciones = total nacional; los totales de las 19-20 secciones coinciden con la serie v06 (59 de 59) | `historical/33` |
 | Departamental | Población | 1 (1973) | edad simple y sexo por sección (censo de 1973, muestra de avance) | `historical/27` |
 
-Con esto la mortalidad departamental por edad y sexo pasa de empezar en 1970 a tener 1965-1966 y
-1968-1978. 1967 (anuario 1966-1967, cuadro 67) ya está transcrito, pero falta confirmar a ojo ocho
-cifras corregidas por las identidades; en la figura 0.1 aparece como contorno «en extracción».
+Con esto la mortalidad departamental por edad y sexo pasa de empezar en 1970 a cubrir 1965-1978
+sin huecos. En 1967 el impreso trae nueve cifras que no cumplen las identidades: en ocho celdas un
+dígito cambiado, y en Sucre la fila 45-49 repite la de 35-39. Se revisaron en recortes a 250 dpi, se
+usó el valor que piden a la vez dos identidades y cada caso queda anotado en
+`dane_defunciones_1965_1967_support/misprints_in_source.csv`.
 
 No es nuevo, aunque se extrajo: la relectura de las causas violentas por sección de los anuarios
 1951-1955 y 1957 (`historical/32`) da exactamente los mismos homicidios por departamento y sexo que
@@ -188,7 +190,7 @@ Lo que la figura muestra de un vistazo:
 Huecos principales:
 
 - **Municipal 1961-1978**: no hay defunciones municipales. Antes de 1979 nunca hay detalle por edad ni causa a nivel municipal.
-- **Departamental por edad antes de 1979**: en defunciones las series 1915-1984 son totales, con sexo parcial; el *Registro de defunciones 1970-1978* (cuadro 11) da edad y sexo por sección para esos nueve años, y desde la actualización del 23 de noviembre también hay 1965-1966 y 1968-1969 (anuarios DANE, `historical/33` y `historical/26`); 1967 está en extracción y antes de 1965 sigue sin haber nada. En población, los censos 1938, 1951 y 1964 tienen edad quinquenal por departamento (`census_tables`), y 1973 tiene edad simple por sección desde la muestra de avance del censo (`historical/27`).
+- **Departamental por edad antes de 1979**: en defunciones las series 1915-1984 son totales, con sexo parcial; el *Registro de defunciones 1970-1978* (cuadro 11) da edad y sexo por sección para esos nueve años, y desde la actualización del 23 de noviembre también hay 1965-1969 (anuarios DANE, `historical/33` y `historical/26`), así que la serie va de 1965 a 1978 sin huecos; antes de 1965 sigue sin haber nada. En población, los censos 1938, 1951 y 1964 tienen edad quinquenal por departamento (`census_tables`), y 1973 tiene edad simple por sección desde la muestra de avance del censo (`historical/27`).
 - **Homicidios departamentales 1966-1978**: solo la fuente policial (1962-2002) cubre ese tramo; los anuarios paran en 1965 y EEVV empieza en 1979.
 - **Nacional sin causa en 1970, 1971, 1973 y 1978**: OMS no tiene causas esos años (1970 solo en lista B) y EEVV no tiene 1978. Interpolados en los scripts 30 y 40. El cuadro 6 del *Registro de defunciones* (ya extraído) cubre 1973 y 1978; 1971 queda sin causa. Los scripts 30 y 40 todavía no lo usan.
 - **Censos 1985-2018 sin ajuste de omisión por edad**: las conciliaciones DANE dan omisión total (1985 ~11 %, 1993 ~11,7 %, 2005 ~3,7 %, 2018 ~8,5 %) pero no se ha incorporado el perfil por edad y sexo.

@@ -12,7 +12,11 @@
 #   (anio, cuadro, pagina_pdf, unidad, edad, total, hombres, mujeres, nota).
 #   This script checks the three identities of the table and stops if any
 #   fails outside the list of inconsistencies of the printed source
-#   (support/source_inconsistencies.csv, may be absent):
+#   (support/source_inconsistencies.csv, may be absent). Where a printed
+#   figure breaks two identities that both point to the same value, the
+#   transcription carries that value and the printed one is listed in
+#   support/misprints_in_source.csv (1967: nine cells, checked on 250-dpi
+#   crops). The identities are:
 #     total = men + women (every row); age rows = TOTAL row (every unit and
 #     sex); units = TOTAL GENERAL (every age and sex).
 #   It also compares each unit's TOTAL with the department deaths series

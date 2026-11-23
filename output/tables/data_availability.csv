@@ -1212,9 +1212,9 @@ Departamental,Defunciones,"DANE Registro de defunciones 1970-1978, por sección:
 Departamental,Defunciones,"DANE Registro de defunciones 1970-1978, por sección: sexo 1970-1984, edad 1970-1978",1982,Por sexo,FALSE,NA,disponible,"historical/dane_defunciones_1970_1978_cuadro02_*.csv, cuadro10_*.csv, cuadro11_*.csv"
 Departamental,Defunciones,"DANE Registro de defunciones 1970-1978, por sección: sexo 1970-1984, edad 1970-1978",1983,Por sexo,FALSE,NA,disponible,"historical/dane_defunciones_1970_1978_cuadro02_*.csv, cuadro10_*.csv, cuadro11_*.csv"
 Departamental,Defunciones,"DANE Registro de defunciones 1970-1978, por sección: sexo 1970-1984, edad 1970-1978",1984,Por sexo,FALSE,NA,disponible,"historical/dane_defunciones_1970_1978_cuadro02_*.csv, cuadro10_*.csv, cuadro11_*.csv"
-Departamental,Defunciones,"DANE anuario general 1967, por sección: edad y sexo (en extracción)",1967,Edad y sexo,FALSE,NA,en extracción,historical/dane_defunciones_1965_1967_support/transcripcion_1967.csv
-Departamental,Defunciones,"DANE anuarios generales 1965-1966, por sección: edad y sexo",1965,Edad y sexo,FALSE,NA,disponible,historical/dane_defunciones_1965_1967_secciones_sexo_edad.csv
-Departamental,Defunciones,"DANE anuarios generales 1965-1966, por sección: edad y sexo",1966,Edad y sexo,FALSE,NA,disponible,historical/dane_defunciones_1965_1967_secciones_sexo_edad.csv
+Departamental,Defunciones,"DANE anuarios generales 1965-1967, por sección: edad y sexo",1965,Edad y sexo,FALSE,NA,disponible,historical/dane_defunciones_1965_1967_secciones_sexo_edad.csv
+Departamental,Defunciones,"DANE anuarios generales 1965-1967, por sección: edad y sexo",1966,Edad y sexo,FALSE,NA,disponible,historical/dane_defunciones_1965_1967_secciones_sexo_edad.csv
+Departamental,Defunciones,"DANE anuarios generales 1965-1967, por sección: edad y sexo",1967,Edad y sexo,FALSE,NA,disponible,historical/dane_defunciones_1965_1967_secciones_sexo_edad.csv
 Departamental,Defunciones,EEVV (suma municipal),1979,Edad y sexo,TRUE,NA,disponible,data_inter/deaths_munic_age_1979-2023.rds
 Departamental,Defunciones,EEVV (suma municipal),1980,Edad y sexo,FALSE,NA,disponible,data_inter/deaths_munic_age_1979-2023.rds
 Departamental,Defunciones,EEVV (suma municipal),1981,Edad y sexo,FALSE,NA,disponible,data_inter/deaths_munic_age_1979-2023.rds
