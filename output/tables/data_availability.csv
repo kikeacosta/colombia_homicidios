@@ -1071,6 +1071,7 @@ Nacional,Tablas de vida,WPP 2024 completas (hasta 2023; a 2100),2021,Edad y sexo
 Nacional,Tablas de vida,WPP 2024 completas (hasta 2023; a 2100),2022,Edad y sexo,FALSE,NA,disponible,reference/wpp2024_colombia_lt_complete_1950-2100.csv
 Nacional,Tablas de vida,WPP 2024 completas (hasta 2023; a 2100),2023,Edad y sexo,FALSE,NA,disponible,reference/wpp2024_colombia_lt_complete_1950-2100.csv
 Departamental,Población,"Censo 1973 ajustado por cobertura, cabecera y resto (OCR cap. VIII)",1973,Solo total,FALSE,NA,disponible,historical/census_tables/census1973_adjusted_population_units.csv
+Departamental,Población,"Censo 1973, muestra de avance: edad simple y sexo por sección (OCR)",1973,Edad y sexo,FALSE,NA,disponible,historical/census_tables/census_1973_muestra_single_age_sex_dept.csv
 Departamental,Población,"Censos (anuarios), total y sexo",1905,Por sexo,FALSE,0.8333333333333334,disponible,data_input/historical/col_gap_analysis_1920_1985_department_population_clean_v03.csv
 Departamental,Población,"Censos (anuarios), total y sexo",1912,Por sexo,FALSE,0.9166666666666666,disponible,data_input/historical/col_gap_analysis_1920_1985_department_population_clean_v03.csv
 Departamental,Población,"Censos (anuarios), total y sexo",1918,Por sexo,FALSE,0.9583333333333334,disponible,data_input/historical/col_gap_analysis_1920_1985_department_population_clean_v03.csv
@@ -1191,6 +1192,8 @@ Departamental,Defunciones,"Anuarios y boletines DANE, total y sexo",1981,Por sex
 Departamental,Defunciones,"Anuarios y boletines DANE, total y sexo",1982,Por sexo,FALSE,1,disponible,data_input/historical/col_gap_analysis_1920_1985_department_deaths_clean_v06_territories_aggregated.csv
 Departamental,Defunciones,"Anuarios y boletines DANE, total y sexo",1983,Por sexo,FALSE,1,disponible,data_input/historical/col_gap_analysis_1920_1985_department_deaths_clean_v06_territories_aggregated.csv
 Departamental,Defunciones,"Anuarios y boletines DANE, total y sexo",1984,Por sexo,FALSE,1,disponible,data_input/historical/col_gap_analysis_1920_1985_department_deaths_clean_v06_territories_aggregated.csv
+Departamental,Defunciones,"DANE Anuario de estadísticas vitales 1968-1969, por sección: edad y sexo",1968,Edad y sexo,FALSE,NA,disponible,historical/dane_defunciones_1968_1969_secciones_sexo_edad.csv
+Departamental,Defunciones,"DANE Anuario de estadísticas vitales 1968-1969, por sección: edad y sexo",1969,Edad y sexo,FALSE,NA,disponible,historical/dane_defunciones_1968_1969_secciones_sexo_edad.csv
 Departamental,Defunciones,"DANE Estadística vital 1958-1960 (OCR), total y sexo",1958,Por sexo,FALSE,0.9903381642512077,disponible,data_input/historical/dane_vitales_1958_1960_municipal.csv (suma por departamento); dane_vitales_1958_1960_departamental.csv
 Departamental,Defunciones,"DANE Estadística vital 1958-1960 (OCR), total y sexo",1959,Por sexo,FALSE,0.986810551558753,disponible,data_input/historical/dane_vitales_1958_1960_municipal.csv (suma por departamento); dane_vitales_1958_1960_departamental.csv
 Departamental,Defunciones,"DANE Estadística vital 1958-1960 (OCR), total y sexo",1960,Por sexo,FALSE,0.9759174311926605,disponible,data_input/historical/dane_vitales_1958_1960_municipal.csv (suma por departamento); dane_vitales_1958_1960_departamental.csv
@@ -1209,6 +1212,9 @@ Departamental,Defunciones,"DANE Registro de defunciones 1970-1978, por sección:
 Departamental,Defunciones,"DANE Registro de defunciones 1970-1978, por sección: sexo 1970-1984, edad 1970-1978",1982,Por sexo,FALSE,NA,disponible,"historical/dane_defunciones_1970_1978_cuadro02_*.csv, cuadro10_*.csv, cuadro11_*.csv"
 Departamental,Defunciones,"DANE Registro de defunciones 1970-1978, por sección: sexo 1970-1984, edad 1970-1978",1983,Por sexo,FALSE,NA,disponible,"historical/dane_defunciones_1970_1978_cuadro02_*.csv, cuadro10_*.csv, cuadro11_*.csv"
 Departamental,Defunciones,"DANE Registro de defunciones 1970-1978, por sección: sexo 1970-1984, edad 1970-1978",1984,Por sexo,FALSE,NA,disponible,"historical/dane_defunciones_1970_1978_cuadro02_*.csv, cuadro10_*.csv, cuadro11_*.csv"
+Departamental,Defunciones,"DANE anuario general 1967, por sección: edad y sexo (en extracción)",1967,Edad y sexo,FALSE,NA,en extracción,historical/dane_defunciones_1965_1967_support/transcripcion_1967.csv
+Departamental,Defunciones,"DANE anuarios generales 1965-1966, por sección: edad y sexo",1965,Edad y sexo,FALSE,NA,disponible,historical/dane_defunciones_1965_1967_secciones_sexo_edad.csv
+Departamental,Defunciones,"DANE anuarios generales 1965-1966, por sección: edad y sexo",1966,Edad y sexo,FALSE,NA,disponible,historical/dane_defunciones_1965_1967_secciones_sexo_edad.csv
 Departamental,Defunciones,EEVV (suma municipal),1979,Edad y sexo,TRUE,NA,disponible,data_inter/deaths_munic_age_1979-2023.rds
 Departamental,Defunciones,EEVV (suma municipal),1980,Edad y sexo,FALSE,NA,disponible,data_inter/deaths_munic_age_1979-2023.rds
 Departamental,Defunciones,EEVV (suma municipal),1981,Edad y sexo,FALSE,NA,disponible,data_inter/deaths_munic_age_1979-2023.rds
@@ -1254,6 +1260,12 @@ Departamental,Defunciones,EEVV (suma municipal),2020,Edad y sexo,FALSE,NA,dispon
 Departamental,Defunciones,EEVV (suma municipal),2021,Edad y sexo,FALSE,NA,disponible,data_inter/deaths_munic_age_1979-2023.rds
 Departamental,Defunciones,EEVV (suma municipal),2022,Edad y sexo,FALSE,NA,disponible,data_inter/deaths_munic_age_1979-2023.rds
 Departamental,Defunciones,EEVV (suma municipal),2023,Edad y sexo,FALSE,NA,disponible,data_inter/deaths_munic_age_1979-2023.rds
+Departamental,Homicidios y violencia,"Anuarios DANE, causas violentas por sección (relectura 1951-1957)",1951,Por sexo,FALSE,NA,disponible,historical/dane_causas_violentas_dept_1951_1964.csv
+Departamental,Homicidios y violencia,"Anuarios DANE, causas violentas por sección (relectura 1951-1957)",1952,Por sexo,FALSE,NA,disponible,historical/dane_causas_violentas_dept_1951_1964.csv
+Departamental,Homicidios y violencia,"Anuarios DANE, causas violentas por sección (relectura 1951-1957)",1953,Por sexo,FALSE,NA,disponible,historical/dane_causas_violentas_dept_1951_1964.csv
+Departamental,Homicidios y violencia,"Anuarios DANE, causas violentas por sección (relectura 1951-1957)",1954,Por sexo,FALSE,NA,disponible,historical/dane_causas_violentas_dept_1951_1964.csv
+Departamental,Homicidios y violencia,"Anuarios DANE, causas violentas por sección (relectura 1951-1957)",1955,Por sexo,FALSE,NA,disponible,historical/dane_causas_violentas_dept_1951_1964.csv
+Departamental,Homicidios y violencia,"Anuarios DANE, causas violentas por sección (relectura 1951-1957)",1957,Por sexo,FALSE,NA,disponible,historical/dane_causas_violentas_dept_1951_1964.csv
 Departamental,Homicidios y violencia,"Anuarios DANE, total y sexo",1923,Por sexo,TRUE,0.4230769230769231,disponible,data_input/historical/col_gap_analysis_1920_1985_department_homicides_clean_v02.csv
 Departamental,Homicidios y violencia,"Anuarios DANE, total y sexo",1924,Solo total,TRUE,0.5769230769230769,disponible,data_input/historical/col_gap_analysis_1920_1985_department_homicides_clean_v02.csv
 Departamental,Homicidios y violencia,"Anuarios DANE, total y sexo",1927,Por sexo,TRUE,0.46153846153846156,disponible,data_input/historical/col_gap_analysis_1920_1985_department_homicides_clean_v02.csv

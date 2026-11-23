@@ -167,11 +167,11 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-        <style type="text/css">body{max-width:1100px;margin:2em auto;padding:0 1em;font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.45;color:#222}
-      h1{font-size:1.7em;border-bottom:2px solid #444;padding-bottom:.2em}h2{font-size:1.3em;margin-top:1.8em;border-bottom:1px solid #bbb}h3{font-size:1.1em}
-      table{border-collapse:collapse;width:100%;margin:1em 0;font-size:12.5px}th,td{border:1px solid #ccc;padding:4px 6px;vertical-align:top;text-align:left}th{background:#eee}tr:nth-child(even) td{background:#f7f7f7}
-      code{background:#f1f1f1;padding:1px 3px;font-size:12px;word-break:break-all}strong{color:#8a1c1c}
-      </style>
+          <style type="text/css">body{max-width:1100px;margin:2em auto;padding:0 1em;font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.45;color:#222}
+        h1{font-size:1.7em;border-bottom:2px solid #444;padding-bottom:.2em}h2{font-size:1.3em;margin-top:1.8em;border-bottom:1px solid #bbb}h3{font-size:1.1em}
+        table{border-collapse:collapse;width:100%;margin:1em 0;font-size:12.5px}th,td{border:1px solid #ccc;padding:4px 6px;vertical-align:top;text-align:left}th{background:#eee}tr:nth-child(even) td{background:#f7f7f7}
+        code{background:#f1f1f1;padding:1px 3px;font-size:12px;word-break:break-all}strong{color:#8a1c1c}
+        </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -184,7 +184,9 @@
 id="inventario-de-datos-de-mortalidad-colombia-niveles-nacional-departamental-y-municipal">Inventario
 de datos de mortalidad: Colombia, niveles nacional, departamental y
 municipal</h1>
-<p>Estado al 2026-11-12 (versión anterior: 2026-11-10). Rutas relativas
+<p>Estado al 2026-11-12 (versión anterior: 2026-11-10), con una
+actualización del 2026-11-23 en la sección 0.3 y en los huecos de la
+sección 1 (información nueva desde el 12 de noviembre). Rutas relativas
 a la raíz del proyecto
 (<code>C:\Users\kikep\gits\colombia_homicidios</code>).
 <code>data_input/</code> contiene insumos originales o transcritos;
@@ -394,8 +396,10 @@ población ajustada por cobertura 1973 por departamento), en
 incluye las fuentes de causa de muerte (LAMBdA por 19 causas) ni las de
 mortalidad en la niñez, que están catalogadas en
 <code>documents/inventory/archivos.csv</code>.</p>
-<h3 id="qué-información-es-nueva-desde-el-lunes-9-de-noviembre">0.3 Qué
-información es nueva desde el lunes 9 de noviembre</h3>
+<h3
+id="qué-información-es-nueva-desde-el-lunes-9-de-noviembre-y-desde-el-12">0.3
+Qué información es nueva desde el lunes 9 de noviembre y desde el
+12</h3>
 <figure>
 <img src="../figures/inventory/data_availability_information_new.png"
 alt="Información nueva desde el lunes" />
@@ -403,14 +407,15 @@ alt="Información nueva desde el lunes" />
 lunes</figcaption>
 </figure>
 <p>La misma figura 0.1, con gris para lo que ya se tenía antes del lunes
-y azul para lo nuevo: un año de un nivel y dominio es nuevo si antes no
-había nada a ese nivel o si ahora hay más desagregación. Antes del lunes
-se tenían los microdatos EEVV 1979-2023, las proyecciones DANE, UCDP,
-las tablas de vida DANE, la Base de Mortalidad de la OMS (defunciones y
-homicidios por edad y sexo, 1953-1977), WPP 2024 (en la carpeta
-compartida desde agosto de 2024), las transcripciones de los anuarios
-(<code>col_gap_analysis_*</code>) y la serie de la Policía. Estos dos
-últimos grupos están en la carpeta compartida desde antes y se
+9, azul para lo nuevo entre el 9 y el 12, y naranja para lo nuevo desde
+la versión del 12 de noviembre: un año de un nivel y dominio es nuevo si
+antes no había nada a ese nivel o si ahora hay más desagregación. Antes
+del lunes se tenían los microdatos EEVV 1979-2023, las proyecciones
+DANE, UCDP, las tablas de vida DANE, la Base de Mortalidad de la OMS
+(defunciones y homicidios por edad y sexo, 1953-1977), WPP 2024 (en la
+carpeta compartida desde agosto de 2024), las transcripciones de los
+anuarios (<code>col_gap_analysis_*</code>) y la serie de la Policía.
+Estos dos últimos grupos están en la carpeta compartida desde antes y se
 verificaron contra los archivos: los <code>col_gap_analysis_*</code>
 traen solo total, hombres y mujeres (sin edad) y el libro de la Policía
 es una sola hoja de totales anuales por jurisdicción; las EEVV empiezan
@@ -481,6 +486,69 @@ edad y sexo de 1953 a 1977 ya estaban en la OMS, y WPP 2024 ya cubría
 nueva. Es una comparación por fuente: marca si la información existe y
 con qué detalle, no distingue correcciones dentro de una
 transcripción.</p>
+<p><strong>Desde el 12 de noviembre</strong> (naranja) llegó información
+con edad a nivel departamental en 5 combinaciones de nivel, dominio y
+año, todas en años en que antes solo había total y sexo:</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nivel</th>
+<th>Dominio</th>
+<th>Años nuevos</th>
+<th>Qué llegó</th>
+<th>Script</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Departamental</td>
+<td>Defunciones</td>
+<td>2 (1968, 1969)</td>
+<td>edad y sexo por sección del país (<em>Anuario de estadísticas
+vitales 1968-1969</em>, cuadros 30 y 76)</td>
+<td><code>historical/26</code></td>
+</tr>
+<tr class="even">
+<td>Departamental</td>
+<td>Defunciones</td>
+<td>2 (1965, 1966)</td>
+<td>edad y sexo por sección del país (anuarios generales, cuadros 46 de
+1965 y 66 de 1966), verificadas con tres identidades: total = hombres +
+mujeres, edades = total, secciones = total nacional; los totales de las
+19-20 secciones coinciden con la serie v06</td>
+<td><code>historical/33</code></td>
+</tr>
+<tr class="odd">
+<td>Departamental</td>
+<td>Población</td>
+<td>1 (1973)</td>
+<td>edad simple y sexo por sección (censo de 1973, muestra de
+avance)</td>
+<td><code>historical/27</code></td>
+</tr>
+</tbody>
+</table>
+<p>Con esto la mortalidad departamental por edad y sexo pasa de empezar
+en 1970 a tener 1965-1966 y 1968-1978. 1967 (anuario 1966-1967, cuadro
+67) ya está transcrito, pero falta confirmar a ojo ocho cifras
+corregidas por las identidades; en la figura 0.1 aparece como contorno
+«en extracción».</p>
+<p>No es nuevo, aunque se extrajo: la relectura de las causas violentas
+por sección de los anuarios 1951-1955 y 1957
+(<code>historical/32</code>) da exactamente los mismos homicidios por
+departamento y sexo que la serie v02 (202 de 202 valores) y las mismas
+defunciones totales que la v06 (200 de 202; la diferencia es Chocó 1954,
+entre fuentes), de modo que confirma esas series y añade suicidios y
+accidentes por tipo, por departamento y sexo, que no son un dominio de
+la figura. Las intendencias y comisarías siguen agregadas porque así las
+imprime la fuente.</p>
 <h3
 id="dónde-se-pueden-estimar-los-homicidios-con-la-mortalidad-por-sexo">0.4
 Dónde se pueden estimar los homicidios con la mortalidad por sexo</h3>
@@ -627,11 +695,14 @@ municipales. Antes de 1979 nunca hay detalle por edad ni causa a nivel
 municipal.</li>
 <li><strong>Departamental por edad antes de 1979</strong>: en
 defunciones las series 1915-1984 son totales, con sexo parcial; el
-<em>Registro de defunciones 1970-1978</em> (cuadro 11) dará edad y sexo
-por sección para esos nueve años, y antes de 1970 sigue sin haber nada.
-En población, los censos 1938, 1951 y 1964 tienen edad quinquenal por
-departamento (<code>census_tables</code>); 1973 no (su resumen solo trae
-edad a nivel nacional).</li>
+<em>Registro de defunciones 1970-1978</em> (cuadro 11) da edad y sexo
+por sección para esos nueve años, y desde la actualización del 23 de
+noviembre también hay 1965-1966 y 1968-1969 (anuarios DANE,
+<code>historical/33</code> y <code>historical/26</code>); 1967 está en
+extracción y antes de 1965 sigue sin haber nada. En población, los
+censos 1938, 1951 y 1964 tienen edad quinquenal por departamento
+(<code>census_tables</code>), y 1973 tiene edad simple por sección desde
+la muestra de avance del censo (<code>historical/27</code>).</li>
 <li><strong>Homicidios departamentales 1966-1978</strong>: solo la
 fuente policial (1962-2002) cubre ese tramo; los anuarios paran en 1965
 y EEVV empieza en 1979.</li>
