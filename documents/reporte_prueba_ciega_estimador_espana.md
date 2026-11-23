@@ -107,3 +107,38 @@ Apliqué el estimador igual que en España: periodo base para ρ y la tendencia,
 6. **π español:** más estudios locales con víctimas por sexo, además de Talavera.
 7. **Incertidumbre conjunta** de ρ, π y la tendencia, en lugar de rangos separados.
 8. **Búsqueda bibliográfica** sobre si este estimador ya se propuso: demografía de conflictos, demografía histórica y métodos con la razón de sexos.
+
+## 6. Conclusión: ¿funciona?
+
+**Sí funciona, con condiciones, y las condiciones de España en 1936–39 son las favorables.**
+
+**Cuándo funciona:** la violencia sube de golpe, pesa mucho en el total de muertes y el periodo está a pocos años de la base. Ahí el error total es de 0 a 25 %, y las unidades quedan bien ordenadas (correlación 0,94–1,00):
+
+| Caso | Error |
+|---|---|
+| Ecuador 2022–24 | 0 % |
+| México 2008–12, 15–44 | 0 % |
+| Colombia, todas las edades | −1 % y +9 % |
+| México 2008–12, todas las edades | −25 % |
+
+El −25 % de México se debe en buena parte a usar π = 0,95 cuando el valor real era ~0,89. En una guerra π debería estar más cerca de 0,95.
+
+**Cuándo no funciona:**
+- cuando la mortalidad no violenta cambia su composición por sexo, como con el COVID;
+- en horizontes de 15 años o más (envejecimiento, opioides);
+- cuando la violencia pesa muy poco (EE. UU.).
+
+En esos casos el error puede ser de varias veces el valor real.
+
+**Qué tan lejos podemos estar en España:**
+
+- **1936–39:** se parece a los casos donde funciona. Con errores de ±25 %, las ~193.000 muertes violentas estarían entre unas **145.000 y 240.000**. Hay dos indicios de que estamos más cerca del centro:
+  - coincidimos con la violencia registrada por Salas, 194.700 en la suma comparable, con correlación 0,93 entre provincias;
+  - el exceso total coincide con la literatura dentro de un 5 %.
+- **1940–42:** no podemos descartar un error grande. El escenario desfavorable es que el hambre y el tifus hayan sesgado la mortalidad hacia los hombres como el COVID. Con el COVID, el método atribuyó a la violencia entre el 18 % (México) y el 28 % (Ecuador) del exceso. Aplicado a las 228.000 muertes de exceso de 1940–42, entre 40.000 y 65.000 de las 95.000 "violentas" podrían ser hambre, y la violencia quedaría en **30.000–55.000** en vez de 95.000. Las provincias lejos del frente sugieren un sesgo menor que ese, así que 95.000 es más bien un **techo**.
+- **El total del exceso,** violento más no violento, no depende de este supuesto. Es sólido: ~590.000 en 1936–42.
+
+**En resumen:**
+- La cifra de 1936–39 es confiable.
+- La de 1940–42 es un límite superior de la violencia, y la diferencia se iría al hambre.
+- La prueba que cerraría la duda son las causas registradas de 1936–42 o la razón de sexos de 15–44 en esos años.
