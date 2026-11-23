@@ -6,7 +6,7 @@
 # year (D:/data/spain_mortality/ine_historia_<year>.pdf), table "Resumen de
 # las defunciones por provincias" (1936-1940) and "Defunciones. Provincias"
 # (1941-1942), transcribed from the page images into
-# data_input/reference/spain_ine_deaths_province_sex_1933-1946.csv (1936-1942 used here).
+# data_input/reference/spain_ine_deaths_province_sex_1926-1946.csv (1936-1942 used here).
 # Registered deaths by year of REGISTRATION: war deaths registered late fall
 # in later years. 1941 is the year of the hunger and typhus peak.
 #
@@ -15,7 +15,7 @@
 rm(list = ls()); gc(); source("code/00_setup.R")
 options(width = 200)
 
-sp <- read_csv("data_input/reference/spain_ine_deaths_province_sex_1933-1946.csv", show_col_types = FALSE) |> filter(year %in% 1936:1942)
+sp <- read_csv("data_input/reference/spain_ine_deaths_province_sex_1926-1946.csv", show_col_types = FALSE) |> filter(year %in% 1936:1942)
 w <- sp |> select(year, province, province_code, sex, deaths) |> pivot_wider(names_from = sex, values_from = deaths)
 prov <- w |> filter(!is.na(province_code))
 tot <- w |> filter(is.na(province_code))

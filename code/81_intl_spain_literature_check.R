@@ -19,7 +19,7 @@
 #
 # input    output/tables/intl_spain_excess_male_1936-1946.csv
 #          data_input/reference/spain_literature_deaths_province.csv
-#          data_input/reference/spain_ine_deaths_province_sex_1933-1946.csv
+#          data_input/reference/spain_ine_deaths_province_sex_1926-1946.csv
 # output   output/tables/intl_spain_literature_comparison.csv
 #          figures/09_international/spain_literature_comparison.png
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,7 +42,10 @@ esp <- lit |> filter(source_short == "Espinosa2008", province != "TOTAL", concep
   transmute(province, var = ifelse(concept == "francoist_repression", "esp_francoist", "esp_republican"), value,
             status = value_status) |>
   pivot_wider(names_from = var, values_from = c(value, status))
-cmp <- ours |> left_join(salas, by = "province") |> left_join(esp, by = "province") |>
+# names are matched without accents (spellings differ between volumes and sources)
+key <- function(x) stringi::stri_trans_general(x, "Latin-ASCII")
+cmp <- ours |> mutate(k = key(province)) |> left_join(salas |> mutate(k = key(province), province = NULL), by = "k") |>
+  left_join(esp |> mutate(k = key(province), province = NULL), by = "k") |> select(-k) |>
   mutate(salas_total = salas_military + salas_exec_nat,
          esp_total = coalesce(value_esp_francoist, 0) + coalesce(value_esp_republican, 0),
          esp_complete = status_esp_francoist %in% c("exact", "approx") & !is.na(value_esp_republican))
@@ -70,8 +73,8 @@ print(as.data.frame(cmp |> transmute(province, H_3646 = round(H_3646), salas_tot
 os <- lit |> filter(source_short == "OrtegaSilvestre2005", province == "TOTAL", period %in% as.character(1936:1942)) |>
   mutate(year = as.integer(period), sex = ifelse(seq_along(value) <= 7, "male", "female")) |> select(year, sex, value) |>
   pivot_wider(names_from = sex, values_from = value, names_prefix = "os_")
-sp <- read_csv("data_input/reference/spain_ine_deaths_province_sex_1933-1946.csv", show_col_types = FALSE) |> filter(is.na(province_code))
-rho_nat <- sp |> filter(year %in% 1933:1935) |> select(year, sex, deaths) |> pivot_wider(names_from = sex, values_from = deaths) |>
+sp <- read_csv("data_input/reference/spain_ine_deaths_province_sex_1926-1946.csv", show_col_types = FALSE) |> filter(is.na(province_code))
+rho_nat <- sp |> filter(year %in% 1926:1935) |> select(year, sex, deaths) |> pivot_wider(names_from = sex, values_from = deaths) |>
   summarise(rho = exp(mean(log(male / female)))) |> pull(rho)
 nat <- est |> summarise(H = sum(H), .by = year) |> left_join(os, by = "year") |>
   mutate(os_H = (os_male - rho_nat * os_female) / (0.95 - rho_nat * 0.05))
