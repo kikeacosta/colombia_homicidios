@@ -12,6 +12,117 @@
 - **La versión logit (CoDA) da el mismo error que la logarítmica, con mejor cobertura hacia atrás.** Dejar libre la proporción de hombres entre las víctimas no añade nada.
 - **De los tres métodos, el de estados ocultos es el mejor o empata en casi todo.** El estimador directo de España iguala al de estados ocultos en Colombia, sobre totales de periodo por unidad, y en el resto queda lejos. Donde la violencia pesa poco falla por completo: muchas estimaciones dan negativas.
 
+## Tabla resumen: los tres métodos en todos los casos
+
+Las dos tablas comparan todos los métodos en **las mismas celdas**, es decir, las mismas unidades y los mismos años ocultos. Las cifras salen de los scripts 72 y 86 (`output/tables/intl_three_methods_scores.csv` y `_scores_unit_totals.csv`).
+
+**Qué hay en cada celda.** El error mediano, en porcentaje, de las muertes violentas estimadas frente a las observadas. Una celda de 8 quiere decir que en la mitad de los casos el error fue menor que 8 % y en la otra mitad, mayor. Más bajo es mejor.
+
+**Un ejemplo: de dónde sale el 18 % de Colombia "sin pistas".** Es la primera celda de la tabla 1 (Colombia, todas las edades, años intermedios).
+
+1. **Se oculta un bloque.** En Colombia hay dos: 1985–97 y 1998–2010. En el primero se borran las muertes violentas de 1985 a 1997 de los 15 departamentos, es decir, 15 × 13 = 195 casillas departamento-año.
+2. **El modelo las estima.** "Sin pistas" quiere decir que dentro del bloque no ve nada, ni siquiera la razón de sexos. Solo sabe lo que pasó hasta 1984 y desde 1998, y traza un camino suave entre los dos extremos.
+3. **Se mide el error de cada casilla** como |estimado − observado| / observado. Así quedan las de Antioquia:
+
+| Año | Observado | Sin pistas | Error | Con razón de sexos | Error |
+|---|---|---|---|---|---|
+| 1985 | 3.457 | 2.997 | 13 % | 3.774 | 9 % |
+| 1988 | 6.936 | 3.836 | 45 % | 7.026 | 1 % |
+| 1991 | 12.237 | 5.478 | 55 % | 12.158 | 1 % |
+| 1994 | 9.435 | 6.109 | 35 % | 10.035 | 6 % |
+| 1997 | 8.390 | 7.162 | 15 % | 8.744 | 4 % |
+
+   Sin pistas, el modelo no puede saber que en medio del bloque hubo un pico (el de 1991, en la guerra del narcotráfico), y se queda corto a la mitad del camino. Con la razón de sexos lo ve: el exceso de muertes de hombres le dice que la violencia subió.
+4. **Se toma la mediana de las casillas del bloque.** En Antioquia, la mediana de sus 13 años es 35 %. Con los 15 departamentos, la mediana de las 195 casillas de 1985–97 es 20 %. Va de 8 % en Magdalena + Cesar a 35 % en Antioquia, porque donde la violencia subió y bajó más, interpolar falla más.
+5. **Se promedian los bloques.** El bloque 1998–2010 da 16 %. El promedio de 20 % y 16 %, ponderado por casillas (195 cada uno), es **18 %**.
+
+Todas las celdas de las dos tablas se calculan igual, cambiando el país, las edades, la prueba (qué años se ocultan) y el método.
+
+**Las filas** son los casos: país, grupo de edad y tipo de prueba.
+- **Intermedios:** bloques de 7–8 años ocultos (13 en Colombia), con datos conocidos antes y después.
+- **Hacia atrás:** los primeros 15 años ocultos, con datos solo después. Es la prueba más parecida a reconstruir el pasado, como en la Colombia histórica.
+- **Hacia adelante:** los últimos 4 años ocultos, con datos solo antes. Solo en Ecuador, por el salto de violencia de 2021–24.
+- **Violentas, %** es el peso de las muertes violentas en el total de muertes de esos años. Es lo que más explica el error.
+
+**Las columnas** son los métodos, en dos grupos según la información que usan:
+
+| Columna | Método | Qué ve en los años ocultos |
+|---|---|---|
+| Sin pistas | Referencia | Nada: interpola o extiende desde los años conocidos |
+| 1. Estados ocultos | Modelo principal (60/70) | La razón de sexos de todas las muertes de cada unidad |
+| 3. Directo (D) | Estimador de España (80) | La razón de sexos de cada unidad, con la razón no violenta de los años vecinos |
+| 3. Directo + tendencia (DN) | Ídem | Lo mismo, con la razón no violenta nacional de cada año |
+| 1. Con total (ST) | Modelo principal | La razón de sexos **y el total nacional de violentas de cada año** |
+| 2. Regresión (B1) | Modelo simple (64) | Ídem |
+| 3. Directo con total (DT) | Estimador de España | Ídem |
+
+Las cuatro primeras se comparan entre sí, porque usan la misma información. Las tres últimas también, porque además conocen el total nacional; en Colombia ese caso existe en 1966–77, con la OMS. **En negrita, el mejor método de la fila**, sin contar "Sin pistas".
+
+**Tabla 1. Error por unidad y año (%)**
+
+| País | Edades | Prueba | Violentas, % | Sin pistas | 1. Estados ocultos | 1. con total (ST) | 2. Regresión (B1) | 3. Directo (D) | 3. Directo + tendencia (DN) | 3. Directo con total (DT) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Colombia | todas | intermedios | 14,3 | 18 | 8 | **7** | **7** | 12 | 11 | 10 |
+| Colombia | todas | hacia atrás | 11,9 | 35 | 18 | 16 | **14** | 25 | 18 | 27 |
+| Brasil | todas | intermedios | 5,5 | 10 | 9 | **8** | 17 | 20 | 19 | 19 |
+| Brasil | todas | hacia atrás | 4,4 | 23 | 32 | **26** | **26** | 60 | 52 | 52 |
+| Brasil | 15–44 | intermedios | 25,2 | 8 | **6** | **6** | 11 | 14 | 13 | 13 |
+| Brasil | 15–44 | hacia atrás | 18,9 | 17 | **13** | 14 | 16 | 53 | 29 | 58 |
+| México | todas | intermedios | 3,8 | 17 | 15 | **12** | 19 | 41 | 41 | 41 |
+| México | todas | hacia atrás | 3,7 | 25 | 25 | **24** | 25 | 71 | 50 | 35 |
+| México | 15–44 | intermedios | 17,6 | 16 | 13 | **12** | 16 | 39 | 35 | 35 |
+| México | 15–44 | hacia atrás | 15,3 | 22 | 21 | **19** | 21 | 47 | 46 | 45 |
+| Ecuador | todas | intermedios | 4,5 | 21 | 21 | 20 | **16** | 86 | 82 | 71 |
+| Ecuador | todas | hacia atrás | 3,9 | 30 | 37 | 37 | **21** | 96 | 96 | 97 |
+| Ecuador | todas | hacia adelante | 6,2 | 58 | 48 | **33** | 44 | 97 | 97 | 93 |
+| Ecuador | 15–44 | intermedios | 17,9 | 21 | 19 | 18 | **15** | 65 | 61 | 58 |
+| Ecuador | 15–44 | hacia atrás | 15,3 | 29 | 29 | 27 | **24** | 92 | 89 | 93 |
+| Ecuador | 15–44 | hacia adelante | 30,4 | 50 | 38 | **23** | 34 | 66 | 71 | 60 |
+| EE. UU. | todas | intermedios | 0,9 | 9 | 9 | **8** | 11 | 98 | 98 | 96 |
+| EE. UU. | todas | hacia atrás | 1,0 | 18 | 17 | **13** | 16 | 971 | 100 | 41 |
+| EE. UU. | 15–44 | intermedios | 9,3 | 9 | 8 | **7** | 11 | 83 | 76 | 63 |
+| EE. UU. | 15–44 | hacia atrás | 9,3 | 15 | 19 | 17 | **15** | 98 | 97 | 97 |
+
+**Cómo se lee la tabla 1:**
+1. **Sin el total nacional, el modelo de estados ocultos es el mejor o empata en 17 de las 20 filas.** Las tres excepciones son pruebas hacia atrás (Brasil y Ecuador con todas las edades, EE. UU. en 15–44). Ahí la razón de sexos se movió por otras causas, como el envejecimiento, y extender el último valor conocido erró menos.
+2. **Con el total nacional, el modelo de estados ocultos (ST) y la regresión simple (B1) se reparten las filas.** La regresión gana en Ecuador, salvo hacia adelante, y en Colombia hacia atrás. Saber el total nacional baja mucho el error ante un salto brusco: en Ecuador hacia adelante pasa de 48 % a 33 %, y de 38 % a 23 % en 15–44.
+3. **El estimador directo solo es competitivo en Colombia,** donde las violentas son más del 10 % de las muertes. En años intermedios tiene 10–12 % de error, frente a 7–8 % del modelo principal; hacia atrás, con la tendencia nacional, empata (18 %). En los demás casos va de 13 % a 971 %. Donde la violencia pesa poco, muchas estimaciones dan negativas, y la fórmula no tiene cómo filtrar el ruido de un año.
+4. **El peso de la violencia es lo que más explica el error de todos los métodos.** Con menos de ~5 % de muertes violentas y sin el total nacional, ningún método le gana con claridad a la interpolación. Lo que ayuda ahí es conocer el total nacional (ST): 12 % frente a 17 % en México y 13 % frente a 18 % en EE. UU. hacia atrás.
+
+**Tabla 2. Error sobre el total del bloque por unidad (%)**
+
+Es la misma comparación, pero se suman las muertes violentas de todos los años ocultos de cada unidad antes de medir el error. Así se usa el estimador directo en España (totales de un periodo por provincia), y así el ruido de un año a otro se compensa en parte.
+
+| País | Edades | Prueba | Violentas, % | Sin pistas | 1. Estados ocultos | 1. con total (ST) | 2. Regresión (B1) | 3. Directo (D) | 3. Directo + tendencia (DN) | 3. Directo con total (DT) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Colombia | todas | intermedios | 14,3 | 20 | 7 | 6 | **4** | 6 | 8 | 7 |
+| Colombia | todas | hacia atrás | 11,9 | 36 | 15 | 12 | **9** | 15 | 10 | 13 |
+| Brasil | todas | intermedios | 5,5 | 10 | 7 | **6** | 13 | 14 | 13 | 12 |
+| Brasil | todas | hacia atrás | 4,4 | 20 | 32 | 23 | **20** | 37 | 41 | 35 |
+| Brasil | 15–44 | intermedios | 25,2 | 8 | 5 | **4** | 10 | 10 | 8 | 8 |
+| Brasil | 15–44 | hacia atrás | 18,9 | 13 | **6** | 9 | 10 | 36 | 16 | 36 |
+| México | todas | intermedios | 3,8 | 14 | 11 | **9** | 14 | 25 | 24 | 25 |
+| México | todas | hacia atrás | 3,7 | 26 | **22** | 23 | 30 | 56 | 33 | 29 |
+| México | 15–44 | intermedios | 17,6 | 11 | 9 | **8** | 13 | 23 | 20 | 19 |
+| México | 15–44 | hacia atrás | 15,3 | 22 | 23 | 22 | **16** | 40 | 40 | 42 |
+| Ecuador | todas | intermedios | 4,5 | 15 | 14 | **10** | **10** | 53 | 51 | 50 |
+| Ecuador | todas | hacia atrás | 3,9 | 15 | 38 | 24 | **18** | 80 | 74 | 88 |
+| Ecuador | todas | hacia adelante | 6,2 | 52 | 43 | **22** | 58 | 95 | 49 | 89 |
+| Ecuador | 15–44 | intermedios | 17,9 | 13 | 14 | 13 | **10** | 48 | 49 | 39 |
+| Ecuador | 15–44 | hacia atrás | 15,3 | 21 | 27 | 22 | **17** | 88 | 86 | 94 |
+| Ecuador | 15–44 | hacia adelante | 30,4 | 51 | 38 | **17** | 24 | 73 | 31 | 37 |
+| EE. UU. | todas | intermedios | 0,9 | 6 | 6 | **5** | 8 | 54 | 57 | 55 |
+| EE. UU. | todas | hacia atrás | 1,0 | 10 | **11** | 12 | 14 | 937 | 92 | 32 |
+| EE. UU. | 15–44 | intermedios | 9,3 | 6 | 6 | **5** | 10 | 48 | 39 | 36 |
+| EE. UU. | 15–44 | hacia atrás | 9,3 | 10 | 16 | 13 | **12** | 57 | 82 | 71 |
+
+**Cómo se lee la tabla 2:**
+1. **Los errores bajan en todos los métodos,** porque los errores de años distintos se compensan.
+2. **En Colombia el estimador directo alcanza al modelo principal:** 6 % frente a 7 % en años intermedios, y 10 % (con tendencia) frente a 15 % hacia atrás. Es la condición en que se usa en España.
+3. **En los demás países queda por detrás:** 8–95 % en Brasil, México y Ecuador, y 32–937 % en EE. UU. Lo más cerca es Brasil 15–44 en años intermedios: 8 % frente a 5 %.
+
+**España no aparece en las tablas,** porque ahí no se conoce la verdad. Solo se pueden comparar los métodos entre sí: para 1936–39 dan 194.000 muertes violentas con el modelo de estados ocultos y 193.500 con el directo, frente a 158.700 registradas como violentas (scripts 80 y 87). Las violentas son el 10,5 % de las muertes, y se usan totales de cuatro años por provincia: es el caso de la tabla 2 en Colombia.
+
 ## 1. Los modelos y cómo usan la razón de sexos
 
 ### La idea

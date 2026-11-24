@@ -207,6 +207,797 @@ de estados ocultos en Colombia, sobre totales de periodo por unidad, y
 en el resto queda lejos. Donde la violencia pesa poco falla por
 completo: muchas estimaciones dan negativas.</li>
 </ul>
+<h2 id="tabla-resumen-los-tres-métodos-en-todos-los-casos">Tabla
+resumen: los tres métodos en todos los casos</h2>
+<p>Las dos tablas comparan todos los métodos en <strong>las mismas
+celdas</strong>, es decir, las mismas unidades y los mismos años
+ocultos. Las cifras salen de los scripts 72 y 86
+(<code>output/tables/intl_three_methods_scores.csv</code> y
+<code>_scores_unit_totals.csv</code>).</p>
+<p><strong>Qué hay en cada celda.</strong> El error mediano, en
+porcentaje, de las muertes violentas estimadas frente a las observadas.
+Una celda de 8 quiere decir que en la mitad de los casos el error fue
+menor que 8 % y en la otra mitad, mayor. Más bajo es mejor.</p>
+<p><strong>Un ejemplo: de dónde sale el 18 % de Colombia “sin
+pistas”.</strong> Es la primera celda de la tabla 1 (Colombia, todas las
+edades, años intermedios).</p>
+<ol type="1">
+<li><strong>Se oculta un bloque.</strong> En Colombia hay dos: 1985–97 y
+1998–2010. En el primero se borran las muertes violentas de 1985 a 1997
+de los 15 departamentos, es decir, 15 × 13 = 195 casillas
+departamento-año.</li>
+<li><strong>El modelo las estima.</strong> “Sin pistas” quiere decir que
+dentro del bloque no ve nada, ni siquiera la razón de sexos. Solo sabe
+lo que pasó hasta 1984 y desde 1998, y traza un camino suave entre los
+dos extremos.</li>
+<li><strong>Se mide el error de cada casilla</strong> como |estimado −
+observado| / observado. Así quedan las de Antioquia:</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th>Observado</th>
+<th>Sin pistas</th>
+<th>Error</th>
+<th>Con razón de sexos</th>
+<th>Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1985</td>
+<td>3.457</td>
+<td>2.997</td>
+<td>13 %</td>
+<td>3.774</td>
+<td>9 %</td>
+</tr>
+<tr class="even">
+<td>1988</td>
+<td>6.936</td>
+<td>3.836</td>
+<td>45 %</td>
+<td>7.026</td>
+<td>1 %</td>
+</tr>
+<tr class="odd">
+<td>1991</td>
+<td>12.237</td>
+<td>5.478</td>
+<td>55 %</td>
+<td>12.158</td>
+<td>1 %</td>
+</tr>
+<tr class="even">
+<td>1994</td>
+<td>9.435</td>
+<td>6.109</td>
+<td>35 %</td>
+<td>10.035</td>
+<td>6 %</td>
+</tr>
+<tr class="odd">
+<td>1997</td>
+<td>8.390</td>
+<td>7.162</td>
+<td>15 %</td>
+<td>8.744</td>
+<td>4 %</td>
+</tr>
+</tbody>
+</table>
+<p>Sin pistas, el modelo no puede saber que en medio del bloque hubo un
+pico (el de 1991, en la guerra del narcotráfico), y se queda corto a la
+mitad del camino. Con la razón de sexos lo ve: el exceso de muertes de
+hombres le dice que la violencia subió. 4. <strong>Se toma la mediana de
+las casillas del bloque.</strong> En Antioquia, la mediana de sus 13
+años es 35 %. Con los 15 departamentos, la mediana de las 195 casillas
+de 1985–97 es 20 %. Va de 8 % en Magdalena + Cesar a 35 % en Antioquia,
+porque donde la violencia subió y bajó más, interpolar falla más. 5.
+<strong>Se promedian los bloques.</strong> El bloque 1998–2010 da 16 %.
+El promedio de 20 % y 16 %, ponderado por casillas (195 cada uno), es
+<strong>18 %</strong>.</p>
+<p>Todas las celdas de las dos tablas se calculan igual, cambiando el
+país, las edades, la prueba (qué años se ocultan) y el método.</p>
+<p><strong>Las filas</strong> son los casos: país, grupo de edad y tipo
+de prueba. - <strong>Intermedios:</strong> bloques de 7–8 años ocultos
+(13 en Colombia), con datos conocidos antes y después. - <strong>Hacia
+atrás:</strong> los primeros 15 años ocultos, con datos solo después. Es
+la prueba más parecida a reconstruir el pasado, como en la Colombia
+histórica. - <strong>Hacia adelante:</strong> los últimos 4 años
+ocultos, con datos solo antes. Solo en Ecuador, por el salto de
+violencia de 2021–24. - <strong>Violentas, %</strong> es el peso de las
+muertes violentas en el total de muertes de esos años. Es lo que más
+explica el error.</p>
+<p><strong>Las columnas</strong> son los métodos, en dos grupos según la
+información que usan:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Columna</th>
+<th>Método</th>
+<th>Qué ve en los años ocultos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sin pistas</td>
+<td>Referencia</td>
+<td>Nada: interpola o extiende desde los años conocidos</td>
+</tr>
+<tr class="even">
+<td>1. Estados ocultos</td>
+<td>Modelo principal (60/70)</td>
+<td>La razón de sexos de todas las muertes de cada unidad</td>
+</tr>
+<tr class="odd">
+<td>3. Directo (D)</td>
+<td>Estimador de España (80)</td>
+<td>La razón de sexos de cada unidad, con la razón no violenta de los
+años vecinos</td>
+</tr>
+<tr class="even">
+<td>3. Directo + tendencia (DN)</td>
+<td>Ídem</td>
+<td>Lo mismo, con la razón no violenta nacional de cada año</td>
+</tr>
+<tr class="odd">
+<td>1. Con total (ST)</td>
+<td>Modelo principal</td>
+<td>La razón de sexos <strong>y el total nacional de violentas de cada
+año</strong></td>
+</tr>
+<tr class="even">
+<td>2. Regresión (B1)</td>
+<td>Modelo simple (64)</td>
+<td>Ídem</td>
+</tr>
+<tr class="odd">
+<td>3. Directo con total (DT)</td>
+<td>Estimador de España</td>
+<td>Ídem</td>
+</tr>
+</tbody>
+</table>
+<p>Las cuatro primeras se comparan entre sí, porque usan la misma
+información. Las tres últimas también, porque además conocen el total
+nacional; en Colombia ese caso existe en 1966–77, con la OMS. <strong>En
+negrita, el mejor método de la fila</strong>, sin contar “Sin
+pistas”.</p>
+<p><strong>Tabla 1. Error por unidad y año (%)</strong></p>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>País</th>
+<th>Edades</th>
+<th>Prueba</th>
+<th>Violentas, %</th>
+<th>Sin pistas</th>
+<th>1. Estados ocultos</th>
+<th>1. con total (ST)</th>
+<th>2. Regresión (B1)</th>
+<th>3. Directo (D)</th>
+<th>3. Directo + tendencia (DN)</th>
+<th>3. Directo con total (DT)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Colombia</td>
+<td>todas</td>
+<td>intermedios</td>
+<td>14,3</td>
+<td>18</td>
+<td>8</td>
+<td><strong>7</strong></td>
+<td><strong>7</strong></td>
+<td>12</td>
+<td>11</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>Colombia</td>
+<td>todas</td>
+<td>hacia atrás</td>
+<td>11,9</td>
+<td>35</td>
+<td>18</td>
+<td>16</td>
+<td><strong>14</strong></td>
+<td>25</td>
+<td>18</td>
+<td>27</td>
+</tr>
+<tr class="odd">
+<td>Brasil</td>
+<td>todas</td>
+<td>intermedios</td>
+<td>5,5</td>
+<td>10</td>
+<td>9</td>
+<td><strong>8</strong></td>
+<td>17</td>
+<td>20</td>
+<td>19</td>
+<td>19</td>
+</tr>
+<tr class="even">
+<td>Brasil</td>
+<td>todas</td>
+<td>hacia atrás</td>
+<td>4,4</td>
+<td>23</td>
+<td>32</td>
+<td><strong>26</strong></td>
+<td><strong>26</strong></td>
+<td>60</td>
+<td>52</td>
+<td>52</td>
+</tr>
+<tr class="odd">
+<td>Brasil</td>
+<td>15–44</td>
+<td>intermedios</td>
+<td>25,2</td>
+<td>8</td>
+<td><strong>6</strong></td>
+<td><strong>6</strong></td>
+<td>11</td>
+<td>14</td>
+<td>13</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>Brasil</td>
+<td>15–44</td>
+<td>hacia atrás</td>
+<td>18,9</td>
+<td>17</td>
+<td><strong>13</strong></td>
+<td>14</td>
+<td>16</td>
+<td>53</td>
+<td>29</td>
+<td>58</td>
+</tr>
+<tr class="odd">
+<td>México</td>
+<td>todas</td>
+<td>intermedios</td>
+<td>3,8</td>
+<td>17</td>
+<td>15</td>
+<td><strong>12</strong></td>
+<td>19</td>
+<td>41</td>
+<td>41</td>
+<td>41</td>
+</tr>
+<tr class="even">
+<td>México</td>
+<td>todas</td>
+<td>hacia atrás</td>
+<td>3,7</td>
+<td>25</td>
+<td>25</td>
+<td><strong>24</strong></td>
+<td>25</td>
+<td>71</td>
+<td>50</td>
+<td>35</td>
+</tr>
+<tr class="odd">
+<td>México</td>
+<td>15–44</td>
+<td>intermedios</td>
+<td>17,6</td>
+<td>16</td>
+<td>13</td>
+<td><strong>12</strong></td>
+<td>16</td>
+<td>39</td>
+<td>35</td>
+<td>35</td>
+</tr>
+<tr class="even">
+<td>México</td>
+<td>15–44</td>
+<td>hacia atrás</td>
+<td>15,3</td>
+<td>22</td>
+<td>21</td>
+<td><strong>19</strong></td>
+<td>21</td>
+<td>47</td>
+<td>46</td>
+<td>45</td>
+</tr>
+<tr class="odd">
+<td>Ecuador</td>
+<td>todas</td>
+<td>intermedios</td>
+<td>4,5</td>
+<td>21</td>
+<td>21</td>
+<td>20</td>
+<td><strong>16</strong></td>
+<td>86</td>
+<td>82</td>
+<td>71</td>
+</tr>
+<tr class="even">
+<td>Ecuador</td>
+<td>todas</td>
+<td>hacia atrás</td>
+<td>3,9</td>
+<td>30</td>
+<td>37</td>
+<td>37</td>
+<td><strong>21</strong></td>
+<td>96</td>
+<td>96</td>
+<td>97</td>
+</tr>
+<tr class="odd">
+<td>Ecuador</td>
+<td>todas</td>
+<td>hacia adelante</td>
+<td>6,2</td>
+<td>58</td>
+<td>48</td>
+<td><strong>33</strong></td>
+<td>44</td>
+<td>97</td>
+<td>97</td>
+<td>93</td>
+</tr>
+<tr class="even">
+<td>Ecuador</td>
+<td>15–44</td>
+<td>intermedios</td>
+<td>17,9</td>
+<td>21</td>
+<td>19</td>
+<td>18</td>
+<td><strong>15</strong></td>
+<td>65</td>
+<td>61</td>
+<td>58</td>
+</tr>
+<tr class="odd">
+<td>Ecuador</td>
+<td>15–44</td>
+<td>hacia atrás</td>
+<td>15,3</td>
+<td>29</td>
+<td>29</td>
+<td>27</td>
+<td><strong>24</strong></td>
+<td>92</td>
+<td>89</td>
+<td>93</td>
+</tr>
+<tr class="even">
+<td>Ecuador</td>
+<td>15–44</td>
+<td>hacia adelante</td>
+<td>30,4</td>
+<td>50</td>
+<td>38</td>
+<td><strong>23</strong></td>
+<td>34</td>
+<td>66</td>
+<td>71</td>
+<td>60</td>
+</tr>
+<tr class="odd">
+<td>EE. UU.</td>
+<td>todas</td>
+<td>intermedios</td>
+<td>0,9</td>
+<td>9</td>
+<td>9</td>
+<td><strong>8</strong></td>
+<td>11</td>
+<td>98</td>
+<td>98</td>
+<td>96</td>
+</tr>
+<tr class="even">
+<td>EE. UU.</td>
+<td>todas</td>
+<td>hacia atrás</td>
+<td>1,0</td>
+<td>18</td>
+<td>17</td>
+<td><strong>13</strong></td>
+<td>16</td>
+<td>971</td>
+<td>100</td>
+<td>41</td>
+</tr>
+<tr class="odd">
+<td>EE. UU.</td>
+<td>15–44</td>
+<td>intermedios</td>
+<td>9,3</td>
+<td>9</td>
+<td>8</td>
+<td><strong>7</strong></td>
+<td>11</td>
+<td>83</td>
+<td>76</td>
+<td>63</td>
+</tr>
+<tr class="even">
+<td>EE. UU.</td>
+<td>15–44</td>
+<td>hacia atrás</td>
+<td>9,3</td>
+<td>15</td>
+<td>19</td>
+<td>17</td>
+<td><strong>15</strong></td>
+<td>98</td>
+<td>97</td>
+<td>97</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cómo se lee la tabla 1:</strong> 1. <strong>Sin el total
+nacional, el modelo de estados ocultos es el mejor o empata en 17 de las
+20 filas.</strong> Las tres excepciones son pruebas hacia atrás (Brasil
+y Ecuador con todas las edades, EE. UU. en 15–44). Ahí la razón de sexos
+se movió por otras causas, como el envejecimiento, y extender el último
+valor conocido erró menos. 2. <strong>Con el total nacional, el modelo
+de estados ocultos (ST) y la regresión simple (B1) se reparten las
+filas.</strong> La regresión gana en Ecuador, salvo hacia adelante, y en
+Colombia hacia atrás. Saber el total nacional baja mucho el error ante
+un salto brusco: en Ecuador hacia adelante pasa de 48 % a 33 %, y de 38
+% a 23 % en 15–44. 3. <strong>El estimador directo solo es competitivo
+en Colombia,</strong> donde las violentas son más del 10 % de las
+muertes. En años intermedios tiene 10–12 % de error, frente a 7–8 % del
+modelo principal; hacia atrás, con la tendencia nacional, empata (18 %).
+En los demás casos va de 13 % a 971 %. Donde la violencia pesa poco,
+muchas estimaciones dan negativas, y la fórmula no tiene cómo filtrar el
+ruido de un año. 4. <strong>El peso de la violencia es lo que más
+explica el error de todos los métodos.</strong> Con menos de ~5 % de
+muertes violentas y sin el total nacional, ningún método le gana con
+claridad a la interpolación. Lo que ayuda ahí es conocer el total
+nacional (ST): 12 % frente a 17 % en México y 13 % frente a 18 % en EE.
+UU. hacia atrás.</p>
+<p><strong>Tabla 2. Error sobre el total del bloque por unidad
+(%)</strong></p>
+<p>Es la misma comparación, pero se suman las muertes violentas de todos
+los años ocultos de cada unidad antes de medir el error. Así se usa el
+estimador directo en España (totales de un periodo por provincia), y así
+el ruido de un año a otro se compensa en parte.</p>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>País</th>
+<th>Edades</th>
+<th>Prueba</th>
+<th>Violentas, %</th>
+<th>Sin pistas</th>
+<th>1. Estados ocultos</th>
+<th>1. con total (ST)</th>
+<th>2. Regresión (B1)</th>
+<th>3. Directo (D)</th>
+<th>3. Directo + tendencia (DN)</th>
+<th>3. Directo con total (DT)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Colombia</td>
+<td>todas</td>
+<td>intermedios</td>
+<td>14,3</td>
+<td>20</td>
+<td>7</td>
+<td>6</td>
+<td><strong>4</strong></td>
+<td>6</td>
+<td>8</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>Colombia</td>
+<td>todas</td>
+<td>hacia atrás</td>
+<td>11,9</td>
+<td>36</td>
+<td>15</td>
+<td>12</td>
+<td><strong>9</strong></td>
+<td>15</td>
+<td>10</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>Brasil</td>
+<td>todas</td>
+<td>intermedios</td>
+<td>5,5</td>
+<td>10</td>
+<td>7</td>
+<td><strong>6</strong></td>
+<td>13</td>
+<td>14</td>
+<td>13</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>Brasil</td>
+<td>todas</td>
+<td>hacia atrás</td>
+<td>4,4</td>
+<td>20</td>
+<td>32</td>
+<td>23</td>
+<td><strong>20</strong></td>
+<td>37</td>
+<td>41</td>
+<td>35</td>
+</tr>
+<tr class="odd">
+<td>Brasil</td>
+<td>15–44</td>
+<td>intermedios</td>
+<td>25,2</td>
+<td>8</td>
+<td>5</td>
+<td><strong>4</strong></td>
+<td>10</td>
+<td>10</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>Brasil</td>
+<td>15–44</td>
+<td>hacia atrás</td>
+<td>18,9</td>
+<td>13</td>
+<td><strong>6</strong></td>
+<td>9</td>
+<td>10</td>
+<td>36</td>
+<td>16</td>
+<td>36</td>
+</tr>
+<tr class="odd">
+<td>México</td>
+<td>todas</td>
+<td>intermedios</td>
+<td>3,8</td>
+<td>14</td>
+<td>11</td>
+<td><strong>9</strong></td>
+<td>14</td>
+<td>25</td>
+<td>24</td>
+<td>25</td>
+</tr>
+<tr class="even">
+<td>México</td>
+<td>todas</td>
+<td>hacia atrás</td>
+<td>3,7</td>
+<td>26</td>
+<td><strong>22</strong></td>
+<td>23</td>
+<td>30</td>
+<td>56</td>
+<td>33</td>
+<td>29</td>
+</tr>
+<tr class="odd">
+<td>México</td>
+<td>15–44</td>
+<td>intermedios</td>
+<td>17,6</td>
+<td>11</td>
+<td>9</td>
+<td><strong>8</strong></td>
+<td>13</td>
+<td>23</td>
+<td>20</td>
+<td>19</td>
+</tr>
+<tr class="even">
+<td>México</td>
+<td>15–44</td>
+<td>hacia atrás</td>
+<td>15,3</td>
+<td>22</td>
+<td>23</td>
+<td>22</td>
+<td><strong>16</strong></td>
+<td>40</td>
+<td>40</td>
+<td>42</td>
+</tr>
+<tr class="odd">
+<td>Ecuador</td>
+<td>todas</td>
+<td>intermedios</td>
+<td>4,5</td>
+<td>15</td>
+<td>14</td>
+<td><strong>10</strong></td>
+<td><strong>10</strong></td>
+<td>53</td>
+<td>51</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>Ecuador</td>
+<td>todas</td>
+<td>hacia atrás</td>
+<td>3,9</td>
+<td>15</td>
+<td>38</td>
+<td>24</td>
+<td><strong>18</strong></td>
+<td>80</td>
+<td>74</td>
+<td>88</td>
+</tr>
+<tr class="odd">
+<td>Ecuador</td>
+<td>todas</td>
+<td>hacia adelante</td>
+<td>6,2</td>
+<td>52</td>
+<td>43</td>
+<td><strong>22</strong></td>
+<td>58</td>
+<td>95</td>
+<td>49</td>
+<td>89</td>
+</tr>
+<tr class="even">
+<td>Ecuador</td>
+<td>15–44</td>
+<td>intermedios</td>
+<td>17,9</td>
+<td>13</td>
+<td>14</td>
+<td>13</td>
+<td><strong>10</strong></td>
+<td>48</td>
+<td>49</td>
+<td>39</td>
+</tr>
+<tr class="odd">
+<td>Ecuador</td>
+<td>15–44</td>
+<td>hacia atrás</td>
+<td>15,3</td>
+<td>21</td>
+<td>27</td>
+<td>22</td>
+<td><strong>17</strong></td>
+<td>88</td>
+<td>86</td>
+<td>94</td>
+</tr>
+<tr class="even">
+<td>Ecuador</td>
+<td>15–44</td>
+<td>hacia adelante</td>
+<td>30,4</td>
+<td>51</td>
+<td>38</td>
+<td><strong>17</strong></td>
+<td>24</td>
+<td>73</td>
+<td>31</td>
+<td>37</td>
+</tr>
+<tr class="odd">
+<td>EE. UU.</td>
+<td>todas</td>
+<td>intermedios</td>
+<td>0,9</td>
+<td>6</td>
+<td>6</td>
+<td><strong>5</strong></td>
+<td>8</td>
+<td>54</td>
+<td>57</td>
+<td>55</td>
+</tr>
+<tr class="even">
+<td>EE. UU.</td>
+<td>todas</td>
+<td>hacia atrás</td>
+<td>1,0</td>
+<td>10</td>
+<td><strong>11</strong></td>
+<td>12</td>
+<td>14</td>
+<td>937</td>
+<td>92</td>
+<td>32</td>
+</tr>
+<tr class="odd">
+<td>EE. UU.</td>
+<td>15–44</td>
+<td>intermedios</td>
+<td>9,3</td>
+<td>6</td>
+<td>6</td>
+<td><strong>5</strong></td>
+<td>10</td>
+<td>48</td>
+<td>39</td>
+<td>36</td>
+</tr>
+<tr class="even">
+<td>EE. UU.</td>
+<td>15–44</td>
+<td>hacia atrás</td>
+<td>9,3</td>
+<td>10</td>
+<td>16</td>
+<td>13</td>
+<td><strong>12</strong></td>
+<td>57</td>
+<td>82</td>
+<td>71</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cómo se lee la tabla 2:</strong> 1. <strong>Los errores bajan
+en todos los métodos,</strong> porque los errores de años distintos se
+compensan. 2. <strong>En Colombia el estimador directo alcanza al modelo
+principal:</strong> 6 % frente a 7 % en años intermedios, y 10 % (con
+tendencia) frente a 15 % hacia atrás. Es la condición en que se usa en
+España. 3. <strong>En los demás países queda por detrás:</strong> 8–95 %
+en Brasil, México y Ecuador, y 32–937 % en EE. UU. Lo más cerca es
+Brasil 15–44 en años intermedios: 8 % frente a 5 %.</p>
+<p><strong>España no aparece en las tablas,</strong> porque ahí no se
+conoce la verdad. Solo se pueden comparar los métodos entre sí: para
+1936–39 dan 194.000 muertes violentas con el modelo de estados ocultos y
+193.500 con el directo, frente a 158.700 registradas como violentas
+(scripts 80 y 87). Las violentas son el 10,5 % de las muertes, y se usan
+totales de cuatro años por provincia: es el caso de la tabla 2 en
+Colombia.</p>
 <h2 id="los-modelos-y-cómo-usan-la-razón-de-sexos">1. Los modelos y cómo
 usan la razón de sexos</h2>
 <h3 id="la-idea">La idea</h3>
