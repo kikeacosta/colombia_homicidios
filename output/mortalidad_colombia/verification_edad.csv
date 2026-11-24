@@ -1,0 +1,34 @@
+check,n,n_failing,note
+"1 clave única (nivel,cod,unidad,anio,causa,sexo,edad,edad_inicio,edad_fin)",5700504,0,
+"1b clave única (nivel,cod,anio,causa,sexo,edad)",5700504,0,
+2 suma de edades = total fase 1 (misma fuente elegida en fase 1),98686,0,la suma incluye edad desconocida y sexo no registrado. Fallan: 
+"2 suma de edades vs total fase 1 (fuente no elegida en fase 1), eevv",30,0,máx |dif rel| 0; media 0; años con dif: 
+"2 suma de edades vs total fase 1 (fuente no elegida en fase 1), who_todas",22,0,máx |dif rel| 0; media 0; años con dif: 
+"2 suma de edades vs total fase 1 (fuente no elegida en fase 1), lambda",72,0,máx |dif rel| 0; media 0; años con dif: 
+"2 celdas con edad sin contraparte alguna en fase 1 (nivel,cod,año,causa)",98817,0,
+2 celdas EEVV con defunciones en fase 1 y sin filas de edad,87682,0,
+"2b suma de edades = fila 'all' publicada por la misma fuente, reg_c11",675,0,
+"2b suma de edades = fila 'all' publicada por la misma fuente, reg_c3",27,0,
+"2b suma de edades = fila 'all' publicada por la misma fuente, reg_c6",18,0,
+"2b suma de edades = fila 'all' publicada por la misma fuente, reg_c6t",18,0,
+"2b suma de edades = fila 'all' publicada por la misma fuente, ane_6567",198,0,
+"2b suma de edades = fila 'all' publicada por la misma fuente, ane_6869",192,6,máx |dif| 20; departamental 13 1968 todas hombres -20; departamental 13 1968 todas mujeres 20; departamental 44 1968 todas hombres 10; departamental 44 1968 todas mujeres -10; departamental 94 1969 todas hombres -1; departamental 94 1969 todas mujeres 1
+2c cuadro 11 (0 y 1-4) = cuadro 10 (menores de 5),450,2,TN 1976 0 -4; TN 1976 1-4 2
+"2d cuadro 3 = cuadro 11 (nacional, por edad y sexo)",540,0,
+"2e cuadro 6 (fila TOTAL) = cuadro 11 (nacional, por edad y sexo)",360,0,
+3 total = hombres + mujeres (por celda de edad; sexo ausente = 0 en municipal),1900168,2732,"fallan: 448 nacional, 1069 departamental, 1215 municipal (sexo no registrado en EEVV, desde 1998); filas de sexo marcadas parcial en 2732 de ellas"
+4 homicidio <= todas por grupo de edad,2827185,0,0 celdas de homicidio sin grupo de edad igual en 'todas' (fuentes con distinto detalle); fallan: 
+"5 OMS vs EEVV, años en común",0,0,la OMS termina en 1977 y las EEVV con edad empiezan en 1979: no hay años en común
+"5 OMS vs Registro 1970-1977, todas, por grupo amplio",90,0,"n_failing = celdas con |dif rel| > 5% y >= 100 def.; máx |dif rel| (sexo total, >= 100 def.) 8e-04 (1970 5-14); máx |dif| absoluta 18; años 1970, 1972, 1974-1977"
+"5 OMS vs Registro cuadro 6, homicidio, por grupo amplio",60,0,"n_failing = celdas con |dif rel| > 5% y >= 100 def.; máx |dif rel| (sexo total, >= 100 def.) 0 (1974 15-44); máx |dif| absoluta 0; años 1974-1977"
+"5 LAMBdA vs EEVV nacional 1979-2015, todas, por grupo amplio",510,21,"n_failing = celdas con |dif rel| > 5% y >= 100 def.; máx |dif rel| (sexo total, >= 100 def.) 0.2688 (1991 5-14); máx |dif| absoluta 11280; años 1982-2015"
+"5 LAMBdA vs OMS 1953-1977, todas, por grupo amplio",300,15,"n_failing = celdas con |dif rel| > 5% y >= 100 def.; máx |dif rel| (sexo total, >= 100 def.) 0.5529 (1970 15-44); máx |dif| absoluta 26988; años 1953-1970, 1974-1975"
+"5 LAMBdA vs Registro 1970-1978, todas, por grupo amplio",75,15,"n_failing = celdas con |dif rel| > 5% y >= 100 def.; máx |dif rel| (sexo total, >= 100 def.) 0.5527 (1970 15-44); máx |dif| absoluta 26982; años 1970-1971, 1973-1975"
+"5 OMS vs anuarios 1965-1967, todas, por grupo amplio",45,0,"n_failing = celdas con |dif rel| > 5% y >= 100 def.; máx |dif rel| (sexo total, >= 100 def.) 0.0215 (1965 5-14); máx |dif| absoluta 1133; años 1965-1967"
+"5 OMS vs anuarios 1968-1969, todas, por grupo amplio",30,0,"n_failing = celdas con |dif rel| > 5% y >= 100 def.; máx |dif rel| (sexo total, >= 100 def.) 0.0063 (1969 5-14); máx |dif| absoluta 100; años 1968-1969"
+"5 Registro 1973-1978 vs EEVV, homicidio (sin años comunes)",0,0,sin años en común
+"5b nacional = suma de departamentos, por edad (sexo total)",1976,0,"n_failing = celdas (año, causa, edad) con |dif| > 1% y >= 100 def.; años con |dif| > 0,5% en el total de edades: ; máx |dif| 0"
+6 inventario 'Edad y sexo' sin filas de edad en la tabla,352,0,ninguno
+6 filas de edad en la tabla que el inventario no lista como 'Edad y sexo',354,2,"nacional/homicidio: 1973, 1978"
+7 filas por nivel y causa (por década: verification_edad_filas_por_decada.csv),5700504,0,nacional/homicidio:4134 | nacional/todas:5217 | departamental/homicidio:87216 | departamental/todas:108366 | municipal/homicidio:2735835 | municipal/todas:2759736
+7b filas en fuentes (todas las fuentes),5705664,0,departamental:195582 | municipal:5495571 | nacional:14511

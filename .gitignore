@@ -38,3 +38,7 @@ data_input/historical/*.pdf
 
 # papers (copyrighted PDFs): kept locally
 literature/
+
+# regenerables con code/61_build_mortality_database_age.R
+output/mortalidad_colombia/mortalidad_colombia_edad_fuentes.csv.gz
+output/mortalidad_colombia/verification_edad_detalle.csv

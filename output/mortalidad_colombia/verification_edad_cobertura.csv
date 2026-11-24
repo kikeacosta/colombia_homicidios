@@ -1,0 +1,17 @@
+nivel,causa,src,anios,n_anios,filas,grupos_min,grupos_max
+nacional,homicidio,who_hom,"1953-1969, 1972",18,1080,19,19
+nacional,homicidio,reg_c6,1973-1978,6,360,19,19
+nacional,homicidio,eevv,1979-2023,45,2694,19,19
+nacional,todas,lambda,"1926-1928, 1936-1952",20,957,13,19
+nacional,todas,who_todas,1953-1964,12,720,19,19
+nacional,todas,ane_6567,1965-1967,3,180,19,19
+nacional,todas,ane_6869,1968-1969,2,120,19,19
+nacional,todas,reg_c11,1970-1978,9,540,19,19
+nacional,todas,eevv,1979-2023,45,2700,19,19
+departamental,homicidio,eevv,1979-2023,45,87216,19,19
+departamental,todas,ane_6567,1965-1967,3,3780,19,19
+departamental,todas,ane_6869,1968-1969,2,3720,19,19
+departamental,todas,reg_c11,1970-1978,9,12960,19,19
+departamental,todas,eevv,1979-2023,45,87906,19,19
+municipal,homicidio,eevv,1979-2023,45,2735835,19,19
+municipal,todas,eevv,1979-2023,45,2759736,19,19
