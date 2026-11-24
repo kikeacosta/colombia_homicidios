@@ -229,7 +229,7 @@ Error mediano y cobertura con la razón de sexos (S), en las tres versiones:
 ## 8. Qué falta
 
 1. **Calibrar los intervalos hacia atrás:** estimar el factor de ampliación en estas pruebas y aplicarlo a la reconstrucción de Colombia.
-2. **Pasar Colombia a la versión logit:** da el mismo error y mejor cobertura.
+2. ~~Pasar Colombia a la versión logit.~~ Hecho el 25 de noviembre de 2026 en el script 60. Las estimaciones cambiaron menos de 1 % y la cobertura en 1979–84 subió de 0,71 a 0,77.
 3. **Medir los cambios, no solo el nivel:** si el modelo acierta la dirección y el tamaño de los cambios de un año a otro, que es lo que interesa para periodos como La Violencia.
 4. **Darle al modelo una tendencia de la razón de sexos no violenta,** por ejemplo con la estructura por edad, para que no la confunda con violencia hacia atrás. Es la falla de Brasil y EE. UU.
 5. **Cerrar la filtración de ρ_t,** que usa la proporción violenta nacional de los años ocultos, y medir cuánto cambia el error.

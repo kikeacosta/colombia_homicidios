@@ -14,7 +14,8 @@
 #          before they became departments).
 #
 # model    per unit, three latent states by year:
-#            eta   log share of homicides in registered deaths (random walk)
+#            eta   logit of the share of homicides in registered deaths,
+#                  log(homicides / other deaths) (random walk; `link` below)
 #            u     log non-violent sex ratio of deaths, as a deviation from
 #                  the national one (random walk, slow)
 #            beta  log bias of the Policia count against the vital-statistics
@@ -24,11 +25,11 @@
 #            log(Dm / Df)       = g(rho_t + u, eta) + e   accounting identity:
 #                                 non-violent deaths with sex ratio
 #                                 exp(rho_t + u) plus homicides, 90 % male
-#            log(H_anuario / D) = eta + e                 (e with gross errors)
-#            log(H_eevv / D)    = eta + e                 (1979-2019, near exact)
-#            log(H_policia / D) = eta + beta + e          (1962-1997)
+#            logit(H_anuario / D) = eta + e               (e with gross errors)
+#            logit(H_eevv / D)    = eta + e               (1979-2019, near exact)
+#            logit(H_policia / D) = eta + beta + e        (1962-1997)
 #          plus one national observation that links the units:
-#            log(V_who / D_nat) = log(sum_d w_d exp(eta_d)) + e   (1966-1977)
+#            logit(V_who / D_nat) = logit(sum_d w_d invlogit(eta_d)) + e   (1966-1977)
 #          the WHO series is the national vital statistics by cause. in
 #          1953-65 it is the sum of the anuario counts already in the model,
 #          so it is used only in 1966-1977 (nine years with cause detail),
@@ -113,6 +114,18 @@ s_out <- 1.5 # extra sd of an anuario cell that is a gross error (log scale), fi
 s_jump <- 1 # extra sd of eta in a year with a jump (log scale), fixed
 eta_break <- 1979 # first year of the modern innovation sd of eta (EEVV microdata)
 z90 <- qnorm(0.95)
+# scale of the share of homicides in deaths (eta). "logit" (log of homicides
+# over other deaths) keeps the share between 0 and 1; "log" was the first
+# version, with the share capped at 0.9 inside the identity. 78 tested both
+# in this model and in four other countries: same error, better coverage of
+# the intervals with logit, so logit is used. for shares of a few per cent
+# the two are almost the same.
+link <- "logit"
+lk <- function(p) if (link == "logit") qlogis(p) else log(p)
+il <- function(x) if (link == "logit") plogis(x) else pmin(exp(x), 0.9)
+dil <- function(x) if (link == "logit") plogis(x) * (1 - plogis(x)) else exp(x) * (exp(x) < 0.9) # d il / dx
+dlk <- function(p) if (link == "logit") 1 / (p * (1 - p)) else 1 / p                          # d lk / dp
+q_lk <- function(h, d) if (link == "logit") 1 / h + 1 / (d - h) else 1 / h                   # sampling variance of lk(h / d)
 
 norm_name <- function(x) {
   x |> stringi::stri_trans_general("Latin-ASCII") |> tolower() |> trimws() |>
@@ -313,16 +326,16 @@ md <- pan |>
   mutate(
     y_sr = ifelse(!is.na(dm) & dm > 0 & df > 0, log(dm / df), NA),
     q_sr = 1 / dm + 1 / df,
-    y_a = ifelse(!is.na(h_anu) & h_anu > 0, log(h_anu / d), NA),
-    q_a = 1 / h_anu,
-    y_e = ifelse(!is.na(h_eevv) & h_eevv > 0, log(h_eevv / d), NA),
-    q_e = 1 / h_eevv,
-    y_p = ifelse(year %in% pol_years & !is.na(h_pol) & h_pol > 0, log(h_pol / d_adj), NA),
-    q_p = 1 / h_pol
+    y_a = ifelse(!is.na(h_anu) & h_anu > 0 & h_anu < d, lk(h_anu / d), NA),
+    q_a = q_lk(h_anu, d),
+    y_e = ifelse(!is.na(h_eevv) & h_eevv > 0 & h_eevv < d, lk(h_eevv / d), NA),
+    q_e = q_lk(h_eevv, d),
+    y_p = ifelse(year %in% pol_years & !is.na(h_pol) & h_pol > 0 & h_pol < d_adj, lk(h_pol / d_adj), NA),
+    q_p = q_lk(h_pol, d_adj)
   ) |>
   # national WHO observation (the same value in every row of the year) and
   # the weight of each unit in the national deaths
-  left_join(nat |> transmute(year, y_w = ifelse(year %in% who_years & !is.na(v_who), log(v_who / d_adj), NA)), by = "year") |>
+  left_join(nat |> transmute(year, y_w = ifelse(year %in% who_years & !is.na(v_who), lk(v_who / d_adj), NA)), by = "year") |>
   mutate(w = d_adj / sum(d_adj), .by = year) |>
   arrange(unit, year)
 stopifnot(nrow(md) == length(yrs) * n_distinct(md$unit), all(md$year == rep(yrs, n_distinct(md$unit))))
@@ -333,14 +346,14 @@ say("unit-years with: sex ratio", sum(!is.na(md$y_sr)), "| anuario homicides", s
 # 3. model ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # log sex ratio of all deaths given the non-violent log sex ratio (delta) and
-# the log share of homicides in deaths (eta)
+# the share of homicides in deaths on the scale of `link` (eta)
 g_sr <- function(delta, eta) {
-  h <- pmin(exp(eta), 0.9)
+  h <- il(eta)
   ed <- exp(delta)
   log((1 - h) * ed + h * pi_m * (1 + ed)) - log((1 - h) + h * (1 - pi_m) * (1 + ed))
 }
 
-x0 <- c(log(0.01), 0, 0)
+x0 <- c(lk(0.01), 0, 0)
 P0 <- c(2, 0.3, 0.5)^2 # prior variances of eta, u, beta in the first year
 
 # model data as year x unit matrices (dat is sorted by unit, then year)
@@ -466,8 +479,8 @@ kf_joint <- function(m, par, smooth = FALSE) {
     }
     if (!is.na(y_w[t])) {
       # national share of violent deaths = sum of unit shares weighted by deaths
-      hw <- W[t, ] * pmin(exp(x[ie]), 0.9)
-      upd(ie, hw / sum(hw), y_w[t] - log(sum(hw)), s_w^2)
+      sw <- sum(W[t, ] * il(x[ie]))
+      upd(ie, dlk(sw) * W[t, ] * dil(x[ie]), y_w[t] - lk(sw), s_w^2)
     }
     if (smooth) { xf[t, ] <- x; Pf[, , t] <- P }
   }
@@ -566,8 +579,8 @@ for (b in names(blocks)) {
     s_w <- s_w_who
     if (vv$use_tot) {
       ok <- inb & !is.na(truth) & !(paste(dat$unit, dat$year) %in% flagged)
-      tot <- tibble(year = dat$year, h = ifelse(ok, exp(truth) * dat$d, 0), dd = ifelse(ok, dat$d, 0)) |>
-        mutate(yw = ifelse(sum(dd) > 0, log(sum(h) / sum(dd)), NA), ww = dd / sum(dd), .by = year)
+      tot <- tibble(year = dat$year, h = ifelse(ok, il(truth) * dat$d, 0), dd = ifelse(ok, dat$d, 0)) |>
+        mutate(yw = ifelse(sum(dd) > 0, lk(sum(h) / sum(dd)), NA), ww = dd / sum(dd), .by = year)
       use <- inb & !is.na(tot$yw)
       dat$y_w[use] <- tot$yw[use]
       dat$w[use] <- tot$ww[use]
@@ -587,7 +600,7 @@ for (b in names(blocks)) {
 }
 val <- bind_rows(val) |>
   group_by(block, unit) |>
-  mutate(h_obs_mean = mean(exp(truth[variant == variant[1]]))) |>
+  mutate(h_obs_mean = mean(il(truth[variant == variant[1]]))) |>
   ungroup() |>
   mutate(level = ifelse(h_obs_mean >= 0.03, "homicides >= 3 % of deaths", "homicides < 3 % of deaths"),
          covered = abs(truth - eta) <= z90 * sqrt(sd_eta^2 + s_obs^2 + q_truth))
@@ -598,7 +611,7 @@ val_stats <- function(z) {
               r_log = cor(truth, eta), r_log_within = cor(tw, ew),
               rmse_log = sqrt(mean((eta - truth)^2)), bias_log = mean(eta - truth),
               coverage90 = mean(covered), mean_sd_eta = mean(sd_eta),
-              ratio_pred_obs = sum(exp(eta) * d) / sum(exp(truth) * d))
+              ratio_pred_obs = sum(il(eta) * d) / sum(il(truth) * d))
 }
 val_tab <- bind_rows(
   val |> group_by(block, variant) |> group_modify(~ val_stats(.x)) |> mutate(level = "all units"),
@@ -610,8 +623,8 @@ val_tab <- bind_rows(
 write_csv(val_tab, "output/tables/homicide_backcast_validation.csv")
 # the predictions themselves, one row per block, variant and unit-year
 val |>
-  transmute(block, variant, unit, year, deaths_reg = d, pop, hom_obs = exp(truth) * d, hom_pred = exp(eta) * d,
-            hom_pred_lo90 = exp(eta - z90 * sd_eta) * d, hom_pred_hi90 = exp(eta + z90 * sd_eta) * d,
+  transmute(block, variant, unit, year, deaths_reg = d, pop, hom_obs = il(truth) * d, hom_pred = il(eta) * d,
+            hom_pred_lo90 = il(eta - z90 * sd_eta) * d, hom_pred_hi90 = il(eta + z90 * sd_eta) * d,
             rate_obs = 1e5 * hom_obs / pop, rate_pred = 1e5 * hom_pred / pop, sd_log_share = sd_eta, covered90 = covered) |>
   write_csv("output/tables/homicide_backcast_validation_predictions.csv")
 cat("\n== validation: hidden blocks ==\n")
@@ -624,7 +637,7 @@ sm <- run_model(md, fit1$par, smooth = TRUE)
 est <- md |>
   left_join(sm, by = c("unit", "year")) |>
   mutate(
-    h_est = exp(eta), h_lo = exp(eta - z90 * sd_eta), h_hi = exp(eta + z90 * sd_eta),
+    h_est = il(eta), h_lo = il(eta - z90 * sd_eta), h_hi = il(eta + z90 * sd_eta),
     hom_est = h_est * d_adj, hom_lo = h_lo * d_adj, hom_hi = h_hi * d_adj,
     rate_est = 1e5 * hom_est / pop, rate_lo = 1e5 * hom_lo / pop, rate_hi = 1e5 * hom_hi / pop,
     sr_nonviolent = exp(rho + u),
@@ -641,13 +654,16 @@ est |>
             rate_lo90 = rate_lo, rate_hi90 = rate_hi, sd_log_share = sd_eta,
             anuario_gross_error_prob = p_outlier, anuario_jump_prob = p_jump,
             # smoothed log ratio of the Policia to the vital-statistics count, in the years the model uses the Policia
-            police_bias_log = ifelse(year %in% pol_years, beta, NA), police_bias_sd = ifelse(year %in% pol_years, sd_beta, NA)) |>
+            # (beta is on the scale of `link`; the ratio of the two counts is il(eta + beta) / il(eta))
+            police_bias_log = ifelse(year %in% pol_years, log(il(eta + beta) / il(eta)), NA),
+            police_bias_sd = ifelse(year %in% pol_years, sd_beta, NA)) |>
   write_csv("output/tables/homicide_backcast_dept_1915-2019.csv")
 
 # Policia bias: model estimate and the raw overlaps it comes from
 bias <- est |>
-  summarise(beta_1964 = beta[year == 1964], beta_1972 = beta[year == 1972], sd_beta_1972 = sd_beta[year == 1972],
-            beta_1982 = beta[year == 1982], beta_1992 = beta[year == 1992],
+  mutate(bias_log = log(il(eta + beta) / il(eta))) |> # beta on the scale of `link`, as a log ratio of counts
+  summarise(beta_1964 = bias_log[year == 1964], beta_1972 = bias_log[year == 1972], sd_beta_1972 = sd_beta[year == 1972],
+            beta_1982 = bias_log[year == 1982], beta_1992 = bias_log[year == 1992],
             log_ratio_anuario_1962_65 = mean(log(h_pol / h_anu)[year %in% 1962:1965], na.rm = TRUE),
             log_ratio_eevv_1979_84 = mean(log(h_pol / h_eevv)[year %in% 1979:1984 & h_eevv > 0], na.rm = TRUE),
             log_ratio_eevv_1985_97 = mean(log(h_pol / h_eevv)[year %in% 1985:1997], na.rm = TRUE),
@@ -664,7 +680,7 @@ gap_run <- function(label, sr, pl, who) {
   if (!pl) dat$y_p[gap] <- NA
   if (!who) dat$y_w <- NA
   run_model(dat, fit1$par, smooth = TRUE) |> filter(year %in% 1966:1978) |>
-    summarise(sd_log_share = mean(sd_eta), share = exp(mean(eta)), .by = unit) |> mutate(inputs = label)
+    summarise(sd_log_share = mean(sd_eta), share = il(mean(eta)), .by = unit) |> mutate(inputs = label)
 }
 gap_info <- bind_rows(gap_run("nothing", FALSE, FALSE, FALSE), gap_run("sex ratio", TRUE, FALSE, FALSE),
                       gap_run("Policia", FALSE, TRUE, FALSE), gap_run("sex ratio + Policia", TRUE, TRUE, FALSE),
@@ -718,9 +734,9 @@ vfig <- val |>
   filter(variant %in% c("N: nothing in the block", "S: sex ratio", "SP: sex ratio + Policia")) |>
   mutate(variant = factor(variant, c("N: nothing in the block", "S: sex ratio", "SP: sex ratio + Policia"),
                           c("Sin insumos en el bloque", "Razón de sexos", "Razón de sexos + Policía")))
-fig2 <- ggplot(vfig, aes(100 * exp(truth), 100 * exp(eta))) +
+fig2 <- ggplot(vfig, aes(100 * il(truth), 100 * il(eta))) +
   geom_abline(colour = "grey60", linewidth = 0.3) +
-  geom_linerange(aes(ymin = 100 * exp(eta - z90 * sd_eta), ymax = 100 * exp(eta + z90 * sd_eta)), colour = "grey70", linewidth = 0.2) +
+  geom_linerange(aes(ymin = 100 * il(eta - z90 * sd_eta), ymax = 100 * il(eta + z90 * sd_eta)), colour = "grey70", linewidth = 0.2) +
   geom_point(colour = "#2a78d6", size = 0.8, alpha = 0.8) +
   scale_x_log10(labels = scales::label_number(drop0trailing = TRUE)) +
   scale_y_log10(labels = scales::label_number(drop0trailing = TRUE)) +
@@ -810,10 +826,10 @@ chk_pred <- val |>
   select(block, variant, unit, year, eta, sd_eta, d, pop) |>
   bind_rows(chk_gap |> filter(unit %in% chk_units)) |>
   mutate(variante = factor(chk_var[variant], chk_var), panel = chk_panel(unit),
-         rate = 1e5 * exp(eta) * d / pop, lo = 1e5 * exp(eta - z90 * sd_eta) * d / pop, hi = 1e5 * exp(eta + z90 * sd_eta) * d / pop)
+         rate = 1e5 * il(eta) * d / pop, lo = 1e5 * il(eta - z90 * sd_eta) * d / pop, hi = 1e5 * il(eta + z90 * sd_eta) * d / pop)
 chk_gap |>
-  transmute(block, variant, unit, year, deaths_adj = d, pop, hom_pred = exp(eta) * d, hom_pred_lo90 = exp(eta - z90 * sd_eta) * d,
-            hom_pred_hi90 = exp(eta + z90 * sd_eta) * d, rate_pred = 1e5 * hom_pred / pop, sd_log_share = sd_eta) |>
+  transmute(block, variant, unit, year, deaths_adj = d, pop, hom_pred = il(eta) * d, hom_pred_lo90 = il(eta - z90 * sd_eta) * d,
+            hom_pred_hi90 = il(eta + z90 * sd_eta) * d, rate_pred = 1e5 * hom_pred / pop, sd_log_share = sd_eta) |>
   left_join(est |> transmute(unit, year, hom_policia = h_pol), by = c("unit", "year")) |>
   write_csv("output/tables/homicide_backcast_gap_readings.csv")
 chk_pol <- est |>
