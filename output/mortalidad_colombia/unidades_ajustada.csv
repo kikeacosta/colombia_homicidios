@@ -1,0 +1,31 @@
+nivel,cod,unidad,anios,cod_fase1,convencion
+departamental,05,Antioquia,1985-2023,05,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,08,Atlántico,1985-2023,08,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,11,Bogotá D.C.,1985-2023,11,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,13,Bolívar,1985-2023,13,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,15,Boyacá,1985-2023,15,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,17,Caldas,1985-2023,17,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,18,Caquetá,1985-2023,18,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,19,Cauca,1985-2023,19,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,20,Cesar,1985-2023,20,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,23,Córdoba,1985-2023,23,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,25,Cundinamarca,1985-2023,25,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,27,Chocó,1985-2023,27,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,41,Huila,1985-2023,41,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,44,La Guajira,1985-2023,44,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,47,Magdalena,1985-2023,47,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,50,Meta,1985-2023,50,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,52,Nariño,1985-2023,52,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,54,Norte de Santander,1985-2023,54,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,63,Quindío,1985-2023,63,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,66,Risaralda,1985-2023,66,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,68,Santander,1985-2023,68,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,70,Sucre,1985-2023,70,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,73,Tolima,1985-2023,73,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,76,Valle del Cauca,1985-2023,76,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,81,Arauca,1985-2023,81,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,85,Casanare,1985-2023,85,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,86,Putumayo,1985-2023,86,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,88,San Andrés y Providencia,1985-2023,88,departamento de la Constitución de 1991 más Bogotá D.C.
+departamental,9X,"Amazonía (Amazonas, Guainía, Guaviare, Vaupés, Vichada)",1985-2023,91;94;95;97;99,"grupo Amazonía (5 departamentos de 1991 agrupados; sin cod DIVIPOLA propio, como las tablas de vida de DANE)"
+nacional,00,Colombia,1950-2023,00,nacional
