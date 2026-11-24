@@ -1,11 +1,12 @@
 # España 1936–1946: muertes violentas y no violentas estimadas con la razón de sexos, y prueba ciega del método
 
-*24 de noviembre de 2026 · scripts `code/80`, `81` y `82` (`intl_*`)*
+*24 de noviembre de 2026 · scripts `code/80` a `83` (`intl_*`)*
 
 ## Resumen
 
 - Con solo las muertes registradas por provincia, sexo y año (INE, 1926–1946), el exceso de muertes de 1936–1942 suma **unas 590.000**. De ellas, **unas 290.000 son violentas** (exceso de muertes de hombres) y **unas 300.000 no violentas** (hambre, enfermedad, refugiados).
 - Las cifras coinciden con la literatura: el exceso total con Salas, Díez Nicolás y Ortega y Silvestre, y la violencia registrada por provincia con Salas (correlación 0,93–0,94).
+- Las causas de muerte registradas por el INE en 1936–42 confirman el supuesto clave: los hombres son el 93–97 % de las víctimas, frente a π = 0,95. En 1936–39 la estimación supera a la violencia registrada como tal en un 22 % y coincide con ella provincia por provincia (correlación 0,94). En 1940–42 solo entre un tercio y dos tercios del exceso de hombres figura como violento.
 - En una prueba ciega en cinco países con causa de muerte conocida, el método acierta cuando la violencia sube de golpe a pocos años de la base. Falla cuando la mortalidad no violenta cambia su composición por sexo, como con el COVID o con el envejecimiento a lo largo de muchos años. Por eso 1936–39 es más confiable que 1940–42.
 
 ## 1. España: datos y método
@@ -55,7 +56,40 @@ En las provincias donde quedamos por encima de Salas (Albacete, Cáceres, Cuenca
 
 ![Comparación con Salas y Ortega y Silvestre](../figures/09_international/spain_literature_comparison.png)
 
-## 4. Prueba ciega del método donde se conoce la causa
+## 4. Contraste con las causas de muerte registradas, 1936–1942
+
+Transcribí del INE, por provincia y sexo, las causas violentas registradas en cada año, con la verificación de que las provincias suman el total impreso de cada columna (120 columnas, todas cuadran):
+
+- **1936–40, lista detallada:** homicidio (por arma de fuego, por arma blanca y otros), heridas de guerra, ejecución de civiles por los ejércitos beligerantes y ejecución judicial. También muerte violenta de naturaleza desconocida, muerte repentina y causas mal definidas.
+- **1941–42, lista abreviada:** homicidios, y "otras muertes violentas o accidentales", un rubro que mezcla la violencia con los accidentes comunes.
+
+| Año | H (exceso de hombres) | Violencia registrada | Homicidio | Guerra | Ejecuciones | Hombres entre las víctimas (π) |
+|---|---|---|---|---|---|---|
+| 1936 | 45.600 | 39.600 | 14.500 | 12.600 | 12.500 | 0,93 |
+| 1937 | 53.600 | 44.400 | 5.300 | 30.200 | 9.000 | 0,94 |
+| 1938 | 45.900 | 38.300 | 4.000 | 28.300 | 6.100 | 0,94 |
+| 1939 | 48.400 | 36.300 | 15.300 | 10.300 | 10.800 | 0,97 |
+| 1940 | 34.600 | 23.200 | 6.700 | 7.700 | 8.800 | 0,97 |
+| 1941 | 46.600 | 2.700 homicidio + hasta 21.900 "otras violentas o accidentales" | | | | 0,94 |
+| 1942 | 13.800 | 2.100 homicidio + hasta 14.300 "otras violentas o accidentales" | | | | 0,95 |
+
+![Causas registradas y exceso de hombres](../figures/09_international/spain_causes_check.png)
+
+**Lo que muestra:**
+
+1. **π = 0,95 queda validado.** Entre las muertes violentas registradas, los hombres son el 93–97 %. Usar el π registrado de cada año en vez de 0,95 cambia H entre −5 % y +5 %.
+2. **1936–39 es sólido:**
+   - Se registraron como violentas 158.700 muertes: 81.300 de guerra, 39.000 homicidios y 38.400 ejecuciones. H da 193.500, un 22 % más.
+   - Por provincia, las dos series coinciden: correlación 0,94.
+   - La diferencia, ~35.000, es lo esperable por muertes violentas que nunca se registraron como tales. Además, las "muertes violentas de naturaleza desconocida" suman 7.900 en esos años. H es coherente con la violencia registrada y algo mayor, como debe ser.
+3. **1940–42 queda acotado, pero no resuelto:**
+   - La violencia registrada como tal está entre ~28.000 (solo homicidios en 1941–42) y ~64.000 (si se cuenta todo el rubro "otras violentas o accidentales"). H da 95.000.
+   - Es decir, entre 31.000 y 67.000 muertes de hombres de más en 1940–42 no figuran como violentas. Pueden ser dos cosas que estos datos no permiten separar:
+     - el hambre y el tifus matando más hombres, que sería un artefacto del método;
+     - la represión registrada bajo otras causas, como las muertes en prisión por hambre o enfermedad.
+   - Las causas mal definidas subieron en 1941 en ambos sexos por igual (hombres 7.300 → 10.600, mujeres 5.100 → 7.000), así que no muestran una violencia masculina escondida en ese rubro.
+
+## 5. Prueba ciega del método donde se conoce la causa
 
 Apliqué el estimador igual que en España: periodo base para ρ y la tendencia, π = 0,95 y solo el sexo de los muertos. Luego lo comparé con las muertes violentas observadas por encima de la proporción del periodo base.
 
@@ -94,21 +128,19 @@ Apliqué el estimador igual que en España: periodo base para ρ y la tendencia,
 - **1936–39** se parece a los casos donde el método funciona: un salto brusco de violencia a 1–4 años de la base. Ahí la estimación es confiable, dentro del rango de π.
 - **1940–42** es el punto débil. Si el hambre y el tifus mataron proporcionalmente más hombres, como el COVID, parte de ese exceso se estaría contando como violencia. Las provincias lejos del frente (Galicia, Canarias) sugieren que el efecto fue pequeño, pero no es concluyente.
 
-## 5. Qué faltaría para mejorar
+## 6. Qué faltaría para mejorar
 
-1. **Edades 15–44 por provincia.** El lector de dígitos está en marcha y verifica sin ayuda el 58–92 % de las columnas, según el año. Serviría para poner a prueba el supuesto en 1940–42, porque el hambre mata sobre todo a niños y viejos. Con la cautela que deja Colombia: hay que revisar que la razón de sexos de 15–44 no se mueva por otras causas.
-2. **Causas de muerte registradas 1936–42 por provincia y sexo** (la transcripción está pausada). Permitirían:
-   - medir π directamente;
-   - validar H provincia por provincia;
-   - anclar el modelo de espacio de estados en su versión logit (CoDA), que podría estimar la deriva de la razón de sexos no violenta en vez de suponerla fija.
+1. **Separar hambre de represión oculta en 1940–42.** Es lo único que queda abierto. Dos vías:
+   - **Edades 15–44 por provincia.** El lector de dígitos verifica sin ayuda el 58–92 % de las columnas, según el año. El hambre mata sobre todo a niños y viejos, y la represión a hombres de 20–50. Con la cautela que deja Colombia: hay que revisar que la razón de sexos de 15–44 no se mueva por otras causas.
+   - **Las causas detalladas de 1940** (enfermedades por sexo) y la mortalidad en prisiones documentada en la literatura.
+2. **Modelo de espacio de estados en su versión logit (CoDA) con las causas registradas como anclas.** Ya es posible con los datos del punto 4, y estimaría la deriva de la razón de sexos no violenta en vez de suponerla fija.
 3. **Bombardeos:** cifras publicadas de muertos por provincia y año (por ejemplo, Solé i Sabaté y Villarroya para Cataluña). Matan a ambos sexos, así que hoy quedan en el exceso no violento; con esas cifras se podrían pasar a la parte violenta.
 4. **Desplazados y refugiados por provincia, y exilio de 1939.** Hoy inflan el exceso no violento de las provincias que reciben gente (Jaén, Almería, Murcia, Alicante) y lo bajan en las de origen.
 5. **Año de defunción frente a año de registro:** estimar las inscripciones tardías (1939–41, 1943–44) para comparar con Salas en la misma base.
-6. **π español:** más estudios locales con víctimas por sexo, además de Talavera.
-7. **Incertidumbre conjunta** de ρ, π y la tendencia, en lugar de rangos separados.
-8. **Búsqueda bibliográfica** sobre si este estimador ya se propuso: demografía de conflictos, demografía histórica y métodos con la razón de sexos.
+6. **Incertidumbre conjunta** de ρ, π y la tendencia, en lugar de rangos separados.
+7. **Búsqueda bibliográfica** sobre si este estimador ya se propuso: demografía de conflictos, demografía histórica y métodos con la razón de sexos.
 
-## 6. Conclusión: ¿funciona?
+## 7. Conclusión: ¿funciona?
 
 **Sí funciona, con condiciones, y las condiciones de España en 1936–39 son las favorables.**
 
@@ -132,13 +164,12 @@ En esos casos el error puede ser de varias veces el valor real.
 
 **Qué tan lejos podemos estar en España:**
 
-- **1936–39:** se parece a los casos donde funciona. Con errores de ±25 %, las ~193.000 muertes violentas estarían entre unas **145.000 y 240.000**. Hay dos indicios de que estamos más cerca del centro:
-  - coincidimos con la violencia registrada por Salas, 194.700 en la suma comparable, con correlación 0,93 entre provincias;
-  - el exceso total coincide con la literatura dentro de un 5 %.
-- **1940–42:** no podemos descartar un error grande. El escenario desfavorable es que el hambre y el tifus hayan sesgado la mortalidad hacia los hombres como el COVID. Con el COVID, el método atribuyó a la violencia entre el 18 % (México) y el 28 % (Ecuador) del exceso. Aplicado a las 228.000 muertes de exceso de 1940–42, entre 40.000 y 65.000 de las 95.000 "violentas" podrían ser hambre, y la violencia quedaría en **30.000–55.000** en vez de 95.000. Las provincias lejos del frente sugieren un sesgo menor que ese, así que 95.000 es más bien un **techo**.
+- **π:** las causas registradas confirman π = 0,95 (registrado: 0,93–0,97).
+- **1936–39:** se parece a los casos donde funciona, y las causas registradas lo confirman. Las ~193.000 muertes violentas estimadas superan en 22 % a las 158.700 registradas como violentas, y coinciden con ellas provincia por provincia (correlación 0,94). Ese 22 % es lo esperable por violencia nunca registrada como tal. También coinciden con Salas (194.700 en la suma comparable). El rango razonable es **160.000–240.000**: el piso es lo registrado como violento y el techo, el error de la prueba ciega.
+- **1940–42:** las ~95.000 de H son un **techo**. Lo registrado como violento da entre 28.000 y 64.000. Las restantes 31.000–67.000 muertes de hombres de más son hambre que el método cuenta como violencia, o represión registrada bajo otras causas (muertes en prisión). Con estos datos no se pueden separar. Por analogía con el COVID, el sesgo por hambre podría explicar entre 40.000 y 65.000. Los dos caminos llevan a una violencia directa de **30.000–65.000** en esos años.
 - **El total del exceso,** violento más no violento, no depende de este supuesto. Es sólido: ~590.000 en 1936–42.
 
 **En resumen:**
-- La cifra de 1936–39 es confiable.
-- La de 1940–42 es un límite superior de la violencia, y la diferencia se iría al hambre.
-- La prueba que cerraría la duda son las causas registradas de 1936–42 o la razón de sexos de 15–44 en esos años.
+- El método funciona para España en la guerra: π validado, coincidencia con las causas registradas y con Salas, y un error de ±20 %.
+- Para la posguerra, 1940–42, H es un límite superior. La violencia registrada como tal da el límite inferior, y la diferencia es hambre o represión oculta.
+- Separar esas dos cosas, con las edades 15–44 o con las causas por sexo y edad, es lo único que queda abierto.
