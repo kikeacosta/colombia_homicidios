@@ -2,9 +2,9 @@
 # Violent deaths by cause, sex and department, 1951-1964, from the DANE Anuario
 # General de Estadística, table "Defunciones por causas, sexo y secciones del
 # país" (1951-52 cuadros 48-49, 1953 c. 41, 1954-55 c. 40, 1957 c. 54, 1958
-# c. 51, 1959-61 c. 46, 1962 c. 45, 1963 c. 41, 1964 c. 39). PDFs in the
-# dane_biblioteca collection (D:/data/colombia/dane_pdfs/anuarios/nacionales,
-# not versioned).
+# c. 51, 1959-61 c. 46, 1962 c. 45, 1963 c. 41, 1964 c. 39). PDFs of the years
+# transcribed so far in data_input/dane_pdfs/anuarios (not versioned); all of
+# them in the dane_biblioteca collection (D:/data/colombia/dane_pdfs/anuarios/nacionales).
 #
 # Method
 #   The OCR text layer of these tables misaligns the columns, so the rows of

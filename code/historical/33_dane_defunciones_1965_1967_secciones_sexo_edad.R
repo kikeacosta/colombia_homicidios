@@ -2,8 +2,8 @@
 # Deaths by sección del país, sex and age group, 1965-1967, from the DANE Anuario
 # General de Estadística: 1965 Cuadro 46 (pdf pp. 111-113,
 # LD_70104_1965_EJ_3.pdf) and 1966-1967 Cuadros 66 and 67 (pdf pp. 83-88,
-# LD_70104_1966_1967_EJ_3.pdf), in the dane_biblioteca collection
-# (D:/data/colombia/dane_pdfs/anuarios/nacionales, not versioned). They extend
+# LD_70104_1966_1967_EJ_3.pdf), in data_input/dane_pdfs/anuarios (not
+# versioned; also in the dane_biblioteca collection). They extend
 # 26_dane_defunciones_1968_1969.R three years back, in the same layout.
 #
 # Method

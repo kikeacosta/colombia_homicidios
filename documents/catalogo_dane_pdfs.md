@@ -1,5 +1,9 @@
 # Catálogo de los 41 PDF del DANE en `data_input/dane_pdfs/`
 
+> Nota del 2026-11-24: desde esa fecha `data_input/dane_pdfs/` guarda solo los PDF de los que salen datos
+> del proyecto (lista en `data_input/README.md`). Los demás PDF de este catálogo siguen en la colección del
+> proyecto `dane_biblioteca` (`D:\data\colombia\dane_pdfs` y las releases de su repositorio en GitHub).
+
 Elaborado el 2026-11-11. Solo catalogación: no se transcribió ningún cuadro ni se corrió OCR (los 41 PDF traen capa de texto incrustada, así que no hizo falta tesseract ni siquiera en una página de muestra). El contexto de huecos viene de `documents/inventario_datos_mortalidad.md` (secciones 0, 1 y 7) y de `documents/inventario_general_proyecto.md`; lo que ya está en el proyecto se contrastó con `data_input/historical/` (series `col_gap_analysis_*` y `census_tables/README.md`).
 
 ## Resumen
