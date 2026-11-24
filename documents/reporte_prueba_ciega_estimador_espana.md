@@ -1,6 +1,6 @@
 # España 1936–1946: muertes violentas y no violentas estimadas con la razón de sexos, y prueba ciega del método
 
-*24 de noviembre de 2026 · scripts `code/80` a `85` (`intl_*`)*
+*25 de noviembre de 2026 · scripts `code/80` a `87` (`intl_*`)*
 
 ## Resumen
 
@@ -8,6 +8,7 @@
 - Las cifras coinciden con la literatura: el exceso total con Salas, Díez Nicolás y Ortega y Silvestre, y la violencia registrada por provincia con Salas (correlación 0,93–0,94).
 - Las causas de muerte registradas por el INE en 1936–42 confirman el supuesto clave: los hombres son el 93–97 % de las víctimas, frente a π = 0,95. En 1936–39 la estimación supera a la violencia registrada como tal en un 22 % y coincide con ella provincia por provincia (correlación 0,94). En 1940–42 solo entre un tercio y dos tercios del exceso de hombres figura como violento.
 - Los bombardeos matan a hombres y mujeres por igual, y con π = 0,95 el método cuenta solo una quinta parte de cada víctima. Si se toman de las causas registradas las mujeres muertas violentamente, en vez de suponer π, el total nacional de 1936–39 casi no cambia (+1,7 %). Barcelona sube un 9 %, Oviedo un 15 % y Madrid un 5 %.
+- El modelo de estados ocultos de Colombia, aplicado a España con las causas registradas como piso, da lo mismo para 1936–39: 194.000 muertes violentas. Estima que el registro contiene cerca del 80 % de la violencia en 1936–39 y del 65 % en 1940, y elimina las estimaciones negativas de las provincias con poca violencia.
 - En una prueba ciega en cinco países con causa de muerte conocida, el método acierta cuando la violencia sube de golpe a pocos años de la base. Falla cuando la mortalidad no violenta cambia su composición por sexo, como con el COVID o con el envejecimiento a lo largo de muchos años. Por eso 1936–39 es más confiable que 1940–42.
 
 ## 1. España: datos y método
@@ -146,6 +147,40 @@ Transcribí del INE, por provincia y sexo, las causas violentas registradas en c
 3. **El registro contiene a las víctimas de los grandes bombardeos.** En Barcelona y Madrid las mujeres registradas como víctimas violentas superan a las que implican las cifras publicadas. En Tarragona, Valencia, Vizcaya y Lérida faltan: el registro de esas provincias tiene menos mujeres víctimas que las que mataron los bombardeos, y ahí la corrección agrega la diferencia.
 4. **Las cifras publicadas son débiles.** Salen de sumar ciudades, casi todas de segunda mano. La obra de referencia (*España en llamas*, 2003) no está en línea. Para la corrección pesan poco, porque se usan solo donde el registro tiene menos mujeres que ellas.
 
+### El modelo de estados ocultos con las causas registradas (script 87)
+
+En la comparación de los tres métodos en cinco países ([informe de la validación internacional](reporte_validacion_internacional.html), script 86), el modelo de estados ocultos fue el mejor o empató en casi todo. El estimador directo falló donde la violencia pesa poco. Por eso corrí también en España el modelo de estados ocultos, el mismo de Colombia en su versión logit.
+
+**Cómo está armado.** Por provincia y año sigue dos cantidades ocultas: la proporción de muertes violentas y cuánto se aparta la razón de sexos no violenta de la provincia de la nacional de preguerra. Usa tres observaciones:
+- **La razón de sexos de todas las muertes, 1926–46,** con π = 0,95.
+- **Las causas violentas registradas, 1936–40** (homicidio, guerra y ejecuciones). No se toman como la verdad sino como un piso: el modelo estima qué parte de la violencia contiene el registro, un valor para 1936–39 y otro para 1940. 1941–42 no entra, porque la lista abreviada solo tiene homicidio.
+- **Antes de la guerra,** un ancla débil en el nivel conocido de homicidios, unos 0,3 % de las muertes. Las causas de esos años no están transcritas.
+
+Hubo que resolver dos problemas:
+1. **La velocidad con que se mueve la razón de sexos no violenta de cada provincia se aprende solo de 1926–35.** Con todo libre, el modelo dejaba que esa razón se moviera rápido en la guerra y absorbiera el exceso de hombres, y terminaba siguiendo al registro casi exactamente. Fijarla en lo que se movía en paz es el mismo supuesto del estimador directo.
+2. **El filtro se relinealiza en cada paso (filtro de Kalman extendido iterado).** En Cádiz y Sevilla en 1941, con el tifus, las muertes y la razón de sexos se disparan. Con una sola linealización el filtro se pasaba de largo: daba 8.900 violentas en Cádiz, cuando la identidad contable no permite tantas. Con la iteración da 2.600, igual que el estimador directo.
+
+**Resultados:**
+
+| Periodo | Estados ocultos (87) | Intervalo 90 % | Directo (80) | Registrada como violenta |
+|---|---|---|---|---|
+| 1936–39 | **194.000** | 191.000–197.000 | 193.500 | 158.700 |
+| 1940 | 36.100 | 34.600–37.500 | 34.600 | 23.200 |
+| 1940–42 | **102.700** | 99.700–105.700 | 95.000 | — |
+| 1943–46 | 54.900 | 51.500–58.400 | 40.100 | — |
+
+![Modelo de estados ocultos en España](../figures/09_international/spain_state_space.png)
+
+**Lo que muestra:**
+
+1. **1936–39 queda confirmado por un segundo método.** 194.000 frente a 193.500 del estimador directo y 196.000 de la simulación del script 84. Las tres cifras salen de los mismos datos, pero con supuestos de ruido y de movimiento muy distintos.
+2. **El registro contiene cerca del 80 % de la violencia en 1936–39 y cerca del 65 % en 1940.** En proporciones, son 158.700 de 194.000 y 23.200 de 36.100. Es la primera estimación con incertidumbre de cuánto se perdió del registro, y la caída de 1940 es coherente con una represión de posguerra registrada en parte bajo otras causas.
+3. **Las provincias con poca violencia mejoran.** En 1936–46 el estimador directo da negativo en 62 provincia-años (25 provincias); el modelo, nunca. En Canarias da 80–100 muertes violentas en 1936–39 (registradas 48 y 83), donde el directo daba −160 y −400. En Lugo da 590 (registradas 375), donde el directo daba 1.590.
+4. **1940–42 sube un poco: 102.700 frente a 95.000.** Es sobre todo 1942 (17.700 frente a 13.800), porque el modelo no puede dar valores negativos y el directo sí. Sigue siendo un techo: el problema del hambre que mata más hombres afecta a los dos métodos por igual.
+5. **1943–46 da 54.900 frente a 40.100,** por la misma razón y porque la razón de sexos no violenta de cada provincia queda donde la dejó la guerra. Es la cifra más incierta de la tabla.
+6. **Con la tendencia nacional de preguerra de la razón de sexos,** en vez de su promedio, todo sube 3.000–5.000 por periodo, y el modelo ajusta peor (log-verosimilitud 564 frente a 587). Por eso la principal es sin tendencia.
+7. **Los intervalos son demasiado estrechos** (±1,5 %). No incluyen la incertidumbre de los parámetros ni los sesgos de estructura, y la validación internacional mostró que los intervalos de este modelo cubren de menos fuera de los años con datos. Para la incertidumbre hay que seguir usando el ±7 % estadístico del script 84 y el rango razonable de la conclusión.
+
 ## 5. Prueba ciega del método donde se conoce la causa
 
 Apliqué el estimador igual que en España: periodo base para ρ y la tendencia, π = 0,95 y solo el sexo de los muertos. Luego lo comparé con las muertes violentas observadas por encima de la proporción del periodo base.
@@ -190,7 +225,7 @@ Apliqué el estimador igual que en España: periodo base para ρ y la tendencia,
 1. **Separar hambre de represión oculta en 1940–42.** Es lo único que queda abierto. Dos vías:
    - **Edades 15–44 por provincia.** El lector de dígitos verifica sin ayuda el 58–92 % de las columnas, según el año. El hambre mata sobre todo a niños y viejos, y la represión a hombres de 20–50. Con la cautela que deja Colombia: hay que revisar que la razón de sexos de 15–44 no se mueva por otras causas.
    - **Las causas detalladas de 1940** (enfermedades por sexo) y la mortalidad en prisiones documentada en la literatura.
-2. **Modelo de espacio de estados en su versión logit (CoDA) con las causas registradas como anclas.** Ya es posible con los datos del punto 4, y estimaría la deriva de la razón de sexos no violenta en vez de suponerla fija.
+2. ~~Modelo de espacio de estados con las causas registradas como anclas.~~ Hecho en el script 87 (sección 4). Faltaría agregar al modelo las causas de 1933–35 y 1943–46, para que el ancla antes y después de la guerra sea un dato y no un supuesto. La sesión de datos de España puede transcribirlas.
 3. **Bombardeos:** ya incorporados en el script 85 con el registro y las cifras publicadas. Faltaría la tabla por provincia y año de *España en llamas* (Solé i Sabaté y Villarroya, 2003), que no está en línea, y una cifra para el camino de Málaga a Almería (1937, 3.000–5.000 muertos según la fuente).
 4. **Desplazados y refugiados por provincia, y exilio de 1939.** Hoy inflan el exceso no violento de las provincias que reciben gente (Jaén, Almería, Murcia, Alicante) y lo bajan en las de origen.
 5. **Año de defunción frente a año de registro:** estimar las inscripciones tardías (1939–41, 1943–44) para comparar con Salas en la misma base.
@@ -221,7 +256,7 @@ En esos casos el error puede ser de varias veces el valor real.
 **Qué tan lejos podemos estar en España:**
 
 - **π:** las causas registradas confirman π = 0,95 (registrado: 0,93–0,97). Tomar del registro las mujeres víctimas en cada provincia, para contar bien los bombardeos y asedios, sube el total solo un 1,7 %, pero corrige Oviedo (+15 %), Barcelona (+9 %) y Madrid (+5 %).
-- **1936–39:** se parece a los casos donde funciona, y las causas registradas lo confirman. Las ~193.000 muertes violentas estimadas superan en 22 % a las 158.700 registradas como violentas, y coinciden con ellas provincia por provincia (correlación 0,94). Ese 22 % es lo esperable por violencia nunca registrada como tal. También coinciden con Salas (194.700 en la suma comparable). El error estadístico es de solo ±7 % (183.000–210.000). Sumando el error de estructura que muestra la prueba ciega, el rango razonable es **160.000–240.000**: el piso es lo registrado como violento y el techo, el error de la prueba ciega.
+- **1936–39:** se parece a los casos donde funciona, y las causas registradas lo confirman. Las ~193.000 muertes violentas estimadas superan en 22 % a las 158.700 registradas como violentas, y coinciden con ellas provincia por provincia (correlación 0,94). Ese 22 % es lo esperable por violencia nunca registrada como tal. También coinciden con Salas (194.700 en la suma comparable). El modelo de estados ocultos, con otros supuestos, da lo mismo: 194.000, y estima que el registro contiene cerca del 80 % de la violencia. El error estadístico es de solo ±7 % (183.000–210.000). Sumando el error de estructura que muestra la prueba ciega, el rango razonable es **160.000–240.000**: el piso es lo registrado como violento y el techo, el error de la prueba ciega.
 - **1940–42:** las ~95.000 de H son un **techo**. Lo registrado como violento da entre 28.000 y 64.000. Las restantes 31.000–67.000 muertes de hombres de más son hambre que el método cuenta como violencia, o represión registrada bajo otras causas (muertes en prisión). Con estos datos no se pueden separar. Por analogía con el COVID, el sesgo por hambre podría explicar entre 40.000 y 65.000. Los dos caminos llevan a una violencia directa de **30.000–65.000** en esos años.
 - **El total del exceso,** violento más no violento, no depende de este supuesto. Es sólido: ~590.000 en 1936–42.
 
