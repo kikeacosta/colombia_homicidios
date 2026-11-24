@@ -4,17 +4,21 @@
 
 Registro completo: `documents/inventory/fuentes.csv` (fuentes) y `documents/inventory/archivos.csv` (archivos, con uso y script);
 `output/tables/data_catalog_files.csv` trae el sha256 y el estado en git. Los PDF están en `dane_pdfs/`, no se versionan y se bajan de
-`https://biblioteca.dane.gov.co/media/libros/<nombre>.PDF`.
+`https://biblioteca.dane.gov.co/media/libros/<nombre>.PDF`. Desde el 2026-11-24 `dane_pdfs/` guarda solo los PDF de los que salen
+datos extraídos (19); la colección completa (952 PDF, entre ellos los anuarios 1915-1931 de las series `col_gap_analysis_*`) está en
+el proyecto `dane_biblioteca`, en `D:\data\colombia\dane_pdfs` y en las releases de su repositorio en GitHub.
 
 | Carpeta o archivo | Qué es | Fuente y PDF de origen |
 |---|---|---|
 | `micro/` | defunciones no fetales 1979-2023, un archivo por año | DANE, Estadísticas Vitales (microdatos.dane.gov.co); diccionarios en `documents/metadata/` |
 | `DANEpop/` | población municipal por área, sexo y edad simple 1985-2042 | DANE, proyecciones (xlsx) |
 | `lifetables/tablas_utf8.txt`, `reference/dane_lifetables_nmx_1985_2020.csv` | tablas abreviadas nacionales y departamentales 1985-2020 | `dane_pdfs/estudios/estudios_postcensales_08.pdf` |
-| `historical/col_gap_analysis_1920_1985_*.csv` | muertes, homicidios y población 1905-1985 (nacional, departamental, municipal) | transcripciones de los anuarios `dane_pdfs/anuarios/LD_70104_*` y `LD_70106_1968_1969` y de boletines `BOL_*` (varios no descargados) |
+| `historical/col_gap_analysis_1920_1985_*.csv` | muertes, homicidios y población 1905-1985 (nacional, departamental, municipal) | transcripciones de los anuarios `LD_70104_*` (1915-1931, en la colección `dane_biblioteca`, no aquí) y `LD_70106_1968_1969` y de boletines `BOL_*` |
 | `historical/dane_vitales_1958_1960_*.csv` | población y estadística vital departamental y municipal 1958-1960 | `dane_pdfs/vitales/LD_558_1958_1960_EJ_2.pdf` |
 | `historical/dane_defunciones_1968_1969_*.csv` | defunciones por sexo y edad, 31 secciones | `dane_pdfs/anuarios/LD_70106_1968_1969_EJ_3.pdf` |
 | `historical/dane_defunciones_1970_1978_*.csv` | cuadros 1, 2, 3, 6, 10 y 11 | `dane_pdfs/vitales/LD_8789_1970_1978_EJ_3.pdf` |
+| `historical/dane_defunciones_1965_1967_*` | defunciones por sección del país, sexo y edad 1965-1967 | `dane_pdfs/anuarios/LD_70104_1965_EJ_3.pdf` y `LD_70104_1966_1967_EJ_3.pdf`; script `code/historical/33` |
+| `historical/dane_causas_violentas_*` | defunciones por causas violentas, sexo y sección 1951-1957 | `dane_pdfs/anuarios/LD_70104_1951_1952_EJ_2.pdf` a `LD_70104_1957_EJ_2.pdf`; script `code/historical/32` |
 | `historical/census_tables/` | tablas de los censos 1938, 1951, 1964 y 1973 | `dane_pdfs/censos/1938/LD_771_1938_V_1.pdf`, `1951/LD_771_1951.pdf`, `1964/LD_771_1964.pdf`, `1973/LB_771_1973.pdf`; muestra de 1973: `1973/LD_1007_1973_EJ_4.pdf` |
 | `historical/dane_conciliacion_1985_2005_*.csv` | tablas de vida 1985, 1993, 2005 y quinquenales, e0, mortalidad infantil, factores de ajuste y omisión de defunciones | `dane_pdfs/censos/5Mortalidad85_05.pdf` (cuadros 3.3, 3.13, 3.14 y anexos 1 a 4; scripts `code/historical/31a-d`) |
 | `historical/lambda_Col_*.txt` | defunciones, población y tablas de vida | LAMBdA (documentación en `reference/LAMBdA_documentation.pdf`) |
@@ -30,25 +34,24 @@ Registro completo: `documents/inventory/fuentes.csv` (fuentes) y `documents/inve
 | `conflict/`, `ucdp/` | homicidios del conflicto 1985-2018; eventos georreferenciados | JEP-CEV-HRDAG; UCDP GED 25.1 |
 | `reference/DIVIPOLA-*.csv` | códigos de municipios | DANE, DIVIPOLA |
 
-Los PDF sin extraer están en la tabla siguiente.
-
 ### PDF de `dane_pdfs/` y qué se sacó de cada uno
+
+Solo están los PDF de los que salen datos del proyecto. Los demás (sin extraer, o fuente de las series
+`col_gap_analysis_*`) se sacaron el 2026-11-24 y siguen en la colección `dane_biblioteca`.
 
 | PDF | Contenido | Extraído a |
 |---|---|---|
 | `censos/1938/LD_771_1938_V_1.pdf`, `1951/LD_771_1951.pdf`, `1964/LD_771_1964.pdf`, `1973/LB_771_1973.pdf` | resúmenes de los censos | `historical/census_tables/` |
 | `censos/1973/LD_1007_1973_EJ_4.pdf` | muestra de avance del censo de 1973 | `historical/census_tables/census_1973_muestra_*.csv` |
-| `censos/1938/LB_800_1938.pdf`, `1951/LB_811_1951_V_1.pdf`, `1951/LB_771_1951_V_2.pdf`, `1964/LB_771_1964_V_2.pdf`, `1964/LB_1006_1964.pdf` | tomos departamentales, viviendas y población municipal 1964 y 1968 | sin extraer |
 | `censos/5Mortalidad85_05.pdf` | conciliación censal, mortalidad 1985-2005 | `historical/dane_conciliacion_1985_2005_*.csv` |
 | `vitales/LD_558_1958_1960_EJ_2.pdf` | estadística vital 1958-1960 | `historical/dane_vitales_1958_1960_*.csv` |
 | `vitales/LD_8789_1970_1978_EJ_3.pdf` | registro de defunciones 1970-1978 | `historical/dane_defunciones_1970_1978_*.csv` |
+| `anuarios/LD_70104_1951_1952_EJ_2.pdf`, `1953_EJ_2`, `1954_EJ_2`, `1955_EJ_2`, `1957_EJ_2` | anuarios generales de estadística | `historical/dane_causas_violentas_dept_1951_1964.csv` |
+| `anuarios/LD_70104_1965_EJ_3.pdf`, `LD_70104_1966_1967_EJ_3.pdf` | anuarios generales de estadística | `historical/dane_defunciones_1965_1967_secciones_sexo_edad.csv` |
 | `anuarios/LD_70106_1968_1969_EJ_3.pdf` | anuario demográfico 1968-1969 | `historical/dane_defunciones_1968_1969_*.csv` |
-| `anuarios/LD_70104_*.pdf` (1915 a 1931) | anuarios estadísticos | citados por las transcripciones `col_gap_analysis_*`; sin reextraer |
 | `boletines/BOL_314_1977-141.pdf` | boletín 314, migración interdepartamental | `migration/dane_internal/bol314_*.csv` |
 | `estudios/estudios_postcensales_07.pdf` | estudios postcensales n.º 7 | `migration/dane_internal/epc07_*.csv` |
 | `estudios/estudios_postcensales_08.pdf` | tablas de mortalidad 1985-2020 | `lifetables/tablas_utf8.txt` |
-| `vitales/LD_8757_1973_1984_EJ_3.pdf`, `LB_10353_1985_1993.pdf`, `LB_10525_1992-1996.pdf`, `LD_10335_EJ_5.pdf` | nacimientos, mortalidad infantil departamental, mortalidad materna y metodología | sin extraer |
-| `estudios/LD_773_1971_1974_V_2_EJ_4.pdf`, `LD_1013_1965_1972_EJ_4.pdf`, `LD_70375_EJ_5.pdf`, `LD_8713_1973_1981_EJ_5.pdf`; `anuarios/LD_70032_1962.pdf`; demás `boletines/BOL_*` | CIMED-ERED, polos de desarrollo, atlas, viajeros, Cúcuta, boletines mensuales | sin extraer |
 
 ## Detalle (inglés)
 
@@ -258,17 +261,19 @@ Policía Nacional homicide series 1962-2002 (xlsx). See
 
 ## dane_pdfs/ (DANE library scans, not versioned)
 
-All DANE PDFs live under `data_input/dane_pdfs/` (49 PDFs plus 6 projection xlsx in `censos/`), grouped by series.
-Catalogues: `documents/catalogo_dane_pdfs.md` (mortality) and
-`documents/catalogo_migracion_interdepartamental.md` (migration).
+`data_input/dane_pdfs/` holds only the DANE PDFs that project data are extracted from (19 PDFs, plus 6
+projection xlsx in `censos/`), grouped by series. The other PDFs were removed on 2026-11-24; the full
+collection (952 PDFs) is kept by the `dane_biblioteca` project (`D:/data/colombia/dane_pdfs` and the
+GitHub releases of that repository). Catalogues: `documents/catalogo_dane_pdfs.md` (mortality) and
+`documents/catalogo_migracion_interdepartamental.md` (migration) describe the earlier, larger set.
 
 | folder | contents |
 |---|---|
-| `censos/1938/`, `1951/`, `1964/`, `1973/` | census summaries and volumes (`LD_771_*`, `LB_800_1938`, `LB_811_1951_V_1` Huila volume, `LB_771_*_V_2` housing, `LB_1006_1964` municipal population, `LD_1007_1973_EJ_4` muestra de avance) |
-| `anuarios/` | *Anuario Estadístico* 1915-1931 (`LD_70104_*`), *Anuario demográfico* 1968-1969 (`LD_70106`), Cúcuta 1962 (`LD_70032`) |
-| `vitales/` | vital statistics: deaths 1958-1960 and 1970-1978, births 1973-1984, methodology, maternal and infant mortality |
-| `boletines/` | *Boletín (Mensual) de Estadística* issues (`BOL_*`) |
-| `estudios/` | postcensal studies (`estudios_postcensales_07`, `_08`), CIMED-ERED, international travellers, 30-city monograph, sociodemographic atlas |
+| `censos/1938/`, `1951/`, `1964/`, `1973/` | census summaries (`LD_771_*`, `LB_771_1973`) and the 1973 muestra de avance (`LD_1007_1973_EJ_4`); `5Mortalidad85_05` (1985-2005 reconciliation) |
+| `anuarios/` | *Anuario General de Estadística* 1951-1957 and 1965-1967 (`LD_70104_*`), *Anuario demográfico* 1968-1969 (`LD_70106`) |
+| `vitales/` | vital statistics: deaths 1958-1960 and 1970-1978 |
+| `boletines/` | *Boletín Mensual de Estadística* 314 (interdepartmental migration) |
+| `estudios/` | postcensal studies 7 (migration) and 8 (life tables) |
 
 `reference/LAMBdA_documentation.pdf` is not a DANE publication and was moved to `reference/`.
 Scripts read PDFs from these paths (`code/historical/23`-`30`); the three PDFs that used to be
