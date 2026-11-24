@@ -1,0 +1,10 @@
+check,n,n_failing,note
+celdas vacias o negativas (nacional),65246,0,
+celdas vacias o negativas (departamental),1253208,0,
+suma por edades = total impreso de hombres y mujeres,6527,0,
+"cabecera + resto = total (por unidad, ano, sexo y edad)",464398,0,
+"suma de departamentos = nacional (ano, sexo, edad)",13332,0,diferencia maxima 0
+anos nacionales 1950-2070 completos,121,0,
+anos departamentales 1985-2050 completos,66,0,
+33 unidades departamentales por ano,66,0,
+crecimiento anual del total nacional entre -1% y 3%,120,0,empalmes 2017-2018: 1.77 %

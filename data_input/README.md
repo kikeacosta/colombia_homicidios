@@ -23,7 +23,7 @@ el proyecto `dane_biblioteca`, en `D:\data\colombia\dane_pdfs` y en las releases
 | `historical/dane_conciliacion_1985_2005_*.csv` | tablas de vida 1985, 1993, 2005 y quinquenales, e0, mortalidad infantil, factores de ajuste y omisión de defunciones | `dane_pdfs/censos/5Mortalidad85_05.pdf` (cuadros 3.3, 3.13, 3.14 y anexos 1 a 4; scripts `code/historical/31a-d`) |
 | `historical/lambda_Col_*.txt` | defunciones, población y tablas de vida | LAMBdA (documentación en `reference/LAMBdA_documentation.pdf`) |
 | `historical/Homicidio 1962-2002 por depto de Policía_v1.xlsx` | homicidios por departamento de Policía | Policía Nacional |
-| `dane_pdfs/censos/*.xlsx` | proyecciones DANE nacionales 1950-2070 y departamentales 1985-2050 | DANE, proyecciones; catalogadas, sin extraer |
+| `reference/dane_proyecciones_*` | población por área, sexo y edad simple: nacional 1950-2070 y departamental 1985-2050 | DANE, proyecciones (base censo 2018); extraídas de `dane_pdfs/censos/*.xlsx` con `code/historical/34` |
 | `reference/who*`, `who_mdb/` | homicidios y causas por edad y sexo 1953-1977 | OMS, Mortality Database |
 | `reference/wpp2024_*`, `251208_MortalityCrises.zip` | población, fecundidad, tablas de vida y mortalidad por crisis | Naciones Unidas, WPP 2024 |
 | `reference/unigme2024_*`, `nrc1982_*`, `trussell_*`, `coale_demeny_*`, `romero_meisel_2019_*` | mortalidad en la niñez, tablas de vida de 1982, modelos y muertes violentas 1945-1969 | UN IGME 2024; National Research Council 1982; Manual X (paquete `u5mr`); Romero-Prieto y Meisel-Roca 2019 |
