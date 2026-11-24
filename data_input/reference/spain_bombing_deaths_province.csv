@@ -1,0 +1,20 @@
+province,deaths,deaths_low,deaths_high,share_women,places,includes_artillery,sources,note
+Barcelona,2800,2500,3900,,"Barcelona city 2500, Granollers 224, Badalona 65, Manresa 35",yes,"Villarroya (interview); Solé i Sabaté and Villarroya 2003 via Wikipedia ES; Granollers municipal archive; Enciclopèdia.cat; memoria.cat","low: city only; high: Catalonia 5000-5500 minus the other three provinces"
+Madrid,2000,1491,,,"Madrid city (siege, mostly artillery), Getafe 60",yes,"Solé i Sabaté and Villarroya 2003 via Wikipedia ES; official count Nov 1936-Apr 1937 via Wikipedia ES","low: official count for Nov 1936-Apr 1937 only"
+Tarragona,1135,303,,,"ten comarques; Tarragona city 230-303",unknown,"Tarragona municipal archive (press, 2014); Arnabat and Íñiguez; González Huix via Enciclopèdia.cat","low: city only"
+Valencia,825,825,1000,,"Valencia city",yes,"Montaner, Levante-EMV; Consell Valencià de Cultura (925); Solé i Sabaté and Villarroya 2003 via Wikipedia ES (1000)","city only"
+Vizcaya,610,560,,,"Gernika 300 (250-300), Durango 250, Ochandiano 60",no,"Solé i Sabaté and Villarroya 2003 via Wikipedia ES and EN","named raids only, not the bombing of Bilbao"
+Alicante,490,460,500,0.34,"Alicante city (Mercado 25 May 1938: 275-393)",unknown,"Enciclopèdia.cat; plaque at the Mercado; Solé i Sabaté and Villarroya 2003 via Wikipedia ES","share of women: Mercado raid, identified victims only (Wikipedia EN)"
+Lérida,300,210,,,"Lleida 2 Nov 1937 (210 named), Les Garrigues 91",no,"Barallat via Enciclopèdia.cat; Dialnet article","named raids only"
+Teruel,210,200,1000,,"Alcañiz March 1938",no,"press (Público, eldiario.es)",
+Gerona,200,200,,,"Figueres",no,"Enciclopèdia.cat","one town only"
+Castellón de la Plana,160,160,,,"Castellón city",yes,"Ayuntamiento de Castelló, shelter guide",
+Jaén,159,159,,,"Jaén 1 Apr 1937",no,"Cuevas Mata 2017; Julià et al. 2006",
+Córdoba,109,73,109,,"Cabra 7 Nov 1938 (Nationalist zone)",no,"El Debate; Wikipedia EN",
+Santander,75,70,75,,"Santander 27 Dec 1936",no,"Wikipedia ES",
+Murcia,65,65,,,"Cartagena 1936",yes,"Solé i Sabaté and Villarroya 2003 via Wikipedia ES","1936 only"
+Baleares,56,56,,,"Mallorca 9, Menorca 29, Ibiza 18",no,"Wikipedia ES",
+Oviedo,50,50,,,"Gijón 14 Aug 1936",no,"Wikipedia ES","one raid only; the sieges of Oviedo and Gijón are not counted"
+Almería,34,34,46,,"German naval bombardment 31 May 1937 (19-31), January 1937 (15)",yes,"Wikipedia ES and EN",
+Granada,26,26,,,"Granada July-August 1936",no,"Wikipedia ES",
+Coruña (La),9,9,,,"Ferrol 1936",no,"Wikipedia ES",

@@ -1,12 +1,13 @@
 # España 1936–1946: muertes violentas y no violentas estimadas con la razón de sexos, y prueba ciega del método
 
-*24 de noviembre de 2026 · scripts `code/80` a `84` (`intl_*`)*
+*24 de noviembre de 2026 · scripts `code/80` a `85` (`intl_*`)*
 
 ## Resumen
 
 - Con solo las muertes registradas por provincia, sexo y año (INE, 1926–1946), el exceso de muertes de 1936–1942 suma **unas 590.000**. De ellas, **unas 290.000 son violentas** (exceso de muertes de hombres) y **unas 300.000 no violentas** (hambre, enfermedad, refugiados).
 - Las cifras coinciden con la literatura: el exceso total con Salas, Díez Nicolás y Ortega y Silvestre, y la violencia registrada por provincia con Salas (correlación 0,93–0,94).
 - Las causas de muerte registradas por el INE en 1936–42 confirman el supuesto clave: los hombres son el 93–97 % de las víctimas, frente a π = 0,95. En 1936–39 la estimación supera a la violencia registrada como tal en un 22 % y coincide con ella provincia por provincia (correlación 0,94). En 1940–42 solo entre un tercio y dos tercios del exceso de hombres figura como violento.
+- Los bombardeos matan a hombres y mujeres por igual, y con π = 0,95 el método cuenta solo una quinta parte de cada víctima. Si se toman de las causas registradas las mujeres muertas violentamente, en vez de suponer π, el total nacional de 1936–39 casi no cambia (+1,7 %). Barcelona sube un 9 %, Oviedo un 15 % y Madrid un 5 %.
 - En una prueba ciega en cinco países con causa de muerte conocida, el método acierta cuando la violencia sube de golpe a pocos años de la base. Falla cuando la mortalidad no violenta cambia su composición por sexo, como con el COVID o con el envejecimiento a lo largo de muchos años. Por eso 1936–39 es más confiable que 1940–42.
 
 ## 1. España: datos y método
@@ -109,6 +110,42 @@ Transcribí del INE, por provincia y sexo, las causas violentas registradas en c
      - la represión registrada bajo otras causas, como las muertes en prisión por hambre o enfermedad.
    - Las causas mal definidas subieron en 1941 en ambos sexos por igual (hombres 7.300 → 10.600, mujeres 5.100 → 7.000), así que no muestran una violencia masculina escondida en ese rubro.
 
+### Bombardeos y mujeres víctimas (script 85)
+
+**El problema.** π = 0,95 supone que en todas las provincias el 95 % de las víctimas son hombres. Un bombardeo mata a hombres y mujeres casi por igual, así que eleva poco el exceso de hombres. Con π = 0,95, H cuenta en promedio **0,19 de cada muerto por bombardeo**. El resto queda en el exceso "no violento".
+
+**Lo que muestra el registro.** No hay una rúbrica de bombardeo, pero las víctimas parecen estar en "ejecución en la población civil por los ejércitos beligerantes" y en "heridas de guerra":
+- En Barcelona 1938, el año de los bombardeos de marzo, esa rúbrica registra 1.301 hombres y **848 mujeres (39 %)**.
+- En Oviedo, por el asedio, las mujeres son el 13 % de las víctimas registradas en 1936–39. En Barcelona, el 12 %. En Lérida o Vizcaya, menos del 2 %.
+
+**La corrección.** En vez de suponer π, tomo del registro las mujeres muertas violentamente (Vf) en cada provincia y año:
+- Como las muertes de hombres son ρ·(mujeres que habrían muerto igual) + hombres víctimas, se despeja H = (hombres − ρ·mujeres) + (1 + ρ)·Vf. No necesita π.
+- Para no perder a mujeres víctimas registradas bajo otra causa, Vf es al menos el 3 % de las víctimas, el mínimo que se observa en el registro.
+- Uso también las cifras publicadas de muertos por bombardeo por provincia (Solé i Sabaté y Villarroya y otros, `data_input/reference/spain_bombing_deaths_province.csv`). Suman unas 9.300, frente a los ~10.000 que da la literatura para toda España. Si las mujeres muertas en bombardeos (el 40 % de esos muertos) superan a las mujeres registradas como víctimas violentas en la provincia, agrego la diferencia.
+
+| | π = 0,95 | Mujeres del registro | + mínimo 3 % | + bombardeos publicados |
+|---|---|---|---|---|
+| España 1936–39 | 193.500 | 192.400 | 195.500 | **196.800** (+1,7 %) |
+
+| Provincia | π = 0,95 | Corregida | Cambio | Mujeres entre las víctimas registradas | Muertos por bombardeo (publicados) |
+|---|---|---|---|---|---|
+| Oviedo | 13.950 | 16.000 | +15 % | 13 % | 50 (sin el asedio) |
+| Barcelona | 12.970 | 14.180 | +9 % | 12 % | 2.800 |
+| Badajoz | 6.250 | 6.830 | +9 % | 9 % | — |
+| Madrid | 22.990 | 24.110 | +5 % | 6 % | 2.000 |
+| Alicante | 2.800 | 2.910 | +4 % | 10 % | 490 |
+| Tarragona | 7.600 | 7.790 | +2,5 % | 4 % | 1.135 |
+| Vizcaya | 6.230 | 6.370 | +2 % | 2 % | 610 |
+| Zaragoza | 11.800 | 11.450 | −3 % | 4 % | — |
+
+![Bombardeos y mujeres víctimas](../figures/09_international/spain_bombing.png)
+
+**Lo que muestra:**
+1. **En el total nacional los bombardeos casi no pesan.** Fueron ~10.000 de ~195.000 muertes violentas, y el registro ya contiene a la mayoría de las mujeres que mataron. La corrección sube H un 1,7 %.
+2. **En algunas provincias sí pesan.** Oviedo (asedio), Barcelona (bombardeos), Badajoz (probablemente la matanza de agosto de 1936, que alcanzó también a mujeres) y Madrid (asedio) suben entre 5 % y 15 %. Las provincias donde casi no murieron mujeres bajan un 3–5 %, porque allí π era más alto que 0,95.
+3. **El registro contiene a las víctimas de los grandes bombardeos.** En Barcelona y Madrid las mujeres registradas como víctimas violentas superan a las que implican las cifras publicadas. En Tarragona, Valencia, Vizcaya y Lérida faltan: el registro de esas provincias tiene menos mujeres víctimas que las que mataron los bombardeos, y ahí la corrección agrega la diferencia.
+4. **Las cifras publicadas son débiles.** Salen de sumar ciudades, casi todas de segunda mano. La obra de referencia (*España en llamas*, 2003) no está en línea. Para la corrección pesan poco, porque se usan solo donde el registro tiene menos mujeres que ellas.
+
 ## 5. Prueba ciega del método donde se conoce la causa
 
 Apliqué el estimador igual que en España: periodo base para ρ y la tendencia, π = 0,95 y solo el sexo de los muertos. Luego lo comparé con las muertes violentas observadas por encima de la proporción del periodo base.
@@ -154,7 +191,7 @@ Apliqué el estimador igual que en España: periodo base para ρ y la tendencia,
    - **Edades 15–44 por provincia.** El lector de dígitos verifica sin ayuda el 58–92 % de las columnas, según el año. El hambre mata sobre todo a niños y viejos, y la represión a hombres de 20–50. Con la cautela que deja Colombia: hay que revisar que la razón de sexos de 15–44 no se mueva por otras causas.
    - **Las causas detalladas de 1940** (enfermedades por sexo) y la mortalidad en prisiones documentada en la literatura.
 2. **Modelo de espacio de estados en su versión logit (CoDA) con las causas registradas como anclas.** Ya es posible con los datos del punto 4, y estimaría la deriva de la razón de sexos no violenta en vez de suponerla fija.
-3. **Bombardeos:** cifras publicadas de muertos por provincia y año (por ejemplo, Solé i Sabaté y Villarroya para Cataluña). Matan a ambos sexos, así que hoy quedan en el exceso no violento; con esas cifras se podrían pasar a la parte violenta.
+3. **Bombardeos:** ya incorporados en el script 85 con el registro y las cifras publicadas. Faltaría la tabla por provincia y año de *España en llamas* (Solé i Sabaté y Villarroya, 2003), que no está en línea, y una cifra para el camino de Málaga a Almería (1937, 3.000–5.000 muertos según la fuente).
 4. **Desplazados y refugiados por provincia, y exilio de 1939.** Hoy inflan el exceso no violento de las provincias que reciben gente (Jaén, Almería, Murcia, Alicante) y lo bajan en las de origen.
 5. **Año de defunción frente a año de registro:** estimar las inscripciones tardías (1939–41, 1943–44) para comparar con Salas en la misma base.
 6. **Búsqueda bibliográfica** sobre si este estimador ya se propuso: demografía de conflictos, demografía histórica y métodos con la razón de sexos.
@@ -183,7 +220,7 @@ En esos casos el error puede ser de varias veces el valor real.
 
 **Qué tan lejos podemos estar en España:**
 
-- **π:** las causas registradas confirman π = 0,95 (registrado: 0,93–0,97).
+- **π:** las causas registradas confirman π = 0,95 (registrado: 0,93–0,97). Tomar del registro las mujeres víctimas en cada provincia, para contar bien los bombardeos y asedios, sube el total solo un 1,7 %, pero corrige Oviedo (+15 %), Barcelona (+9 %) y Madrid (+5 %).
 - **1936–39:** se parece a los casos donde funciona, y las causas registradas lo confirman. Las ~193.000 muertes violentas estimadas superan en 22 % a las 158.700 registradas como violentas, y coinciden con ellas provincia por provincia (correlación 0,94). Ese 22 % es lo esperable por violencia nunca registrada como tal. También coinciden con Salas (194.700 en la suma comparable). El error estadístico es de solo ±7 % (183.000–210.000). Sumando el error de estructura que muestra la prueba ciega, el rango razonable es **160.000–240.000**: el piso es lo registrado como violento y el techo, el error de la prueba ciega.
 - **1940–42:** las ~95.000 de H son un **techo**. Lo registrado como violento da entre 28.000 y 64.000. Las restantes 31.000–67.000 muertes de hombres de más son hambre que el método cuenta como violencia, o represión registrada bajo otras causas (muertes en prisión). Con estos datos no se pueden separar. Por analogía con el COVID, el sesgo por hambre podría explicar entre 40.000 y 65.000. Los dos caminos llevan a una violencia directa de **30.000–65.000** en esos años.
 - **El total del exceso,** violento más no violento, no depende de este supuesto. Es sólido: ~590.000 en 1936–42.
