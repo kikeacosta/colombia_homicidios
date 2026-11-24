@@ -1,0 +1,161 @@
+country,ages,test,family,model,median_abs_error_pct_unit_total
+brazil,all,interior,state-space,N: nothing in the block,9.62362528734191
+brazil,all,interior,state-space,S: sex ratio,7.287793612581577
+brazil,all,backcast,state-space,N: nothing in the block,20.066336134659856
+brazil,all,backcast,state-space,S: sex ratio,31.735915342071408
+brazil,all,interior,state-space,ST: sex ratio + national total,5.810863508267151
+brazil,all,backcast,state-space,ST: sex ratio + national total,23.34208618959447
+brazil,all,interior,simple,B0: national total,25.35942747855912
+brazil,all,interior,simple,B1: sex ratio + national total,12.795329861942387
+brazil,all,backcast,simple,B0: national total,33.19111041613576
+brazil,all,backcast,simple,B1: sex ratio + national total,20.246817616531775
+brazil,15-44,interior,state-space,N: nothing in the block,7.799613612778203
+brazil,15-44,interior,state-space,S: sex ratio,4.611518748297877
+brazil,15-44,backcast,state-space,N: nothing in the block,12.664662377989156
+brazil,15-44,backcast,state-space,S: sex ratio,6.073471561068644
+brazil,15-44,interior,state-space,ST: sex ratio + national total,4.370844317304695
+brazil,15-44,backcast,state-space,ST: sex ratio + national total,8.962941311554395
+brazil,15-44,interior,simple,B0: national total,17.356340760856224
+brazil,15-44,interior,simple,B1: sex ratio + national total,9.64970295608329
+brazil,15-44,backcast,simple,B0: national total,22.386680125124634
+brazil,15-44,backcast,simple,B1: sex ratio + national total,10.2260397354333
+mexico,all,interior,state-space,N: nothing in the block,13.89951537267383
+mexico,all,interior,state-space,S: sex ratio,11.315425646005027
+mexico,all,backcast,state-space,N: nothing in the block,26.067040952601506
+mexico,all,backcast,state-space,S: sex ratio,22.46227558916899
+mexico,all,interior,state-space,ST: sex ratio + national total,9.306800561132507
+mexico,all,backcast,state-space,ST: sex ratio + national total,22.786645587748243
+mexico,all,interior,simple,B0: national total,25.41905593597497
+mexico,all,interior,simple,B1: sex ratio + national total,14.478226979059626
+mexico,all,backcast,simple,B0: national total,30.70712267182384
+mexico,all,backcast,simple,B1: sex ratio + national total,29.711533720163235
+mexico,15-44,interior,state-space,N: nothing in the block,10.906503584477896
+mexico,15-44,interior,state-space,S: sex ratio,8.563870523376247
+mexico,15-44,backcast,state-space,N: nothing in the block,21.801896757256383
+mexico,15-44,backcast,state-space,S: sex ratio,23.066470608111022
+mexico,15-44,interior,state-space,ST: sex ratio + national total,8.3775255646484
+mexico,15-44,backcast,state-space,ST: sex ratio + national total,22.22221612731692
+mexico,15-44,interior,simple,B0: national total,19.462113792387225
+mexico,15-44,interior,simple,B1: sex ratio + national total,12.606787406541734
+mexico,15-44,backcast,simple,B0: national total,24.57436015707109
+mexico,15-44,backcast,simple,B1: sex ratio + national total,16.472776928225695
+us,all,interior,state-space,N: nothing in the block,5.564832226917108
+us,all,interior,state-space,S: sex ratio,5.780875877050682
+us,all,backcast,state-space,N: nothing in the block,10.228453554113075
+us,all,backcast,state-space,S: sex ratio,11.05521407014043
+us,all,interior,state-space,ST: sex ratio + national total,5.175565717236835
+us,all,backcast,state-space,ST: sex ratio + national total,11.90687211047946
+us,all,interior,simple,B0: national total,10.286866183183157
+us,all,interior,simple,B1: sex ratio + national total,8.38151754592919
+us,all,backcast,simple,B0: national total,16.01851955258543
+us,all,backcast,simple,B1: sex ratio + national total,14.163697974443187
+us,15-44,interior,state-space,N: nothing in the block,6.300232468897802
+us,15-44,interior,state-space,S: sex ratio,6.0835958269000034
+us,15-44,backcast,state-space,N: nothing in the block,10.1246853592605
+us,15-44,backcast,state-space,S: sex ratio,15.883154479836797
+us,15-44,interior,state-space,ST: sex ratio + national total,5.431984152777761
+us,15-44,backcast,state-space,ST: sex ratio + national total,13.469363699938736
+us,15-44,interior,simple,B0: national total,9.922139805506998
+us,15-44,interior,simple,B1: sex ratio + national total,9.622726251455536
+us,15-44,backcast,simple,B0: national total,9.685847601230025
+us,15-44,backcast,simple,B1: sex ratio + national total,12.00174013999896
+ecuador,all,interior,state-space,N: nothing in the block,15.155031644012524
+ecuador,all,interior,state-space,S: sex ratio,14.363275580886265
+ecuador,all,backcast,state-space,N: nothing in the block,14.538121396713466
+ecuador,all,backcast,state-space,S: sex ratio,38.322265143278436
+ecuador,all,forward,state-space,N: nothing in the block,52.35014283491217
+ecuador,all,forward,state-space,S: sex ratio,42.991843625038726
+ecuador,all,interior,state-space,ST: sex ratio + national total,10.090738528495763
+ecuador,all,backcast,state-space,ST: sex ratio + national total,23.78647588760949
+ecuador,all,forward,state-space,ST: sex ratio + national total,21.715191083657604
+ecuador,all,interior,simple,B0: national total,13.708321683736553
+ecuador,all,interior,simple,B1: sex ratio + national total,10.464936942707709
+ecuador,all,backcast,simple,B0: national total,16.618030198060406
+ecuador,all,backcast,simple,B1: sex ratio + national total,17.89699686041024
+ecuador,all,forward,simple,B0: national total,66.58478481757157
+ecuador,all,forward,simple,B1: sex ratio + national total,58.19199853091397
+ecuador,15-44,interior,state-space,N: nothing in the block,13.324144768817174
+ecuador,15-44,interior,state-space,S: sex ratio,14.445736161109467
+ecuador,15-44,backcast,state-space,N: nothing in the block,21.21439696818197
+ecuador,15-44,backcast,state-space,S: sex ratio,26.650300667786844
+ecuador,15-44,forward,state-space,N: nothing in the block,51.0909322256224
+ecuador,15-44,forward,state-space,S: sex ratio,38.44462737516129
+ecuador,15-44,interior,state-space,ST: sex ratio + national total,13.410534922338933
+ecuador,15-44,backcast,state-space,ST: sex ratio + national total,22.097654595019513
+ecuador,15-44,forward,state-space,ST: sex ratio + national total,17.260308541927337
+ecuador,15-44,interior,simple,B0: national total,11.610036614958391
+ecuador,15-44,interior,simple,B1: sex ratio + national total,10.439114176094083
+ecuador,15-44,backcast,simple,B0: national total,14.980372937313026
+ecuador,15-44,backcast,simple,B1: sex ratio + national total,16.889240340505964
+ecuador,15-44,forward,simple,B0: national total,35.7607916434027
+ecuador,15-44,forward,simple,B1: sex ratio + national total,24.34764472159856
+colombia,all,interior,state-space,N: nothing in the block,19.987952370361565
+colombia,all,interior,state-space,S: sex ratio,7.334042988759675
+colombia,all,backcast,state-space,N: nothing in the block,35.57514169019775
+colombia,all,backcast,state-space,S: sex ratio,15.084481008703499
+colombia,all,interior,state-space,ST: sex ratio + national total,6.007414910260506
+colombia,all,backcast,state-space,ST: sex ratio + national total,11.582379364374628
+colombia,all,interior,simple,B0: national total,19.77732243347303
+colombia,all,interior,simple,B1: sex ratio + national total,4.418331629488742
+colombia,all,backcast,simple,B0: national total,23.740616977404372
+colombia,all,backcast,simple,B1: sex ratio + national total,9.252316643827175
+brazil,all,interior,direct,"D: direct, own ratio",14.17601157294091
+brazil,all,interior,direct,"DN: direct, own ratio + national trend",12.80076621704334
+brazil,all,interior,direct,DT: direct + national total,12.15230255448838
+brazil,all,backcast,direct,"D: direct, own ratio",36.54710550939125
+brazil,all,backcast,direct,"DN: direct, own ratio + national trend",40.65593742236459
+brazil,all,backcast,direct,DT: direct + national total,35.31179382367016
+brazil,15-44,interior,direct,"D: direct, own ratio",9.538547194631189
+brazil,15-44,interior,direct,"DN: direct, own ratio + national trend",8.248318318094757
+brazil,15-44,interior,direct,DT: direct + national total,7.770896644883295
+brazil,15-44,backcast,direct,"D: direct, own ratio",35.9997642505838
+brazil,15-44,backcast,direct,"DN: direct, own ratio + national trend",16.479303397714713
+brazil,15-44,backcast,direct,DT: direct + national total,36.0915477222529
+mexico,all,interior,direct,"D: direct, own ratio",25.343877524211297
+mexico,all,interior,direct,"DN: direct, own ratio + national trend",23.991656841842396
+mexico,all,interior,direct,DT: direct + national total,24.58515358333094
+mexico,all,backcast,direct,"D: direct, own ratio",55.69811085025491
+mexico,all,backcast,direct,"DN: direct, own ratio + national trend",33.32714692048266
+mexico,all,backcast,direct,DT: direct + national total,28.62947455786245
+mexico,15-44,interior,direct,"D: direct, own ratio",22.895945471881557
+mexico,15-44,interior,direct,"DN: direct, own ratio + national trend",19.956941609927146
+mexico,15-44,interior,direct,DT: direct + national total,19.09396610191884
+mexico,15-44,backcast,direct,"D: direct, own ratio",40.45608915621131
+mexico,15-44,backcast,direct,"DN: direct, own ratio + national trend",40.45440824494101
+mexico,15-44,backcast,direct,DT: direct + national total,41.576252862072316
+us,all,interior,direct,"D: direct, own ratio",53.902541197346665
+us,all,interior,direct,"DN: direct, own ratio + national trend",57.423384723757486
+us,all,interior,direct,DT: direct + national total,55.23981994743503
+us,all,backcast,direct,"D: direct, own ratio",937.3556272967462
+us,all,backcast,direct,"DN: direct, own ratio + national trend",92.15254426457746
+us,all,backcast,direct,DT: direct + national total,31.8503804758126
+us,15-44,interior,direct,"D: direct, own ratio",48.208310493365666
+us,15-44,interior,direct,"DN: direct, own ratio + national trend",38.50832145556806
+us,15-44,interior,direct,DT: direct + national total,36.170955033442404
+us,15-44,backcast,direct,"D: direct, own ratio",56.51828646739876
+us,15-44,backcast,direct,"DN: direct, own ratio + national trend",82.12681684503795
+us,15-44,backcast,direct,DT: direct + national total,70.63173120000286
+ecuador,all,interior,direct,"D: direct, own ratio",53.29772661014764
+ecuador,all,interior,direct,"DN: direct, own ratio + national trend",50.886916472594145
+ecuador,all,interior,direct,DT: direct + national total,50.38148218410644
+ecuador,all,backcast,direct,"D: direct, own ratio",80.3577863849809
+ecuador,all,backcast,direct,"DN: direct, own ratio + national trend",73.71482094292203
+ecuador,all,backcast,direct,DT: direct + national total,88.17863819424248
+ecuador,all,forward,direct,"D: direct, own ratio",94.73684210526316
+ecuador,all,forward,direct,"DN: direct, own ratio + national trend",49.337930746871834
+ecuador,all,forward,direct,DT: direct + national total,89.23565497336679
+ecuador,15-44,interior,direct,"D: direct, own ratio",48.037651475902294
+ecuador,15-44,interior,direct,"DN: direct, own ratio + national trend",48.566284743938034
+ecuador,15-44,interior,direct,DT: direct + national total,39.08051032779115
+ecuador,15-44,backcast,direct,"D: direct, own ratio",87.71813819831023
+ecuador,15-44,backcast,direct,"DN: direct, own ratio + national trend",85.60595517748602
+ecuador,15-44,backcast,direct,DT: direct + national total,94.19683567674802
+ecuador,15-44,forward,direct,"D: direct, own ratio",72.63453556654582
+ecuador,15-44,forward,direct,"DN: direct, own ratio + national trend",30.85598869738697
+ecuador,15-44,forward,direct,DT: direct + national total,36.80446007172647
+colombia,all,interior,direct,"D: direct, own ratio",6.344654997445042
+colombia,all,interior,direct,"DN: direct, own ratio + national trend",7.574869483233138
+colombia,all,interior,direct,DT: direct + national total,7.398845870843046
+colombia,all,backcast,direct,"D: direct, own ratio",15.13734514978806
+colombia,all,backcast,direct,"DN: direct, own ratio + national trend",9.718110714844673
+colombia,all,backcast,direct,DT: direct + national total,13.39063068017322

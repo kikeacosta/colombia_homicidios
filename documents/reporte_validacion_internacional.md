@@ -1,6 +1,6 @@
 # Validación internacional del modelo de homicidios con la razón de sexos
 
-*25 de noviembre de 2026 · scripts `code/70` a `78` (`intl_*`)*
+*25 de noviembre de 2026 · scripts `code/70` a `78` y `86` (`intl_*`)*
 
 ## Resumen
 
@@ -10,6 +10,7 @@
 - **Hacia atrás, con 15 años sin datos, puede empeorar.** Pasa en Brasil y Ecuador con todas las edades y en EE. UU. con 15–44. La razón de sexos de las muertes no violentas cambia por otras causas, como el envejecimiento, y el modelo lo lee como violencia.
 - **Los intervalos del 90 % son confiables en años intermedios, pero no hacia atrás.** En años intermedios contienen el valor real el 90–96 % de las veces. Hacia atrás, solo el 64–88 %.
 - **La versión logit (CoDA) da el mismo error que la logarítmica, con mejor cobertura hacia atrás.** Dejar libre la proporción de hombres entre las víctimas no añade nada.
+- **De los tres métodos, el de estados ocultos es el mejor o empata en casi todo.** El estimador directo de España iguala al de estados ocultos en Colombia, sobre totales de periodo por unidad, y en el resto queda lejos. Donde la violencia pesa poco falla por completo: muchas estimaciones dan negativas.
 
 ## 1. Los modelos y cómo usan la razón de sexos
 
@@ -189,6 +190,57 @@ Con el total nacional, la versión de espacio de estados (ST) es mejor que la re
 
 La regresión simple gana en Ecuador (salvo hacia adelante) y en Colombia hacia atrás. Una explicación posible, que no verifiqué: su pendiente por unidad, aprendida con todos los años, resiste mejor la deriva de la razón de sexos que el estado u del modelo dinámico.
 
+### Los tres métodos en los mismos años ocultos (script 86)
+
+El estimador directo de España (método 3) se había probado en otros periodos y contra otra verdad (script 82). Aquí lo corrí en los mismos bloques y celdas que los métodos 1 y 2, con la misma información.
+
+**Cómo se aplica el estimador directo en un bloque oculto.** Para cada unidad, la razón de sexos no violenta sale de los 5 años conocidos más cercanos a cada lado del bloque. Se interpola a través de un bloque intermedio y se mantiene fija hacia atrás o hacia adelante. Con ella y con π se despejan las violentas de cada año oculto, como en España. Hay tres variantes:
+- **D:** solo la razón propia de la unidad. Es el estimador de España tal cual.
+- **DN:** la desviación de la unidad respecto de la razón nacional, sumada a la razón nacional de cada año oculto. Usa la misma información nacional que el método 1.
+- **DT:** D ajustado al total nacional de cada año, comparable a ST y B1.
+
+**Error por unidad y año.** Es la medida de todo el informe. Error mediano en %:
+
+| País y edades | Prueba | Violentas, % | Sin pistas | 1. Estados ocultos | 3. Directo (D / DN) | Con total: 1 (ST) | 2 (B1) | 3 (DT) |
+|---|---|---|---|---|---|---|---|---|
+| Colombia, todas | intermedios | 14 | 18 | **8** | 12 / 11 | 7 | 7 | 10 |
+| | hacia atrás | 12 | 35 | **18** | 25 / **18** | 16 | 14 | 27 |
+| Brasil, 15–44 | intermedios | 25 | 8 | **6** | 14 / 13 | 6 | 11 | 13 |
+| | hacia atrás | 19 | 17 | **13** | 53 / 29 | 14 | 16 | 58 |
+| Brasil, todas | intermedios | 6 | 10 | **9** | 20 / 19 | 8 | 17 | 19 |
+| México, 15–44 | intermedios | 18 | 16 | **13** | 39 / 35 | 12 | 16 | 35 |
+| México, todas | intermedios | 4 | 17 | **15** | 41 / 41 | 12 | 19 | 41 |
+| Ecuador, 15–44 | intermedios | 18 | 21 | **19** | 65 / 61 | 18 | 15 | 58 |
+| Ecuador, todas | hacia adelante | 6 | 58 | **48** | 97 / 97 | 33 | 44 | 93 |
+| EE. UU., todas | intermedios | 1 | 9 | **9** | 98 / 98 | 8 | 11 | 96 |
+
+**Error en el total del bloque por unidad.** Así se usa el estimador en España: totales de un periodo por provincia, donde el ruido de un año a otro se compensa en parte.
+
+| País y edades | Prueba | Sin pistas | 1. Estados ocultos | 3. Directo (D / DN) | 2 con total (B1) |
+|---|---|---|---|---|---|
+| Colombia, todas | intermedios | 20 | 7 | **6** / 8 | 4 |
+| | hacia atrás | 36 | 15 | 15 / **10** | 9 |
+| Brasil, 15–44 | intermedios | 8 | 5 | 10 / 8 | 10 |
+| | hacia atrás | 13 | 6 | 36 / 16 | 10 |
+| México, 15–44 | intermedios | 11 | 9 | 23 / 20 | 13 |
+| Ecuador, 15–44 | intermedios | 13 | 14 | 48 / 49 | 10 |
+| EE. UU., todas | intermedios | 6 | 6 | 54 / 57 | 8 |
+
+![Los tres métodos en los mismos años ocultos](../figures/09_international/intl_three_methods.png)
+
+**Lo que muestran:**
+
+1. **El modelo de estados ocultos es el mejor o empata en casi todos los casos.** Nunca empeora mucho respecto de la interpolación, porque combina la razón de sexos con lo que sabe de los años vecinos y pondera cada fuente según su ruido.
+2. **El estimador directo solo funciona donde la violencia pesa mucho.**
+   - En Colombia queda cerca del método 1 año por año (12 % frente a 8 %). En los totales por unidad es igual o mejor: 6 % frente a 7 % en años intermedios, y con la tendencia nacional 10 % frente a 15 % hacia atrás.
+   - En Brasil 15–44, con 19–25 % de muertes violentas, queda cerca: 8–10 % frente a 5 %.
+3. **Donde la violencia pesa poco, el estimador directo falla.**
+   - El error es de 40–100 %.
+   - Entre el 10 % y el 44 % de las celdas dan negativas: más mujeres de lo esperado, lo que la fórmula lee como violencia negativa.
+   - La razón de sexos de un año tiene un ruido del mismo tamaño que la señal cuando la violencia es menos del 5 % de las muertes. El estimador directo toma cada año por separado y no tiene cómo filtrar ese ruido.
+4. **Ajustar al total nacional (DT) no lo arregla.** El problema no es el nivel nacional sino el reparto entre unidades, que es justo lo ruidoso.
+5. **Para España, la conclusión se sostiene.** En 1936–39 las violentas estimadas son el 10,5 % de las muertes del país, con 20–27 % en las provincias del frente y 9 % en la provincia mediana. El estimador se usa sobre totales de cuatro años y provincias con unas 7.400 muertes al año. Son condiciones parecidas a las de Colombia (12–14 %), donde funciona tan bien como el modelo de estados ocultos. Las provincias con poca violencia son las menos confiables. En contextos de poca violencia hay que usar el modelo de estados ocultos.
+
 ## 5. Los intervalos
 
 Cobertura de los intervalos del 90 % con la razón de sexos (S). Lo ideal es 0,90.
@@ -243,4 +295,5 @@ Error mediano y cobertura con la razón de sexos (S), en las tres versiones:
 | Validación | `code/72_intl_validation.R` → `output/tables/intl_validation_scores.csv`, `_scores_units.csv`, `_predictions.csv`, `_parameters.csv` |
 | Versión composicional | `code/78_intl_compositional_test.R` → `output/tables/intl_compositional_scores.csv` |
 | Brasil, cuatro estados | `code/75_intl_brazil_top4_figure.R` |
+| Los tres métodos en los mismos bloques | `code/86_intl_three_methods.R` → `output/tables/intl_three_methods_scores.csv`, `_scores_unit_totals.csv`, `_predictions.csv` |
 | Figuras | `figures/09_international/` |
