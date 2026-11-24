@@ -1,6 +1,6 @@
 # España 1936–1946: muertes violentas y no violentas estimadas con la razón de sexos, y prueba ciega del método
 
-*24 de noviembre de 2026 · scripts `code/80` a `83` (`intl_*`)*
+*24 de noviembre de 2026 · scripts `code/80` a `84` (`intl_*`)*
 
 ## Resumen
 
@@ -28,7 +28,27 @@
 
 *Con la tendencia propia de cada provincia en lugar de la nacional.
 
-- El rango de H refleja cuánto varía la razón de sexos entre años de paz. Es conservador, porque suma las provincias como si sus errores fueran iguales.
+- El rango de esta tabla refleja solo cuánto varía la razón de sexos entre años de paz, y es demasiado amplio, porque suma las provincias como si sus errores fueran el mismo. La incertidumbre combinada está en el siguiente apartado.
+
+**Incertidumbre combinada (script 84).** Simulé 2.000 veces el cálculo completo, combinando todas las fuentes de error que se pueden medir:
+- el error de la razón de sexos de preguerra de cada provincia;
+- su variación de un año a otro, con choques comunes a todas las provincias y choques propios de cada una;
+- una posible deriva de esa razón, entre cero y la tendencia de preguerra (−0,1 % anual);
+- π entre 0,92 y 0,98, el rango de las causas registradas;
+- las muertes esperadas: tendencia nacional o propia de cada provincia, error de los coeficientes y ruido anual.
+
+| Período | Violentas (H) | Exceso total | No violentas |
+|---|---|---|---|
+| 1936–39 | 196.000 (183.000–210.000) | 350.000 (325.000–375.000) | 154.000 (124.000–181.000) |
+| 1940–42 | 98.000 (90.000–107.000) | 217.000 (191.000–242.000) | 119.000 (90.000–145.000) |
+| 1943–46 | 45.000 (38.000–53.000) | −12.000 (−54.000 a +24.000) | −57.000 (−100.000 a −20.000) |
+
+*Mediana e intervalo del 90 %.*
+
+- **El error estadístico de H es chico:** ±7 % a nivel nacional y ±7–11 % en las provincias con más violencia (por ejemplo, Madrid 23.200, entre 21.500 y 25.000). El exceso total y la parte no violenta son más inciertos (±7–20 %), porque dependen de la tendencia esperada.
+- **Lo que pesa más es lo que la simulación no puede incluir:** errores de estructura como el hambre que mata más hombres, la movilización o las muertes nunca registradas. La prueba ciega (sección 5) da su orden de magnitud, alrededor de ±25 %, y las causas registradas (sección 4) dan el piso de 1940–42.
+
+![Incertidumbre por año](../figures/09_international/spain_uncertainty.png)
 - **La línea base pasa la prueba:** estimada solo con años de paz, deja el exceso de 1943–46 prácticamente en cero sin forzarlo.
 
 **Por provincia:**
@@ -137,8 +157,7 @@ Apliqué el estimador igual que en España: periodo base para ρ y la tendencia,
 3. **Bombardeos:** cifras publicadas de muertos por provincia y año (por ejemplo, Solé i Sabaté y Villarroya para Cataluña). Matan a ambos sexos, así que hoy quedan en el exceso no violento; con esas cifras se podrían pasar a la parte violenta.
 4. **Desplazados y refugiados por provincia, y exilio de 1939.** Hoy inflan el exceso no violento de las provincias que reciben gente (Jaén, Almería, Murcia, Alicante) y lo bajan en las de origen.
 5. **Año de defunción frente a año de registro:** estimar las inscripciones tardías (1939–41, 1943–44) para comparar con Salas en la misma base.
-6. **Incertidumbre conjunta** de ρ, π y la tendencia, en lugar de rangos separados.
-7. **Búsqueda bibliográfica** sobre si este estimador ya se propuso: demografía de conflictos, demografía histórica y métodos con la razón de sexos.
+6. **Búsqueda bibliográfica** sobre si este estimador ya se propuso: demografía de conflictos, demografía histórica y métodos con la razón de sexos.
 
 ## 7. Conclusión: ¿funciona?
 
@@ -165,7 +184,7 @@ En esos casos el error puede ser de varias veces el valor real.
 **Qué tan lejos podemos estar en España:**
 
 - **π:** las causas registradas confirman π = 0,95 (registrado: 0,93–0,97).
-- **1936–39:** se parece a los casos donde funciona, y las causas registradas lo confirman. Las ~193.000 muertes violentas estimadas superan en 22 % a las 158.700 registradas como violentas, y coinciden con ellas provincia por provincia (correlación 0,94). Ese 22 % es lo esperable por violencia nunca registrada como tal. También coinciden con Salas (194.700 en la suma comparable). El rango razonable es **160.000–240.000**: el piso es lo registrado como violento y el techo, el error de la prueba ciega.
+- **1936–39:** se parece a los casos donde funciona, y las causas registradas lo confirman. Las ~193.000 muertes violentas estimadas superan en 22 % a las 158.700 registradas como violentas, y coinciden con ellas provincia por provincia (correlación 0,94). Ese 22 % es lo esperable por violencia nunca registrada como tal. También coinciden con Salas (194.700 en la suma comparable). El error estadístico es de solo ±7 % (183.000–210.000). Sumando el error de estructura que muestra la prueba ciega, el rango razonable es **160.000–240.000**: el piso es lo registrado como violento y el techo, el error de la prueba ciega.
 - **1940–42:** las ~95.000 de H son un **techo**. Lo registrado como violento da entre 28.000 y 64.000. Las restantes 31.000–67.000 muertes de hombres de más son hambre que el método cuenta como violencia, o represión registrada bajo otras causas (muertes en prisión). Con estos datos no se pueden separar. Por analogía con el COVID, el sesgo por hambre podría explicar entre 40.000 y 65.000. Los dos caminos llevan a una violencia directa de **30.000–65.000** en esos años.
 - **El total del exceso,** violento más no violento, no depende de este supuesto. Es sólido: ~590.000 en 1936–42.
 
