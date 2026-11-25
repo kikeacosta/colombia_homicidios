@@ -2,7 +2,7 @@
 # 89. Maps: observed and estimated violent deaths by state, province or
 #     department
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Five countries, 2015, with 2011-2018 hidden (88): violent deaths as % of
+# Five countries, in the most dynamic year of each (90): violent deaths as % of
 # all deaths, registered (vital statistics) and estimated by the state-space
 # model with the sex ratio, and the ratio of the two. The measure is the
 # share of deaths, not a rate, because the models use no population and
@@ -18,10 +18,10 @@
 # Alaska and Hawaii are left out of the US map; the Canary Islands are moved
 # next to the peninsula.
 #
-# input    output/tables/intl_holdout_2015_predictions.csv (88)
+# input    output/tables/intl_dynamic_years_predictions.csv (90)
 #          output/tables/intl_spain_state_space.csv (87)
 #          data_input/geo/natural_earth/admin1_10m/ne_10m_admin_1_states_provinces.shp
-# output   figures/09_international/maps/map_<country>_2015.png
+# output   figures/09_international/maps/map_<country>_<year>.png
 #          figures/09_international/maps/map_spain_1936-1939.png
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm(list = ls()); gc(); source("code/00_setup.R")
@@ -84,17 +84,21 @@ three_maps <- function(s, d, tit, sub, lab_a, lab_b, lab_ratio, file, w, h) {
   ggsave(file, fig, w = w, h = h, bg = "white", dpi = 160)
 }
 
-p <- read_csv("output/tables/intl_holdout_2015_predictions.csv", show_col_types = FALSE, col_types = cols(unit = col_character())) |>
-  filter(ages == "all", year == 2015, m == "S")
+# the most dynamic year of each country (90)
+p <- read_csv("output/tables/intl_dynamic_years_predictions.csv", show_col_types = FALSE, col_types = cols(unit = col_character())) |>
+  filter(m == "S")
+hid <- c(colombia = "Se ocultaron 1985-1997", mexico = "Se ocultaron 2004-2011", brazil = "Se ocultaron 2011-2018", us = "Se ocultaron 1984-1991",
+         ecuador = "Se ocultaron 2021-2024 (pronóstico, con datos solo hasta 2020)")
 dims <- list(colombia = c(13, 6.5), brazil = c(14, 6.2), mexico = c(14, 5.6), ecuador = c(13, 6), us = c(15, 5.4))
 for (cc in names(pais)) {
-  d <- p |> filter(country == cc) |> transmute(k = key(unit_label), a = 100 * hom_obs / d, b = 100 * hom_pred / d)
+  d0 <- p |> filter(country == cc); yy <- unique(d0$year)
+  d <- d0 |> transmute(k = key(unit_label), a = 100 * hom_obs / d, b = 100 * pmax(hom_pred, 0.5) / d)
   s <- shapes(cc)
   miss <- setdiff(d$k, s$k); if (length(miss)) cat(cc, "units without a shape:", paste(miss, collapse = ", "), "\n")
-  three_maps(s, d, paste0(pais[[cc]], ", 2015: muertes violentas registradas y estimadas"),
-             "Se ocultaron 2011-2018 y el modelo de estados ocultos estimó cada unidad con la razón de sexos de sus muertes. En gris, unidades sin datos.",
+  three_maps(s, d, paste0(pais[[cc]], ", ", yy, ": muertes violentas registradas y estimadas"),
+             paste0(hid[[cc]], " y el modelo de estados ocultos estimó cada unidad con la razón de sexos de sus muertes. En gris, unidades sin datos."),
              "Registradas (estadísticas vitales)", "Estimadas (modelo de estados ocultos)", "Estimado frente a registrado\n(rojo: sobreestima; azul: subestima)",
-             sprintf("figures/09_international/maps/map_%s_2015.png", cc), dims[[cc]][1], dims[[cc]][2])
+             sprintf("figures/09_international/maps/map_%s_%d.png", cc, yy), dims[[cc]][1], dims[[cc]][2])
 }
 
 # Spain 1936-1939

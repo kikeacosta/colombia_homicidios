@@ -8,52 +8,70 @@ Las víctimas de muertes violentas son casi todas hombres (78–95 %), y las dem
 
 ## Los tres métodos
 
-| | Qué hace | Qué necesita |
-|---|---|---|
-| **1. Estados ocultos** (el principal) | Sigue año a año dos cantidades que no se ven: la proporción de muertes violentas y la razón de sexos de las muertes no violentas. Las une con la razón de sexos observada mediante una identidad contable, y combina todas las fuentes disponibles según su ruido. | Muertes por sexo; homicidios donde los haya (anuarios, Policía, estadísticas vitales) |
-| **2. Regresión simple** | Regresión de las muertes violentas sobre la razón de sexos y el total nacional. Sirve de referencia. | Lo mismo, más el total nacional de cada año |
-| **3. Estimador directo** | Despeja las muertes violentas de cada año con la misma identidad, fijando la razón de sexos no violenta en la de un periodo de paz. Es el que se usó en España. | Solo muertes por sexo y un periodo base |
+| | Qué hace | Qué necesita en los años que estima | Qué necesita en otros años, para aprender |
+|---|---|---|---|
+| **1. Estados ocultos** (el principal) | Sigue año a año dos cantidades que no se ven: la proporción de muertes violentas y la razón de sexos de las muertes no violentas. Las une con la razón de sexos observada mediante una identidad contable, y combina todas las fuentes disponibles según su ruido. | Muertes por sexo de cada unidad. El total nacional de homicidios es opcional y mejora la estimación. | Homicidios **por unidad** en algunos años (anuarios, Policía, estadísticas vitales), para fijar el nivel y saber cuánto se mueve cada cosa |
+| **2. Regresión simple** | Regresión de las muertes violentas de cada unidad sobre la razón de sexos y el total nacional. Sirve de referencia. | Muertes por sexo y totales de cada unidad, y el **total nacional** de homicidios de ese año | Homicidios **por unidad** en otros años, para estimar los coeficientes |
+| **3. Estimador directo** | Despeja las muertes violentas de cada año con la misma identidad, fijando la razón de sexos no violenta en la de un periodo de paz. Es el que se usó en España. | Muertes por sexo de cada unidad | **Ningún homicidio**: solo un periodo base de paz y la proporción de hombres entre las víctimas (~0,95) |
+
+**Lo que esto implica:**
+- **El estimador directo es el único que funciona donde no hay ningún dato de homicidios por unidad,** como en España en la guerra. Los otros dos necesitan algunos años con homicidios por unidad para aprender.
+- **En la Colombia histórica sí hay de dónde aprender:** los anuarios de 1923–65 y las estadísticas vitales desde 1979.
+- **En España,** para usar el modelo de estados ocultos hubo que tomar como dato por provincia las causas violentas registradas.
 
 Ninguno usa la población, así que los errores de los censos no entran en la estimación.
 
-## 1. ¿Qué tan bien funciona? La prueba con 2015
+## 1. ¿Qué tan bien funciona? El año de mayor cambio de cada país
 
-En cinco países con causas de muerte conocidas se ocultaron las muertes violentas de 2011–2018, y cada método las estimó como si no se conocieran. La figura compara, para 2015 y departamento por departamento (o estado por estado), lo registrado en las estadísticas vitales (eje x) con lo estimado (eje y). Si un punto cae sobre la línea punteada, la estimación es exacta.
+En cinco países con causas de muerte conocidas, cada método estimó las muertes violentas de años que no vio. Para cada país se muestra el año de su **mayor cambio**, que es donde un método muestra si capta la dinámica:
 
-![Lo registrado frente a lo estimado en 2015](../figures/09_international/intl_holdout_2015.png)
+| País | Año | Qué pasó | Qué no vio el modelo |
+|---|---|---|---|
+| Colombia | 1991 | Pico de violencia, de 14.500 muertes violentas en 1985 a 30.100 | 1985–1997 |
+| México | 2011 | Guerra contra el narco, de 11.300 en 2007 a 33.100 | 2004–2011 |
+| Brasil | 2017 | Máximo nacional, 75.500 | 2011–2018 |
+| EE. UU. | 1991 | Pico de comienzos de los noventa | 1984–1991 |
+| Ecuador | 2023 | Explosión, de 1.548 en 2020 a 7.999 | 2021–2024, sin datos posteriores: es un pronóstico |
 
-*Los puntos pegados al borde inferior (valor 1) son estimaciones negativas o nulas del estimador directo.*
+La figura compara, unidad por unidad, lo registrado en las estadísticas vitales (eje x) con lo estimado (eje y). Si un punto cae sobre la línea punteada, la estimación es exacta. En cada panel van el error mediano por unidad y el error del total nacional.
 
-**Error mediano por departamento o estado en 2015 (%).** En la mitad de las unidades el error fue menor que esta cifra.
+![Lo registrado frente a lo estimado en el año de mayor cambio](../figures/09_international/intl_dynamic_years.png)
 
-| País | Violentas, % de las muertes | Sin pistas (interpolar) | 1. Estados ocultos | 2. Regresión simple | 3. Directo |
+*Los puntos pegados al borde inferior (valor 1) son estimaciones negativas o nulas, casi todas del estimador directo.*
+
+**Error mediano por departamento o estado (%)** y, entre paréntesis, error del total nacional:
+
+| País y año | Violentas, % de las muertes | Sin pistas (interpolar) | 1. Estados ocultos | 2. Regresión simple | 3. Directo |
 |---|---|---|---|---|---|
-| Colombia | 7,4 | 14 | **8** | 13 | 18 |
-| Brasil | 5,6 | 12 | **9** | 14 | 21 |
-| México | 4,7 | 35 | 21 | **17** | 75 |
-| Ecuador | 2,9 | 32 | **21** | 37 | 98 |
-| EE. UU. | 0,7 | **7** | **7** | 14 | 100 |
+| Colombia, 1991 | 18,4 | 27 (−41 %) | 14 (−4 %) | **7** (dado) | 11 (+5 %) |
+| México, 2011 | 5,6 | 16 (−17 %) | **12** (−6 %) | 32 (dado) | 18 (0 %) |
+| Brasil, 2017 | 5,8 | 17 (−17 %) | 13 (−11 %) | **13** (dado) | 17 (−24 %) |
+| EE. UU., 1991 | 1,2 | **6** (−6 %) | **6** (−6 %) | 16 (dado) | 98 (+1 %) |
+| Ecuador, 2023 | 9,1 | 65 (−85 %) | **60** (−59 %) | 85 (dado) | 97 (−64 %) |
 
-*Todas las edades. "Sin pistas" es lo que se lograría interpolando entre 2010 y 2019, sin ningún dato de los años ocultos. La regresión simple, además, conoce el total nacional de cada año.*
+*Todas las edades. "Sin pistas" interpola entre los años conocidos, o extiende el último nivel en el pronóstico de Ecuador. La regresión simple conoce además el total nacional de cada año ("dado"), así que solo reparte ese total entre las unidades.*
 
 **Cómo se lee:**
-- **El modelo de estados ocultos es el mejor o empata en 4 de 5 países.** En Colombia acierta cada departamento con 8 % de error mediano, frente a 14 % de interpolar. En México y Ecuador, donde 2011–18 tuvo cambios fuertes, baja el error de 32–35 % a 21 %.
-- **El estimador directo solo funciona donde la violencia pesa mucho.** En Colombia queda en 18 %, y en Brasil en 21 %. Donde la violencia pesa poco, como en Ecuador, México o EE. UU., falla por completo: muchas estimaciones dan negativas. Una sola razón de sexos anual tiene demasiado ruido para una señal tan pequeña.
-- **Donde la violencia pesa muy poco (EE. UU., 0,7 %), la razón de sexos no añade nada** a la interpolación.
+- **La razón de sexos capta los saltos.** En Colombia 1991, interpolar se queda 41 % corto en el total nacional, y el modelo de estados ocultos, solo 4 %. En México 2011, de −17 % a −6 %. Unidad por unidad, el error baja de 27 % a 14 % en Colombia y de 16 % a 12 % en México.
+- **Un pronóstico de un salto como el de Ecuador es mucho más difícil.** Sin ningún año posterior, el modelo capta parte de la subida (−59 % frente a −85 % de extender el último nivel), pero se queda muy corto. Con datos de antes y de después, como en los demás países, funciona mucho mejor.
+- **El estimador directo funciona donde la violencia pesa mucho** (Colombia: 11 %, con el total nacional a +5 %). Donde pesa poco falla, con muchas estimaciones negativas (EE. UU., Ecuador). En Ecuador además usa como base 2016–20, que incluye el COVID, que también subió la mortalidad de los hombres.
+- **Donde la violencia pesa muy poco (EE. UU., 1,2 %), la razón de sexos no añade nada** a la interpolación.
 
-**Los mismos resultados en mapas.** Para cada país, la proporción de las muertes de 2015 que fueron violentas: a la izquierda la registrada, en el centro la estimada por el modelo de estados ocultos sin ver 2011–2018, y a la derecha la diferencia. Rojo quiere decir que sobreestima y azul que subestima. Se usa el porcentaje de las muertes, no la tasa por habitante, porque los modelos no usan población.
+**Lo mismo en mapas.** Para cada país, la proporción de las muertes de ese año que fueron violentas: a la izquierda la registrada, en el centro la estimada por el modelo de estados ocultos sin ver esos años, y a la derecha la diferencia. Rojo quiere decir que sobreestima y azul que subestima. Se usa el porcentaje de las muertes, no la tasa por habitante, porque los modelos no usan población.
 
-![Colombia](../figures/09_international/maps/map_colombia_2015.png)
+![Colombia, 1991](../figures/09_international/maps/map_colombia_1991.png)
 
-![Brasil](../figures/09_international/maps/map_brazil_2015.png)
+![México, 2011](../figures/09_international/maps/map_mexico_2011.png)
 
-![México](../figures/09_international/maps/map_mexico_2015.png)
+![Brasil, 2017](../figures/09_international/maps/map_brazil_2017.png)
 
-![Ecuador](../figures/09_international/maps/map_ecuador_2015.png)
+![Estados Unidos, 1991](../figures/09_international/maps/map_us_1991.png)
 
-![Estados Unidos](../figures/09_international/maps/map_us_2015.png)
+![Ecuador, 2023](../figures/09_international/maps/map_ecuador_2023.png)
 
-*En Colombia, los departamentos se agrupan en las 15 unidades estables del modelo (por ejemplo, Territorios reúne los antiguos territorios nacionales). Límites: Natural Earth.*
+*En Colombia, los departamentos se agrupan en las 15 unidades estables del modelo (Territorios reúne los antiguos territorios nacionales). Límites: Natural Earth.*
+
+**Un año común para todos (2015, con 2011–2018 ocultos)** da el mismo orden. El modelo de estados ocultos tiene el menor error mediano en 4 de 5 países: Colombia 8 %, Brasil 9 %, Ecuador 21 % y EE. UU. 7 %. En México gana la regresión simple con el total nacional, 17 % frente a 21 %. El estimador directo solo se acerca en Colombia, con 18 %. La figura está en `figures/09_international/intl_holdout_2015.png`.
 
 **La validación completa** repite esto en 20 combinaciones de país, edad y tipo de prueba (bloques intermedios, 15 años hacia atrás y 4 años hacia adelante), y el patrón es el mismo:
 - **Sin el total nacional,** el modelo de estados ocultos es el mejor o empata en 17 de las 20.

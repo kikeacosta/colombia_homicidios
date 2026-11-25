@@ -1130,6 +1130,49 @@ provincia y π en 0,95, y despeja las violentas año por año. Es el caso
 particular sin estados ocultos ni años con causas conocidas. Su prueba
 está en el <a href="reporte_prueba_ciega_estimador_espana.html">reporte
 de España</a>, sección 5.</p>
+<h3 id="qué-datos-necesita-cada-método">Qué datos necesita cada
+método</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Método</th>
+<th>En los años que estima</th>
+<th>En otros años, para aprender</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Estados ocultos</td>
+<td>Muertes por sexo de cada unidad. El total nacional de violentas es
+opcional (variante ST).</td>
+<td>Muertes violentas <strong>por unidad</strong> en algunos años, para
+fijar el nivel y estimar cuánto se mueve cada estado</td>
+</tr>
+<tr class="even">
+<td>2. Regresión simple</td>
+<td>Muertes por sexo y totales de cada unidad, y el <strong>total
+nacional</strong> de violentas de ese año</td>
+<td>Muertes violentas <strong>por unidad</strong> en otros años, para
+estimar los coeficientes</td>
+</tr>
+<tr class="odd">
+<td>3. Estimador directo</td>
+<td>Muertes por sexo de cada unidad</td>
+<td><strong>Ninguna muerte violenta</strong>: un periodo base de paz y
+π</td>
+</tr>
+</tbody>
+</table>
+<p>Por eso el estimador directo es el único aplicable donde no hay
+ningún dato de muertes violentas por unidad, como en la España de la
+guerra, aunque en las pruebas sea el menos preciso. En España, el modelo
+de estados ocultos (script 87) fue posible porque las causas violentas
+registradas por provincia hicieron de dato.</p>
 <h2 id="datos">2. Datos</h2>
 <table style="width:100%;">
 <colgroup>

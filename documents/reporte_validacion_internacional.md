@@ -184,6 +184,16 @@ Las muertes de una unidad y un año son una composición de cuatro partes: hombr
 
 El estimador directo de España (script 80) usa la misma identidad, despejada sin dinámica. Fija *r* en la razón de preguerra de cada provincia y π en 0,95, y despeja las violentas año por año. Es el caso particular sin estados ocultos ni años con causas conocidas. Su prueba está en el [reporte de España](reporte_prueba_ciega_estimador_espana.html), sección 5.
 
+### Qué datos necesita cada método
+
+| Método | En los años que estima | En otros años, para aprender |
+|---|---|---|
+| 1. Estados ocultos | Muertes por sexo de cada unidad. El total nacional de violentas es opcional (variante ST). | Muertes violentas **por unidad** en algunos años, para fijar el nivel y estimar cuánto se mueve cada estado |
+| 2. Regresión simple | Muertes por sexo y totales de cada unidad, y el **total nacional** de violentas de ese año | Muertes violentas **por unidad** en otros años, para estimar los coeficientes |
+| 3. Estimador directo | Muertes por sexo de cada unidad | **Ninguna muerte violenta**: un periodo base de paz y π |
+
+Por eso el estimador directo es el único aplicable donde no hay ningún dato de muertes violentas por unidad, como en la España de la guerra, aunque en las pruebas sea el menos preciso. En España, el modelo de estados ocultos (script 87) fue posible porque las causas violentas registradas por provincia hicieron de dato.
+
 ## 2. Datos
 
 | País | Unidades | Años | Fuente | Violentas, % de las muertes (todas / 15–44) | Hombres entre las víctimas, π (todas / 15–44) |
