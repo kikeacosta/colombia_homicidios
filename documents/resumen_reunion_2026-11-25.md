@@ -31,7 +31,7 @@ En cinco países con causas de muerte conocidas, cada método estimó las muerte
 | México | 2011 | Guerra contra el narco, de 11.300 en 2007 a 33.100 | 2006–2016 |
 | Brasil | 2014 | Subida hasta el máximo de 2017 (75.500) y caída posterior. Los datos terminan en 2020, así que el bloque no puede centrarse en 2017 | 2009–2019 |
 | EE. UU. | 1991 | Pico de comienzos de los noventa | 1986–1996 |
-| Ecuador | 2023 | Explosión, de 1.548 en 2020 a 7.999 | 2021–2024; no hay datos posteriores, así que es un pronóstico |
+| Ecuador | 2023 | Explosión, de 1.153 en 2018 a 7.999 | 2018–2024: cinco años antes, como en los demás países, y desde antes de que empezara la subida. No hay datos posteriores, así que es un pronóstico |
 
 La figura compara, unidad por unidad, lo registrado en las estadísticas vitales (eje x) con lo estimado (eje y). Si un punto cae sobre la línea punteada, la estimación es exacta. En cada panel van el error mediano por unidad y el error del total nacional.
 
@@ -47,15 +47,15 @@ La figura compara, unidad por unidad, lo registrado en las estadísticas vitales
 | México, 2011 | 5,6 | 23 (−34 %) | **19** (−14 %) | 40 (dado) | 39 (−22 %) |
 | Brasil, 2014 | 5,7 | 21 (−16 %) | **13** (−9 %) | 14 (dado) | 27 (−27 %) |
 | EE. UU., 1991 | 1,2 | 21 (−27 %) | 21 (−25 %) | **17** (dado) | 98 (+122 %) |
-| Ecuador, 2023 | 9,1 | 65 (−85 %) | **60** (−59 %) | 85 (dado) | 95 (−5 %) |
+| Ecuador, 2023 | 9,1 | 54 (−80 %) | 38 (−37 %) | 80 (dado) | **36** (+23 %) |
 
-*Todas las edades. "Sin pistas" interpola entre los años conocidos, o extiende el último nivel en el pronóstico de Ecuador. La regresión simple conoce además el total nacional de cada año ("dado"), así que solo reparte ese total entre las unidades.*
+*Todas las edades. "Sin pistas" es un modelo ingenuo: traza una línea recta entre el último año conocido antes del bloque y el primero después, o, en el pronóstico de Ecuador, repite el nivel de 2017. No extrapola tendencias. La regresión simple conoce además el total nacional de cada año ("dado"), así que solo reparte ese total entre las unidades.*
 
 **Cómo se lee:**
 - **La razón de sexos capta los saltos.** En Colombia 1991, interpolar se queda corto un 33 % en el total nacional, y el modelo de estados ocultos, solo un 4 %. Unidad por unidad, el error baja de 24 % a 11 %. En México 2011 el total pasa de −34 % a −14 %, y en Brasil, de −16 % a −9 %.
 - **Donde la violencia pesa muy poco (EE. UU., 1,2 %), la razón de sexos no añade nada:** 21 % de error con y sin ella. Ahí solo ayuda conocer el total nacional (17 %).
-- **Un pronóstico de un salto como el de Ecuador es mucho más difícil.** Sin ningún año posterior, el modelo capta parte de la subida (−59 % frente a −85 % de extender el último nivel), pero se queda muy corto.
-- **El estimador directo funciona donde la violencia pesa mucho:** en Colombia tiene 9 % de error por unidad, tan bien como el modelo de estados ocultos. Donde pesa poco falla, con muchas estimaciones negativas (México, EE. UU., Ecuador). Su error de total nacional de −5 % en Ecuador es casualidad: compensa provincias que sobreestima mucho con otras en cero.
+- **Un pronóstico de un salto como el de Ecuador es más difícil, pero la razón de sexos lo detecta.** Sin pistas, el modelo repite el nivel de 2017 y se queda corto un 80 %. Con la razón de sexos capta buena parte de la subida, aunque sin ningún año posterior que lo corrija: queda corto un 37 %.
+- **El estimador directo funciona donde la violencia pesa mucho.** En Colombia 1991 tiene 9 % de error por unidad, y en Ecuador 2023, 36 %: tan bien o mejor que el modelo de estados ocultos, aunque en Ecuador sobreestima el total un 23 %. Donde la violencia pesa poco falla, con muchas estimaciones negativas (México, EE. UU.).
 
 **Lo mismo en mapas.** Para cada país, la proporción de las muertes de ese año que fueron violentas: a la izquierda la registrada, en el centro la estimada por el modelo de estados ocultos sin ver esos años, y a la derecha la diferencia. Rojo quiere decir que sobreestima y azul que subestima. Se usa el porcentaje de las muertes, no la tasa por habitante, porque los modelos no usan población.
 

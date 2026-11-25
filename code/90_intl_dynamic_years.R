@@ -14,8 +14,9 @@
 #   Brazil   2014   the data end in 2020, so the block cannot be centred on
 #                   the 2017 maximum; 2009-2019 covers the whole rise to 2017
 #                   and the fall after it
-#   Ecuador  2023   violent deaths x5 since 2020; forward test, 2021-2024
-#                   hidden with data only up to 2020 (cannot be centred)
+#   Ecuador  2023   violent deaths x5 since 2020; forward test, 2018-2024
+#                   hidden (5 years before, as elsewhere) with data only up
+#                   to 2017 (cannot be centred: no data after 2024)
 # methods, refitted on each block with the parameters of 72: N
 # interpolation (or carrying the last level forward), S state-space with
 # the sex ratio, B1 simple regression with the national total, D direct
@@ -38,7 +39,7 @@ pick <- tribble(~country, ~year, ~from, ~to,
                 "mexico", 2011, 2006, 2016,
                 "brazil", 2014, 2009, 2019,
                 "us", 1991, 1986, 1996,
-                "ecuador", 2023, 2021, 2024)
+                "ecuador", 2023, 2018, 2024)
 dd <- readRDS("data_inter/intl_datasets.rds"); datasets <- dd$datasets
 pars <- read_csv("output/tables/intl_validation_parameters.csv", show_col_types = FALSE)
 
@@ -79,7 +80,7 @@ print(as.data.frame(sc |> mutate(across(c(err, nat, share), ~ round(.x, 1)), r_l
                       arrange(match(country, pick$country), match(m, c("N", "S", "B1", "D")))), row.names = FALSE)
 
 pais <- c(colombia = "Colombia, 1991\n(ocultos 1986-1996)", mexico = "México, 2011\n(ocultos 2006-2016)", brazil = "Brasil, 2014\n(ocultos 2009-2019)",
-          us = "EE. UU., 1991\n(ocultos 1986-1996)", ecuador = "Ecuador, 2023\n(pronóstico: ocultos\n2021-2024)")
+          us = "EE. UU., 1991\n(ocultos 1986-1996)", ecuador = "Ecuador, 2023\n(pronóstico: ocultos\n2018-2024)")
 met <- c(N = "Sin pistas\n(interpolación)", S = "1. Estados ocultos\n(razón de sexos)", B1 = "2. Regresión simple\n(+ total nacional)", D = "3. Directo\n(estimador de España)")
 fd <- pred |> filter(hom_obs > 0) |> left_join(sc |> select(country, m, err, nat, share), by = c("country", "m")) |>
   mutate(fila = factor(paste0(pais[country], "\n", format(round(share, 1), decimal.mark = ","), " % violentas"),
@@ -96,7 +97,7 @@ fig <- ggplot(fd, aes(hom_obs, hom_pred)) +
   facet_grid(fila ~ metodo, scales = "free") +
   labs(title = "¿Capta cada método el año de mayor cambio de cada país sin haberlo visto?",
        subtitle = paste0("Cada punto es un estado, departamento o provincia. Eje x: muertes violentas registradas. Eje y: estimadas sin ver ese año\n",
-                         "ni los 5 anteriores ni los 5 posteriores (Ecuador: pronóstico, sin datos después de 2020). Sobre la línea punteada, la estimación es exacta.\n",
+                         "ni los 5 anteriores ni los 5 posteriores (Ecuador: pronóstico, sin datos después de 2017). Sobre la línea punteada, la estimación es exacta.\n",
                          "Todas las edades. Escalas logarítmicas; las estimaciones negativas o nulas se dibujan en 1."),
        x = "muertes violentas registradas", y = "muertes violentas estimadas") +
   theme_minimal(base_size = 10) +
