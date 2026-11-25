@@ -28,6 +28,9 @@
 # output   output/tables/intl_dynamic_years_predictions.csv
 #          output/tables/intl_dynamic_years_scores.csv
 #          figures/09_international/intl_dynamic_years.png
+#          figures/09_international/intl_dynamic_years_over_time.png
+#          figures/09_international/intl_dynamic_years_top_unit.png
+#          output/tables/intl_dynamic_years_block_predictions.csv
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm(list = ls()); gc(); source("code/00_setup.R")
 source("code/70_intl_model_functions.R")
@@ -63,10 +66,12 @@ for (i in seq_len(nrow(pick))) {
   cat(cc, b, "\n")
   pred[[cc]] <- bind_rows(intl_validate(md, c(pr$s_eta, pr$s_u, pr$s_0), pi_m, blk), intl_simple(md, blk), direct_block(md, pi_m, blk[[1]], b)) |>
     mutate(country = cc, unit = as.character(unit), m = sub(":.*", "", model), .before = 1) |>
-    filter(year == pick$year[i], m %in% c("N", "S", "B1", "D")) |>
+    filter(m %in% c("N", "S", "B1", "D")) |>
     select(country, block, year, m, unit, unit_label, d, hom_obs, hom_pred)
 }
-pred <- bind_rows(pred)
+pred_all <- bind_rows(pred)
+write_csv(pred_all, "output/tables/intl_dynamic_years_block_predictions.csv")
+pred <- pred_all |> semi_join(pick, by = c("country", "year"))
 write_csv(pred, "output/tables/intl_dynamic_years_predictions.csv")
 
 
@@ -104,3 +109,86 @@ fig <- ggplot(fd, aes(hom_obs, hom_pred)) +
   theme(panel.grid.minor = element_blank(), plot.title = element_text(face = "bold", size = 13), strip.text = element_text(face = "bold"),
         strip.text.y = element_text(angle = 0, hjust = 0))
 ggsave("figures/09_international/intl_dynamic_years.png", fig, w = 13, h = 12.5, bg = "white", dpi = 160)
+
+# over time: the national sum of each method across the hidden block, against
+# the registered series, and the median error by unit in each year.
+# the simple regression is rescaled to the registered national total, so its
+# national sum is the registered one: it is drawn wide, under the black line,
+# so that it shows where it coincides.
+obs <- bind_rows(lapply(pick$country, function(cc) datasets[[paste(cc, "all")]]$md$md |>
+  summarise(h = sum(h), .by = year) |> mutate(country = cc))) |>
+  left_join(pick |> select(country, from, to), by = "country") |>
+  filter(year >= from - 8, year <= to + 6)
+nat_m <- pred_all |> filter(m %in% c("N", "S", "D")) |> summarise(h = sum(hom_pred), .by = c(country, year, m))
+nat_b <- pred_all |> filter(m == "B1") |> summarise(h = sum(hom_pred), .by = c(country, year, m))
+err_y <- pred_all |> filter(hom_obs > 0) |> summarise(err = 100 * median(abs(hom_pred / hom_obs - 1)), .by = c(country, year, m))
+pais2 <- c(colombia = "Colombia (ocultos 1986-1996)", mexico = "México (ocultos 2006-2016)", brazil = "Brasil (ocultos 2009-2019)",
+           us = "EE. UU. (ocultos 1986-1996)", ecuador = "Ecuador (pronóstico desde 2017)")
+mcol <- c(Registradas = "black", N = "grey55", S = "#2a78d6", B1 = "#1baf7a", D = "#eb6834")
+mlab <- c(Registradas = "Registradas", N = "Sin pistas", S = "1. Estados ocultos", B1 = "2. Regresión simple (+ total nacional)", D = "3. Directo")
+lay <- function(x) mutate(x, pais = factor(pais2[country], pais2[pick$country]))
+rect <- pick |> transmute(country, x0 = from - 0.5, x1 = to + 0.5) |> lay()
+p_top <- ggplot() +
+  geom_rect(data = rect, aes(xmin = x0, xmax = x1, ymin = -Inf, ymax = Inf), fill = "grey93") +
+  geom_line(data = lay(nat_b), aes(year, h / 1000, colour = m), linewidth = 3, alpha = 0.45) +
+  geom_line(data = lay(obs), aes(year, h / 1000, colour = "Registradas"), linewidth = 0.9) +
+  geom_point(data = lay(obs), aes(year, h / 1000, colour = "Registradas"), size = 1.2) +
+  geom_line(data = lay(nat_m), aes(year, h / 1000, colour = m, linetype = m), linewidth = 0.8) +
+  geom_vline(data = lay(pick), aes(xintercept = year), colour = "grey40", linetype = "13", linewidth = 0.3) +
+  scale_colour_manual(values = mcol, labels = mlab, breaks = names(mlab), limits = names(mlab), name = NULL) +
+  scale_linetype_manual(values = c(N = "22", S = "solid", D = "solid"), guide = "none") +
+  facet_wrap(~pais, nrow = 1, scales = "free") + expand_limits(y = 0) +
+  labs(title = "Muertes violentas por año: registradas y estimadas sin ver los años sombreados",
+       subtitle = paste0("Arriba: total nacional (miles). Abajo: error mediano por estado o departamento en cada año (%). Franja gris: años ocultos; ",
+                         "línea vertical: año de mayor cambio.\nLa regresión simple (franja verde) recibe el total nacional registrado y solo lo reparte entre las unidades: ",
+                         "arriba coincide con lo registrado por construcción, y su error está abajo. Todas las edades."),
+       x = NULL, y = "miles de muertes violentas") +
+  theme_minimal(base_size = 10) + theme(legend.position = "bottom", panel.grid.minor = element_blank(), plot.title = element_text(face = "bold", size = 13),
+                                        strip.text = element_text(face = "bold"))
+p_bot <- ggplot(lay(err_y), aes(year, pmin(err, 100), colour = m)) +
+  geom_line(linewidth = 0.8) + geom_point(size = 1) +
+  scale_colour_manual(values = mcol, labels = mlab, breaks = names(mlab), limits = names(mlab), name = NULL) +
+  facet_wrap(~pais, nrow = 1, scales = "free_x") + scale_x_continuous(breaks = function(x) seq(ceiling(x[1] / 2) * 2, floor(x[2]), by = 2)) +
+  labs(x = NULL, y = "error mediano por unidad (%)", caption = "Errores mayores de 100 % se dibujan en 100.") +
+  theme_minimal(base_size = 10) + theme(legend.position = "none", panel.grid.minor = element_blank(), strip.text = element_blank())
+fig2 <- ggpubr::ggarrange(p_top, p_bot, ncol = 1, heights = c(1.25, 1), common.legend = TRUE, legend = "bottom")
+ggsave("figures/09_international/intl_dynamic_years_over_time.png", fig2, w = 16, h = 8.5, bg = "white", dpi = 160)
+
+# the same over time for one unit per country: the most violent in the hidden
+# block (highest share of violent deaths among the units with at least the
+# median number of deaths), where the simple regression is a real estimate
+top_u <- pred_all |> filter(m == "S") |> summarise(h = sum(hom_obs), d = sum(d), lab = first(unit_label), .by = c(country, unit)) |>
+  filter(d >= median(d), .by = country) |> slice_max(h / d, n = 1, by = country) |> mutate(share = 100 * h / d)
+print(as.data.frame(top_u |> mutate(share = round(share, 1))))
+obs_u <- bind_rows(lapply(pick$country, function(cc) datasets[[paste(cc, "all")]]$md$md |> mutate(unit = as.character(unit), country = cc))) |>
+  semi_join(top_u, by = c("country", "unit")) |>
+  left_join(pick |> select(country, from, to), by = "country") |>
+  filter(year >= from - 8, year <= to + 6) |> select(country, unit, year, h)
+est_u <- pred_all |> semi_join(top_u, by = c("country", "unit")) |> select(country, unit, year, m, h = hom_pred)
+err_u <- pred_all |> semi_join(top_u, by = c("country", "unit")) |> semi_join(pick, by = c("country", "year")) |>
+  transmute(country, m, e = 100 * (hom_pred / hom_obs - 1))
+lab_u <- top_u |> left_join(pick, by = "country") |>
+  transmute(country, pais = paste0(lab, " (", c(colombia = "Colombia", mexico = "México", brazil = "Brasil", us = "EE. UU.", ecuador = "Ecuador")[country],
+                                   ")\n", ifelse(country == "ecuador", "pronóstico desde 2017", paste0("ocultos ", from, "-", to)), "; ",
+                                   format(round(share, 1), decimal.mark = ","), " % violentas"))
+lay_u <- function(x) left_join(x, lab_u, by = "country") |> mutate(pais = factor(pais, lab_u$pais[match(pick$country, lab_u$country)]))
+txt_u <- err_u |> mutate(lbl = paste0(c(N = "Sin pistas", S = "1", B1 = "2", D = "3")[m], ": ", ifelse(e >= 0, "+", ""), round(e), " %")) |>
+  summarise(lbl = paste0("Error en el año de mayor cambio\n", paste(lbl[order(match(m, c("N", "S", "B1", "D")))], collapse = "\n")), .by = country)
+fig3 <- ggplot() +
+  geom_rect(data = lay_u(rect |> select(-pais)), aes(xmin = x0, xmax = x1, ymin = -Inf, ymax = Inf), fill = "grey93") +
+  geom_line(data = lay_u(obs_u), aes(year, h, colour = "Registradas"), linewidth = 0.9) +
+  geom_point(data = lay_u(obs_u), aes(year, h, colour = "Registradas"), size = 1.2) +
+  geom_line(data = lay_u(est_u), aes(year, h, colour = m, linetype = m), linewidth = 0.8) +
+  geom_vline(data = lay_u(pick |> select(country, year)), aes(xintercept = year), colour = "grey40", linetype = "13", linewidth = 0.3) +
+  geom_text(data = lay_u(txt_u), aes(x = -Inf, y = Inf, label = lbl), hjust = -0.05, vjust = 1.1, size = 2.7, colour = "grey20", lineheight = 0.95) +
+  scale_colour_manual(values = mcol, labels = mlab, breaks = names(mlab), limits = names(mlab), name = NULL) +
+  scale_linetype_manual(values = c(N = "22", S = "solid", B1 = "solid", D = "solid"), guide = "none") +
+  facet_wrap(~pais, nrow = 1, scales = "free") + expand_limits(y = 0) +
+  labs(title = "La unidad más violenta de cada país: muertes violentas registradas y estimadas sin ver los años sombreados",
+       subtitle = paste0("La unidad con mayor proporción de muertes violentas en los años ocultos, entre las de tamaño mediano o mayor. ",
+                         "Aquí la regresión simple sí estima: reparte el total nacional según la razón de sexos de cada unidad.\n",
+                         "Franja gris: años ocultos; línea vertical: año de mayor cambio, con el error de cada método en ese año. Todas las edades."),
+       x = NULL, y = "muertes violentas") +
+  theme_minimal(base_size = 10) + theme(legend.position = "bottom", panel.grid.minor = element_blank(), plot.title = element_text(face = "bold", size = 13),
+                                        strip.text = element_text(face = "bold"))
+ggsave("figures/09_international/intl_dynamic_years_top_unit.png", fig3, w = 16, h = 5.8, bg = "white", dpi = 160)

@@ -761,18 +761,41 @@ nat_obs <- nat_est |>
   pivot_longer(-c(year, pop), names_to = "source", values_to = "n") |>
   filter(!is.na(n)) |>
   mutate(rate = 1e5 * n / pop, source = factor(source, names(col_src)))
-fig3 <- ggplot(nat_est |> filter(year >= 1923), aes(year)) +
+# two other readings of the national series, for comparison:
+#   the same model with the sex ratio alone (no anuarios, Policia or WHO;
+#   EEVV from 1979 as the only homicide counts), and the direct estimator
+#   (the Spain one): each unit's non-violent ratio in 1979-1983, from EEVV,
+#   held fixed in every year. the simple regression (64) has no national
+#   line of its own: it distributes the national total it is given.
+dat_s <- md; dat_s$y_a <- NA; dat_s$y_p <- NA; dat_s$y_w <- NA
+alt_s <- run_model(dat_s, fit1$par, smooth = TRUE) |>
+  left_join(md |> select(unit, year, d_adj, pop), by = c("unit", "year")) |>
+  summarise(rate = 1e5 * sum(il(eta) * d_adj) / sum(pop), .by = year) |> mutate(line = "Modelo 1, solo razón de sexos (y EEVV desde 1979)")
+r_u <- md |> filter(year %in% 1979:1983, !is.na(h_eevv), !is.na(dm)) |>
+  summarise(r = sum(dm - pi_m * h_eevv) / sum(df - (1 - pi_m) * h_eevv), .by = unit)
+alt_d <- md |> left_join(r_u, by = "unit") |> mutate(H = (dm - r * df) / (pi_m - r * (1 - pi_m))) |>
+  summarise(rate = ifelse(any(is.na(H)), NA, 1e5 * sum(H) / sum(pop)), .by = year) |> mutate(line = "Modelo 3, directo (razón no violenta de 1979-1983)")
+alt <- bind_rows(nat_est |> transmute(year, rate = 1e5 * hom_est / pop, line = "Modelo 1, todas las fuentes"), alt_s, alt_d) |>
+  mutate(line = factor(line, c("Modelo 1, todas las fuentes", "Modelo 1, solo razón de sexos (y EEVV desde 1979)", "Modelo 3, directo (razón no violenta de 1979-1983)")))
+write_csv(alt |> pivot_wider(names_from = line, values_from = rate), "output/tables/homicide_backcast_national_methods.csv")
+fig3 <- ggplot(alt |> filter(year >= 1923), aes(year)) +
+  geom_hline(yintercept = 0, colour = "grey70", linewidth = 0.3) +
   geom_point(data = nat_obs |> filter(year >= 1923), aes(y = rate, colour = source, shape = source), size = 1.6) +
-  geom_line(aes(y = 1e5 * hom_est / pop), colour = ink, linewidth = 0.6) +
-  scale_colour_manual(values = col_src) +
-  scale_shape_manual(values = shp_src) +
-  scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
-  labs(title = "Suma de las 15 unidades frente a las fuentes nacionales",
-       subtitle = "Homicidios registrados por 100.000 habitantes. Línea: suma de las estimaciones departamentales.
-La OMS entra al modelo solo en 1966-1977; EEVV 1979 es un año incompleto.",
+  geom_line(aes(y = rate, linetype = line, linewidth = line), colour = ink) +
+  scale_colour_manual(values = col_src, name = "Fuentes") +
+  scale_shape_manual(values = shp_src, name = "Fuentes") +
+  scale_linetype_manual(values = c("solid", "22", "13"), name = NULL) +
+  scale_linewidth_manual(values = c(0.7, 0.55, 0.55), name = NULL) +
+  scale_y_continuous(expand = expansion(mult = c(0.02, 0.05))) +
+  coord_cartesian(ylim = c(-40, NA)) +
+  guides(linetype = guide_legend(nrow = 3), linewidth = guide_legend(nrow = 3), colour = guide_legend(nrow = 2), shape = guide_legend(nrow = 2)) +
+  labs(title = "Colombia: homicidios registrados por 100.000 habitantes, suma de las 15 unidades",
+       subtitle = paste0("Líneas: estimaciones. Puntos: fuentes nacionales (anuarios solo en los años con las 15 unidades).\n",
+                         "La OMS entra al modelo solo en 1966-1977; EEVV 1979 es un año incompleto. El estimador directo cae por debajo de -40 antes de 1966 (fuera de la escala).\n",
+                         "La regresión simple (modelo 2) no tiene línea propia: reparte entre las unidades el total nacional que recibe."),
        x = NULL, y = NULL) +
-  base
-ggsave("figures/08_backcast/backcast_national.png", fig3, w = 9, h = 5, bg = "white", dpi = 160)
+  base + theme(legend.position = "bottom", legend.box = "horizontal")
+ggsave("figures/08_backcast/backcast_national.png", fig3, w = 11, h = 6.5, bg = "white", dpi = 160)
 
 # 6.4 information in the real gap
 gfig <- gap_info |>

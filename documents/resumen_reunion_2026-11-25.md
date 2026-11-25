@@ -57,6 +57,36 @@ La figura compara, unidad por unidad, lo registrado en las estadísticas vitales
 - **Un pronóstico de un salto como el de Ecuador es más difícil, pero la razón de sexos lo detecta.** Sin pistas, el modelo repite el nivel de 2017 y se queda corto un 80 %. Con la razón de sexos capta buena parte de la subida, aunque sin ningún año posterior que lo corrija: queda corto un 37 %.
 - **El estimador directo funciona donde la violencia pesa mucho.** En Colombia 1991 tiene 9 % de error por unidad, y en Ecuador 2023, 36 %: tan bien o mejor que el modelo de estados ocultos, aunque en Ecuador sobreestima el total un 23 %. Donde la violencia pesa poco falla, con muchas estimaciones negativas (México, EE. UU.).
 
+**Cómo evoluciona la estimación en el tiempo.** La figura siguiente muestra todos los años ocultos, no solo el de mayor cambio. Arriba está el total nacional registrado (negro) y el estimado por cada método. Abajo, el error mediano por estado o departamento en cada año. La regresión simple aparece arriba como una franja verde que coincide con lo registrado: recibe el total nacional y solo lo reparte entre las unidades. Su error está en el panel de abajo.
+
+![Muertes violentas por año, registradas y estimadas](../figures/09_international/intl_dynamic_years_over_time.png)
+
+- **Colombia:** el modelo de estados ocultos sigue la subida y la caída de 1986–96 casi exactamente, y el error por departamento queda en 5–15 % todos los años. Interpolar se queda muy por debajo del pico, con 20–25 % de error.
+- **México:** capta la subida de 2008–11 sin verla. Después de 2011 sobreestima, porque la violencia bajó más rápido de lo que la razón de sexos indica, y aun así queda más cerca que interpolar.
+- **Brasil:** sigue el nivel con menos de 15 % de error por estado. La subida de 2015–17 la capta solo en parte.
+- **EE. UU.:** la violencia es el ~1 % de las muertes y el modelo es casi igual a interpolar. No capta el pico de 1991.
+- **Ecuador:** el pronóstico desde 2017 capta más de la mitad de la subida de 2021–23 (unas 5.000 muertes violentas estimadas en 2023, frente a 8.000 registradas) y después se aplana.
+- **El estimador directo** acierta el nivel en Colombia, pero en el resto oscila mucho de un año a otro y se aleja del registrado.
+
+**La unidad más violenta de cada país.** A nivel de un solo estado o departamento, la regresión simple (modelo 2) sí produce una estimación propia, porque reparte el total nacional según la razón de sexos de cada unidad. Se eligió la unidad con mayor proporción de muertes violentas en los años ocultos, entre las de tamaño mediano o mayor.
+
+![La unidad más violenta de cada país](../figures/09_international/intl_dynamic_years_top_unit.png)
+
+| Unidad | Violentas, % | Sin pistas | 1. Estados ocultos | 2. Regresión simple | 3. Directo |
+|---|---|---|---|---|---|
+| Antioquia, 1991 | 28,9 | −47 % | **−2 %** | +6 % | +3 % |
+| Chihuahua, 2011 | 12,3 | −68 % | +6 % | −36 % | **+1 %** |
+| Pará, 2014 | 10,6 | −24 % | −8 % | **−1 %** | −3 % |
+| Louisiana, 1991 | 2,0 | −27 % | −26 % | **+2 %** | +132 % |
+| Los Ríos, 2023 (pronóstico) | 7,8 | −85 % | −52 % | **−9 %** | +30 % |
+
+*Error de cada método en el año de mayor cambio.*
+
+- **En las unidades muy violentas, los tres métodos siguen la subida, y no interpolar es lo que más importa.** Antioquia y Chihuahua son los dos casos más claros: interpolar se queda 47 % y 68 % corto.
+- **La regresión simple acierta cuando el total nacional ya trae la información** (Louisiana, Pará y Los Ríos). Pero subestima los picos concentrados en una unidad: en Chihuahua 2010–11, el epicentro de la guerra contra el narco, se queda 36 % corta. Reparte el total con una relación entre razón de sexos y violencia aprendida en años normales, y no concentra la violencia lo suficiente.
+- **El modelo de estados ocultos sigue bien los picos** (Antioquia, Chihuahua), pero sin el total nacional no ve lo que la razón de sexos no muestra (Louisiana, con 2 % de muertes violentas) ni un salto en un pronóstico (Los Ríos).
+- **El estimador directo acierta en las unidades muy violentas** (Antioquia, Chihuahua, Pará) y oscila mucho donde la violencia pesa poco (Louisiana).
+
 **Lo mismo en mapas.** Para cada país, la proporción de las muertes de ese año que fueron violentas: a la izquierda la registrada, en el centro la estimada por el modelo de estados ocultos sin ver esos años, y a la derecha la diferencia. Rojo quiere decir que sobreestima y azul que subestima. Se usa el porcentaje de las muertes, no la tasa por habitante, porque los modelos no usan población.
 
 ![Colombia, 1991](../figures/09_international/maps/map_colombia_1991.png)
@@ -98,6 +128,13 @@ Además trata las celdas de los anuarios que parecen errores de transcripción.
 
 ![Serie nacional estimada](../figures/08_backcast/backcast_national.png)
 
+**Cómo leer la figura:**
+- **La línea negra continua es la estimación principal.** Es la suma de los 15 departamentos (o grupos de departamentos) según el modelo de estados ocultos con todas las fuentes: la razón de sexos todos los años, los anuarios en 1923–65, la Policía en 1962–97, las EEVV desde 1979 y el total de la OMS en 1966–77.
+- **Los puntos son las fuentes originales,** sumadas a nivel nacional. Donde hay datos, la línea los reproduce: no es una prueba de predicción, que es la de la sección 1.
+- **La línea a rayas es el mismo modelo con solo la razón de sexos,** sin anuarios, Policía ni OMS (solo ve las EEVV desde 1979). Antes de 1966 queda plana en 30–40 por 100.000, muy por encima de los anuarios. Confirma que en esos años la razón de sexos casi no informa.
+- **La línea punteada es el estimador directo,** con la razón de sexos no violenta de 1979–83 fija hacia atrás. Desde 1985 sigue la forma de la serie, aunque sobreestima el pico. Antes cae a valores negativos, porque la razón de sexos no violenta cambió mucho en 60 años (de 1,04 a 1,29). Por eso el directo solo sirve cerca de su periodo base.
+- **La regresión simple no tiene línea propia,** porque reparte entre los departamentos el total nacional que recibe.
+
 **Lo principal:**
 - **La razón de sexos ayuda mucho desde 1985,** cuando los homicidios son el 10–15 % de las muertes: el error en años ocultos baja de 20 % a 9 % (1985–97) y de 16 % a 7 % (1998–2010).
 - **Antes de 1966 aporta poco,** porque los homicidios eran solo el 2–3 % de las muertes. Ahí la serie se apoya en los anuarios, y el modelo sirve sobre todo para limpiarlos y llenar sus huecos.
@@ -138,6 +175,28 @@ Es una aplicación a un contexto sin causas de muerte confiables. Se usaron las 
 3. **Para la Colombia histórica,** la reconstrucción es buena desde 1985 y razonable en 1946–65 gracias a los anuarios. La razón de sexos añade poco antes de 1966.
 4. **Los intervalos son demasiado estrechos al reconstruir hacia atrás,** y hay que ampliarlos antes de publicar.
 5. **España muestra que el método funciona en una guerra.** Da cifras coherentes con décadas de investigación histórica, y además estima cuánto faltó en el registro.
+
+### Qué existe y qué aporta este trabajo
+
+**Lo que ya existe.** La idea de usar el exceso de muertes de hombres para estimar muertes de guerra está publicada, pero en una versión simple:
+- **Kobak y otros (2025, *Demography*):** muertes de guerra de Rusia en 2022–23, con la razón de sexos de las muertes. Suponen que todas las víctimas son hombres, trabajan solo a nivel nacional y no validan el método.
+- **Hacker (2011) y Barceló y otros (2024, *PNAS*):** muertes de la Guerra Civil de EE. UU. con censos, también solo a nivel nacional.
+- **Heuveline (Camboya):** separa el exceso en violento y no violento, pero reconstruyendo la población, no con las muertes registradas.
+- **Correcciones de homicidios mal clasificados:** existen, como los "homicidios ocultos" de Brasil o la redistribución de causas mal definidas, pero todas parten de las causas de muerte.
+- **Para España,** Ortega y Silvestre (2006) estiman el exceso de hombres y de mujeres por provincia, pero no lo separan en violento y no violento. Salas (1977) suma y corrige las causas registradas.
+
+**Lo que aportaría en general:**
+- Un método que estima la violencia letal **sin usar las causas de muerte**, por unidad subnacional y año, admitiendo víctimas mujeres.
+- Un modelo de estados ocultos que combina la razón de sexos con las fuentes incompletas que haya.
+- **Validación a ciegas en cinco países:** se sabe cuándo funciona (violencia por encima del ~5–10 % de las muertes) y cuándo no.
+- **Una forma de corregir la mala clasificación y el subregistro** de la violencia en las estadísticas vitales. No hay precedente que lo haga con la composición por sexo de las muertes.
+
+**Lo que aportaría a España:**
+- La primera **separación del exceso de 1936–42 en violento y no violento** por provincia y año, sin depender de cómo se registró la causa.
+- La primera **medida nacional de cuánta violencia llegó al registro como tal:** ~80 % en 1936–39 y ~65 % en 1940. Hasta ahora solo había estudios locales; en Sevilla, por ejemplo, solo el 17 % de las víctimas documentadas está inscrito.
+- Un **dataset abierto** de muertes por provincia, sexo y edad de 1933–46, que hoy no existe.
+
+*Basado en una revisión rápida de la literatura; antes de publicar conviene una búsqueda más exhaustiva.*
 
 ## Próximos pasos
 
