@@ -87,7 +87,7 @@ three_maps <- function(s, d, tit, sub, lab_a, lab_b, lab_ratio, file, w, h) {
 # the most dynamic year of each country (90)
 p <- read_csv("output/tables/intl_dynamic_years_predictions.csv", show_col_types = FALSE, col_types = cols(unit = col_character())) |>
   filter(m == "S")
-hid <- c(colombia = "Se ocultaron 1985-1997", mexico = "Se ocultaron 2004-2011", brazil = "Se ocultaron 2011-2018", us = "Se ocultaron 1984-1991",
+hid <- c(colombia = "Se ocultaron 1986-1996", mexico = "Se ocultaron 2006-2016", brazil = "Se ocultaron 2009-2019", us = "Se ocultaron 1986-1996",
          ecuador = "Se ocultaron 2021-2024 (pronóstico, con datos solo hasta 2020)")
 dims <- list(colombia = c(13, 6.5), brazil = c(14, 6.2), mexico = c(14, 5.6), ecuador = c(13, 6), us = c(15, 5.4))
 for (cc in names(pais)) {

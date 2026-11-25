@@ -23,15 +23,15 @@ Ninguno usa la población, así que los errores de los censos no entran en la es
 
 ## 1. ¿Qué tan bien funciona? El año de mayor cambio de cada país
 
-En cinco países con causas de muerte conocidas, cada método estimó las muertes violentas de años que no vio. Para cada país se muestra el año de su **mayor cambio**, que es donde un método muestra si capta la dinámica:
+En cinco países con causas de muerte conocidas, cada método estimó las muertes violentas de años que no vio. Para cada país se evalúa el año de su **mayor cambio**, que es donde se ve si un método capta la dinámica. Ese año se ocultó junto con los **5 años anteriores y los 5 posteriores**, para que quede igual de lejos de los datos conocidos por ambos lados. Si se ocultara solo hasta ese año, el año siguiente conocido le daría al modelo casi el mismo nivel y la interpolación parecería mejor de lo que es.
 
-| País | Año | Qué pasó | Qué no vio el modelo |
+| País | Año evaluado | Qué pasó | Años ocultos |
 |---|---|---|---|
-| Colombia | 1991 | Pico de violencia, de 14.500 muertes violentas en 1985 a 30.100 | 1985–1997 |
-| México | 2011 | Guerra contra el narco, de 11.300 en 2007 a 33.100 | 2004–2011 |
-| Brasil | 2017 | Máximo nacional, 75.500 | 2011–2018 |
-| EE. UU. | 1991 | Pico de comienzos de los noventa | 1984–1991 |
-| Ecuador | 2023 | Explosión, de 1.548 en 2020 a 7.999 | 2021–2024, sin datos posteriores: es un pronóstico |
+| Colombia | 1991 | Pico de violencia, de 14.500 muertes violentas en 1985 a 30.100 | 1986–1996 |
+| México | 2011 | Guerra contra el narco, de 11.300 en 2007 a 33.100 | 2006–2016 |
+| Brasil | 2014 | Subida hasta el máximo de 2017 (75.500) y caída posterior. Los datos terminan en 2020, así que el bloque no puede centrarse en 2017 | 2009–2019 |
+| EE. UU. | 1991 | Pico de comienzos de los noventa | 1986–1996 |
+| Ecuador | 2023 | Explosión, de 1.548 en 2020 a 7.999 | 2021–2024; no hay datos posteriores, así que es un pronóstico |
 
 La figura compara, unidad por unidad, lo registrado en las estadísticas vitales (eje x) con lo estimado (eje y). Si un punto cae sobre la línea punteada, la estimación es exacta. En cada panel van el error mediano por unidad y el error del total nacional.
 
@@ -43,19 +43,19 @@ La figura compara, unidad por unidad, lo registrado en las estadísticas vitales
 
 | País y año | Violentas, % de las muertes | Sin pistas (interpolar) | 1. Estados ocultos | 2. Regresión simple | 3. Directo |
 |---|---|---|---|---|---|
-| Colombia, 1991 | 18,4 | 27 (−41 %) | 14 (−4 %) | **7** (dado) | 11 (+5 %) |
-| México, 2011 | 5,6 | 16 (−17 %) | **12** (−6 %) | 32 (dado) | 18 (0 %) |
-| Brasil, 2017 | 5,8 | 17 (−17 %) | 13 (−11 %) | **13** (dado) | 17 (−24 %) |
-| EE. UU., 1991 | 1,2 | **6** (−6 %) | **6** (−6 %) | 16 (dado) | 98 (+1 %) |
-| Ecuador, 2023 | 9,1 | 65 (−85 %) | **60** (−59 %) | 85 (dado) | 97 (−64 %) |
+| Colombia, 1991 | 18,4 | 24 (−33 %) | 11 (−4 %) | **7** (dado) | 9 (+9 %) |
+| México, 2011 | 5,6 | 23 (−34 %) | **19** (−14 %) | 40 (dado) | 39 (−22 %) |
+| Brasil, 2014 | 5,7 | 21 (−16 %) | **13** (−9 %) | 14 (dado) | 27 (−27 %) |
+| EE. UU., 1991 | 1,2 | 21 (−27 %) | 21 (−25 %) | **17** (dado) | 98 (+122 %) |
+| Ecuador, 2023 | 9,1 | 65 (−85 %) | **60** (−59 %) | 85 (dado) | 95 (−5 %) |
 
 *Todas las edades. "Sin pistas" interpola entre los años conocidos, o extiende el último nivel en el pronóstico de Ecuador. La regresión simple conoce además el total nacional de cada año ("dado"), así que solo reparte ese total entre las unidades.*
 
 **Cómo se lee:**
-- **La razón de sexos capta los saltos.** En Colombia 1991, interpolar se queda 41 % corto en el total nacional, y el modelo de estados ocultos, solo 4 %. En México 2011, de −17 % a −6 %. Unidad por unidad, el error baja de 27 % a 14 % en Colombia y de 16 % a 12 % en México.
-- **Un pronóstico de un salto como el de Ecuador es mucho más difícil.** Sin ningún año posterior, el modelo capta parte de la subida (−59 % frente a −85 % de extender el último nivel), pero se queda muy corto. Con datos de antes y de después, como en los demás países, funciona mucho mejor.
-- **El estimador directo funciona donde la violencia pesa mucho** (Colombia: 11 %, con el total nacional a +5 %). Donde pesa poco falla, con muchas estimaciones negativas (EE. UU., Ecuador). En Ecuador además usa como base 2016–20, que incluye el COVID, que también subió la mortalidad de los hombres.
-- **Donde la violencia pesa muy poco (EE. UU., 1,2 %), la razón de sexos no añade nada** a la interpolación.
+- **La razón de sexos capta los saltos.** En Colombia 1991, interpolar se queda corto un 33 % en el total nacional, y el modelo de estados ocultos, solo un 4 %. Unidad por unidad, el error baja de 24 % a 11 %. En México 2011 el total pasa de −34 % a −14 %, y en Brasil, de −16 % a −9 %.
+- **Donde la violencia pesa muy poco (EE. UU., 1,2 %), la razón de sexos no añade nada:** 21 % de error con y sin ella. Ahí solo ayuda conocer el total nacional (17 %).
+- **Un pronóstico de un salto como el de Ecuador es mucho más difícil.** Sin ningún año posterior, el modelo capta parte de la subida (−59 % frente a −85 % de extender el último nivel), pero se queda muy corto.
+- **El estimador directo funciona donde la violencia pesa mucho:** en Colombia tiene 9 % de error por unidad, tan bien como el modelo de estados ocultos. Donde pesa poco falla, con muchas estimaciones negativas (México, EE. UU., Ecuador). Su error de total nacional de −5 % en Ecuador es casualidad: compensa provincias que sobreestima mucho con otras en cero.
 
 **Lo mismo en mapas.** Para cada país, la proporción de las muertes de ese año que fueron violentas: a la izquierda la registrada, en el centro la estimada por el modelo de estados ocultos sin ver esos años, y a la derecha la diferencia. Rojo quiere decir que sobreestima y azul que subestima. Se usa el porcentaje de las muertes, no la tasa por habitante, porque los modelos no usan población.
 
@@ -63,7 +63,7 @@ La figura compara, unidad por unidad, lo registrado en las estadísticas vitales
 
 ![México, 2011](../figures/09_international/maps/map_mexico_2011.png)
 
-![Brasil, 2017](../figures/09_international/maps/map_brazil_2017.png)
+![Brasil, 2014](../figures/09_international/maps/map_brazil_2014.png)
 
 ![Estados Unidos, 1991](../figures/09_international/maps/map_us_1991.png)
 

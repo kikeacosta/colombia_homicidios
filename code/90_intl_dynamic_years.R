@@ -1,43 +1,73 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 90. Observed and estimated violent deaths by state in the most dynamic
-#     year of each country
+#     year of each country, hidden in a block centred on that year
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 88 used 2015 for every country, a quiet year for most of them. Here each
-# country gets the year of its largest change, inside a block that was
-# already hidden (no model is refitted):
-#   Colombia 1991   peak of the late 1980s and early 1990s, block 1985-1997 (72)
-#   Mexico   2011   peak of the war on drugs (x2.7 since 2007), block 2004-2011 (72)
-#   Brazil   2017   national maximum, block 2011-2018 (88)
-#   US       1991   peak of the early 1990s, block 1984-1991 (72)
+# country gets the year of its largest change, hidden in a block of 11 years
+# centred on it (5 years each side), so that the year is as far from the
+# known years on both sides. A first version took the year from the blocks
+# of 72, where it could sit next to a known year (Mexico 2011 at the end of
+# 2004-2011, with 2012 known), which flatters interpolation.
+#   Colombia 1991   peak of the late 1980s and early 1990s, hidden 1986-1996
+#   Mexico   2011   peak of the war on drugs (x2.7 since 2007), hidden 2006-2016
+#   US       1991   peak of the early 1990s, hidden 1986-1996
+#   Brazil   2014   the data end in 2020, so the block cannot be centred on
+#                   the 2017 maximum; 2009-2019 covers the whole rise to 2017
+#                   and the fall after it
 #   Ecuador  2023   violent deaths x5 since 2020; forward test, 2021-2024
-#                   hidden with data only up to 2020 (72)
-# methods: N interpolation (or carrying the last level forward), S
-# state-space with the sex ratio, B1 simple regression with the national
-# total, D direct estimator (86, 88). All ages.
+#                   hidden with data only up to 2020 (cannot be centred)
+# methods, refitted on each block with the parameters of 72: N
+# interpolation (or carrying the last level forward), S state-space with
+# the sex ratio, B1 simple regression with the national total, D direct
+# estimator (the unit's own non-violent ratio from the 5 years on each
+# side). All ages.
 #
-# input    output/tables/intl_validation_predictions.csv (72)
-#          output/tables/intl_three_methods_predictions.csv (86)
-#          output/tables/intl_holdout_2015_predictions.csv (88)
+# input    data_inter/intl_datasets.rds (72)
+#          output/tables/intl_validation_parameters.csv (72)
 # output   output/tables/intl_dynamic_years_predictions.csv
 #          output/tables/intl_dynamic_years_scores.csv
 #          figures/09_international/intl_dynamic_years.png
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm(list = ls()); gc(); source("code/00_setup.R")
+source("code/70_intl_model_functions.R")
+library(glmmTMB)
 options(width = 200)
-pick <- tribble(~country, ~block, ~year, ~src,
-                "colombia", "1985-1997", 1991, "72",
-                "mexico", "2004-2011", 2011, "72",
-                "brazil", "2011-2018", 2017, "88",
-                "us", "1984-1991", 1991, "72",
-                "ecuador", "2021-2024", 2023, "72")
-rd <- function(f) read_csv(f, show_col_types = FALSE, col_types = cols(unit = col_character()))
-p72 <- bind_rows(rd("output/tables/intl_validation_predictions.csv") |> mutate(m = sub(":.*", "", model)),
-                 rd("output/tables/intl_three_methods_predictions.csv") |> mutate(m = sub(":.*", "", model))) |>
-  filter(ages == "all", m %in% c("N", "S", "B1", "D")) |> mutate(src = "72")
-p88 <- rd("output/tables/intl_holdout_2015_predictions.csv") |> filter(ages == "all", m %in% c("N", "S", "B1", "D")) |> mutate(src = "88")
-pred <- bind_rows(p72, p88) |> semi_join(pick, by = c("country", "block", "year", "src")) |>
-  select(country, block, year, m, unit, unit_label, d, hom_obs, hom_pred)
+k_side <- 5
+pick <- tribble(~country, ~year, ~from, ~to,
+                "colombia", 1991, 1986, 1996,
+                "mexico", 2011, 2006, 2016,
+                "brazil", 2014, 2009, 2019,
+                "us", 1991, 1986, 1996,
+                "ecuador", 2023, 2021, 2024)
+dd <- readRDS("data_inter/intl_datasets.rds"); datasets <- dd$datasets
+pars <- read_csv("output/tables/intl_validation_parameters.csv", show_col_types = FALSE)
+
+direct_block <- function(md, pi_m, yrs_b, b) {
+  md <- md |> mutate(lnv = log(pmax(dm - pi_m * h, 1) / pmax(df - (1 - pi_m) * h, 1)))
+  lo <- min(yrs_b); hi <- max(yrs_b)
+  L <- md |> filter(year < lo) |> slice_max(year, n = k_side, by = unit) |> summarise(l = mean(lnv), yl = mean(year), .by = unit)
+  R <- md |> filter(year > hi) |> slice_min(year, n = k_side, by = unit) |> summarise(r = mean(lnv), yr = mean(year), .by = unit)
+  out <- md |> filter(year %in% yrs_b) |> left_join(L, by = "unit")
+  out <- if (nrow(R)) left_join(out, R, by = "unit") else mutate(out, r = NA_real_, yr = NA_real_)
+  out |> mutate(w = ifelse(is.na(yr), 0, (year - yl) / (yr - yl)), lr = (1 - w) * l + w * coalesce(r, l),
+                hom_pred = pmax((dm - exp(lr) * df) / (pi_m - exp(lr) * (1 - pi_m)), 1)) |>
+    transmute(block = b, model = "D: direct", unit, unit_label, year, d, hom_obs = h, hom_pred)
+}
+
+pred <- list()
+for (i in seq_len(nrow(pick))) {
+  cc <- pick$country[i]; ds <- datasets[[paste(cc, "all")]]; md <- ds$md$md; pi_m <- ds$md$pi_m
+  b <- paste0(pick$from[i], "-", pick$to[i]); blk <- setNames(list(pick$from[i]:pick$to[i]), b)
+  pr <- pars |> filter(country == cc, ages == "all")
+  cat(cc, b, "\n")
+  pred[[cc]] <- bind_rows(intl_validate(md, c(pr$s_eta, pr$s_u, pr$s_0), pi_m, blk), intl_simple(md, blk), direct_block(md, pi_m, blk[[1]], b)) |>
+    mutate(country = cc, unit = as.character(unit), m = sub(":.*", "", model), .before = 1) |>
+    filter(year == pick$year[i], m %in% c("N", "S", "B1", "D")) |>
+    select(country, block, year, m, unit, unit_label, d, hom_obs, hom_pred)
+}
+pred <- bind_rows(pred)
 write_csv(pred, "output/tables/intl_dynamic_years_predictions.csv")
+
 
 # national change since the year before the block, to say how big the jump was
 sc <- pred |> filter(hom_obs > 0) |>
@@ -48,7 +78,8 @@ cat("== median absolute error by unit (%), national total error (%), in the most
 print(as.data.frame(sc |> mutate(across(c(err, nat, share), ~ round(.x, 1)), r_log = round(r_log, 2)) |>
                       arrange(match(country, pick$country), match(m, c("N", "S", "B1", "D")))), row.names = FALSE)
 
-pais <- c(colombia = "Colombia, 1991", mexico = "México, 2011", brazil = "Brasil, 2017", us = "EE. UU., 1991", ecuador = "Ecuador, 2023\n(pronóstico)")
+pais <- c(colombia = "Colombia, 1991\n(ocultos 1986-1996)", mexico = "México, 2011\n(ocultos 2006-2016)", brazil = "Brasil, 2014\n(ocultos 2009-2019)",
+          us = "EE. UU., 1991\n(ocultos 1986-1996)", ecuador = "Ecuador, 2023\n(pronóstico: ocultos\n2021-2024)")
 met <- c(N = "Sin pistas\n(interpolación)", S = "1. Estados ocultos\n(razón de sexos)", B1 = "2. Regresión simple\n(+ total nacional)", D = "3. Directo\n(estimador de España)")
 fd <- pred |> filter(hom_obs > 0) |> left_join(sc |> select(country, m, err, nat, share), by = c("country", "m")) |>
   mutate(fila = factor(paste0(pais[country], "\n", format(round(share, 1), decimal.mark = ","), " % violentas"),
@@ -64,8 +95,8 @@ fig <- ggplot(fd, aes(hom_obs, hom_pred)) +
   scale_colour_manual(values = c("grey50", "#2a78d6", "#1baf7a", "#eb6834")) +
   facet_grid(fila ~ metodo, scales = "free") +
   labs(title = "¿Capta cada método el año de mayor cambio de cada país sin haberlo visto?",
-       subtitle = paste0("Cada punto es un estado, departamento o provincia. Eje x: muertes violentas registradas. Eje y: estimadas sin ver ese año ni los vecinos\n",
-                         "(bloques ocultos de 8-13 años; Ecuador: 2021-2024, con datos solo hasta 2020). Sobre la línea punteada, la estimación es exacta.\n",
+       subtitle = paste0("Cada punto es un estado, departamento o provincia. Eje x: muertes violentas registradas. Eje y: estimadas sin ver ese año\n",
+                         "ni los 5 anteriores ni los 5 posteriores (Ecuador: pronóstico, sin datos después de 2020). Sobre la línea punteada, la estimación es exacta.\n",
                          "Todas las edades. Escalas logarítmicas; las estimaciones negativas o nulas se dibujan en 1."),
        x = "muertes violentas registradas", y = "muertes violentas estimadas") +
   theme_minimal(base_size = 10) +
