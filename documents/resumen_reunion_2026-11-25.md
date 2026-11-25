@@ -154,6 +154,7 @@ Es una aplicación a un contexto sin causas de muerte confiables. Se usaron las 
 | Registradas como violentas | 158.700 | 28.000–64.000 |
 | Incertidumbre estadística | ±7 % (183.000–210.000) | |
 | Rango razonable, con los sesgos | **160.000–240.000** | **techo: ~95.000–103.000** |
+| Según la prueba por edad (datos provisionales) | | **violencia ~60.000–73.000; hambre ~25.000–39.000** |
 
 ![España: métodos y violencia registrada](../figures/09_international/spain_state_space.png)
 
@@ -164,9 +165,14 @@ Es una aplicación a un contexto sin causas de muerte confiables. Se usaron las 
 **Lo principal:**
 - **1936–39 es sólido.** Dos métodos con supuestos distintos dan lo mismo (194.000). Las estimaciones coinciden con la literatura (Salas, Ortega y Silvestre) y con la violencia registrada provincia por provincia (correlación 0,94). Las propias causas registradas confirman que el 93–97 % de las víctimas eran hombres.
 - **El registro contiene cerca del 80 % de la violencia en 1936–39 y del 65 % en 1940.** Es la primera estimación con incertidumbre de lo que faltó en el registro.
-- **1940–42 queda acotado, pero no resuelto.** El exceso de muertes de hombres (~100.000) es un techo, y lo registrado como violento (28.000–64.000) un piso. La diferencia puede ser hambre y tifus matando más hombres, o represión registrada bajo otras causas. Para separarlas hacen falta las muertes por edad.
+- **1940–42: la edad separa el hambre de la represión.** El exceso de muertes de hombres (~100.000) es un techo, y lo registrado como violento (28.000–64.000) un piso. Con las muertes de 15–44 años, recién digitalizadas y aún provisionales, se ve que en 1940 y 1942 el exceso está sobre todo en hombres jóvenes, el perfil de la represión. Solo en 1941, el año del hambre y del tifus, la mitad cae en otras edades.
+  - **Violencia, incluida la represión registrada bajo otras causas:** ~60.000–73.000.
+  - **Hambre:** ~25.000–39.000.
+  - **Faltan** la segunda lectura de los datos por edad y separar las muertes de guerra inscritas tarde.
+
+![Exceso de hombres por edad, 1939-1943](../figures/09_international/spain_ages_15_44.png)
 - **Los bombardeos casi no cambian el total** (+1,7 %), pero sí algunas provincias: Oviedo +15 %, Barcelona +9 %.
-- **En curso:** la digitalización de las muertes por provincia, sexo y edad simple de 1933–46. No existe en formato abierto y sería una contribución publicable. Es lo que permitiría resolver 1940–42.
+- **En curso:** la digitalización de las muertes por provincia, sexo y edad simple de 1933–46. Ya están completas las edades 15–44 de 1933, 1935 y 1939–43. No existe en formato abierto y sería una contribución publicable.
 
 ## Conclusiones
 
@@ -201,6 +207,6 @@ Es una aplicación a un contexto sin causas de muerte confiables. Se usaron las 
 ## Próximos pasos
 
 - Calibrar los intervalos hacia atrás con estas mismas pruebas.
-- Terminar la digitalización por edad en España y usar las edades 15–44 para separar hambre y represión en 1940–42.
+- Terminar la digitalización por edad en España, hacer la segunda lectura y confirmar la separación de hambre y represión en 1940–42.
 - Explorar un modelo con más categorías (homicidios, accidentes y resto) donde haya datos de accidentes, porque los accidentes también matan sobre todo hombres.
 - Decidir qué se publica primero: el método y su validación, o la aplicación a España junto con el dataset abierto.

@@ -1,6 +1,6 @@
 # España 1936–1946: muertes violentas y no violentas estimadas con la razón de sexos, y prueba ciega del método
 
-*25 de noviembre de 2026 · scripts `code/80` a `87` (`intl_*`)*
+*25 de noviembre de 2026 · scripts `code/80` a `87` y `91` (`intl_*`)*
 
 ## Resumen
 
@@ -181,6 +181,39 @@ Hubo que resolver dos problemas:
 6. **Con la tendencia nacional de preguerra de la razón de sexos,** en vez de su promedio, todo sube 3.000–5.000 por periodo, y el modelo ajusta peor (log-verosimilitud 564 frente a 587). Por eso la principal es sin tendencia.
 7. **Los intervalos son demasiado estrechos** (±1,5 %). No incluyen la incertidumbre de los parámetros ni los sesgos de estructura, y la validación internacional mostró que los intervalos de este modelo cubren de menos fuera de los años con datos. Para la incertidumbre hay que seguir usando el ±7 % estadístico del script 84 y el rango razonable de la conclusión.
 
+### Hambre o represión en 1940–42: la prueba por edad (script 91)
+
+**La pregunta.** En 1940–42 el exceso de muertes de hombres (~95.000–98.000) supera con creces a la violencia registrada como tal (28.000–64.000). La diferencia puede ser hambre y tifus matando más hombres que mujeres, que el método lee como violencia, o represión registrada bajo otras causas. Las dos se distinguen por la edad: la represión, las ejecuciones y las muertes en prisión recaen sobre todo en hombres de 20–50 años, y el hambre y las epidemias, en niños y viejos.
+
+**Los datos.** Muertes por provincia, sexo y edad simple de 15 a 44 años en 1933, 1935 y 1939–43. Las digitalizó la sesión de datos de España a partir de los anuarios del INE, y todas sus columnas cuadran con el total impreso. Son **provisionales**: falta la segunda lectura independiente. La base de preguerra es 1933 y 1935; 1934 queda fuera por la revolución de Asturias.
+
+**El cálculo.** El mismo estimador, aplicado por separado a las muertes de 15–44 años y a las demás edades, cada uno con su propia razón de sexos de preguerra (1,054 y 1,053).
+
+| Año | Exceso de hombres a 15–44 | En las demás edades | Total | % a 15–44 | Registradas como violentas |
+|---|---|---|---|---|---|
+| 1939 | 33.100 | 16.700 | 49.800 | 66 % | 36.300 |
+| 1940 | 24.700 | 11.100 | 35.800 | 69 % | 23.200 |
+| **1941** | 22.400 | **25.500** | 47.800 | **47 %** | 2.700 (solo homicidios) |
+| 1942 | 12.400 | 2.500 | 14.900 | 84 % | 2.100 (solo homicidios) |
+| 1943 | 9.200 | 0 | 9.100 | 100 % | — |
+| **1940–42** | **59.500** | **39.000** | **98.500** | **60 %** | |
+
+![Exceso de hombres por edad](../figures/09_international/spain_ages_15_44.png)
+
+**Lo que muestra:**
+1. **1941 es distinto.** Es el único año en que más de la mitad del exceso de hombres está fuera de 15–44: 25.500 muertes en las demás edades, el pico del hambre y del tifus. En 1940 y 1942 el exceso está sobre todo en 15–44 (69 % y 84 %). En 1943, todo.
+2. **Separación de 1940–42:**
+   - **Violencia, incluida la represión oculta: ~60.000–73.000.** Son las 59.500 de 15–44, más parte de las 13.600 de otras edades en 1940 y 1942, que pueden ser víctimas de más de 44 años.
+   - **Hambre leída como violencia: ~25.000–39.000.** Es sobre todo el exceso de 1941 en las demás edades.
+   - Esto pone la violencia en el extremo alto de lo que se estimaba (30.000–65.000), y **por encima de lo registrado como tal** (28.000–64.000).
+3. **La represión registrada bajo otras causas existiría y sería grande:** unas 60.000 muertes violentas de hombres jóvenes en 1940–42, frente a 23.200 registradas como violentas en 1940 y solo homicidios en 1941–42.
+4. **Las provincias no son todas iguales.** En Madrid, Barcelona, Ciudad Real, Valencia y Oviedo, más del 55 % del exceso de 1940–42 está en 15–44. En Sevilla, Huelva y Badajoz, menos del 45 %, lo que apunta a un peso mayor del hambre de 1941 en el oeste andaluz y extremeño.
+
+**Lo que este cálculo no separa:**
+- **Las muertes de guerra inscritas tarde,** en 1939–41, son de soldados jóvenes y caen en 15–44. Son violencia, pero de la guerra, no de la posguerra.
+- **El hambre en prisiones y campos de trabajo** también mata a hombres jóvenes y cae en 15–44. Es represión, pero no violencia directa.
+- **Si el hambre mató más a los hombres jóvenes que a las mujeres jóvenes por otras razones,** como en Colombia, donde la razón de sexos de 15–44 se movió por otras causas, una parte de las 59.500 sería hambre. En España el horizonte es corto (4–9 años desde la base), lo que limita ese sesgo.
+
 ## 5. Prueba ciega del método donde se conoce la causa
 
 Apliqué el estimador igual que en España: periodo base para ρ y la tendencia, π = 0,95 y solo el sexo de los muertos. Luego lo comparé con las muertes violentas observadas por encima de la proporción del periodo base.
@@ -222,14 +255,15 @@ Apliqué el estimador igual que en España: periodo base para ρ y la tendencia,
 
 ## 6. Qué faltaría para mejorar
 
-1. **Separar hambre de represión oculta en 1940–42.** Es lo único que queda abierto. Dos vías:
-   - **Edades 15–44 por provincia.** El lector de dígitos verifica sin ayuda el 58–92 % de las columnas, según el año. El hambre mata sobre todo a niños y viejos, y la represión a hombres de 20–50. Con la cautela que deja Colombia: hay que revisar que la razón de sexos de 15–44 no se mueva por otras causas.
-   - **Las causas detalladas de 1940** (enfermedades por sexo) y la mortalidad en prisiones documentada en la literatura.
+1. **Separar hambre de represión oculta en 1940–42.** Hay una primera respuesta con las edades 15–44 (sección 4, script 91): ~60.000–73.000 violentas y ~25.000–39.000 de hambre. Falta:
+   - **la segunda lectura independiente** de los datos por edad, que hoy son provisionales;
+   - **separar las muertes de guerra inscritas tarde** de la represión de posguerra;
+   - **las causas detalladas de 1940** (enfermedades por sexo) y la mortalidad en prisiones documentada en la literatura.
 2. ~~Modelo de espacio de estados con las causas registradas como anclas.~~ Hecho en el script 87 (sección 4). Faltaría agregar al modelo las causas de 1933–35 y 1943–46, para que el ancla antes y después de la guerra sea un dato y no un supuesto. La sesión de datos de España puede transcribirlas.
 3. **Bombardeos:** ya incorporados en el script 85 con el registro y las cifras publicadas. Faltaría la tabla por provincia y año de *España en llamas* (Solé i Sabaté y Villarroya, 2003), que no está en línea, y una cifra para el camino de Málaga a Almería (1937, 3.000–5.000 muertos según la fuente).
 4. **Desplazados y refugiados por provincia, y exilio de 1939.** Hoy inflan el exceso no violento de las provincias que reciben gente (Jaén, Almería, Murcia, Alicante) y lo bajan en las de origen.
 5. **Año de defunción frente a año de registro:** estimar las inscripciones tardías (1939–41, 1943–44) para comparar con Salas en la misma base.
-6. **Búsqueda bibliográfica** sobre si este estimador ya se propuso: demografía de conflictos, demografía histórica y métodos con la razón de sexos.
+6. **Búsqueda bibliográfica más exhaustiva.** Una revisión rápida (25 de noviembre) encontró la idea solo en su versión simple (Kobak y otros, 2025; Hacker, 2011), sin víctimas mujeres, sin separar el exceso por provincia y sin corregir el registro.
 
 ## 7. Conclusión: ¿funciona?
 
@@ -257,10 +291,10 @@ En esos casos el error puede ser de varias veces el valor real.
 
 - **π:** las causas registradas confirman π = 0,95 (registrado: 0,93–0,97). Tomar del registro las mujeres víctimas en cada provincia, para contar bien los bombardeos y asedios, sube el total solo un 1,7 %, pero corrige Oviedo (+15 %), Barcelona (+9 %) y Madrid (+5 %).
 - **1936–39:** se parece a los casos donde funciona, y las causas registradas lo confirman. Las ~193.000 muertes violentas estimadas superan en 22 % a las 158.700 registradas como violentas, y coinciden con ellas provincia por provincia (correlación 0,94). Ese 22 % es lo esperable por violencia nunca registrada como tal. También coinciden con Salas (194.700 en la suma comparable). El modelo de estados ocultos, con otros supuestos, da lo mismo: 194.000, y estima que el registro contiene cerca del 80 % de la violencia. El error estadístico es de solo ±7 % (183.000–210.000). Sumando el error de estructura que muestra la prueba ciega, el rango razonable es **160.000–240.000**: el piso es lo registrado como violento y el techo, el error de la prueba ciega.
-- **1940–42:** las ~95.000 de H son un **techo**. Lo registrado como violento da entre 28.000 y 64.000. Las restantes 31.000–67.000 muertes de hombres de más son hambre que el método cuenta como violencia, o represión registrada bajo otras causas (muertes en prisión). Con estos datos no se pueden separar. Por analogía con el COVID, el sesgo por hambre podría explicar entre 40.000 y 65.000. Los dos caminos llevan a una violencia directa de **30.000–65.000** en esos años.
+- **1940–42:** las ~95.000 de H son un **techo**, y lo registrado como violento (28.000–64.000) un piso. La prueba por edad, con datos provisionales, separa las dos cosas. Un 60 % del exceso de hombres está en 15–44 años: unas **60.000–73.000 muertes violentas**, incluida la represión registrada bajo otras causas y las muertes de guerra inscritas tarde. Unas **25.000–39.000** son el hambre y el tifus, sobre todo en 1941, el único año en que la mitad del exceso cae fuera de 15–44.
 - **El total del exceso,** violento más no violento, no depende de este supuesto. Es sólido: ~590.000 en 1936–42.
 
 **En resumen:**
 - El método funciona para España en la guerra: π validado, coincidencia con las causas registradas y con Salas, y un error de ±20 %.
-- Para la posguerra, 1940–42, H es un límite superior. La violencia registrada como tal da el límite inferior, y la diferencia es hambre o represión oculta.
-- Separar esas dos cosas, con las edades 15–44 o con las causas por sexo y edad, es lo único que queda abierto.
+- Para la posguerra, 1940–42, H es un límite superior. La violencia registrada como tal da el límite inferior.
+- La prueba por edad sugiere que la mayor parte de la diferencia es violencia (~60.000–73.000 muertes, sobre todo hombres de 15–44) y no hambre (~25.000–39.000, concentrada en 1941). Queda confirmarlo con la segunda lectura de los datos por edad y separar las muertes de guerra inscritas tarde.
