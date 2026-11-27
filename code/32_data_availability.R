@@ -298,8 +298,8 @@ fill_cols <- c("Solo total" = "#c6dbef", "Por sexo" = "#6baed6", "Edad y sexo" =
 
 theme_avail <- theme_minimal(base_size = 11) +
   theme(panel.grid.major.y = element_blank(), panel.grid.minor.y = element_blank(),
-        panel.grid.major.x = element_line(colour = "grey85", linewidth = 0.3),
-        panel.grid.minor.x = element_line(colour = "grey93", linewidth = 0.2),
+        panel.grid.major.x = element_line(colour = "grey60", linewidth = 0.3),
+        panel.grid.minor.x = element_blank(),
         panel.spacing.y = unit(4, "pt"),
         strip.placement = "outside", strip.text.y.left = element_text(angle = 0, hjust = 1, face = "bold", size = 9),
         strip.background = element_rect(fill = "grey95", colour = NA),
@@ -308,9 +308,19 @@ theme_avail <- theme_minimal(base_size = 11) +
         legend.justification = "left", legend.margin = margin(0, 0, 0, 0),
         plot.title.position = "plot", plot.caption.position = "plot",
         plot.subtitle = element_text(size = 9, colour = "grey30"), plot.caption = element_text(size = 8, colour = "grey40"))
-x_axis <- scale_x_continuous(breaks = seq(1900, 2020, 10), minor_breaks = seq(1905, 2025, 10),
-                             limits = c(1902, 2026), expand = c(0, 0))
+x_axis <- scale_x_continuous(breaks = seq(1905, 2025, 5), limits = c(1902, 2026), expand = c(0, 0))
+# the empty-row tiles hide the panel grid, so the 5-year lines are drawn again over them and under the data:
+# they show which years the gaps are
+grid_x <- geom_vline(xintercept = seq(1905, 2025, 5), colour = "grey60", linewidth = 0.3)
 
+# one framed block per geographic level, with the level name in a dark header band; it must be added
+# after theme_avail, which is a complete theme and would otherwise override it
+facet_nivel <- list(
+  facet_wrap(vars(destino), ncol = 1),
+  theme(strip.text = element_text(face = "bold", size = 10.5, colour = "white", hjust = 0, margin = margin(4, 8, 4, 8)),
+        strip.background = element_rect(fill = "grey25", colour = "grey25", linewidth = 0.8),
+        panel.border = element_rect(fill = NA, colour = "grey25", linewidth = 0.8),
+        panel.spacing.y = unit(14, "pt")))
 # figure 1: one row per level and domain; empty rows stay visible as grey
 lab_agregable <- "Franja inferior: el mismo detalle existe a un nivel geográfico más fino y se puede agregar"
 lab_extraccion <- "Contorno: mejora posible, documento ya en el proyecto y en extracción"
@@ -319,36 +329,44 @@ lab_parcial <- "Punto: cobertura parcial del año (menos del 80 % de las unidade
 dot_parcial <- \(d) geom_point(data = filter(d, parcial), aes(shape = lab_parcial), fill = "white", colour = "black",
                                size = 0.9, stroke = 0.3)
 info_p <- info |> mutate(destino = factor(destino, niveles), dominio_f = factor(dominio, rev(dominios)))
-# sources still being extracted from their PDF (label contains "en extracción") are drawn as an outline;
-# the layer exists only while there are any
-has_ext <- any(info_p$extraccion)
-layer_ext <- if (has_ext) geom_tile(data = filter(info_p, extraccion), aes(colour = lab_extraccion),
-                                    fill = NA, width = 1, height = 0.8, linewidth = 0.5)
-p1 <- ggplot(info_p, aes(x = year, y = dominio_f)) +
-  geom_tile(fill = "grey95", width = 1, height = 0.8) +
-  geom_tile(data = filter(info_p, !is.na(detalle)), aes(fill = detalle), width = 1, height = 0.8) +
-  geom_tile(data = filter(info_p, agregable), aes(y = as.numeric(dominio_f) - 0.36, colour = lab_agregable),
-            fill = "black", width = 1, height = 0.09, linewidth = 0) +
-  layer_ext +
-  dot_parcial(info_p) +
-  scale_fill_manual(values = fill_cols, name = "Mayor desagregación disponible", drop = FALSE, na.translate = FALSE) +
-  scale_colour_manual(values = c(setNames("black", lab_agregable), if (has_ext) setNames("#d95f02", lab_extraccion)),
-                      breaks = c(lab_agregable, if (has_ext) lab_extraccion), name = NULL) +
-  scale_shape_manual(values = setNames(21, lab_parcial), name = NULL) +
-  scale_y_discrete(drop = FALSE) +
-  guides(fill = guide_legend(order = 1, nrow = 1),
-         colour = guide_legend(order = 2, override.aes = list(fill = c("black", if (has_ext) NA),
-                                                              linewidth = c(0, if (has_ext) 0.5))),
-         shape = guide_legend(order = 3)) +
-  x_axis +
-  facet_grid(rows = vars(destino), switch = "y") +
-  labs(x = NULL, y = NULL,
-       title = "Información disponible por año, nivel geográfico y dominio, sin importar la fuente",
-       subtitle = "El color marca la mayor desagregación que existe ese año (total, por sexo, o por edad y sexo), sea cual sea la fuente",
-       caption = paste0("Los datos municipales se agregan a departamento y nación, y los departamentales a nación; las tablas de vida no se agregan.\n",
-                        "Hasta 2023. Las fuentes, en la segunda figura. Script: code/32_data_availability.R")) +
-  theme_avail
+fig_info <- function(d, title) {
+  # sources still being extracted from their PDF (label contains "en extracción") are drawn as an outline;
+  # the layer exists only while there are any
+  has_ext <- any(d$extraccion)
+  layer_ext <- if (has_ext) geom_tile(data = filter(d, extraccion), aes(colour = lab_extraccion),
+                                      fill = NA, width = 1, height = 0.8, linewidth = 0.5)
+  ggplot(d, aes(x = year, y = dominio_f)) +
+    geom_tile(fill = "grey95", width = 1, height = 0.8) +
+    grid_x +
+    geom_tile(data = filter(d, !is.na(detalle)), aes(fill = detalle), width = 1, height = 0.8) +
+    geom_tile(data = filter(d, agregable), aes(y = as.numeric(dominio_f) - 0.36, colour = lab_agregable),
+              fill = "black", width = 1, height = 0.09, linewidth = 0) +
+    layer_ext +
+    dot_parcial(d) +
+    scale_fill_manual(values = fill_cols, name = "Mayor desagregación disponible", drop = FALSE, na.translate = FALSE) +
+    scale_colour_manual(values = c(setNames("black", lab_agregable), if (has_ext) setNames("#d95f02", lab_extraccion)),
+                        breaks = c(lab_agregable, if (has_ext) lab_extraccion), name = NULL) +
+    scale_shape_manual(values = setNames(21, lab_parcial), name = NULL) +
+    scale_y_discrete(drop = FALSE) +
+    guides(fill = guide_legend(order = 1, nrow = 1),
+           colour = guide_legend(order = 2, override.aes = list(fill = c("black", if (has_ext) NA),
+                                                                linewidth = c(0, if (has_ext) 0.5))),
+           shape = guide_legend(order = 3)) +
+    x_axis +
+    labs(x = NULL, y = NULL,
+         title = title,
+         subtitle = "El color marca la mayor desagregación que existe ese año (total, por sexo, o por edad y sexo), sea cual sea la fuente",
+         caption = paste0("Los datos municipales se agregan a departamento y nación, y los departamentales a nación; las tablas de vida no se agregan.\n",
+                          "Hasta 2023. Las fuentes, en la segunda figura. Script: code/32_data_availability.R")) +
+    theme_avail + facet_nivel
+}
+p1 <- fig_info(info_p, "Información disponible por año, nivel geográfico y dominio, sin importar la fuente")
 ggsave("figures/inventory/data_availability_information.png", p1, width = 14, height = 8.6, dpi = 200, bg = "white")
+# the same figure without the population rows
+info_mort <- info_p |> filter(dominio != "Población") |>
+  mutate(dominio_f = factor(dominio, rev(setdiff(dominios, "Población"))))
+p_mort <- fig_info(info_mort, "Información de mortalidad disponible por año y nivel geográfico, sin importar la fuente")
+ggsave("figures/inventory/data_availability_information_mortality.png", p_mort, width = 14, height = 7.4, dpi = 200, bg = "white")
 
 # ---------------------------------------------------------------------------
 # two variants of figure 1 ====
@@ -375,6 +393,7 @@ info_new <- info_p |> filter(!is.na(detalle)) |>
   mutate(cat = factor(paste0(case_when(nuevo_12 ~ pre[3], nuevo ~ pre[2], TRUE ~ pre[1]), detalle), new_lev))
 p_new <- ggplot(info_p, aes(x = year, y = dominio_f)) +
   geom_tile(fill = "grey95", width = 1, height = 0.8) +
+  grid_x +
   geom_tile(data = info_new, aes(fill = cat), width = 1, height = 0.8) +
   geom_tile(data = filter(info_p, agregable), aes(y = as.numeric(dominio_f) - 0.36, colour = lab_agregable),
             fill = "black", width = 1, height = 0.09, linewidth = 0) +
@@ -387,14 +406,13 @@ p_new <- ggplot(info_p, aes(x = year, y = dominio_f)) +
          colour = guide_legend(order = 2, override.aes = list(fill = "black", linewidth = 0)),
          shape = guide_legend(order = 3)) +
   x_axis +
-  facet_grid(rows = vars(destino), switch = "y") +
   labs(x = NULL, y = NULL,
        title = paste0("Qué información es nueva desde el lunes ", format(baseline, "%Y-%m-%d"), " y desde el ", format(baseline2, "%Y-%m-%d")),
        subtitle = "Gris: ya se tenía antes del 9. Azul: nueva entre el 9 y el 12. Naranja: nueva desde el 12. Nuevo = ese año no había nada a ese nivel o ahora hay más desagregación; el tono marca la desagregación",
        caption = paste0("Antes del 9: microdatos EEVV 1979-2023, proyecciones DANE, UCDP, tablas de vida DANE, OMS, WPP 2024, anuarios transcritos (total y sexo) y serie policial (total).\n",
                         "Desde el 12: defunciones por sección, edad y sexo 1965-1969 (anuarios DANE) y población por sección, edad y sexo 1973 (censo, muestra de avance).\n",
                         "Los datos municipales se agregan a departamento y nación, y los departamentales a nación; las tablas de vida no se agregan. Hasta 2023. Script: code/32_data_availability.R")) +
-  theme_avail
+  theme_avail + facet_nivel
 ggsave("figures/inventory/data_availability_information_new.png", p_new, width = 14, height = 9.4, dpi = 200, bg = "white")
 
 lab_est <- "Naranja: homicidios sin dato directo a ese nivel, estimables a partir de la mortalidad total por sexo"
@@ -403,6 +421,7 @@ info_est <- info_p |> mutate(cat = case_when(homicidios_estimables ~ lab_est, !i
   filter(!is.na(cat)) |> mutate(cat = factor(cat, names(est_cols)))
 p_est <- ggplot(info_p, aes(x = year, y = dominio_f)) +
   geom_tile(fill = "grey95", width = 1, height = 0.8) +
+  grid_x +
   geom_tile(data = info_est, aes(fill = cat), width = 1, height = 0.8) +
   geom_tile(data = filter(info_p, agregable), aes(y = as.numeric(dominio_f) - 0.36, colour = lab_agregable),
             fill = "black", width = 1, height = 0.09, linewidth = 0) +
@@ -415,13 +434,12 @@ p_est <- ggplot(info_p, aes(x = year, y = dominio_f)) +
          colour = guide_legend(order = 2, override.aes = list(fill = "black", linewidth = 0)),
          shape = guide_legend(order = 3)) +
   x_axis +
-  facet_grid(rows = vars(destino), switch = "y") +
   labs(x = NULL, y = NULL,
        title = "Dónde se pueden estimar los homicidios a partir de la mortalidad por sexo",
        subtitle = "En la fila de homicidios, el naranja marca los años sin dato directo en los que sí hay defunciones por sexo (o por edad y sexo) al mismo nivel geográfico",
        caption = paste0("Es una posibilidad, no un resultado: que la razón de sexo de la mortalidad total permita estimar los homicidios en cada periodo depende del modelo y de la calidad del registro. Hasta 2023.\n",
                         "Los datos municipales se agregan a departamento y nación, y los departamentales a nación. Script: code/32_data_availability.R")) +
-  theme_avail
+  theme_avail + facet_nivel
 ggsave("figures/inventory/data_availability_information_homicides.png", p_est, width = 14, height = 8.9, dpi = 200, bg = "white")
 
 cat("\nNew since the baseline (level, domain: years):\n")
