@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# 91. Spain 1939-1943: is the male excess of the postwar years at ages 15-44
+# 91. Spain 1934-1946: is the male excess of the war and postwar years at ages 15-44
 #     (violence, repression) or spread over all ages (hunger, typhus)?
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # In 1940-1942 the excess of male deaths over the pre-war sex ratio (H of 80,
@@ -14,7 +14,9 @@
 # set against the estimate for all ages with the same base years:
 #   H_1544 = (M - rho F) / (pi - rho (1 - pi)) at ages 15-44, pi = 0.95
 #   share  = H_1544 / H_all, the part of the male excess at ages 15-44
-# 1939 (the war ends in April, many war deaths registered late) and 1943
+# the war years 1936-1939 (violence known to be mostly of men 15-44) and
+# 1943-1946 frame 1940-1942. 1939: the war ends in April, many war deaths are
+# registered late; 1934: the Asturias revolt (outside the base)
 # (violence low) frame 1940-1942.
 # caveat (blind test, 82): in Colombia the non-violent sex ratio at 15-44
 # moved by 20-30 % in 25 years for other reasons; here the horizon is 4-10
@@ -22,8 +24,8 @@
 # conscripts, forced labour), which this test counts at 15-44.
 #
 # input    data_input/reference/spain_ine_deaths_province_sex_age15-44_provisional.csv
-#            (PROVISIONAL: digitised by the Spain data session, 2026-11-25; every
-#            column adds up to its printed total; second reading pending)
+#            (PROVISIONAL, 1933-1946: digitised by the Spain data session, 2026-11-25/27;
+#            nearly every column adds up to its printed total; second reading pending)
 #          data_input/reference/spain_ine_deaths_province_sex_1926-1946.csv
 #          output/tables/intl_spain_causes_check.csv (83)
 # output   output/tables/intl_spain_ages_15_44_national.csv
@@ -86,7 +88,7 @@ p1 <- ggplot(fy, aes(factor(year), value / 1000, fill = name)) +
   geom_point(data = nat, aes(factor(year), registered_violent / 1000), inherit.aes = FALSE, shape = 23, size = 3, fill = "white") +
   geom_hline(yintercept = 0, colour = "grey50") +
   scale_fill_manual(values = c(`15-44 años` = "#c0392b", `Otras edades` = "#f2a541"), name = "Exceso de muertes de hombres") +
-  labs(title = "España: exceso de muertes de hombres por edad, 1939-1943",
+  labs(title = "España: exceso de muertes de hombres por edad, 1934-1946",
        subtitle = paste0("Muertes de hombres por encima de la razón de sexos de 1933 y 1935, en violentas equivalentes (π = 0,95).\n",
                          "Rombos: violencia registrada como tal
 (1941-1942: solo homicidios; la lista abreviada no separa el resto)."),
@@ -101,4 +103,4 @@ p2 <- ggplot(pp, aes(pmax(H15, 10), pmax(H_o, 10))) +
        x = "15-44 años", y = "otras edades") +
   theme_minimal(base_size = 10) + theme(panel.grid.minor = element_blank(), plot.title = element_text(face = "bold"))
 fig <- ggpubr::ggarrange(p1, p2, ncol = 2, widths = c(1.1, 1))
-ggsave("figures/09_international/spain_ages_15_44.png", fig, w = 13, h = 6, bg = "white", dpi = 160)
+ggsave("figures/09_international/spain_ages_15_44.png", fig, w = 15, h = 6, bg = "white", dpi = 160)
