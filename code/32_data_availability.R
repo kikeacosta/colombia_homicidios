@@ -449,23 +449,38 @@ print(info_full |> filter(nuevo_12) |> select(destino, dominio, year, detalle, d
 cat("\nHomicides that can be estimated (years):\n")
 print(info_full |> filter(homicidios_estimables) |> summarise(anios = n(), .by = destino))
 
-p <- ggplot(plot_df, aes(x = year, y = serie_f)) +
-  geom_tile(aes(fill = detalle), width = 1, height = 0.72) +
-  dot_parcial(plot_df) +
-  scale_fill_manual(values = fill_cols, name = "Desagregación disponible", drop = FALSE) +
-  scale_shape_manual(values = setNames(21, lab_parcial), name = NULL) +
-  scale_y_discrete(labels = strip_key) +
-  guides(fill = guide_legend(order = 1, nrow = 1), shape = guide_legend(order = 2)) +
-  x_axis +
-  facet_grid(rows = vars(nivel, dominio), scales = "free_y", space = "free_y", switch = "y") +
-  labs(x = NULL, y = NULL,
-       title = "Fuentes de información por año, nivel geográfico y desagregación",
-       subtitle = "Una fila por fuente, con sus traslapes; el color marca el detalle de esa fuente ese año",
-       caption = "WPP 2024 y proyecciones DANE recortadas en 2023. Las filas con «OCR» salen de los cuadros censales 1938, 1951, 1964 y 1973 extraídos de los PDF; «en extracción» = documento fuente ya en el proyecto, cuadros aún no extraídos. Script: code/32_data_availability.R") +
-  theme_avail
-
+# one block per geographic level, framed and headed like figure 1, with the domains inside; the blocks are
+# stacked with patchwork, each with its own years because the figure is tall
+fig_fuentes <- function(nv) {
+  d <- filter(plot_df, nivel == nv)
+  ggplot(d, aes(x = year, y = serie_f)) +
+    geom_tile(aes(fill = detalle), width = 1, height = 0.72, show.legend = c(fill = TRUE, shape = FALSE)) +
+    dot_parcial(d) +
+    scale_fill_manual(values = fill_cols, name = "Desagregación disponible", limits = names(fill_cols)) +
+    scale_shape_manual(values = setNames(21, lab_parcial), name = NULL) +
+    scale_y_discrete(labels = strip_key) +
+    x_axis +
+    facet_grid(rows = vars(dominio), cols = vars(nivel), scales = "free_y", space = "free_y", switch = "y") +
+    guides(fill = guide_legend(order = 1, nrow = 1), shape = guide_legend(order = 2)) +
+    labs(x = NULL, y = NULL) +
+    theme_avail +
+    theme(strip.text.x.top = element_text(face = "bold", size = 11, colour = "white", hjust = 0, margin = margin(4, 8, 4, 8)),
+          strip.background.x = element_rect(fill = "grey25", colour = "grey25", linewidth = 0.8),
+          panel.border = element_rect(fill = NA, colour = "grey25", linewidth = 0.6),
+          panel.spacing.y = unit(3, "pt"),
+          axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+          plot.margin = margin(4, 8, 12, 4))
+}
 n_rows <- n_distinct(plot_df$serie_f)
-ggsave("figures/inventory/data_availability.png", p, width = 14, height = 2.6 + 0.3 * n_rows, dpi = 200, bg = "white")
+p <- patchwork::wrap_plots(lapply(niveles, fig_fuentes), ncol = 1, guides = "collect",
+                           heights = sapply(niveles, \(nv) n_distinct(plot_df$serie_f[plot_df$nivel == nv]))) +
+  patchwork::plot_annotation(
+    title = "Fuentes de información por año, nivel geográfico y desagregación",
+    subtitle = "Una fila por fuente, con sus traslapes; el color marca el detalle de esa fuente ese año",
+    caption = "WPP 2024 y proyecciones DANE recortadas en 2023. Las filas con «OCR» salen de los cuadros censales 1938, 1951, 1964 y 1973 extraídos de los PDF; «en extracción» = documento fuente ya en el proyecto, cuadros aún no extraídos. Script: code/32_data_availability.R",
+    theme = theme(plot.subtitle = element_text(size = 9, colour = "grey30"), plot.caption = element_text(size = 8, colour = "grey40"),
+                  legend.position = "bottom", legend.box = "vertical", legend.box.just = "left"))
+ggsave("figures/inventory/data_availability.png", p, width = 18, height = 4.6 + 0.3 * n_rows, dpi = 200, bg = "white")
 
 # ---------------------------------------------------------------------------
 # table ====
